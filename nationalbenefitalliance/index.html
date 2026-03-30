@@ -164,10 +164,10 @@
 <body>
 
   <!-- =========================================================
-       ANNOUNCEMENT BAR
+       ANNOUNCEMENT BAR (geo-personalized)
        ========================================================= -->
-  <div style="background: var(--gold); color: var(--navy-dark); text-align: center; padding: 0.5rem; font-size: 0.85rem; font-weight: 600;">
-    📢 Florida county resource guides now available — Enter your ZIP code below to access free benefits in your area
+  <div id="announcement-bar" style="background: var(--gold); color: var(--navy-dark); text-align: center; padding: 0.5rem; font-size: 0.85rem; font-weight: 600;">
+    📢 <span id="announcement-text">County resource guides now available — Enter your ZIP code below to access free benefits in your area</span>
   </div>
 
   <!-- =========================================================
@@ -190,6 +190,7 @@
       <ul class="nav__links" role="list">
         <li><a href="/" class="active">Home</a></li>
         <li><a href="/florida/">Florida</a></li>
+        <li><a href="/california/">California</a></li>
         <li><a href="/resources/">All States</a></li>
         <li><a href="/about/">About</a></li>
         <li><a href="/faq/">FAQ</a></li>
@@ -233,12 +234,12 @@
           </p>
           <div class="hero__actions">
             <a href="#zip-search" class="btn btn--primary btn--lg">Find My County Resources</a>
-            <a href="/florida/" class="btn btn--outline-white btn--lg">Browse Florida Counties</a>
+            <a id="hero-state-btn" href="/florida/" class="btn btn--outline-white btn--lg">Browse Florida Counties</a>
           </div>
           <div class="hero__stats">
             <div>
-              <span class="hero__stat-num" data-count="67" data-suffix="">67</span>
-              <span class="hero__stat-label">Florida Counties</span>
+              <span class="hero__stat-num" data-count="125" data-suffix="">125</span>
+              <span class="hero__stat-label" id="hero-counties-label">Counties Covered</span>
             </div>
             <div>
               <span class="hero__stat-num" data-count="500" data-suffix="+">500+</span>
@@ -282,11 +283,10 @@
 
             <div class="zip-card__divider">Or browse by state</div>
             <div class="zip-card__states">
-              <a href="/florida/" class="active">🌴 Florida</a>
+              <a href="/florida/" id="state-link-florida" class="active">🌴 Florida</a>
+              <a href="/california/" id="state-link-california">🌅 California</a>
               <a href="/coming-soon/">Texas <span style="font-size:0.7rem;color:var(--gray-400)">(soon)</span></a>
-              <a href="/coming-soon/">California <span style="font-size:0.7rem;color:var(--gray-400)">(soon)</span></a>
               <a href="/coming-soon/">New York <span style="font-size:0.7rem;color:var(--gray-400)">(soon)</span></a>
-              <a href="/coming-soon/">Georgia <span style="font-size:0.7rem;color:var(--gray-400)">(soon)</span></a>
               <a href="/coming-soon/">All States →</a>
             </div>
 
@@ -310,8 +310,8 @@
     <div class="container">
       <div class="trust-bar__inner">
         <div class="trust-stat">
-          <span class="trust-stat__num" data-count="67">67</span>
-          <span class="trust-stat__label">Florida Counties Covered</span>
+          <span class="trust-stat__num" data-count="125">125</span>
+          <span class="trust-stat__label">Counties Covered (FL &amp; CA)</span>
         </div>
         <div class="trust-stat">
           <span class="trust-stat__num" data-count="500" data-suffix="+">500+</span>
@@ -691,6 +691,76 @@
 
   <!-- JavaScript -->
   <script src="js/main.js" defer></script>
+
+  <!-- =========================================================
+       GEO PERSONALIZATION
+       Detect visitor's state via IP and update banner + buttons
+       ========================================================= -->
+  <script>
+  (function () {
+    // States we currently support
+    const SUPPORTED = {
+      'FL': { name: 'Florida', path: '/florida/', emoji: '🌴', counties: 67 },
+      'CA': { name: 'California', path: '/california/', emoji: '🌅', counties: 58 }
+    };
+
+    function applyState(stateCode) {
+      const s = SUPPORTED[stateCode];
+      if (!s) return; // unsupported state — leave defaults
+
+      // Announcement bar
+      const txt = document.getElementById('announcement-text');
+      if (txt) {
+        txt.textContent = s.name + ' county resource guides now available — Enter your ZIP code below to access free benefits in your area';
+      }
+
+      // Hero button
+      const heroBtn = document.getElementById('hero-state-btn');
+      if (heroBtn) {
+        heroBtn.href = s.path;
+        heroBtn.textContent = 'Browse ' + s.name + ' Counties';
+      }
+
+      // Hero counties label
+      const heroLabel = document.getElementById('hero-counties-label');
+      if (heroLabel) {
+        heroLabel.textContent = s.name + ' Counties';
+        // Also update the number to just the state's county count
+        const heroNum = heroLabel.previousElementSibling;
+        if (heroNum) {
+          heroNum.setAttribute('data-count', s.counties);
+          heroNum.textContent = s.counties;
+        }
+      }
+
+      // Highlight the correct state link in ZIP card
+      document.querySelectorAll('.zip-card__states a').forEach(function(a) {
+        a.classList.remove('active');
+      });
+      var activeLink = document.getElementById('state-link-' + stateCode.toLowerCase());
+      if (activeLink) activeLink.classList.add('active');
+    }
+
+    // Try cached state first
+    var cached = sessionStorage.getItem('nba_visitor_state');
+    if (cached) {
+      applyState(cached);
+      return;
+    }
+
+    // Fetch IP geolocation (free, no key required)
+    fetch('https://ipapi.co/json/')
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        var code = (data && data.region_code) ? data.region_code.toUpperCase() : '';
+        sessionStorage.setItem('nba_visitor_state', code);
+        applyState(code);
+      })
+      .catch(function() {
+        // Silently fail — defaults remain (Florida)
+      });
+  })();
+  </script>
 
 </body>
 </html>

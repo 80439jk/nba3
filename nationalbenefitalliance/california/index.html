@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>California County Resource Center | Free Benefits by County – National Benefit Alliance</title>
-  <meta name="description" content="Find free government and community assistance programs in all 58 California counties. Enter your ZIP code or select your county to access resources for utilities, rent, food, healthcare, and unemployment." />
+  <meta name="description" content="Find free government and community assistance programs in all 58 California counties. Enter your ZIP code or select your county to access resources for utilities, rent, food, Medi-Cal, and more." />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
   <link rel="canonical" href="https://nationalbenefitalliance.com/california/" />
   <meta property="og:title" content="California County Resource Center | National Benefit Alliance" />
-  <meta property="og:description" content="All 58 California counties covered. Find free assistance for utilities, housing, food, healthcare, and more." />
+  <meta property="og:description" content="All 58 California counties covered. Find free assistance for utilities, housing, food, Medi-Cal, CalFresh, and more." />
   <meta property="og:url" content="https://nationalbenefitalliance.com/california/" />
 
   <script type="application/ld+json">
@@ -32,355 +32,267 @@
         "@id": "https://nationalbenefitalliance.com/california/#page",
         "url": "https://nationalbenefitalliance.com/california/",
         "name": "California County Resource Center",
+        "description": "Browse all 58 California counties for free government benefit resources.",
         "breadcrumb": {
           "@type": "BreadcrumbList",
           "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://nationalbenefitalliance.com/"},
-            {"@type": "ListItem", "position": 2, "name": "California", "item": "https://nationalbenefitalliance.com/california/"}
+            {"@type": "ListItem","position": 1,"name": "Home","item": "https://nationalbenefitalliance.com/"},
+            {"@type": "ListItem","position": 2,"name": "California","item": "https://nationalbenefitalliance.com/california/"}
           ]
         }
+      },
+      {
+        "@type": "ItemList",
+        "name": "California County Resource Guides",
+        "numberOfItems": 58,
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Alameda County Resources","url":"https://nationalbenefitalliance.com/california/alameda/"},
+          {"@type":"ListItem","position":2,"name":"Alpine County Resources","url":"https://nationalbenefitalliance.com/california/alpine/"},
+          {"@type":"ListItem","position":3,"name":"Amador County Resources","url":"https://nationalbenefitalliance.com/california/amador/"},
+          {"@type":"ListItem","position":4,"name":"Butte County Resources","url":"https://nationalbenefitalliance.com/california/butte/"},
+          {"@type":"ListItem","position":5,"name":"Calaveras County Resources","url":"https://nationalbenefitalliance.com/california/calaveras/"},
+          {"@type":"ListItem","position":6,"name":"Colusa County Resources","url":"https://nationalbenefitalliance.com/california/colusa/"},
+          {"@type":"ListItem","position":7,"name":"Contra Costa County Resources","url":"https://nationalbenefitalliance.com/california/contra-costa/"},
+          {"@type":"ListItem","position":8,"name":"Del Norte County Resources","url":"https://nationalbenefitalliance.com/california/del-norte/"},
+          {"@type":"ListItem","position":9,"name":"El Dorado County Resources","url":"https://nationalbenefitalliance.com/california/el-dorado/"},
+          {"@type":"ListItem","position":10,"name":"Fresno County Resources","url":"https://nationalbenefitalliance.com/california/fresno/"}
+        ]
       }
     ]
   }
   </script>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
 
-<header class="site-header">
-  <div class="container">
-    <a href="/" class="logo">National Benefit Alliance</a>
-    <nav class="main-nav">
-      <a href="/california/">California</a>
-      <a href="/florida/">Florida</a>
-      <a href="/apply/">Apply Now</a>
-      <a href="/access/">Check Access</a>
-    </nav>
-  </div>
-</header>
-
-<nav class="breadcrumb" aria-label="Breadcrumb">
-  <div class="container">
-    <ol>
-      <li><a href="/">Home</a></li>
-      <li aria-current="page">California</li>
-    </ol>
-  </div>
-</nav>
-
-<section class="state-hero">
-  <div class="container">
-    <h1>California County Resource Center</h1>
-    <p class="state-intro">Free benefit programs for all 58 California counties. Find local help for utilities, food, housing, healthcare, and more — no cost to apply.</p>
-    <div class="zip-lookup-box">
-      <label for="zip-input"><strong>Enter your ZIP code to find your county:</strong></label>
-      <div class="zip-input-row">
-        <input type="text" id="zip-input" maxlength="5" placeholder="e.g. 90210" pattern="[0-9]{5}" />
-        <button id="zip-btn" class="btn btn-primary">Find Resources</button>
-      </div>
-      <p id="zip-error" class="zip-error" style="display:none;">Please enter a valid 5-digit ZIP code.</p>
-    </div>
-  </div>
-</section>
-
-<section class="state-stats">
-  <div class="container stats-row">
-    <div class="stat-item">
-      <span class="stat-number" data-count="58">0</span>
-      <span class="stat-label">Counties Covered</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-number" data-count="39538223">0</span>
-      <span class="stat-label">California Residents</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-number" data-count="9">0</span>
-      <span class="stat-label">Program Categories</span>
-    </div>
-  </div>
-</section>
-
-<section class="county-directory">
-  <div class="container">
-    <h2>Browse All 58 California Counties</h2>
-    <div class="county-grid">
-          <a href="/california/alameda/" class="county-card">
-            <span class="county-name">Alameda County</span>
-            <span class="county-seat">Oakland</span>
-          </a>
-          <a href="/california/alpine/" class="county-card">
-            <span class="county-name">Alpine County</span>
-            <span class="county-seat">Markleeville</span>
-          </a>
-          <a href="/california/amador/" class="county-card">
-            <span class="county-name">Amador County</span>
-            <span class="county-seat">Jackson</span>
-          </a>
-          <a href="/california/butte/" class="county-card">
-            <span class="county-name">Butte County</span>
-            <span class="county-seat">Oroville</span>
-          </a>
-          <a href="/california/calaveras/" class="county-card">
-            <span class="county-name">Calaveras County</span>
-            <span class="county-seat">San Andreas</span>
-          </a>
-          <a href="/california/colusa/" class="county-card">
-            <span class="county-name">Colusa County</span>
-            <span class="county-seat">Colusa</span>
-          </a>
-          <a href="/california/contra-costa/" class="county-card">
-            <span class="county-name">Contra Costa County</span>
-            <span class="county-seat">Martinez</span>
-          </a>
-          <a href="/california/del-norte/" class="county-card">
-            <span class="county-name">Del Norte County</span>
-            <span class="county-seat">Crescent City</span>
-          </a>
-          <a href="/california/el-dorado/" class="county-card">
-            <span class="county-name">El Dorado County</span>
-            <span class="county-seat">Placerville</span>
-          </a>
-          <a href="/california/fresno/" class="county-card">
-            <span class="county-name">Fresno County</span>
-            <span class="county-seat">Fresno</span>
-          </a>
-          <a href="/california/glenn/" class="county-card">
-            <span class="county-name">Glenn County</span>
-            <span class="county-seat">Willows</span>
-          </a>
-          <a href="/california/humboldt/" class="county-card">
-            <span class="county-name">Humboldt County</span>
-            <span class="county-seat">Eureka</span>
-          </a>
-          <a href="/california/imperial/" class="county-card">
-            <span class="county-name">Imperial County</span>
-            <span class="county-seat">El Centro</span>
-          </a>
-          <a href="/california/inyo/" class="county-card">
-            <span class="county-name">Inyo County</span>
-            <span class="county-seat">Independence</span>
-          </a>
-          <a href="/california/kern/" class="county-card">
-            <span class="county-name">Kern County</span>
-            <span class="county-seat">Bakersfield</span>
-          </a>
-          <a href="/california/kings/" class="county-card">
-            <span class="county-name">Kings County</span>
-            <span class="county-seat">Hanford</span>
-          </a>
-          <a href="/california/lake/" class="county-card">
-            <span class="county-name">Lake County</span>
-            <span class="county-seat">Lakeport</span>
-          </a>
-          <a href="/california/lassen/" class="county-card">
-            <span class="county-name">Lassen County</span>
-            <span class="county-seat">Susanville</span>
-          </a>
-          <a href="/california/los-angeles/" class="county-card">
-            <span class="county-name">Los Angeles County</span>
-            <span class="county-seat">Los Angeles</span>
-          </a>
-          <a href="/california/madera/" class="county-card">
-            <span class="county-name">Madera County</span>
-            <span class="county-seat">Madera</span>
-          </a>
-          <a href="/california/marin/" class="county-card">
-            <span class="county-name">Marin County</span>
-            <span class="county-seat">San Rafael</span>
-          </a>
-          <a href="/california/mariposa/" class="county-card">
-            <span class="county-name">Mariposa County</span>
-            <span class="county-seat">Mariposa</span>
-          </a>
-          <a href="/california/mendocino/" class="county-card">
-            <span class="county-name">Mendocino County</span>
-            <span class="county-seat">Ukiah</span>
-          </a>
-          <a href="/california/merced/" class="county-card">
-            <span class="county-name">Merced County</span>
-            <span class="county-seat">Merced</span>
-          </a>
-          <a href="/california/modoc/" class="county-card">
-            <span class="county-name">Modoc County</span>
-            <span class="county-seat">Alturas</span>
-          </a>
-          <a href="/california/mono/" class="county-card">
-            <span class="county-name">Mono County</span>
-            <span class="county-seat">Bridgeport</span>
-          </a>
-          <a href="/california/monterey/" class="county-card">
-            <span class="county-name">Monterey County</span>
-            <span class="county-seat">Salinas</span>
-          </a>
-          <a href="/california/napa/" class="county-card">
-            <span class="county-name">Napa County</span>
-            <span class="county-seat">Napa</span>
-          </a>
-          <a href="/california/nevada/" class="county-card">
-            <span class="county-name">Nevada County</span>
-            <span class="county-seat">Nevada City</span>
-          </a>
-          <a href="/california/orange/" class="county-card">
-            <span class="county-name">Orange County</span>
-            <span class="county-seat">Santa Ana</span>
-          </a>
-          <a href="/california/placer/" class="county-card">
-            <span class="county-name">Placer County</span>
-            <span class="county-seat">Auburn</span>
-          </a>
-          <a href="/california/plumas/" class="county-card">
-            <span class="county-name">Plumas County</span>
-            <span class="county-seat">Quincy</span>
-          </a>
-          <a href="/california/riverside/" class="county-card">
-            <span class="county-name">Riverside County</span>
-            <span class="county-seat">Riverside</span>
-          </a>
-          <a href="/california/sacramento/" class="county-card">
-            <span class="county-name">Sacramento County</span>
-            <span class="county-seat">Sacramento</span>
-          </a>
-          <a href="/california/san-benito/" class="county-card">
-            <span class="county-name">San Benito County</span>
-            <span class="county-seat">Hollister</span>
-          </a>
-          <a href="/california/san-bernardino/" class="county-card">
-            <span class="county-name">San Bernardino County</span>
-            <span class="county-seat">San Bernardino</span>
-          </a>
-          <a href="/california/san-diego/" class="county-card">
-            <span class="county-name">San Diego County</span>
-            <span class="county-seat">San Diego</span>
-          </a>
-          <a href="/california/san-francisco/" class="county-card">
-            <span class="county-name">San Francisco County</span>
-            <span class="county-seat">San Francisco</span>
-          </a>
-          <a href="/california/san-joaquin/" class="county-card">
-            <span class="county-name">San Joaquin County</span>
-            <span class="county-seat">Stockton</span>
-          </a>
-          <a href="/california/san-luis-obispo/" class="county-card">
-            <span class="county-name">San Luis Obispo County</span>
-            <span class="county-seat">San Luis Obispo</span>
-          </a>
-          <a href="/california/san-mateo/" class="county-card">
-            <span class="county-name">San Mateo County</span>
-            <span class="county-seat">Redwood City</span>
-          </a>
-          <a href="/california/santa-barbara/" class="county-card">
-            <span class="county-name">Santa Barbara County</span>
-            <span class="county-seat">Santa Barbara</span>
-          </a>
-          <a href="/california/santa-clara/" class="county-card">
-            <span class="county-name">Santa Clara County</span>
-            <span class="county-seat">San Jose</span>
-          </a>
-          <a href="/california/santa-cruz/" class="county-card">
-            <span class="county-name">Santa Cruz County</span>
-            <span class="county-seat">Santa Cruz</span>
-          </a>
-          <a href="/california/shasta/" class="county-card">
-            <span class="county-name">Shasta County</span>
-            <span class="county-seat">Redding</span>
-          </a>
-          <a href="/california/sierra/" class="county-card">
-            <span class="county-name">Sierra County</span>
-            <span class="county-seat">Downieville</span>
-          </a>
-          <a href="/california/siskiyou/" class="county-card">
-            <span class="county-name">Siskiyou County</span>
-            <span class="county-seat">Yreka</span>
-          </a>
-          <a href="/california/solano/" class="county-card">
-            <span class="county-name">Solano County</span>
-            <span class="county-seat">Fairfield</span>
-          </a>
-          <a href="/california/sonoma/" class="county-card">
-            <span class="county-name">Sonoma County</span>
-            <span class="county-seat">Santa Rosa</span>
-          </a>
-          <a href="/california/stanislaus/" class="county-card">
-            <span class="county-name">Stanislaus County</span>
-            <span class="county-seat">Modesto</span>
-          </a>
-          <a href="/california/sutter/" class="county-card">
-            <span class="county-name">Sutter County</span>
-            <span class="county-seat">Yuba City</span>
-          </a>
-          <a href="/california/tehama/" class="county-card">
-            <span class="county-name">Tehama County</span>
-            <span class="county-seat">Red Bluff</span>
-          </a>
-          <a href="/california/trinity/" class="county-card">
-            <span class="county-name">Trinity County</span>
-            <span class="county-seat">Weaverville</span>
-          </a>
-          <a href="/california/tulare/" class="county-card">
-            <span class="county-name">Tulare County</span>
-            <span class="county-seat">Visalia</span>
-          </a>
-          <a href="/california/tuolumne/" class="county-card">
-            <span class="county-name">Tuolumne County</span>
-            <span class="county-seat">Sonora</span>
-          </a>
-          <a href="/california/ventura/" class="county-card">
-            <span class="county-name">Ventura County</span>
-            <span class="county-seat">Ventura</span>
-          </a>
-          <a href="/california/yolo/" class="county-card">
-            <span class="county-name">Yolo County</span>
-            <span class="county-seat">Woodland</span>
-          </a>
-          <a href="/california/yuba/" class="county-card">
-            <span class="county-name">Yuba County</span>
-            <span class="county-seat">Marysville</span>
-          </a>
-    </div>
-  </div>
-</section>
-
-<section class="state-programs">
-  <div class="container">
-    <h2>Statewide California Programs</h2>
-    <div class="program-cards">
-      <div class="program-card">
-        <h3>⚡ LIHEAP &amp; REACH</h3>
-        <p>Energy assistance for low-income households. Apply through your county or call 211.</p>
-      </div>
-      <div class="program-card">
-        <h3>🍎 CalFresh (SNAP)</h3>
-        <p>Monthly grocery benefits for individuals and families. Apply at BenefitsCal.com.</p>
-      </div>
-      <div class="program-card">
-        <h3>🏥 Medi-Cal</h3>
-        <p>Free or low-cost health coverage for California residents. Apply at CoveredCA.com.</p>
-      </div>
-      <div class="program-card">
-        <h3>🏠 Housing Assistance</h3>
-        <p>Section 8 vouchers, emergency rental help, and eviction prevention through county housing authorities.</p>
-      </div>
-      <div class="program-card">
-        <h3>💼 Unemployment (EDD)</h3>
-        <p>File for unemployment benefits at edd.ca.gov or call 800-300-5616.</p>
-      </div>
-      <div class="program-card">
-        <h3>👶 CalWORKs</h3>
-        <p>Cash assistance and services for low-income families with children. Apply at your county social services office.</p>
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo">
+        <div class="nav__logo-icon">
+          <svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg"><path d="M13 2L3 7v6c0 5.5 4.3 10.7 10 12 5.7-1.3 10-6.5 10-12V7L13 2z" fill="#E8A020"/></svg>
+        </div>
+        <div class="nav__logo-text">
+          <span class="nav__logo-name">National Benefit Alliance</span>
+          <span class="nav__logo-tagline">Free Resource Center · All 50 States</span>
+        </div>
+      </a>
+      <ul class="nav__links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/florida/">Florida</a></li>
+        <li><a href="/california/" class="active">California</a></li>
+        <li><a href="/resources/">All States</a></li>
+      </ul>
+      <div class="nav__cta">
+        <a href="tel:18006224357" class="nav__phone">📞 1-800-NBA-HELP</a>
+        <a href="https://apply.nationalbenefitalliance.com" class="btn btn--primary btn--sm">Apply Now</a>
       </div>
     </div>
-  </div>
-</section>
+  </nav>
 
-<footer class="site-footer">
-  <div class="container">
-    <p>&copy; 2026 National Benefit Alliance. Not affiliated with any government agency.</p>
-    <p>Information provided for educational purposes. Program availability and eligibility requirements vary.</p>
-  </div>
-</footer>
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb__list">
+        <li><a href="/">Home</a> <span class="separator">›</span></li>
+        <li><span class="current">California</span></li>
+      </ol>
+    </div>
+  </nav>
 
-<script src="../js/main.js"></script>
+  <main>
+
+    <!-- Page Header -->
+    <section style="background:linear-gradient(135deg,#0F2447,#1B3A6B);padding:4rem 0 3rem;color:#fff;">
+      <div class="container">
+        <div style="display:flex;align-items:center;gap:1.5rem;margin-bottom:1rem;">
+          <span style="font-size:3.5rem;">🌅</span>
+          <div>
+            <span style="color:var(--gold-light);font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;">State Resource Center</span>
+            <h1 style="color:#fff;margin:0;">California County Resources</h1>
+          </div>
+        </div>
+        <p class="lead" style="color:rgba(255,255,255,0.78);max-width:640px;">
+          All 58 California counties covered. Find free government and community assistance programs for utilities, housing, food, Medi-Cal, CalFresh, employment, and more — organized by your county.
+        </p>
+        <form id="zip-form" style="display:flex;gap:0;max-width:420px;margin-top:2rem;border-radius:8px;overflow:hidden;border:2px solid rgba(255,255,255,0.2);" aria-label="ZIP search">
+          <input id="zip-input" type="tel" placeholder="Enter ZIP code" maxlength="5" style="flex:1;padding:0.85rem 1rem;border:none;font-size:1rem;font-weight:600;letter-spacing:0.08em;outline:none;" />
+          <button type="submit" style="background:var(--gold);color:var(--navy-dark);border:none;padding:0.85rem 1.25rem;font-weight:700;">Go →</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Stats bar -->
+    <div style="background:var(--gray-50);border-bottom:1px solid var(--gray-200);padding:1.25rem 0;">
+      <div class="container">
+        <div style="display:flex;gap:3rem;flex-wrap:wrap;align-items:center;">
+          <div><strong style="color:var(--navy);font-size:1.4rem;">58</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Counties</span></div>
+          <div><strong style="color:var(--navy);font-size:1.4rem;">500+</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Assistance Programs</span></div>
+          <div><strong style="color:var(--navy);font-size:1.4rem;">9</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Resource Categories</span></div>
+          <div><strong style="color:var(--navy);font-size:1.4rem;">Free</strong> <span style="color:var(--gray-600);font-size:0.9rem;">PDF Download</span></div>
+          <div style="margin-left:auto;">
+            <a href="tel:18006224357" style="background:var(--navy);color:#fff;padding:0.6rem 1.25rem;border-radius:6px;font-weight:700;font-size:0.9rem;text-decoration:none;">📞 Get Access Code</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Counties Grid -->
+    <section class="section" aria-labelledby="counties-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge--gold">All Counties</span>
+          <h2 id="counties-heading">Browse All 58 California Counties</h2>
+          <p>Click your county to view the full resource guide — utilities, food, housing, Medi-Cal, CalFresh, and more.</p>
+        </div>
+
+        <!-- Featured Large Counties -->
+        <div style="margin-bottom:3rem;">
+          <h3 style="color:var(--gray-600);margin-bottom:1.5rem;font-size:1.1rem;text-transform:uppercase;letter-spacing:0.06em;">Most Populated Counties</h3>
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem;">
+
+            <a href="/california/los-angeles/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
+              <span style="font-size:2rem;">🌆</span>
+              <div>
+                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Los Angeles County ⭐</div>
+                <div style="font-size:0.8rem;color:var(--gray-600);">9.8M residents · 9+ programs</div>
+                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+              </div>
+            </a>
+            <a href="/california/san-diego/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
+              <span style="font-size:2rem;">🌁</span>
+              <div>
+                <div style="font-weight:700;color:var(--navy);font-size:1rem;">San Diego County ⭐</div>
+                <div style="font-size:0.8rem;color:var(--gray-600);">3.3M residents · 9+ programs</div>
+                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+              </div>
+            </a>
+            <a href="/california/orange/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
+              <span style="font-size:2rem;">🌉</span>
+              <div>
+                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Orange County ⭐</div>
+                <div style="font-size:0.8rem;color:var(--gray-600);">3.2M residents · 9+ programs</div>
+                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+              </div>
+            </a>
+            <a href="/california/riverside/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
+              <span style="font-size:2rem;">🌴</span>
+              <div>
+                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Riverside County ⭐</div>
+                <div style="font-size:0.8rem;color:var(--gray-600);">2.5M residents · 9+ programs</div>
+                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+              </div>
+            </a>
+            <a href="/california/san-bernardino/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
+              <span style="font-size:2rem;">🏖️</span>
+              <div>
+                <div style="font-weight:700;color:var(--navy);font-size:1rem;">San Bernardino County ⭐</div>
+                <div style="font-size:0.8rem;color:var(--gray-600);">2.2M residents · 9+ programs</div>
+                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+              </div>
+            </a>
+            <a href="/california/santa-clara/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
+              <span style="font-size:2rem;">🏔️</span>
+              <div>
+                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Santa Clara County ⭐</div>
+                <div style="font-size:0.8rem;color:var(--gray-600);">1.9M residents · 9+ programs</div>
+                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- All Counties A-Z -->
+        <h3 style="color:var(--gray-600);font-size:1.1rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1.5rem;">All 58 Counties — Alphabetical</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0.75rem;">
+          <a href="/california/alameda/" class="county-link-item">📍 Alameda County</a>
+          <a href="/california/alpine/" class="county-link-item">📍 Alpine County</a>
+          <a href="/california/amador/" class="county-link-item">📍 Amador County</a>
+          <a href="/california/butte/" class="county-link-item">📍 Butte County</a>
+          <a href="/california/calaveras/" class="county-link-item">📍 Calaveras County</a>
+          <a href="/california/colusa/" class="county-link-item">📍 Colusa County</a>
+          <a href="/california/contra-costa/" class="county-link-item">📍 Contra Costa County</a>
+          <a href="/california/del-norte/" class="county-link-item">📍 Del Norte County</a>
+          <a href="/california/el-dorado/" class="county-link-item">📍 El Dorado County</a>
+          <a href="/california/fresno/" class="county-link-item">📍 Fresno County</a>
+          <a href="/california/glenn/" class="county-link-item">📍 Glenn County</a>
+          <a href="/california/humboldt/" class="county-link-item">📍 Humboldt County</a>
+          <a href="/california/imperial/" class="county-link-item">📍 Imperial County</a>
+          <a href="/california/inyo/" class="county-link-item">📍 Inyo County</a>
+          <a href="/california/kern/" class="county-link-item">📍 Kern County</a>
+          <a href="/california/kings/" class="county-link-item">📍 Kings County</a>
+          <a href="/california/lake/" class="county-link-item">📍 Lake County</a>
+          <a href="/california/lassen/" class="county-link-item">📍 Lassen County</a>
+          <a href="/california/los-angeles/" class="county-link-item" style="border-color:var(--navy);background:rgba(27,58,107,0.04);">⭐ Los Angeles County</a>
+          <a href="/california/madera/" class="county-link-item">📍 Madera County</a>
+          <a href="/california/marin/" class="county-link-item">📍 Marin County</a>
+          <a href="/california/mariposa/" class="county-link-item">📍 Mariposa County</a>
+          <a href="/california/mendocino/" class="county-link-item">📍 Mendocino County</a>
+          <a href="/california/merced/" class="county-link-item">📍 Merced County</a>
+          <a href="/california/modoc/" class="county-link-item">📍 Modoc County</a>
+          <a href="/california/mono/" class="county-link-item">📍 Mono County</a>
+          <a href="/california/monterey/" class="county-link-item">📍 Monterey County</a>
+          <a href="/california/napa/" class="county-link-item">📍 Napa County</a>
+          <a href="/california/nevada/" class="county-link-item">📍 Nevada County</a>
+          <a href="/california/orange/" class="county-link-item" style="border-color:var(--navy);background:rgba(27,58,107,0.04);">⭐ Orange County</a>
+          <a href="/california/placer/" class="county-link-item">📍 Placer County</a>
+          <a href="/california/plumas/" class="county-link-item">📍 Plumas County</a>
+          <a href="/california/riverside/" class="county-link-item" style="border-color:var(--navy);background:rgba(27,58,107,0.04);">⭐ Riverside County</a>
+          <a href="/california/sacramento/" class="county-link-item">📍 Sacramento County</a>
+          <a href="/california/san-benito/" class="county-link-item">📍 San Benito County</a>
+          <a href="/california/san-bernardino/" class="county-link-item" style="border-color:var(--navy);background:rgba(27,58,107,0.04);">⭐ San Bernardino County</a>
+          <a href="/california/san-diego/" class="county-link-item" style="border-color:var(--navy);background:rgba(27,58,107,0.04);">⭐ San Diego County</a>
+          <a href="/california/san-francisco/" class="county-link-item">📍 San Francisco County</a>
+          <a href="/california/san-joaquin/" class="county-link-item">📍 San Joaquin County</a>
+          <a href="/california/san-luis-obispo/" class="county-link-item">📍 San Luis Obispo County</a>
+          <a href="/california/san-mateo/" class="county-link-item">📍 San Mateo County</a>
+          <a href="/california/santa-barbara/" class="county-link-item">📍 Santa Barbara County</a>
+          <a href="/california/santa-clara/" class="county-link-item" style="border-color:var(--navy);background:rgba(27,58,107,0.04);">⭐ Santa Clara County</a>
+          <a href="/california/santa-cruz/" class="county-link-item">📍 Santa Cruz County</a>
+          <a href="/california/shasta/" class="county-link-item">📍 Shasta County</a>
+          <a href="/california/sierra/" class="county-link-item">📍 Sierra County</a>
+          <a href="/california/siskiyou/" class="county-link-item">📍 Siskiyou County</a>
+          <a href="/california/solano/" class="county-link-item">📍 Solano County</a>
+          <a href="/california/sonoma/" class="county-link-item">📍 Sonoma County</a>
+          <a href="/california/stanislaus/" class="county-link-item">📍 Stanislaus County</a>
+          <a href="/california/sutter/" class="county-link-item">📍 Sutter County</a>
+          <a href="/california/tehama/" class="county-link-item">📍 Tehama County</a>
+          <a href="/california/trinity/" class="county-link-item">📍 Trinity County</a>
+          <a href="/california/tulare/" class="county-link-item">📍 Tulare County</a>
+          <a href="/california/tuolumne/" class="county-link-item">📍 Tuolumne County</a>
+          <a href="/california/ventura/" class="county-link-item">📍 Ventura County</a>
+          <a href="/california/yolo/" class="county-link-item">📍 Yolo County</a>
+          <a href="/california/yuba/" class="county-link-item">📍 Yuba County</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <style>
+    .county-link-item {
+      display:flex;align-items:center;gap:0.5rem;
+      padding:0.65rem 1rem;border:1px solid var(--gray-200);border-radius:8px;
+      color:var(--navy);font-size:0.875rem;font-weight:600;text-decoration:none;
+      background:#fff;transition:all 0.2s;
+    }
+    .county-link-item:hover { border-color:var(--blue);background:rgba(45,125,210,0.04);color:var(--blue); }
+  </style>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__bottom" style="border-top:1px solid rgba(255,255,255,0.1);padding:1.5rem 0;margin-top:0;">
+        <p>© 2026 National Benefit Alliance · <a href="/" style="color:rgba(255,255,255,0.5);">Home</a> · <a href="/california/" style="color:rgba(255,255,255,0.5);">California</a> · <a href="/florida/" style="color:rgba(255,255,255,0.5);">Florida</a></p>
+        <div class="footer__bottom-links">
+          <a href="/sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
 </body>
 </html>

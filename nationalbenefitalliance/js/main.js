@@ -480,3 +480,92 @@ const counterObserver = new IntersectionObserver((entries) => {
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('[data-count]').forEach(el => counterObserver.observe(el));
 });
+
+/* ============================================================
+   COUNTY GUIDE ACCESS GATE
+   ============================================================ */
+(function () {
+  // Only run on county guide pages (path contains /florida/)
+  if (!window.location.pathname.includes('/florida/')) return;
+
+  const ACCESS_KEY = 'nba_county_access';
+  const VALID_CODE = '090909';
+
+  // Already unlocked this session
+  if (sessionStorage.getItem(ACCESS_KEY) === 'granted') return;
+
+  // Build overlay
+  const overlay = document.createElement('div');
+  overlay.id = 'nba-access-gate';
+  overlay.innerHTML = `
+    <div id="nba-gate-box">
+      <img src="/images/nba-logo.png" alt="National Benefit Alliance" id="nba-gate-logo" onerror="this.style.display='none'">
+      <h2>County Resource Guide</h2>
+      <p>Enter your access code to view the full county guide.</p>
+      <input type="password" id="nba-gate-input" placeholder="Access code" maxlength="20" autocomplete="off" />
+      <button id="nba-gate-btn">Unlock Guide</button>
+      <p id="nba-gate-error" style="display:none;">Incorrect code. Please try again.</p>
+    </div>
+  `;
+
+  const style = document.createElement('style');
+  style.textContent = `
+    #nba-access-gate {
+      position: fixed; inset: 0; z-index: 99999;
+      background: rgba(10, 30, 60, 0.92);
+      display: flex; align-items: center; justify-content: center;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    #nba-gate-box {
+      background: #fff; border-radius: 12px; padding: 40px 36px;
+      max-width: 380px; width: 90%; text-align: center;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    }
+    #nba-gate-logo { max-width: 160px; margin-bottom: 16px; }
+    #nba-gate-box h2 { margin: 0 0 8px; color: #0a1e3c; font-size: 1.4rem; }
+    #nba-gate-box p { color: #555; font-size: 0.95rem; margin: 0 0 20px; }
+    #nba-gate-input {
+      width: 100%; padding: 12px 14px; font-size: 1.1rem; letter-spacing: 4px;
+      border: 2px solid #ddd; border-radius: 8px; text-align: center;
+      box-sizing: border-box; margin-bottom: 14px; outline: none;
+      transition: border-color 0.2s;
+    }
+    #nba-gate-input:focus { border-color: #0a5c9e; }
+    #nba-gate-btn {
+      width: 100%; padding: 12px; background: #0a5c9e; color: #fff;
+      border: none; border-radius: 8px; font-size: 1rem; font-weight: 600;
+      cursor: pointer; transition: background 0.2s;
+    }
+    #nba-gate-btn:hover { background: #0845780; }
+    #nba-gate-error { color: #c0392b; font-size: 0.88rem; margin: 10px 0 0; }
+  `;
+
+  document.head.appendChild(style);
+  document.body.appendChild(overlay);
+
+  function attemptUnlock() {
+    const val = document.getElementById('nba-gate-input').value.trim();
+    if (val === VALID_CODE) {
+      sessionStorage.setItem(ACCESS_KEY, 'granted');
+      overlay.style.opacity = '0';
+      overlay.style.transition = 'opacity 0.3s';
+      setTimeout(() => overlay.remove(), 300);
+    } else {
+      const err = document.getElementById('nba-gate-error');
+      const inp = document.getElementById('nba-gate-input');
+      err.style.display = 'block';
+      inp.value = '';
+      inp.focus();
+      inp.style.borderColor = '#c0392b';
+      setTimeout(() => { inp.style.borderColor = '#ddd'; }, 1200);
+    }
+  }
+
+  document.getElementById('nba-gate-btn').addEventListener('click', attemptUnlock);
+  document.getElementById('nba-gate-input').addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') attemptUnlock();
+  });
+
+  // Focus input after render
+  setTimeout(() => document.getElementById('nba-gate-input')?.focus(), 100);
+})();

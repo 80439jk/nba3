@@ -1,0 +1,12 @@
+{
+  "name": "national-benefit-alliance",
+  "version": "1.0.0",
+  "description": "Free government resource center — organized by county",
+  "engines": {
+    "node": ">=18.x"
+  },
+  "dependencies": {
+    "pg": "^8.11.3",
+    "nodemailer": "^6.9.7"
+  }
+}

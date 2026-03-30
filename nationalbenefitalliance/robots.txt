@@ -1,0 +1,189 @@
+# ============================================================
+# robots.txt — National Benefit Alliance
+# https://nationalbenefitalliance.com
+# Last updated: 2025-01-01
+#
+# Strategy: Open to legitimate search engines and AI crawlers.
+#            Block scrapers and protect internal paths.
+# ============================================================
+
+# ============================================================
+# GOOGLE — Full crawl, prioritize county pages
+# ============================================================
+User-agent: Googlebot
+Allow: /
+Allow: /florida/
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Disallow: /admin/
+Disallow: /api/
+Disallow: /backend/
+Disallow: /.env
+Disallow: /search?error=
+Crawl-delay: 1
+
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /css/
+Disallow: /admin/
+
+User-agent: Googlebot-News
+Allow: /
+
+# ============================================================
+# BING / MICROSOFT
+# ============================================================
+User-agent: Bingbot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /.env
+Crawl-delay: 2
+
+User-agent: MSNBot
+Allow: /
+Crawl-delay: 5
+
+# ============================================================
+# OTHER MAJOR SEARCH ENGINES
+# ============================================================
+User-agent: DuckDuckBot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+User-agent: Slurp
+Allow: /
+Disallow: /admin/
+Crawl-delay: 5
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 10
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 5
+
+# ============================================================
+# SOCIAL CRAWLERS — Allow for rich previews
+# ============================================================
+User-agent: facebot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: Slackbot
+Allow: /
+
+# ============================================================
+# AI / LLM CRAWLERS — Allow for AI search visibility
+# Critical for appearing in ChatGPT, Perplexity, Claude, etc.
+# ============================================================
+User-agent: GPTBot
+Allow: /
+Allow: /florida/
+Disallow: /admin/
+Disallow: /api/
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: omgili
+Allow: /
+
+# ============================================================
+# DEFAULT — All other crawlers
+# ============================================================
+User-agent: *
+Allow: /
+Allow: /florida/
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Disallow: /admin/
+Disallow: /api/
+Disallow: /backend/
+Disallow: /node_modules/
+Disallow: /database/
+Disallow: /downloads/private/
+Disallow: /.env
+Disallow: /.git
+Disallow: /search?
+Disallow: /*?error=
+Disallow: /account/
+Disallow: /dashboard/
+Crawl-delay: 5
+
+# ============================================================
+# BLOCK MALICIOUS & SPAM BOTS
+# ============================================================
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: SemrushBot
+Crawl-delay: 30
+
+User-agent: rogerbot
+Disallow: /
+
+User-agent: SEOkicks
+Disallow: /
+
+User-agent: serpstatbot
+Disallow: /
+
+User-agent: ia_archiver
+Allow: /
+
+# ============================================================
+# SITEMAPS
+# ============================================================
+Sitemap: https://nationalbenefitalliance.com/sitemap.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-counties.xml
+
+Host: https://nationalbenefitalliance.com

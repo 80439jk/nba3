@@ -2985,7 +2985,7 @@ document.addEventListener('DOMContentLoaded', () => {
    ============================================================ */
 (function () {
   // Only run on county guide pages (path contains /florida/)
-  if (!window.location.pathname.includes('/florida/')) return;
+  if (!window.location.pathname.includes('/florida/') && !window.location.pathname.includes('/california/')) return;
 
   const ACCESS_KEY = 'nba_county_access';
   const VALID_CODE = '090909';

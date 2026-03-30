@@ -1,0 +1,30 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/search",               "destination": "/api/search" },
+    { "source": "/sitemap.xml",          "destination": "/api/sitemap" },
+    { "source": "/sitemap-counties.xml", "destination": "/api/sitemap-counties" },
+    { "source": "/humans.txt",           "destination": "/api/humans" },
+    { "source": "/api/zip/:zip",         "destination": "/api/zip/[zip]" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options",        "value": "SAMEORIGIN" },
+        { "key": "X-XSS-Protection",       "value": "1; mode=block" },
+        { "key": "Referrer-Policy",        "value": "strict-origin-when-cross-origin" }
+      ]
+    },
+    {
+      "source": "/css/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+    },
+    {
+      "source": "/js/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+    }
+  ]
+}

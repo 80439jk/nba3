@@ -4125,7 +4125,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const _stateCountyPage = /^\/[a-z-]+\/[a-z-]+\//.test(_p);
   if (!_stateCountyPage) return;
 
-  const ACCESS_KEY = 'nba_county_access';
+  const ACCESS_KEY = 'nba_county_access_v2';
   const VALID_CODE = '0909';
 
   // Already unlocked this session

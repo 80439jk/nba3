@@ -562,65 +562,51 @@
             </div><!-- /resources-content -->
           </div>
 
-          <!-- SIDEBAR -->
+          <!-- Sidebar -->
           <aside class="sidebar">
 
             <!-- Quick Access -->
             <div class="sidebar-card">
-              <h4 class="sidebar-card__title">Quick Access</h4>
-              <nav class="sidebar-nav">
-                <ul>
-                  <li><a href="#utilities">⚡ Utility Assistance</a></li>
-                  <li><a href="#housing">🏠 Housing &amp; Rent</a></li>
-                  <li><a href="#food">🥗 Food &amp; SNAP</a></li>
-                  <li><a href="#healthcare">🏥 Healthcare</a></li>
-                  <li><a href="#employment">💼 Employment</a></li>
-                  <li><a href="#seniors">👴 Senior Services</a></li>
-                  <li><a href="#disability">♿ Disability</a></li>
-                  <li><a href="#childcare">👶 Childcare</a></li>
-                  <li><a href="#community">🤝 Community</a></li>
-                </ul>
-              </nav>
+              <h3>Quick Access</h3>
+              <ul class="sidebar-nav">
+                <li><a href="#utilities">⚡ Utility Assistance</a></li>
+                <li><a href="#housing">🏠 Housing &amp; Rent</a></li>
+                <li><a href="#food">🥗 Food Assistance</a></li>
+                <li><a href="#healthcare">🏥 Healthcare</a></li>
+                <li><a href="#employment">💼 Employment</a></li>
+                <li><a href="#seniors">👴 Senior Services</a></li>
+                <li><a href="#disability">♿ Disability</a></li>
+                <li><a href="#childcare">👶 Child Care</a></li>
+                <li><a href="#community">🤝 Community</a></li>
+              </ul>
             </div>
 
             <!-- PDF CTA -->
-            <div class="sidebar-card sidebar-card--highlight" id="pdf-download">
-              <div style="font-size:2rem;margin-bottom:0.5rem;">📄</div>
-              <h4 class="sidebar-card__title">Free PDF Guide</h4>
-              <p style="font-size:0.875rem;color:var(--gray-600);margin-bottom:1rem;">Download the complete Dale County resource guide as a printable PDF — share with family, neighbors, or clients.</p>
-              <a href="tel:18006224357" class="btn btn--primary btn--sm" style="width:100%;text-align:center;">📞 Call for PDF Access</a>
-              <p style="font-size:0.75rem;color:var(--gray-500);margin-top:0.5rem;text-align:center;">1-800-NBA-HELP · Free</p>
+            <div class="sidebar-card sidebar-card--cta" id="pdf-download">
+              <div style="font-size:2rem;">📄</div>
+              <h3>Dale County Resource Guide</h3>
+              <p>Download the complete PDF guide with all programs, contacts, and eligibility details for Dale County.</p>
+              <a href="tel:18006224357" class="btn btn--primary" style="width:100%;text-align:center;">📞 Call to Get Your PDF</a>
+              <p style="font-size:0.75rem;color:var(--gray-500);margin-top:0.75rem;">Free · No spam · Available in English &amp; Spanish</p>
             </div>
 
             <!-- County Info -->
             <div class="sidebar-card">
-              <h4 class="sidebar-card__title">County Information</h4>
-              <dl style="font-size:0.875rem;">
-                <dt style="font-weight:600;color:var(--gray-700);">County Seat</dt>
-                <dd style="margin:0 0 0.5rem 0;color:var(--gray-600);">Ozark</dd>
-                <dt style="font-weight:600;color:var(--gray-700);">Population</dt>
-                <dd style="margin:0 0 0.5rem 0;color:var(--gray-600);">50,251</dd>
-                <dt style="font-weight:600;color:var(--gray-700);">Region</dt>
-                <dd style="margin:0 0 0.5rem 0;color:var(--gray-600);">Southeast Alabama</dd>
-                <dt style="font-weight:600;color:var(--gray-700);">State</dt>
-                <dd style="margin:0;color:var(--gray-600);">Alabama</dd>
-              </dl>
+              <h3>County Info</h3>
+              <ul style="list-style:none;padding:0;margin:0;font-size:0.875rem;display:flex;flex-direction:column;gap:0.5rem;">
+                <li><strong>County Seat:</strong> Ozark</li>
+                <li><strong>Population:</strong> 50,251</li>
+                <li><strong>Region:</strong> Southeast Alabama</li>
+                <li><strong>Local 211:</strong> <a href="tel:211">Dial 211</a></li>
+                <li><strong>State:</strong> Alabama</li>
+              </ul>
             </div>
 
             <!-- Other Counties -->
             <div class="sidebar-card">
-              <h4 class="sidebar-card__title">Other Alabama Counties</h4>
-              <nav>
-                <ul class="sidebar-county-list">
-        <li><a href="/alabama/autauga/">Autauga County</a></li>
-        <li><a href="/alabama/baldwin/">Baldwin County</a></li>
-        <li><a href="/alabama/barbour/">Barbour County</a></li>
-        <li><a href="/alabama/bibb/">Bibb County</a></li>
-        <li><a href="/alabama/blount/">Blount County</a></li>
-        <li><a href="/alabama/bullock/">Bullock County</a></li>
-                </ul>
-              </nav>
-              <a href="/alabama/" style="font-size:0.8rem;color:var(--navy);display:block;margin-top:0.75rem;">View all 67 counties →</a>
+              <h3>Other Alabama Counties</h3>
+              <p style="font-size:0.875rem;color:var(--gray-600);">Find resources in another county:</p>
+              <a href="/alabama/" class="btn btn--outline" style="width:100%;text-align:center;">Browse All 67 Counties →</a>
             </div>
 
           </aside>
@@ -634,33 +620,32 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__grid">
-        <div>
-          <div class="footer__logo">
-            <svg viewBox="0 0 26 26" width="24" height="24"><path d="M13 2L3 7v6c0 5.5 4.3 10.7 10 12 5.7-1.3 10-6.5 10-12V7L13 2z" fill="#E8A020"/></svg>
-            <span>National Benefit Alliance</span>
+        <div class="footer__brand">
+          <div class="nav__logo-text">
+            <span class="nav__logo-name">National Benefit Alliance</span>
+            <span class="nav__logo-tagline">Free Resource Center · All 50 States</span>
           </div>
-          <p style="font-size:0.85rem;color:var(--gray-500);margin-top:0.5rem;">Free government benefit resources for all 50 states. Not affiliated with any government agency.</p>
+          <p>Helping Americans find the government and community programs they've earned — at no cost.</p>
         </div>
         <div>
-          <h5 style="color:var(--gray-300);font-size:0.8rem;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.75rem;">Alabama</h5>
-          <ul style="list-style:none;padding:0;margin:0;font-size:0.875rem;">
+          <h4>Alabama Resources</h4>
+          <ul>
             <li><a href="/alabama/">All Alabama Counties</a></li>
-            <li><a href="/alabama/dale/">Dale County</a></li>
+            <li><a href="https://aces.alabama.gov" target="_blank" rel="noopener">ACES Alabama (DHR)</a></li>
+            <li><a href="https://labor.alabama.gov/uc/" target="_blank" rel="noopener">Unemployment Insurance</a></li>
           </ul>
         </div>
         <div>
-          <h5 style="color:var(--gray-300);font-size:0.8rem;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.75rem;">Quick Links</h5>
-          <ul style="list-style:none;padding:0;margin:0;font-size:0.875rem;">
-            <li><a href="/">Home</a></li>
-            <li><a href="/resources/">All States</a></li>
-            <li><a href="/faq/">FAQ</a></li>
-            <li><a href="https://apply.nationalbenefitalliance.com">Apply Now</a></li>
+          <h4>Get Help Now</h4>
+          <ul>
+            <li><a href="tel:211">Dial 211 (Crisis Line)</a></li>
+            <li><a href="tel:18006224357">1-800-NBA-HELP</a></li>
+            <li><a href="/apply/">Apply for Access Code</a></li>
           </ul>
         </div>
       </div>
       <div class="footer__bottom">
-        <p>&copy; 2025 National Benefit Alliance. All rights reserved. | <a href="/privacy/">Privacy Policy</a> | <a href="/terms/">Terms of Use</a></p>
-        <p style="font-size:0.75rem;color:var(--gray-500);margin-top:0.25rem;">This site provides informational resources only. We are not a government agency. Program availability and eligibility subject to change.</p>
+        <p>© 2025 National Benefit Alliance · Not affiliated with any government agency · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
       </div>
     </div>
   </footer>

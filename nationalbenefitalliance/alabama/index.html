@@ -68,7 +68,7 @@
     <div class="nav__inner">
       <a href="/" class="nav__logo">
         <div class="nav__logo-icon">
-          <svg viewBox="0 0 26 26"><path d="M13 2L3 7v6c0 5.5 4.3 10.7 10 12 5.7-1.3 10-6.5 10-12V7L13 2z" fill="#E8A020"/></svg>
+          <svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg"><path d="M13 2L3 7v6c0 5.5 4.3 10.7 10 12 5.7-1.3 10-6.5 10-12V7L13 2z" fill="#E8A020"/></svg>
         </div>
         <div class="nav__logo-text">
           <span class="nav__logo-name">National Benefit Alliance</span>
@@ -79,6 +79,7 @@
         <li><a href="/">Home</a></li>
         <li><a href="/alabama/" class="active">Alabama</a></li>
         <li><a href="/resources/">All States</a></li>
+        <li><a href="/about/">About</a></li>
         <li><a href="/faq/">FAQ</a></li>
       </ul>
       <div class="nav__cta">
@@ -98,310 +99,205 @@
   </nav>
 
   <main>
-    <section class="state-hero">
+
+    <!-- Page Header -->
+    <section style="background:linear-gradient(135deg,#0F2447,#1B3A6B);padding:4rem 0 3rem;color:#fff;">
       <div class="container">
-        <div class="county-hero__eyebrow">⭐ The Heart of Dixie</div>
-        <h1>Alabama<br/>Free Benefits &amp; Resources</h1>
-        <p class="lead">Find free government and community assistance programs in all 67 Alabama counties. Search by ZIP code or select your county below.</p>
-        <div class="county-hero__actions">
-          <a href="#counties" class="btn btn--primary btn--lg">Browse All Counties</a>
-          <a href="tel:18006224357" class="btn btn--outline-white">📞 1-800-NBA-HELP</a>
+        <div style="display:flex;align-items:center;gap:1.5rem;margin-bottom:1rem;">
+          <span style="font-size:3.5rem;">⭐</span>
+          <div>
+            <span style="color:var(--gold-light);font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;">State Resource Center</span>
+            <h1 style="color:#fff;margin:0;">Alabama County Resources</h1>
+          </div>
         </div>
-        <div class="county-hero__meta">
-          <div class="county-hero__meta-item"><span>67</span><span>Counties</span></div>
-          <div class="county-hero__meta-item"><span>5M+</span><span>Residents</span></div>
-          <div class="county-hero__meta-item"><span>50+</span><span>Programs / County</span></div>
-          <div class="county-hero__meta-item"><span>Free</span><span>Access</span></div>
+        <p class="lead" style="color:rgba(255,255,255,0.78);max-width:640px;">
+          All 67 Alabama counties covered. Find free government and community assistance programs for utilities, housing, food, Alabama Medicaid, SNAP, and more — organized by your county.
+        </p>
+        <!-- ZIP Search (inline) -->
+        <form id="zip-form" style="display:flex;gap:0;max-width:420px;margin-top:2rem;border-radius:8px;overflow:hidden;border:2px solid rgba(255,255,255,0.2);" aria-label="ZIP search">
+          <input id="zip-input" type="tel" placeholder="Enter ZIP code" maxlength="5" style="flex:1;padding:0.85rem 1rem;border:none;font-size:1rem;font-weight:600;letter-spacing:0.08em;outline:none;" />
+          <button type="submit" style="background:var(--gold);color:var(--navy-dark);border:none;padding:0.85rem 1.25rem;font-weight:700;">Go →</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Stats bar -->
+    <div style="background:var(--gray-50);border-bottom:1px solid var(--gray-200);padding:1.25rem 0;">
+      <div class="container">
+        <div style="display:flex;gap:3rem;flex-wrap:wrap;align-items:center;">
+          <div><strong style="color:var(--navy);font-size:1.4rem;">67</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Counties</span></div>
+          <div><strong style="color:var(--navy);font-size:1.4rem;">400+</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Assistance Programs</span></div>
+          <div><strong style="color:var(--navy);font-size:1.4rem;">9</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Resource Categories</span></div>
+          <div><strong style="color:var(--navy);font-size:1.4rem;">Free</strong> <span style="color:var(--gray-600);font-size:0.9rem;">PDF Download</span></div>
+          <div style="margin-left:auto;">
+            <a href="tel:18006224357" style="background:var(--navy);color:#fff;padding:0.6rem 1.25rem;border-radius:6px;font-weight:700;font-size:0.9rem;text-decoration:none;">📞 Get Access Code</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- All Counties Grid -->
+    <section class="section" aria-labelledby="counties-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge--gold">All Counties</span>
+          <h2 id="counties-heading">Browse All 67 Alabama Counties</h2>
+          <p>Click your county to view the full resource guide. Counties marked ⭐ have been fully verified and updated.</p>
+        </div>
+
+        <!-- Featured Large Counties -->
+        <div style="margin-bottom:3rem;">
+          <h3 style="color:var(--gray-600);font-size:1.1rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1.5rem;">Most Populated Counties</h3>
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem;">
+            <a href="/alabama/jefferson/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
+              <span style="font-size:2rem;">🏙️</span>
+              <div>
+                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Jefferson County ⭐</div>
+                <div style="font-size:0.8rem;color:var(--gray-600);">664K residents · 50+ programs</div>
+                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+              </div>
+            </a>
+            <a href="/alabama/mobile/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
+              <span style="font-size:2rem;">⚓</span>
+              <div>
+                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Mobile County ⭐</div>
+                <div style="font-size:0.8rem;color:var(--gray-600);">429K residents · 50+ programs</div>
+                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+              </div>
+            </a>
+            <a href="/alabama/madison/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
+              <span style="font-size:2rem;">🚀</span>
+              <div>
+                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Madison County ⭐</div>
+                <div style="font-size:0.8rem;color:var(--gray-600);">395K residents · 50+ programs</div>
+                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+              </div>
+            </a>
+            <a href="/alabama/baldwin/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
+              <span style="font-size:2rem;">🌊</span>
+              <div>
+                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Baldwin County ⭐</div>
+                <div style="font-size:0.8rem;color:var(--gray-600);">246K residents · 50+ programs</div>
+                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+              </div>
+            </a>
+            <a href="/alabama/montgomery/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
+              <span style="font-size:2rem;">🏛️</span>
+              <div>
+                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Montgomery County ⭐</div>
+                <div style="font-size:0.8rem;color:var(--gray-600);">229K residents · 50+ programs</div>
+                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+              </div>
+            </a>
+            <a href="/alabama/tuscaloosa/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
+              <span style="font-size:2rem;">🎓</span>
+              <div>
+                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Tuscaloosa County ⭐</div>
+                <div style="font-size:0.8rem;color:var(--gray-600);">227K residents · 50+ programs</div>
+                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- All Counties A-Z -->
+        <h3 style="color:var(--gray-600);font-size:1.1rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1.5rem;">All 67 Counties — Alphabetical</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0.75rem;">
+          <a href="/alabama/autauga/" class="county-link-item">📍 Autauga County</a>
+          <a href="/alabama/baldwin/" class="county-link-item">📍 Baldwin County</a>
+          <a href="/alabama/barbour/" class="county-link-item">📍 Barbour County</a>
+          <a href="/alabama/bibb/" class="county-link-item">📍 Bibb County</a>
+          <a href="/alabama/blount/" class="county-link-item">📍 Blount County</a>
+          <a href="/alabama/bullock/" class="county-link-item">📍 Bullock County</a>
+          <a href="/alabama/butler/" class="county-link-item">📍 Butler County</a>
+          <a href="/alabama/calhoun/" class="county-link-item">📍 Calhoun County</a>
+          <a href="/alabama/chambers/" class="county-link-item">📍 Chambers County</a>
+          <a href="/alabama/cherokee/" class="county-link-item">📍 Cherokee County</a>
+          <a href="/alabama/chilton/" class="county-link-item">📍 Chilton County</a>
+          <a href="/alabama/choctaw/" class="county-link-item">📍 Choctaw County</a>
+          <a href="/alabama/clarke/" class="county-link-item">📍 Clarke County</a>
+          <a href="/alabama/clay/" class="county-link-item">📍 Clay County</a>
+          <a href="/alabama/cleburne/" class="county-link-item">📍 Cleburne County</a>
+          <a href="/alabama/coffee/" class="county-link-item">📍 Coffee County</a>
+          <a href="/alabama/colbert/" class="county-link-item">📍 Colbert County</a>
+          <a href="/alabama/conecuh/" class="county-link-item">📍 Conecuh County</a>
+          <a href="/alabama/coosa/" class="county-link-item">📍 Coosa County</a>
+          <a href="/alabama/covington/" class="county-link-item">📍 Covington County</a>
+          <a href="/alabama/crenshaw/" class="county-link-item">📍 Crenshaw County</a>
+          <a href="/alabama/cullman/" class="county-link-item">📍 Cullman County</a>
+          <a href="/alabama/dale/" class="county-link-item">📍 Dale County</a>
+          <a href="/alabama/dallas/" class="county-link-item">📍 Dallas County</a>
+          <a href="/alabama/dekalb/" class="county-link-item">📍 DeKalb County</a>
+          <a href="/alabama/elmore/" class="county-link-item">📍 Elmore County</a>
+          <a href="/alabama/escambia/" class="county-link-item">📍 Escambia County</a>
+          <a href="/alabama/etowah/" class="county-link-item">📍 Etowah County</a>
+          <a href="/alabama/fayette/" class="county-link-item">📍 Fayette County</a>
+          <a href="/alabama/franklin/" class="county-link-item">📍 Franklin County</a>
+          <a href="/alabama/geneva/" class="county-link-item">📍 Geneva County</a>
+          <a href="/alabama/greene/" class="county-link-item">📍 Greene County</a>
+          <a href="/alabama/hale/" class="county-link-item">📍 Hale County</a>
+          <a href="/alabama/henry/" class="county-link-item">📍 Henry County</a>
+          <a href="/alabama/houston/" class="county-link-item">📍 Houston County</a>
+          <a href="/alabama/jackson/" class="county-link-item">📍 Jackson County</a>
+          <a href="/alabama/jefferson/" class="county-link-item">📍 Jefferson County</a>
+          <a href="/alabama/lamar/" class="county-link-item">📍 Lamar County</a>
+          <a href="/alabama/lauderdale/" class="county-link-item">📍 Lauderdale County</a>
+          <a href="/alabama/lawrence/" class="county-link-item">📍 Lawrence County</a>
+          <a href="/alabama/lee/" class="county-link-item">📍 Lee County</a>
+          <a href="/alabama/limestone/" class="county-link-item">📍 Limestone County</a>
+          <a href="/alabama/lowndes/" class="county-link-item">📍 Lowndes County</a>
+          <a href="/alabama/macon/" class="county-link-item">📍 Macon County</a>
+          <a href="/alabama/madison/" class="county-link-item">📍 Madison County</a>
+          <a href="/alabama/marengo/" class="county-link-item">📍 Marengo County</a>
+          <a href="/alabama/marion/" class="county-link-item">📍 Marion County</a>
+          <a href="/alabama/marshall/" class="county-link-item">📍 Marshall County</a>
+          <a href="/alabama/mobile/" class="county-link-item">📍 Mobile County</a>
+          <a href="/alabama/monroe/" class="county-link-item">📍 Monroe County</a>
+          <a href="/alabama/montgomery/" class="county-link-item">📍 Montgomery County</a>
+          <a href="/alabama/morgan/" class="county-link-item">📍 Morgan County</a>
+          <a href="/alabama/perry/" class="county-link-item">📍 Perry County</a>
+          <a href="/alabama/pickens/" class="county-link-item">📍 Pickens County</a>
+          <a href="/alabama/pike/" class="county-link-item">📍 Pike County</a>
+          <a href="/alabama/randolph/" class="county-link-item">📍 Randolph County</a>
+          <a href="/alabama/russell/" class="county-link-item">📍 Russell County</a>
+          <a href="/alabama/shelby/" class="county-link-item">📍 Shelby County</a>
+          <a href="/alabama/st-clair/" class="county-link-item">📍 St. Clair County</a>
+          <a href="/alabama/sumter/" class="county-link-item">📍 Sumter County</a>
+          <a href="/alabama/talladega/" class="county-link-item">📍 Talladega County</a>
+          <a href="/alabama/tallapoosa/" class="county-link-item">📍 Tallapoosa County</a>
+          <a href="/alabama/tuscaloosa/" class="county-link-item">📍 Tuscaloosa County</a>
+          <a href="/alabama/walker/" class="county-link-item">📍 Walker County</a>
+          <a href="/alabama/washington/" class="county-link-item">📍 Washington County</a>
+          <a href="/alabama/wilcox/" class="county-link-item">📍 Wilcox County</a>
+          <a href="/alabama/winston/" class="county-link-item">📍 Winston County</a>
         </div>
       </div>
     </section>
 
-    <section class="section" id="counties">
-      <div class="container">
-        <h2 style="text-align:center;margin-bottom:2rem;">All 67 Alabama Counties</h2>
-        <div class="county-grid">
-          <a href="/alabama/autauga/" class="county-card">
-            <div class="county-card__name">Autauga County</div>
-            <div class="county-card__meta">Prattville · 59K</div>
-          </a>
-          <a href="/alabama/baldwin/" class="county-card">
-            <div class="county-card__name">Baldwin County</div>
-            <div class="county-card__meta">Bay Minette · 246K</div>
-          </a>
-          <a href="/alabama/barbour/" class="county-card">
-            <div class="county-card__name">Barbour County</div>
-            <div class="county-card__meta">Clayton · 25K</div>
-          </a>
-          <a href="/alabama/bibb/" class="county-card">
-            <div class="county-card__name">Bibb County</div>
-            <div class="county-card__meta">Centreville · 23K</div>
-          </a>
-          <a href="/alabama/blount/" class="county-card">
-            <div class="county-card__name">Blount County</div>
-            <div class="county-card__meta">Oneonta · 59K</div>
-          </a>
-          <a href="/alabama/bullock/" class="county-card">
-            <div class="county-card__name">Bullock County</div>
-            <div class="county-card__meta">Union Springs · 10K</div>
-          </a>
-          <a href="/alabama/butler/" class="county-card">
-            <div class="county-card__name">Butler County</div>
-            <div class="county-card__meta">Greenville · 19K</div>
-          </a>
-          <a href="/alabama/calhoun/" class="county-card">
-            <div class="county-card__name">Calhoun County</div>
-            <div class="county-card__meta">Anniston · 114K</div>
-          </a>
-          <a href="/alabama/chambers/" class="county-card">
-            <div class="county-card__name">Chambers County</div>
-            <div class="county-card__meta">LaFayette · 33K</div>
-          </a>
-          <a href="/alabama/cherokee/" class="county-card">
-            <div class="county-card__name">Cherokee County</div>
-            <div class="county-card__meta">Centre · 26K</div>
-          </a>
-          <a href="/alabama/chilton/" class="county-card">
-            <div class="county-card__name">Chilton County</div>
-            <div class="county-card__meta">Clanton · 46K</div>
-          </a>
-          <a href="/alabama/choctaw/" class="county-card">
-            <div class="county-card__name">Choctaw County</div>
-            <div class="county-card__meta">Butler · 13K</div>
-          </a>
-          <a href="/alabama/clarke/" class="county-card">
-            <div class="county-card__name">Clarke County</div>
-            <div class="county-card__meta">Grove Hill · 24K</div>
-          </a>
-          <a href="/alabama/clay/" class="county-card">
-            <div class="county-card__name">Clay County</div>
-            <div class="county-card__meta">Ashland · 13K</div>
-          </a>
-          <a href="/alabama/cleburne/" class="county-card">
-            <div class="county-card__name">Cleburne County</div>
-            <div class="county-card__meta">Heflin · 15K</div>
-          </a>
-          <a href="/alabama/coffee/" class="county-card">
-            <div class="county-card__name">Coffee County</div>
-            <div class="county-card__meta">Elba · 53K</div>
-          </a>
-          <a href="/alabama/colbert/" class="county-card">
-            <div class="county-card__name">Colbert County</div>
-            <div class="county-card__meta">Tuscumbia · 57K</div>
-          </a>
-          <a href="/alabama/conecuh/" class="county-card">
-            <div class="county-card__name">Conecuh County</div>
-            <div class="county-card__meta">Evergreen · 13K</div>
-          </a>
-          <a href="/alabama/coosa/" class="county-card">
-            <div class="county-card__name">Coosa County</div>
-            <div class="county-card__meta">Rockford · 11K</div>
-          </a>
-          <a href="/alabama/covington/" class="county-card">
-            <div class="county-card__name">Covington County</div>
-            <div class="county-card__meta">Andalusia · 38K</div>
-          </a>
-          <a href="/alabama/crenshaw/" class="county-card">
-            <div class="county-card__name">Crenshaw County</div>
-            <div class="county-card__meta">Luverne · 13K</div>
-          </a>
-          <a href="/alabama/cullman/" class="county-card">
-            <div class="county-card__name">Cullman County</div>
-            <div class="county-card__meta">Cullman · 88K</div>
-          </a>
-          <a href="/alabama/dale/" class="county-card">
-            <div class="county-card__name">Dale County</div>
-            <div class="county-card__meta">Ozark · 50K</div>
-          </a>
-          <a href="/alabama/dallas/" class="county-card">
-            <div class="county-card__name">Dallas County</div>
-            <div class="county-card__meta">Selma · 39K</div>
-          </a>
-          <a href="/alabama/dekalb/" class="county-card">
-            <div class="county-card__name">DeKalb County</div>
-            <div class="county-card__meta">Fort Payne · 72K</div>
-          </a>
-          <a href="/alabama/elmore/" class="county-card">
-            <div class="county-card__name">Elmore County</div>
-            <div class="county-card__meta">Wetumpka · 86K</div>
-          </a>
-          <a href="/alabama/escambia/" class="county-card">
-            <div class="county-card__name">Escambia County</div>
-            <div class="county-card__meta">Brewton · 37K</div>
-          </a>
-          <a href="/alabama/etowah/" class="county-card">
-            <div class="county-card__name">Etowah County</div>
-            <div class="county-card__meta">Gadsden · 102K</div>
-          </a>
-          <a href="/alabama/fayette/" class="county-card">
-            <div class="county-card__name">Fayette County</div>
-            <div class="county-card__meta">Fayette · 17K</div>
-          </a>
-          <a href="/alabama/franklin/" class="county-card">
-            <div class="county-card__name">Franklin County</div>
-            <div class="county-card__meta">Russellville · 33K</div>
-          </a>
-          <a href="/alabama/geneva/" class="county-card">
-            <div class="county-card__name">Geneva County</div>
-            <div class="county-card__meta">Geneva · 27K</div>
-          </a>
-          <a href="/alabama/greene/" class="county-card">
-            <div class="county-card__name">Greene County</div>
-            <div class="county-card__meta">Eutaw · 8K</div>
-          </a>
-          <a href="/alabama/hale/" class="county-card">
-            <div class="county-card__name">Hale County</div>
-            <div class="county-card__meta">Greensboro · 15K</div>
-          </a>
-          <a href="/alabama/henry/" class="county-card">
-            <div class="county-card__name">Henry County</div>
-            <div class="county-card__meta">Abbeville · 18K</div>
-          </a>
-          <a href="/alabama/houston/" class="county-card">
-            <div class="county-card__name">Houston County</div>
-            <div class="county-card__meta">Dothan · 109K</div>
-          </a>
-          <a href="/alabama/jackson/" class="county-card">
-            <div class="county-card__name">Jackson County</div>
-            <div class="county-card__meta">Scottsboro · 52K</div>
-          </a>
-          <a href="/alabama/jefferson/" class="county-card">
-            <div class="county-card__name">Jefferson County</div>
-            <div class="county-card__meta">Birmingham · 664K</div>
-          </a>
-          <a href="/alabama/lamar/" class="county-card">
-            <div class="county-card__name">Lamar County</div>
-            <div class="county-card__meta">Vernon · 14K</div>
-          </a>
-          <a href="/alabama/lauderdale/" class="county-card">
-            <div class="county-card__name">Lauderdale County</div>
-            <div class="county-card__meta">Florence · 96K</div>
-          </a>
-          <a href="/alabama/lawrence/" class="county-card">
-            <div class="county-card__name">Lawrence County</div>
-            <div class="county-card__meta">Moulton · 33K</div>
-          </a>
-          <a href="/alabama/lee/" class="county-card">
-            <div class="county-card__name">Lee County</div>
-            <div class="county-card__meta">Opelika · 174K</div>
-          </a>
-          <a href="/alabama/limestone/" class="county-card">
-            <div class="county-card__name">Limestone County</div>
-            <div class="county-card__meta">Athens · 103K</div>
-          </a>
-          <a href="/alabama/lowndes/" class="county-card">
-            <div class="county-card__name">Lowndes County</div>
-            <div class="county-card__meta">Hayneville · 10K</div>
-          </a>
-          <a href="/alabama/macon/" class="county-card">
-            <div class="county-card__name">Macon County</div>
-            <div class="county-card__meta">Tuskegee · 18K</div>
-          </a>
-          <a href="/alabama/madison/" class="county-card">
-            <div class="county-card__name">Madison County</div>
-            <div class="county-card__meta">Huntsville · 395K</div>
-          </a>
-          <a href="/alabama/marengo/" class="county-card">
-            <div class="county-card__name">Marengo County</div>
-            <div class="county-card__meta">Linden · 19K</div>
-          </a>
-          <a href="/alabama/marion/" class="county-card">
-            <div class="county-card__name">Marion County</div>
-            <div class="county-card__meta">Hamilton · 30K</div>
-          </a>
-          <a href="/alabama/marshall/" class="county-card">
-            <div class="county-card__name">Marshall County</div>
-            <div class="county-card__meta">Guntersville · 103K</div>
-          </a>
-          <a href="/alabama/mobile/" class="county-card">
-            <div class="county-card__name">Mobile County</div>
-            <div class="county-card__meta">Mobile · 429K</div>
-          </a>
-          <a href="/alabama/monroe/" class="county-card">
-            <div class="county-card__name">Monroe County</div>
-            <div class="county-card__meta">Monroeville · 20K</div>
-          </a>
-          <a href="/alabama/montgomery/" class="county-card">
-            <div class="county-card__name">Montgomery County</div>
-            <div class="county-card__meta">Montgomery · 229K</div>
-          </a>
-          <a href="/alabama/morgan/" class="county-card">
-            <div class="county-card__name">Morgan County</div>
-            <div class="county-card__meta">Decatur · 119K</div>
-          </a>
-          <a href="/alabama/perry/" class="county-card">
-            <div class="county-card__name">Perry County</div>
-            <div class="county-card__meta">Marion · 9K</div>
-          </a>
-          <a href="/alabama/pickens/" class="county-card">
-            <div class="county-card__name">Pickens County</div>
-            <div class="county-card__meta">Carrollton · 19K</div>
-          </a>
-          <a href="/alabama/pike/" class="county-card">
-            <div class="county-card__name">Pike County</div>
-            <div class="county-card__meta">Troy · 36K</div>
-          </a>
-          <a href="/alabama/randolph/" class="county-card">
-            <div class="county-card__name">Randolph County</div>
-            <div class="county-card__meta">Wedowee · 23K</div>
-          </a>
-          <a href="/alabama/russell/" class="county-card">
-            <div class="county-card__name">Russell County</div>
-            <div class="county-card__meta">Phenix City · 58K</div>
-          </a>
-          <a href="/alabama/shelby/" class="county-card">
-            <div class="county-card__name">Shelby County</div>
-            <div class="county-card__meta">Columbiana · 223K</div>
-          </a>
-          <a href="/alabama/st-clair/" class="county-card">
-            <div class="county-card__name">St. Clair County</div>
-            <div class="county-card__meta">Ashville · 93K</div>
-          </a>
-          <a href="/alabama/sumter/" class="county-card">
-            <div class="county-card__name">Sumter County</div>
-            <div class="county-card__meta">Livingston · 13K</div>
-          </a>
-          <a href="/alabama/talladega/" class="county-card">
-            <div class="county-card__name">Talladega County</div>
-            <div class="county-card__meta">Talladega · 80K</div>
-          </a>
-          <a href="/alabama/tallapoosa/" class="county-card">
-            <div class="county-card__name">Tallapoosa County</div>
-            <div class="county-card__meta">Dadeville · 40K</div>
-          </a>
-          <a href="/alabama/tuscaloosa/" class="county-card">
-            <div class="county-card__name">Tuscaloosa County</div>
-            <div class="county-card__meta">Tuscaloosa · 227K</div>
-          </a>
-          <a href="/alabama/walker/" class="county-card">
-            <div class="county-card__name">Walker County</div>
-            <div class="county-card__meta">Jasper · 66K</div>
-          </a>
-          <a href="/alabama/washington/" class="county-card">
-            <div class="county-card__name">Washington County</div>
-            <div class="county-card__meta">Chatom · 17K</div>
-          </a>
-          <a href="/alabama/wilcox/" class="county-card">
-            <div class="county-card__name">Wilcox County</div>
-            <div class="county-card__meta">Camden · 10K</div>
-          </a>
-          <a href="/alabama/winston/" class="county-card">
-            <div class="county-card__name">Winston County</div>
-            <div class="county-card__meta">Double Springs · 24K</div>
-          </a>
-        </div>
-      </div>
-    </section>
   </main>
+
+  <style>
+    .county-link-item {
+      display:flex;align-items:center;gap:0.5rem;
+      padding:0.65rem 1rem;border:1px solid var(--gray-200);border-radius:8px;
+      color:var(--navy);font-size:0.875rem;font-weight:600;text-decoration:none;
+      background:#fff;transition:all 0.2s;
+    }
+    .county-link-item:hover { border-color:var(--blue);background:rgba(45,125,210,0.04);color:var(--blue); }
+  </style>
 
   <footer class="footer">
     <div class="container">
-      <div class="footer__bottom">
-        <p>&copy; 2025 National Benefit Alliance. All rights reserved. | <a href="/privacy/">Privacy Policy</a></p>
-        <p style="font-size:0.75rem;color:var(--gray-500);margin-top:0.25rem;">This site provides informational resources only. We are not a government agency.</p>
+      <div class="footer__bottom" style="border-top:1px solid rgba(255,255,255,0.1);padding:1.5rem 0;margin-top:0;">
+        <p>© 2025 National Benefit Alliance · <a href="/" style="color:rgba(255,255,255,0.5);">Home</a> · <a href="/alabama/" style="color:rgba(255,255,255,0.5);">Alabama</a> · <a href="/privacy/" style="color:rgba(255,255,255,0.5);">Privacy Policy</a></p>
+        <div class="footer__bottom-links">
+          <a href="/sitemap.xml">Sitemap</a>
+          <a href="/accessibility/">Accessibility</a>
+        </div>
       </div>
     </div>
   </footer>
 
-  <script src="../js/main.js?v=2" defer></script>
+  <script src="../js/main.js" defer></script>
 </body>
 </html>

@@ -4121,10 +4121,12 @@ document.addEventListener('DOMContentLoaded', () => {
    ============================================================ */
 (function () {
   // Only run on county guide pages (path contains /florida/)
-  if (!window.location.pathname.includes('/florida/') && !window.location.pathname.includes('/california/')) return;
+  const _p = window.location.pathname;
+  const _stateCountyPage = /^\/[a-z-]+\/[a-z-]+\//.test(_p);
+  if (!_stateCountyPage) return;
 
   const ACCESS_KEY = 'nba_county_access';
-  const VALID_CODE = '090909';
+  const VALID_CODE = '0909';
 
   // Already unlocked this session
   if (sessionStorage.getItem(ACCESS_KEY) === 'granted') return;

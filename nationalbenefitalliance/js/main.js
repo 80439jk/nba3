@@ -2974,11 +2974,14 @@ const COUNTY_NAMES = {
 };
 
 /**
- * Look up a Florida county by ZIP code
+ * Look up a county and state by ZIP code.
+ * Returns { state, county } or null if not found.
  */
 function lookupZip(zip) {
   const clean = zip.replace(/\D/g, '').slice(0, 5);
-  return FLORIDA_ZIP_COUNTY[clean] || null;
+  if (FLORIDA_ZIP_COUNTY[clean])    return { state: 'florida',    county: FLORIDA_ZIP_COUNTY[clean] };
+  if (CALIFORNIA_ZIP_COUNTY[clean]) return { state: 'california', county: CALIFORNIA_ZIP_COUNTY[clean] };
+  return null;
 }
 
 /**
@@ -2995,13 +2998,11 @@ function handleZipSubmit(e) {
     return;
   }
 
-  const county = lookupZip(zip);
-  if (county) {
-    // For prototype: redirect to county page
-    window.location.href = `/florida/${county}/`;
+  const result = lookupZip(zip);
+  if (result) {
+    window.location.href = `/${result.state}/${result.county}/`;
   } else {
-    // ZIP not found — could be other state or unrecognized
-    showZipError('ZIP code not found in our Florida database. <a href="/florida/">Browse all Florida counties →</a>');
+    showZipError('ZIP code not found. <a href="/florida/">Browse Florida</a> or <a href="/california/">Browse California</a>.');
   }
 }
 

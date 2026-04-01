@@ -3923,10 +3923,6 @@ function lookupZip(zip) {
   if (UTAH_ZIP_COUNTY[clean]) return { state: 'utah', county: UTAH_ZIP_COUNTY[clean] };
   if (WYOMING_ZIP_COUNTY[clean]) return { state: 'wyoming', county: WYOMING_ZIP_COUNTY[clean] };
   return null;
-};
-  if (CALIFORNIA_ZIP_COUNTY[clean]) return { state: 'california', county: CALIFORNIA_ZIP_COUNTY[clean] };
-  if (ALABAMA_ZIP_COUNTY[clean])    return { state: 'alabama',    county: ALABAMA_ZIP_COUNTY[clean] };
-  return null;
 }
 
 /**

@@ -4122,7 +4122,7 @@ document.addEventListener('DOMContentLoaded', () => {
 (function () {
   // Only run on county guide pages (path contains /florida/)
   const _p = window.location.pathname;
-  const _stateCountyPage = /^\/[a-z-]+\/[a-z-]+\//.test(_p);
+  const _stateCountyPage = /^\/[a-z-]+\/[a-z-]{2,}/.test(_p);
   if (!_stateCountyPage) return;
 
   const ACCESS_KEY = 'nba_county_access_v3';

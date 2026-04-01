@@ -4124,8 +4124,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const ACCESS_KEY = 'nba_county_access_v3';
   const VALID_CODE = '99990000';
 
-  // Already unlocked this session
-  if (sessionStorage.getItem(ACCESS_KEY) === 'granted') return;
+  // Helper: hide any inline .access-gate sections baked into page HTML
+  function hideInlineGates() {
+    document.querySelectorAll('.access-gate').forEach(function(el) { el.style.display = 'none'; });
+  }
+
+  // Already unlocked this session — just hide inline gates and exit
+  if (sessionStorage.getItem(ACCESS_KEY) === 'granted') {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', hideInlineGates);
+    } else {
+      hideInlineGates();
+    }
+    return;
+  }
 
   // Build overlay
   const overlay = document.createElement('div');
@@ -4180,6 +4192,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const val = document.getElementById('nba-gate-input').value.trim();
     if (val === VALID_CODE) {
       sessionStorage.setItem(ACCESS_KEY, 'granted');
+      hideInlineGates();
       overlay.style.opacity = '0';
       overlay.style.transition = 'opacity 0.3s';
       setTimeout(() => overlay.remove(), 300);

@@ -4124,9 +4124,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const ACCESS_KEY = 'nba_county_access_v3';
   const VALID_CODE = '99990000';
 
-  // Helper: hide any inline .access-gate sections baked into page HTML
+  // Helper: hide inline gate + reveal the gated resources content
   function hideInlineGates() {
     document.querySelectorAll('.access-gate').forEach(function(el) { el.style.display = 'none'; });
+    var rc = document.getElementById('resources-content');
+    if (rc) rc.style.display = 'block';
   }
 
   // Already unlocked this session — just hide inline gates and exit

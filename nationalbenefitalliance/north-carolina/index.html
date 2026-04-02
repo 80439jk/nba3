@@ -76,208 +76,266 @@
       </ol>
     </div>
   </nav>
-  <main>
-    <section style="background:linear-gradient(135deg,#0F2447,#1B3A6B);padding:4rem 0 3rem;color:#fff;">
+    <main>
+
+    <!-- State Page — Option C: Sidebar Directory -->
+    <div class="sp-hero">
       <div class="container">
-        <div style="display:flex;align-items:center;gap:1.5rem;margin-bottom:1rem;">
-          <span style="font-size:3.5rem;">🏔️</span>
-          <div>
-            <span style="color:var(--gold-light);font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;">State Resource Center</span>
-            <h1 style="color:#fff;margin:0;">North Carolina County Resources</h1>
+        <div class="sp-hero__inner">
+          <div class="sp-hero__left">
+            <span class="sp-hero__emoji">🏔️</span>
+            <div>
+              <h1 class="sp-hero__h1">North Carolina County Resources</h1>
+              <p class="sp-hero__sub">? counties · 400+ assistance programs · Always free</p>
+            </div>
           </div>
-        </div>
-        <p class="lead" style="color:rgba(255,255,255,0.78);max-width:640px;">
-          All 100 North Carolina countys covered. Find free government and community assistance programs for utilities, housing, food, NC Medicaid, SNAP, and more — organized by your county.
-        </p>
-        <form id="zip-form" style="display:flex;gap:0;max-width:420px;margin-top:2rem;border-radius:8px;overflow:hidden;border:2px solid rgba(255,255,255,0.2);" aria-label="ZIP search">
-          <input id="zip-input" type="tel" placeholder="Enter ZIP code" maxlength="5" style="flex:1;padding:0.85rem 1rem;border:none;font-size:1rem;font-weight:600;letter-spacing:0.08em;outline:none;" />
-          <button type="submit" style="background:var(--gold);color:var(--navy-dark);border:none;padding:0.85rem 1.25rem;font-weight:700;">Go →</button>
-        </form>
-      </div>
-    </section>
-    <div style="background:var(--gray-50);border-bottom:1px solid var(--gray-200);padding:1.25rem 0;">
-      <div class="container">
-        <div style="display:flex;gap:3rem;flex-wrap:wrap;align-items:center;">
-          <div><strong style="color:var(--navy);font-size:1.4rem;">100</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Countys</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">400+</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Assistance Programs</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">9</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Resource Categories</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">Free</strong> <span style="color:var(--gray-600);font-size:0.9rem;">PDF Download</span></div>
-          <div style="margin-left:auto;">
-            <a href="tel:18006224357" style="background:var(--navy);color:#fff;padding:0.6rem 1.25rem;border-radius:6px;font-weight:700;font-size:0.9rem;text-decoration:none;">📞 Get Access Code</a>
+          <div class="sp-hero__right">
+            <form id="zip-form" class="sp-zip-form" aria-label="ZIP search">
+              <input id="zip-input" type="tel" placeholder="Enter ZIP code" maxlength="5"/>
+              <button type="submit">Go →</button>
+            </form>
+            <a href="tel:18006224357" class="sp-access-btn">📞 Get Access Code</a>
           </div>
         </div>
       </div>
     </div>
-    <section class="section" aria-labelledby="counties-heading">
+
+    <div class="sp-body">
       <div class="container">
-        <div class="section-header">
-          <span class="badge badge--gold">All Countys</span>
-          <h2 id="counties-heading">Browse All 100 North Carolina Countys</h2>
-          <p>Click your county to view the full resource guide. Countys marked ⭐ have been fully verified and updated.</p>
-        </div>
-        <div style="margin-bottom:3rem;">
-          <h3 style="color:var(--gray-600);font-size:1.1rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1.5rem;">Most Populated Countys</h3>
-          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem;">
-            <a href="/north-carolina/mecklenburg/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🏙️</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Mecklenburg County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">1.1M residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+        <div class="sp-layout">
+
+          <!-- Sidebar -->
+          <aside class="sp-sidebar">
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">🔍 Search Counties</div>
+              <div class="sp-sidebar-body">
+                <input class="sp-sidebar-search-input" id="county-search" type="text" placeholder="County name…" autocomplete="off"/>
               </div>
-            </a>
-            <a href="/north-carolina/wake/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🏛️</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Wake County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">1.1M residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">📂 Program Type</div>
+              <div class="sp-sidebar-body">
+                <a href="#all" class="sp-sidebar-link active">All Programs</a>
+                <a href="/north-carolina#utilities" class="sp-sidebar-link">⚡ Utility Assistance</a>
+                <a href="/north-carolina#housing" class="sp-sidebar-link">🏠 Housing &amp; Rent</a>
+                <a href="/north-carolina#food" class="sp-sidebar-link">🥗 Food / SNAP</a>
+                <a href="/north-carolina#healthcare" class="sp-sidebar-link">🏥 Medicaid / Health</a>
+                <a href="/north-carolina#employment" class="sp-sidebar-link">💼 Employment</a>
+                <a href="/north-carolina#childcare" class="sp-sidebar-link">👶 Child Care</a>
+                <a href="/north-carolina#disability" class="sp-sidebar-link">♿ Disability</a>
+                <a href="/north-carolina#education" class="sp-sidebar-link">📚 Education</a>
               </div>
-            </a>
-            <a href="/north-carolina/guilford/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🌳</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Guilford County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">541K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">📊 At a Glance</div>
+              <div class="sp-sidebar-body">
+                <div class="sp-sidebar-stat"><span>?</span><span>Counties</span></div>
+                <div class="sp-sidebar-stat"><span>400+</span><span>Programs</span></div>
+                <div class="sp-sidebar-stat"><span>9</span><span>Categories</span></div>
+                <div class="sp-sidebar-stat"><span>Free</span><span>PDF Guide</span></div>
               </div>
-            </a>
-            <a href="/north-carolina/forsyth/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🏭</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Forsyth County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">382K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+          </aside>
+
+          <!-- Main content -->
+          <div class="sp-content">
+            <div class="sp-content-hd">
+              <h2>⭐ Featured Counties</h2>
+              <span>? counties total</span>
+            </div>
+            <div class="sp-featured-grid">
+            <a href="/north-carolina/mecklenburg/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🏙️</span>
+                <div>
+                  <div class="sp-cc-name">Mecklenburg County ⭐</div>
+                  <div class="sp-cc-meta">1.1M residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:50%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
-            <a href="/north-carolina/durham/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🎓</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Durham County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">334K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            <a href="/north-carolina/wake/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🏛️</span>
+                <div>
+                  <div class="sp-cc-name">Wake County ⭐</div>
+                  <div class="sp-cc-meta">1.1M residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:50%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
-            <a href="/north-carolina/buncombe/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🏔️</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Buncombe County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">269K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            <a href="/north-carolina/guilford/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🌳</span>
+                <div>
+                  <div class="sp-cc-name">Guilford County ⭐</div>
+                  <div class="sp-cc-meta">541K residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
+            <a href="/north-carolina/forsyth/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🏭</span>
+                <div>
+                  <div class="sp-cc-name">Forsyth County ⭐</div>
+                  <div class="sp-cc-meta">382K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            <a href="/north-carolina/durham/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🎓</span>
+                <div>
+                  <div class="sp-cc-name">Durham County ⭐</div>
+                  <div class="sp-cc-meta">334K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            <a href="/north-carolina/buncombe/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🏔️</span>
+                <div>
+                  <div class="sp-cc-name">Buncombe County ⭐</div>
+                  <div class="sp-cc-meta">269K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            </div>
+            <div class="sp-section-label">All ? Counties — Alphabetical</div>
+            <div class="sp-az-grid" id="county-list">
+          <a href="/north-carolina/alamance/" class="sp-az-item">📍 Alamance County</a>
+          <a href="/north-carolina/alexander/" class="sp-az-item">📍 Alexander County</a>
+          <a href="/north-carolina/alleghany/" class="sp-az-item">📍 Alleghany County</a>
+          <a href="/north-carolina/anson/" class="sp-az-item">📍 Anson County</a>
+          <a href="/north-carolina/ashe/" class="sp-az-item">📍 Ashe County</a>
+          <a href="/north-carolina/avery/" class="sp-az-item">📍 Avery County</a>
+          <a href="/north-carolina/beaufort/" class="sp-az-item">📍 Beaufort County</a>
+          <a href="/north-carolina/bertie/" class="sp-az-item">📍 Bertie County</a>
+          <a href="/north-carolina/bladen/" class="sp-az-item">📍 Bladen County</a>
+          <a href="/north-carolina/brunswick/" class="sp-az-item">📍 Brunswick County</a>
+          <a href="/north-carolina/buncombe/" class="sp-az-item">📍 Buncombe County</a>
+          <a href="/north-carolina/burke/" class="sp-az-item">📍 Burke County</a>
+          <a href="/north-carolina/cabarrus/" class="sp-az-item">📍 Cabarrus County</a>
+          <a href="/north-carolina/caldwell/" class="sp-az-item">📍 Caldwell County</a>
+          <a href="/north-carolina/camden/" class="sp-az-item">📍 Camden County</a>
+          <a href="/north-carolina/carteret/" class="sp-az-item">📍 Carteret County</a>
+          <a href="/north-carolina/caswell/" class="sp-az-item">📍 Caswell County</a>
+          <a href="/north-carolina/catawba/" class="sp-az-item">📍 Catawba County</a>
+          <a href="/north-carolina/chatham/" class="sp-az-item">📍 Chatham County</a>
+          <a href="/north-carolina/cherokee/" class="sp-az-item">📍 Cherokee County</a>
+          <a href="/north-carolina/chowan/" class="sp-az-item">📍 Chowan County</a>
+          <a href="/north-carolina/clay/" class="sp-az-item">📍 Clay County</a>
+          <a href="/north-carolina/cleveland/" class="sp-az-item">📍 Cleveland County</a>
+          <a href="/north-carolina/columbus/" class="sp-az-item">📍 Columbus County</a>
+          <a href="/north-carolina/craven/" class="sp-az-item">📍 Craven County</a>
+          <a href="/north-carolina/cumberland/" class="sp-az-item">📍 Cumberland County</a>
+          <a href="/north-carolina/currituck/" class="sp-az-item">📍 Currituck County</a>
+          <a href="/north-carolina/dare/" class="sp-az-item">📍 Dare County</a>
+          <a href="/north-carolina/davidson/" class="sp-az-item">📍 Davidson County</a>
+          <a href="/north-carolina/davie/" class="sp-az-item">📍 Davie County</a>
+          <a href="/north-carolina/duplin/" class="sp-az-item">📍 Duplin County</a>
+          <a href="/north-carolina/durham/" class="sp-az-item">📍 Durham County</a>
+          <a href="/north-carolina/edgecombe/" class="sp-az-item">📍 Edgecombe County</a>
+          <a href="/north-carolina/forsyth/" class="sp-az-item">📍 Forsyth County</a>
+          <a href="/north-carolina/franklin/" class="sp-az-item">📍 Franklin County</a>
+          <a href="/north-carolina/gaston/" class="sp-az-item">📍 Gaston County</a>
+          <a href="/north-carolina/gates/" class="sp-az-item">📍 Gates County</a>
+          <a href="/north-carolina/graham/" class="sp-az-item">📍 Graham County</a>
+          <a href="/north-carolina/granville/" class="sp-az-item">📍 Granville County</a>
+          <a href="/north-carolina/greene/" class="sp-az-item">📍 Greene County</a>
+          <a href="/north-carolina/guilford/" class="sp-az-item">📍 Guilford County</a>
+          <a href="/north-carolina/halifax/" class="sp-az-item">📍 Halifax County</a>
+          <a href="/north-carolina/harnett/" class="sp-az-item">📍 Harnett County</a>
+          <a href="/north-carolina/haywood/" class="sp-az-item">📍 Haywood County</a>
+          <a href="/north-carolina/henderson/" class="sp-az-item">📍 Henderson County</a>
+          <a href="/north-carolina/hertford/" class="sp-az-item">📍 Hertford County</a>
+          <a href="/north-carolina/hoke/" class="sp-az-item">📍 Hoke County</a>
+          <a href="/north-carolina/hyde/" class="sp-az-item">📍 Hyde County</a>
+          <a href="/north-carolina/iredell/" class="sp-az-item">📍 Iredell County</a>
+          <a href="/north-carolina/jackson/" class="sp-az-item">📍 Jackson County</a>
+          <a href="/north-carolina/johnston/" class="sp-az-item">📍 Johnston County</a>
+          <a href="/north-carolina/jones/" class="sp-az-item">📍 Jones County</a>
+          <a href="/north-carolina/lee/" class="sp-az-item">📍 Lee County</a>
+          <a href="/north-carolina/lenoir/" class="sp-az-item">📍 Lenoir County</a>
+          <a href="/north-carolina/lincoln/" class="sp-az-item">📍 Lincoln County</a>
+          <a href="/north-carolina/macon/" class="sp-az-item">📍 Macon County</a>
+          <a href="/north-carolina/madison/" class="sp-az-item">📍 Madison County</a>
+          <a href="/north-carolina/martin/" class="sp-az-item">📍 Martin County</a>
+          <a href="/north-carolina/mcdowell/" class="sp-az-item">📍 McDowell County</a>
+          <a href="/north-carolina/mecklenburg/" class="sp-az-item">📍 Mecklenburg County</a>
+          <a href="/north-carolina/mitchell/" class="sp-az-item">📍 Mitchell County</a>
+          <a href="/north-carolina/montgomery/" class="sp-az-item">📍 Montgomery County</a>
+          <a href="/north-carolina/moore/" class="sp-az-item">📍 Moore County</a>
+          <a href="/north-carolina/nash/" class="sp-az-item">📍 Nash County</a>
+          <a href="/north-carolina/new-hanover/" class="sp-az-item">📍 New Hanover County</a>
+          <a href="/north-carolina/northampton/" class="sp-az-item">📍 Northampton County</a>
+          <a href="/north-carolina/onslow/" class="sp-az-item">📍 Onslow County</a>
+          <a href="/north-carolina/orange/" class="sp-az-item">📍 Orange County</a>
+          <a href="/north-carolina/pamlico/" class="sp-az-item">📍 Pamlico County</a>
+          <a href="/north-carolina/pasquotank/" class="sp-az-item">📍 Pasquotank County</a>
+          <a href="/north-carolina/pender/" class="sp-az-item">📍 Pender County</a>
+          <a href="/north-carolina/perquimans/" class="sp-az-item">📍 Perquimans County</a>
+          <a href="/north-carolina/person/" class="sp-az-item">📍 Person County</a>
+          <a href="/north-carolina/pitt/" class="sp-az-item">📍 Pitt County</a>
+          <a href="/north-carolina/polk/" class="sp-az-item">📍 Polk County</a>
+          <a href="/north-carolina/randolph/" class="sp-az-item">📍 Randolph County</a>
+          <a href="/north-carolina/richmond/" class="sp-az-item">📍 Richmond County</a>
+          <a href="/north-carolina/robeson/" class="sp-az-item">📍 Robeson County</a>
+          <a href="/north-carolina/rockingham/" class="sp-az-item">📍 Rockingham County</a>
+          <a href="/north-carolina/rowan/" class="sp-az-item">📍 Rowan County</a>
+          <a href="/north-carolina/rutherford/" class="sp-az-item">📍 Rutherford County</a>
+          <a href="/north-carolina/sampson/" class="sp-az-item">📍 Sampson County</a>
+          <a href="/north-carolina/scotland/" class="sp-az-item">📍 Scotland County</a>
+          <a href="/north-carolina/stanly/" class="sp-az-item">📍 Stanly County</a>
+          <a href="/north-carolina/stokes/" class="sp-az-item">📍 Stokes County</a>
+          <a href="/north-carolina/surry/" class="sp-az-item">📍 Surry County</a>
+          <a href="/north-carolina/swain/" class="sp-az-item">📍 Swain County</a>
+          <a href="/north-carolina/transylvania/" class="sp-az-item">📍 Transylvania County</a>
+          <a href="/north-carolina/tyrrell/" class="sp-az-item">📍 Tyrrell County</a>
+          <a href="/north-carolina/union/" class="sp-az-item">📍 Union County</a>
+          <a href="/north-carolina/vance/" class="sp-az-item">📍 Vance County</a>
+          <a href="/north-carolina/wake/" class="sp-az-item">📍 Wake County</a>
+          <a href="/north-carolina/warren/" class="sp-az-item">📍 Warren County</a>
+          <a href="/north-carolina/washington/" class="sp-az-item">📍 Washington County</a>
+          <a href="/north-carolina/watauga/" class="sp-az-item">📍 Watauga County</a>
+          <a href="/north-carolina/wayne/" class="sp-az-item">📍 Wayne County</a>
+          <a href="/north-carolina/wilkes/" class="sp-az-item">📍 Wilkes County</a>
+          <a href="/north-carolina/wilson/" class="sp-az-item">📍 Wilson County</a>
+          <a href="/north-carolina/yadkin/" class="sp-az-item">📍 Yadkin County</a>
+          <a href="/north-carolina/yancey/" class="sp-az-item">📍 Yancey County</a>
+            </div>
           </div>
-        </div>
-        <h3 style="color:var(--gray-600);font-size:1.1rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1.5rem;">All 100 Countys — Alphabetical</h3>
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0.75rem;">
-          <a href="/north-carolina/alamance/" class="county-link-item">📍 Alamance County</a>
-          <a href="/north-carolina/alexander/" class="county-link-item">📍 Alexander County</a>
-          <a href="/north-carolina/alleghany/" class="county-link-item">📍 Alleghany County</a>
-          <a href="/north-carolina/anson/" class="county-link-item">📍 Anson County</a>
-          <a href="/north-carolina/ashe/" class="county-link-item">📍 Ashe County</a>
-          <a href="/north-carolina/avery/" class="county-link-item">📍 Avery County</a>
-          <a href="/north-carolina/beaufort/" class="county-link-item">📍 Beaufort County</a>
-          <a href="/north-carolina/bertie/" class="county-link-item">📍 Bertie County</a>
-          <a href="/north-carolina/bladen/" class="county-link-item">📍 Bladen County</a>
-          <a href="/north-carolina/brunswick/" class="county-link-item">📍 Brunswick County</a>
-          <a href="/north-carolina/buncombe/" class="county-link-item">📍 Buncombe County</a>
-          <a href="/north-carolina/burke/" class="county-link-item">📍 Burke County</a>
-          <a href="/north-carolina/cabarrus/" class="county-link-item">📍 Cabarrus County</a>
-          <a href="/north-carolina/caldwell/" class="county-link-item">📍 Caldwell County</a>
-          <a href="/north-carolina/camden/" class="county-link-item">📍 Camden County</a>
-          <a href="/north-carolina/carteret/" class="county-link-item">📍 Carteret County</a>
-          <a href="/north-carolina/caswell/" class="county-link-item">📍 Caswell County</a>
-          <a href="/north-carolina/catawba/" class="county-link-item">📍 Catawba County</a>
-          <a href="/north-carolina/chatham/" class="county-link-item">📍 Chatham County</a>
-          <a href="/north-carolina/cherokee/" class="county-link-item">📍 Cherokee County</a>
-          <a href="/north-carolina/chowan/" class="county-link-item">📍 Chowan County</a>
-          <a href="/north-carolina/clay/" class="county-link-item">📍 Clay County</a>
-          <a href="/north-carolina/cleveland/" class="county-link-item">📍 Cleveland County</a>
-          <a href="/north-carolina/columbus/" class="county-link-item">📍 Columbus County</a>
-          <a href="/north-carolina/craven/" class="county-link-item">📍 Craven County</a>
-          <a href="/north-carolina/cumberland/" class="county-link-item">📍 Cumberland County</a>
-          <a href="/north-carolina/currituck/" class="county-link-item">📍 Currituck County</a>
-          <a href="/north-carolina/dare/" class="county-link-item">📍 Dare County</a>
-          <a href="/north-carolina/davidson/" class="county-link-item">📍 Davidson County</a>
-          <a href="/north-carolina/davie/" class="county-link-item">📍 Davie County</a>
-          <a href="/north-carolina/duplin/" class="county-link-item">📍 Duplin County</a>
-          <a href="/north-carolina/durham/" class="county-link-item">📍 Durham County</a>
-          <a href="/north-carolina/edgecombe/" class="county-link-item">📍 Edgecombe County</a>
-          <a href="/north-carolina/forsyth/" class="county-link-item">📍 Forsyth County</a>
-          <a href="/north-carolina/franklin/" class="county-link-item">📍 Franklin County</a>
-          <a href="/north-carolina/gaston/" class="county-link-item">📍 Gaston County</a>
-          <a href="/north-carolina/gates/" class="county-link-item">📍 Gates County</a>
-          <a href="/north-carolina/graham/" class="county-link-item">📍 Graham County</a>
-          <a href="/north-carolina/granville/" class="county-link-item">📍 Granville County</a>
-          <a href="/north-carolina/greene/" class="county-link-item">📍 Greene County</a>
-          <a href="/north-carolina/guilford/" class="county-link-item">📍 Guilford County</a>
-          <a href="/north-carolina/halifax/" class="county-link-item">📍 Halifax County</a>
-          <a href="/north-carolina/harnett/" class="county-link-item">📍 Harnett County</a>
-          <a href="/north-carolina/haywood/" class="county-link-item">📍 Haywood County</a>
-          <a href="/north-carolina/henderson/" class="county-link-item">📍 Henderson County</a>
-          <a href="/north-carolina/hertford/" class="county-link-item">📍 Hertford County</a>
-          <a href="/north-carolina/hoke/" class="county-link-item">📍 Hoke County</a>
-          <a href="/north-carolina/hyde/" class="county-link-item">📍 Hyde County</a>
-          <a href="/north-carolina/iredell/" class="county-link-item">📍 Iredell County</a>
-          <a href="/north-carolina/jackson/" class="county-link-item">📍 Jackson County</a>
-          <a href="/north-carolina/johnston/" class="county-link-item">📍 Johnston County</a>
-          <a href="/north-carolina/jones/" class="county-link-item">📍 Jones County</a>
-          <a href="/north-carolina/lee/" class="county-link-item">📍 Lee County</a>
-          <a href="/north-carolina/lenoir/" class="county-link-item">📍 Lenoir County</a>
-          <a href="/north-carolina/lincoln/" class="county-link-item">📍 Lincoln County</a>
-          <a href="/north-carolina/macon/" class="county-link-item">📍 Macon County</a>
-          <a href="/north-carolina/madison/" class="county-link-item">📍 Madison County</a>
-          <a href="/north-carolina/martin/" class="county-link-item">📍 Martin County</a>
-          <a href="/north-carolina/mcdowell/" class="county-link-item">📍 McDowell County</a>
-          <a href="/north-carolina/mecklenburg/" class="county-link-item">📍 Mecklenburg County</a>
-          <a href="/north-carolina/mitchell/" class="county-link-item">📍 Mitchell County</a>
-          <a href="/north-carolina/montgomery/" class="county-link-item">📍 Montgomery County</a>
-          <a href="/north-carolina/moore/" class="county-link-item">📍 Moore County</a>
-          <a href="/north-carolina/nash/" class="county-link-item">📍 Nash County</a>
-          <a href="/north-carolina/new-hanover/" class="county-link-item">📍 New Hanover County</a>
-          <a href="/north-carolina/northampton/" class="county-link-item">📍 Northampton County</a>
-          <a href="/north-carolina/onslow/" class="county-link-item">📍 Onslow County</a>
-          <a href="/north-carolina/orange/" class="county-link-item">📍 Orange County</a>
-          <a href="/north-carolina/pamlico/" class="county-link-item">📍 Pamlico County</a>
-          <a href="/north-carolina/pasquotank/" class="county-link-item">📍 Pasquotank County</a>
-          <a href="/north-carolina/pender/" class="county-link-item">📍 Pender County</a>
-          <a href="/north-carolina/perquimans/" class="county-link-item">📍 Perquimans County</a>
-          <a href="/north-carolina/person/" class="county-link-item">📍 Person County</a>
-          <a href="/north-carolina/pitt/" class="county-link-item">📍 Pitt County</a>
-          <a href="/north-carolina/polk/" class="county-link-item">📍 Polk County</a>
-          <a href="/north-carolina/randolph/" class="county-link-item">📍 Randolph County</a>
-          <a href="/north-carolina/richmond/" class="county-link-item">📍 Richmond County</a>
-          <a href="/north-carolina/robeson/" class="county-link-item">📍 Robeson County</a>
-          <a href="/north-carolina/rockingham/" class="county-link-item">📍 Rockingham County</a>
-          <a href="/north-carolina/rowan/" class="county-link-item">📍 Rowan County</a>
-          <a href="/north-carolina/rutherford/" class="county-link-item">📍 Rutherford County</a>
-          <a href="/north-carolina/sampson/" class="county-link-item">📍 Sampson County</a>
-          <a href="/north-carolina/scotland/" class="county-link-item">📍 Scotland County</a>
-          <a href="/north-carolina/stanly/" class="county-link-item">📍 Stanly County</a>
-          <a href="/north-carolina/stokes/" class="county-link-item">📍 Stokes County</a>
-          <a href="/north-carolina/surry/" class="county-link-item">📍 Surry County</a>
-          <a href="/north-carolina/swain/" class="county-link-item">📍 Swain County</a>
-          <a href="/north-carolina/transylvania/" class="county-link-item">📍 Transylvania County</a>
-          <a href="/north-carolina/tyrrell/" class="county-link-item">📍 Tyrrell County</a>
-          <a href="/north-carolina/union/" class="county-link-item">📍 Union County</a>
-          <a href="/north-carolina/vance/" class="county-link-item">📍 Vance County</a>
-          <a href="/north-carolina/wake/" class="county-link-item">📍 Wake County</a>
-          <a href="/north-carolina/warren/" class="county-link-item">📍 Warren County</a>
-          <a href="/north-carolina/washington/" class="county-link-item">📍 Washington County</a>
-          <a href="/north-carolina/watauga/" class="county-link-item">📍 Watauga County</a>
-          <a href="/north-carolina/wayne/" class="county-link-item">📍 Wayne County</a>
-          <a href="/north-carolina/wilkes/" class="county-link-item">📍 Wilkes County</a>
-          <a href="/north-carolina/wilson/" class="county-link-item">📍 Wilson County</a>
-          <a href="/north-carolina/yadkin/" class="county-link-item">📍 Yadkin County</a>
-          <a href="/north-carolina/yancey/" class="county-link-item">📍 Yancey County</a>
+
         </div>
       </div>
-    </section>
+    </div>
+
+    <script>
+    /* County search filter */
+    (function() {
+      var inp = document.getElementById('county-search');
+      if (!inp) return;
+      inp.addEventListener('input', function() {
+        var q = inp.value.trim().toLowerCase();
+        document.querySelectorAll('#county-list .sp-az-item').forEach(function(el) {
+          el.classList.toggle('sp-hidden', q.length > 0 && el.textContent.toLowerCase().indexOf(q) === -1);
+        });
+      });
+    })();
+    </script>
+
   </main>
-  <style>
-    .county-link-item {display:flex;align-items:center;gap:0.5rem;padding:0.65rem 1rem;border:1px solid var(--gray-200);border-radius:8px;color:var(--navy);font-size:0.875rem;font-weight:600;text-decoration:none;background:#fff;transition:all 0.2s;}
-    .county-link-item:hover {border-color:var(--blue);background:rgba(45,125,210,0.04);color:var(--blue);}
-  </style>
+  
   <footer class="footer">
     <div class="container">
       <div class="footer__bottom" style="border-top:1px solid rgba(255,255,255,0.1);padding:1.5rem 0;margin-top:0;">

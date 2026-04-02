@@ -76,183 +76,241 @@
       </ol>
     </div>
   </nav>
-  <main>
-    <section style="background:linear-gradient(135deg,#0F2447,#1B3A6B);padding:4rem 0 3rem;color:#fff;">
+    <main>
+
+    <!-- State Page — Option C: Sidebar Directory -->
+    <div class="sp-hero">
       <div class="container">
-        <div style="display:flex;align-items:center;gap:1.5rem;margin-bottom:1rem;">
-          <span style="font-size:3.5rem;">💎</span>
-          <div>
-            <span style="color:var(--gold-light);font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;">State Resource Center</span>
-            <h1 style="color:#fff;margin:0;">Arkansas County Resources</h1>
+        <div class="sp-hero__inner">
+          <div class="sp-hero__left">
+            <span class="sp-hero__emoji">💎</span>
+            <div>
+              <h1 class="sp-hero__h1">Arkansas County Resources</h1>
+              <p class="sp-hero__sub">? counties · 400+ assistance programs · Always free</p>
+            </div>
           </div>
-        </div>
-        <p class="lead" style="color:rgba(255,255,255,0.78);max-width:640px;">
-          All 75 Arkansas countys covered. Find free government and community assistance programs for utilities, housing, food, Arkansas Medicaid, SNAP, and more — organized by your county.
-        </p>
-        <form id="zip-form" style="display:flex;gap:0;max-width:420px;margin-top:2rem;border-radius:8px;overflow:hidden;border:2px solid rgba(255,255,255,0.2);" aria-label="ZIP search">
-          <input id="zip-input" type="tel" placeholder="Enter ZIP code" maxlength="5" style="flex:1;padding:0.85rem 1rem;border:none;font-size:1rem;font-weight:600;letter-spacing:0.08em;outline:none;" />
-          <button type="submit" style="background:var(--gold);color:var(--navy-dark);border:none;padding:0.85rem 1.25rem;font-weight:700;">Go →</button>
-        </form>
-      </div>
-    </section>
-    <div style="background:var(--gray-50);border-bottom:1px solid var(--gray-200);padding:1.25rem 0;">
-      <div class="container">
-        <div style="display:flex;gap:3rem;flex-wrap:wrap;align-items:center;">
-          <div><strong style="color:var(--navy);font-size:1.4rem;">75</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Countys</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">400+</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Assistance Programs</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">9</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Resource Categories</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">Free</strong> <span style="color:var(--gray-600);font-size:0.9rem;">PDF Download</span></div>
-          <div style="margin-left:auto;">
-            <a href="tel:18006224357" style="background:var(--navy);color:#fff;padding:0.6rem 1.25rem;border-radius:6px;font-weight:700;font-size:0.9rem;text-decoration:none;">📞 Get Access Code</a>
+          <div class="sp-hero__right">
+            <form id="zip-form" class="sp-zip-form" aria-label="ZIP search">
+              <input id="zip-input" type="tel" placeholder="Enter ZIP code" maxlength="5"/>
+              <button type="submit">Go →</button>
+            </form>
+            <a href="tel:18006224357" class="sp-access-btn">📞 Get Access Code</a>
           </div>
         </div>
       </div>
     </div>
-    <section class="section" aria-labelledby="counties-heading">
+
+    <div class="sp-body">
       <div class="container">
-        <div class="section-header">
-          <span class="badge badge--gold">All Countys</span>
-          <h2 id="counties-heading">Browse All 75 Arkansas Countys</h2>
-          <p>Click your county to view the full resource guide. Countys marked ⭐ have been fully verified and updated.</p>
-        </div>
-        <div style="margin-bottom:3rem;">
-          <h3 style="color:var(--gray-600);font-size:1.1rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1.5rem;">Most Populated Countys</h3>
-          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem;">
-            <a href="/arkansas/pulaski/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🏙️</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Pulaski County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">401K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+        <div class="sp-layout">
+
+          <!-- Sidebar -->
+          <aside class="sp-sidebar">
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">🔍 Search Counties</div>
+              <div class="sp-sidebar-body">
+                <input class="sp-sidebar-search-input" id="county-search" type="text" placeholder="County name…" autocomplete="off"/>
               </div>
-            </a>
-            <a href="/arkansas/benton/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🛒</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Benton County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">284K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">📂 Program Type</div>
+              <div class="sp-sidebar-body">
+                <a href="#all" class="sp-sidebar-link active">All Programs</a>
+                <a href="/arkansas#utilities" class="sp-sidebar-link">⚡ Utility Assistance</a>
+                <a href="/arkansas#housing" class="sp-sidebar-link">🏠 Housing &amp; Rent</a>
+                <a href="/arkansas#food" class="sp-sidebar-link">🥗 Food / SNAP</a>
+                <a href="/arkansas#healthcare" class="sp-sidebar-link">🏥 Medicaid / Health</a>
+                <a href="/arkansas#employment" class="sp-sidebar-link">💼 Employment</a>
+                <a href="/arkansas#childcare" class="sp-sidebar-link">👶 Child Care</a>
+                <a href="/arkansas#disability" class="sp-sidebar-link">♿ Disability</a>
+                <a href="/arkansas#education" class="sp-sidebar-link">📚 Education</a>
               </div>
-            </a>
-            <a href="/arkansas/washington/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🎓</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Washington County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">249K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">📊 At a Glance</div>
+              <div class="sp-sidebar-body">
+                <div class="sp-sidebar-stat"><span>?</span><span>Counties</span></div>
+                <div class="sp-sidebar-stat"><span>400+</span><span>Programs</span></div>
+                <div class="sp-sidebar-stat"><span>9</span><span>Categories</span></div>
+                <div class="sp-sidebar-stat"><span>Free</span><span>PDF Guide</span></div>
               </div>
-            </a>
-            <a href="/arkansas/sebastian/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🌊</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Sebastian County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">129K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+          </aside>
+
+          <!-- Main content -->
+          <div class="sp-content">
+            <div class="sp-content-hd">
+              <h2>⭐ Featured Counties</h2>
+              <span>? counties total</span>
+            </div>
+            <div class="sp-featured-grid">
+            <a href="/arkansas/pulaski/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🏙️</span>
+                <div>
+                  <div class="sp-cc-name">Pulaski County ⭐</div>
+                  <div class="sp-cc-meta">401K residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
-            <a href="/arkansas/faulkner/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🌾</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Faulkner County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">126K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            <a href="/arkansas/benton/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🛒</span>
+                <div>
+                  <div class="sp-cc-name">Benton County ⭐</div>
+                  <div class="sp-cc-meta">284K residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
-            <a href="/arkansas/saline/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">💎</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Saline County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">126K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            <a href="/arkansas/washington/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🎓</span>
+                <div>
+                  <div class="sp-cc-name">Washington County ⭐</div>
+                  <div class="sp-cc-meta">249K residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
+            <a href="/arkansas/sebastian/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🌊</span>
+                <div>
+                  <div class="sp-cc-name">Sebastian County ⭐</div>
+                  <div class="sp-cc-meta">129K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            <a href="/arkansas/faulkner/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🌾</span>
+                <div>
+                  <div class="sp-cc-name">Faulkner County ⭐</div>
+                  <div class="sp-cc-meta">126K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            <a href="/arkansas/saline/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">💎</span>
+                <div>
+                  <div class="sp-cc-name">Saline County ⭐</div>
+                  <div class="sp-cc-meta">126K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            </div>
+            <div class="sp-section-label">All ? Counties — Alphabetical</div>
+            <div class="sp-az-grid" id="county-list">
+          <a href="/arkansas/arkansas/" class="sp-az-item">📍 Arkansas County</a>
+          <a href="/arkansas/ashley/" class="sp-az-item">📍 Ashley County</a>
+          <a href="/arkansas/baxter/" class="sp-az-item">📍 Baxter County</a>
+          <a href="/arkansas/benton/" class="sp-az-item">📍 Benton County</a>
+          <a href="/arkansas/boone/" class="sp-az-item">📍 Boone County</a>
+          <a href="/arkansas/bradley/" class="sp-az-item">📍 Bradley County</a>
+          <a href="/arkansas/calhoun/" class="sp-az-item">📍 Calhoun County</a>
+          <a href="/arkansas/carroll/" class="sp-az-item">📍 Carroll County</a>
+          <a href="/arkansas/chicot/" class="sp-az-item">📍 Chicot County</a>
+          <a href="/arkansas/clark/" class="sp-az-item">📍 Clark County</a>
+          <a href="/arkansas/clay/" class="sp-az-item">📍 Clay County</a>
+          <a href="/arkansas/cleburne/" class="sp-az-item">📍 Cleburne County</a>
+          <a href="/arkansas/cleveland/" class="sp-az-item">📍 Cleveland County</a>
+          <a href="/arkansas/columbia/" class="sp-az-item">📍 Columbia County</a>
+          <a href="/arkansas/conway/" class="sp-az-item">📍 Conway County</a>
+          <a href="/arkansas/craighead/" class="sp-az-item">📍 Craighead County</a>
+          <a href="/arkansas/crawford/" class="sp-az-item">📍 Crawford County</a>
+          <a href="/arkansas/crittenden/" class="sp-az-item">📍 Crittenden County</a>
+          <a href="/arkansas/cross/" class="sp-az-item">📍 Cross County</a>
+          <a href="/arkansas/dallas/" class="sp-az-item">📍 Dallas County</a>
+          <a href="/arkansas/desha/" class="sp-az-item">📍 Desha County</a>
+          <a href="/arkansas/drew/" class="sp-az-item">📍 Drew County</a>
+          <a href="/arkansas/faulkner/" class="sp-az-item">📍 Faulkner County</a>
+          <a href="/arkansas/franklin/" class="sp-az-item">📍 Franklin County</a>
+          <a href="/arkansas/fulton/" class="sp-az-item">📍 Fulton County</a>
+          <a href="/arkansas/garland/" class="sp-az-item">📍 Garland County</a>
+          <a href="/arkansas/grant/" class="sp-az-item">📍 Grant County</a>
+          <a href="/arkansas/greene/" class="sp-az-item">📍 Greene County</a>
+          <a href="/arkansas/hempstead/" class="sp-az-item">📍 Hempstead County</a>
+          <a href="/arkansas/hot-spring/" class="sp-az-item">📍 Hot Spring County</a>
+          <a href="/arkansas/howard/" class="sp-az-item">📍 Howard County</a>
+          <a href="/arkansas/independence/" class="sp-az-item">📍 Independence County</a>
+          <a href="/arkansas/izard/" class="sp-az-item">📍 Izard County</a>
+          <a href="/arkansas/jackson/" class="sp-az-item">📍 Jackson County</a>
+          <a href="/arkansas/jefferson/" class="sp-az-item">📍 Jefferson County</a>
+          <a href="/arkansas/johnson/" class="sp-az-item">📍 Johnson County</a>
+          <a href="/arkansas/lafayette/" class="sp-az-item">📍 Lafayette County</a>
+          <a href="/arkansas/lawrence/" class="sp-az-item">📍 Lawrence County</a>
+          <a href="/arkansas/lee/" class="sp-az-item">📍 Lee County</a>
+          <a href="/arkansas/lincoln/" class="sp-az-item">📍 Lincoln County</a>
+          <a href="/arkansas/little-river/" class="sp-az-item">📍 Little River County</a>
+          <a href="/arkansas/logan/" class="sp-az-item">📍 Logan County</a>
+          <a href="/arkansas/lonoke/" class="sp-az-item">📍 Lonoke County</a>
+          <a href="/arkansas/madison/" class="sp-az-item">📍 Madison County</a>
+          <a href="/arkansas/marion/" class="sp-az-item">📍 Marion County</a>
+          <a href="/arkansas/miller/" class="sp-az-item">📍 Miller County</a>
+          <a href="/arkansas/mississippi/" class="sp-az-item">📍 Mississippi County</a>
+          <a href="/arkansas/monroe/" class="sp-az-item">📍 Monroe County</a>
+          <a href="/arkansas/montgomery/" class="sp-az-item">📍 Montgomery County</a>
+          <a href="/arkansas/nevada/" class="sp-az-item">📍 Nevada County</a>
+          <a href="/arkansas/newton/" class="sp-az-item">📍 Newton County</a>
+          <a href="/arkansas/ouachita/" class="sp-az-item">📍 Ouachita County</a>
+          <a href="/arkansas/perry/" class="sp-az-item">📍 Perry County</a>
+          <a href="/arkansas/phillips/" class="sp-az-item">📍 Phillips County</a>
+          <a href="/arkansas/pike/" class="sp-az-item">📍 Pike County</a>
+          <a href="/arkansas/poinsett/" class="sp-az-item">📍 Poinsett County</a>
+          <a href="/arkansas/polk/" class="sp-az-item">📍 Polk County</a>
+          <a href="/arkansas/pope/" class="sp-az-item">📍 Pope County</a>
+          <a href="/arkansas/prairie/" class="sp-az-item">📍 Prairie County</a>
+          <a href="/arkansas/pulaski/" class="sp-az-item">📍 Pulaski County</a>
+          <a href="/arkansas/randolph/" class="sp-az-item">📍 Randolph County</a>
+          <a href="/arkansas/saline/" class="sp-az-item">📍 Saline County</a>
+          <a href="/arkansas/scott/" class="sp-az-item">📍 Scott County</a>
+          <a href="/arkansas/searcy/" class="sp-az-item">📍 Searcy County</a>
+          <a href="/arkansas/sebastian/" class="sp-az-item">📍 Sebastian County</a>
+          <a href="/arkansas/sevier/" class="sp-az-item">📍 Sevier County</a>
+          <a href="/arkansas/sharp/" class="sp-az-item">📍 Sharp County</a>
+          <a href="/arkansas/st-francis/" class="sp-az-item">📍 St. Francis County</a>
+          <a href="/arkansas/stone/" class="sp-az-item">📍 Stone County</a>
+          <a href="/arkansas/union/" class="sp-az-item">📍 Union County</a>
+          <a href="/arkansas/van-buren/" class="sp-az-item">📍 Van Buren County</a>
+          <a href="/arkansas/washington/" class="sp-az-item">📍 Washington County</a>
+          <a href="/arkansas/white/" class="sp-az-item">📍 White County</a>
+          <a href="/arkansas/woodruff/" class="sp-az-item">📍 Woodruff County</a>
+          <a href="/arkansas/yell/" class="sp-az-item">📍 Yell County</a>
+            </div>
           </div>
-        </div>
-        <h3 style="color:var(--gray-600);font-size:1.1rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1.5rem;">All 75 Countys — Alphabetical</h3>
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0.75rem;">
-          <a href="/arkansas/arkansas/" class="county-link-item">📍 Arkansas County</a>
-          <a href="/arkansas/ashley/" class="county-link-item">📍 Ashley County</a>
-          <a href="/arkansas/baxter/" class="county-link-item">📍 Baxter County</a>
-          <a href="/arkansas/benton/" class="county-link-item">📍 Benton County</a>
-          <a href="/arkansas/boone/" class="county-link-item">📍 Boone County</a>
-          <a href="/arkansas/bradley/" class="county-link-item">📍 Bradley County</a>
-          <a href="/arkansas/calhoun/" class="county-link-item">📍 Calhoun County</a>
-          <a href="/arkansas/carroll/" class="county-link-item">📍 Carroll County</a>
-          <a href="/arkansas/chicot/" class="county-link-item">📍 Chicot County</a>
-          <a href="/arkansas/clark/" class="county-link-item">📍 Clark County</a>
-          <a href="/arkansas/clay/" class="county-link-item">📍 Clay County</a>
-          <a href="/arkansas/cleburne/" class="county-link-item">📍 Cleburne County</a>
-          <a href="/arkansas/cleveland/" class="county-link-item">📍 Cleveland County</a>
-          <a href="/arkansas/columbia/" class="county-link-item">📍 Columbia County</a>
-          <a href="/arkansas/conway/" class="county-link-item">📍 Conway County</a>
-          <a href="/arkansas/craighead/" class="county-link-item">📍 Craighead County</a>
-          <a href="/arkansas/crawford/" class="county-link-item">📍 Crawford County</a>
-          <a href="/arkansas/crittenden/" class="county-link-item">📍 Crittenden County</a>
-          <a href="/arkansas/cross/" class="county-link-item">📍 Cross County</a>
-          <a href="/arkansas/dallas/" class="county-link-item">📍 Dallas County</a>
-          <a href="/arkansas/desha/" class="county-link-item">📍 Desha County</a>
-          <a href="/arkansas/drew/" class="county-link-item">📍 Drew County</a>
-          <a href="/arkansas/faulkner/" class="county-link-item">📍 Faulkner County</a>
-          <a href="/arkansas/franklin/" class="county-link-item">📍 Franklin County</a>
-          <a href="/arkansas/fulton/" class="county-link-item">📍 Fulton County</a>
-          <a href="/arkansas/garland/" class="county-link-item">📍 Garland County</a>
-          <a href="/arkansas/grant/" class="county-link-item">📍 Grant County</a>
-          <a href="/arkansas/greene/" class="county-link-item">📍 Greene County</a>
-          <a href="/arkansas/hempstead/" class="county-link-item">📍 Hempstead County</a>
-          <a href="/arkansas/hot-spring/" class="county-link-item">📍 Hot Spring County</a>
-          <a href="/arkansas/howard/" class="county-link-item">📍 Howard County</a>
-          <a href="/arkansas/independence/" class="county-link-item">📍 Independence County</a>
-          <a href="/arkansas/izard/" class="county-link-item">📍 Izard County</a>
-          <a href="/arkansas/jackson/" class="county-link-item">📍 Jackson County</a>
-          <a href="/arkansas/jefferson/" class="county-link-item">📍 Jefferson County</a>
-          <a href="/arkansas/johnson/" class="county-link-item">📍 Johnson County</a>
-          <a href="/arkansas/lafayette/" class="county-link-item">📍 Lafayette County</a>
-          <a href="/arkansas/lawrence/" class="county-link-item">📍 Lawrence County</a>
-          <a href="/arkansas/lee/" class="county-link-item">📍 Lee County</a>
-          <a href="/arkansas/lincoln/" class="county-link-item">📍 Lincoln County</a>
-          <a href="/arkansas/little-river/" class="county-link-item">📍 Little River County</a>
-          <a href="/arkansas/logan/" class="county-link-item">📍 Logan County</a>
-          <a href="/arkansas/lonoke/" class="county-link-item">📍 Lonoke County</a>
-          <a href="/arkansas/madison/" class="county-link-item">📍 Madison County</a>
-          <a href="/arkansas/marion/" class="county-link-item">📍 Marion County</a>
-          <a href="/arkansas/miller/" class="county-link-item">📍 Miller County</a>
-          <a href="/arkansas/mississippi/" class="county-link-item">📍 Mississippi County</a>
-          <a href="/arkansas/monroe/" class="county-link-item">📍 Monroe County</a>
-          <a href="/arkansas/montgomery/" class="county-link-item">📍 Montgomery County</a>
-          <a href="/arkansas/nevada/" class="county-link-item">📍 Nevada County</a>
-          <a href="/arkansas/newton/" class="county-link-item">📍 Newton County</a>
-          <a href="/arkansas/ouachita/" class="county-link-item">📍 Ouachita County</a>
-          <a href="/arkansas/perry/" class="county-link-item">📍 Perry County</a>
-          <a href="/arkansas/phillips/" class="county-link-item">📍 Phillips County</a>
-          <a href="/arkansas/pike/" class="county-link-item">📍 Pike County</a>
-          <a href="/arkansas/poinsett/" class="county-link-item">📍 Poinsett County</a>
-          <a href="/arkansas/polk/" class="county-link-item">📍 Polk County</a>
-          <a href="/arkansas/pope/" class="county-link-item">📍 Pope County</a>
-          <a href="/arkansas/prairie/" class="county-link-item">📍 Prairie County</a>
-          <a href="/arkansas/pulaski/" class="county-link-item">📍 Pulaski County</a>
-          <a href="/arkansas/randolph/" class="county-link-item">📍 Randolph County</a>
-          <a href="/arkansas/saline/" class="county-link-item">📍 Saline County</a>
-          <a href="/arkansas/scott/" class="county-link-item">📍 Scott County</a>
-          <a href="/arkansas/searcy/" class="county-link-item">📍 Searcy County</a>
-          <a href="/arkansas/sebastian/" class="county-link-item">📍 Sebastian County</a>
-          <a href="/arkansas/sevier/" class="county-link-item">📍 Sevier County</a>
-          <a href="/arkansas/sharp/" class="county-link-item">📍 Sharp County</a>
-          <a href="/arkansas/st-francis/" class="county-link-item">📍 St. Francis County</a>
-          <a href="/arkansas/stone/" class="county-link-item">📍 Stone County</a>
-          <a href="/arkansas/union/" class="county-link-item">📍 Union County</a>
-          <a href="/arkansas/van-buren/" class="county-link-item">📍 Van Buren County</a>
-          <a href="/arkansas/washington/" class="county-link-item">📍 Washington County</a>
-          <a href="/arkansas/white/" class="county-link-item">📍 White County</a>
-          <a href="/arkansas/woodruff/" class="county-link-item">📍 Woodruff County</a>
-          <a href="/arkansas/yell/" class="county-link-item">📍 Yell County</a>
+
         </div>
       </div>
-    </section>
+    </div>
+
+    <script>
+    /* County search filter */
+    (function() {
+      var inp = document.getElementById('county-search');
+      if (!inp) return;
+      inp.addEventListener('input', function() {
+        var q = inp.value.trim().toLowerCase();
+        document.querySelectorAll('#county-list .sp-az-item').forEach(function(el) {
+          el.classList.toggle('sp-hidden', q.length > 0 && el.textContent.toLowerCase().indexOf(q) === -1);
+        });
+      });
+    })();
+    </script>
+
   </main>
-  <style>
-    .county-link-item {display:flex;align-items:center;gap:0.5rem;padding:0.65rem 1rem;border:1px solid var(--gray-200);border-radius:8px;color:var(--navy);font-size:0.875rem;font-weight:600;text-decoration:none;background:#fff;transition:all 0.2s;}
-    .county-link-item:hover {border-color:var(--blue);background:rgba(45,125,210,0.04);color:var(--blue);}
-  </style>
+  
   <footer class="footer">
     <div class="container">
       <div class="footer__bottom" style="border-top:1px solid rgba(255,255,255,0.1);padding:1.5rem 0;margin-top:0;">

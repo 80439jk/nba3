@@ -1126,3 +1126,133 @@ p { margin-bottom: 1rem; }
   .zip-input-row { flex-direction: column; }
   .zip-input-row .btn { width: 100%; }
 }
+
+/* ============================================================
+   STATE PAGE — Option C: Sidebar Directory Layout (sp-*)
+   ============================================================ */
+
+/* Hero */
+.sp-hero {
+  background: #071629;
+  padding: 2rem 0;
+  border-bottom: 3px solid var(--gold);
+}
+.sp-hero__inner {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1.5rem; flex-wrap: wrap;
+}
+.sp-hero__left { display: flex; align-items: center; gap: 1.1rem; }
+.sp-hero__emoji { font-size: 2.8rem; line-height: 1; flex-shrink: 0; }
+.sp-hero__h1 {
+  font-family: 'Poppins', -apple-system, sans-serif;
+  font-size: 1.75rem; font-weight: 800; color: #fff; margin: 0 0 0.2rem; line-height: 1.1;
+}
+.sp-hero__sub { color: rgba(255,255,255,0.45); font-size: 0.82rem; margin: 0; }
+.sp-hero__right { display: flex; align-items: center; gap: 0.85rem; flex-wrap: wrap; }
+.sp-zip-form {
+  display: flex; border-radius: 8px; overflow: hidden;
+  border: 1.5px solid rgba(255,255,255,0.2);
+}
+.sp-zip-form input {
+  padding: 0.6rem 0.9rem; border: none; font-size: 0.88rem; outline: none;
+  width: 165px; font-weight: 600; letter-spacing: 0.04em;
+}
+.sp-zip-form button {
+  background: var(--gold); border: none; padding: 0 1rem;
+  font-weight: 700; color: var(--navy-dark); cursor: pointer; white-space: nowrap; font-size: 0.88rem;
+}
+.sp-access-btn {
+  background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+  color: #fff; padding: 0.6rem 1rem; border-radius: 8px; font-size: 0.83rem; font-weight: 600;
+  text-decoration: none; white-space: nowrap;
+}
+.sp-access-btn:hover { background: rgba(255,255,255,0.14); }
+
+/* Body layout */
+.sp-body { background: #f4f5f7; padding: 2rem 0 3rem; }
+.sp-layout { display: grid; grid-template-columns: 210px 1fr; gap: 2rem; align-items: start; }
+
+/* Sidebar */
+.sp-sidebar { position: sticky; top: 80px; }
+.sp-sidebar-card {
+  background: #fff; border: 1px solid #e2e5ea; border-radius: 12px;
+  overflow: hidden; margin-bottom: 1rem;
+}
+.sp-sidebar-hd {
+  background: #0a1e3c; color: #fff; padding: 0.65rem 1rem;
+  font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
+}
+.sp-sidebar-body { padding: 0.6rem 0.75rem; }
+.sp-sidebar-link {
+  display: block; padding: 0.38rem 0.5rem; font-size: 0.8rem; color: #495057;
+  font-weight: 500; border-radius: 5px; text-decoration: none;
+}
+.sp-sidebar-link:hover { background: rgba(10,30,60,0.06); color: #0a1e3c; }
+.sp-sidebar-link.active { background: rgba(10,30,60,0.08); color: #0a1e3c; font-weight: 700; }
+.sp-sidebar-search-input {
+  width: 100%; padding: 0.48rem 0.7rem; border: 1.5px solid #dee2e6;
+  border-radius: 6px; font-size: 0.8rem; outline: none; font-family: inherit;
+}
+.sp-sidebar-search-input:focus { border-color: #0a5c9e; }
+.sp-sidebar-stat {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 0.4rem 0; border-bottom: 1px solid #f0f1f3; font-size: 0.8rem;
+}
+.sp-sidebar-stat:last-child { border-bottom: none; }
+.sp-sidebar-stat span:first-child { font-weight: 800; color: #0a1e3c; font-size: 1rem; }
+.sp-sidebar-stat span:last-child { color: #868e96; }
+
+/* Content area */
+.sp-content-hd {
+  display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.1rem;
+}
+.sp-content-hd h2 { font-size: 0.85rem; font-weight: 700; color: #0a1e3c; text-transform: uppercase; letter-spacing: 0.07em; margin: 0; }
+.sp-content-hd span { font-size: 0.78rem; color: #868e96; }
+
+/* Featured county cards */
+.sp-featured-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.9rem; margin-bottom: 2rem; }
+.sp-county-card {
+  background: #fff; border: 1.5px solid #e2e5ea; border-radius: 12px;
+  padding: 1rem; text-decoration: none; display: block; transition: border-color 0.18s, box-shadow 0.18s;
+}
+.sp-county-card:hover { border-color: #0a5c9e; box-shadow: 0 4px 14px rgba(10,92,158,0.1); }
+.sp-cc-top { display: flex; gap: 0.65rem; align-items: center; margin-bottom: 0.55rem; }
+.sp-cc-emoji { font-size: 1.55rem; line-height: 1; }
+.sp-cc-name { font-weight: 700; color: #0a1e3c; font-size: 0.88rem; line-height: 1.2; }
+.sp-cc-meta { font-size: 0.7rem; color: #868e96; margin-top: 0.15rem; }
+.sp-cc-bar { height: 3px; background: #e9ecef; border-radius: 2px; margin-bottom: 0.5rem; }
+.sp-cc-bar-fill { height: 100%; background: #0a5c9e; border-radius: 2px; }
+.sp-cc-link { font-size: 0.75rem; color: #0a5c9e; font-weight: 700; }
+
+/* A-Z section */
+.sp-section-label {
+  font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em;
+  color: #adb5bd; margin: 0.5rem 0 0.85rem;
+  padding-bottom: 0.5rem; border-bottom: 1px solid #e2e5ea;
+}
+.sp-az-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 0.45rem; }
+.sp-az-item {
+  padding: 0.5rem 0.8rem; background: #fff; border: 1px solid #e2e5ea;
+  border-radius: 7px; font-size: 0.8rem; font-weight: 600; color: #0a1e3c; text-decoration: none;
+  display: block; transition: border-color 0.15s, color 0.15s;
+}
+.sp-az-item:hover { border-color: #0a5c9e; color: #0a5c9e; }
+.sp-az-item.sp-verified { border-color: #0a1e3c; background: rgba(10,30,60,0.03); }
+
+/* County search filter (JS-driven) */
+.sp-az-item.sp-hidden { display: none; }
+
+/* Responsive */
+@media (max-width: 960px) {
+  .sp-layout { grid-template-columns: 1fr; }
+  .sp-sidebar { position: static; display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+}
+@media (max-width: 700px) {
+  .sp-hero__inner { flex-direction: column; align-items: flex-start; }
+  .sp-featured-grid { grid-template-columns: 1fr 1fr; }
+  .sp-sidebar { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .sp-hero__h1 { font-size: 1.4rem; }
+  .sp-featured-grid { grid-template-columns: 1fr; }
+}

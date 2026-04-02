@@ -76,203 +76,261 @@
       </ol>
     </div>
   </nav>
-  <main>
-    <section style="background:linear-gradient(135deg,#0F2447,#1B3A6B);padding:4rem 0 3rem;color:#fff;">
+    <main>
+
+    <!-- State Page — Option C: Sidebar Directory -->
+    <div class="sp-hero">
       <div class="container">
-        <div style="display:flex;align-items:center;gap:1.5rem;margin-bottom:1rem;">
-          <span style="font-size:3.5rem;">🎸</span>
-          <div>
-            <span style="color:var(--gold-light);font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;">State Resource Center</span>
-            <h1 style="color:#fff;margin:0;">Tennessee County Resources</h1>
+        <div class="sp-hero__inner">
+          <div class="sp-hero__left">
+            <span class="sp-hero__emoji">🎸</span>
+            <div>
+              <h1 class="sp-hero__h1">Tennessee County Resources</h1>
+              <p class="sp-hero__sub">? counties · 400+ assistance programs · Always free</p>
+            </div>
           </div>
-        </div>
-        <p class="lead" style="color:rgba(255,255,255,0.78);max-width:640px;">
-          All 95 Tennessee countys covered. Find free government and community assistance programs for utilities, housing, food, TennCare, SNAP, and more — organized by your county.
-        </p>
-        <form id="zip-form" style="display:flex;gap:0;max-width:420px;margin-top:2rem;border-radius:8px;overflow:hidden;border:2px solid rgba(255,255,255,0.2);" aria-label="ZIP search">
-          <input id="zip-input" type="tel" placeholder="Enter ZIP code" maxlength="5" style="flex:1;padding:0.85rem 1rem;border:none;font-size:1rem;font-weight:600;letter-spacing:0.08em;outline:none;" />
-          <button type="submit" style="background:var(--gold);color:var(--navy-dark);border:none;padding:0.85rem 1.25rem;font-weight:700;">Go →</button>
-        </form>
-      </div>
-    </section>
-    <div style="background:var(--gray-50);border-bottom:1px solid var(--gray-200);padding:1.25rem 0;">
-      <div class="container">
-        <div style="display:flex;gap:3rem;flex-wrap:wrap;align-items:center;">
-          <div><strong style="color:var(--navy);font-size:1.4rem;">95</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Countys</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">400+</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Assistance Programs</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">9</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Resource Categories</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">Free</strong> <span style="color:var(--gray-600);font-size:0.9rem;">PDF Download</span></div>
-          <div style="margin-left:auto;">
-            <a href="tel:18006224357" style="background:var(--navy);color:#fff;padding:0.6rem 1.25rem;border-radius:6px;font-weight:700;font-size:0.9rem;text-decoration:none;">📞 Get Access Code</a>
+          <div class="sp-hero__right">
+            <form id="zip-form" class="sp-zip-form" aria-label="ZIP search">
+              <input id="zip-input" type="tel" placeholder="Enter ZIP code" maxlength="5"/>
+              <button type="submit">Go →</button>
+            </form>
+            <a href="tel:18006224357" class="sp-access-btn">📞 Get Access Code</a>
           </div>
         </div>
       </div>
     </div>
-    <section class="section" aria-labelledby="counties-heading">
+
+    <div class="sp-body">
       <div class="container">
-        <div class="section-header">
-          <span class="badge badge--gold">All Countys</span>
-          <h2 id="counties-heading">Browse All 95 Tennessee Countys</h2>
-          <p>Click your county to view the full resource guide. Countys marked ⭐ have been fully verified and updated.</p>
-        </div>
-        <div style="margin-bottom:3rem;">
-          <h3 style="color:var(--gray-600);font-size:1.1rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1.5rem;">Most Populated Countys</h3>
-          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem;">
-            <a href="/tennessee/shelby/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🎵</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Shelby County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">930K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+        <div class="sp-layout">
+
+          <!-- Sidebar -->
+          <aside class="sp-sidebar">
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">🔍 Search Counties</div>
+              <div class="sp-sidebar-body">
+                <input class="sp-sidebar-search-input" id="county-search" type="text" placeholder="County name…" autocomplete="off"/>
               </div>
-            </a>
-            <a href="/tennessee/davidson/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🎸</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Davidson County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">716K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">📂 Program Type</div>
+              <div class="sp-sidebar-body">
+                <a href="#all" class="sp-sidebar-link active">All Programs</a>
+                <a href="/tennessee#utilities" class="sp-sidebar-link">⚡ Utility Assistance</a>
+                <a href="/tennessee#housing" class="sp-sidebar-link">🏠 Housing &amp; Rent</a>
+                <a href="/tennessee#food" class="sp-sidebar-link">🥗 Food / SNAP</a>
+                <a href="/tennessee#healthcare" class="sp-sidebar-link">🏥 Medicaid / Health</a>
+                <a href="/tennessee#employment" class="sp-sidebar-link">💼 Employment</a>
+                <a href="/tennessee#childcare" class="sp-sidebar-link">👶 Child Care</a>
+                <a href="/tennessee#disability" class="sp-sidebar-link">♿ Disability</a>
+                <a href="/tennessee#education" class="sp-sidebar-link">📚 Education</a>
               </div>
-            </a>
-            <a href="/tennessee/knox/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🏔️</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Knox County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">479K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">📊 At a Glance</div>
+              <div class="sp-sidebar-body">
+                <div class="sp-sidebar-stat"><span>?</span><span>Counties</span></div>
+                <div class="sp-sidebar-stat"><span>400+</span><span>Programs</span></div>
+                <div class="sp-sidebar-stat"><span>9</span><span>Categories</span></div>
+                <div class="sp-sidebar-stat"><span>Free</span><span>PDF Guide</span></div>
               </div>
-            </a>
-            <a href="/tennessee/hamilton/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🌉</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Hamilton County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">366K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+          </aside>
+
+          <!-- Main content -->
+          <div class="sp-content">
+            <div class="sp-content-hd">
+              <h2>⭐ Featured Counties</h2>
+              <span>? counties total</span>
+            </div>
+            <div class="sp-featured-grid">
+            <a href="/tennessee/shelby/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🎵</span>
+                <div>
+                  <div class="sp-cc-name">Shelby County ⭐</div>
+                  <div class="sp-cc-meta">930K residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
-            <a href="/tennessee/rutherford/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🌾</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Rutherford County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">341K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            <a href="/tennessee/davidson/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🎸</span>
+                <div>
+                  <div class="sp-cc-name">Davidson County ⭐</div>
+                  <div class="sp-cc-meta">716K residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
-            <a href="/tennessee/williamson/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🏡</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Williamson County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">252K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            <a href="/tennessee/knox/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🏔️</span>
+                <div>
+                  <div class="sp-cc-name">Knox County ⭐</div>
+                  <div class="sp-cc-meta">479K residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
+            <a href="/tennessee/hamilton/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🌉</span>
+                <div>
+                  <div class="sp-cc-name">Hamilton County ⭐</div>
+                  <div class="sp-cc-meta">366K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            <a href="/tennessee/rutherford/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🌾</span>
+                <div>
+                  <div class="sp-cc-name">Rutherford County ⭐</div>
+                  <div class="sp-cc-meta">341K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            <a href="/tennessee/williamson/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🏡</span>
+                <div>
+                  <div class="sp-cc-name">Williamson County ⭐</div>
+                  <div class="sp-cc-meta">252K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            </div>
+            <div class="sp-section-label">All ? Counties — Alphabetical</div>
+            <div class="sp-az-grid" id="county-list">
+          <a href="/tennessee/anderson/" class="sp-az-item">📍 Anderson County</a>
+          <a href="/tennessee/bedford/" class="sp-az-item">📍 Bedford County</a>
+          <a href="/tennessee/benton/" class="sp-az-item">📍 Benton County</a>
+          <a href="/tennessee/bledsoe/" class="sp-az-item">📍 Bledsoe County</a>
+          <a href="/tennessee/blount/" class="sp-az-item">📍 Blount County</a>
+          <a href="/tennessee/bradley/" class="sp-az-item">📍 Bradley County</a>
+          <a href="/tennessee/campbell/" class="sp-az-item">📍 Campbell County</a>
+          <a href="/tennessee/cannon/" class="sp-az-item">📍 Cannon County</a>
+          <a href="/tennessee/carroll/" class="sp-az-item">📍 Carroll County</a>
+          <a href="/tennessee/carter/" class="sp-az-item">📍 Carter County</a>
+          <a href="/tennessee/cheatham/" class="sp-az-item">📍 Cheatham County</a>
+          <a href="/tennessee/chester/" class="sp-az-item">📍 Chester County</a>
+          <a href="/tennessee/claiborne/" class="sp-az-item">📍 Claiborne County</a>
+          <a href="/tennessee/clay/" class="sp-az-item">📍 Clay County</a>
+          <a href="/tennessee/cocke/" class="sp-az-item">📍 Cocke County</a>
+          <a href="/tennessee/coffee/" class="sp-az-item">📍 Coffee County</a>
+          <a href="/tennessee/crockett/" class="sp-az-item">📍 Crockett County</a>
+          <a href="/tennessee/cumberland/" class="sp-az-item">📍 Cumberland County</a>
+          <a href="/tennessee/davidson/" class="sp-az-item">📍 Davidson County</a>
+          <a href="/tennessee/dekalb/" class="sp-az-item">📍 DeKalb County</a>
+          <a href="/tennessee/decatur/" class="sp-az-item">📍 Decatur County</a>
+          <a href="/tennessee/dickson/" class="sp-az-item">📍 Dickson County</a>
+          <a href="/tennessee/dyer/" class="sp-az-item">📍 Dyer County</a>
+          <a href="/tennessee/fayette/" class="sp-az-item">📍 Fayette County</a>
+          <a href="/tennessee/fentress/" class="sp-az-item">📍 Fentress County</a>
+          <a href="/tennessee/franklin/" class="sp-az-item">📍 Franklin County</a>
+          <a href="/tennessee/gibson/" class="sp-az-item">📍 Gibson County</a>
+          <a href="/tennessee/giles/" class="sp-az-item">📍 Giles County</a>
+          <a href="/tennessee/grainger/" class="sp-az-item">📍 Grainger County</a>
+          <a href="/tennessee/greene/" class="sp-az-item">📍 Greene County</a>
+          <a href="/tennessee/grundy/" class="sp-az-item">📍 Grundy County</a>
+          <a href="/tennessee/hamblen/" class="sp-az-item">📍 Hamblen County</a>
+          <a href="/tennessee/hamilton/" class="sp-az-item">📍 Hamilton County</a>
+          <a href="/tennessee/hancock/" class="sp-az-item">📍 Hancock County</a>
+          <a href="/tennessee/hardeman/" class="sp-az-item">📍 Hardeman County</a>
+          <a href="/tennessee/hardin/" class="sp-az-item">📍 Hardin County</a>
+          <a href="/tennessee/hawkins/" class="sp-az-item">📍 Hawkins County</a>
+          <a href="/tennessee/haywood/" class="sp-az-item">📍 Haywood County</a>
+          <a href="/tennessee/henderson/" class="sp-az-item">📍 Henderson County</a>
+          <a href="/tennessee/henry/" class="sp-az-item">📍 Henry County</a>
+          <a href="/tennessee/hickman/" class="sp-az-item">📍 Hickman County</a>
+          <a href="/tennessee/houston/" class="sp-az-item">📍 Houston County</a>
+          <a href="/tennessee/humphreys/" class="sp-az-item">📍 Humphreys County</a>
+          <a href="/tennessee/jackson/" class="sp-az-item">📍 Jackson County</a>
+          <a href="/tennessee/jefferson/" class="sp-az-item">📍 Jefferson County</a>
+          <a href="/tennessee/johnson/" class="sp-az-item">📍 Johnson County</a>
+          <a href="/tennessee/knox/" class="sp-az-item">📍 Knox County</a>
+          <a href="/tennessee/lake/" class="sp-az-item">📍 Lake County</a>
+          <a href="/tennessee/lauderdale/" class="sp-az-item">📍 Lauderdale County</a>
+          <a href="/tennessee/lawrence/" class="sp-az-item">📍 Lawrence County</a>
+          <a href="/tennessee/lewis/" class="sp-az-item">📍 Lewis County</a>
+          <a href="/tennessee/lincoln/" class="sp-az-item">📍 Lincoln County</a>
+          <a href="/tennessee/loudon/" class="sp-az-item">📍 Loudon County</a>
+          <a href="/tennessee/macon/" class="sp-az-item">📍 Macon County</a>
+          <a href="/tennessee/madison/" class="sp-az-item">📍 Madison County</a>
+          <a href="/tennessee/marion/" class="sp-az-item">📍 Marion County</a>
+          <a href="/tennessee/marshall/" class="sp-az-item">📍 Marshall County</a>
+          <a href="/tennessee/maury/" class="sp-az-item">📍 Maury County</a>
+          <a href="/tennessee/mcminn/" class="sp-az-item">📍 McMinn County</a>
+          <a href="/tennessee/mcnairy/" class="sp-az-item">📍 McNairy County</a>
+          <a href="/tennessee/meigs/" class="sp-az-item">📍 Meigs County</a>
+          <a href="/tennessee/monroe/" class="sp-az-item">📍 Monroe County</a>
+          <a href="/tennessee/montgomery/" class="sp-az-item">📍 Montgomery County</a>
+          <a href="/tennessee/moore/" class="sp-az-item">📍 Moore County</a>
+          <a href="/tennessee/morgan/" class="sp-az-item">📍 Morgan County</a>
+          <a href="/tennessee/obion/" class="sp-az-item">📍 Obion County</a>
+          <a href="/tennessee/overton/" class="sp-az-item">📍 Overton County</a>
+          <a href="/tennessee/perry/" class="sp-az-item">📍 Perry County</a>
+          <a href="/tennessee/pickett/" class="sp-az-item">📍 Pickett County</a>
+          <a href="/tennessee/polk/" class="sp-az-item">📍 Polk County</a>
+          <a href="/tennessee/putnam/" class="sp-az-item">📍 Putnam County</a>
+          <a href="/tennessee/rhea/" class="sp-az-item">📍 Rhea County</a>
+          <a href="/tennessee/roane/" class="sp-az-item">📍 Roane County</a>
+          <a href="/tennessee/robertson/" class="sp-az-item">📍 Robertson County</a>
+          <a href="/tennessee/rutherford/" class="sp-az-item">📍 Rutherford County</a>
+          <a href="/tennessee/scott/" class="sp-az-item">📍 Scott County</a>
+          <a href="/tennessee/sequatchie/" class="sp-az-item">📍 Sequatchie County</a>
+          <a href="/tennessee/sevier/" class="sp-az-item">📍 Sevier County</a>
+          <a href="/tennessee/shelby/" class="sp-az-item">📍 Shelby County</a>
+          <a href="/tennessee/smith/" class="sp-az-item">📍 Smith County</a>
+          <a href="/tennessee/stewart/" class="sp-az-item">📍 Stewart County</a>
+          <a href="/tennessee/sullivan/" class="sp-az-item">📍 Sullivan County</a>
+          <a href="/tennessee/sumner/" class="sp-az-item">📍 Sumner County</a>
+          <a href="/tennessee/tipton/" class="sp-az-item">📍 Tipton County</a>
+          <a href="/tennessee/trousdale/" class="sp-az-item">📍 Trousdale County</a>
+          <a href="/tennessee/unicoi/" class="sp-az-item">📍 Unicoi County</a>
+          <a href="/tennessee/union/" class="sp-az-item">📍 Union County</a>
+          <a href="/tennessee/van-buren/" class="sp-az-item">📍 Van Buren County</a>
+          <a href="/tennessee/warren/" class="sp-az-item">📍 Warren County</a>
+          <a href="/tennessee/washington/" class="sp-az-item">📍 Washington County</a>
+          <a href="/tennessee/wayne/" class="sp-az-item">📍 Wayne County</a>
+          <a href="/tennessee/weakley/" class="sp-az-item">📍 Weakley County</a>
+          <a href="/tennessee/white/" class="sp-az-item">📍 White County</a>
+          <a href="/tennessee/williamson/" class="sp-az-item">📍 Williamson County</a>
+          <a href="/tennessee/wilson/" class="sp-az-item">📍 Wilson County</a>
+            </div>
           </div>
-        </div>
-        <h3 style="color:var(--gray-600);font-size:1.1rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1.5rem;">All 95 Countys — Alphabetical</h3>
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0.75rem;">
-          <a href="/tennessee/anderson/" class="county-link-item">📍 Anderson County</a>
-          <a href="/tennessee/bedford/" class="county-link-item">📍 Bedford County</a>
-          <a href="/tennessee/benton/" class="county-link-item">📍 Benton County</a>
-          <a href="/tennessee/bledsoe/" class="county-link-item">📍 Bledsoe County</a>
-          <a href="/tennessee/blount/" class="county-link-item">📍 Blount County</a>
-          <a href="/tennessee/bradley/" class="county-link-item">📍 Bradley County</a>
-          <a href="/tennessee/campbell/" class="county-link-item">📍 Campbell County</a>
-          <a href="/tennessee/cannon/" class="county-link-item">📍 Cannon County</a>
-          <a href="/tennessee/carroll/" class="county-link-item">📍 Carroll County</a>
-          <a href="/tennessee/carter/" class="county-link-item">📍 Carter County</a>
-          <a href="/tennessee/cheatham/" class="county-link-item">📍 Cheatham County</a>
-          <a href="/tennessee/chester/" class="county-link-item">📍 Chester County</a>
-          <a href="/tennessee/claiborne/" class="county-link-item">📍 Claiborne County</a>
-          <a href="/tennessee/clay/" class="county-link-item">📍 Clay County</a>
-          <a href="/tennessee/cocke/" class="county-link-item">📍 Cocke County</a>
-          <a href="/tennessee/coffee/" class="county-link-item">📍 Coffee County</a>
-          <a href="/tennessee/crockett/" class="county-link-item">📍 Crockett County</a>
-          <a href="/tennessee/cumberland/" class="county-link-item">📍 Cumberland County</a>
-          <a href="/tennessee/davidson/" class="county-link-item">📍 Davidson County</a>
-          <a href="/tennessee/dekalb/" class="county-link-item">📍 DeKalb County</a>
-          <a href="/tennessee/decatur/" class="county-link-item">📍 Decatur County</a>
-          <a href="/tennessee/dickson/" class="county-link-item">📍 Dickson County</a>
-          <a href="/tennessee/dyer/" class="county-link-item">📍 Dyer County</a>
-          <a href="/tennessee/fayette/" class="county-link-item">📍 Fayette County</a>
-          <a href="/tennessee/fentress/" class="county-link-item">📍 Fentress County</a>
-          <a href="/tennessee/franklin/" class="county-link-item">📍 Franklin County</a>
-          <a href="/tennessee/gibson/" class="county-link-item">📍 Gibson County</a>
-          <a href="/tennessee/giles/" class="county-link-item">📍 Giles County</a>
-          <a href="/tennessee/grainger/" class="county-link-item">📍 Grainger County</a>
-          <a href="/tennessee/greene/" class="county-link-item">📍 Greene County</a>
-          <a href="/tennessee/grundy/" class="county-link-item">📍 Grundy County</a>
-          <a href="/tennessee/hamblen/" class="county-link-item">📍 Hamblen County</a>
-          <a href="/tennessee/hamilton/" class="county-link-item">📍 Hamilton County</a>
-          <a href="/tennessee/hancock/" class="county-link-item">📍 Hancock County</a>
-          <a href="/tennessee/hardeman/" class="county-link-item">📍 Hardeman County</a>
-          <a href="/tennessee/hardin/" class="county-link-item">📍 Hardin County</a>
-          <a href="/tennessee/hawkins/" class="county-link-item">📍 Hawkins County</a>
-          <a href="/tennessee/haywood/" class="county-link-item">📍 Haywood County</a>
-          <a href="/tennessee/henderson/" class="county-link-item">📍 Henderson County</a>
-          <a href="/tennessee/henry/" class="county-link-item">📍 Henry County</a>
-          <a href="/tennessee/hickman/" class="county-link-item">📍 Hickman County</a>
-          <a href="/tennessee/houston/" class="county-link-item">📍 Houston County</a>
-          <a href="/tennessee/humphreys/" class="county-link-item">📍 Humphreys County</a>
-          <a href="/tennessee/jackson/" class="county-link-item">📍 Jackson County</a>
-          <a href="/tennessee/jefferson/" class="county-link-item">📍 Jefferson County</a>
-          <a href="/tennessee/johnson/" class="county-link-item">📍 Johnson County</a>
-          <a href="/tennessee/knox/" class="county-link-item">📍 Knox County</a>
-          <a href="/tennessee/lake/" class="county-link-item">📍 Lake County</a>
-          <a href="/tennessee/lauderdale/" class="county-link-item">📍 Lauderdale County</a>
-          <a href="/tennessee/lawrence/" class="county-link-item">📍 Lawrence County</a>
-          <a href="/tennessee/lewis/" class="county-link-item">📍 Lewis County</a>
-          <a href="/tennessee/lincoln/" class="county-link-item">📍 Lincoln County</a>
-          <a href="/tennessee/loudon/" class="county-link-item">📍 Loudon County</a>
-          <a href="/tennessee/macon/" class="county-link-item">📍 Macon County</a>
-          <a href="/tennessee/madison/" class="county-link-item">📍 Madison County</a>
-          <a href="/tennessee/marion/" class="county-link-item">📍 Marion County</a>
-          <a href="/tennessee/marshall/" class="county-link-item">📍 Marshall County</a>
-          <a href="/tennessee/maury/" class="county-link-item">📍 Maury County</a>
-          <a href="/tennessee/mcminn/" class="county-link-item">📍 McMinn County</a>
-          <a href="/tennessee/mcnairy/" class="county-link-item">📍 McNairy County</a>
-          <a href="/tennessee/meigs/" class="county-link-item">📍 Meigs County</a>
-          <a href="/tennessee/monroe/" class="county-link-item">📍 Monroe County</a>
-          <a href="/tennessee/montgomery/" class="county-link-item">📍 Montgomery County</a>
-          <a href="/tennessee/moore/" class="county-link-item">📍 Moore County</a>
-          <a href="/tennessee/morgan/" class="county-link-item">📍 Morgan County</a>
-          <a href="/tennessee/obion/" class="county-link-item">📍 Obion County</a>
-          <a href="/tennessee/overton/" class="county-link-item">📍 Overton County</a>
-          <a href="/tennessee/perry/" class="county-link-item">📍 Perry County</a>
-          <a href="/tennessee/pickett/" class="county-link-item">📍 Pickett County</a>
-          <a href="/tennessee/polk/" class="county-link-item">📍 Polk County</a>
-          <a href="/tennessee/putnam/" class="county-link-item">📍 Putnam County</a>
-          <a href="/tennessee/rhea/" class="county-link-item">📍 Rhea County</a>
-          <a href="/tennessee/roane/" class="county-link-item">📍 Roane County</a>
-          <a href="/tennessee/robertson/" class="county-link-item">📍 Robertson County</a>
-          <a href="/tennessee/rutherford/" class="county-link-item">📍 Rutherford County</a>
-          <a href="/tennessee/scott/" class="county-link-item">📍 Scott County</a>
-          <a href="/tennessee/sequatchie/" class="county-link-item">📍 Sequatchie County</a>
-          <a href="/tennessee/sevier/" class="county-link-item">📍 Sevier County</a>
-          <a href="/tennessee/shelby/" class="county-link-item">📍 Shelby County</a>
-          <a href="/tennessee/smith/" class="county-link-item">📍 Smith County</a>
-          <a href="/tennessee/stewart/" class="county-link-item">📍 Stewart County</a>
-          <a href="/tennessee/sullivan/" class="county-link-item">📍 Sullivan County</a>
-          <a href="/tennessee/sumner/" class="county-link-item">📍 Sumner County</a>
-          <a href="/tennessee/tipton/" class="county-link-item">📍 Tipton County</a>
-          <a href="/tennessee/trousdale/" class="county-link-item">📍 Trousdale County</a>
-          <a href="/tennessee/unicoi/" class="county-link-item">📍 Unicoi County</a>
-          <a href="/tennessee/union/" class="county-link-item">📍 Union County</a>
-          <a href="/tennessee/van-buren/" class="county-link-item">📍 Van Buren County</a>
-          <a href="/tennessee/warren/" class="county-link-item">📍 Warren County</a>
-          <a href="/tennessee/washington/" class="county-link-item">📍 Washington County</a>
-          <a href="/tennessee/wayne/" class="county-link-item">📍 Wayne County</a>
-          <a href="/tennessee/weakley/" class="county-link-item">📍 Weakley County</a>
-          <a href="/tennessee/white/" class="county-link-item">📍 White County</a>
-          <a href="/tennessee/williamson/" class="county-link-item">📍 Williamson County</a>
-          <a href="/tennessee/wilson/" class="county-link-item">📍 Wilson County</a>
+
         </div>
       </div>
-    </section>
+    </div>
+
+    <script>
+    /* County search filter */
+    (function() {
+      var inp = document.getElementById('county-search');
+      if (!inp) return;
+      inp.addEventListener('input', function() {
+        var q = inp.value.trim().toLowerCase();
+        document.querySelectorAll('#county-list .sp-az-item').forEach(function(el) {
+          el.classList.toggle('sp-hidden', q.length > 0 && el.textContent.toLowerCase().indexOf(q) === -1);
+        });
+      });
+    })();
+    </script>
+
   </main>
-  <style>
-    .county-link-item {display:flex;align-items:center;gap:0.5rem;padding:0.65rem 1rem;border:1px solid var(--gray-200);border-radius:8px;color:var(--navy);font-size:0.875rem;font-weight:600;text-decoration:none;background:#fff;transition:all 0.2s;}
-    .county-link-item:hover {border-color:var(--blue);background:rgba(45,125,210,0.04);color:var(--blue);}
-  </style>
+  
   <footer class="footer">
     <div class="container">
       <div class="footer__bottom" style="border-top:1px solid rgba(255,255,255,0.1);padding:1.5rem 0;margin-top:0;">

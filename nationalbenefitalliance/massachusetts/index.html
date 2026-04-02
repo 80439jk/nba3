@@ -76,122 +76,180 @@
       </ol>
     </div>
   </nav>
-  <main>
-    <section style="background:linear-gradient(135deg,#0F2447,#1B3A6B);padding:4rem 0 3rem;color:#fff;">
+    <main>
+
+    <!-- State Page — Option C: Sidebar Directory -->
+    <div class="sp-hero">
       <div class="container">
-        <div style="display:flex;align-items:center;gap:1.5rem;margin-bottom:1rem;">
-          <span style="font-size:3.5rem;">🏛️</span>
-          <div>
-            <span style="color:var(--gold-light);font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;">State Resource Center</span>
-            <h1 style="color:#fff;margin:0;">Massachusetts County Resources</h1>
+        <div class="sp-hero__inner">
+          <div class="sp-hero__left">
+            <span class="sp-hero__emoji">🏛️</span>
+            <div>
+              <h1 class="sp-hero__h1">Massachusetts County Resources</h1>
+              <p class="sp-hero__sub">? counties · 400+ assistance programs · Always free</p>
+            </div>
           </div>
-        </div>
-        <p class="lead" style="color:rgba(255,255,255,0.78);max-width:640px;">
-          All 14 Massachusetts countys covered. Find free government and community assistance programs for utilities, housing, food, MassHealth, SNAP, and more — organized by your county.
-        </p>
-        <form id="zip-form" style="display:flex;gap:0;max-width:420px;margin-top:2rem;border-radius:8px;overflow:hidden;border:2px solid rgba(255,255,255,0.2);" aria-label="ZIP search">
-          <input id="zip-input" type="tel" placeholder="Enter ZIP code" maxlength="5" style="flex:1;padding:0.85rem 1rem;border:none;font-size:1rem;font-weight:600;letter-spacing:0.08em;outline:none;" />
-          <button type="submit" style="background:var(--gold);color:var(--navy-dark);border:none;padding:0.85rem 1.25rem;font-weight:700;">Go →</button>
-        </form>
-      </div>
-    </section>
-    <div style="background:var(--gray-50);border-bottom:1px solid var(--gray-200);padding:1.25rem 0;">
-      <div class="container">
-        <div style="display:flex;gap:3rem;flex-wrap:wrap;align-items:center;">
-          <div><strong style="color:var(--navy);font-size:1.4rem;">14</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Countys</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">400+</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Assistance Programs</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">9</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Resource Categories</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">Free</strong> <span style="color:var(--gray-600);font-size:0.9rem;">PDF Download</span></div>
-          <div style="margin-left:auto;">
-            <a href="tel:18006224357" style="background:var(--navy);color:#fff;padding:0.6rem 1.25rem;border-radius:6px;font-weight:700;font-size:0.9rem;text-decoration:none;">📞 Get Access Code</a>
+          <div class="sp-hero__right">
+            <form id="zip-form" class="sp-zip-form" aria-label="ZIP search">
+              <input id="zip-input" type="tel" placeholder="Enter ZIP code" maxlength="5"/>
+              <button type="submit">Go →</button>
+            </form>
+            <a href="tel:18006224357" class="sp-access-btn">📞 Get Access Code</a>
           </div>
         </div>
       </div>
     </div>
-    <section class="section" aria-labelledby="counties-heading">
+
+    <div class="sp-body">
       <div class="container">
-        <div class="section-header">
-          <span class="badge badge--gold">All Countys</span>
-          <h2 id="counties-heading">Browse All 14 Massachusetts Countys</h2>
-          <p>Click your county to view the full resource guide. Countys marked ⭐ have been fully verified and updated.</p>
-        </div>
-        <div style="margin-bottom:3rem;">
-          <h3 style="color:var(--gray-600);font-size:1.1rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1.5rem;">Most Populated Countys</h3>
-          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem;">
-            <a href="/massachusetts/middlesex/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🎓</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Middlesex County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">1.6M residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+        <div class="sp-layout">
+
+          <!-- Sidebar -->
+          <aside class="sp-sidebar">
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">🔍 Search Counties</div>
+              <div class="sp-sidebar-body">
+                <input class="sp-sidebar-search-input" id="county-search" type="text" placeholder="County name…" autocomplete="off"/>
               </div>
-            </a>
-            <a href="/massachusetts/worcester/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🏭</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Worcester County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">862K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">📂 Program Type</div>
+              <div class="sp-sidebar-body">
+                <a href="#all" class="sp-sidebar-link active">All Programs</a>
+                <a href="/massachusetts#utilities" class="sp-sidebar-link">⚡ Utility Assistance</a>
+                <a href="/massachusetts#housing" class="sp-sidebar-link">🏠 Housing &amp; Rent</a>
+                <a href="/massachusetts#food" class="sp-sidebar-link">🥗 Food / SNAP</a>
+                <a href="/massachusetts#healthcare" class="sp-sidebar-link">🏥 Medicaid / Health</a>
+                <a href="/massachusetts#employment" class="sp-sidebar-link">💼 Employment</a>
+                <a href="/massachusetts#childcare" class="sp-sidebar-link">👶 Child Care</a>
+                <a href="/massachusetts#disability" class="sp-sidebar-link">♿ Disability</a>
+                <a href="/massachusetts#education" class="sp-sidebar-link">📚 Education</a>
               </div>
-            </a>
-            <a href="/massachusetts/suffolk/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🏛️</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Suffolk County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">804K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">📊 At a Glance</div>
+              <div class="sp-sidebar-body">
+                <div class="sp-sidebar-stat"><span>?</span><span>Counties</span></div>
+                <div class="sp-sidebar-stat"><span>400+</span><span>Programs</span></div>
+                <div class="sp-sidebar-stat"><span>9</span><span>Categories</span></div>
+                <div class="sp-sidebar-stat"><span>Free</span><span>PDF Guide</span></div>
               </div>
-            </a>
-            <a href="/massachusetts/norfolk/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🌳</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Norfolk County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">726K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+          </aside>
+
+          <!-- Main content -->
+          <div class="sp-content">
+            <div class="sp-content-hd">
+              <h2>⭐ Featured Counties</h2>
+              <span>? counties total</span>
+            </div>
+            <div class="sp-featured-grid">
+            <a href="/massachusetts/middlesex/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🎓</span>
+                <div>
+                  <div class="sp-cc-name">Middlesex County ⭐</div>
+                  <div class="sp-cc-meta">1.6M residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:50%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
-            <a href="/massachusetts/bristol/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🌊</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Bristol County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">565K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            <a href="/massachusetts/worcester/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🏭</span>
+                <div>
+                  <div class="sp-cc-name">Worcester County ⭐</div>
+                  <div class="sp-cc-meta">862K residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
-            <a href="/massachusetts/essex/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🎃</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Essex County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">800K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            <a href="/massachusetts/suffolk/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🏛️</span>
+                <div>
+                  <div class="sp-cc-name">Suffolk County ⭐</div>
+                  <div class="sp-cc-meta">804K residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
+            <a href="/massachusetts/norfolk/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🌳</span>
+                <div>
+                  <div class="sp-cc-name">Norfolk County ⭐</div>
+                  <div class="sp-cc-meta">726K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            <a href="/massachusetts/bristol/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🌊</span>
+                <div>
+                  <div class="sp-cc-name">Bristol County ⭐</div>
+                  <div class="sp-cc-meta">565K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            <a href="/massachusetts/essex/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🎃</span>
+                <div>
+                  <div class="sp-cc-name">Essex County ⭐</div>
+                  <div class="sp-cc-meta">800K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            </div>
+            <div class="sp-section-label">All ? Counties — Alphabetical</div>
+            <div class="sp-az-grid" id="county-list">
+          <a href="/massachusetts/barnstable/" class="sp-az-item">📍 Barnstable County</a>
+          <a href="/massachusetts/berkshire/" class="sp-az-item">📍 Berkshire County</a>
+          <a href="/massachusetts/bristol/" class="sp-az-item">📍 Bristol County</a>
+          <a href="/massachusetts/dukes/" class="sp-az-item">📍 Dukes County</a>
+          <a href="/massachusetts/essex/" class="sp-az-item">📍 Essex County</a>
+          <a href="/massachusetts/franklin/" class="sp-az-item">📍 Franklin County</a>
+          <a href="/massachusetts/hampden/" class="sp-az-item">📍 Hampden County</a>
+          <a href="/massachusetts/hampshire/" class="sp-az-item">📍 Hampshire County</a>
+          <a href="/massachusetts/middlesex/" class="sp-az-item">📍 Middlesex County</a>
+          <a href="/massachusetts/nantucket/" class="sp-az-item">📍 Nantucket County</a>
+          <a href="/massachusetts/norfolk/" class="sp-az-item">📍 Norfolk County</a>
+          <a href="/massachusetts/plymouth/" class="sp-az-item">📍 Plymouth County</a>
+          <a href="/massachusetts/suffolk/" class="sp-az-item">📍 Suffolk County</a>
+          <a href="/massachusetts/worcester/" class="sp-az-item">📍 Worcester County</a>
+            </div>
           </div>
-        </div>
-        <h3 style="color:var(--gray-600);font-size:1.1rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1.5rem;">All 14 Countys — Alphabetical</h3>
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0.75rem;">
-          <a href="/massachusetts/barnstable/" class="county-link-item">📍 Barnstable County</a>
-          <a href="/massachusetts/berkshire/" class="county-link-item">📍 Berkshire County</a>
-          <a href="/massachusetts/bristol/" class="county-link-item">📍 Bristol County</a>
-          <a href="/massachusetts/dukes/" class="county-link-item">📍 Dukes County</a>
-          <a href="/massachusetts/essex/" class="county-link-item">📍 Essex County</a>
-          <a href="/massachusetts/franklin/" class="county-link-item">📍 Franklin County</a>
-          <a href="/massachusetts/hampden/" class="county-link-item">📍 Hampden County</a>
-          <a href="/massachusetts/hampshire/" class="county-link-item">📍 Hampshire County</a>
-          <a href="/massachusetts/middlesex/" class="county-link-item">📍 Middlesex County</a>
-          <a href="/massachusetts/nantucket/" class="county-link-item">📍 Nantucket County</a>
-          <a href="/massachusetts/norfolk/" class="county-link-item">📍 Norfolk County</a>
-          <a href="/massachusetts/plymouth/" class="county-link-item">📍 Plymouth County</a>
-          <a href="/massachusetts/suffolk/" class="county-link-item">📍 Suffolk County</a>
-          <a href="/massachusetts/worcester/" class="county-link-item">📍 Worcester County</a>
+
         </div>
       </div>
-    </section>
+    </div>
+
+    <script>
+    /* County search filter */
+    (function() {
+      var inp = document.getElementById('county-search');
+      if (!inp) return;
+      inp.addEventListener('input', function() {
+        var q = inp.value.trim().toLowerCase();
+        document.querySelectorAll('#county-list .sp-az-item').forEach(function(el) {
+          el.classList.toggle('sp-hidden', q.length > 0 && el.textContent.toLowerCase().indexOf(q) === -1);
+        });
+      });
+    })();
+    </script>
+
   </main>
-  <style>
-    .county-link-item {display:flex;align-items:center;gap:0.5rem;padding:0.65rem 1rem;border:1px solid var(--gray-200);border-radius:8px;color:var(--navy);font-size:0.875rem;font-weight:600;text-decoration:none;background:#fff;transition:all 0.2s;}
-    .county-link-item:hover {border-color:var(--blue);background:rgba(45,125,210,0.04);color:var(--blue);}
-  </style>
+  
   <footer class="footer">
     <div class="container">
       <div class="footer__bottom" style="border-top:1px solid rgba(255,255,255,0.1);padding:1.5rem 0;margin-top:0;">

@@ -100,202 +100,234 @@
     </div>
   </nav>
 
-  <main>
+    <main>
 
-    <!-- Page Header -->
-    <section style="background:linear-gradient(135deg,#0F2447,#1B3A6B);padding:4rem 0 3rem;color:#fff;">
+    <!-- State Page — Option C: Sidebar Directory -->
+    <div class="sp-hero">
       <div class="container">
-        <div style="display:flex;align-items:center;gap:1.5rem;margin-bottom:1rem;">
-          <span style="font-size:3.5rem;">🌴</span>
-          <div>
-            <span style="color:var(--gold-light);font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;">State Resource Center</span>
-            <h1 style="color:#fff;margin:0;">Florida County Resources</h1>
+        <div class="sp-hero__inner">
+          <div class="sp-hero__left">
+            <span class="sp-hero__emoji">🌴</span>
+            <div>
+              <h1 class="sp-hero__h1">Florida County Resources</h1>
+              <p class="sp-hero__sub">67 counties · 500+ assistance programs · Always free</p>
+            </div>
           </div>
-        </div>
-        <p class="lead" style="color:rgba(255,255,255,0.78);max-width:640px;">
-          All 67 Florida counties covered. Find free government and community assistance programs for utilities, housing, food, healthcare, employment, and more — organized by your county.
-        </p>
-        <!-- ZIP Search (inline) -->
-        <form id="zip-form" style="display:flex;gap:0;max-width:420px;margin-top:2rem;border-radius:8px;overflow:hidden;border:2px solid rgba(255,255,255,0.2);" aria-label="ZIP search">
-          <input id="zip-input" type="tel" placeholder="Enter ZIP code" maxlength="5" style="flex:1;padding:0.85rem 1rem;border:none;font-size:1rem;font-weight:600;letter-spacing:0.08em;outline:none;" />
-          <button type="submit" style="background:var(--gold);color:var(--navy-dark);border:none;padding:0.85rem 1.25rem;font-weight:700;">Go →</button>
-        </form>
-      </div>
-    </section>
-
-    <!-- Stats bar -->
-    <div style="background:var(--gray-50);border-bottom:1px solid var(--gray-200);padding:1.25rem 0;">
-      <div class="container">
-        <div style="display:flex;gap:3rem;flex-wrap:wrap;align-items:center;">
-          <div><strong style="color:var(--navy);font-size:1.4rem;">67</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Counties</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">500+</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Assistance Programs</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">9</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Resource Categories</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">Free</strong> <span style="color:var(--gray-600);font-size:0.9rem;">PDF Download</span></div>
-          <div style="margin-left:auto;">
-            <a href="tel:18006224357" style="background:var(--navy);color:#fff;padding:0.6rem 1.25rem;border-radius:6px;font-weight:700;font-size:0.9rem;text-decoration:none;">📞 Get Access Code</a>
+          <div class="sp-hero__right">
+            <form id="zip-form" class="sp-zip-form" aria-label="ZIP search">
+              <input id="zip-input" type="tel" placeholder="Enter ZIP code" maxlength="5"/>
+              <button type="submit">Go →</button>
+            </form>
+            <a href="tel:18006224357" class="sp-access-btn">📞 Get Access Code</a>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- All 67 Counties Grid -->
-    <section class="section" aria-labelledby="counties-heading">
+    <div class="sp-body">
       <div class="container">
-        <div class="section-header">
-          <span class="badge badge--gold">All Counties</span>
-          <h2 id="counties-heading">Browse All 67 Florida Counties</h2>
-          <p>Click your county to view the full resource guide. Counties marked ⭐ have been fully verified and updated.</p>
-        </div>
+        <div class="sp-layout">
 
-        <!-- Featured Large Counties -->
-        <div style="margin-bottom:3rem;">
-          <h3 style="color:var(--navy);margin-bottom:1.5rem;font-size:1.1rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--gray-600);">Most Populated Counties</h3>
-          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem;">
-
-            <a href="/florida/miami-dade/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🌴</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Miami-Dade County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">2.7M residents · 60+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+          <!-- Sidebar -->
+          <aside class="sp-sidebar">
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">🔍 Search Counties</div>
+              <div class="sp-sidebar-body">
+                <input class="sp-sidebar-search-input" id="county-search" type="text" placeholder="County name…" autocomplete="off"/>
               </div>
-            </a>
-
-            <a href="/florida/broward/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🏙️</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Broward County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">1.9M residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">📂 Program Type</div>
+              <div class="sp-sidebar-body">
+                <a href="#all" class="sp-sidebar-link active">All Programs</a>
+                <a href="/florida#utilities" class="sp-sidebar-link">⚡ Utility Assistance</a>
+                <a href="/florida#housing" class="sp-sidebar-link">🏠 Housing &amp; Rent</a>
+                <a href="/florida#food" class="sp-sidebar-link">🥗 Food / SNAP</a>
+                <a href="/florida#healthcare" class="sp-sidebar-link">🏥 Medicaid / Health</a>
+                <a href="/florida#employment" class="sp-sidebar-link">💼 Employment</a>
+                <a href="/florida#childcare" class="sp-sidebar-link">👶 Child Care</a>
+                <a href="/florida#disability" class="sp-sidebar-link">♿ Disability</a>
+                <a href="/florida#education" class="sp-sidebar-link">📚 Education</a>
               </div>
-            </a>
-
-            <a href="/florida/palm-beach/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🌊</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Palm Beach County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">1.5M residents · 45+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">📊 At a Glance</div>
+              <div class="sp-sidebar-body">
+                <div class="sp-sidebar-stat"><span>67</span><span>Counties</span></div>
+                <div class="sp-sidebar-stat"><span>500+</span><span>Programs</span></div>
+                <div class="sp-sidebar-stat"><span>9</span><span>Categories</span></div>
+                <div class="sp-sidebar-stat"><span>Free</span><span>PDF Guide</span></div>
               </div>
-            </a>
+            </div>
+          </aside>
 
-            <a href="/florida/orange/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🏰</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Orange County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">1.4M residents · 55+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+          <!-- Main content -->
+          <div class="sp-content">
+            <div class="sp-content-hd">
+              <h2>⭐ Featured Counties</h2>
+              <span>67 counties total</span>
+            </div>
+            <div class="sp-featured-grid">
+            <a href="/florida/miami-dade/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🌴</span>
+                <div>
+                  <div class="sp-cc-name">Miami-Dade County ⭐</div>
+                  <div class="sp-cc-meta">2.7M residents · 60+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:50%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
-
-            <a href="/florida/hillsborough/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🌁</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Hillsborough County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">1.5M residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            <a href="/florida/broward/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🏙️</span>
+                <div>
+                  <div class="sp-cc-name">Broward County ⭐</div>
+                  <div class="sp-cc-meta">1.9M residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:50%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
-
-            <a href="/florida/pinellas/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🏖️</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Pinellas County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">971K residents · 40+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            <a href="/florida/palm-beach/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🌊</span>
+                <div>
+                  <div class="sp-cc-name">Palm Beach County ⭐</div>
+                  <div class="sp-cc-meta">1.5M residents · 45+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:50%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
-
+            <a href="/florida/orange/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🏰</span>
+                <div>
+                  <div class="sp-cc-name">Orange County ⭐</div>
+                  <div class="sp-cc-meta">1.4M residents · 55+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:50%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            <a href="/florida/hillsborough/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🌁</span>
+                <div>
+                  <div class="sp-cc-name">Hillsborough County ⭐</div>
+                  <div class="sp-cc-meta">1.5M residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:50%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            <a href="/florida/pinellas/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🏖️</span>
+                <div>
+                  <div class="sp-cc-name">Pinellas County ⭐</div>
+                  <div class="sp-cc-meta">971K residents · 40+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            </div>
+            <div class="sp-section-label">All 67 Counties — Alphabetical</div>
+            <div class="sp-az-grid" id="county-list">
+          <a href="/florida/alachua/" class="sp-az-item">📍 Alachua County</a>
+          <a href="/florida/baker/" class="sp-az-item">📍 Baker County</a>
+          <a href="/florida/bay/" class="sp-az-item">📍 Bay County</a>
+          <a href="/florida/bradford/" class="sp-az-item">📍 Bradford County</a>
+          <a href="/florida/brevard/" class="sp-az-item">📍 Brevard County</a>
+          <a href="/florida/broward/" class="sp-az-item sp-verified">⭐ Broward County</a>
+          <a href="/florida/calhoun/" class="sp-az-item">📍 Calhoun County</a>
+          <a href="/florida/charlotte/" class="sp-az-item">📍 Charlotte County</a>
+          <a href="/florida/citrus/" class="sp-az-item">📍 Citrus County</a>
+          <a href="/florida/clay/" class="sp-az-item">📍 Clay County</a>
+          <a href="/florida/collier/" class="sp-az-item">📍 Collier County</a>
+          <a href="/florida/columbia/" class="sp-az-item">📍 Columbia County</a>
+          <a href="/florida/desoto/" class="sp-az-item">📍 DeSoto County</a>
+          <a href="/florida/dixie/" class="sp-az-item">📍 Dixie County</a>
+          <a href="/florida/duval/" class="sp-az-item">📍 Duval County</a>
+          <a href="/florida/escambia/" class="sp-az-item">📍 Escambia County</a>
+          <a href="/florida/flagler/" class="sp-az-item">📍 Flagler County</a>
+          <a href="/florida/franklin/" class="sp-az-item">📍 Franklin County</a>
+          <a href="/florida/gadsden/" class="sp-az-item">📍 Gadsden County</a>
+          <a href="/florida/gilchrist/" class="sp-az-item">📍 Gilchrist County</a>
+          <a href="/florida/glades/" class="sp-az-item">📍 Glades County</a>
+          <a href="/florida/gulf/" class="sp-az-item">📍 Gulf County</a>
+          <a href="/florida/hamilton/" class="sp-az-item">📍 Hamilton County</a>
+          <a href="/florida/hardee/" class="sp-az-item">📍 Hardee County</a>
+          <a href="/florida/hendry/" class="sp-az-item">📍 Hendry County</a>
+          <a href="/florida/hernando/" class="sp-az-item">📍 Hernando County</a>
+          <a href="/florida/highlands/" class="sp-az-item">📍 Highlands County</a>
+          <a href="/florida/hillsborough/" class="sp-az-item sp-verified">⭐ Hillsborough County</a>
+          <a href="/florida/holmes/" class="sp-az-item">📍 Holmes County</a>
+          <a href="/florida/indian-river/" class="sp-az-item">📍 Indian River County</a>
+          <a href="/florida/jackson/" class="sp-az-item">📍 Jackson County</a>
+          <a href="/florida/jefferson/" class="sp-az-item">📍 Jefferson County</a>
+          <a href="/florida/lafayette/" class="sp-az-item">📍 Lafayette County</a>
+          <a href="/florida/lake/" class="sp-az-item">📍 Lake County</a>
+          <a href="/florida/lee/" class="sp-az-item">📍 Lee County</a>
+          <a href="/florida/leon/" class="sp-az-item">📍 Leon County</a>
+          <a href="/florida/levy/" class="sp-az-item">📍 Levy County</a>
+          <a href="/florida/liberty/" class="sp-az-item">📍 Liberty County</a>
+          <a href="/florida/madison/" class="sp-az-item">📍 Madison County</a>
+          <a href="/florida/manatee/" class="sp-az-item">📍 Manatee County</a>
+          <a href="/florida/marion/" class="sp-az-item">📍 Marion County</a>
+          <a href="/florida/martin/" class="sp-az-item">📍 Martin County</a>
+          <a href="/florida/miami-dade/" class="sp-az-item sp-verified">⭐ Miami-Dade County</a>
+          <a href="/florida/monroe/" class="sp-az-item">📍 Monroe County</a>
+          <a href="/florida/nassau/" class="sp-az-item">📍 Nassau County</a>
+          <a href="/florida/okaloosa/" class="sp-az-item">📍 Okaloosa County</a>
+          <a href="/florida/okeechobee/" class="sp-az-item">📍 Okeechobee County</a>
+          <a href="/florida/orange/" class="sp-az-item sp-verified">⭐ Orange County</a>
+          <a href="/florida/osceola/" class="sp-az-item">📍 Osceola County</a>
+          <a href="/florida/palm-beach/" class="sp-az-item sp-verified">⭐ Palm Beach County</a>
+          <a href="/florida/pasco/" class="sp-az-item">📍 Pasco County</a>
+          <a href="/florida/pinellas/" class="sp-az-item sp-verified">⭐ Pinellas County</a>
+          <a href="/florida/polk/" class="sp-az-item">📍 Polk County</a>
+          <a href="/florida/putnam/" class="sp-az-item">📍 Putnam County</a>
+          <a href="/florida/st-johns/" class="sp-az-item">📍 St. Johns County</a>
+          <a href="/florida/st-lucie/" class="sp-az-item">📍 St. Lucie County</a>
+          <a href="/florida/santa-rosa/" class="sp-az-item">📍 Santa Rosa County</a>
+          <a href="/florida/sarasota/" class="sp-az-item">📍 Sarasota County</a>
+          <a href="/florida/seminole/" class="sp-az-item">📍 Seminole County</a>
+          <a href="/florida/sumter/" class="sp-az-item">📍 Sumter County</a>
+          <a href="/florida/suwannee/" class="sp-az-item">📍 Suwannee County</a>
+          <a href="/florida/taylor/" class="sp-az-item">📍 Taylor County</a>
+          <a href="/florida/union/" class="sp-az-item">📍 Union County</a>
+          <a href="/florida/volusia/" class="sp-az-item">📍 Volusia County</a>
+          <a href="/florida/wakulla/" class="sp-az-item">📍 Wakulla County</a>
+          <a href="/florida/walton/" class="sp-az-item">📍 Walton County</a>
+          <a href="/florida/washington/" class="sp-az-item">📍 Washington County</a>
+            </div>
           </div>
-        </div>
 
-        <!-- All Counties A-Z Table -->
-        <h3 style="color:var(--gray-600);font-size:1.1rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1.5rem;">All 67 Counties — Alphabetical</h3>
-
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0.75rem;">
-          <!-- Full county list -->
-          <a href="/florida/alachua/" class="county-link-item">📍 Alachua County</a>
-          <a href="/florida/baker/" class="county-link-item">📍 Baker County</a>
-          <a href="/florida/bay/" class="county-link-item">📍 Bay County</a>
-          <a href="/florida/bradford/" class="county-link-item">📍 Bradford County</a>
-          <a href="/florida/brevard/" class="county-link-item">📍 Brevard County</a>
-          <a href="/florida/broward/" class="county-link-item" style="border-color:var(--navy);background:rgba(27,58,107,0.04);">⭐ Broward County</a>
-          <a href="/florida/calhoun/" class="county-link-item">📍 Calhoun County</a>
-          <a href="/florida/charlotte/" class="county-link-item">📍 Charlotte County</a>
-          <a href="/florida/citrus/" class="county-link-item">📍 Citrus County</a>
-          <a href="/florida/clay/" class="county-link-item">📍 Clay County</a>
-          <a href="/florida/collier/" class="county-link-item">📍 Collier County</a>
-          <a href="/florida/columbia/" class="county-link-item">📍 Columbia County</a>
-          <a href="/florida/desoto/" class="county-link-item">📍 DeSoto County</a>
-          <a href="/florida/dixie/" class="county-link-item">📍 Dixie County</a>
-          <a href="/florida/duval/" class="county-link-item">📍 Duval County</a>
-          <a href="/florida/escambia/" class="county-link-item">📍 Escambia County</a>
-          <a href="/florida/flagler/" class="county-link-item">📍 Flagler County</a>
-          <a href="/florida/franklin/" class="county-link-item">📍 Franklin County</a>
-          <a href="/florida/gadsden/" class="county-link-item">📍 Gadsden County</a>
-          <a href="/florida/gilchrist/" class="county-link-item">📍 Gilchrist County</a>
-          <a href="/florida/glades/" class="county-link-item">📍 Glades County</a>
-          <a href="/florida/gulf/" class="county-link-item">📍 Gulf County</a>
-          <a href="/florida/hamilton/" class="county-link-item">📍 Hamilton County</a>
-          <a href="/florida/hardee/" class="county-link-item">📍 Hardee County</a>
-          <a href="/florida/hendry/" class="county-link-item">📍 Hendry County</a>
-          <a href="/florida/hernando/" class="county-link-item">📍 Hernando County</a>
-          <a href="/florida/highlands/" class="county-link-item">📍 Highlands County</a>
-          <a href="/florida/hillsborough/" class="county-link-item" style="border-color:var(--navy);background:rgba(27,58,107,0.04);">⭐ Hillsborough County</a>
-          <a href="/florida/holmes/" class="county-link-item">📍 Holmes County</a>
-          <a href="/florida/indian-river/" class="county-link-item">📍 Indian River County</a>
-          <a href="/florida/jackson/" class="county-link-item">📍 Jackson County</a>
-          <a href="/florida/jefferson/" class="county-link-item">📍 Jefferson County</a>
-          <a href="/florida/lafayette/" class="county-link-item">📍 Lafayette County</a>
-          <a href="/florida/lake/" class="county-link-item">📍 Lake County</a>
-          <a href="/florida/lee/" class="county-link-item">📍 Lee County</a>
-          <a href="/florida/leon/" class="county-link-item">📍 Leon County</a>
-          <a href="/florida/levy/" class="county-link-item">📍 Levy County</a>
-          <a href="/florida/liberty/" class="county-link-item">📍 Liberty County</a>
-          <a href="/florida/madison/" class="county-link-item">📍 Madison County</a>
-          <a href="/florida/manatee/" class="county-link-item">📍 Manatee County</a>
-          <a href="/florida/marion/" class="county-link-item">📍 Marion County</a>
-          <a href="/florida/martin/" class="county-link-item">📍 Martin County</a>
-          <a href="/florida/miami-dade/" class="county-link-item" style="border-color:var(--navy);background:rgba(27,58,107,0.04);">⭐ Miami-Dade County</a>
-          <a href="/florida/monroe/" class="county-link-item">📍 Monroe County</a>
-          <a href="/florida/nassau/" class="county-link-item">📍 Nassau County</a>
-          <a href="/florida/okaloosa/" class="county-link-item">📍 Okaloosa County</a>
-          <a href="/florida/okeechobee/" class="county-link-item">📍 Okeechobee County</a>
-          <a href="/florida/orange/" class="county-link-item" style="border-color:var(--navy);background:rgba(27,58,107,0.04);">⭐ Orange County</a>
-          <a href="/florida/osceola/" class="county-link-item">📍 Osceola County</a>
-          <a href="/florida/palm-beach/" class="county-link-item" style="border-color:var(--navy);background:rgba(27,58,107,0.04);">⭐ Palm Beach County</a>
-          <a href="/florida/pasco/" class="county-link-item">📍 Pasco County</a>
-          <a href="/florida/pinellas/" class="county-link-item" style="border-color:var(--navy);background:rgba(27,58,107,0.04);">⭐ Pinellas County</a>
-          <a href="/florida/polk/" class="county-link-item">📍 Polk County</a>
-          <a href="/florida/putnam/" class="county-link-item">📍 Putnam County</a>
-          <a href="/florida/st-johns/" class="county-link-item">📍 St. Johns County</a>
-          <a href="/florida/st-lucie/" class="county-link-item">📍 St. Lucie County</a>
-          <a href="/florida/santa-rosa/" class="county-link-item">📍 Santa Rosa County</a>
-          <a href="/florida/sarasota/" class="county-link-item">📍 Sarasota County</a>
-          <a href="/florida/seminole/" class="county-link-item">📍 Seminole County</a>
-          <a href="/florida/sumter/" class="county-link-item">📍 Sumter County</a>
-          <a href="/florida/suwannee/" class="county-link-item">📍 Suwannee County</a>
-          <a href="/florida/taylor/" class="county-link-item">📍 Taylor County</a>
-          <a href="/florida/union/" class="county-link-item">📍 Union County</a>
-          <a href="/florida/volusia/" class="county-link-item">📍 Volusia County</a>
-          <a href="/florida/wakulla/" class="county-link-item">📍 Wakulla County</a>
-          <a href="/florida/walton/" class="county-link-item">📍 Walton County</a>
-          <a href="/florida/washington/" class="county-link-item">📍 Washington County</a>
         </div>
       </div>
-    </section>
+    </div>
+
+    <script>
+    /* County search filter */
+    (function() {
+      var inp = document.getElementById('county-search');
+      if (!inp) return;
+      inp.addEventListener('input', function() {
+        var q = inp.value.trim().toLowerCase();
+        document.querySelectorAll('#county-list .sp-az-item').forEach(function(el) {
+          el.classList.toggle('sp-hidden', q.length > 0 && el.textContent.toLowerCase().indexOf(q) === -1);
+        });
+      });
+    })();
+    </script>
 
   </main>
 
-  <style>
-    .county-link-item {
-      display:flex;align-items:center;gap:0.5rem;
-      padding:0.65rem 1rem;border:1px solid var(--gray-200);border-radius:8px;
-      color:var(--navy);font-size:0.875rem;font-weight:600;text-decoration:none;
-      background:#fff;transition:all 0.2s;
-    }
-    .county-link-item:hover { border-color:var(--blue);background:rgba(45,125,210,0.04);color:var(--blue); }
-  </style>
+  
 
   <footer class="footer">
     <div class="container">

@@ -76,210 +76,268 @@
       </ol>
     </div>
   </nav>
-  <main>
-    <section style="background:linear-gradient(135deg,#0F2447,#1B3A6B);padding:4rem 0 3rem;color:#fff;">
+    <main>
+
+    <!-- State Page — Option C: Sidebar Directory -->
+    <div class="sp-hero">
       <div class="container">
-        <div style="display:flex;align-items:center;gap:1.5rem;margin-bottom:1rem;">
-          <span style="font-size:3.5rem;">🌆</span>
-          <div>
-            <span style="color:var(--gold-light);font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;">State Resource Center</span>
-            <h1 style="color:#fff;margin:0;">Illinois County Resources</h1>
+        <div class="sp-hero__inner">
+          <div class="sp-hero__left">
+            <span class="sp-hero__emoji">🌆</span>
+            <div>
+              <h1 class="sp-hero__h1">Illinois County Resources</h1>
+              <p class="sp-hero__sub">? counties · 400+ assistance programs · Always free</p>
+            </div>
           </div>
-        </div>
-        <p class="lead" style="color:rgba(255,255,255,0.78);max-width:640px;">
-          All 102 Illinois countys covered. Find free government and community assistance programs for utilities, housing, food, Illinois Medicaid, SNAP, and more — organized by your county.
-        </p>
-        <form id="zip-form" style="display:flex;gap:0;max-width:420px;margin-top:2rem;border-radius:8px;overflow:hidden;border:2px solid rgba(255,255,255,0.2);" aria-label="ZIP search">
-          <input id="zip-input" type="tel" placeholder="Enter ZIP code" maxlength="5" style="flex:1;padding:0.85rem 1rem;border:none;font-size:1rem;font-weight:600;letter-spacing:0.08em;outline:none;" />
-          <button type="submit" style="background:var(--gold);color:var(--navy-dark);border:none;padding:0.85rem 1.25rem;font-weight:700;">Go →</button>
-        </form>
-      </div>
-    </section>
-    <div style="background:var(--gray-50);border-bottom:1px solid var(--gray-200);padding:1.25rem 0;">
-      <div class="container">
-        <div style="display:flex;gap:3rem;flex-wrap:wrap;align-items:center;">
-          <div><strong style="color:var(--navy);font-size:1.4rem;">102</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Countys</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">400+</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Assistance Programs</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">9</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Resource Categories</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">Free</strong> <span style="color:var(--gray-600);font-size:0.9rem;">PDF Download</span></div>
-          <div style="margin-left:auto;">
-            <a href="tel:18006224357" style="background:var(--navy);color:#fff;padding:0.6rem 1.25rem;border-radius:6px;font-weight:700;font-size:0.9rem;text-decoration:none;">📞 Get Access Code</a>
+          <div class="sp-hero__right">
+            <form id="zip-form" class="sp-zip-form" aria-label="ZIP search">
+              <input id="zip-input" type="tel" placeholder="Enter ZIP code" maxlength="5"/>
+              <button type="submit">Go →</button>
+            </form>
+            <a href="tel:18006224357" class="sp-access-btn">📞 Get Access Code</a>
           </div>
         </div>
       </div>
     </div>
-    <section class="section" aria-labelledby="counties-heading">
+
+    <div class="sp-body">
       <div class="container">
-        <div class="section-header">
-          <span class="badge badge--gold">All Countys</span>
-          <h2 id="counties-heading">Browse All 102 Illinois Countys</h2>
-          <p>Click your county to view the full resource guide. Countys marked ⭐ have been fully verified and updated.</p>
-        </div>
-        <div style="margin-bottom:3rem;">
-          <h3 style="color:var(--gray-600);font-size:1.1rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1.5rem;">Most Populated Countys</h3>
-          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem;">
-            <a href="/illinois/cook/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🌆</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Cook County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">5.3M residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+        <div class="sp-layout">
+
+          <!-- Sidebar -->
+          <aside class="sp-sidebar">
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">🔍 Search Counties</div>
+              <div class="sp-sidebar-body">
+                <input class="sp-sidebar-search-input" id="county-search" type="text" placeholder="County name…" autocomplete="off"/>
               </div>
-            </a>
-            <a href="/illinois/dupage/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🏘️</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">DuPage County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">933K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">📂 Program Type</div>
+              <div class="sp-sidebar-body">
+                <a href="#all" class="sp-sidebar-link active">All Programs</a>
+                <a href="/illinois#utilities" class="sp-sidebar-link">⚡ Utility Assistance</a>
+                <a href="/illinois#housing" class="sp-sidebar-link">🏠 Housing &amp; Rent</a>
+                <a href="/illinois#food" class="sp-sidebar-link">🥗 Food / SNAP</a>
+                <a href="/illinois#healthcare" class="sp-sidebar-link">🏥 Medicaid / Health</a>
+                <a href="/illinois#employment" class="sp-sidebar-link">💼 Employment</a>
+                <a href="/illinois#childcare" class="sp-sidebar-link">👶 Child Care</a>
+                <a href="/illinois#disability" class="sp-sidebar-link">♿ Disability</a>
+                <a href="/illinois#education" class="sp-sidebar-link">📚 Education</a>
               </div>
-            </a>
-            <a href="/illinois/lake/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🌊</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Lake County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">714K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">📊 At a Glance</div>
+              <div class="sp-sidebar-body">
+                <div class="sp-sidebar-stat"><span>?</span><span>Counties</span></div>
+                <div class="sp-sidebar-stat"><span>400+</span><span>Programs</span></div>
+                <div class="sp-sidebar-stat"><span>9</span><span>Categories</span></div>
+                <div class="sp-sidebar-stat"><span>Free</span><span>PDF Guide</span></div>
               </div>
-            </a>
-            <a href="/illinois/will/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🏭</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Will County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">696K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+          </aside>
+
+          <!-- Main content -->
+          <div class="sp-content">
+            <div class="sp-content-hd">
+              <h2>⭐ Featured Counties</h2>
+              <span>? counties total</span>
+            </div>
+            <div class="sp-featured-grid">
+            <a href="/illinois/cook/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🌆</span>
+                <div>
+                  <div class="sp-cc-name">Cook County ⭐</div>
+                  <div class="sp-cc-meta">5.3M residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:50%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
-            <a href="/illinois/kane/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🌾</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Kane County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">517K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            <a href="/illinois/dupage/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🏘️</span>
+                <div>
+                  <div class="sp-cc-name">DuPage County ⭐</div>
+                  <div class="sp-cc-meta">933K residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
-            <a href="/illinois/winnebago/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🏙️</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Winnebago County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">289K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            <a href="/illinois/lake/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🌊</span>
+                <div>
+                  <div class="sp-cc-name">Lake County ⭐</div>
+                  <div class="sp-cc-meta">714K residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
+            <a href="/illinois/will/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🏭</span>
+                <div>
+                  <div class="sp-cc-name">Will County ⭐</div>
+                  <div class="sp-cc-meta">696K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            <a href="/illinois/kane/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🌾</span>
+                <div>
+                  <div class="sp-cc-name">Kane County ⭐</div>
+                  <div class="sp-cc-meta">517K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            <a href="/illinois/winnebago/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🏙️</span>
+                <div>
+                  <div class="sp-cc-name">Winnebago County ⭐</div>
+                  <div class="sp-cc-meta">289K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            </div>
+            <div class="sp-section-label">All ? Counties — Alphabetical</div>
+            <div class="sp-az-grid" id="county-list">
+          <a href="/illinois/adams/" class="sp-az-item">📍 Adams County</a>
+          <a href="/illinois/alexander/" class="sp-az-item">📍 Alexander County</a>
+          <a href="/illinois/bond/" class="sp-az-item">📍 Bond County</a>
+          <a href="/illinois/boone/" class="sp-az-item">📍 Boone County</a>
+          <a href="/illinois/brown/" class="sp-az-item">📍 Brown County</a>
+          <a href="/illinois/bureau/" class="sp-az-item">📍 Bureau County</a>
+          <a href="/illinois/calhoun/" class="sp-az-item">📍 Calhoun County</a>
+          <a href="/illinois/carroll/" class="sp-az-item">📍 Carroll County</a>
+          <a href="/illinois/cass/" class="sp-az-item">📍 Cass County</a>
+          <a href="/illinois/champaign/" class="sp-az-item">📍 Champaign County</a>
+          <a href="/illinois/christian/" class="sp-az-item">📍 Christian County</a>
+          <a href="/illinois/clark/" class="sp-az-item">📍 Clark County</a>
+          <a href="/illinois/clay/" class="sp-az-item">📍 Clay County</a>
+          <a href="/illinois/clinton/" class="sp-az-item">📍 Clinton County</a>
+          <a href="/illinois/coles/" class="sp-az-item">📍 Coles County</a>
+          <a href="/illinois/cook/" class="sp-az-item">📍 Cook County</a>
+          <a href="/illinois/crawford/" class="sp-az-item">📍 Crawford County</a>
+          <a href="/illinois/cumberland/" class="sp-az-item">📍 Cumberland County</a>
+          <a href="/illinois/de-witt/" class="sp-az-item">📍 De Witt County</a>
+          <a href="/illinois/dekalb/" class="sp-az-item">📍 DeKalb County</a>
+          <a href="/illinois/douglas/" class="sp-az-item">📍 Douglas County</a>
+          <a href="/illinois/dupage/" class="sp-az-item">📍 DuPage County</a>
+          <a href="/illinois/edgar/" class="sp-az-item">📍 Edgar County</a>
+          <a href="/illinois/edwards/" class="sp-az-item">📍 Edwards County</a>
+          <a href="/illinois/effingham/" class="sp-az-item">📍 Effingham County</a>
+          <a href="/illinois/fayette/" class="sp-az-item">📍 Fayette County</a>
+          <a href="/illinois/ford/" class="sp-az-item">📍 Ford County</a>
+          <a href="/illinois/franklin/" class="sp-az-item">📍 Franklin County</a>
+          <a href="/illinois/fulton/" class="sp-az-item">📍 Fulton County</a>
+          <a href="/illinois/gallatin/" class="sp-az-item">📍 Gallatin County</a>
+          <a href="/illinois/greene/" class="sp-az-item">📍 Greene County</a>
+          <a href="/illinois/grundy/" class="sp-az-item">📍 Grundy County</a>
+          <a href="/illinois/hamilton/" class="sp-az-item">📍 Hamilton County</a>
+          <a href="/illinois/hancock/" class="sp-az-item">📍 Hancock County</a>
+          <a href="/illinois/hardin/" class="sp-az-item">📍 Hardin County</a>
+          <a href="/illinois/henderson/" class="sp-az-item">📍 Henderson County</a>
+          <a href="/illinois/henry/" class="sp-az-item">📍 Henry County</a>
+          <a href="/illinois/iroquois/" class="sp-az-item">📍 Iroquois County</a>
+          <a href="/illinois/jackson/" class="sp-az-item">📍 Jackson County</a>
+          <a href="/illinois/jasper/" class="sp-az-item">📍 Jasper County</a>
+          <a href="/illinois/jefferson/" class="sp-az-item">📍 Jefferson County</a>
+          <a href="/illinois/jersey/" class="sp-az-item">📍 Jersey County</a>
+          <a href="/illinois/jo-daviess/" class="sp-az-item">📍 Jo Daviess County</a>
+          <a href="/illinois/johnson/" class="sp-az-item">📍 Johnson County</a>
+          <a href="/illinois/kane/" class="sp-az-item">📍 Kane County</a>
+          <a href="/illinois/kankakee/" class="sp-az-item">📍 Kankakee County</a>
+          <a href="/illinois/kendall/" class="sp-az-item">📍 Kendall County</a>
+          <a href="/illinois/knox/" class="sp-az-item">📍 Knox County</a>
+          <a href="/illinois/lasalle/" class="sp-az-item">📍 LaSalle County</a>
+          <a href="/illinois/lake/" class="sp-az-item">📍 Lake County</a>
+          <a href="/illinois/lawrence/" class="sp-az-item">📍 Lawrence County</a>
+          <a href="/illinois/lee/" class="sp-az-item">📍 Lee County</a>
+          <a href="/illinois/livingston/" class="sp-az-item">📍 Livingston County</a>
+          <a href="/illinois/logan/" class="sp-az-item">📍 Logan County</a>
+          <a href="/illinois/macon/" class="sp-az-item">📍 Macon County</a>
+          <a href="/illinois/macoupin/" class="sp-az-item">📍 Macoupin County</a>
+          <a href="/illinois/madison/" class="sp-az-item">📍 Madison County</a>
+          <a href="/illinois/marion/" class="sp-az-item">📍 Marion County</a>
+          <a href="/illinois/marshall/" class="sp-az-item">📍 Marshall County</a>
+          <a href="/illinois/mason/" class="sp-az-item">📍 Mason County</a>
+          <a href="/illinois/massac/" class="sp-az-item">📍 Massac County</a>
+          <a href="/illinois/mcdonough/" class="sp-az-item">📍 McDonough County</a>
+          <a href="/illinois/mchenry/" class="sp-az-item">📍 McHenry County</a>
+          <a href="/illinois/mclean/" class="sp-az-item">📍 McLean County</a>
+          <a href="/illinois/menard/" class="sp-az-item">📍 Menard County</a>
+          <a href="/illinois/mercer/" class="sp-az-item">📍 Mercer County</a>
+          <a href="/illinois/monroe/" class="sp-az-item">📍 Monroe County</a>
+          <a href="/illinois/montgomery/" class="sp-az-item">📍 Montgomery County</a>
+          <a href="/illinois/morgan/" class="sp-az-item">📍 Morgan County</a>
+          <a href="/illinois/moultrie/" class="sp-az-item">📍 Moultrie County</a>
+          <a href="/illinois/ogle/" class="sp-az-item">📍 Ogle County</a>
+          <a href="/illinois/peoria/" class="sp-az-item">📍 Peoria County</a>
+          <a href="/illinois/perry/" class="sp-az-item">📍 Perry County</a>
+          <a href="/illinois/piatt/" class="sp-az-item">📍 Piatt County</a>
+          <a href="/illinois/pike/" class="sp-az-item">📍 Pike County</a>
+          <a href="/illinois/pope/" class="sp-az-item">📍 Pope County</a>
+          <a href="/illinois/pulaski/" class="sp-az-item">📍 Pulaski County</a>
+          <a href="/illinois/putnam/" class="sp-az-item">📍 Putnam County</a>
+          <a href="/illinois/randolph/" class="sp-az-item">📍 Randolph County</a>
+          <a href="/illinois/richland/" class="sp-az-item">📍 Richland County</a>
+          <a href="/illinois/rock-island/" class="sp-az-item">📍 Rock Island County</a>
+          <a href="/illinois/saline/" class="sp-az-item">📍 Saline County</a>
+          <a href="/illinois/sangamon/" class="sp-az-item">📍 Sangamon County</a>
+          <a href="/illinois/schuyler/" class="sp-az-item">📍 Schuyler County</a>
+          <a href="/illinois/scott/" class="sp-az-item">📍 Scott County</a>
+          <a href="/illinois/shelby/" class="sp-az-item">📍 Shelby County</a>
+          <a href="/illinois/st-clair/" class="sp-az-item">📍 St. Clair County</a>
+          <a href="/illinois/stark/" class="sp-az-item">📍 Stark County</a>
+          <a href="/illinois/stephenson/" class="sp-az-item">📍 Stephenson County</a>
+          <a href="/illinois/tazewell/" class="sp-az-item">📍 Tazewell County</a>
+          <a href="/illinois/union/" class="sp-az-item">📍 Union County</a>
+          <a href="/illinois/vermilion/" class="sp-az-item">📍 Vermilion County</a>
+          <a href="/illinois/wabash/" class="sp-az-item">📍 Wabash County</a>
+          <a href="/illinois/warren/" class="sp-az-item">📍 Warren County</a>
+          <a href="/illinois/washington/" class="sp-az-item">📍 Washington County</a>
+          <a href="/illinois/wayne/" class="sp-az-item">📍 Wayne County</a>
+          <a href="/illinois/white/" class="sp-az-item">📍 White County</a>
+          <a href="/illinois/whiteside/" class="sp-az-item">📍 Whiteside County</a>
+          <a href="/illinois/will/" class="sp-az-item">📍 Will County</a>
+          <a href="/illinois/williamson/" class="sp-az-item">📍 Williamson County</a>
+          <a href="/illinois/winnebago/" class="sp-az-item">📍 Winnebago County</a>
+          <a href="/illinois/woodford/" class="sp-az-item">📍 Woodford County</a>
+            </div>
           </div>
-        </div>
-        <h3 style="color:var(--gray-600);font-size:1.1rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1.5rem;">All 102 Countys — Alphabetical</h3>
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0.75rem;">
-          <a href="/illinois/adams/" class="county-link-item">📍 Adams County</a>
-          <a href="/illinois/alexander/" class="county-link-item">📍 Alexander County</a>
-          <a href="/illinois/bond/" class="county-link-item">📍 Bond County</a>
-          <a href="/illinois/boone/" class="county-link-item">📍 Boone County</a>
-          <a href="/illinois/brown/" class="county-link-item">📍 Brown County</a>
-          <a href="/illinois/bureau/" class="county-link-item">📍 Bureau County</a>
-          <a href="/illinois/calhoun/" class="county-link-item">📍 Calhoun County</a>
-          <a href="/illinois/carroll/" class="county-link-item">📍 Carroll County</a>
-          <a href="/illinois/cass/" class="county-link-item">📍 Cass County</a>
-          <a href="/illinois/champaign/" class="county-link-item">📍 Champaign County</a>
-          <a href="/illinois/christian/" class="county-link-item">📍 Christian County</a>
-          <a href="/illinois/clark/" class="county-link-item">📍 Clark County</a>
-          <a href="/illinois/clay/" class="county-link-item">📍 Clay County</a>
-          <a href="/illinois/clinton/" class="county-link-item">📍 Clinton County</a>
-          <a href="/illinois/coles/" class="county-link-item">📍 Coles County</a>
-          <a href="/illinois/cook/" class="county-link-item">📍 Cook County</a>
-          <a href="/illinois/crawford/" class="county-link-item">📍 Crawford County</a>
-          <a href="/illinois/cumberland/" class="county-link-item">📍 Cumberland County</a>
-          <a href="/illinois/de-witt/" class="county-link-item">📍 De Witt County</a>
-          <a href="/illinois/dekalb/" class="county-link-item">📍 DeKalb County</a>
-          <a href="/illinois/douglas/" class="county-link-item">📍 Douglas County</a>
-          <a href="/illinois/dupage/" class="county-link-item">📍 DuPage County</a>
-          <a href="/illinois/edgar/" class="county-link-item">📍 Edgar County</a>
-          <a href="/illinois/edwards/" class="county-link-item">📍 Edwards County</a>
-          <a href="/illinois/effingham/" class="county-link-item">📍 Effingham County</a>
-          <a href="/illinois/fayette/" class="county-link-item">📍 Fayette County</a>
-          <a href="/illinois/ford/" class="county-link-item">📍 Ford County</a>
-          <a href="/illinois/franklin/" class="county-link-item">📍 Franklin County</a>
-          <a href="/illinois/fulton/" class="county-link-item">📍 Fulton County</a>
-          <a href="/illinois/gallatin/" class="county-link-item">📍 Gallatin County</a>
-          <a href="/illinois/greene/" class="county-link-item">📍 Greene County</a>
-          <a href="/illinois/grundy/" class="county-link-item">📍 Grundy County</a>
-          <a href="/illinois/hamilton/" class="county-link-item">📍 Hamilton County</a>
-          <a href="/illinois/hancock/" class="county-link-item">📍 Hancock County</a>
-          <a href="/illinois/hardin/" class="county-link-item">📍 Hardin County</a>
-          <a href="/illinois/henderson/" class="county-link-item">📍 Henderson County</a>
-          <a href="/illinois/henry/" class="county-link-item">📍 Henry County</a>
-          <a href="/illinois/iroquois/" class="county-link-item">📍 Iroquois County</a>
-          <a href="/illinois/jackson/" class="county-link-item">📍 Jackson County</a>
-          <a href="/illinois/jasper/" class="county-link-item">📍 Jasper County</a>
-          <a href="/illinois/jefferson/" class="county-link-item">📍 Jefferson County</a>
-          <a href="/illinois/jersey/" class="county-link-item">📍 Jersey County</a>
-          <a href="/illinois/jo-daviess/" class="county-link-item">📍 Jo Daviess County</a>
-          <a href="/illinois/johnson/" class="county-link-item">📍 Johnson County</a>
-          <a href="/illinois/kane/" class="county-link-item">📍 Kane County</a>
-          <a href="/illinois/kankakee/" class="county-link-item">📍 Kankakee County</a>
-          <a href="/illinois/kendall/" class="county-link-item">📍 Kendall County</a>
-          <a href="/illinois/knox/" class="county-link-item">📍 Knox County</a>
-          <a href="/illinois/lasalle/" class="county-link-item">📍 LaSalle County</a>
-          <a href="/illinois/lake/" class="county-link-item">📍 Lake County</a>
-          <a href="/illinois/lawrence/" class="county-link-item">📍 Lawrence County</a>
-          <a href="/illinois/lee/" class="county-link-item">📍 Lee County</a>
-          <a href="/illinois/livingston/" class="county-link-item">📍 Livingston County</a>
-          <a href="/illinois/logan/" class="county-link-item">📍 Logan County</a>
-          <a href="/illinois/macon/" class="county-link-item">📍 Macon County</a>
-          <a href="/illinois/macoupin/" class="county-link-item">📍 Macoupin County</a>
-          <a href="/illinois/madison/" class="county-link-item">📍 Madison County</a>
-          <a href="/illinois/marion/" class="county-link-item">📍 Marion County</a>
-          <a href="/illinois/marshall/" class="county-link-item">📍 Marshall County</a>
-          <a href="/illinois/mason/" class="county-link-item">📍 Mason County</a>
-          <a href="/illinois/massac/" class="county-link-item">📍 Massac County</a>
-          <a href="/illinois/mcdonough/" class="county-link-item">📍 McDonough County</a>
-          <a href="/illinois/mchenry/" class="county-link-item">📍 McHenry County</a>
-          <a href="/illinois/mclean/" class="county-link-item">📍 McLean County</a>
-          <a href="/illinois/menard/" class="county-link-item">📍 Menard County</a>
-          <a href="/illinois/mercer/" class="county-link-item">📍 Mercer County</a>
-          <a href="/illinois/monroe/" class="county-link-item">📍 Monroe County</a>
-          <a href="/illinois/montgomery/" class="county-link-item">📍 Montgomery County</a>
-          <a href="/illinois/morgan/" class="county-link-item">📍 Morgan County</a>
-          <a href="/illinois/moultrie/" class="county-link-item">📍 Moultrie County</a>
-          <a href="/illinois/ogle/" class="county-link-item">📍 Ogle County</a>
-          <a href="/illinois/peoria/" class="county-link-item">📍 Peoria County</a>
-          <a href="/illinois/perry/" class="county-link-item">📍 Perry County</a>
-          <a href="/illinois/piatt/" class="county-link-item">📍 Piatt County</a>
-          <a href="/illinois/pike/" class="county-link-item">📍 Pike County</a>
-          <a href="/illinois/pope/" class="county-link-item">📍 Pope County</a>
-          <a href="/illinois/pulaski/" class="county-link-item">📍 Pulaski County</a>
-          <a href="/illinois/putnam/" class="county-link-item">📍 Putnam County</a>
-          <a href="/illinois/randolph/" class="county-link-item">📍 Randolph County</a>
-          <a href="/illinois/richland/" class="county-link-item">📍 Richland County</a>
-          <a href="/illinois/rock-island/" class="county-link-item">📍 Rock Island County</a>
-          <a href="/illinois/saline/" class="county-link-item">📍 Saline County</a>
-          <a href="/illinois/sangamon/" class="county-link-item">📍 Sangamon County</a>
-          <a href="/illinois/schuyler/" class="county-link-item">📍 Schuyler County</a>
-          <a href="/illinois/scott/" class="county-link-item">📍 Scott County</a>
-          <a href="/illinois/shelby/" class="county-link-item">📍 Shelby County</a>
-          <a href="/illinois/st-clair/" class="county-link-item">📍 St. Clair County</a>
-          <a href="/illinois/stark/" class="county-link-item">📍 Stark County</a>
-          <a href="/illinois/stephenson/" class="county-link-item">📍 Stephenson County</a>
-          <a href="/illinois/tazewell/" class="county-link-item">📍 Tazewell County</a>
-          <a href="/illinois/union/" class="county-link-item">📍 Union County</a>
-          <a href="/illinois/vermilion/" class="county-link-item">📍 Vermilion County</a>
-          <a href="/illinois/wabash/" class="county-link-item">📍 Wabash County</a>
-          <a href="/illinois/warren/" class="county-link-item">📍 Warren County</a>
-          <a href="/illinois/washington/" class="county-link-item">📍 Washington County</a>
-          <a href="/illinois/wayne/" class="county-link-item">📍 Wayne County</a>
-          <a href="/illinois/white/" class="county-link-item">📍 White County</a>
-          <a href="/illinois/whiteside/" class="county-link-item">📍 Whiteside County</a>
-          <a href="/illinois/will/" class="county-link-item">📍 Will County</a>
-          <a href="/illinois/williamson/" class="county-link-item">📍 Williamson County</a>
-          <a href="/illinois/winnebago/" class="county-link-item">📍 Winnebago County</a>
-          <a href="/illinois/woodford/" class="county-link-item">📍 Woodford County</a>
+
         </div>
       </div>
-    </section>
+    </div>
+
+    <script>
+    /* County search filter */
+    (function() {
+      var inp = document.getElementById('county-search');
+      if (!inp) return;
+      inp.addEventListener('input', function() {
+        var q = inp.value.trim().toLowerCase();
+        document.querySelectorAll('#county-list .sp-az-item').forEach(function(el) {
+          el.classList.toggle('sp-hidden', q.length > 0 && el.textContent.toLowerCase().indexOf(q) === -1);
+        });
+      });
+    })();
+    </script>
+
   </main>
-  <style>
-    .county-link-item {display:flex;align-items:center;gap:0.5rem;padding:0.65rem 1rem;border:1px solid var(--gray-200);border-radius:8px;color:var(--navy);font-size:0.875rem;font-weight:600;text-decoration:none;background:#fff;transition:all 0.2s;}
-    .county-link-item:hover {border-color:var(--blue);background:rgba(45,125,210,0.04);color:var(--blue);}
-  </style>
+  
   <footer class="footer">
     <div class="container">
       <div class="footer__bottom" style="border-top:1px solid rgba(255,255,255,0.1);padding:1.5rem 0;margin-top:0;">

@@ -76,190 +76,248 @@
       </ol>
     </div>
   </nav>
-  <main>
-    <section style="background:linear-gradient(135deg,#0F2447,#1B3A6B);padding:4rem 0 3rem;color:#fff;">
+    <main>
+
+    <!-- State Page — Option C: Sidebar Directory -->
+    <div class="sp-hero">
       <div class="container">
-        <div style="display:flex;align-items:center;gap:1.5rem;margin-bottom:1rem;">
-          <span style="font-size:3.5rem;">🎵</span>
-          <div>
-            <span style="color:var(--gold-light);font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;">State Resource Center</span>
-            <h1 style="color:#fff;margin:0;">Mississippi County Resources</h1>
+        <div class="sp-hero__inner">
+          <div class="sp-hero__left">
+            <span class="sp-hero__emoji">🎵</span>
+            <div>
+              <h1 class="sp-hero__h1">Mississippi County Resources</h1>
+              <p class="sp-hero__sub">? counties · 400+ assistance programs · Always free</p>
+            </div>
           </div>
-        </div>
-        <p class="lead" style="color:rgba(255,255,255,0.78);max-width:640px;">
-          All 82 Mississippi countys covered. Find free government and community assistance programs for utilities, housing, food, Mississippi Medicaid, SNAP, and more — organized by your county.
-        </p>
-        <form id="zip-form" style="display:flex;gap:0;max-width:420px;margin-top:2rem;border-radius:8px;overflow:hidden;border:2px solid rgba(255,255,255,0.2);" aria-label="ZIP search">
-          <input id="zip-input" type="tel" placeholder="Enter ZIP code" maxlength="5" style="flex:1;padding:0.85rem 1rem;border:none;font-size:1rem;font-weight:600;letter-spacing:0.08em;outline:none;" />
-          <button type="submit" style="background:var(--gold);color:var(--navy-dark);border:none;padding:0.85rem 1.25rem;font-weight:700;">Go →</button>
-        </form>
-      </div>
-    </section>
-    <div style="background:var(--gray-50);border-bottom:1px solid var(--gray-200);padding:1.25rem 0;">
-      <div class="container">
-        <div style="display:flex;gap:3rem;flex-wrap:wrap;align-items:center;">
-          <div><strong style="color:var(--navy);font-size:1.4rem;">82</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Countys</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">400+</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Assistance Programs</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">9</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Resource Categories</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">Free</strong> <span style="color:var(--gray-600);font-size:0.9rem;">PDF Download</span></div>
-          <div style="margin-left:auto;">
-            <a href="tel:18006224357" style="background:var(--navy);color:#fff;padding:0.6rem 1.25rem;border-radius:6px;font-weight:700;font-size:0.9rem;text-decoration:none;">📞 Get Access Code</a>
+          <div class="sp-hero__right">
+            <form id="zip-form" class="sp-zip-form" aria-label="ZIP search">
+              <input id="zip-input" type="tel" placeholder="Enter ZIP code" maxlength="5"/>
+              <button type="submit">Go →</button>
+            </form>
+            <a href="tel:18006224357" class="sp-access-btn">📞 Get Access Code</a>
           </div>
         </div>
       </div>
     </div>
-    <section class="section" aria-labelledby="counties-heading">
+
+    <div class="sp-body">
       <div class="container">
-        <div class="section-header">
-          <span class="badge badge--gold">All Countys</span>
-          <h2 id="counties-heading">Browse All 82 Mississippi Countys</h2>
-          <p>Click your county to view the full resource guide. Countys marked ⭐ have been fully verified and updated.</p>
-        </div>
-        <div style="margin-bottom:3rem;">
-          <h3 style="color:var(--gray-600);font-size:1.1rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1.5rem;">Most Populated Countys</h3>
-          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem;">
-            <a href="/mississippi/hinds/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🏙️</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Hinds County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">232K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+        <div class="sp-layout">
+
+          <!-- Sidebar -->
+          <aside class="sp-sidebar">
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">🔍 Search Counties</div>
+              <div class="sp-sidebar-body">
+                <input class="sp-sidebar-search-input" id="county-search" type="text" placeholder="County name…" autocomplete="off"/>
               </div>
-            </a>
-            <a href="/mississippi/harrison/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🌊</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Harrison County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">208K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">📂 Program Type</div>
+              <div class="sp-sidebar-body">
+                <a href="#all" class="sp-sidebar-link active">All Programs</a>
+                <a href="/mississippi#utilities" class="sp-sidebar-link">⚡ Utility Assistance</a>
+                <a href="/mississippi#housing" class="sp-sidebar-link">🏠 Housing &amp; Rent</a>
+                <a href="/mississippi#food" class="sp-sidebar-link">🥗 Food / SNAP</a>
+                <a href="/mississippi#healthcare" class="sp-sidebar-link">🏥 Medicaid / Health</a>
+                <a href="/mississippi#employment" class="sp-sidebar-link">💼 Employment</a>
+                <a href="/mississippi#childcare" class="sp-sidebar-link">👶 Child Care</a>
+                <a href="/mississippi#disability" class="sp-sidebar-link">♿ Disability</a>
+                <a href="/mississippi#education" class="sp-sidebar-link">📚 Education</a>
               </div>
-            </a>
-            <a href="/mississippi/desoto/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🌾</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">DeSoto County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">185K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">📊 At a Glance</div>
+              <div class="sp-sidebar-body">
+                <div class="sp-sidebar-stat"><span>?</span><span>Counties</span></div>
+                <div class="sp-sidebar-stat"><span>400+</span><span>Programs</span></div>
+                <div class="sp-sidebar-stat"><span>9</span><span>Categories</span></div>
+                <div class="sp-sidebar-stat"><span>Free</span><span>PDF Guide</span></div>
               </div>
-            </a>
-            <a href="/mississippi/rankin/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🌳</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Rankin County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">160K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+          </aside>
+
+          <!-- Main content -->
+          <div class="sp-content">
+            <div class="sp-content-hd">
+              <h2>⭐ Featured Counties</h2>
+              <span>? counties total</span>
+            </div>
+            <div class="sp-featured-grid">
+            <a href="/mississippi/hinds/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🏙️</span>
+                <div>
+                  <div class="sp-cc-name">Hinds County ⭐</div>
+                  <div class="sp-cc-meta">232K residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
-            <a href="/mississippi/jackson/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">⚓</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Jackson County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">141K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            <a href="/mississippi/harrison/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🌊</span>
+                <div>
+                  <div class="sp-cc-name">Harrison County ⭐</div>
+                  <div class="sp-cc-meta">208K residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
-            <a href="/mississippi/madison/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🌿</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Madison County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">103K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            <a href="/mississippi/desoto/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🌾</span>
+                <div>
+                  <div class="sp-cc-name">DeSoto County ⭐</div>
+                  <div class="sp-cc-meta">185K residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
+            <a href="/mississippi/rankin/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🌳</span>
+                <div>
+                  <div class="sp-cc-name">Rankin County ⭐</div>
+                  <div class="sp-cc-meta">160K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            <a href="/mississippi/jackson/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">⚓</span>
+                <div>
+                  <div class="sp-cc-name">Jackson County ⭐</div>
+                  <div class="sp-cc-meta">141K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            <a href="/mississippi/madison/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🌿</span>
+                <div>
+                  <div class="sp-cc-name">Madison County ⭐</div>
+                  <div class="sp-cc-meta">103K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            </div>
+            <div class="sp-section-label">All ? Counties — Alphabetical</div>
+            <div class="sp-az-grid" id="county-list">
+          <a href="/mississippi/adams/" class="sp-az-item">📍 Adams County</a>
+          <a href="/mississippi/alcorn/" class="sp-az-item">📍 Alcorn County</a>
+          <a href="/mississippi/amite/" class="sp-az-item">📍 Amite County</a>
+          <a href="/mississippi/attala/" class="sp-az-item">📍 Attala County</a>
+          <a href="/mississippi/benton/" class="sp-az-item">📍 Benton County</a>
+          <a href="/mississippi/bolivar/" class="sp-az-item">📍 Bolivar County</a>
+          <a href="/mississippi/calhoun/" class="sp-az-item">📍 Calhoun County</a>
+          <a href="/mississippi/carroll/" class="sp-az-item">📍 Carroll County</a>
+          <a href="/mississippi/chickasaw/" class="sp-az-item">📍 Chickasaw County</a>
+          <a href="/mississippi/choctaw/" class="sp-az-item">📍 Choctaw County</a>
+          <a href="/mississippi/claiborne/" class="sp-az-item">📍 Claiborne County</a>
+          <a href="/mississippi/clarke/" class="sp-az-item">📍 Clarke County</a>
+          <a href="/mississippi/clay/" class="sp-az-item">📍 Clay County</a>
+          <a href="/mississippi/coahoma/" class="sp-az-item">📍 Coahoma County</a>
+          <a href="/mississippi/copiah/" class="sp-az-item">📍 Copiah County</a>
+          <a href="/mississippi/covington/" class="sp-az-item">📍 Covington County</a>
+          <a href="/mississippi/desoto/" class="sp-az-item">📍 DeSoto County</a>
+          <a href="/mississippi/forrest/" class="sp-az-item">📍 Forrest County</a>
+          <a href="/mississippi/franklin/" class="sp-az-item">📍 Franklin County</a>
+          <a href="/mississippi/george/" class="sp-az-item">📍 George County</a>
+          <a href="/mississippi/greene/" class="sp-az-item">📍 Greene County</a>
+          <a href="/mississippi/grenada/" class="sp-az-item">📍 Grenada County</a>
+          <a href="/mississippi/hancock/" class="sp-az-item">📍 Hancock County</a>
+          <a href="/mississippi/harrison/" class="sp-az-item">📍 Harrison County</a>
+          <a href="/mississippi/hinds/" class="sp-az-item">📍 Hinds County</a>
+          <a href="/mississippi/holmes/" class="sp-az-item">📍 Holmes County</a>
+          <a href="/mississippi/humphreys/" class="sp-az-item">📍 Humphreys County</a>
+          <a href="/mississippi/issaquena/" class="sp-az-item">📍 Issaquena County</a>
+          <a href="/mississippi/itawamba/" class="sp-az-item">📍 Itawamba County</a>
+          <a href="/mississippi/jackson/" class="sp-az-item">📍 Jackson County</a>
+          <a href="/mississippi/jasper/" class="sp-az-item">📍 Jasper County</a>
+          <a href="/mississippi/jefferson/" class="sp-az-item">📍 Jefferson County</a>
+          <a href="/mississippi/jefferson-davis/" class="sp-az-item">📍 Jefferson Davis County</a>
+          <a href="/mississippi/jones/" class="sp-az-item">📍 Jones County</a>
+          <a href="/mississippi/kemper/" class="sp-az-item">📍 Kemper County</a>
+          <a href="/mississippi/lafayette/" class="sp-az-item">📍 Lafayette County</a>
+          <a href="/mississippi/lamar/" class="sp-az-item">📍 Lamar County</a>
+          <a href="/mississippi/lauderdale/" class="sp-az-item">📍 Lauderdale County</a>
+          <a href="/mississippi/lawrence/" class="sp-az-item">📍 Lawrence County</a>
+          <a href="/mississippi/leake/" class="sp-az-item">📍 Leake County</a>
+          <a href="/mississippi/lee/" class="sp-az-item">📍 Lee County</a>
+          <a href="/mississippi/leflore/" class="sp-az-item">📍 Leflore County</a>
+          <a href="/mississippi/lincoln/" class="sp-az-item">📍 Lincoln County</a>
+          <a href="/mississippi/lowndes/" class="sp-az-item">📍 Lowndes County</a>
+          <a href="/mississippi/madison/" class="sp-az-item">📍 Madison County</a>
+          <a href="/mississippi/marion/" class="sp-az-item">📍 Marion County</a>
+          <a href="/mississippi/marshall/" class="sp-az-item">📍 Marshall County</a>
+          <a href="/mississippi/monroe/" class="sp-az-item">📍 Monroe County</a>
+          <a href="/mississippi/montgomery/" class="sp-az-item">📍 Montgomery County</a>
+          <a href="/mississippi/neshoba/" class="sp-az-item">📍 Neshoba County</a>
+          <a href="/mississippi/newton/" class="sp-az-item">📍 Newton County</a>
+          <a href="/mississippi/noxubee/" class="sp-az-item">📍 Noxubee County</a>
+          <a href="/mississippi/oktibbeha/" class="sp-az-item">📍 Oktibbeha County</a>
+          <a href="/mississippi/panola/" class="sp-az-item">📍 Panola County</a>
+          <a href="/mississippi/pearl-river/" class="sp-az-item">📍 Pearl River County</a>
+          <a href="/mississippi/perry/" class="sp-az-item">📍 Perry County</a>
+          <a href="/mississippi/pike/" class="sp-az-item">📍 Pike County</a>
+          <a href="/mississippi/pontotoc/" class="sp-az-item">📍 Pontotoc County</a>
+          <a href="/mississippi/prentiss/" class="sp-az-item">📍 Prentiss County</a>
+          <a href="/mississippi/quitman/" class="sp-az-item">📍 Quitman County</a>
+          <a href="/mississippi/rankin/" class="sp-az-item">📍 Rankin County</a>
+          <a href="/mississippi/scott/" class="sp-az-item">📍 Scott County</a>
+          <a href="/mississippi/sharkey/" class="sp-az-item">📍 Sharkey County</a>
+          <a href="/mississippi/simpson/" class="sp-az-item">📍 Simpson County</a>
+          <a href="/mississippi/smith/" class="sp-az-item">📍 Smith County</a>
+          <a href="/mississippi/stone/" class="sp-az-item">📍 Stone County</a>
+          <a href="/mississippi/sunflower/" class="sp-az-item">📍 Sunflower County</a>
+          <a href="/mississippi/tallahatchie/" class="sp-az-item">📍 Tallahatchie County</a>
+          <a href="/mississippi/tate/" class="sp-az-item">📍 Tate County</a>
+          <a href="/mississippi/tippah/" class="sp-az-item">📍 Tippah County</a>
+          <a href="/mississippi/tishomingo/" class="sp-az-item">📍 Tishomingo County</a>
+          <a href="/mississippi/tunica/" class="sp-az-item">📍 Tunica County</a>
+          <a href="/mississippi/union/" class="sp-az-item">📍 Union County</a>
+          <a href="/mississippi/walthall/" class="sp-az-item">📍 Walthall County</a>
+          <a href="/mississippi/warren/" class="sp-az-item">📍 Warren County</a>
+          <a href="/mississippi/washington/" class="sp-az-item">📍 Washington County</a>
+          <a href="/mississippi/wayne/" class="sp-az-item">📍 Wayne County</a>
+          <a href="/mississippi/webster/" class="sp-az-item">📍 Webster County</a>
+          <a href="/mississippi/wilkinson/" class="sp-az-item">📍 Wilkinson County</a>
+          <a href="/mississippi/winston/" class="sp-az-item">📍 Winston County</a>
+          <a href="/mississippi/yalobusha/" class="sp-az-item">📍 Yalobusha County</a>
+          <a href="/mississippi/yazoo/" class="sp-az-item">📍 Yazoo County</a>
+            </div>
           </div>
-        </div>
-        <h3 style="color:var(--gray-600);font-size:1.1rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1.5rem;">All 82 Countys — Alphabetical</h3>
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0.75rem;">
-          <a href="/mississippi/adams/" class="county-link-item">📍 Adams County</a>
-          <a href="/mississippi/alcorn/" class="county-link-item">📍 Alcorn County</a>
-          <a href="/mississippi/amite/" class="county-link-item">📍 Amite County</a>
-          <a href="/mississippi/attala/" class="county-link-item">📍 Attala County</a>
-          <a href="/mississippi/benton/" class="county-link-item">📍 Benton County</a>
-          <a href="/mississippi/bolivar/" class="county-link-item">📍 Bolivar County</a>
-          <a href="/mississippi/calhoun/" class="county-link-item">📍 Calhoun County</a>
-          <a href="/mississippi/carroll/" class="county-link-item">📍 Carroll County</a>
-          <a href="/mississippi/chickasaw/" class="county-link-item">📍 Chickasaw County</a>
-          <a href="/mississippi/choctaw/" class="county-link-item">📍 Choctaw County</a>
-          <a href="/mississippi/claiborne/" class="county-link-item">📍 Claiborne County</a>
-          <a href="/mississippi/clarke/" class="county-link-item">📍 Clarke County</a>
-          <a href="/mississippi/clay/" class="county-link-item">📍 Clay County</a>
-          <a href="/mississippi/coahoma/" class="county-link-item">📍 Coahoma County</a>
-          <a href="/mississippi/copiah/" class="county-link-item">📍 Copiah County</a>
-          <a href="/mississippi/covington/" class="county-link-item">📍 Covington County</a>
-          <a href="/mississippi/desoto/" class="county-link-item">📍 DeSoto County</a>
-          <a href="/mississippi/forrest/" class="county-link-item">📍 Forrest County</a>
-          <a href="/mississippi/franklin/" class="county-link-item">📍 Franklin County</a>
-          <a href="/mississippi/george/" class="county-link-item">📍 George County</a>
-          <a href="/mississippi/greene/" class="county-link-item">📍 Greene County</a>
-          <a href="/mississippi/grenada/" class="county-link-item">📍 Grenada County</a>
-          <a href="/mississippi/hancock/" class="county-link-item">📍 Hancock County</a>
-          <a href="/mississippi/harrison/" class="county-link-item">📍 Harrison County</a>
-          <a href="/mississippi/hinds/" class="county-link-item">📍 Hinds County</a>
-          <a href="/mississippi/holmes/" class="county-link-item">📍 Holmes County</a>
-          <a href="/mississippi/humphreys/" class="county-link-item">📍 Humphreys County</a>
-          <a href="/mississippi/issaquena/" class="county-link-item">📍 Issaquena County</a>
-          <a href="/mississippi/itawamba/" class="county-link-item">📍 Itawamba County</a>
-          <a href="/mississippi/jackson/" class="county-link-item">📍 Jackson County</a>
-          <a href="/mississippi/jasper/" class="county-link-item">📍 Jasper County</a>
-          <a href="/mississippi/jefferson/" class="county-link-item">📍 Jefferson County</a>
-          <a href="/mississippi/jefferson-davis/" class="county-link-item">📍 Jefferson Davis County</a>
-          <a href="/mississippi/jones/" class="county-link-item">📍 Jones County</a>
-          <a href="/mississippi/kemper/" class="county-link-item">📍 Kemper County</a>
-          <a href="/mississippi/lafayette/" class="county-link-item">📍 Lafayette County</a>
-          <a href="/mississippi/lamar/" class="county-link-item">📍 Lamar County</a>
-          <a href="/mississippi/lauderdale/" class="county-link-item">📍 Lauderdale County</a>
-          <a href="/mississippi/lawrence/" class="county-link-item">📍 Lawrence County</a>
-          <a href="/mississippi/leake/" class="county-link-item">📍 Leake County</a>
-          <a href="/mississippi/lee/" class="county-link-item">📍 Lee County</a>
-          <a href="/mississippi/leflore/" class="county-link-item">📍 Leflore County</a>
-          <a href="/mississippi/lincoln/" class="county-link-item">📍 Lincoln County</a>
-          <a href="/mississippi/lowndes/" class="county-link-item">📍 Lowndes County</a>
-          <a href="/mississippi/madison/" class="county-link-item">📍 Madison County</a>
-          <a href="/mississippi/marion/" class="county-link-item">📍 Marion County</a>
-          <a href="/mississippi/marshall/" class="county-link-item">📍 Marshall County</a>
-          <a href="/mississippi/monroe/" class="county-link-item">📍 Monroe County</a>
-          <a href="/mississippi/montgomery/" class="county-link-item">📍 Montgomery County</a>
-          <a href="/mississippi/neshoba/" class="county-link-item">📍 Neshoba County</a>
-          <a href="/mississippi/newton/" class="county-link-item">📍 Newton County</a>
-          <a href="/mississippi/noxubee/" class="county-link-item">📍 Noxubee County</a>
-          <a href="/mississippi/oktibbeha/" class="county-link-item">📍 Oktibbeha County</a>
-          <a href="/mississippi/panola/" class="county-link-item">📍 Panola County</a>
-          <a href="/mississippi/pearl-river/" class="county-link-item">📍 Pearl River County</a>
-          <a href="/mississippi/perry/" class="county-link-item">📍 Perry County</a>
-          <a href="/mississippi/pike/" class="county-link-item">📍 Pike County</a>
-          <a href="/mississippi/pontotoc/" class="county-link-item">📍 Pontotoc County</a>
-          <a href="/mississippi/prentiss/" class="county-link-item">📍 Prentiss County</a>
-          <a href="/mississippi/quitman/" class="county-link-item">📍 Quitman County</a>
-          <a href="/mississippi/rankin/" class="county-link-item">📍 Rankin County</a>
-          <a href="/mississippi/scott/" class="county-link-item">📍 Scott County</a>
-          <a href="/mississippi/sharkey/" class="county-link-item">📍 Sharkey County</a>
-          <a href="/mississippi/simpson/" class="county-link-item">📍 Simpson County</a>
-          <a href="/mississippi/smith/" class="county-link-item">📍 Smith County</a>
-          <a href="/mississippi/stone/" class="county-link-item">📍 Stone County</a>
-          <a href="/mississippi/sunflower/" class="county-link-item">📍 Sunflower County</a>
-          <a href="/mississippi/tallahatchie/" class="county-link-item">📍 Tallahatchie County</a>
-          <a href="/mississippi/tate/" class="county-link-item">📍 Tate County</a>
-          <a href="/mississippi/tippah/" class="county-link-item">📍 Tippah County</a>
-          <a href="/mississippi/tishomingo/" class="county-link-item">📍 Tishomingo County</a>
-          <a href="/mississippi/tunica/" class="county-link-item">📍 Tunica County</a>
-          <a href="/mississippi/union/" class="county-link-item">📍 Union County</a>
-          <a href="/mississippi/walthall/" class="county-link-item">📍 Walthall County</a>
-          <a href="/mississippi/warren/" class="county-link-item">📍 Warren County</a>
-          <a href="/mississippi/washington/" class="county-link-item">📍 Washington County</a>
-          <a href="/mississippi/wayne/" class="county-link-item">📍 Wayne County</a>
-          <a href="/mississippi/webster/" class="county-link-item">📍 Webster County</a>
-          <a href="/mississippi/wilkinson/" class="county-link-item">📍 Wilkinson County</a>
-          <a href="/mississippi/winston/" class="county-link-item">📍 Winston County</a>
-          <a href="/mississippi/yalobusha/" class="county-link-item">📍 Yalobusha County</a>
-          <a href="/mississippi/yazoo/" class="county-link-item">📍 Yazoo County</a>
+
         </div>
       </div>
-    </section>
+    </div>
+
+    <script>
+    /* County search filter */
+    (function() {
+      var inp = document.getElementById('county-search');
+      if (!inp) return;
+      inp.addEventListener('input', function() {
+        var q = inp.value.trim().toLowerCase();
+        document.querySelectorAll('#county-list .sp-az-item').forEach(function(el) {
+          el.classList.toggle('sp-hidden', q.length > 0 && el.textContent.toLowerCase().indexOf(q) === -1);
+        });
+      });
+    })();
+    </script>
+
   </main>
-  <style>
-    .county-link-item {display:flex;align-items:center;gap:0.5rem;padding:0.65rem 1rem;border:1px solid var(--gray-200);border-radius:8px;color:var(--navy);font-size:0.875rem;font-weight:600;text-decoration:none;background:#fff;transition:all 0.2s;}
-    .county-link-item:hover {border-color:var(--blue);background:rgba(45,125,210,0.04);color:var(--blue);}
-  </style>
+  
   <footer class="footer">
     <div class="container">
       <div class="footer__bottom" style="border-top:1px solid rgba(255,255,255,0.1);padding:1.5rem 0;margin-top:0;">

@@ -76,137 +76,195 @@
       </ol>
     </div>
   </nav>
-  <main>
-    <section style="background:linear-gradient(135deg,#0F2447,#1B3A6B);padding:4rem 0 3rem;color:#fff;">
+    <main>
+
+    <!-- State Page — Option C: Sidebar Directory -->
+    <div class="sp-hero">
       <div class="container">
-        <div style="display:flex;align-items:center;gap:1.5rem;margin-bottom:1rem;">
-          <span style="font-size:3.5rem;">🏜️</span>
-          <div>
-            <span style="color:var(--gold-light);font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;">State Resource Center</span>
-            <h1 style="color:#fff;margin:0;">Utah County Resources</h1>
+        <div class="sp-hero__inner">
+          <div class="sp-hero__left">
+            <span class="sp-hero__emoji">🏜️</span>
+            <div>
+              <h1 class="sp-hero__h1">Utah County Resources</h1>
+              <p class="sp-hero__sub">? counties · 400+ assistance programs · Always free</p>
+            </div>
           </div>
-        </div>
-        <p class="lead" style="color:rgba(255,255,255,0.78);max-width:640px;">
-          All 29 Utah countys covered. Find free government and community assistance programs for utilities, housing, food, Utah Medicaid, SNAP, and more — organized by your county.
-        </p>
-        <form id="zip-form" style="display:flex;gap:0;max-width:420px;margin-top:2rem;border-radius:8px;overflow:hidden;border:2px solid rgba(255,255,255,0.2);" aria-label="ZIP search">
-          <input id="zip-input" type="tel" placeholder="Enter ZIP code" maxlength="5" style="flex:1;padding:0.85rem 1rem;border:none;font-size:1rem;font-weight:600;letter-spacing:0.08em;outline:none;" />
-          <button type="submit" style="background:var(--gold);color:var(--navy-dark);border:none;padding:0.85rem 1.25rem;font-weight:700;">Go →</button>
-        </form>
-      </div>
-    </section>
-    <div style="background:var(--gray-50);border-bottom:1px solid var(--gray-200);padding:1.25rem 0;">
-      <div class="container">
-        <div style="display:flex;gap:3rem;flex-wrap:wrap;align-items:center;">
-          <div><strong style="color:var(--navy);font-size:1.4rem;">29</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Countys</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">400+</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Assistance Programs</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">9</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Resource Categories</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">Free</strong> <span style="color:var(--gray-600);font-size:0.9rem;">PDF Download</span></div>
-          <div style="margin-left:auto;">
-            <a href="tel:18006224357" style="background:var(--navy);color:#fff;padding:0.6rem 1.25rem;border-radius:6px;font-weight:700;font-size:0.9rem;text-decoration:none;">📞 Get Access Code</a>
+          <div class="sp-hero__right">
+            <form id="zip-form" class="sp-zip-form" aria-label="ZIP search">
+              <input id="zip-input" type="tel" placeholder="Enter ZIP code" maxlength="5"/>
+              <button type="submit">Go →</button>
+            </form>
+            <a href="tel:18006224357" class="sp-access-btn">📞 Get Access Code</a>
           </div>
         </div>
       </div>
     </div>
-    <section class="section" aria-labelledby="counties-heading">
+
+    <div class="sp-body">
       <div class="container">
-        <div class="section-header">
-          <span class="badge badge--gold">All Countys</span>
-          <h2 id="counties-heading">Browse All 29 Utah Countys</h2>
-          <p>Click your county to view the full resource guide. Countys marked ⭐ have been fully verified and updated.</p>
-        </div>
-        <div style="margin-bottom:3rem;">
-          <h3 style="color:var(--gray-600);font-size:1.1rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1.5rem;">Most Populated Countys</h3>
-          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem;">
-            <a href="/utah/salt-lake/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🏙️</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Salt Lake County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">1.2M residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+        <div class="sp-layout">
+
+          <!-- Sidebar -->
+          <aside class="sp-sidebar">
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">🔍 Search Counties</div>
+              <div class="sp-sidebar-body">
+                <input class="sp-sidebar-search-input" id="county-search" type="text" placeholder="County name…" autocomplete="off"/>
               </div>
-            </a>
-            <a href="/utah/utah/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🏀</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Utah County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">636K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">📂 Program Type</div>
+              <div class="sp-sidebar-body">
+                <a href="#all" class="sp-sidebar-link active">All Programs</a>
+                <a href="/utah#utilities" class="sp-sidebar-link">⚡ Utility Assistance</a>
+                <a href="/utah#housing" class="sp-sidebar-link">🏠 Housing &amp; Rent</a>
+                <a href="/utah#food" class="sp-sidebar-link">🥗 Food / SNAP</a>
+                <a href="/utah#healthcare" class="sp-sidebar-link">🏥 Medicaid / Health</a>
+                <a href="/utah#employment" class="sp-sidebar-link">💼 Employment</a>
+                <a href="/utah#childcare" class="sp-sidebar-link">👶 Child Care</a>
+                <a href="/utah#disability" class="sp-sidebar-link">♿ Disability</a>
+                <a href="/utah#education" class="sp-sidebar-link">📚 Education</a>
               </div>
-            </a>
-            <a href="/utah/davis/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🌾</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Davis County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">363K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">📊 At a Glance</div>
+              <div class="sp-sidebar-body">
+                <div class="sp-sidebar-stat"><span>?</span><span>Counties</span></div>
+                <div class="sp-sidebar-stat"><span>400+</span><span>Programs</span></div>
+                <div class="sp-sidebar-stat"><span>9</span><span>Categories</span></div>
+                <div class="sp-sidebar-stat"><span>Free</span><span>PDF Guide</span></div>
               </div>
-            </a>
-            <a href="/utah/weber/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">⛷️</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Weber County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">263K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+          </aside>
+
+          <!-- Main content -->
+          <div class="sp-content">
+            <div class="sp-content-hd">
+              <h2>⭐ Featured Counties</h2>
+              <span>? counties total</span>
+            </div>
+            <div class="sp-featured-grid">
+            <a href="/utah/salt-lake/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🏙️</span>
+                <div>
+                  <div class="sp-cc-name">Salt Lake County ⭐</div>
+                  <div class="sp-cc-meta">1.2M residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:50%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
-            <a href="/utah/washington/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🏜️</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Washington County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">180K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            <a href="/utah/utah/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🏀</span>
+                <div>
+                  <div class="sp-cc-name">Utah County ⭐</div>
+                  <div class="sp-cc-meta">636K residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
-            <a href="/utah/cache/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🎓</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Cache County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">134K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            <a href="/utah/davis/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🌾</span>
+                <div>
+                  <div class="sp-cc-name">Davis County ⭐</div>
+                  <div class="sp-cc-meta">363K residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
+            <a href="/utah/weber/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">⛷️</span>
+                <div>
+                  <div class="sp-cc-name">Weber County ⭐</div>
+                  <div class="sp-cc-meta">263K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            <a href="/utah/washington/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🏜️</span>
+                <div>
+                  <div class="sp-cc-name">Washington County ⭐</div>
+                  <div class="sp-cc-meta">180K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            <a href="/utah/cache/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🎓</span>
+                <div>
+                  <div class="sp-cc-name">Cache County ⭐</div>
+                  <div class="sp-cc-meta">134K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            </div>
+            <div class="sp-section-label">All ? Counties — Alphabetical</div>
+            <div class="sp-az-grid" id="county-list">
+          <a href="/utah/beaver/" class="sp-az-item">📍 Beaver County</a>
+          <a href="/utah/box-elder/" class="sp-az-item">📍 Box Elder County</a>
+          <a href="/utah/cache/" class="sp-az-item">📍 Cache County</a>
+          <a href="/utah/carbon/" class="sp-az-item">📍 Carbon County</a>
+          <a href="/utah/daggett/" class="sp-az-item">📍 Daggett County</a>
+          <a href="/utah/davis/" class="sp-az-item">📍 Davis County</a>
+          <a href="/utah/duchesne/" class="sp-az-item">📍 Duchesne County</a>
+          <a href="/utah/emery/" class="sp-az-item">📍 Emery County</a>
+          <a href="/utah/garfield/" class="sp-az-item">📍 Garfield County</a>
+          <a href="/utah/grand/" class="sp-az-item">📍 Grand County</a>
+          <a href="/utah/iron/" class="sp-az-item">📍 Iron County</a>
+          <a href="/utah/juab/" class="sp-az-item">📍 Juab County</a>
+          <a href="/utah/kane/" class="sp-az-item">📍 Kane County</a>
+          <a href="/utah/millard/" class="sp-az-item">📍 Millard County</a>
+          <a href="/utah/morgan/" class="sp-az-item">📍 Morgan County</a>
+          <a href="/utah/piute/" class="sp-az-item">📍 Piute County</a>
+          <a href="/utah/rich/" class="sp-az-item">📍 Rich County</a>
+          <a href="/utah/salt-lake/" class="sp-az-item">📍 Salt Lake County</a>
+          <a href="/utah/san-juan/" class="sp-az-item">📍 San Juan County</a>
+          <a href="/utah/sanpete/" class="sp-az-item">📍 Sanpete County</a>
+          <a href="/utah/sevier/" class="sp-az-item">📍 Sevier County</a>
+          <a href="/utah/summit/" class="sp-az-item">📍 Summit County</a>
+          <a href="/utah/tooele/" class="sp-az-item">📍 Tooele County</a>
+          <a href="/utah/uintah/" class="sp-az-item">📍 Uintah County</a>
+          <a href="/utah/utah/" class="sp-az-item">📍 Utah County</a>
+          <a href="/utah/wasatch/" class="sp-az-item">📍 Wasatch County</a>
+          <a href="/utah/washington/" class="sp-az-item">📍 Washington County</a>
+          <a href="/utah/wayne/" class="sp-az-item">📍 Wayne County</a>
+          <a href="/utah/weber/" class="sp-az-item">📍 Weber County</a>
+            </div>
           </div>
-        </div>
-        <h3 style="color:var(--gray-600);font-size:1.1rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1.5rem;">All 29 Countys — Alphabetical</h3>
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0.75rem;">
-          <a href="/utah/beaver/" class="county-link-item">📍 Beaver County</a>
-          <a href="/utah/box-elder/" class="county-link-item">📍 Box Elder County</a>
-          <a href="/utah/cache/" class="county-link-item">📍 Cache County</a>
-          <a href="/utah/carbon/" class="county-link-item">📍 Carbon County</a>
-          <a href="/utah/daggett/" class="county-link-item">📍 Daggett County</a>
-          <a href="/utah/davis/" class="county-link-item">📍 Davis County</a>
-          <a href="/utah/duchesne/" class="county-link-item">📍 Duchesne County</a>
-          <a href="/utah/emery/" class="county-link-item">📍 Emery County</a>
-          <a href="/utah/garfield/" class="county-link-item">📍 Garfield County</a>
-          <a href="/utah/grand/" class="county-link-item">📍 Grand County</a>
-          <a href="/utah/iron/" class="county-link-item">📍 Iron County</a>
-          <a href="/utah/juab/" class="county-link-item">📍 Juab County</a>
-          <a href="/utah/kane/" class="county-link-item">📍 Kane County</a>
-          <a href="/utah/millard/" class="county-link-item">📍 Millard County</a>
-          <a href="/utah/morgan/" class="county-link-item">📍 Morgan County</a>
-          <a href="/utah/piute/" class="county-link-item">📍 Piute County</a>
-          <a href="/utah/rich/" class="county-link-item">📍 Rich County</a>
-          <a href="/utah/salt-lake/" class="county-link-item">📍 Salt Lake County</a>
-          <a href="/utah/san-juan/" class="county-link-item">📍 San Juan County</a>
-          <a href="/utah/sanpete/" class="county-link-item">📍 Sanpete County</a>
-          <a href="/utah/sevier/" class="county-link-item">📍 Sevier County</a>
-          <a href="/utah/summit/" class="county-link-item">📍 Summit County</a>
-          <a href="/utah/tooele/" class="county-link-item">📍 Tooele County</a>
-          <a href="/utah/uintah/" class="county-link-item">📍 Uintah County</a>
-          <a href="/utah/utah/" class="county-link-item">📍 Utah County</a>
-          <a href="/utah/wasatch/" class="county-link-item">📍 Wasatch County</a>
-          <a href="/utah/washington/" class="county-link-item">📍 Washington County</a>
-          <a href="/utah/wayne/" class="county-link-item">📍 Wayne County</a>
-          <a href="/utah/weber/" class="county-link-item">📍 Weber County</a>
+
         </div>
       </div>
-    </section>
+    </div>
+
+    <script>
+    /* County search filter */
+    (function() {
+      var inp = document.getElementById('county-search');
+      if (!inp) return;
+      inp.addEventListener('input', function() {
+        var q = inp.value.trim().toLowerCase();
+        document.querySelectorAll('#county-list .sp-az-item').forEach(function(el) {
+          el.classList.toggle('sp-hidden', q.length > 0 && el.textContent.toLowerCase().indexOf(q) === -1);
+        });
+      });
+    })();
+    </script>
+
   </main>
-  <style>
-    .county-link-item {display:flex;align-items:center;gap:0.5rem;padding:0.65rem 1rem;border:1px solid var(--gray-200);border-radius:8px;color:var(--navy);font-size:0.875rem;font-weight:600;text-decoration:none;background:#fff;transition:all 0.2s;}
-    .county-link-item:hover {border-color:var(--blue);background:rgba(45,125,210,0.04);color:var(--blue);}
-  </style>
+  
   <footer class="footer">
     <div class="container">
       <div class="footer__bottom" style="border-top:1px solid rgba(255,255,255,0.1);padding:1.5rem 0;margin-top:0;">

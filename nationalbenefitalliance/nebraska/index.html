@@ -76,202 +76,260 @@
       </ol>
     </div>
   </nav>
-  <main>
-    <section style="background:linear-gradient(135deg,#0F2447,#1B3A6B);padding:4rem 0 3rem;color:#fff;">
+    <main>
+
+    <!-- State Page — Option C: Sidebar Directory -->
+    <div class="sp-hero">
       <div class="container">
-        <div style="display:flex;align-items:center;gap:1.5rem;margin-bottom:1rem;">
-          <span style="font-size:3.5rem;">🌽</span>
-          <div>
-            <span style="color:var(--gold-light);font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;">State Resource Center</span>
-            <h1 style="color:#fff;margin:0;">Nebraska County Resources</h1>
+        <div class="sp-hero__inner">
+          <div class="sp-hero__left">
+            <span class="sp-hero__emoji">🌽</span>
+            <div>
+              <h1 class="sp-hero__h1">Nebraska County Resources</h1>
+              <p class="sp-hero__sub">? counties · 400+ assistance programs · Always free</p>
+            </div>
           </div>
-        </div>
-        <p class="lead" style="color:rgba(255,255,255,0.78);max-width:640px;">
-          All 94 Nebraska countys covered. Find free government and community assistance programs for utilities, housing, food, Nebraska Medicaid, SNAP, and more — organized by your county.
-        </p>
-        <form id="zip-form" style="display:flex;gap:0;max-width:420px;margin-top:2rem;border-radius:8px;overflow:hidden;border:2px solid rgba(255,255,255,0.2);" aria-label="ZIP search">
-          <input id="zip-input" type="tel" placeholder="Enter ZIP code" maxlength="5" style="flex:1;padding:0.85rem 1rem;border:none;font-size:1rem;font-weight:600;letter-spacing:0.08em;outline:none;" />
-          <button type="submit" style="background:var(--gold);color:var(--navy-dark);border:none;padding:0.85rem 1.25rem;font-weight:700;">Go →</button>
-        </form>
-      </div>
-    </section>
-    <div style="background:var(--gray-50);border-bottom:1px solid var(--gray-200);padding:1.25rem 0;">
-      <div class="container">
-        <div style="display:flex;gap:3rem;flex-wrap:wrap;align-items:center;">
-          <div><strong style="color:var(--navy);font-size:1.4rem;">94</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Countys</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">400+</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Assistance Programs</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">9</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Resource Categories</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">Free</strong> <span style="color:var(--gray-600);font-size:0.9rem;">PDF Download</span></div>
-          <div style="margin-left:auto;">
-            <a href="tel:18006224357" style="background:var(--navy);color:#fff;padding:0.6rem 1.25rem;border-radius:6px;font-weight:700;font-size:0.9rem;text-decoration:none;">📞 Get Access Code</a>
+          <div class="sp-hero__right">
+            <form id="zip-form" class="sp-zip-form" aria-label="ZIP search">
+              <input id="zip-input" type="tel" placeholder="Enter ZIP code" maxlength="5"/>
+              <button type="submit">Go →</button>
+            </form>
+            <a href="tel:18006224357" class="sp-access-btn">📞 Get Access Code</a>
           </div>
         </div>
       </div>
     </div>
-    <section class="section" aria-labelledby="counties-heading">
+
+    <div class="sp-body">
       <div class="container">
-        <div class="section-header">
-          <span class="badge badge--gold">All Countys</span>
-          <h2 id="counties-heading">Browse All 94 Nebraska Countys</h2>
-          <p>Click your county to view the full resource guide. Countys marked ⭐ have been fully verified and updated.</p>
-        </div>
-        <div style="margin-bottom:3rem;">
-          <h3 style="color:var(--gray-600);font-size:1.1rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1.5rem;">Most Populated Countys</h3>
-          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem;">
-            <a href="/nebraska/douglas/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🌆</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Douglas County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">583K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+        <div class="sp-layout">
+
+          <!-- Sidebar -->
+          <aside class="sp-sidebar">
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">🔍 Search Counties</div>
+              <div class="sp-sidebar-body">
+                <input class="sp-sidebar-search-input" id="county-search" type="text" placeholder="County name…" autocomplete="off"/>
               </div>
-            </a>
-            <a href="/nebraska/lancaster/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🏛️</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Lancaster County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">319K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">📂 Program Type</div>
+              <div class="sp-sidebar-body">
+                <a href="#all" class="sp-sidebar-link active">All Programs</a>
+                <a href="/nebraska#utilities" class="sp-sidebar-link">⚡ Utility Assistance</a>
+                <a href="/nebraska#housing" class="sp-sidebar-link">🏠 Housing &amp; Rent</a>
+                <a href="/nebraska#food" class="sp-sidebar-link">🥗 Food / SNAP</a>
+                <a href="/nebraska#healthcare" class="sp-sidebar-link">🏥 Medicaid / Health</a>
+                <a href="/nebraska#employment" class="sp-sidebar-link">💼 Employment</a>
+                <a href="/nebraska#childcare" class="sp-sidebar-link">👶 Child Care</a>
+                <a href="/nebraska#disability" class="sp-sidebar-link">♿ Disability</a>
+                <a href="/nebraska#education" class="sp-sidebar-link">📚 Education</a>
               </div>
-            </a>
-            <a href="/nebraska/sarpy/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🌾</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Sarpy County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">196K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">📊 At a Glance</div>
+              <div class="sp-sidebar-body">
+                <div class="sp-sidebar-stat"><span>?</span><span>Counties</span></div>
+                <div class="sp-sidebar-stat"><span>400+</span><span>Programs</span></div>
+                <div class="sp-sidebar-stat"><span>9</span><span>Categories</span></div>
+                <div class="sp-sidebar-stat"><span>Free</span><span>PDF Guide</span></div>
               </div>
-            </a>
-            <a href="/nebraska/buffalo/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🌽</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Buffalo County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">51K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+          </aside>
+
+          <!-- Main content -->
+          <div class="sp-content">
+            <div class="sp-content-hd">
+              <h2>⭐ Featured Counties</h2>
+              <span>? counties total</span>
+            </div>
+            <div class="sp-featured-grid">
+            <a href="/nebraska/douglas/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🌆</span>
+                <div>
+                  <div class="sp-cc-name">Douglas County ⭐</div>
+                  <div class="sp-cc-meta">583K residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
-            <a href="/nebraska/hall/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🌊</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Hall County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">62K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            <a href="/nebraska/lancaster/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🏛️</span>
+                <div>
+                  <div class="sp-cc-name">Lancaster County ⭐</div>
+                  <div class="sp-cc-meta">319K residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
-            <a href="/nebraska/madison/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🌳</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Madison County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">35K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            <a href="/nebraska/sarpy/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🌾</span>
+                <div>
+                  <div class="sp-cc-name">Sarpy County ⭐</div>
+                  <div class="sp-cc-meta">196K residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
+            <a href="/nebraska/buffalo/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🌽</span>
+                <div>
+                  <div class="sp-cc-name">Buffalo County ⭐</div>
+                  <div class="sp-cc-meta">51K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:61%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            <a href="/nebraska/hall/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🌊</span>
+                <div>
+                  <div class="sp-cc-name">Hall County ⭐</div>
+                  <div class="sp-cc-meta">62K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:74%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            <a href="/nebraska/madison/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🌳</span>
+                <div>
+                  <div class="sp-cc-name">Madison County ⭐</div>
+                  <div class="sp-cc-meta">35K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:50%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            </div>
+            <div class="sp-section-label">All ? Counties — Alphabetical</div>
+            <div class="sp-az-grid" id="county-list">
+          <a href="/nebraska/adams/" class="sp-az-item">📍 Adams County</a>
+          <a href="/nebraska/antelope/" class="sp-az-item">📍 Antelope County</a>
+          <a href="/nebraska/arthur/" class="sp-az-item">📍 Arthur County</a>
+          <a href="/nebraska/banner/" class="sp-az-item">📍 Banner County</a>
+          <a href="/nebraska/blaine/" class="sp-az-item">📍 Blaine County</a>
+          <a href="/nebraska/boone/" class="sp-az-item">📍 Boone County</a>
+          <a href="/nebraska/box-butte/" class="sp-az-item">📍 Box Butte County</a>
+          <a href="/nebraska/boyd/" class="sp-az-item">📍 Boyd County</a>
+          <a href="/nebraska/brown/" class="sp-az-item">📍 Brown County</a>
+          <a href="/nebraska/buffalo/" class="sp-az-item">📍 Buffalo County</a>
+          <a href="/nebraska/burt/" class="sp-az-item">📍 Burt County</a>
+          <a href="/nebraska/butler/" class="sp-az-item">📍 Butler County</a>
+          <a href="/nebraska/cass/" class="sp-az-item">📍 Cass County</a>
+          <a href="/nebraska/cedar/" class="sp-az-item">📍 Cedar County</a>
+          <a href="/nebraska/chase/" class="sp-az-item">📍 Chase County</a>
+          <a href="/nebraska/cherry/" class="sp-az-item">📍 Cherry County</a>
+          <a href="/nebraska/cheyenne/" class="sp-az-item">📍 Cheyenne County</a>
+          <a href="/nebraska/clay/" class="sp-az-item">📍 Clay County</a>
+          <a href="/nebraska/colfax/" class="sp-az-item">📍 Colfax County</a>
+          <a href="/nebraska/cuming/" class="sp-az-item">📍 Cuming County</a>
+          <a href="/nebraska/custer/" class="sp-az-item">📍 Custer County</a>
+          <a href="/nebraska/dakota/" class="sp-az-item">📍 Dakota County</a>
+          <a href="/nebraska/dawes/" class="sp-az-item">📍 Dawes County</a>
+          <a href="/nebraska/dawson/" class="sp-az-item">📍 Dawson County</a>
+          <a href="/nebraska/deuel/" class="sp-az-item">📍 Deuel County</a>
+          <a href="/nebraska/dixon/" class="sp-az-item">📍 Dixon County</a>
+          <a href="/nebraska/dodge/" class="sp-az-item">📍 Dodge County</a>
+          <a href="/nebraska/douglas/" class="sp-az-item">📍 Douglas County</a>
+          <a href="/nebraska/dundy/" class="sp-az-item">📍 Dundy County</a>
+          <a href="/nebraska/fillmore/" class="sp-az-item">📍 Fillmore County</a>
+          <a href="/nebraska/franklin/" class="sp-az-item">📍 Franklin County</a>
+          <a href="/nebraska/frontier/" class="sp-az-item">📍 Frontier County</a>
+          <a href="/nebraska/furnas/" class="sp-az-item">📍 Furnas County</a>
+          <a href="/nebraska/gage/" class="sp-az-item">📍 Gage County</a>
+          <a href="/nebraska/garden/" class="sp-az-item">📍 Garden County</a>
+          <a href="/nebraska/garfield/" class="sp-az-item">📍 Garfield County</a>
+          <a href="/nebraska/gosper/" class="sp-az-item">📍 Gosper County</a>
+          <a href="/nebraska/grant/" class="sp-az-item">📍 Grant County</a>
+          <a href="/nebraska/greeley/" class="sp-az-item">📍 Greeley County</a>
+          <a href="/nebraska/hall/" class="sp-az-item">📍 Hall County</a>
+          <a href="/nebraska/hamilton/" class="sp-az-item">📍 Hamilton County</a>
+          <a href="/nebraska/harlan/" class="sp-az-item">📍 Harlan County</a>
+          <a href="/nebraska/hayes/" class="sp-az-item">📍 Hayes County</a>
+          <a href="/nebraska/hitchcock/" class="sp-az-item">📍 Hitchcock County</a>
+          <a href="/nebraska/holt/" class="sp-az-item">📍 Holt County</a>
+          <a href="/nebraska/hooker/" class="sp-az-item">📍 Hooker County</a>
+          <a href="/nebraska/howard/" class="sp-az-item">📍 Howard County</a>
+          <a href="/nebraska/jefferson/" class="sp-az-item">📍 Jefferson County</a>
+          <a href="/nebraska/johnson/" class="sp-az-item">📍 Johnson County</a>
+          <a href="/nebraska/kearney/" class="sp-az-item">📍 Kearney County</a>
+          <a href="/nebraska/keith/" class="sp-az-item">📍 Keith County</a>
+          <a href="/nebraska/keya-paha/" class="sp-az-item">📍 Keya Paha County</a>
+          <a href="/nebraska/kimball/" class="sp-az-item">📍 Kimball County</a>
+          <a href="/nebraska/knox/" class="sp-az-item">📍 Knox County</a>
+          <a href="/nebraska/lancaster/" class="sp-az-item">📍 Lancaster County</a>
+          <a href="/nebraska/lincoln/" class="sp-az-item">📍 Lincoln County</a>
+          <a href="/nebraska/logan/" class="sp-az-item">📍 Logan County</a>
+          <a href="/nebraska/loup/" class="sp-az-item">📍 Loup County</a>
+          <a href="/nebraska/madison/" class="sp-az-item">📍 Madison County</a>
+          <a href="/nebraska/mcpherson/" class="sp-az-item">📍 McPherson County</a>
+          <a href="/nebraska/merrick/" class="sp-az-item">📍 Merrick County</a>
+          <a href="/nebraska/morrill/" class="sp-az-item">📍 Morrill County</a>
+          <a href="/nebraska/nance/" class="sp-az-item">📍 Nance County</a>
+          <a href="/nebraska/nemaha/" class="sp-az-item">📍 Nemaha County</a>
+          <a href="/nebraska/nuckolls/" class="sp-az-item">📍 Nuckolls County</a>
+          <a href="/nebraska/otoe/" class="sp-az-item">📍 Otoe County</a>
+          <a href="/nebraska/pawnee/" class="sp-az-item">📍 Pawnee County</a>
+          <a href="/nebraska/perkins/" class="sp-az-item">📍 Perkins County</a>
+          <a href="/nebraska/phelps/" class="sp-az-item">📍 Phelps County</a>
+          <a href="/nebraska/pierce/" class="sp-az-item">📍 Pierce County</a>
+          <a href="/nebraska/platte/" class="sp-az-item">📍 Platte County</a>
+          <a href="/nebraska/polk/" class="sp-az-item">📍 Polk County</a>
+          <a href="/nebraska/red-willow/" class="sp-az-item">📍 Red Willow County</a>
+          <a href="/nebraska/richardson/" class="sp-az-item">📍 Richardson County</a>
+          <a href="/nebraska/rock/" class="sp-az-item">📍 Rock County</a>
+          <a href="/nebraska/saline/" class="sp-az-item">📍 Saline County</a>
+          <a href="/nebraska/sarpy/" class="sp-az-item">📍 Sarpy County</a>
+          <a href="/nebraska/saunders/" class="sp-az-item">📍 Saunders County</a>
+          <a href="/nebraska/scotts-bluff/" class="sp-az-item">📍 Scotts Bluff County</a>
+          <a href="/nebraska/seward/" class="sp-az-item">📍 Seward County</a>
+          <a href="/nebraska/sheridan/" class="sp-az-item">📍 Sheridan County</a>
+          <a href="/nebraska/sherman/" class="sp-az-item">📍 Sherman County</a>
+          <a href="/nebraska/sioux/" class="sp-az-item">📍 Sioux County</a>
+          <a href="/nebraska/stanton/" class="sp-az-item">📍 Stanton County</a>
+          <a href="/nebraska/thayer/" class="sp-az-item">📍 Thayer County</a>
+          <a href="/nebraska/thomas/" class="sp-az-item">📍 Thomas County</a>
+          <a href="/nebraska/thurston/" class="sp-az-item">📍 Thurston County</a>
+          <a href="/nebraska/todd/" class="sp-az-item">📍 Todd County</a>
+          <a href="/nebraska/valley/" class="sp-az-item">📍 Valley County</a>
+          <a href="/nebraska/washington/" class="sp-az-item">📍 Washington County</a>
+          <a href="/nebraska/wayne/" class="sp-az-item">📍 Wayne County</a>
+          <a href="/nebraska/webster/" class="sp-az-item">📍 Webster County</a>
+          <a href="/nebraska/wheeler/" class="sp-az-item">📍 Wheeler County</a>
+          <a href="/nebraska/york/" class="sp-az-item">📍 York County</a>
+            </div>
           </div>
-        </div>
-        <h3 style="color:var(--gray-600);font-size:1.1rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1.5rem;">All 94 Countys — Alphabetical</h3>
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0.75rem;">
-          <a href="/nebraska/adams/" class="county-link-item">📍 Adams County</a>
-          <a href="/nebraska/antelope/" class="county-link-item">📍 Antelope County</a>
-          <a href="/nebraska/arthur/" class="county-link-item">📍 Arthur County</a>
-          <a href="/nebraska/banner/" class="county-link-item">📍 Banner County</a>
-          <a href="/nebraska/blaine/" class="county-link-item">📍 Blaine County</a>
-          <a href="/nebraska/boone/" class="county-link-item">📍 Boone County</a>
-          <a href="/nebraska/box-butte/" class="county-link-item">📍 Box Butte County</a>
-          <a href="/nebraska/boyd/" class="county-link-item">📍 Boyd County</a>
-          <a href="/nebraska/brown/" class="county-link-item">📍 Brown County</a>
-          <a href="/nebraska/buffalo/" class="county-link-item">📍 Buffalo County</a>
-          <a href="/nebraska/burt/" class="county-link-item">📍 Burt County</a>
-          <a href="/nebraska/butler/" class="county-link-item">📍 Butler County</a>
-          <a href="/nebraska/cass/" class="county-link-item">📍 Cass County</a>
-          <a href="/nebraska/cedar/" class="county-link-item">📍 Cedar County</a>
-          <a href="/nebraska/chase/" class="county-link-item">📍 Chase County</a>
-          <a href="/nebraska/cherry/" class="county-link-item">📍 Cherry County</a>
-          <a href="/nebraska/cheyenne/" class="county-link-item">📍 Cheyenne County</a>
-          <a href="/nebraska/clay/" class="county-link-item">📍 Clay County</a>
-          <a href="/nebraska/colfax/" class="county-link-item">📍 Colfax County</a>
-          <a href="/nebraska/cuming/" class="county-link-item">📍 Cuming County</a>
-          <a href="/nebraska/custer/" class="county-link-item">📍 Custer County</a>
-          <a href="/nebraska/dakota/" class="county-link-item">📍 Dakota County</a>
-          <a href="/nebraska/dawes/" class="county-link-item">📍 Dawes County</a>
-          <a href="/nebraska/dawson/" class="county-link-item">📍 Dawson County</a>
-          <a href="/nebraska/deuel/" class="county-link-item">📍 Deuel County</a>
-          <a href="/nebraska/dixon/" class="county-link-item">📍 Dixon County</a>
-          <a href="/nebraska/dodge/" class="county-link-item">📍 Dodge County</a>
-          <a href="/nebraska/douglas/" class="county-link-item">📍 Douglas County</a>
-          <a href="/nebraska/dundy/" class="county-link-item">📍 Dundy County</a>
-          <a href="/nebraska/fillmore/" class="county-link-item">📍 Fillmore County</a>
-          <a href="/nebraska/franklin/" class="county-link-item">📍 Franklin County</a>
-          <a href="/nebraska/frontier/" class="county-link-item">📍 Frontier County</a>
-          <a href="/nebraska/furnas/" class="county-link-item">📍 Furnas County</a>
-          <a href="/nebraska/gage/" class="county-link-item">📍 Gage County</a>
-          <a href="/nebraska/garden/" class="county-link-item">📍 Garden County</a>
-          <a href="/nebraska/garfield/" class="county-link-item">📍 Garfield County</a>
-          <a href="/nebraska/gosper/" class="county-link-item">📍 Gosper County</a>
-          <a href="/nebraska/grant/" class="county-link-item">📍 Grant County</a>
-          <a href="/nebraska/greeley/" class="county-link-item">📍 Greeley County</a>
-          <a href="/nebraska/hall/" class="county-link-item">📍 Hall County</a>
-          <a href="/nebraska/hamilton/" class="county-link-item">📍 Hamilton County</a>
-          <a href="/nebraska/harlan/" class="county-link-item">📍 Harlan County</a>
-          <a href="/nebraska/hayes/" class="county-link-item">📍 Hayes County</a>
-          <a href="/nebraska/hitchcock/" class="county-link-item">📍 Hitchcock County</a>
-          <a href="/nebraska/holt/" class="county-link-item">📍 Holt County</a>
-          <a href="/nebraska/hooker/" class="county-link-item">📍 Hooker County</a>
-          <a href="/nebraska/howard/" class="county-link-item">📍 Howard County</a>
-          <a href="/nebraska/jefferson/" class="county-link-item">📍 Jefferson County</a>
-          <a href="/nebraska/johnson/" class="county-link-item">📍 Johnson County</a>
-          <a href="/nebraska/kearney/" class="county-link-item">📍 Kearney County</a>
-          <a href="/nebraska/keith/" class="county-link-item">📍 Keith County</a>
-          <a href="/nebraska/keya-paha/" class="county-link-item">📍 Keya Paha County</a>
-          <a href="/nebraska/kimball/" class="county-link-item">📍 Kimball County</a>
-          <a href="/nebraska/knox/" class="county-link-item">📍 Knox County</a>
-          <a href="/nebraska/lancaster/" class="county-link-item">📍 Lancaster County</a>
-          <a href="/nebraska/lincoln/" class="county-link-item">📍 Lincoln County</a>
-          <a href="/nebraska/logan/" class="county-link-item">📍 Logan County</a>
-          <a href="/nebraska/loup/" class="county-link-item">📍 Loup County</a>
-          <a href="/nebraska/madison/" class="county-link-item">📍 Madison County</a>
-          <a href="/nebraska/mcpherson/" class="county-link-item">📍 McPherson County</a>
-          <a href="/nebraska/merrick/" class="county-link-item">📍 Merrick County</a>
-          <a href="/nebraska/morrill/" class="county-link-item">📍 Morrill County</a>
-          <a href="/nebraska/nance/" class="county-link-item">📍 Nance County</a>
-          <a href="/nebraska/nemaha/" class="county-link-item">📍 Nemaha County</a>
-          <a href="/nebraska/nuckolls/" class="county-link-item">📍 Nuckolls County</a>
-          <a href="/nebraska/otoe/" class="county-link-item">📍 Otoe County</a>
-          <a href="/nebraska/pawnee/" class="county-link-item">📍 Pawnee County</a>
-          <a href="/nebraska/perkins/" class="county-link-item">📍 Perkins County</a>
-          <a href="/nebraska/phelps/" class="county-link-item">📍 Phelps County</a>
-          <a href="/nebraska/pierce/" class="county-link-item">📍 Pierce County</a>
-          <a href="/nebraska/platte/" class="county-link-item">📍 Platte County</a>
-          <a href="/nebraska/polk/" class="county-link-item">📍 Polk County</a>
-          <a href="/nebraska/red-willow/" class="county-link-item">📍 Red Willow County</a>
-          <a href="/nebraska/richardson/" class="county-link-item">📍 Richardson County</a>
-          <a href="/nebraska/rock/" class="county-link-item">📍 Rock County</a>
-          <a href="/nebraska/saline/" class="county-link-item">📍 Saline County</a>
-          <a href="/nebraska/sarpy/" class="county-link-item">📍 Sarpy County</a>
-          <a href="/nebraska/saunders/" class="county-link-item">📍 Saunders County</a>
-          <a href="/nebraska/scotts-bluff/" class="county-link-item">📍 Scotts Bluff County</a>
-          <a href="/nebraska/seward/" class="county-link-item">📍 Seward County</a>
-          <a href="/nebraska/sheridan/" class="county-link-item">📍 Sheridan County</a>
-          <a href="/nebraska/sherman/" class="county-link-item">📍 Sherman County</a>
-          <a href="/nebraska/sioux/" class="county-link-item">📍 Sioux County</a>
-          <a href="/nebraska/stanton/" class="county-link-item">📍 Stanton County</a>
-          <a href="/nebraska/thayer/" class="county-link-item">📍 Thayer County</a>
-          <a href="/nebraska/thomas/" class="county-link-item">📍 Thomas County</a>
-          <a href="/nebraska/thurston/" class="county-link-item">📍 Thurston County</a>
-          <a href="/nebraska/todd/" class="county-link-item">📍 Todd County</a>
-          <a href="/nebraska/valley/" class="county-link-item">📍 Valley County</a>
-          <a href="/nebraska/washington/" class="county-link-item">📍 Washington County</a>
-          <a href="/nebraska/wayne/" class="county-link-item">📍 Wayne County</a>
-          <a href="/nebraska/webster/" class="county-link-item">📍 Webster County</a>
-          <a href="/nebraska/wheeler/" class="county-link-item">📍 Wheeler County</a>
-          <a href="/nebraska/york/" class="county-link-item">📍 York County</a>
+
         </div>
       </div>
-    </section>
+    </div>
+
+    <script>
+    /* County search filter */
+    (function() {
+      var inp = document.getElementById('county-search');
+      if (!inp) return;
+      inp.addEventListener('input', function() {
+        var q = inp.value.trim().toLowerCase();
+        document.querySelectorAll('#county-list .sp-az-item').forEach(function(el) {
+          el.classList.toggle('sp-hidden', q.length > 0 && el.textContent.toLowerCase().indexOf(q) === -1);
+        });
+      });
+    })();
+    </script>
+
   </main>
-  <style>
-    .county-link-item {display:flex;align-items:center;gap:0.5rem;padding:0.65rem 1rem;border:1px solid var(--gray-200);border-radius:8px;color:var(--navy);font-size:0.875rem;font-weight:600;text-decoration:none;background:#fff;transition:all 0.2s;}
-    .county-link-item:hover {border-color:var(--blue);background:rgba(45,125,210,0.04);color:var(--blue);}
-  </style>
+  
   <footer class="footer">
     <div class="container">
       <div class="footer__bottom" style="border-top:1px solid rgba(255,255,255,0.1);padding:1.5rem 0;margin-top:0;">

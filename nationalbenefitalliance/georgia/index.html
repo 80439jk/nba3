@@ -76,268 +76,326 @@
       </ol>
     </div>
   </nav>
-  <main>
-    <section style="background:linear-gradient(135deg,#0F2447,#1B3A6B);padding:4rem 0 3rem;color:#fff;">
+    <main>
+
+    <!-- State Page — Option C: Sidebar Directory -->
+    <div class="sp-hero">
       <div class="container">
-        <div style="display:flex;align-items:center;gap:1.5rem;margin-bottom:1rem;">
-          <span style="font-size:3.5rem;">🍑</span>
-          <div>
-            <span style="color:var(--gold-light);font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;">State Resource Center</span>
-            <h1 style="color:#fff;margin:0;">Georgia County Resources</h1>
+        <div class="sp-hero__inner">
+          <div class="sp-hero__left">
+            <span class="sp-hero__emoji">🍑</span>
+            <div>
+              <h1 class="sp-hero__h1">Georgia County Resources</h1>
+              <p class="sp-hero__sub">? counties · 400+ assistance programs · Always free</p>
+            </div>
           </div>
-        </div>
-        <p class="lead" style="color:rgba(255,255,255,0.78);max-width:640px;">
-          All 160 Georgia countys covered. Find free government and community assistance programs for utilities, housing, food, Georgia Medicaid, SNAP, and more — organized by your county.
-        </p>
-        <form id="zip-form" style="display:flex;gap:0;max-width:420px;margin-top:2rem;border-radius:8px;overflow:hidden;border:2px solid rgba(255,255,255,0.2);" aria-label="ZIP search">
-          <input id="zip-input" type="tel" placeholder="Enter ZIP code" maxlength="5" style="flex:1;padding:0.85rem 1rem;border:none;font-size:1rem;font-weight:600;letter-spacing:0.08em;outline:none;" />
-          <button type="submit" style="background:var(--gold);color:var(--navy-dark);border:none;padding:0.85rem 1.25rem;font-weight:700;">Go →</button>
-        </form>
-      </div>
-    </section>
-    <div style="background:var(--gray-50);border-bottom:1px solid var(--gray-200);padding:1.25rem 0;">
-      <div class="container">
-        <div style="display:flex;gap:3rem;flex-wrap:wrap;align-items:center;">
-          <div><strong style="color:var(--navy);font-size:1.4rem;">160</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Countys</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">400+</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Assistance Programs</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">9</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Resource Categories</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">Free</strong> <span style="color:var(--gray-600);font-size:0.9rem;">PDF Download</span></div>
-          <div style="margin-left:auto;">
-            <a href="tel:18006224357" style="background:var(--navy);color:#fff;padding:0.6rem 1.25rem;border-radius:6px;font-weight:700;font-size:0.9rem;text-decoration:none;">📞 Get Access Code</a>
+          <div class="sp-hero__right">
+            <form id="zip-form" class="sp-zip-form" aria-label="ZIP search">
+              <input id="zip-input" type="tel" placeholder="Enter ZIP code" maxlength="5"/>
+              <button type="submit">Go →</button>
+            </form>
+            <a href="tel:18006224357" class="sp-access-btn">📞 Get Access Code</a>
           </div>
         </div>
       </div>
     </div>
-    <section class="section" aria-labelledby="counties-heading">
+
+    <div class="sp-body">
       <div class="container">
-        <div class="section-header">
-          <span class="badge badge--gold">All Countys</span>
-          <h2 id="counties-heading">Browse All 160 Georgia Countys</h2>
-          <p>Click your county to view the full resource guide. Countys marked ⭐ have been fully verified and updated.</p>
-        </div>
-        <div style="margin-bottom:3rem;">
-          <h3 style="color:var(--gray-600);font-size:1.1rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1.5rem;">Most Populated Countys</h3>
-          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem;">
-            <a href="/georgia/fulton/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🏙️</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Fulton County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">1.1M residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+        <div class="sp-layout">
+
+          <!-- Sidebar -->
+          <aside class="sp-sidebar">
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">🔍 Search Counties</div>
+              <div class="sp-sidebar-body">
+                <input class="sp-sidebar-search-input" id="county-search" type="text" placeholder="County name…" autocomplete="off"/>
               </div>
-            </a>
-            <a href="/georgia/gwinnett/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🌳</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Gwinnett County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">957K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">📂 Program Type</div>
+              <div class="sp-sidebar-body">
+                <a href="#all" class="sp-sidebar-link active">All Programs</a>
+                <a href="/georgia#utilities" class="sp-sidebar-link">⚡ Utility Assistance</a>
+                <a href="/georgia#housing" class="sp-sidebar-link">🏠 Housing &amp; Rent</a>
+                <a href="/georgia#food" class="sp-sidebar-link">🥗 Food / SNAP</a>
+                <a href="/georgia#healthcare" class="sp-sidebar-link">🏥 Medicaid / Health</a>
+                <a href="/georgia#employment" class="sp-sidebar-link">💼 Employment</a>
+                <a href="/georgia#childcare" class="sp-sidebar-link">👶 Child Care</a>
+                <a href="/georgia#disability" class="sp-sidebar-link">♿ Disability</a>
+                <a href="/georgia#education" class="sp-sidebar-link">📚 Education</a>
               </div>
-            </a>
-            <a href="/georgia/cobb/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">⚽</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Cobb County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">766K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">📊 At a Glance</div>
+              <div class="sp-sidebar-body">
+                <div class="sp-sidebar-stat"><span>?</span><span>Counties</span></div>
+                <div class="sp-sidebar-stat"><span>400+</span><span>Programs</span></div>
+                <div class="sp-sidebar-stat"><span>9</span><span>Categories</span></div>
+                <div class="sp-sidebar-stat"><span>Free</span><span>PDF Guide</span></div>
               </div>
-            </a>
-            <a href="/georgia/dekalb/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🏛️</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">DeKalb County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">764K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+          </aside>
+
+          <!-- Main content -->
+          <div class="sp-content">
+            <div class="sp-content-hd">
+              <h2>⭐ Featured Counties</h2>
+              <span>? counties total</span>
+            </div>
+            <div class="sp-featured-grid">
+            <a href="/georgia/fulton/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🏙️</span>
+                <div>
+                  <div class="sp-cc-name">Fulton County ⭐</div>
+                  <div class="sp-cc-meta">1.1M residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:50%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
-            <a href="/georgia/chatham/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🌊</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Chatham County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">296K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            <a href="/georgia/gwinnett/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🌳</span>
+                <div>
+                  <div class="sp-cc-name">Gwinnett County ⭐</div>
+                  <div class="sp-cc-meta">957K residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
-            <a href="/georgia/cherokee/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🏘️</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Cherokee County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">267K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            <a href="/georgia/cobb/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">⚽</span>
+                <div>
+                  <div class="sp-cc-name">Cobb County ⭐</div>
+                  <div class="sp-cc-meta">766K residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
+            <a href="/georgia/dekalb/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🏛️</span>
+                <div>
+                  <div class="sp-cc-name">DeKalb County ⭐</div>
+                  <div class="sp-cc-meta">764K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            <a href="/georgia/chatham/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🌊</span>
+                <div>
+                  <div class="sp-cc-name">Chatham County ⭐</div>
+                  <div class="sp-cc-meta">296K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            <a href="/georgia/cherokee/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🏘️</span>
+                <div>
+                  <div class="sp-cc-name">Cherokee County ⭐</div>
+                  <div class="sp-cc-meta">267K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            </div>
+            <div class="sp-section-label">All ? Counties — Alphabetical</div>
+            <div class="sp-az-grid" id="county-list">
+          <a href="/georgia/appling/" class="sp-az-item">📍 Appling County</a>
+          <a href="/georgia/atkinson/" class="sp-az-item">📍 Atkinson County</a>
+          <a href="/georgia/bacon/" class="sp-az-item">📍 Bacon County</a>
+          <a href="/georgia/baker/" class="sp-az-item">📍 Baker County</a>
+          <a href="/georgia/baldwin/" class="sp-az-item">📍 Baldwin County</a>
+          <a href="/georgia/banks/" class="sp-az-item">📍 Banks County</a>
+          <a href="/georgia/barrow/" class="sp-az-item">📍 Barrow County</a>
+          <a href="/georgia/bartow/" class="sp-az-item">📍 Bartow County</a>
+          <a href="/georgia/ben-hill/" class="sp-az-item">📍 Ben Hill County</a>
+          <a href="/georgia/berrien/" class="sp-az-item">📍 Berrien County</a>
+          <a href="/georgia/bibb/" class="sp-az-item">📍 Bibb County</a>
+          <a href="/georgia/bleckley/" class="sp-az-item">📍 Bleckley County</a>
+          <a href="/georgia/brantley/" class="sp-az-item">📍 Brantley County</a>
+          <a href="/georgia/brooks/" class="sp-az-item">📍 Brooks County</a>
+          <a href="/georgia/bryan/" class="sp-az-item">📍 Bryan County</a>
+          <a href="/georgia/bulloch/" class="sp-az-item">📍 Bulloch County</a>
+          <a href="/georgia/burke/" class="sp-az-item">📍 Burke County</a>
+          <a href="/georgia/butts/" class="sp-az-item">📍 Butts County</a>
+          <a href="/georgia/calhoun/" class="sp-az-item">📍 Calhoun County</a>
+          <a href="/georgia/camden/" class="sp-az-item">📍 Camden County</a>
+          <a href="/georgia/candler/" class="sp-az-item">📍 Candler County</a>
+          <a href="/georgia/carroll/" class="sp-az-item">📍 Carroll County</a>
+          <a href="/georgia/catoosa/" class="sp-az-item">📍 Catoosa County</a>
+          <a href="/georgia/charlton/" class="sp-az-item">📍 Charlton County</a>
+          <a href="/georgia/chatham/" class="sp-az-item">📍 Chatham County</a>
+          <a href="/georgia/chattahoochee/" class="sp-az-item">📍 Chattahoochee County</a>
+          <a href="/georgia/chattooga/" class="sp-az-item">📍 Chattooga County</a>
+          <a href="/georgia/cherokee/" class="sp-az-item">📍 Cherokee County</a>
+          <a href="/georgia/clarke/" class="sp-az-item">📍 Clarke County</a>
+          <a href="/georgia/clay/" class="sp-az-item">📍 Clay County</a>
+          <a href="/georgia/clayton/" class="sp-az-item">📍 Clayton County</a>
+          <a href="/georgia/cleburne/" class="sp-az-item">📍 Cleburne County</a>
+          <a href="/georgia/clinch/" class="sp-az-item">📍 Clinch County</a>
+          <a href="/georgia/cobb/" class="sp-az-item">📍 Cobb County</a>
+          <a href="/georgia/coffee/" class="sp-az-item">📍 Coffee County</a>
+          <a href="/georgia/colquitt/" class="sp-az-item">📍 Colquitt County</a>
+          <a href="/georgia/columbia/" class="sp-az-item">📍 Columbia County</a>
+          <a href="/georgia/cook/" class="sp-az-item">📍 Cook County</a>
+          <a href="/georgia/coweta/" class="sp-az-item">📍 Coweta County</a>
+          <a href="/georgia/crawford/" class="sp-az-item">📍 Crawford County</a>
+          <a href="/georgia/crisp/" class="sp-az-item">📍 Crisp County</a>
+          <a href="/georgia/dade/" class="sp-az-item">📍 Dade County</a>
+          <a href="/georgia/dawson/" class="sp-az-item">📍 Dawson County</a>
+          <a href="/georgia/dekalb/" class="sp-az-item">📍 DeKalb County</a>
+          <a href="/georgia/decatur/" class="sp-az-item">📍 Decatur County</a>
+          <a href="/georgia/dodge/" class="sp-az-item">📍 Dodge County</a>
+          <a href="/georgia/dooly/" class="sp-az-item">📍 Dooly County</a>
+          <a href="/georgia/dougherty/" class="sp-az-item">📍 Dougherty County</a>
+          <a href="/georgia/douglas/" class="sp-az-item">📍 Douglas County</a>
+          <a href="/georgia/early/" class="sp-az-item">📍 Early County</a>
+          <a href="/georgia/echols/" class="sp-az-item">📍 Echols County</a>
+          <a href="/georgia/effingham/" class="sp-az-item">📍 Effingham County</a>
+          <a href="/georgia/elbert/" class="sp-az-item">📍 Elbert County</a>
+          <a href="/georgia/emanuel/" class="sp-az-item">📍 Emanuel County</a>
+          <a href="/georgia/evans/" class="sp-az-item">📍 Evans County</a>
+          <a href="/georgia/fannin/" class="sp-az-item">📍 Fannin County</a>
+          <a href="/georgia/fayette/" class="sp-az-item">📍 Fayette County</a>
+          <a href="/georgia/floyd/" class="sp-az-item">📍 Floyd County</a>
+          <a href="/georgia/forsyth/" class="sp-az-item">📍 Forsyth County</a>
+          <a href="/georgia/franklin/" class="sp-az-item">📍 Franklin County</a>
+          <a href="/georgia/fulton/" class="sp-az-item">📍 Fulton County</a>
+          <a href="/georgia/gilmer/" class="sp-az-item">📍 Gilmer County</a>
+          <a href="/georgia/glascock/" class="sp-az-item">📍 Glascock County</a>
+          <a href="/georgia/glynn/" class="sp-az-item">📍 Glynn County</a>
+          <a href="/georgia/gordon/" class="sp-az-item">📍 Gordon County</a>
+          <a href="/georgia/grady/" class="sp-az-item">📍 Grady County</a>
+          <a href="/georgia/greene/" class="sp-az-item">📍 Greene County</a>
+          <a href="/georgia/gwinnett/" class="sp-az-item">📍 Gwinnett County</a>
+          <a href="/georgia/habersham/" class="sp-az-item">📍 Habersham County</a>
+          <a href="/georgia/hall/" class="sp-az-item">📍 Hall County</a>
+          <a href="/georgia/hancock/" class="sp-az-item">📍 Hancock County</a>
+          <a href="/georgia/haralson/" class="sp-az-item">📍 Haralson County</a>
+          <a href="/georgia/harris/" class="sp-az-item">📍 Harris County</a>
+          <a href="/georgia/hart/" class="sp-az-item">📍 Hart County</a>
+          <a href="/georgia/heard/" class="sp-az-item">📍 Heard County</a>
+          <a href="/georgia/henry/" class="sp-az-item">📍 Henry County</a>
+          <a href="/georgia/houston/" class="sp-az-item">📍 Houston County</a>
+          <a href="/georgia/irwin/" class="sp-az-item">📍 Irwin County</a>
+          <a href="/georgia/jackson/" class="sp-az-item">📍 Jackson County</a>
+          <a href="/georgia/jasper/" class="sp-az-item">📍 Jasper County</a>
+          <a href="/georgia/jeff-davis/" class="sp-az-item">📍 Jeff Davis County</a>
+          <a href="/georgia/jefferson/" class="sp-az-item">📍 Jefferson County</a>
+          <a href="/georgia/jenkins/" class="sp-az-item">📍 Jenkins County</a>
+          <a href="/georgia/johnson/" class="sp-az-item">📍 Johnson County</a>
+          <a href="/georgia/jones/" class="sp-az-item">📍 Jones County</a>
+          <a href="/georgia/lamar/" class="sp-az-item">📍 Lamar County</a>
+          <a href="/georgia/lanier/" class="sp-az-item">📍 Lanier County</a>
+          <a href="/georgia/laurens/" class="sp-az-item">📍 Laurens County</a>
+          <a href="/georgia/lee/" class="sp-az-item">📍 Lee County</a>
+          <a href="/georgia/liberty/" class="sp-az-item">📍 Liberty County</a>
+          <a href="/georgia/lincoln/" class="sp-az-item">📍 Lincoln County</a>
+          <a href="/georgia/long/" class="sp-az-item">📍 Long County</a>
+          <a href="/georgia/lowndes/" class="sp-az-item">📍 Lowndes County</a>
+          <a href="/georgia/lumpkin/" class="sp-az-item">📍 Lumpkin County</a>
+          <a href="/georgia/macon/" class="sp-az-item">📍 Macon County</a>
+          <a href="/georgia/madison/" class="sp-az-item">📍 Madison County</a>
+          <a href="/georgia/marion/" class="sp-az-item">📍 Marion County</a>
+          <a href="/georgia/mcduffie/" class="sp-az-item">📍 McDuffie County</a>
+          <a href="/georgia/mcintosh/" class="sp-az-item">📍 McIntosh County</a>
+          <a href="/georgia/meriwether/" class="sp-az-item">📍 Meriwether County</a>
+          <a href="/georgia/miller/" class="sp-az-item">📍 Miller County</a>
+          <a href="/georgia/mitchell/" class="sp-az-item">📍 Mitchell County</a>
+          <a href="/georgia/monroe/" class="sp-az-item">📍 Monroe County</a>
+          <a href="/georgia/montgomery/" class="sp-az-item">📍 Montgomery County</a>
+          <a href="/georgia/morgan/" class="sp-az-item">📍 Morgan County</a>
+          <a href="/georgia/murray/" class="sp-az-item">📍 Murray County</a>
+          <a href="/georgia/muscogee/" class="sp-az-item">📍 Muscogee County</a>
+          <a href="/georgia/newton/" class="sp-az-item">📍 Newton County</a>
+          <a href="/georgia/oconee/" class="sp-az-item">📍 Oconee County</a>
+          <a href="/georgia/oglethorpe/" class="sp-az-item">📍 Oglethorpe County</a>
+          <a href="/georgia/paulding/" class="sp-az-item">📍 Paulding County</a>
+          <a href="/georgia/peach/" class="sp-az-item">📍 Peach County</a>
+          <a href="/georgia/pickens/" class="sp-az-item">📍 Pickens County</a>
+          <a href="/georgia/pierce/" class="sp-az-item">📍 Pierce County</a>
+          <a href="/georgia/pike/" class="sp-az-item">📍 Pike County</a>
+          <a href="/georgia/polk/" class="sp-az-item">📍 Polk County</a>
+          <a href="/georgia/pulaski/" class="sp-az-item">📍 Pulaski County</a>
+          <a href="/georgia/putnam/" class="sp-az-item">📍 Putnam County</a>
+          <a href="/georgia/quitman/" class="sp-az-item">📍 Quitman County</a>
+          <a href="/georgia/rabun/" class="sp-az-item">📍 Rabun County</a>
+          <a href="/georgia/randolph/" class="sp-az-item">📍 Randolph County</a>
+          <a href="/georgia/richmond/" class="sp-az-item">📍 Richmond County</a>
+          <a href="/georgia/rockdale/" class="sp-az-item">📍 Rockdale County</a>
+          <a href="/georgia/schley/" class="sp-az-item">📍 Schley County</a>
+          <a href="/georgia/screven/" class="sp-az-item">📍 Screven County</a>
+          <a href="/georgia/seminole/" class="sp-az-item">📍 Seminole County</a>
+          <a href="/georgia/spalding/" class="sp-az-item">📍 Spalding County</a>
+          <a href="/georgia/stephens/" class="sp-az-item">📍 Stephens County</a>
+          <a href="/georgia/stewart/" class="sp-az-item">📍 Stewart County</a>
+          <a href="/georgia/sumter/" class="sp-az-item">📍 Sumter County</a>
+          <a href="/georgia/talbot/" class="sp-az-item">📍 Talbot County</a>
+          <a href="/georgia/taliaferro/" class="sp-az-item">📍 Taliaferro County</a>
+          <a href="/georgia/tattnall/" class="sp-az-item">📍 Tattnall County</a>
+          <a href="/georgia/taylor/" class="sp-az-item">📍 Taylor County</a>
+          <a href="/georgia/telfair/" class="sp-az-item">📍 Telfair County</a>
+          <a href="/georgia/terrell/" class="sp-az-item">📍 Terrell County</a>
+          <a href="/georgia/thomas/" class="sp-az-item">📍 Thomas County</a>
+          <a href="/georgia/tift/" class="sp-az-item">📍 Tift County</a>
+          <a href="/georgia/toombs/" class="sp-az-item">📍 Toombs County</a>
+          <a href="/georgia/towns/" class="sp-az-item">📍 Towns County</a>
+          <a href="/georgia/treutlen/" class="sp-az-item">📍 Treutlen County</a>
+          <a href="/georgia/troup/" class="sp-az-item">📍 Troup County</a>
+          <a href="/georgia/turner/" class="sp-az-item">📍 Turner County</a>
+          <a href="/georgia/twiggs/" class="sp-az-item">📍 Twiggs County</a>
+          <a href="/georgia/union/" class="sp-az-item">📍 Union County</a>
+          <a href="/georgia/upson/" class="sp-az-item">📍 Upson County</a>
+          <a href="/georgia/walker/" class="sp-az-item">📍 Walker County</a>
+          <a href="/georgia/walton/" class="sp-az-item">📍 Walton County</a>
+          <a href="/georgia/ware/" class="sp-az-item">📍 Ware County</a>
+          <a href="/georgia/warren/" class="sp-az-item">📍 Warren County</a>
+          <a href="/georgia/washington/" class="sp-az-item">📍 Washington County</a>
+          <a href="/georgia/wayne/" class="sp-az-item">📍 Wayne County</a>
+          <a href="/georgia/webster/" class="sp-az-item">📍 Webster County</a>
+          <a href="/georgia/wheeler/" class="sp-az-item">📍 Wheeler County</a>
+          <a href="/georgia/white/" class="sp-az-item">📍 White County</a>
+          <a href="/georgia/whitfield/" class="sp-az-item">📍 Whitfield County</a>
+          <a href="/georgia/wilcox/" class="sp-az-item">📍 Wilcox County</a>
+          <a href="/georgia/wilkes/" class="sp-az-item">📍 Wilkes County</a>
+          <a href="/georgia/wilkinson/" class="sp-az-item">📍 Wilkinson County</a>
+          <a href="/georgia/worth/" class="sp-az-item">📍 Worth County</a>
+            </div>
           </div>
-        </div>
-        <h3 style="color:var(--gray-600);font-size:1.1rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1.5rem;">All 160 Countys — Alphabetical</h3>
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0.75rem;">
-          <a href="/georgia/appling/" class="county-link-item">📍 Appling County</a>
-          <a href="/georgia/atkinson/" class="county-link-item">📍 Atkinson County</a>
-          <a href="/georgia/bacon/" class="county-link-item">📍 Bacon County</a>
-          <a href="/georgia/baker/" class="county-link-item">📍 Baker County</a>
-          <a href="/georgia/baldwin/" class="county-link-item">📍 Baldwin County</a>
-          <a href="/georgia/banks/" class="county-link-item">📍 Banks County</a>
-          <a href="/georgia/barrow/" class="county-link-item">📍 Barrow County</a>
-          <a href="/georgia/bartow/" class="county-link-item">📍 Bartow County</a>
-          <a href="/georgia/ben-hill/" class="county-link-item">📍 Ben Hill County</a>
-          <a href="/georgia/berrien/" class="county-link-item">📍 Berrien County</a>
-          <a href="/georgia/bibb/" class="county-link-item">📍 Bibb County</a>
-          <a href="/georgia/bleckley/" class="county-link-item">📍 Bleckley County</a>
-          <a href="/georgia/brantley/" class="county-link-item">📍 Brantley County</a>
-          <a href="/georgia/brooks/" class="county-link-item">📍 Brooks County</a>
-          <a href="/georgia/bryan/" class="county-link-item">📍 Bryan County</a>
-          <a href="/georgia/bulloch/" class="county-link-item">📍 Bulloch County</a>
-          <a href="/georgia/burke/" class="county-link-item">📍 Burke County</a>
-          <a href="/georgia/butts/" class="county-link-item">📍 Butts County</a>
-          <a href="/georgia/calhoun/" class="county-link-item">📍 Calhoun County</a>
-          <a href="/georgia/camden/" class="county-link-item">📍 Camden County</a>
-          <a href="/georgia/candler/" class="county-link-item">📍 Candler County</a>
-          <a href="/georgia/carroll/" class="county-link-item">📍 Carroll County</a>
-          <a href="/georgia/catoosa/" class="county-link-item">📍 Catoosa County</a>
-          <a href="/georgia/charlton/" class="county-link-item">📍 Charlton County</a>
-          <a href="/georgia/chatham/" class="county-link-item">📍 Chatham County</a>
-          <a href="/georgia/chattahoochee/" class="county-link-item">📍 Chattahoochee County</a>
-          <a href="/georgia/chattooga/" class="county-link-item">📍 Chattooga County</a>
-          <a href="/georgia/cherokee/" class="county-link-item">📍 Cherokee County</a>
-          <a href="/georgia/clarke/" class="county-link-item">📍 Clarke County</a>
-          <a href="/georgia/clay/" class="county-link-item">📍 Clay County</a>
-          <a href="/georgia/clayton/" class="county-link-item">📍 Clayton County</a>
-          <a href="/georgia/cleburne/" class="county-link-item">📍 Cleburne County</a>
-          <a href="/georgia/clinch/" class="county-link-item">📍 Clinch County</a>
-          <a href="/georgia/cobb/" class="county-link-item">📍 Cobb County</a>
-          <a href="/georgia/coffee/" class="county-link-item">📍 Coffee County</a>
-          <a href="/georgia/colquitt/" class="county-link-item">📍 Colquitt County</a>
-          <a href="/georgia/columbia/" class="county-link-item">📍 Columbia County</a>
-          <a href="/georgia/cook/" class="county-link-item">📍 Cook County</a>
-          <a href="/georgia/coweta/" class="county-link-item">📍 Coweta County</a>
-          <a href="/georgia/crawford/" class="county-link-item">📍 Crawford County</a>
-          <a href="/georgia/crisp/" class="county-link-item">📍 Crisp County</a>
-          <a href="/georgia/dade/" class="county-link-item">📍 Dade County</a>
-          <a href="/georgia/dawson/" class="county-link-item">📍 Dawson County</a>
-          <a href="/georgia/dekalb/" class="county-link-item">📍 DeKalb County</a>
-          <a href="/georgia/decatur/" class="county-link-item">📍 Decatur County</a>
-          <a href="/georgia/dodge/" class="county-link-item">📍 Dodge County</a>
-          <a href="/georgia/dooly/" class="county-link-item">📍 Dooly County</a>
-          <a href="/georgia/dougherty/" class="county-link-item">📍 Dougherty County</a>
-          <a href="/georgia/douglas/" class="county-link-item">📍 Douglas County</a>
-          <a href="/georgia/early/" class="county-link-item">📍 Early County</a>
-          <a href="/georgia/echols/" class="county-link-item">📍 Echols County</a>
-          <a href="/georgia/effingham/" class="county-link-item">📍 Effingham County</a>
-          <a href="/georgia/elbert/" class="county-link-item">📍 Elbert County</a>
-          <a href="/georgia/emanuel/" class="county-link-item">📍 Emanuel County</a>
-          <a href="/georgia/evans/" class="county-link-item">📍 Evans County</a>
-          <a href="/georgia/fannin/" class="county-link-item">📍 Fannin County</a>
-          <a href="/georgia/fayette/" class="county-link-item">📍 Fayette County</a>
-          <a href="/georgia/floyd/" class="county-link-item">📍 Floyd County</a>
-          <a href="/georgia/forsyth/" class="county-link-item">📍 Forsyth County</a>
-          <a href="/georgia/franklin/" class="county-link-item">📍 Franklin County</a>
-          <a href="/georgia/fulton/" class="county-link-item">📍 Fulton County</a>
-          <a href="/georgia/gilmer/" class="county-link-item">📍 Gilmer County</a>
-          <a href="/georgia/glascock/" class="county-link-item">📍 Glascock County</a>
-          <a href="/georgia/glynn/" class="county-link-item">📍 Glynn County</a>
-          <a href="/georgia/gordon/" class="county-link-item">📍 Gordon County</a>
-          <a href="/georgia/grady/" class="county-link-item">📍 Grady County</a>
-          <a href="/georgia/greene/" class="county-link-item">📍 Greene County</a>
-          <a href="/georgia/gwinnett/" class="county-link-item">📍 Gwinnett County</a>
-          <a href="/georgia/habersham/" class="county-link-item">📍 Habersham County</a>
-          <a href="/georgia/hall/" class="county-link-item">📍 Hall County</a>
-          <a href="/georgia/hancock/" class="county-link-item">📍 Hancock County</a>
-          <a href="/georgia/haralson/" class="county-link-item">📍 Haralson County</a>
-          <a href="/georgia/harris/" class="county-link-item">📍 Harris County</a>
-          <a href="/georgia/hart/" class="county-link-item">📍 Hart County</a>
-          <a href="/georgia/heard/" class="county-link-item">📍 Heard County</a>
-          <a href="/georgia/henry/" class="county-link-item">📍 Henry County</a>
-          <a href="/georgia/houston/" class="county-link-item">📍 Houston County</a>
-          <a href="/georgia/irwin/" class="county-link-item">📍 Irwin County</a>
-          <a href="/georgia/jackson/" class="county-link-item">📍 Jackson County</a>
-          <a href="/georgia/jasper/" class="county-link-item">📍 Jasper County</a>
-          <a href="/georgia/jeff-davis/" class="county-link-item">📍 Jeff Davis County</a>
-          <a href="/georgia/jefferson/" class="county-link-item">📍 Jefferson County</a>
-          <a href="/georgia/jenkins/" class="county-link-item">📍 Jenkins County</a>
-          <a href="/georgia/johnson/" class="county-link-item">📍 Johnson County</a>
-          <a href="/georgia/jones/" class="county-link-item">📍 Jones County</a>
-          <a href="/georgia/lamar/" class="county-link-item">📍 Lamar County</a>
-          <a href="/georgia/lanier/" class="county-link-item">📍 Lanier County</a>
-          <a href="/georgia/laurens/" class="county-link-item">📍 Laurens County</a>
-          <a href="/georgia/lee/" class="county-link-item">📍 Lee County</a>
-          <a href="/georgia/liberty/" class="county-link-item">📍 Liberty County</a>
-          <a href="/georgia/lincoln/" class="county-link-item">📍 Lincoln County</a>
-          <a href="/georgia/long/" class="county-link-item">📍 Long County</a>
-          <a href="/georgia/lowndes/" class="county-link-item">📍 Lowndes County</a>
-          <a href="/georgia/lumpkin/" class="county-link-item">📍 Lumpkin County</a>
-          <a href="/georgia/macon/" class="county-link-item">📍 Macon County</a>
-          <a href="/georgia/madison/" class="county-link-item">📍 Madison County</a>
-          <a href="/georgia/marion/" class="county-link-item">📍 Marion County</a>
-          <a href="/georgia/mcduffie/" class="county-link-item">📍 McDuffie County</a>
-          <a href="/georgia/mcintosh/" class="county-link-item">📍 McIntosh County</a>
-          <a href="/georgia/meriwether/" class="county-link-item">📍 Meriwether County</a>
-          <a href="/georgia/miller/" class="county-link-item">📍 Miller County</a>
-          <a href="/georgia/mitchell/" class="county-link-item">📍 Mitchell County</a>
-          <a href="/georgia/monroe/" class="county-link-item">📍 Monroe County</a>
-          <a href="/georgia/montgomery/" class="county-link-item">📍 Montgomery County</a>
-          <a href="/georgia/morgan/" class="county-link-item">📍 Morgan County</a>
-          <a href="/georgia/murray/" class="county-link-item">📍 Murray County</a>
-          <a href="/georgia/muscogee/" class="county-link-item">📍 Muscogee County</a>
-          <a href="/georgia/newton/" class="county-link-item">📍 Newton County</a>
-          <a href="/georgia/oconee/" class="county-link-item">📍 Oconee County</a>
-          <a href="/georgia/oglethorpe/" class="county-link-item">📍 Oglethorpe County</a>
-          <a href="/georgia/paulding/" class="county-link-item">📍 Paulding County</a>
-          <a href="/georgia/peach/" class="county-link-item">📍 Peach County</a>
-          <a href="/georgia/pickens/" class="county-link-item">📍 Pickens County</a>
-          <a href="/georgia/pierce/" class="county-link-item">📍 Pierce County</a>
-          <a href="/georgia/pike/" class="county-link-item">📍 Pike County</a>
-          <a href="/georgia/polk/" class="county-link-item">📍 Polk County</a>
-          <a href="/georgia/pulaski/" class="county-link-item">📍 Pulaski County</a>
-          <a href="/georgia/putnam/" class="county-link-item">📍 Putnam County</a>
-          <a href="/georgia/quitman/" class="county-link-item">📍 Quitman County</a>
-          <a href="/georgia/rabun/" class="county-link-item">📍 Rabun County</a>
-          <a href="/georgia/randolph/" class="county-link-item">📍 Randolph County</a>
-          <a href="/georgia/richmond/" class="county-link-item">📍 Richmond County</a>
-          <a href="/georgia/rockdale/" class="county-link-item">📍 Rockdale County</a>
-          <a href="/georgia/schley/" class="county-link-item">📍 Schley County</a>
-          <a href="/georgia/screven/" class="county-link-item">📍 Screven County</a>
-          <a href="/georgia/seminole/" class="county-link-item">📍 Seminole County</a>
-          <a href="/georgia/spalding/" class="county-link-item">📍 Spalding County</a>
-          <a href="/georgia/stephens/" class="county-link-item">📍 Stephens County</a>
-          <a href="/georgia/stewart/" class="county-link-item">📍 Stewart County</a>
-          <a href="/georgia/sumter/" class="county-link-item">📍 Sumter County</a>
-          <a href="/georgia/talbot/" class="county-link-item">📍 Talbot County</a>
-          <a href="/georgia/taliaferro/" class="county-link-item">📍 Taliaferro County</a>
-          <a href="/georgia/tattnall/" class="county-link-item">📍 Tattnall County</a>
-          <a href="/georgia/taylor/" class="county-link-item">📍 Taylor County</a>
-          <a href="/georgia/telfair/" class="county-link-item">📍 Telfair County</a>
-          <a href="/georgia/terrell/" class="county-link-item">📍 Terrell County</a>
-          <a href="/georgia/thomas/" class="county-link-item">📍 Thomas County</a>
-          <a href="/georgia/tift/" class="county-link-item">📍 Tift County</a>
-          <a href="/georgia/toombs/" class="county-link-item">📍 Toombs County</a>
-          <a href="/georgia/towns/" class="county-link-item">📍 Towns County</a>
-          <a href="/georgia/treutlen/" class="county-link-item">📍 Treutlen County</a>
-          <a href="/georgia/troup/" class="county-link-item">📍 Troup County</a>
-          <a href="/georgia/turner/" class="county-link-item">📍 Turner County</a>
-          <a href="/georgia/twiggs/" class="county-link-item">📍 Twiggs County</a>
-          <a href="/georgia/union/" class="county-link-item">📍 Union County</a>
-          <a href="/georgia/upson/" class="county-link-item">📍 Upson County</a>
-          <a href="/georgia/walker/" class="county-link-item">📍 Walker County</a>
-          <a href="/georgia/walton/" class="county-link-item">📍 Walton County</a>
-          <a href="/georgia/ware/" class="county-link-item">📍 Ware County</a>
-          <a href="/georgia/warren/" class="county-link-item">📍 Warren County</a>
-          <a href="/georgia/washington/" class="county-link-item">📍 Washington County</a>
-          <a href="/georgia/wayne/" class="county-link-item">📍 Wayne County</a>
-          <a href="/georgia/webster/" class="county-link-item">📍 Webster County</a>
-          <a href="/georgia/wheeler/" class="county-link-item">📍 Wheeler County</a>
-          <a href="/georgia/white/" class="county-link-item">📍 White County</a>
-          <a href="/georgia/whitfield/" class="county-link-item">📍 Whitfield County</a>
-          <a href="/georgia/wilcox/" class="county-link-item">📍 Wilcox County</a>
-          <a href="/georgia/wilkes/" class="county-link-item">📍 Wilkes County</a>
-          <a href="/georgia/wilkinson/" class="county-link-item">📍 Wilkinson County</a>
-          <a href="/georgia/worth/" class="county-link-item">📍 Worth County</a>
+
         </div>
       </div>
-    </section>
+    </div>
+
+    <script>
+    /* County search filter */
+    (function() {
+      var inp = document.getElementById('county-search');
+      if (!inp) return;
+      inp.addEventListener('input', function() {
+        var q = inp.value.trim().toLowerCase();
+        document.querySelectorAll('#county-list .sp-az-item').forEach(function(el) {
+          el.classList.toggle('sp-hidden', q.length > 0 && el.textContent.toLowerCase().indexOf(q) === -1);
+        });
+      });
+    })();
+    </script>
+
   </main>
-  <style>
-    .county-link-item {display:flex;align-items:center;gap:0.5rem;padding:0.65rem 1rem;border:1px solid var(--gray-200);border-radius:8px;color:var(--navy);font-size:0.875rem;font-weight:600;text-decoration:none;background:#fff;transition:all 0.2s;}
-    .county-link-item:hover {border-color:var(--blue);background:rgba(45,125,210,0.04);color:var(--blue);}
-  </style>
+  
   <footer class="footer">
     <div class="container">
       <div class="footer__bottom" style="border-top:1px solid rgba(255,255,255,0.1);padding:1.5rem 0;margin-top:0;">

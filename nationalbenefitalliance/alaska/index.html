@@ -76,141 +76,199 @@
       </ol>
     </div>
   </nav>
-  <main>
-    <section style="background:linear-gradient(135deg,#0F2447,#1B3A6B);padding:4rem 0 3rem;color:#fff;">
+    <main>
+
+    <!-- State Page — Option C: Sidebar Directory -->
+    <div class="sp-hero">
       <div class="container">
-        <div style="display:flex;align-items:center;gap:1.5rem;margin-bottom:1rem;">
-          <span style="font-size:3.5rem;">🐻</span>
-          <div>
-            <span style="color:var(--gold-light);font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;">State Resource Center</span>
-            <h1 style="color:#fff;margin:0;">Alaska Borough Resources</h1>
+        <div class="sp-hero__inner">
+          <div class="sp-hero__left">
+            <span class="sp-hero__emoji">🐻</span>
+            <div>
+              <h1 class="sp-hero__h1">Alaska Borough Resources County Resources</h1>
+              <p class="sp-hero__sub">? counties · 400+ assistance programs · Always free</p>
+            </div>
           </div>
-        </div>
-        <p class="lead" style="color:rgba(255,255,255,0.78);max-width:640px;">
-          All 33 Alaska boroughs covered. Find free government and community assistance programs for utilities, housing, food, Alaska Medicaid, SNAP, and more — organized by your borough.
-        </p>
-        <form id="zip-form" style="display:flex;gap:0;max-width:420px;margin-top:2rem;border-radius:8px;overflow:hidden;border:2px solid rgba(255,255,255,0.2);" aria-label="ZIP search">
-          <input id="zip-input" type="tel" placeholder="Enter ZIP code" maxlength="5" style="flex:1;padding:0.85rem 1rem;border:none;font-size:1rem;font-weight:600;letter-spacing:0.08em;outline:none;" />
-          <button type="submit" style="background:var(--gold);color:var(--navy-dark);border:none;padding:0.85rem 1.25rem;font-weight:700;">Go →</button>
-        </form>
-      </div>
-    </section>
-    <div style="background:var(--gray-50);border-bottom:1px solid var(--gray-200);padding:1.25rem 0;">
-      <div class="container">
-        <div style="display:flex;gap:3rem;flex-wrap:wrap;align-items:center;">
-          <div><strong style="color:var(--navy);font-size:1.4rem;">33</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Boroughs</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">400+</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Assistance Programs</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">9</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Resource Categories</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">Free</strong> <span style="color:var(--gray-600);font-size:0.9rem;">PDF Download</span></div>
-          <div style="margin-left:auto;">
-            <a href="tel:18006224357" style="background:var(--navy);color:#fff;padding:0.6rem 1.25rem;border-radius:6px;font-weight:700;font-size:0.9rem;text-decoration:none;">📞 Get Access Code</a>
+          <div class="sp-hero__right">
+            <form id="zip-form" class="sp-zip-form" aria-label="ZIP search">
+              <input id="zip-input" type="tel" placeholder="Enter ZIP code" maxlength="5"/>
+              <button type="submit">Go →</button>
+            </form>
+            <a href="tel:18006224357" class="sp-access-btn">📞 Get Access Code</a>
           </div>
         </div>
       </div>
     </div>
-    <section class="section" aria-labelledby="counties-heading">
+
+    <div class="sp-body">
       <div class="container">
-        <div class="section-header">
-          <span class="badge badge--gold">All Boroughs</span>
-          <h2 id="counties-heading">Browse All 33 Alaska Boroughs</h2>
-          <p>Click your borough to view the full resource guide. Boroughs marked ⭐ have been fully verified and updated.</p>
-        </div>
-        <div style="margin-bottom:3rem;">
-          <h3 style="color:var(--gray-600);font-size:1.1rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1.5rem;">Most Populated Boroughs</h3>
-          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem;">
-            <a href="/alaska/anchorage/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🐻</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Anchorage Borough ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">292K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+        <div class="sp-layout">
+
+          <!-- Sidebar -->
+          <aside class="sp-sidebar">
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">🔍 Search Counties</div>
+              <div class="sp-sidebar-body">
+                <input class="sp-sidebar-search-input" id="county-search" type="text" placeholder="County name…" autocomplete="off"/>
               </div>
-            </a>
-            <a href="/alaska/fairbanks-north-star/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">❄️</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Fairbanks North Star Borough ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">97K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">📂 Program Type</div>
+              <div class="sp-sidebar-body">
+                <a href="#all" class="sp-sidebar-link active">All Programs</a>
+                <a href="/alaska#utilities" class="sp-sidebar-link">⚡ Utility Assistance</a>
+                <a href="/alaska#housing" class="sp-sidebar-link">🏠 Housing &amp; Rent</a>
+                <a href="/alaska#food" class="sp-sidebar-link">🥗 Food / SNAP</a>
+                <a href="/alaska#healthcare" class="sp-sidebar-link">🏥 Medicaid / Health</a>
+                <a href="/alaska#employment" class="sp-sidebar-link">💼 Employment</a>
+                <a href="/alaska#childcare" class="sp-sidebar-link">👶 Child Care</a>
+                <a href="/alaska#disability" class="sp-sidebar-link">♿ Disability</a>
+                <a href="/alaska#education" class="sp-sidebar-link">📚 Education</a>
               </div>
-            </a>
-            <a href="/alaska/matanuska-susitna/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🌲</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Matanuska-Susitna Borough ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">108K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">📊 At a Glance</div>
+              <div class="sp-sidebar-body">
+                <div class="sp-sidebar-stat"><span>?</span><span>Counties</span></div>
+                <div class="sp-sidebar-stat"><span>400+</span><span>Programs</span></div>
+                <div class="sp-sidebar-stat"><span>9</span><span>Categories</span></div>
+                <div class="sp-sidebar-stat"><span>Free</span><span>PDF Guide</span></div>
               </div>
-            </a>
-            <a href="/alaska/kenai-peninsula/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🦅</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Kenai Peninsula Borough ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">59K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+          </aside>
+
+          <!-- Main content -->
+          <div class="sp-content">
+            <div class="sp-content-hd">
+              <h2>⭐ Featured Counties</h2>
+              <span>? counties total</span>
+            </div>
+            <div class="sp-featured-grid">
+            <a href="/alaska/anchorage/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🐻</span>
+                <div>
+                  <div class="sp-cc-name">Anchorage Borough ⭐</div>
+                  <div class="sp-cc-meta">292K residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
-            <a href="/alaska/juneau/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🏛️</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Juneau Borough ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">32K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            <a href="/alaska/fairbanks-north-star/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">❄️</span>
+                <div>
+                  <div class="sp-cc-name">Fairbanks North Star Borough ⭐</div>
+                  <div class="sp-cc-meta">97K residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
-            <a href="/alaska/ketchikan-gateway/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🐟</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Ketchikan Gateway Borough ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">14K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            <a href="/alaska/matanuska-susitna/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🌲</span>
+                <div>
+                  <div class="sp-cc-name">Matanuska-Susitna Borough ⭐</div>
+                  <div class="sp-cc-meta">108K residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
+            <a href="/alaska/kenai-peninsula/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🦅</span>
+                <div>
+                  <div class="sp-cc-name">Kenai Peninsula Borough ⭐</div>
+                  <div class="sp-cc-meta">59K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:70%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            <a href="/alaska/juneau/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🏛️</span>
+                <div>
+                  <div class="sp-cc-name">Juneau Borough ⭐</div>
+                  <div class="sp-cc-meta">32K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:50%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            <a href="/alaska/ketchikan-gateway/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🐟</span>
+                <div>
+                  <div class="sp-cc-name">Ketchikan Gateway Borough ⭐</div>
+                  <div class="sp-cc-meta">14K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:50%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            </div>
+            <div class="sp-section-label">All ? Counties — Alphabetical</div>
+            <div class="sp-az-grid" id="county-list">
+          <a href="/alaska/aleutians-east/" class="sp-az-item">📍 Aleutians East Borough</a>
+          <a href="/alaska/aleutians-west/" class="sp-az-item">📍 Aleutians West Borough</a>
+          <a href="/alaska/anchorage/" class="sp-az-item">📍 Anchorage Borough</a>
+          <a href="/alaska/bethel/" class="sp-az-item">📍 Bethel Borough</a>
+          <a href="/alaska/bristol-bay/" class="sp-az-item">📍 Bristol Bay Borough</a>
+          <a href="/alaska/chugach/" class="sp-az-item">📍 Chugach Borough</a>
+          <a href="/alaska/city-and-borough-of-juneau/" class="sp-az-item">📍 City and Borough of Juneau Borough</a>
+          <a href="/alaska/copper-river/" class="sp-az-item">📍 Copper River Borough</a>
+          <a href="/alaska/denali/" class="sp-az-item">📍 Denali Borough</a>
+          <a href="/alaska/dillingham/" class="sp-az-item">📍 Dillingham Borough</a>
+          <a href="/alaska/fairbanks-north-star/" class="sp-az-item">📍 Fairbanks North Star Borough</a>
+          <a href="/alaska/haines/" class="sp-az-item">📍 Haines Borough</a>
+          <a href="/alaska/hoonah-angoon/" class="sp-az-item">📍 Hoonah-Angoon Borough</a>
+          <a href="/alaska/juneau-city-and/" class="sp-az-item">📍 Juneau City and Borough</a>
+          <a href="/alaska/kenai-peninsula/" class="sp-az-item">📍 Kenai Peninsula Borough</a>
+          <a href="/alaska/ketchikan-gateway/" class="sp-az-item">📍 Ketchikan Gateway Borough</a>
+          <a href="/alaska/kodiak-island/" class="sp-az-item">📍 Kodiak Island Borough</a>
+          <a href="/alaska/kusilvak/" class="sp-az-item">📍 Kusilvak Borough</a>
+          <a href="/alaska/lake-and-peninsula/" class="sp-az-item">📍 Lake and Peninsula Borough</a>
+          <a href="/alaska/matanuska-susitna/" class="sp-az-item">📍 Matanuska-Susitna Borough</a>
+          <a href="/alaska/municipality-of-anchorage/" class="sp-az-item">📍 Municipality of Anchorage Borough</a>
+          <a href="/alaska/nome/" class="sp-az-item">📍 Nome Borough</a>
+          <a href="/alaska/north-slope/" class="sp-az-item">📍 North Slope Borough</a>
+          <a href="/alaska/northwest-arctic/" class="sp-az-item">📍 Northwest Arctic Borough</a>
+          <a href="/alaska/petersburg/" class="sp-az-item">📍 Petersburg Borough</a>
+          <a href="/alaska/prince-of-wales-hyder/" class="sp-az-item">📍 Prince of Wales-Hyder Borough</a>
+          <a href="/alaska/prince-of-wales-outer-ketchikan/" class="sp-az-item">📍 Prince of Wales-Outer Ketchikan Borough</a>
+          <a href="/alaska/sitka-city-and/" class="sp-az-item">📍 Sitka City and Borough</a>
+          <a href="/alaska/skagway/" class="sp-az-item">📍 Skagway Borough</a>
+          <a href="/alaska/southeast-fairbanks/" class="sp-az-item">📍 Southeast Fairbanks Borough</a>
+          <a href="/alaska/wrangell-city-and/" class="sp-az-item">📍 Wrangell City and Borough</a>
+          <a href="/alaska/yakutat-city-and/" class="sp-az-item">📍 Yakutat City and Borough</a>
+          <a href="/alaska/yukon-koyukuk/" class="sp-az-item">📍 Yukon-Koyukuk Borough</a>
+            </div>
           </div>
-        </div>
-        <h3 style="color:var(--gray-600);font-size:1.1rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1.5rem;">All 33 Boroughs — Alphabetical</h3>
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0.75rem;">
-          <a href="/alaska/aleutians-east/" class="county-link-item">📍 Aleutians East Borough</a>
-          <a href="/alaska/aleutians-west/" class="county-link-item">📍 Aleutians West Borough</a>
-          <a href="/alaska/anchorage/" class="county-link-item">📍 Anchorage Borough</a>
-          <a href="/alaska/bethel/" class="county-link-item">📍 Bethel Borough</a>
-          <a href="/alaska/bristol-bay/" class="county-link-item">📍 Bristol Bay Borough</a>
-          <a href="/alaska/chugach/" class="county-link-item">📍 Chugach Borough</a>
-          <a href="/alaska/city-and-borough-of-juneau/" class="county-link-item">📍 City and Borough of Juneau Borough</a>
-          <a href="/alaska/copper-river/" class="county-link-item">📍 Copper River Borough</a>
-          <a href="/alaska/denali/" class="county-link-item">📍 Denali Borough</a>
-          <a href="/alaska/dillingham/" class="county-link-item">📍 Dillingham Borough</a>
-          <a href="/alaska/fairbanks-north-star/" class="county-link-item">📍 Fairbanks North Star Borough</a>
-          <a href="/alaska/haines/" class="county-link-item">📍 Haines Borough</a>
-          <a href="/alaska/hoonah-angoon/" class="county-link-item">📍 Hoonah-Angoon Borough</a>
-          <a href="/alaska/juneau-city-and/" class="county-link-item">📍 Juneau City and Borough</a>
-          <a href="/alaska/kenai-peninsula/" class="county-link-item">📍 Kenai Peninsula Borough</a>
-          <a href="/alaska/ketchikan-gateway/" class="county-link-item">📍 Ketchikan Gateway Borough</a>
-          <a href="/alaska/kodiak-island/" class="county-link-item">📍 Kodiak Island Borough</a>
-          <a href="/alaska/kusilvak/" class="county-link-item">📍 Kusilvak Borough</a>
-          <a href="/alaska/lake-and-peninsula/" class="county-link-item">📍 Lake and Peninsula Borough</a>
-          <a href="/alaska/matanuska-susitna/" class="county-link-item">📍 Matanuska-Susitna Borough</a>
-          <a href="/alaska/municipality-of-anchorage/" class="county-link-item">📍 Municipality of Anchorage Borough</a>
-          <a href="/alaska/nome/" class="county-link-item">📍 Nome Borough</a>
-          <a href="/alaska/north-slope/" class="county-link-item">📍 North Slope Borough</a>
-          <a href="/alaska/northwest-arctic/" class="county-link-item">📍 Northwest Arctic Borough</a>
-          <a href="/alaska/petersburg/" class="county-link-item">📍 Petersburg Borough</a>
-          <a href="/alaska/prince-of-wales-hyder/" class="county-link-item">📍 Prince of Wales-Hyder Borough</a>
-          <a href="/alaska/prince-of-wales-outer-ketchikan/" class="county-link-item">📍 Prince of Wales-Outer Ketchikan Borough</a>
-          <a href="/alaska/sitka-city-and/" class="county-link-item">📍 Sitka City and Borough</a>
-          <a href="/alaska/skagway/" class="county-link-item">📍 Skagway Borough</a>
-          <a href="/alaska/southeast-fairbanks/" class="county-link-item">📍 Southeast Fairbanks Borough</a>
-          <a href="/alaska/wrangell-city-and/" class="county-link-item">📍 Wrangell City and Borough</a>
-          <a href="/alaska/yakutat-city-and/" class="county-link-item">📍 Yakutat City and Borough</a>
-          <a href="/alaska/yukon-koyukuk/" class="county-link-item">📍 Yukon-Koyukuk Borough</a>
+
         </div>
       </div>
-    </section>
+    </div>
+
+    <script>
+    /* County search filter */
+    (function() {
+      var inp = document.getElementById('county-search');
+      if (!inp) return;
+      inp.addEventListener('input', function() {
+        var q = inp.value.trim().toLowerCase();
+        document.querySelectorAll('#county-list .sp-az-item').forEach(function(el) {
+          el.classList.toggle('sp-hidden', q.length > 0 && el.textContent.toLowerCase().indexOf(q) === -1);
+        });
+      });
+    })();
+    </script>
+
   </main>
-  <style>
-    .county-link-item {display:flex;align-items:center;gap:0.5rem;padding:0.65rem 1rem;border:1px solid var(--gray-200);border-radius:8px;color:var(--navy);font-size:0.875rem;font-weight:600;text-decoration:none;background:#fff;transition:all 0.2s;}
-    .county-link-item:hover {border-color:var(--blue);background:rgba(45,125,210,0.04);color:var(--blue);}
-  </style>
+  
   <footer class="footer">
     <div class="container">
       <div class="footer__bottom" style="border-top:1px solid rgba(255,255,255,0.1);padding:1.5rem 0;margin-top:0;">

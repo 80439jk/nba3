@@ -76,164 +76,222 @@
       </ol>
     </div>
   </nav>
-  <main>
-    <section style="background:linear-gradient(135deg,#0F2447,#1B3A6B);padding:4rem 0 3rem;color:#fff;">
+    <main>
+
+    <!-- State Page — Option C: Sidebar Directory -->
+    <div class="sp-hero">
       <div class="container">
-        <div style="display:flex;align-items:center;gap:1.5rem;margin-bottom:1rem;">
-          <span style="font-size:3.5rem;">🦌</span>
-          <div>
-            <span style="color:var(--gold-light);font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;">State Resource Center</span>
-            <h1 style="color:#fff;margin:0;">Montana County Resources</h1>
+        <div class="sp-hero__inner">
+          <div class="sp-hero__left">
+            <span class="sp-hero__emoji">🦌</span>
+            <div>
+              <h1 class="sp-hero__h1">Montana County Resources</h1>
+              <p class="sp-hero__sub">? counties · 400+ assistance programs · Always free</p>
+            </div>
           </div>
-        </div>
-        <p class="lead" style="color:rgba(255,255,255,0.78);max-width:640px;">
-          All 56 Montana countys covered. Find free government and community assistance programs for utilities, housing, food, Montana Medicaid, SNAP, and more — organized by your county.
-        </p>
-        <form id="zip-form" style="display:flex;gap:0;max-width:420px;margin-top:2rem;border-radius:8px;overflow:hidden;border:2px solid rgba(255,255,255,0.2);" aria-label="ZIP search">
-          <input id="zip-input" type="tel" placeholder="Enter ZIP code" maxlength="5" style="flex:1;padding:0.85rem 1rem;border:none;font-size:1rem;font-weight:600;letter-spacing:0.08em;outline:none;" />
-          <button type="submit" style="background:var(--gold);color:var(--navy-dark);border:none;padding:0.85rem 1.25rem;font-weight:700;">Go →</button>
-        </form>
-      </div>
-    </section>
-    <div style="background:var(--gray-50);border-bottom:1px solid var(--gray-200);padding:1.25rem 0;">
-      <div class="container">
-        <div style="display:flex;gap:3rem;flex-wrap:wrap;align-items:center;">
-          <div><strong style="color:var(--navy);font-size:1.4rem;">56</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Countys</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">400+</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Assistance Programs</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">9</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Resource Categories</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">Free</strong> <span style="color:var(--gray-600);font-size:0.9rem;">PDF Download</span></div>
-          <div style="margin-left:auto;">
-            <a href="tel:18006224357" style="background:var(--navy);color:#fff;padding:0.6rem 1.25rem;border-radius:6px;font-weight:700;font-size:0.9rem;text-decoration:none;">📞 Get Access Code</a>
+          <div class="sp-hero__right">
+            <form id="zip-form" class="sp-zip-form" aria-label="ZIP search">
+              <input id="zip-input" type="tel" placeholder="Enter ZIP code" maxlength="5"/>
+              <button type="submit">Go →</button>
+            </form>
+            <a href="tel:18006224357" class="sp-access-btn">📞 Get Access Code</a>
           </div>
         </div>
       </div>
     </div>
-    <section class="section" aria-labelledby="counties-heading">
+
+    <div class="sp-body">
       <div class="container">
-        <div class="section-header">
-          <span class="badge badge--gold">All Countys</span>
-          <h2 id="counties-heading">Browse All 56 Montana Countys</h2>
-          <p>Click your county to view the full resource guide. Countys marked ⭐ have been fully verified and updated.</p>
-        </div>
-        <div style="margin-bottom:3rem;">
-          <h3 style="color:var(--gray-600);font-size:1.1rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1.5rem;">Most Populated Countys</h3>
-          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem;">
-            <a href="/montana/yellowstone/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🦌</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Yellowstone County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">164K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+        <div class="sp-layout">
+
+          <!-- Sidebar -->
+          <aside class="sp-sidebar">
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">🔍 Search Counties</div>
+              <div class="sp-sidebar-body">
+                <input class="sp-sidebar-search-input" id="county-search" type="text" placeholder="County name…" autocomplete="off"/>
               </div>
-            </a>
-            <a href="/montana/cascade/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">✈️</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Cascade County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">82K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">📂 Program Type</div>
+              <div class="sp-sidebar-body">
+                <a href="#all" class="sp-sidebar-link active">All Programs</a>
+                <a href="/montana#utilities" class="sp-sidebar-link">⚡ Utility Assistance</a>
+                <a href="/montana#housing" class="sp-sidebar-link">🏠 Housing &amp; Rent</a>
+                <a href="/montana#food" class="sp-sidebar-link">🥗 Food / SNAP</a>
+                <a href="/montana#healthcare" class="sp-sidebar-link">🏥 Medicaid / Health</a>
+                <a href="/montana#employment" class="sp-sidebar-link">💼 Employment</a>
+                <a href="/montana#childcare" class="sp-sidebar-link">👶 Child Care</a>
+                <a href="/montana#disability" class="sp-sidebar-link">♿ Disability</a>
+                <a href="/montana#education" class="sp-sidebar-link">📚 Education</a>
               </div>
-            </a>
-            <a href="/montana/missoula/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🌲</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Missoula County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">120K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">📊 At a Glance</div>
+              <div class="sp-sidebar-body">
+                <div class="sp-sidebar-stat"><span>?</span><span>Counties</span></div>
+                <div class="sp-sidebar-stat"><span>400+</span><span>Programs</span></div>
+                <div class="sp-sidebar-stat"><span>9</span><span>Categories</span></div>
+                <div class="sp-sidebar-stat"><span>Free</span><span>PDF Guide</span></div>
               </div>
-            </a>
-            <a href="/montana/gallatin/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🏔️</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Gallatin County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">119K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+          </aside>
+
+          <!-- Main content -->
+          <div class="sp-content">
+            <div class="sp-content-hd">
+              <h2>⭐ Featured Counties</h2>
+              <span>? counties total</span>
+            </div>
+            <div class="sp-featured-grid">
+            <a href="/montana/yellowstone/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🦌</span>
+                <div>
+                  <div class="sp-cc-name">Yellowstone County ⭐</div>
+                  <div class="sp-cc-meta">164K residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
-            <a href="/montana/lewis-and-clark/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🏛️</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Lewis and Clark County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">69K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            <a href="/montana/cascade/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">✈️</span>
+                <div>
+                  <div class="sp-cc-name">Cascade County ⭐</div>
+                  <div class="sp-cc-meta">82K residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
-            <a href="/montana/flathead/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🌊</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Flathead County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">104K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            <a href="/montana/missoula/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🌲</span>
+                <div>
+                  <div class="sp-cc-name">Missoula County ⭐</div>
+                  <div class="sp-cc-meta">120K residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
+            <a href="/montana/gallatin/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🏔️</span>
+                <div>
+                  <div class="sp-cc-name">Gallatin County ⭐</div>
+                  <div class="sp-cc-meta">119K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            <a href="/montana/lewis-and-clark/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🏛️</span>
+                <div>
+                  <div class="sp-cc-name">Lewis and Clark County ⭐</div>
+                  <div class="sp-cc-meta">69K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:82%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            <a href="/montana/flathead/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🌊</span>
+                <div>
+                  <div class="sp-cc-name">Flathead County ⭐</div>
+                  <div class="sp-cc-meta">104K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            </div>
+            <div class="sp-section-label">All ? Counties — Alphabetical</div>
+            <div class="sp-az-grid" id="county-list">
+          <a href="/montana/beaverhead/" class="sp-az-item">📍 Beaverhead County</a>
+          <a href="/montana/big-horn/" class="sp-az-item">📍 Big Horn County</a>
+          <a href="/montana/blaine/" class="sp-az-item">📍 Blaine County</a>
+          <a href="/montana/broadwater/" class="sp-az-item">📍 Broadwater County</a>
+          <a href="/montana/carbon/" class="sp-az-item">📍 Carbon County</a>
+          <a href="/montana/carter/" class="sp-az-item">📍 Carter County</a>
+          <a href="/montana/cascade/" class="sp-az-item">📍 Cascade County</a>
+          <a href="/montana/chouteau/" class="sp-az-item">📍 Chouteau County</a>
+          <a href="/montana/custer/" class="sp-az-item">📍 Custer County</a>
+          <a href="/montana/daniels/" class="sp-az-item">📍 Daniels County</a>
+          <a href="/montana/dawson/" class="sp-az-item">📍 Dawson County</a>
+          <a href="/montana/deer-lodge/" class="sp-az-item">📍 Deer Lodge County</a>
+          <a href="/montana/fallon/" class="sp-az-item">📍 Fallon County</a>
+          <a href="/montana/fergus/" class="sp-az-item">📍 Fergus County</a>
+          <a href="/montana/flathead/" class="sp-az-item">📍 Flathead County</a>
+          <a href="/montana/gallatin/" class="sp-az-item">📍 Gallatin County</a>
+          <a href="/montana/garfield/" class="sp-az-item">📍 Garfield County</a>
+          <a href="/montana/glacier/" class="sp-az-item">📍 Glacier County</a>
+          <a href="/montana/golden-valley/" class="sp-az-item">📍 Golden Valley County</a>
+          <a href="/montana/granite/" class="sp-az-item">📍 Granite County</a>
+          <a href="/montana/hill/" class="sp-az-item">📍 Hill County</a>
+          <a href="/montana/jefferson/" class="sp-az-item">📍 Jefferson County</a>
+          <a href="/montana/judith-basin/" class="sp-az-item">📍 Judith Basin County</a>
+          <a href="/montana/lake/" class="sp-az-item">📍 Lake County</a>
+          <a href="/montana/lewis-and-clark/" class="sp-az-item">📍 Lewis and Clark County</a>
+          <a href="/montana/liberty/" class="sp-az-item">📍 Liberty County</a>
+          <a href="/montana/lincoln/" class="sp-az-item">📍 Lincoln County</a>
+          <a href="/montana/madison/" class="sp-az-item">📍 Madison County</a>
+          <a href="/montana/mccone/" class="sp-az-item">📍 McCone County</a>
+          <a href="/montana/meagher/" class="sp-az-item">📍 Meagher County</a>
+          <a href="/montana/mineral/" class="sp-az-item">📍 Mineral County</a>
+          <a href="/montana/missoula/" class="sp-az-item">📍 Missoula County</a>
+          <a href="/montana/musselshell/" class="sp-az-item">📍 Musselshell County</a>
+          <a href="/montana/park/" class="sp-az-item">📍 Park County</a>
+          <a href="/montana/petroleum/" class="sp-az-item">📍 Petroleum County</a>
+          <a href="/montana/phillips/" class="sp-az-item">📍 Phillips County</a>
+          <a href="/montana/pondera/" class="sp-az-item">📍 Pondera County</a>
+          <a href="/montana/powder-river/" class="sp-az-item">📍 Powder River County</a>
+          <a href="/montana/powell/" class="sp-az-item">📍 Powell County</a>
+          <a href="/montana/prairie/" class="sp-az-item">📍 Prairie County</a>
+          <a href="/montana/ravalli/" class="sp-az-item">📍 Ravalli County</a>
+          <a href="/montana/richland/" class="sp-az-item">📍 Richland County</a>
+          <a href="/montana/roosevelt/" class="sp-az-item">📍 Roosevelt County</a>
+          <a href="/montana/rosebud/" class="sp-az-item">📍 Rosebud County</a>
+          <a href="/montana/sanders/" class="sp-az-item">📍 Sanders County</a>
+          <a href="/montana/sheridan/" class="sp-az-item">📍 Sheridan County</a>
+          <a href="/montana/silver-bow/" class="sp-az-item">📍 Silver Bow County</a>
+          <a href="/montana/stillwater/" class="sp-az-item">📍 Stillwater County</a>
+          <a href="/montana/sweet-grass/" class="sp-az-item">📍 Sweet Grass County</a>
+          <a href="/montana/teton/" class="sp-az-item">📍 Teton County</a>
+          <a href="/montana/toole/" class="sp-az-item">📍 Toole County</a>
+          <a href="/montana/treasure/" class="sp-az-item">📍 Treasure County</a>
+          <a href="/montana/valley/" class="sp-az-item">📍 Valley County</a>
+          <a href="/montana/wheatland/" class="sp-az-item">📍 Wheatland County</a>
+          <a href="/montana/wibaux/" class="sp-az-item">📍 Wibaux County</a>
+          <a href="/montana/yellowstone/" class="sp-az-item">📍 Yellowstone County</a>
+            </div>
           </div>
-        </div>
-        <h3 style="color:var(--gray-600);font-size:1.1rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1.5rem;">All 56 Countys — Alphabetical</h3>
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0.75rem;">
-          <a href="/montana/beaverhead/" class="county-link-item">📍 Beaverhead County</a>
-          <a href="/montana/big-horn/" class="county-link-item">📍 Big Horn County</a>
-          <a href="/montana/blaine/" class="county-link-item">📍 Blaine County</a>
-          <a href="/montana/broadwater/" class="county-link-item">📍 Broadwater County</a>
-          <a href="/montana/carbon/" class="county-link-item">📍 Carbon County</a>
-          <a href="/montana/carter/" class="county-link-item">📍 Carter County</a>
-          <a href="/montana/cascade/" class="county-link-item">📍 Cascade County</a>
-          <a href="/montana/chouteau/" class="county-link-item">📍 Chouteau County</a>
-          <a href="/montana/custer/" class="county-link-item">📍 Custer County</a>
-          <a href="/montana/daniels/" class="county-link-item">📍 Daniels County</a>
-          <a href="/montana/dawson/" class="county-link-item">📍 Dawson County</a>
-          <a href="/montana/deer-lodge/" class="county-link-item">📍 Deer Lodge County</a>
-          <a href="/montana/fallon/" class="county-link-item">📍 Fallon County</a>
-          <a href="/montana/fergus/" class="county-link-item">📍 Fergus County</a>
-          <a href="/montana/flathead/" class="county-link-item">📍 Flathead County</a>
-          <a href="/montana/gallatin/" class="county-link-item">📍 Gallatin County</a>
-          <a href="/montana/garfield/" class="county-link-item">📍 Garfield County</a>
-          <a href="/montana/glacier/" class="county-link-item">📍 Glacier County</a>
-          <a href="/montana/golden-valley/" class="county-link-item">📍 Golden Valley County</a>
-          <a href="/montana/granite/" class="county-link-item">📍 Granite County</a>
-          <a href="/montana/hill/" class="county-link-item">📍 Hill County</a>
-          <a href="/montana/jefferson/" class="county-link-item">📍 Jefferson County</a>
-          <a href="/montana/judith-basin/" class="county-link-item">📍 Judith Basin County</a>
-          <a href="/montana/lake/" class="county-link-item">📍 Lake County</a>
-          <a href="/montana/lewis-and-clark/" class="county-link-item">📍 Lewis and Clark County</a>
-          <a href="/montana/liberty/" class="county-link-item">📍 Liberty County</a>
-          <a href="/montana/lincoln/" class="county-link-item">📍 Lincoln County</a>
-          <a href="/montana/madison/" class="county-link-item">📍 Madison County</a>
-          <a href="/montana/mccone/" class="county-link-item">📍 McCone County</a>
-          <a href="/montana/meagher/" class="county-link-item">📍 Meagher County</a>
-          <a href="/montana/mineral/" class="county-link-item">📍 Mineral County</a>
-          <a href="/montana/missoula/" class="county-link-item">📍 Missoula County</a>
-          <a href="/montana/musselshell/" class="county-link-item">📍 Musselshell County</a>
-          <a href="/montana/park/" class="county-link-item">📍 Park County</a>
-          <a href="/montana/petroleum/" class="county-link-item">📍 Petroleum County</a>
-          <a href="/montana/phillips/" class="county-link-item">📍 Phillips County</a>
-          <a href="/montana/pondera/" class="county-link-item">📍 Pondera County</a>
-          <a href="/montana/powder-river/" class="county-link-item">📍 Powder River County</a>
-          <a href="/montana/powell/" class="county-link-item">📍 Powell County</a>
-          <a href="/montana/prairie/" class="county-link-item">📍 Prairie County</a>
-          <a href="/montana/ravalli/" class="county-link-item">📍 Ravalli County</a>
-          <a href="/montana/richland/" class="county-link-item">📍 Richland County</a>
-          <a href="/montana/roosevelt/" class="county-link-item">📍 Roosevelt County</a>
-          <a href="/montana/rosebud/" class="county-link-item">📍 Rosebud County</a>
-          <a href="/montana/sanders/" class="county-link-item">📍 Sanders County</a>
-          <a href="/montana/sheridan/" class="county-link-item">📍 Sheridan County</a>
-          <a href="/montana/silver-bow/" class="county-link-item">📍 Silver Bow County</a>
-          <a href="/montana/stillwater/" class="county-link-item">📍 Stillwater County</a>
-          <a href="/montana/sweet-grass/" class="county-link-item">📍 Sweet Grass County</a>
-          <a href="/montana/teton/" class="county-link-item">📍 Teton County</a>
-          <a href="/montana/toole/" class="county-link-item">📍 Toole County</a>
-          <a href="/montana/treasure/" class="county-link-item">📍 Treasure County</a>
-          <a href="/montana/valley/" class="county-link-item">📍 Valley County</a>
-          <a href="/montana/wheatland/" class="county-link-item">📍 Wheatland County</a>
-          <a href="/montana/wibaux/" class="county-link-item">📍 Wibaux County</a>
-          <a href="/montana/yellowstone/" class="county-link-item">📍 Yellowstone County</a>
+
         </div>
       </div>
-    </section>
+    </div>
+
+    <script>
+    /* County search filter */
+    (function() {
+      var inp = document.getElementById('county-search');
+      if (!inp) return;
+      inp.addEventListener('input', function() {
+        var q = inp.value.trim().toLowerCase();
+        document.querySelectorAll('#county-list .sp-az-item').forEach(function(el) {
+          el.classList.toggle('sp-hidden', q.length > 0 && el.textContent.toLowerCase().indexOf(q) === -1);
+        });
+      });
+    })();
+    </script>
+
   </main>
-  <style>
-    .county-link-item {display:flex;align-items:center;gap:0.5rem;padding:0.65rem 1rem;border:1px solid var(--gray-200);border-radius:8px;color:var(--navy);font-size:0.875rem;font-weight:600;text-decoration:none;background:#fff;transition:all 0.2s;}
-    .county-link-item:hover {border-color:var(--blue);background:rgba(45,125,210,0.04);color:var(--blue);}
-  </style>
+  
   <footer class="footer">
     <div class="container">
       <div class="footer__bottom" style="border-top:1px solid rgba(255,255,255,0.1);padding:1.5rem 0;margin-top:0;">

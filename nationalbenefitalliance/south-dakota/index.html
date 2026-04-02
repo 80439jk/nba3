@@ -76,174 +76,232 @@
       </ol>
     </div>
   </nav>
-  <main>
-    <section style="background:linear-gradient(135deg,#0F2447,#1B3A6B);padding:4rem 0 3rem;color:#fff;">
+    <main>
+
+    <!-- State Page — Option C: Sidebar Directory -->
+    <div class="sp-hero">
       <div class="container">
-        <div style="display:flex;align-items:center;gap:1.5rem;margin-bottom:1rem;">
-          <span style="font-size:3.5rem;">🗿</span>
-          <div>
-            <span style="color:var(--gold-light);font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;">State Resource Center</span>
-            <h1 style="color:#fff;margin:0;">South Dakota County Resources</h1>
+        <div class="sp-hero__inner">
+          <div class="sp-hero__left">
+            <span class="sp-hero__emoji">🗿</span>
+            <div>
+              <h1 class="sp-hero__h1">South Dakota County Resources</h1>
+              <p class="sp-hero__sub">? counties · 400+ assistance programs · Always free</p>
+            </div>
           </div>
-        </div>
-        <p class="lead" style="color:rgba(255,255,255,0.78);max-width:640px;">
-          All 66 South Dakota countys covered. Find free government and community assistance programs for utilities, housing, food, SD Medicaid, SNAP, and more — organized by your county.
-        </p>
-        <form id="zip-form" style="display:flex;gap:0;max-width:420px;margin-top:2rem;border-radius:8px;overflow:hidden;border:2px solid rgba(255,255,255,0.2);" aria-label="ZIP search">
-          <input id="zip-input" type="tel" placeholder="Enter ZIP code" maxlength="5" style="flex:1;padding:0.85rem 1rem;border:none;font-size:1rem;font-weight:600;letter-spacing:0.08em;outline:none;" />
-          <button type="submit" style="background:var(--gold);color:var(--navy-dark);border:none;padding:0.85rem 1.25rem;font-weight:700;">Go →</button>
-        </form>
-      </div>
-    </section>
-    <div style="background:var(--gray-50);border-bottom:1px solid var(--gray-200);padding:1.25rem 0;">
-      <div class="container">
-        <div style="display:flex;gap:3rem;flex-wrap:wrap;align-items:center;">
-          <div><strong style="color:var(--navy);font-size:1.4rem;">66</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Countys</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">400+</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Assistance Programs</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">9</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Resource Categories</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">Free</strong> <span style="color:var(--gray-600);font-size:0.9rem;">PDF Download</span></div>
-          <div style="margin-left:auto;">
-            <a href="tel:18006224357" style="background:var(--navy);color:#fff;padding:0.6rem 1.25rem;border-radius:6px;font-weight:700;font-size:0.9rem;text-decoration:none;">📞 Get Access Code</a>
+          <div class="sp-hero__right">
+            <form id="zip-form" class="sp-zip-form" aria-label="ZIP search">
+              <input id="zip-input" type="tel" placeholder="Enter ZIP code" maxlength="5"/>
+              <button type="submit">Go →</button>
+            </form>
+            <a href="tel:18006224357" class="sp-access-btn">📞 Get Access Code</a>
           </div>
         </div>
       </div>
     </div>
-    <section class="section" aria-labelledby="counties-heading">
+
+    <div class="sp-body">
       <div class="container">
-        <div class="section-header">
-          <span class="badge badge--gold">All Countys</span>
-          <h2 id="counties-heading">Browse All 66 South Dakota Countys</h2>
-          <p>Click your county to view the full resource guide. Countys marked ⭐ have been fully verified and updated.</p>
-        </div>
-        <div style="margin-bottom:3rem;">
-          <h3 style="color:var(--gray-600);font-size:1.1rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1.5rem;">Most Populated Countys</h3>
-          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem;">
-            <a href="/south-dakota/minnehaha/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🏙️</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Minnehaha County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">197K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+        <div class="sp-layout">
+
+          <!-- Sidebar -->
+          <aside class="sp-sidebar">
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">🔍 Search Counties</div>
+              <div class="sp-sidebar-body">
+                <input class="sp-sidebar-search-input" id="county-search" type="text" placeholder="County name…" autocomplete="off"/>
               </div>
-            </a>
-            <a href="/south-dakota/pennington/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🗿</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Pennington County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">109K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">📂 Program Type</div>
+              <div class="sp-sidebar-body">
+                <a href="#all" class="sp-sidebar-link active">All Programs</a>
+                <a href="/south-dakota#utilities" class="sp-sidebar-link">⚡ Utility Assistance</a>
+                <a href="/south-dakota#housing" class="sp-sidebar-link">🏠 Housing &amp; Rent</a>
+                <a href="/south-dakota#food" class="sp-sidebar-link">🥗 Food / SNAP</a>
+                <a href="/south-dakota#healthcare" class="sp-sidebar-link">🏥 Medicaid / Health</a>
+                <a href="/south-dakota#employment" class="sp-sidebar-link">💼 Employment</a>
+                <a href="/south-dakota#childcare" class="sp-sidebar-link">👶 Child Care</a>
+                <a href="/south-dakota#disability" class="sp-sidebar-link">♿ Disability</a>
+                <a href="/south-dakota#education" class="sp-sidebar-link">📚 Education</a>
               </div>
-            </a>
-            <a href="/south-dakota/lincoln/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🌾</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Lincoln County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">65K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">📊 At a Glance</div>
+              <div class="sp-sidebar-body">
+                <div class="sp-sidebar-stat"><span>?</span><span>Counties</span></div>
+                <div class="sp-sidebar-stat"><span>400+</span><span>Programs</span></div>
+                <div class="sp-sidebar-stat"><span>9</span><span>Categories</span></div>
+                <div class="sp-sidebar-stat"><span>Free</span><span>PDF Guide</span></div>
               </div>
-            </a>
-            <a href="/south-dakota/brown/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🌽</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Brown County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">39K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+          </aside>
+
+          <!-- Main content -->
+          <div class="sp-content">
+            <div class="sp-content-hd">
+              <h2>⭐ Featured Counties</h2>
+              <span>? counties total</span>
+            </div>
+            <div class="sp-featured-grid">
+            <a href="/south-dakota/minnehaha/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🏙️</span>
+                <div>
+                  <div class="sp-cc-name">Minnehaha County ⭐</div>
+                  <div class="sp-cc-meta">197K residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
-            <a href="/south-dakota/codington/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🌊</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Codington County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">28K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            <a href="/south-dakota/pennington/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🗿</span>
+                <div>
+                  <div class="sp-cc-name">Pennington County ⭐</div>
+                  <div class="sp-cc-meta">109K residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
-            <a href="/south-dakota/meade/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🏍️</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Meade County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">29K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            <a href="/south-dakota/lincoln/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🌾</span>
+                <div>
+                  <div class="sp-cc-name">Lincoln County ⭐</div>
+                  <div class="sp-cc-meta">65K residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:78%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
+            <a href="/south-dakota/brown/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🌽</span>
+                <div>
+                  <div class="sp-cc-name">Brown County ⭐</div>
+                  <div class="sp-cc-meta">39K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:50%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            <a href="/south-dakota/codington/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🌊</span>
+                <div>
+                  <div class="sp-cc-name">Codington County ⭐</div>
+                  <div class="sp-cc-meta">28K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:50%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            <a href="/south-dakota/meade/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🏍️</span>
+                <div>
+                  <div class="sp-cc-name">Meade County ⭐</div>
+                  <div class="sp-cc-meta">29K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:50%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            </div>
+            <div class="sp-section-label">All ? Counties — Alphabetical</div>
+            <div class="sp-az-grid" id="county-list">
+          <a href="/south-dakota/aurora/" class="sp-az-item">📍 Aurora County</a>
+          <a href="/south-dakota/beadle/" class="sp-az-item">📍 Beadle County</a>
+          <a href="/south-dakota/bennett/" class="sp-az-item">📍 Bennett County</a>
+          <a href="/south-dakota/bon-homme/" class="sp-az-item">📍 Bon Homme County</a>
+          <a href="/south-dakota/brookings/" class="sp-az-item">📍 Brookings County</a>
+          <a href="/south-dakota/brown/" class="sp-az-item">📍 Brown County</a>
+          <a href="/south-dakota/brule/" class="sp-az-item">📍 Brule County</a>
+          <a href="/south-dakota/buffalo/" class="sp-az-item">📍 Buffalo County</a>
+          <a href="/south-dakota/butte/" class="sp-az-item">📍 Butte County</a>
+          <a href="/south-dakota/campbell/" class="sp-az-item">📍 Campbell County</a>
+          <a href="/south-dakota/charles-mix/" class="sp-az-item">📍 Charles Mix County</a>
+          <a href="/south-dakota/clark/" class="sp-az-item">📍 Clark County</a>
+          <a href="/south-dakota/clay/" class="sp-az-item">📍 Clay County</a>
+          <a href="/south-dakota/codington/" class="sp-az-item">📍 Codington County</a>
+          <a href="/south-dakota/corson/" class="sp-az-item">📍 Corson County</a>
+          <a href="/south-dakota/custer/" class="sp-az-item">📍 Custer County</a>
+          <a href="/south-dakota/davison/" class="sp-az-item">📍 Davison County</a>
+          <a href="/south-dakota/day/" class="sp-az-item">📍 Day County</a>
+          <a href="/south-dakota/deuel/" class="sp-az-item">📍 Deuel County</a>
+          <a href="/south-dakota/dewey/" class="sp-az-item">📍 Dewey County</a>
+          <a href="/south-dakota/douglas/" class="sp-az-item">📍 Douglas County</a>
+          <a href="/south-dakota/edmunds/" class="sp-az-item">📍 Edmunds County</a>
+          <a href="/south-dakota/fall-river/" class="sp-az-item">📍 Fall River County</a>
+          <a href="/south-dakota/faulk/" class="sp-az-item">📍 Faulk County</a>
+          <a href="/south-dakota/grant/" class="sp-az-item">📍 Grant County</a>
+          <a href="/south-dakota/gregory/" class="sp-az-item">📍 Gregory County</a>
+          <a href="/south-dakota/haakon/" class="sp-az-item">📍 Haakon County</a>
+          <a href="/south-dakota/hamlin/" class="sp-az-item">📍 Hamlin County</a>
+          <a href="/south-dakota/hand/" class="sp-az-item">📍 Hand County</a>
+          <a href="/south-dakota/hanson/" class="sp-az-item">📍 Hanson County</a>
+          <a href="/south-dakota/harding/" class="sp-az-item">📍 Harding County</a>
+          <a href="/south-dakota/hughes/" class="sp-az-item">📍 Hughes County</a>
+          <a href="/south-dakota/hutchinson/" class="sp-az-item">📍 Hutchinson County</a>
+          <a href="/south-dakota/hyde/" class="sp-az-item">📍 Hyde County</a>
+          <a href="/south-dakota/jackson/" class="sp-az-item">📍 Jackson County</a>
+          <a href="/south-dakota/jerauld/" class="sp-az-item">📍 Jerauld County</a>
+          <a href="/south-dakota/jones/" class="sp-az-item">📍 Jones County</a>
+          <a href="/south-dakota/kingsbury/" class="sp-az-item">📍 Kingsbury County</a>
+          <a href="/south-dakota/lake/" class="sp-az-item">📍 Lake County</a>
+          <a href="/south-dakota/lawrence/" class="sp-az-item">📍 Lawrence County</a>
+          <a href="/south-dakota/lincoln/" class="sp-az-item">📍 Lincoln County</a>
+          <a href="/south-dakota/lyman/" class="sp-az-item">📍 Lyman County</a>
+          <a href="/south-dakota/marshall/" class="sp-az-item">📍 Marshall County</a>
+          <a href="/south-dakota/mccook/" class="sp-az-item">📍 McCook County</a>
+          <a href="/south-dakota/mcpherson/" class="sp-az-item">📍 McPherson County</a>
+          <a href="/south-dakota/meade/" class="sp-az-item">📍 Meade County</a>
+          <a href="/south-dakota/mellette/" class="sp-az-item">📍 Mellette County</a>
+          <a href="/south-dakota/miner/" class="sp-az-item">📍 Miner County</a>
+          <a href="/south-dakota/minnehaha/" class="sp-az-item">📍 Minnehaha County</a>
+          <a href="/south-dakota/moody/" class="sp-az-item">📍 Moody County</a>
+          <a href="/south-dakota/oglala-lakota/" class="sp-az-item">📍 Oglala Lakota County</a>
+          <a href="/south-dakota/pennington/" class="sp-az-item">📍 Pennington County</a>
+          <a href="/south-dakota/perkins/" class="sp-az-item">📍 Perkins County</a>
+          <a href="/south-dakota/potter/" class="sp-az-item">📍 Potter County</a>
+          <a href="/south-dakota/roberts/" class="sp-az-item">📍 Roberts County</a>
+          <a href="/south-dakota/sanborn/" class="sp-az-item">📍 Sanborn County</a>
+          <a href="/south-dakota/spink/" class="sp-az-item">📍 Spink County</a>
+          <a href="/south-dakota/stanley/" class="sp-az-item">📍 Stanley County</a>
+          <a href="/south-dakota/sully/" class="sp-az-item">📍 Sully County</a>
+          <a href="/south-dakota/todd/" class="sp-az-item">📍 Todd County</a>
+          <a href="/south-dakota/tripp/" class="sp-az-item">📍 Tripp County</a>
+          <a href="/south-dakota/turner/" class="sp-az-item">📍 Turner County</a>
+          <a href="/south-dakota/union/" class="sp-az-item">📍 Union County</a>
+          <a href="/south-dakota/walworth/" class="sp-az-item">📍 Walworth County</a>
+          <a href="/south-dakota/yankton/" class="sp-az-item">📍 Yankton County</a>
+          <a href="/south-dakota/ziebach/" class="sp-az-item">📍 Ziebach County</a>
+            </div>
           </div>
-        </div>
-        <h3 style="color:var(--gray-600);font-size:1.1rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1.5rem;">All 66 Countys — Alphabetical</h3>
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0.75rem;">
-          <a href="/south-dakota/aurora/" class="county-link-item">📍 Aurora County</a>
-          <a href="/south-dakota/beadle/" class="county-link-item">📍 Beadle County</a>
-          <a href="/south-dakota/bennett/" class="county-link-item">📍 Bennett County</a>
-          <a href="/south-dakota/bon-homme/" class="county-link-item">📍 Bon Homme County</a>
-          <a href="/south-dakota/brookings/" class="county-link-item">📍 Brookings County</a>
-          <a href="/south-dakota/brown/" class="county-link-item">📍 Brown County</a>
-          <a href="/south-dakota/brule/" class="county-link-item">📍 Brule County</a>
-          <a href="/south-dakota/buffalo/" class="county-link-item">📍 Buffalo County</a>
-          <a href="/south-dakota/butte/" class="county-link-item">📍 Butte County</a>
-          <a href="/south-dakota/campbell/" class="county-link-item">📍 Campbell County</a>
-          <a href="/south-dakota/charles-mix/" class="county-link-item">📍 Charles Mix County</a>
-          <a href="/south-dakota/clark/" class="county-link-item">📍 Clark County</a>
-          <a href="/south-dakota/clay/" class="county-link-item">📍 Clay County</a>
-          <a href="/south-dakota/codington/" class="county-link-item">📍 Codington County</a>
-          <a href="/south-dakota/corson/" class="county-link-item">📍 Corson County</a>
-          <a href="/south-dakota/custer/" class="county-link-item">📍 Custer County</a>
-          <a href="/south-dakota/davison/" class="county-link-item">📍 Davison County</a>
-          <a href="/south-dakota/day/" class="county-link-item">📍 Day County</a>
-          <a href="/south-dakota/deuel/" class="county-link-item">📍 Deuel County</a>
-          <a href="/south-dakota/dewey/" class="county-link-item">📍 Dewey County</a>
-          <a href="/south-dakota/douglas/" class="county-link-item">📍 Douglas County</a>
-          <a href="/south-dakota/edmunds/" class="county-link-item">📍 Edmunds County</a>
-          <a href="/south-dakota/fall-river/" class="county-link-item">📍 Fall River County</a>
-          <a href="/south-dakota/faulk/" class="county-link-item">📍 Faulk County</a>
-          <a href="/south-dakota/grant/" class="county-link-item">📍 Grant County</a>
-          <a href="/south-dakota/gregory/" class="county-link-item">📍 Gregory County</a>
-          <a href="/south-dakota/haakon/" class="county-link-item">📍 Haakon County</a>
-          <a href="/south-dakota/hamlin/" class="county-link-item">📍 Hamlin County</a>
-          <a href="/south-dakota/hand/" class="county-link-item">📍 Hand County</a>
-          <a href="/south-dakota/hanson/" class="county-link-item">📍 Hanson County</a>
-          <a href="/south-dakota/harding/" class="county-link-item">📍 Harding County</a>
-          <a href="/south-dakota/hughes/" class="county-link-item">📍 Hughes County</a>
-          <a href="/south-dakota/hutchinson/" class="county-link-item">📍 Hutchinson County</a>
-          <a href="/south-dakota/hyde/" class="county-link-item">📍 Hyde County</a>
-          <a href="/south-dakota/jackson/" class="county-link-item">📍 Jackson County</a>
-          <a href="/south-dakota/jerauld/" class="county-link-item">📍 Jerauld County</a>
-          <a href="/south-dakota/jones/" class="county-link-item">📍 Jones County</a>
-          <a href="/south-dakota/kingsbury/" class="county-link-item">📍 Kingsbury County</a>
-          <a href="/south-dakota/lake/" class="county-link-item">📍 Lake County</a>
-          <a href="/south-dakota/lawrence/" class="county-link-item">📍 Lawrence County</a>
-          <a href="/south-dakota/lincoln/" class="county-link-item">📍 Lincoln County</a>
-          <a href="/south-dakota/lyman/" class="county-link-item">📍 Lyman County</a>
-          <a href="/south-dakota/marshall/" class="county-link-item">📍 Marshall County</a>
-          <a href="/south-dakota/mccook/" class="county-link-item">📍 McCook County</a>
-          <a href="/south-dakota/mcpherson/" class="county-link-item">📍 McPherson County</a>
-          <a href="/south-dakota/meade/" class="county-link-item">📍 Meade County</a>
-          <a href="/south-dakota/mellette/" class="county-link-item">📍 Mellette County</a>
-          <a href="/south-dakota/miner/" class="county-link-item">📍 Miner County</a>
-          <a href="/south-dakota/minnehaha/" class="county-link-item">📍 Minnehaha County</a>
-          <a href="/south-dakota/moody/" class="county-link-item">📍 Moody County</a>
-          <a href="/south-dakota/oglala-lakota/" class="county-link-item">📍 Oglala Lakota County</a>
-          <a href="/south-dakota/pennington/" class="county-link-item">📍 Pennington County</a>
-          <a href="/south-dakota/perkins/" class="county-link-item">📍 Perkins County</a>
-          <a href="/south-dakota/potter/" class="county-link-item">📍 Potter County</a>
-          <a href="/south-dakota/roberts/" class="county-link-item">📍 Roberts County</a>
-          <a href="/south-dakota/sanborn/" class="county-link-item">📍 Sanborn County</a>
-          <a href="/south-dakota/spink/" class="county-link-item">📍 Spink County</a>
-          <a href="/south-dakota/stanley/" class="county-link-item">📍 Stanley County</a>
-          <a href="/south-dakota/sully/" class="county-link-item">📍 Sully County</a>
-          <a href="/south-dakota/todd/" class="county-link-item">📍 Todd County</a>
-          <a href="/south-dakota/tripp/" class="county-link-item">📍 Tripp County</a>
-          <a href="/south-dakota/turner/" class="county-link-item">📍 Turner County</a>
-          <a href="/south-dakota/union/" class="county-link-item">📍 Union County</a>
-          <a href="/south-dakota/walworth/" class="county-link-item">📍 Walworth County</a>
-          <a href="/south-dakota/yankton/" class="county-link-item">📍 Yankton County</a>
-          <a href="/south-dakota/ziebach/" class="county-link-item">📍 Ziebach County</a>
+
         </div>
       </div>
-    </section>
+    </div>
+
+    <script>
+    /* County search filter */
+    (function() {
+      var inp = document.getElementById('county-search');
+      if (!inp) return;
+      inp.addEventListener('input', function() {
+        var q = inp.value.trim().toLowerCase();
+        document.querySelectorAll('#county-list .sp-az-item').forEach(function(el) {
+          el.classList.toggle('sp-hidden', q.length > 0 && el.textContent.toLowerCase().indexOf(q) === -1);
+        });
+      });
+    })();
+    </script>
+
   </main>
-  <style>
-    .county-link-item {display:flex;align-items:center;gap:0.5rem;padding:0.65rem 1rem;border:1px solid var(--gray-200);border-radius:8px;color:var(--navy);font-size:0.875rem;font-weight:600;text-decoration:none;background:#fff;transition:all 0.2s;}
-    .county-link-item:hover {border-color:var(--blue);background:rgba(45,125,210,0.04);color:var(--blue);}
-  </style>
+  
   <footer class="footer">
     <div class="container">
       <div class="footer__bottom" style="border-top:1px solid rgba(255,255,255,0.1);padding:1.5rem 0;margin-top:0;">

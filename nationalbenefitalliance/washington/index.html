@@ -76,147 +76,205 @@
       </ol>
     </div>
   </nav>
-  <main>
-    <section style="background:linear-gradient(135deg,#0F2447,#1B3A6B);padding:4rem 0 3rem;color:#fff;">
+    <main>
+
+    <!-- State Page — Option C: Sidebar Directory -->
+    <div class="sp-hero">
       <div class="container">
-        <div style="display:flex;align-items:center;gap:1.5rem;margin-bottom:1rem;">
-          <span style="font-size:3.5rem;">☕</span>
-          <div>
-            <span style="color:var(--gold-light);font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;">State Resource Center</span>
-            <h1 style="color:#fff;margin:0;">Washington County Resources</h1>
+        <div class="sp-hero__inner">
+          <div class="sp-hero__left">
+            <span class="sp-hero__emoji">☕</span>
+            <div>
+              <h1 class="sp-hero__h1">Washington County Resources</h1>
+              <p class="sp-hero__sub">? counties · 400+ assistance programs · Always free</p>
+            </div>
           </div>
-        </div>
-        <p class="lead" style="color:rgba(255,255,255,0.78);max-width:640px;">
-          All 39 Washington countys covered. Find free government and community assistance programs for utilities, housing, food, Apple Health, SNAP, and more — organized by your county.
-        </p>
-        <form id="zip-form" style="display:flex;gap:0;max-width:420px;margin-top:2rem;border-radius:8px;overflow:hidden;border:2px solid rgba(255,255,255,0.2);" aria-label="ZIP search">
-          <input id="zip-input" type="tel" placeholder="Enter ZIP code" maxlength="5" style="flex:1;padding:0.85rem 1rem;border:none;font-size:1rem;font-weight:600;letter-spacing:0.08em;outline:none;" />
-          <button type="submit" style="background:var(--gold);color:var(--navy-dark);border:none;padding:0.85rem 1.25rem;font-weight:700;">Go →</button>
-        </form>
-      </div>
-    </section>
-    <div style="background:var(--gray-50);border-bottom:1px solid var(--gray-200);padding:1.25rem 0;">
-      <div class="container">
-        <div style="display:flex;gap:3rem;flex-wrap:wrap;align-items:center;">
-          <div><strong style="color:var(--navy);font-size:1.4rem;">39</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Countys</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">400+</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Assistance Programs</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">9</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Resource Categories</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">Free</strong> <span style="color:var(--gray-600);font-size:0.9rem;">PDF Download</span></div>
-          <div style="margin-left:auto;">
-            <a href="tel:18006224357" style="background:var(--navy);color:#fff;padding:0.6rem 1.25rem;border-radius:6px;font-weight:700;font-size:0.9rem;text-decoration:none;">📞 Get Access Code</a>
+          <div class="sp-hero__right">
+            <form id="zip-form" class="sp-zip-form" aria-label="ZIP search">
+              <input id="zip-input" type="tel" placeholder="Enter ZIP code" maxlength="5"/>
+              <button type="submit">Go →</button>
+            </form>
+            <a href="tel:18006224357" class="sp-access-btn">📞 Get Access Code</a>
           </div>
         </div>
       </div>
     </div>
-    <section class="section" aria-labelledby="counties-heading">
+
+    <div class="sp-body">
       <div class="container">
-        <div class="section-header">
-          <span class="badge badge--gold">All Countys</span>
-          <h2 id="counties-heading">Browse All 39 Washington Countys</h2>
-          <p>Click your county to view the full resource guide. Countys marked ⭐ have been fully verified and updated.</p>
-        </div>
-        <div style="margin-bottom:3rem;">
-          <h3 style="color:var(--gray-600);font-size:1.1rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1.5rem;">Most Populated Countys</h3>
-          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem;">
-            <a href="/washington/king/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">☕</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">King County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">2.3M residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+        <div class="sp-layout">
+
+          <!-- Sidebar -->
+          <aside class="sp-sidebar">
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">🔍 Search Counties</div>
+              <div class="sp-sidebar-body">
+                <input class="sp-sidebar-search-input" id="county-search" type="text" placeholder="County name…" autocomplete="off"/>
               </div>
-            </a>
-            <a href="/washington/pierce/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">⚓</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Pierce County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">921K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">📂 Program Type</div>
+              <div class="sp-sidebar-body">
+                <a href="#all" class="sp-sidebar-link active">All Programs</a>
+                <a href="/washington#utilities" class="sp-sidebar-link">⚡ Utility Assistance</a>
+                <a href="/washington#housing" class="sp-sidebar-link">🏠 Housing &amp; Rent</a>
+                <a href="/washington#food" class="sp-sidebar-link">🥗 Food / SNAP</a>
+                <a href="/washington#healthcare" class="sp-sidebar-link">🏥 Medicaid / Health</a>
+                <a href="/washington#employment" class="sp-sidebar-link">💼 Employment</a>
+                <a href="/washington#childcare" class="sp-sidebar-link">👶 Child Care</a>
+                <a href="/washington#disability" class="sp-sidebar-link">♿ Disability</a>
+                <a href="/washington#education" class="sp-sidebar-link">📚 Education</a>
               </div>
-            </a>
-            <a href="/washington/snohomish/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">✈️</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Snohomish County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">828K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">📊 At a Glance</div>
+              <div class="sp-sidebar-body">
+                <div class="sp-sidebar-stat"><span>?</span><span>Counties</span></div>
+                <div class="sp-sidebar-stat"><span>400+</span><span>Programs</span></div>
+                <div class="sp-sidebar-stat"><span>9</span><span>Categories</span></div>
+                <div class="sp-sidebar-stat"><span>Free</span><span>PDF Guide</span></div>
               </div>
-            </a>
-            <a href="/washington/spokane/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🌲</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Spokane County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">523K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+          </aside>
+
+          <!-- Main content -->
+          <div class="sp-content">
+            <div class="sp-content-hd">
+              <h2>⭐ Featured Counties</h2>
+              <span>? counties total</span>
+            </div>
+            <div class="sp-featured-grid">
+            <a href="/washington/king/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">☕</span>
+                <div>
+                  <div class="sp-cc-name">King County ⭐</div>
+                  <div class="sp-cc-meta">2.3M residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:50%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
-            <a href="/washington/clark/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🌉</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Clark County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">503K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            <a href="/washington/pierce/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">⚓</span>
+                <div>
+                  <div class="sp-cc-name">Pierce County ⭐</div>
+                  <div class="sp-cc-meta">921K residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
-            <a href="/washington/thurston/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🏛️</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Thurston County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">291K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            <a href="/washington/snohomish/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">✈️</span>
+                <div>
+                  <div class="sp-cc-name">Snohomish County ⭐</div>
+                  <div class="sp-cc-meta">828K residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
+            <a href="/washington/spokane/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🌲</span>
+                <div>
+                  <div class="sp-cc-name">Spokane County ⭐</div>
+                  <div class="sp-cc-meta">523K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            <a href="/washington/clark/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🌉</span>
+                <div>
+                  <div class="sp-cc-name">Clark County ⭐</div>
+                  <div class="sp-cc-meta">503K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            <a href="/washington/thurston/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🏛️</span>
+                <div>
+                  <div class="sp-cc-name">Thurston County ⭐</div>
+                  <div class="sp-cc-meta">291K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            </div>
+            <div class="sp-section-label">All ? Counties — Alphabetical</div>
+            <div class="sp-az-grid" id="county-list">
+          <a href="/washington/adams/" class="sp-az-item">📍 Adams County</a>
+          <a href="/washington/asotin/" class="sp-az-item">📍 Asotin County</a>
+          <a href="/washington/benton/" class="sp-az-item">📍 Benton County</a>
+          <a href="/washington/chelan/" class="sp-az-item">📍 Chelan County</a>
+          <a href="/washington/clallam/" class="sp-az-item">📍 Clallam County</a>
+          <a href="/washington/clark/" class="sp-az-item">📍 Clark County</a>
+          <a href="/washington/columbia/" class="sp-az-item">📍 Columbia County</a>
+          <a href="/washington/cowlitz/" class="sp-az-item">📍 Cowlitz County</a>
+          <a href="/washington/douglas/" class="sp-az-item">📍 Douglas County</a>
+          <a href="/washington/ferry/" class="sp-az-item">📍 Ferry County</a>
+          <a href="/washington/franklin/" class="sp-az-item">📍 Franklin County</a>
+          <a href="/washington/garfield/" class="sp-az-item">📍 Garfield County</a>
+          <a href="/washington/grant/" class="sp-az-item">📍 Grant County</a>
+          <a href="/washington/grays-harbor/" class="sp-az-item">📍 Grays Harbor County</a>
+          <a href="/washington/island/" class="sp-az-item">📍 Island County</a>
+          <a href="/washington/jefferson/" class="sp-az-item">📍 Jefferson County</a>
+          <a href="/washington/king/" class="sp-az-item">📍 King County</a>
+          <a href="/washington/kitsap/" class="sp-az-item">📍 Kitsap County</a>
+          <a href="/washington/kittitas/" class="sp-az-item">📍 Kittitas County</a>
+          <a href="/washington/klickitat/" class="sp-az-item">📍 Klickitat County</a>
+          <a href="/washington/lewis/" class="sp-az-item">📍 Lewis County</a>
+          <a href="/washington/lincoln/" class="sp-az-item">📍 Lincoln County</a>
+          <a href="/washington/mason/" class="sp-az-item">📍 Mason County</a>
+          <a href="/washington/okanogan/" class="sp-az-item">📍 Okanogan County</a>
+          <a href="/washington/pacific/" class="sp-az-item">📍 Pacific County</a>
+          <a href="/washington/pend-oreille/" class="sp-az-item">📍 Pend Oreille County</a>
+          <a href="/washington/pierce/" class="sp-az-item">📍 Pierce County</a>
+          <a href="/washington/san-juan/" class="sp-az-item">📍 San Juan County</a>
+          <a href="/washington/skagit/" class="sp-az-item">📍 Skagit County</a>
+          <a href="/washington/skamania/" class="sp-az-item">📍 Skamania County</a>
+          <a href="/washington/snohomish/" class="sp-az-item">📍 Snohomish County</a>
+          <a href="/washington/spokane/" class="sp-az-item">📍 Spokane County</a>
+          <a href="/washington/stevens/" class="sp-az-item">📍 Stevens County</a>
+          <a href="/washington/thurston/" class="sp-az-item">📍 Thurston County</a>
+          <a href="/washington/wahkiakum/" class="sp-az-item">📍 Wahkiakum County</a>
+          <a href="/washington/walla-walla/" class="sp-az-item">📍 Walla Walla County</a>
+          <a href="/washington/whatcom/" class="sp-az-item">📍 Whatcom County</a>
+          <a href="/washington/whitman/" class="sp-az-item">📍 Whitman County</a>
+          <a href="/washington/yakima/" class="sp-az-item">📍 Yakima County</a>
+            </div>
           </div>
-        </div>
-        <h3 style="color:var(--gray-600);font-size:1.1rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1.5rem;">All 39 Countys — Alphabetical</h3>
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0.75rem;">
-          <a href="/washington/adams/" class="county-link-item">📍 Adams County</a>
-          <a href="/washington/asotin/" class="county-link-item">📍 Asotin County</a>
-          <a href="/washington/benton/" class="county-link-item">📍 Benton County</a>
-          <a href="/washington/chelan/" class="county-link-item">📍 Chelan County</a>
-          <a href="/washington/clallam/" class="county-link-item">📍 Clallam County</a>
-          <a href="/washington/clark/" class="county-link-item">📍 Clark County</a>
-          <a href="/washington/columbia/" class="county-link-item">📍 Columbia County</a>
-          <a href="/washington/cowlitz/" class="county-link-item">📍 Cowlitz County</a>
-          <a href="/washington/douglas/" class="county-link-item">📍 Douglas County</a>
-          <a href="/washington/ferry/" class="county-link-item">📍 Ferry County</a>
-          <a href="/washington/franklin/" class="county-link-item">📍 Franklin County</a>
-          <a href="/washington/garfield/" class="county-link-item">📍 Garfield County</a>
-          <a href="/washington/grant/" class="county-link-item">📍 Grant County</a>
-          <a href="/washington/grays-harbor/" class="county-link-item">📍 Grays Harbor County</a>
-          <a href="/washington/island/" class="county-link-item">📍 Island County</a>
-          <a href="/washington/jefferson/" class="county-link-item">📍 Jefferson County</a>
-          <a href="/washington/king/" class="county-link-item">📍 King County</a>
-          <a href="/washington/kitsap/" class="county-link-item">📍 Kitsap County</a>
-          <a href="/washington/kittitas/" class="county-link-item">📍 Kittitas County</a>
-          <a href="/washington/klickitat/" class="county-link-item">📍 Klickitat County</a>
-          <a href="/washington/lewis/" class="county-link-item">📍 Lewis County</a>
-          <a href="/washington/lincoln/" class="county-link-item">📍 Lincoln County</a>
-          <a href="/washington/mason/" class="county-link-item">📍 Mason County</a>
-          <a href="/washington/okanogan/" class="county-link-item">📍 Okanogan County</a>
-          <a href="/washington/pacific/" class="county-link-item">📍 Pacific County</a>
-          <a href="/washington/pend-oreille/" class="county-link-item">📍 Pend Oreille County</a>
-          <a href="/washington/pierce/" class="county-link-item">📍 Pierce County</a>
-          <a href="/washington/san-juan/" class="county-link-item">📍 San Juan County</a>
-          <a href="/washington/skagit/" class="county-link-item">📍 Skagit County</a>
-          <a href="/washington/skamania/" class="county-link-item">📍 Skamania County</a>
-          <a href="/washington/snohomish/" class="county-link-item">📍 Snohomish County</a>
-          <a href="/washington/spokane/" class="county-link-item">📍 Spokane County</a>
-          <a href="/washington/stevens/" class="county-link-item">📍 Stevens County</a>
-          <a href="/washington/thurston/" class="county-link-item">📍 Thurston County</a>
-          <a href="/washington/wahkiakum/" class="county-link-item">📍 Wahkiakum County</a>
-          <a href="/washington/walla-walla/" class="county-link-item">📍 Walla Walla County</a>
-          <a href="/washington/whatcom/" class="county-link-item">📍 Whatcom County</a>
-          <a href="/washington/whitman/" class="county-link-item">📍 Whitman County</a>
-          <a href="/washington/yakima/" class="county-link-item">📍 Yakima County</a>
+
         </div>
       </div>
-    </section>
+    </div>
+
+    <script>
+    /* County search filter */
+    (function() {
+      var inp = document.getElementById('county-search');
+      if (!inp) return;
+      inp.addEventListener('input', function() {
+        var q = inp.value.trim().toLowerCase();
+        document.querySelectorAll('#county-list .sp-az-item').forEach(function(el) {
+          el.classList.toggle('sp-hidden', q.length > 0 && el.textContent.toLowerCase().indexOf(q) === -1);
+        });
+      });
+    })();
+    </script>
+
   </main>
-  <style>
-    .county-link-item {display:flex;align-items:center;gap:0.5rem;padding:0.65rem 1rem;border:1px solid var(--gray-200);border-radius:8px;color:var(--navy);font-size:0.875rem;font-weight:600;text-decoration:none;background:#fff;transition:all 0.2s;}
-    .county-link-item:hover {border-color:var(--blue);background:rgba(45,125,210,0.04);color:var(--blue);}
-  </style>
+  
   <footer class="footer">
     <div class="container">
       <div class="footer__bottom" style="border-top:1px solid rgba(255,255,255,0.1);padding:1.5rem 0;margin-top:0;">

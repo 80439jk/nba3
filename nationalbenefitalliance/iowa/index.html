@@ -76,207 +76,265 @@
       </ol>
     </div>
   </nav>
-  <main>
-    <section style="background:linear-gradient(135deg,#0F2447,#1B3A6B);padding:4rem 0 3rem;color:#fff;">
+    <main>
+
+    <!-- State Page — Option C: Sidebar Directory -->
+    <div class="sp-hero">
       <div class="container">
-        <div style="display:flex;align-items:center;gap:1.5rem;margin-bottom:1rem;">
-          <span style="font-size:3.5rem;">🌽</span>
-          <div>
-            <span style="color:var(--gold-light);font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;">State Resource Center</span>
-            <h1 style="color:#fff;margin:0;">Iowa County Resources</h1>
+        <div class="sp-hero__inner">
+          <div class="sp-hero__left">
+            <span class="sp-hero__emoji">🌽</span>
+            <div>
+              <h1 class="sp-hero__h1">Iowa County Resources</h1>
+              <p class="sp-hero__sub">? counties · 400+ assistance programs · Always free</p>
+            </div>
           </div>
-        </div>
-        <p class="lead" style="color:rgba(255,255,255,0.78);max-width:640px;">
-          All 99 Iowa countys covered. Find free government and community assistance programs for utilities, housing, food, Iowa Medicaid, SNAP, and more — organized by your county.
-        </p>
-        <form id="zip-form" style="display:flex;gap:0;max-width:420px;margin-top:2rem;border-radius:8px;overflow:hidden;border:2px solid rgba(255,255,255,0.2);" aria-label="ZIP search">
-          <input id="zip-input" type="tel" placeholder="Enter ZIP code" maxlength="5" style="flex:1;padding:0.85rem 1rem;border:none;font-size:1rem;font-weight:600;letter-spacing:0.08em;outline:none;" />
-          <button type="submit" style="background:var(--gold);color:var(--navy-dark);border:none;padding:0.85rem 1.25rem;font-weight:700;">Go →</button>
-        </form>
-      </div>
-    </section>
-    <div style="background:var(--gray-50);border-bottom:1px solid var(--gray-200);padding:1.25rem 0;">
-      <div class="container">
-        <div style="display:flex;gap:3rem;flex-wrap:wrap;align-items:center;">
-          <div><strong style="color:var(--navy);font-size:1.4rem;">99</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Countys</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">400+</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Assistance Programs</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">9</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Resource Categories</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">Free</strong> <span style="color:var(--gray-600);font-size:0.9rem;">PDF Download</span></div>
-          <div style="margin-left:auto;">
-            <a href="tel:18006224357" style="background:var(--navy);color:#fff;padding:0.6rem 1.25rem;border-radius:6px;font-weight:700;font-size:0.9rem;text-decoration:none;">📞 Get Access Code</a>
+          <div class="sp-hero__right">
+            <form id="zip-form" class="sp-zip-form" aria-label="ZIP search">
+              <input id="zip-input" type="tel" placeholder="Enter ZIP code" maxlength="5"/>
+              <button type="submit">Go →</button>
+            </form>
+            <a href="tel:18006224357" class="sp-access-btn">📞 Get Access Code</a>
           </div>
         </div>
       </div>
     </div>
-    <section class="section" aria-labelledby="counties-heading">
+
+    <div class="sp-body">
       <div class="container">
-        <div class="section-header">
-          <span class="badge badge--gold">All Countys</span>
-          <h2 id="counties-heading">Browse All 99 Iowa Countys</h2>
-          <p>Click your county to view the full resource guide. Countys marked ⭐ have been fully verified and updated.</p>
-        </div>
-        <div style="margin-bottom:3rem;">
-          <h3 style="color:var(--gray-600);font-size:1.1rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1.5rem;">Most Populated Countys</h3>
-          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem;">
-            <a href="/iowa/polk/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🌆</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Polk County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">492K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+        <div class="sp-layout">
+
+          <!-- Sidebar -->
+          <aside class="sp-sidebar">
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">🔍 Search Counties</div>
+              <div class="sp-sidebar-body">
+                <input class="sp-sidebar-search-input" id="county-search" type="text" placeholder="County name…" autocomplete="off"/>
               </div>
-            </a>
-            <a href="/iowa/linn/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🌽</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Linn County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">227K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">📂 Program Type</div>
+              <div class="sp-sidebar-body">
+                <a href="#all" class="sp-sidebar-link active">All Programs</a>
+                <a href="/iowa#utilities" class="sp-sidebar-link">⚡ Utility Assistance</a>
+                <a href="/iowa#housing" class="sp-sidebar-link">🏠 Housing &amp; Rent</a>
+                <a href="/iowa#food" class="sp-sidebar-link">🥗 Food / SNAP</a>
+                <a href="/iowa#healthcare" class="sp-sidebar-link">🏥 Medicaid / Health</a>
+                <a href="/iowa#employment" class="sp-sidebar-link">💼 Employment</a>
+                <a href="/iowa#childcare" class="sp-sidebar-link">👶 Child Care</a>
+                <a href="/iowa#disability" class="sp-sidebar-link">♿ Disability</a>
+                <a href="/iowa#education" class="sp-sidebar-link">📚 Education</a>
               </div>
-            </a>
-            <a href="/iowa/scott/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🌊</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Scott County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">173K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">📊 At a Glance</div>
+              <div class="sp-sidebar-body">
+                <div class="sp-sidebar-stat"><span>?</span><span>Counties</span></div>
+                <div class="sp-sidebar-stat"><span>400+</span><span>Programs</span></div>
+                <div class="sp-sidebar-stat"><span>9</span><span>Categories</span></div>
+                <div class="sp-sidebar-stat"><span>Free</span><span>PDF Guide</span></div>
               </div>
-            </a>
-            <a href="/iowa/johnson/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🎓</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Johnson County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">151K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+          </aside>
+
+          <!-- Main content -->
+          <div class="sp-content">
+            <div class="sp-content-hd">
+              <h2>⭐ Featured Counties</h2>
+              <span>? counties total</span>
+            </div>
+            <div class="sp-featured-grid">
+            <a href="/iowa/polk/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🌆</span>
+                <div>
+                  <div class="sp-cc-name">Polk County ⭐</div>
+                  <div class="sp-cc-meta">492K residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
-            <a href="/iowa/black-hawk/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🏭</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Black Hawk County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">131K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            <a href="/iowa/linn/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🌽</span>
+                <div>
+                  <div class="sp-cc-name">Linn County ⭐</div>
+                  <div class="sp-cc-meta">227K residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
-            <a href="/iowa/woodbury/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🌾</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Woodbury County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">103K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            <a href="/iowa/scott/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🌊</span>
+                <div>
+                  <div class="sp-cc-name">Scott County ⭐</div>
+                  <div class="sp-cc-meta">173K residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
+            <a href="/iowa/johnson/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🎓</span>
+                <div>
+                  <div class="sp-cc-name">Johnson County ⭐</div>
+                  <div class="sp-cc-meta">151K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            <a href="/iowa/black-hawk/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🏭</span>
+                <div>
+                  <div class="sp-cc-name">Black Hawk County ⭐</div>
+                  <div class="sp-cc-meta">131K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            <a href="/iowa/woodbury/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🌾</span>
+                <div>
+                  <div class="sp-cc-name">Woodbury County ⭐</div>
+                  <div class="sp-cc-meta">103K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            </div>
+            <div class="sp-section-label">All ? Counties — Alphabetical</div>
+            <div class="sp-az-grid" id="county-list">
+          <a href="/iowa/adair/" class="sp-az-item">📍 Adair County</a>
+          <a href="/iowa/adams/" class="sp-az-item">📍 Adams County</a>
+          <a href="/iowa/allamakee/" class="sp-az-item">📍 Allamakee County</a>
+          <a href="/iowa/appanoose/" class="sp-az-item">📍 Appanoose County</a>
+          <a href="/iowa/audubon/" class="sp-az-item">📍 Audubon County</a>
+          <a href="/iowa/benton/" class="sp-az-item">📍 Benton County</a>
+          <a href="/iowa/black-hawk/" class="sp-az-item">📍 Black Hawk County</a>
+          <a href="/iowa/boone/" class="sp-az-item">📍 Boone County</a>
+          <a href="/iowa/bremer/" class="sp-az-item">📍 Bremer County</a>
+          <a href="/iowa/buchanan/" class="sp-az-item">📍 Buchanan County</a>
+          <a href="/iowa/buena-vista/" class="sp-az-item">📍 Buena Vista County</a>
+          <a href="/iowa/butler/" class="sp-az-item">📍 Butler County</a>
+          <a href="/iowa/calhoun/" class="sp-az-item">📍 Calhoun County</a>
+          <a href="/iowa/carroll/" class="sp-az-item">📍 Carroll County</a>
+          <a href="/iowa/cass/" class="sp-az-item">📍 Cass County</a>
+          <a href="/iowa/cedar/" class="sp-az-item">📍 Cedar County</a>
+          <a href="/iowa/cerro-gordo/" class="sp-az-item">📍 Cerro Gordo County</a>
+          <a href="/iowa/cherokee/" class="sp-az-item">📍 Cherokee County</a>
+          <a href="/iowa/chickasaw/" class="sp-az-item">📍 Chickasaw County</a>
+          <a href="/iowa/clarke/" class="sp-az-item">📍 Clarke County</a>
+          <a href="/iowa/clay/" class="sp-az-item">📍 Clay County</a>
+          <a href="/iowa/clayton/" class="sp-az-item">📍 Clayton County</a>
+          <a href="/iowa/clinton/" class="sp-az-item">📍 Clinton County</a>
+          <a href="/iowa/crawford/" class="sp-az-item">📍 Crawford County</a>
+          <a href="/iowa/dallas/" class="sp-az-item">📍 Dallas County</a>
+          <a href="/iowa/davis/" class="sp-az-item">📍 Davis County</a>
+          <a href="/iowa/decatur/" class="sp-az-item">📍 Decatur County</a>
+          <a href="/iowa/delaware/" class="sp-az-item">📍 Delaware County</a>
+          <a href="/iowa/des-moines/" class="sp-az-item">📍 Des Moines County</a>
+          <a href="/iowa/dickinson/" class="sp-az-item">📍 Dickinson County</a>
+          <a href="/iowa/dubuque/" class="sp-az-item">📍 Dubuque County</a>
+          <a href="/iowa/emmet/" class="sp-az-item">📍 Emmet County</a>
+          <a href="/iowa/fayette/" class="sp-az-item">📍 Fayette County</a>
+          <a href="/iowa/floyd/" class="sp-az-item">📍 Floyd County</a>
+          <a href="/iowa/franklin/" class="sp-az-item">📍 Franklin County</a>
+          <a href="/iowa/fremont/" class="sp-az-item">📍 Fremont County</a>
+          <a href="/iowa/greene/" class="sp-az-item">📍 Greene County</a>
+          <a href="/iowa/grundy/" class="sp-az-item">📍 Grundy County</a>
+          <a href="/iowa/guthrie/" class="sp-az-item">📍 Guthrie County</a>
+          <a href="/iowa/hamilton/" class="sp-az-item">📍 Hamilton County</a>
+          <a href="/iowa/hancock/" class="sp-az-item">📍 Hancock County</a>
+          <a href="/iowa/hardin/" class="sp-az-item">📍 Hardin County</a>
+          <a href="/iowa/harrison/" class="sp-az-item">📍 Harrison County</a>
+          <a href="/iowa/henry/" class="sp-az-item">📍 Henry County</a>
+          <a href="/iowa/howard/" class="sp-az-item">📍 Howard County</a>
+          <a href="/iowa/humboldt/" class="sp-az-item">📍 Humboldt County</a>
+          <a href="/iowa/ida/" class="sp-az-item">📍 Ida County</a>
+          <a href="/iowa/iowa/" class="sp-az-item">📍 Iowa County</a>
+          <a href="/iowa/jackson/" class="sp-az-item">📍 Jackson County</a>
+          <a href="/iowa/jasper/" class="sp-az-item">📍 Jasper County</a>
+          <a href="/iowa/jefferson/" class="sp-az-item">📍 Jefferson County</a>
+          <a href="/iowa/johnson/" class="sp-az-item">📍 Johnson County</a>
+          <a href="/iowa/jones/" class="sp-az-item">📍 Jones County</a>
+          <a href="/iowa/keokuk/" class="sp-az-item">📍 Keokuk County</a>
+          <a href="/iowa/kossuth/" class="sp-az-item">📍 Kossuth County</a>
+          <a href="/iowa/lee/" class="sp-az-item">📍 Lee County</a>
+          <a href="/iowa/linn/" class="sp-az-item">📍 Linn County</a>
+          <a href="/iowa/louisa/" class="sp-az-item">📍 Louisa County</a>
+          <a href="/iowa/lucas/" class="sp-az-item">📍 Lucas County</a>
+          <a href="/iowa/lyon/" class="sp-az-item">📍 Lyon County</a>
+          <a href="/iowa/madison/" class="sp-az-item">📍 Madison County</a>
+          <a href="/iowa/mahaska/" class="sp-az-item">📍 Mahaska County</a>
+          <a href="/iowa/marion/" class="sp-az-item">📍 Marion County</a>
+          <a href="/iowa/marshall/" class="sp-az-item">📍 Marshall County</a>
+          <a href="/iowa/mills/" class="sp-az-item">📍 Mills County</a>
+          <a href="/iowa/mitchell/" class="sp-az-item">📍 Mitchell County</a>
+          <a href="/iowa/monona/" class="sp-az-item">📍 Monona County</a>
+          <a href="/iowa/monroe/" class="sp-az-item">📍 Monroe County</a>
+          <a href="/iowa/montgomery/" class="sp-az-item">📍 Montgomery County</a>
+          <a href="/iowa/muscatine/" class="sp-az-item">📍 Muscatine County</a>
+          <a href="/iowa/o-brien/" class="sp-az-item">📍 O'Brien County</a>
+          <a href="/iowa/osceola/" class="sp-az-item">📍 Osceola County</a>
+          <a href="/iowa/page/" class="sp-az-item">📍 Page County</a>
+          <a href="/iowa/palo-alto/" class="sp-az-item">📍 Palo Alto County</a>
+          <a href="/iowa/plymouth/" class="sp-az-item">📍 Plymouth County</a>
+          <a href="/iowa/pocahontas/" class="sp-az-item">📍 Pocahontas County</a>
+          <a href="/iowa/polk/" class="sp-az-item">📍 Polk County</a>
+          <a href="/iowa/pottawattamie/" class="sp-az-item">📍 Pottawattamie County</a>
+          <a href="/iowa/poweshiek/" class="sp-az-item">📍 Poweshiek County</a>
+          <a href="/iowa/ringgold/" class="sp-az-item">📍 Ringgold County</a>
+          <a href="/iowa/sac/" class="sp-az-item">📍 Sac County</a>
+          <a href="/iowa/scott/" class="sp-az-item">📍 Scott County</a>
+          <a href="/iowa/shelby/" class="sp-az-item">📍 Shelby County</a>
+          <a href="/iowa/sioux/" class="sp-az-item">📍 Sioux County</a>
+          <a href="/iowa/story/" class="sp-az-item">📍 Story County</a>
+          <a href="/iowa/tama/" class="sp-az-item">📍 Tama County</a>
+          <a href="/iowa/taylor/" class="sp-az-item">📍 Taylor County</a>
+          <a href="/iowa/union/" class="sp-az-item">📍 Union County</a>
+          <a href="/iowa/van-buren/" class="sp-az-item">📍 Van Buren County</a>
+          <a href="/iowa/wapello/" class="sp-az-item">📍 Wapello County</a>
+          <a href="/iowa/warren/" class="sp-az-item">📍 Warren County</a>
+          <a href="/iowa/washington/" class="sp-az-item">📍 Washington County</a>
+          <a href="/iowa/wayne/" class="sp-az-item">📍 Wayne County</a>
+          <a href="/iowa/webster/" class="sp-az-item">📍 Webster County</a>
+          <a href="/iowa/winnebago/" class="sp-az-item">📍 Winnebago County</a>
+          <a href="/iowa/winneshiek/" class="sp-az-item">📍 Winneshiek County</a>
+          <a href="/iowa/woodbury/" class="sp-az-item">📍 Woodbury County</a>
+          <a href="/iowa/worth/" class="sp-az-item">📍 Worth County</a>
+          <a href="/iowa/wright/" class="sp-az-item">📍 Wright County</a>
+            </div>
           </div>
-        </div>
-        <h3 style="color:var(--gray-600);font-size:1.1rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1.5rem;">All 99 Countys — Alphabetical</h3>
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0.75rem;">
-          <a href="/iowa/adair/" class="county-link-item">📍 Adair County</a>
-          <a href="/iowa/adams/" class="county-link-item">📍 Adams County</a>
-          <a href="/iowa/allamakee/" class="county-link-item">📍 Allamakee County</a>
-          <a href="/iowa/appanoose/" class="county-link-item">📍 Appanoose County</a>
-          <a href="/iowa/audubon/" class="county-link-item">📍 Audubon County</a>
-          <a href="/iowa/benton/" class="county-link-item">📍 Benton County</a>
-          <a href="/iowa/black-hawk/" class="county-link-item">📍 Black Hawk County</a>
-          <a href="/iowa/boone/" class="county-link-item">📍 Boone County</a>
-          <a href="/iowa/bremer/" class="county-link-item">📍 Bremer County</a>
-          <a href="/iowa/buchanan/" class="county-link-item">📍 Buchanan County</a>
-          <a href="/iowa/buena-vista/" class="county-link-item">📍 Buena Vista County</a>
-          <a href="/iowa/butler/" class="county-link-item">📍 Butler County</a>
-          <a href="/iowa/calhoun/" class="county-link-item">📍 Calhoun County</a>
-          <a href="/iowa/carroll/" class="county-link-item">📍 Carroll County</a>
-          <a href="/iowa/cass/" class="county-link-item">📍 Cass County</a>
-          <a href="/iowa/cedar/" class="county-link-item">📍 Cedar County</a>
-          <a href="/iowa/cerro-gordo/" class="county-link-item">📍 Cerro Gordo County</a>
-          <a href="/iowa/cherokee/" class="county-link-item">📍 Cherokee County</a>
-          <a href="/iowa/chickasaw/" class="county-link-item">📍 Chickasaw County</a>
-          <a href="/iowa/clarke/" class="county-link-item">📍 Clarke County</a>
-          <a href="/iowa/clay/" class="county-link-item">📍 Clay County</a>
-          <a href="/iowa/clayton/" class="county-link-item">📍 Clayton County</a>
-          <a href="/iowa/clinton/" class="county-link-item">📍 Clinton County</a>
-          <a href="/iowa/crawford/" class="county-link-item">📍 Crawford County</a>
-          <a href="/iowa/dallas/" class="county-link-item">📍 Dallas County</a>
-          <a href="/iowa/davis/" class="county-link-item">📍 Davis County</a>
-          <a href="/iowa/decatur/" class="county-link-item">📍 Decatur County</a>
-          <a href="/iowa/delaware/" class="county-link-item">📍 Delaware County</a>
-          <a href="/iowa/des-moines/" class="county-link-item">📍 Des Moines County</a>
-          <a href="/iowa/dickinson/" class="county-link-item">📍 Dickinson County</a>
-          <a href="/iowa/dubuque/" class="county-link-item">📍 Dubuque County</a>
-          <a href="/iowa/emmet/" class="county-link-item">📍 Emmet County</a>
-          <a href="/iowa/fayette/" class="county-link-item">📍 Fayette County</a>
-          <a href="/iowa/floyd/" class="county-link-item">📍 Floyd County</a>
-          <a href="/iowa/franklin/" class="county-link-item">📍 Franklin County</a>
-          <a href="/iowa/fremont/" class="county-link-item">📍 Fremont County</a>
-          <a href="/iowa/greene/" class="county-link-item">📍 Greene County</a>
-          <a href="/iowa/grundy/" class="county-link-item">📍 Grundy County</a>
-          <a href="/iowa/guthrie/" class="county-link-item">📍 Guthrie County</a>
-          <a href="/iowa/hamilton/" class="county-link-item">📍 Hamilton County</a>
-          <a href="/iowa/hancock/" class="county-link-item">📍 Hancock County</a>
-          <a href="/iowa/hardin/" class="county-link-item">📍 Hardin County</a>
-          <a href="/iowa/harrison/" class="county-link-item">📍 Harrison County</a>
-          <a href="/iowa/henry/" class="county-link-item">📍 Henry County</a>
-          <a href="/iowa/howard/" class="county-link-item">📍 Howard County</a>
-          <a href="/iowa/humboldt/" class="county-link-item">📍 Humboldt County</a>
-          <a href="/iowa/ida/" class="county-link-item">📍 Ida County</a>
-          <a href="/iowa/iowa/" class="county-link-item">📍 Iowa County</a>
-          <a href="/iowa/jackson/" class="county-link-item">📍 Jackson County</a>
-          <a href="/iowa/jasper/" class="county-link-item">📍 Jasper County</a>
-          <a href="/iowa/jefferson/" class="county-link-item">📍 Jefferson County</a>
-          <a href="/iowa/johnson/" class="county-link-item">📍 Johnson County</a>
-          <a href="/iowa/jones/" class="county-link-item">📍 Jones County</a>
-          <a href="/iowa/keokuk/" class="county-link-item">📍 Keokuk County</a>
-          <a href="/iowa/kossuth/" class="county-link-item">📍 Kossuth County</a>
-          <a href="/iowa/lee/" class="county-link-item">📍 Lee County</a>
-          <a href="/iowa/linn/" class="county-link-item">📍 Linn County</a>
-          <a href="/iowa/louisa/" class="county-link-item">📍 Louisa County</a>
-          <a href="/iowa/lucas/" class="county-link-item">📍 Lucas County</a>
-          <a href="/iowa/lyon/" class="county-link-item">📍 Lyon County</a>
-          <a href="/iowa/madison/" class="county-link-item">📍 Madison County</a>
-          <a href="/iowa/mahaska/" class="county-link-item">📍 Mahaska County</a>
-          <a href="/iowa/marion/" class="county-link-item">📍 Marion County</a>
-          <a href="/iowa/marshall/" class="county-link-item">📍 Marshall County</a>
-          <a href="/iowa/mills/" class="county-link-item">📍 Mills County</a>
-          <a href="/iowa/mitchell/" class="county-link-item">📍 Mitchell County</a>
-          <a href="/iowa/monona/" class="county-link-item">📍 Monona County</a>
-          <a href="/iowa/monroe/" class="county-link-item">📍 Monroe County</a>
-          <a href="/iowa/montgomery/" class="county-link-item">📍 Montgomery County</a>
-          <a href="/iowa/muscatine/" class="county-link-item">📍 Muscatine County</a>
-          <a href="/iowa/o-brien/" class="county-link-item">📍 O'Brien County</a>
-          <a href="/iowa/osceola/" class="county-link-item">📍 Osceola County</a>
-          <a href="/iowa/page/" class="county-link-item">📍 Page County</a>
-          <a href="/iowa/palo-alto/" class="county-link-item">📍 Palo Alto County</a>
-          <a href="/iowa/plymouth/" class="county-link-item">📍 Plymouth County</a>
-          <a href="/iowa/pocahontas/" class="county-link-item">📍 Pocahontas County</a>
-          <a href="/iowa/polk/" class="county-link-item">📍 Polk County</a>
-          <a href="/iowa/pottawattamie/" class="county-link-item">📍 Pottawattamie County</a>
-          <a href="/iowa/poweshiek/" class="county-link-item">📍 Poweshiek County</a>
-          <a href="/iowa/ringgold/" class="county-link-item">📍 Ringgold County</a>
-          <a href="/iowa/sac/" class="county-link-item">📍 Sac County</a>
-          <a href="/iowa/scott/" class="county-link-item">📍 Scott County</a>
-          <a href="/iowa/shelby/" class="county-link-item">📍 Shelby County</a>
-          <a href="/iowa/sioux/" class="county-link-item">📍 Sioux County</a>
-          <a href="/iowa/story/" class="county-link-item">📍 Story County</a>
-          <a href="/iowa/tama/" class="county-link-item">📍 Tama County</a>
-          <a href="/iowa/taylor/" class="county-link-item">📍 Taylor County</a>
-          <a href="/iowa/union/" class="county-link-item">📍 Union County</a>
-          <a href="/iowa/van-buren/" class="county-link-item">📍 Van Buren County</a>
-          <a href="/iowa/wapello/" class="county-link-item">📍 Wapello County</a>
-          <a href="/iowa/warren/" class="county-link-item">📍 Warren County</a>
-          <a href="/iowa/washington/" class="county-link-item">📍 Washington County</a>
-          <a href="/iowa/wayne/" class="county-link-item">📍 Wayne County</a>
-          <a href="/iowa/webster/" class="county-link-item">📍 Webster County</a>
-          <a href="/iowa/winnebago/" class="county-link-item">📍 Winnebago County</a>
-          <a href="/iowa/winneshiek/" class="county-link-item">📍 Winneshiek County</a>
-          <a href="/iowa/woodbury/" class="county-link-item">📍 Woodbury County</a>
-          <a href="/iowa/worth/" class="county-link-item">📍 Worth County</a>
-          <a href="/iowa/wright/" class="county-link-item">📍 Wright County</a>
+
         </div>
       </div>
-    </section>
+    </div>
+
+    <script>
+    /* County search filter */
+    (function() {
+      var inp = document.getElementById('county-search');
+      if (!inp) return;
+      inp.addEventListener('input', function() {
+        var q = inp.value.trim().toLowerCase();
+        document.querySelectorAll('#county-list .sp-az-item').forEach(function(el) {
+          el.classList.toggle('sp-hidden', q.length > 0 && el.textContent.toLowerCase().indexOf(q) === -1);
+        });
+      });
+    })();
+    </script>
+
   </main>
-  <style>
-    .county-link-item {display:flex;align-items:center;gap:0.5rem;padding:0.65rem 1rem;border:1px solid var(--gray-200);border-radius:8px;color:var(--navy);font-size:0.875rem;font-weight:600;text-decoration:none;background:#fff;transition:all 0.2s;}
-    .county-link-item:hover {border-color:var(--blue);background:rgba(45,125,210,0.04);color:var(--blue);}
-  </style>
+  
   <footer class="footer">
     <div class="container">
       <div class="footer__bottom" style="border-top:1px solid rgba(255,255,255,0.1);padding:1.5rem 0;margin-top:0;">

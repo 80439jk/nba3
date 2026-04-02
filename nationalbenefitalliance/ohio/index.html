@@ -76,196 +76,254 @@
       </ol>
     </div>
   </nav>
-  <main>
-    <section style="background:linear-gradient(135deg,#0F2447,#1B3A6B);padding:4rem 0 3rem;color:#fff;">
+    <main>
+
+    <!-- State Page — Option C: Sidebar Directory -->
+    <div class="sp-hero">
       <div class="container">
-        <div style="display:flex;align-items:center;gap:1.5rem;margin-bottom:1rem;">
-          <span style="font-size:3.5rem;">🌰</span>
-          <div>
-            <span style="color:var(--gold-light);font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;">State Resource Center</span>
-            <h1 style="color:#fff;margin:0;">Ohio County Resources</h1>
+        <div class="sp-hero__inner">
+          <div class="sp-hero__left">
+            <span class="sp-hero__emoji">🌰</span>
+            <div>
+              <h1 class="sp-hero__h1">Ohio County Resources</h1>
+              <p class="sp-hero__sub">? counties · 400+ assistance programs · Always free</p>
+            </div>
           </div>
-        </div>
-        <p class="lead" style="color:rgba(255,255,255,0.78);max-width:640px;">
-          All 88 Ohio countys covered. Find free government and community assistance programs for utilities, housing, food, Ohio Medicaid, SNAP, and more — organized by your county.
-        </p>
-        <form id="zip-form" style="display:flex;gap:0;max-width:420px;margin-top:2rem;border-radius:8px;overflow:hidden;border:2px solid rgba(255,255,255,0.2);" aria-label="ZIP search">
-          <input id="zip-input" type="tel" placeholder="Enter ZIP code" maxlength="5" style="flex:1;padding:0.85rem 1rem;border:none;font-size:1rem;font-weight:600;letter-spacing:0.08em;outline:none;" />
-          <button type="submit" style="background:var(--gold);color:var(--navy-dark);border:none;padding:0.85rem 1.25rem;font-weight:700;">Go →</button>
-        </form>
-      </div>
-    </section>
-    <div style="background:var(--gray-50);border-bottom:1px solid var(--gray-200);padding:1.25rem 0;">
-      <div class="container">
-        <div style="display:flex;gap:3rem;flex-wrap:wrap;align-items:center;">
-          <div><strong style="color:var(--navy);font-size:1.4rem;">88</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Countys</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">400+</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Assistance Programs</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">9</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Resource Categories</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">Free</strong> <span style="color:var(--gray-600);font-size:0.9rem;">PDF Download</span></div>
-          <div style="margin-left:auto;">
-            <a href="tel:18006224357" style="background:var(--navy);color:#fff;padding:0.6rem 1.25rem;border-radius:6px;font-weight:700;font-size:0.9rem;text-decoration:none;">📞 Get Access Code</a>
+          <div class="sp-hero__right">
+            <form id="zip-form" class="sp-zip-form" aria-label="ZIP search">
+              <input id="zip-input" type="tel" placeholder="Enter ZIP code" maxlength="5"/>
+              <button type="submit">Go →</button>
+            </form>
+            <a href="tel:18006224357" class="sp-access-btn">📞 Get Access Code</a>
           </div>
         </div>
       </div>
     </div>
-    <section class="section" aria-labelledby="counties-heading">
+
+    <div class="sp-body">
       <div class="container">
-        <div class="section-header">
-          <span class="badge badge--gold">All Countys</span>
-          <h2 id="counties-heading">Browse All 88 Ohio Countys</h2>
-          <p>Click your county to view the full resource guide. Countys marked ⭐ have been fully verified and updated.</p>
-        </div>
-        <div style="margin-bottom:3rem;">
-          <h3 style="color:var(--gray-600);font-size:1.1rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1.5rem;">Most Populated Countys</h3>
-          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem;">
-            <a href="/ohio/cuyahoga/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🏙️</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Cuyahoga County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">1.3M residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+        <div class="sp-layout">
+
+          <!-- Sidebar -->
+          <aside class="sp-sidebar">
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">🔍 Search Counties</div>
+              <div class="sp-sidebar-body">
+                <input class="sp-sidebar-search-input" id="county-search" type="text" placeholder="County name…" autocomplete="off"/>
               </div>
-            </a>
-            <a href="/ohio/franklin/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🏛️</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Franklin County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">1.3M residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">📂 Program Type</div>
+              <div class="sp-sidebar-body">
+                <a href="#all" class="sp-sidebar-link active">All Programs</a>
+                <a href="/ohio#utilities" class="sp-sidebar-link">⚡ Utility Assistance</a>
+                <a href="/ohio#housing" class="sp-sidebar-link">🏠 Housing &amp; Rent</a>
+                <a href="/ohio#food" class="sp-sidebar-link">🥗 Food / SNAP</a>
+                <a href="/ohio#healthcare" class="sp-sidebar-link">🏥 Medicaid / Health</a>
+                <a href="/ohio#employment" class="sp-sidebar-link">💼 Employment</a>
+                <a href="/ohio#childcare" class="sp-sidebar-link">👶 Child Care</a>
+                <a href="/ohio#disability" class="sp-sidebar-link">♿ Disability</a>
+                <a href="/ohio#education" class="sp-sidebar-link">📚 Education</a>
               </div>
-            </a>
-            <a href="/ohio/hamilton/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🎵</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Hamilton County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">831K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">📊 At a Glance</div>
+              <div class="sp-sidebar-body">
+                <div class="sp-sidebar-stat"><span>?</span><span>Counties</span></div>
+                <div class="sp-sidebar-stat"><span>400+</span><span>Programs</span></div>
+                <div class="sp-sidebar-stat"><span>9</span><span>Categories</span></div>
+                <div class="sp-sidebar-stat"><span>Free</span><span>PDF Guide</span></div>
               </div>
-            </a>
-            <a href="/ohio/summit/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🏭</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Summit County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">542K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+          </aside>
+
+          <!-- Main content -->
+          <div class="sp-content">
+            <div class="sp-content-hd">
+              <h2>⭐ Featured Counties</h2>
+              <span>? counties total</span>
+            </div>
+            <div class="sp-featured-grid">
+            <a href="/ohio/cuyahoga/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🏙️</span>
+                <div>
+                  <div class="sp-cc-name">Cuyahoga County ⭐</div>
+                  <div class="sp-cc-meta">1.3M residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:50%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
-            <a href="/ohio/montgomery/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">✈️</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Montgomery County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">532K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            <a href="/ohio/franklin/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🏛️</span>
+                <div>
+                  <div class="sp-cc-name">Franklin County ⭐</div>
+                  <div class="sp-cc-meta">1.3M residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:50%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
-            <a href="/ohio/lucas/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🌊</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Lucas County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">442K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            <a href="/ohio/hamilton/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🎵</span>
+                <div>
+                  <div class="sp-cc-name">Hamilton County ⭐</div>
+                  <div class="sp-cc-meta">831K residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
+            <a href="/ohio/summit/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🏭</span>
+                <div>
+                  <div class="sp-cc-name">Summit County ⭐</div>
+                  <div class="sp-cc-meta">542K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            <a href="/ohio/montgomery/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">✈️</span>
+                <div>
+                  <div class="sp-cc-name">Montgomery County ⭐</div>
+                  <div class="sp-cc-meta">532K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            <a href="/ohio/lucas/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🌊</span>
+                <div>
+                  <div class="sp-cc-name">Lucas County ⭐</div>
+                  <div class="sp-cc-meta">442K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            </div>
+            <div class="sp-section-label">All ? Counties — Alphabetical</div>
+            <div class="sp-az-grid" id="county-list">
+          <a href="/ohio/adams/" class="sp-az-item">📍 Adams County</a>
+          <a href="/ohio/allen/" class="sp-az-item">📍 Allen County</a>
+          <a href="/ohio/ashland/" class="sp-az-item">📍 Ashland County</a>
+          <a href="/ohio/ashtabula/" class="sp-az-item">📍 Ashtabula County</a>
+          <a href="/ohio/athens/" class="sp-az-item">📍 Athens County</a>
+          <a href="/ohio/auglaize/" class="sp-az-item">📍 Auglaize County</a>
+          <a href="/ohio/belmont/" class="sp-az-item">📍 Belmont County</a>
+          <a href="/ohio/brown/" class="sp-az-item">📍 Brown County</a>
+          <a href="/ohio/butler/" class="sp-az-item">📍 Butler County</a>
+          <a href="/ohio/carroll/" class="sp-az-item">📍 Carroll County</a>
+          <a href="/ohio/champaign/" class="sp-az-item">📍 Champaign County</a>
+          <a href="/ohio/clark/" class="sp-az-item">📍 Clark County</a>
+          <a href="/ohio/clermont/" class="sp-az-item">📍 Clermont County</a>
+          <a href="/ohio/clinton/" class="sp-az-item">📍 Clinton County</a>
+          <a href="/ohio/columbiana/" class="sp-az-item">📍 Columbiana County</a>
+          <a href="/ohio/coshocton/" class="sp-az-item">📍 Coshocton County</a>
+          <a href="/ohio/crawford/" class="sp-az-item">📍 Crawford County</a>
+          <a href="/ohio/cuyahoga/" class="sp-az-item">📍 Cuyahoga County</a>
+          <a href="/ohio/darke/" class="sp-az-item">📍 Darke County</a>
+          <a href="/ohio/defiance/" class="sp-az-item">📍 Defiance County</a>
+          <a href="/ohio/delaware/" class="sp-az-item">📍 Delaware County</a>
+          <a href="/ohio/erie/" class="sp-az-item">📍 Erie County</a>
+          <a href="/ohio/fairfield/" class="sp-az-item">📍 Fairfield County</a>
+          <a href="/ohio/fayette/" class="sp-az-item">📍 Fayette County</a>
+          <a href="/ohio/franklin/" class="sp-az-item">📍 Franklin County</a>
+          <a href="/ohio/fulton/" class="sp-az-item">📍 Fulton County</a>
+          <a href="/ohio/gallia/" class="sp-az-item">📍 Gallia County</a>
+          <a href="/ohio/geauga/" class="sp-az-item">📍 Geauga County</a>
+          <a href="/ohio/greene/" class="sp-az-item">📍 Greene County</a>
+          <a href="/ohio/guernsey/" class="sp-az-item">📍 Guernsey County</a>
+          <a href="/ohio/hamilton/" class="sp-az-item">📍 Hamilton County</a>
+          <a href="/ohio/hancock/" class="sp-az-item">📍 Hancock County</a>
+          <a href="/ohio/hardin/" class="sp-az-item">📍 Hardin County</a>
+          <a href="/ohio/harrison/" class="sp-az-item">📍 Harrison County</a>
+          <a href="/ohio/henry/" class="sp-az-item">📍 Henry County</a>
+          <a href="/ohio/highland/" class="sp-az-item">📍 Highland County</a>
+          <a href="/ohio/hocking/" class="sp-az-item">📍 Hocking County</a>
+          <a href="/ohio/holmes/" class="sp-az-item">📍 Holmes County</a>
+          <a href="/ohio/huron/" class="sp-az-item">📍 Huron County</a>
+          <a href="/ohio/jackson/" class="sp-az-item">📍 Jackson County</a>
+          <a href="/ohio/jefferson/" class="sp-az-item">📍 Jefferson County</a>
+          <a href="/ohio/knox/" class="sp-az-item">📍 Knox County</a>
+          <a href="/ohio/lake/" class="sp-az-item">📍 Lake County</a>
+          <a href="/ohio/lawrence/" class="sp-az-item">📍 Lawrence County</a>
+          <a href="/ohio/licking/" class="sp-az-item">📍 Licking County</a>
+          <a href="/ohio/logan/" class="sp-az-item">📍 Logan County</a>
+          <a href="/ohio/lorain/" class="sp-az-item">📍 Lorain County</a>
+          <a href="/ohio/lucas/" class="sp-az-item">📍 Lucas County</a>
+          <a href="/ohio/madison/" class="sp-az-item">📍 Madison County</a>
+          <a href="/ohio/mahoning/" class="sp-az-item">📍 Mahoning County</a>
+          <a href="/ohio/marion/" class="sp-az-item">📍 Marion County</a>
+          <a href="/ohio/medina/" class="sp-az-item">📍 Medina County</a>
+          <a href="/ohio/meigs/" class="sp-az-item">📍 Meigs County</a>
+          <a href="/ohio/mercer/" class="sp-az-item">📍 Mercer County</a>
+          <a href="/ohio/miami/" class="sp-az-item">📍 Miami County</a>
+          <a href="/ohio/monroe/" class="sp-az-item">📍 Monroe County</a>
+          <a href="/ohio/montgomery/" class="sp-az-item">📍 Montgomery County</a>
+          <a href="/ohio/morgan/" class="sp-az-item">📍 Morgan County</a>
+          <a href="/ohio/morrow/" class="sp-az-item">📍 Morrow County</a>
+          <a href="/ohio/muskingum/" class="sp-az-item">📍 Muskingum County</a>
+          <a href="/ohio/noble/" class="sp-az-item">📍 Noble County</a>
+          <a href="/ohio/ottawa/" class="sp-az-item">📍 Ottawa County</a>
+          <a href="/ohio/paulding/" class="sp-az-item">📍 Paulding County</a>
+          <a href="/ohio/perry/" class="sp-az-item">📍 Perry County</a>
+          <a href="/ohio/pickaway/" class="sp-az-item">📍 Pickaway County</a>
+          <a href="/ohio/pike/" class="sp-az-item">📍 Pike County</a>
+          <a href="/ohio/portage/" class="sp-az-item">📍 Portage County</a>
+          <a href="/ohio/preble/" class="sp-az-item">📍 Preble County</a>
+          <a href="/ohio/putnam/" class="sp-az-item">📍 Putnam County</a>
+          <a href="/ohio/richland/" class="sp-az-item">📍 Richland County</a>
+          <a href="/ohio/ross/" class="sp-az-item">📍 Ross County</a>
+          <a href="/ohio/sandusky/" class="sp-az-item">📍 Sandusky County</a>
+          <a href="/ohio/scioto/" class="sp-az-item">📍 Scioto County</a>
+          <a href="/ohio/seneca/" class="sp-az-item">📍 Seneca County</a>
+          <a href="/ohio/shelby/" class="sp-az-item">📍 Shelby County</a>
+          <a href="/ohio/stark/" class="sp-az-item">📍 Stark County</a>
+          <a href="/ohio/summit/" class="sp-az-item">📍 Summit County</a>
+          <a href="/ohio/trumbull/" class="sp-az-item">📍 Trumbull County</a>
+          <a href="/ohio/tuscarawas/" class="sp-az-item">📍 Tuscarawas County</a>
+          <a href="/ohio/union/" class="sp-az-item">📍 Union County</a>
+          <a href="/ohio/van-wert/" class="sp-az-item">📍 Van Wert County</a>
+          <a href="/ohio/vinton/" class="sp-az-item">📍 Vinton County</a>
+          <a href="/ohio/warren/" class="sp-az-item">📍 Warren County</a>
+          <a href="/ohio/washington/" class="sp-az-item">📍 Washington County</a>
+          <a href="/ohio/wayne/" class="sp-az-item">📍 Wayne County</a>
+          <a href="/ohio/williams/" class="sp-az-item">📍 Williams County</a>
+          <a href="/ohio/wood/" class="sp-az-item">📍 Wood County</a>
+          <a href="/ohio/wyandot/" class="sp-az-item">📍 Wyandot County</a>
+            </div>
           </div>
-        </div>
-        <h3 style="color:var(--gray-600);font-size:1.1rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1.5rem;">All 88 Countys — Alphabetical</h3>
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0.75rem;">
-          <a href="/ohio/adams/" class="county-link-item">📍 Adams County</a>
-          <a href="/ohio/allen/" class="county-link-item">📍 Allen County</a>
-          <a href="/ohio/ashland/" class="county-link-item">📍 Ashland County</a>
-          <a href="/ohio/ashtabula/" class="county-link-item">📍 Ashtabula County</a>
-          <a href="/ohio/athens/" class="county-link-item">📍 Athens County</a>
-          <a href="/ohio/auglaize/" class="county-link-item">📍 Auglaize County</a>
-          <a href="/ohio/belmont/" class="county-link-item">📍 Belmont County</a>
-          <a href="/ohio/brown/" class="county-link-item">📍 Brown County</a>
-          <a href="/ohio/butler/" class="county-link-item">📍 Butler County</a>
-          <a href="/ohio/carroll/" class="county-link-item">📍 Carroll County</a>
-          <a href="/ohio/champaign/" class="county-link-item">📍 Champaign County</a>
-          <a href="/ohio/clark/" class="county-link-item">📍 Clark County</a>
-          <a href="/ohio/clermont/" class="county-link-item">📍 Clermont County</a>
-          <a href="/ohio/clinton/" class="county-link-item">📍 Clinton County</a>
-          <a href="/ohio/columbiana/" class="county-link-item">📍 Columbiana County</a>
-          <a href="/ohio/coshocton/" class="county-link-item">📍 Coshocton County</a>
-          <a href="/ohio/crawford/" class="county-link-item">📍 Crawford County</a>
-          <a href="/ohio/cuyahoga/" class="county-link-item">📍 Cuyahoga County</a>
-          <a href="/ohio/darke/" class="county-link-item">📍 Darke County</a>
-          <a href="/ohio/defiance/" class="county-link-item">📍 Defiance County</a>
-          <a href="/ohio/delaware/" class="county-link-item">📍 Delaware County</a>
-          <a href="/ohio/erie/" class="county-link-item">📍 Erie County</a>
-          <a href="/ohio/fairfield/" class="county-link-item">📍 Fairfield County</a>
-          <a href="/ohio/fayette/" class="county-link-item">📍 Fayette County</a>
-          <a href="/ohio/franklin/" class="county-link-item">📍 Franklin County</a>
-          <a href="/ohio/fulton/" class="county-link-item">📍 Fulton County</a>
-          <a href="/ohio/gallia/" class="county-link-item">📍 Gallia County</a>
-          <a href="/ohio/geauga/" class="county-link-item">📍 Geauga County</a>
-          <a href="/ohio/greene/" class="county-link-item">📍 Greene County</a>
-          <a href="/ohio/guernsey/" class="county-link-item">📍 Guernsey County</a>
-          <a href="/ohio/hamilton/" class="county-link-item">📍 Hamilton County</a>
-          <a href="/ohio/hancock/" class="county-link-item">📍 Hancock County</a>
-          <a href="/ohio/hardin/" class="county-link-item">📍 Hardin County</a>
-          <a href="/ohio/harrison/" class="county-link-item">📍 Harrison County</a>
-          <a href="/ohio/henry/" class="county-link-item">📍 Henry County</a>
-          <a href="/ohio/highland/" class="county-link-item">📍 Highland County</a>
-          <a href="/ohio/hocking/" class="county-link-item">📍 Hocking County</a>
-          <a href="/ohio/holmes/" class="county-link-item">📍 Holmes County</a>
-          <a href="/ohio/huron/" class="county-link-item">📍 Huron County</a>
-          <a href="/ohio/jackson/" class="county-link-item">📍 Jackson County</a>
-          <a href="/ohio/jefferson/" class="county-link-item">📍 Jefferson County</a>
-          <a href="/ohio/knox/" class="county-link-item">📍 Knox County</a>
-          <a href="/ohio/lake/" class="county-link-item">📍 Lake County</a>
-          <a href="/ohio/lawrence/" class="county-link-item">📍 Lawrence County</a>
-          <a href="/ohio/licking/" class="county-link-item">📍 Licking County</a>
-          <a href="/ohio/logan/" class="county-link-item">📍 Logan County</a>
-          <a href="/ohio/lorain/" class="county-link-item">📍 Lorain County</a>
-          <a href="/ohio/lucas/" class="county-link-item">📍 Lucas County</a>
-          <a href="/ohio/madison/" class="county-link-item">📍 Madison County</a>
-          <a href="/ohio/mahoning/" class="county-link-item">📍 Mahoning County</a>
-          <a href="/ohio/marion/" class="county-link-item">📍 Marion County</a>
-          <a href="/ohio/medina/" class="county-link-item">📍 Medina County</a>
-          <a href="/ohio/meigs/" class="county-link-item">📍 Meigs County</a>
-          <a href="/ohio/mercer/" class="county-link-item">📍 Mercer County</a>
-          <a href="/ohio/miami/" class="county-link-item">📍 Miami County</a>
-          <a href="/ohio/monroe/" class="county-link-item">📍 Monroe County</a>
-          <a href="/ohio/montgomery/" class="county-link-item">📍 Montgomery County</a>
-          <a href="/ohio/morgan/" class="county-link-item">📍 Morgan County</a>
-          <a href="/ohio/morrow/" class="county-link-item">📍 Morrow County</a>
-          <a href="/ohio/muskingum/" class="county-link-item">📍 Muskingum County</a>
-          <a href="/ohio/noble/" class="county-link-item">📍 Noble County</a>
-          <a href="/ohio/ottawa/" class="county-link-item">📍 Ottawa County</a>
-          <a href="/ohio/paulding/" class="county-link-item">📍 Paulding County</a>
-          <a href="/ohio/perry/" class="county-link-item">📍 Perry County</a>
-          <a href="/ohio/pickaway/" class="county-link-item">📍 Pickaway County</a>
-          <a href="/ohio/pike/" class="county-link-item">📍 Pike County</a>
-          <a href="/ohio/portage/" class="county-link-item">📍 Portage County</a>
-          <a href="/ohio/preble/" class="county-link-item">📍 Preble County</a>
-          <a href="/ohio/putnam/" class="county-link-item">📍 Putnam County</a>
-          <a href="/ohio/richland/" class="county-link-item">📍 Richland County</a>
-          <a href="/ohio/ross/" class="county-link-item">📍 Ross County</a>
-          <a href="/ohio/sandusky/" class="county-link-item">📍 Sandusky County</a>
-          <a href="/ohio/scioto/" class="county-link-item">📍 Scioto County</a>
-          <a href="/ohio/seneca/" class="county-link-item">📍 Seneca County</a>
-          <a href="/ohio/shelby/" class="county-link-item">📍 Shelby County</a>
-          <a href="/ohio/stark/" class="county-link-item">📍 Stark County</a>
-          <a href="/ohio/summit/" class="county-link-item">📍 Summit County</a>
-          <a href="/ohio/trumbull/" class="county-link-item">📍 Trumbull County</a>
-          <a href="/ohio/tuscarawas/" class="county-link-item">📍 Tuscarawas County</a>
-          <a href="/ohio/union/" class="county-link-item">📍 Union County</a>
-          <a href="/ohio/van-wert/" class="county-link-item">📍 Van Wert County</a>
-          <a href="/ohio/vinton/" class="county-link-item">📍 Vinton County</a>
-          <a href="/ohio/warren/" class="county-link-item">📍 Warren County</a>
-          <a href="/ohio/washington/" class="county-link-item">📍 Washington County</a>
-          <a href="/ohio/wayne/" class="county-link-item">📍 Wayne County</a>
-          <a href="/ohio/williams/" class="county-link-item">📍 Williams County</a>
-          <a href="/ohio/wood/" class="county-link-item">📍 Wood County</a>
-          <a href="/ohio/wyandot/" class="county-link-item">📍 Wyandot County</a>
+
         </div>
       </div>
-    </section>
+    </div>
+
+    <script>
+    /* County search filter */
+    (function() {
+      var inp = document.getElementById('county-search');
+      if (!inp) return;
+      inp.addEventListener('input', function() {
+        var q = inp.value.trim().toLowerCase();
+        document.querySelectorAll('#county-list .sp-az-item').forEach(function(el) {
+          el.classList.toggle('sp-hidden', q.length > 0 && el.textContent.toLowerCase().indexOf(q) === -1);
+        });
+      });
+    })();
+    </script>
+
   </main>
-  <style>
-    .county-link-item {display:flex;align-items:center;gap:0.5rem;padding:0.65rem 1rem;border:1px solid var(--gray-200);border-radius:8px;color:var(--navy);font-size:0.875rem;font-weight:600;text-decoration:none;background:#fff;transition:all 0.2s;}
-    .county-link-item:hover {border-color:var(--blue);background:rgba(45,125,210,0.04);color:var(--blue);}
-  </style>
+  
   <footer class="footer">
     <div class="container">
       <div class="footer__bottom" style="border-top:1px solid rgba(255,255,255,0.1);padding:1.5rem 0;margin-top:0;">

@@ -76,191 +76,249 @@
       </ol>
     </div>
   </nav>
-  <main>
-    <section style="background:linear-gradient(135deg,#0F2447,#1B3A6B);padding:4rem 0 3rem;color:#fff;">
+    <main>
+
+    <!-- State Page — Option C: Sidebar Directory -->
+    <div class="sp-hero">
       <div class="container">
-        <div style="display:flex;align-items:center;gap:1.5rem;margin-bottom:1rem;">
-          <span style="font-size:3.5rem;">🚗</span>
-          <div>
-            <span style="color:var(--gold-light);font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;">State Resource Center</span>
-            <h1 style="color:#fff;margin:0;">Michigan County Resources</h1>
+        <div class="sp-hero__inner">
+          <div class="sp-hero__left">
+            <span class="sp-hero__emoji">🚗</span>
+            <div>
+              <h1 class="sp-hero__h1">Michigan County Resources</h1>
+              <p class="sp-hero__sub">? counties · 400+ assistance programs · Always free</p>
+            </div>
           </div>
-        </div>
-        <p class="lead" style="color:rgba(255,255,255,0.78);max-width:640px;">
-          All 83 Michigan countys covered. Find free government and community assistance programs for utilities, housing, food, Healthy Michigan Plan, SNAP, and more — organized by your county.
-        </p>
-        <form id="zip-form" style="display:flex;gap:0;max-width:420px;margin-top:2rem;border-radius:8px;overflow:hidden;border:2px solid rgba(255,255,255,0.2);" aria-label="ZIP search">
-          <input id="zip-input" type="tel" placeholder="Enter ZIP code" maxlength="5" style="flex:1;padding:0.85rem 1rem;border:none;font-size:1rem;font-weight:600;letter-spacing:0.08em;outline:none;" />
-          <button type="submit" style="background:var(--gold);color:var(--navy-dark);border:none;padding:0.85rem 1.25rem;font-weight:700;">Go →</button>
-        </form>
-      </div>
-    </section>
-    <div style="background:var(--gray-50);border-bottom:1px solid var(--gray-200);padding:1.25rem 0;">
-      <div class="container">
-        <div style="display:flex;gap:3rem;flex-wrap:wrap;align-items:center;">
-          <div><strong style="color:var(--navy);font-size:1.4rem;">83</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Countys</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">400+</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Assistance Programs</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">9</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Resource Categories</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">Free</strong> <span style="color:var(--gray-600);font-size:0.9rem;">PDF Download</span></div>
-          <div style="margin-left:auto;">
-            <a href="tel:18006224357" style="background:var(--navy);color:#fff;padding:0.6rem 1.25rem;border-radius:6px;font-weight:700;font-size:0.9rem;text-decoration:none;">📞 Get Access Code</a>
+          <div class="sp-hero__right">
+            <form id="zip-form" class="sp-zip-form" aria-label="ZIP search">
+              <input id="zip-input" type="tel" placeholder="Enter ZIP code" maxlength="5"/>
+              <button type="submit">Go →</button>
+            </form>
+            <a href="tel:18006224357" class="sp-access-btn">📞 Get Access Code</a>
           </div>
         </div>
       </div>
     </div>
-    <section class="section" aria-labelledby="counties-heading">
+
+    <div class="sp-body">
       <div class="container">
-        <div class="section-header">
-          <span class="badge badge--gold">All Countys</span>
-          <h2 id="counties-heading">Browse All 83 Michigan Countys</h2>
-          <p>Click your county to view the full resource guide. Countys marked ⭐ have been fully verified and updated.</p>
-        </div>
-        <div style="margin-bottom:3rem;">
-          <h3 style="color:var(--gray-600);font-size:1.1rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1.5rem;">Most Populated Countys</h3>
-          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem;">
-            <a href="/michigan/wayne/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🏙️</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Wayne County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">1.8M residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+        <div class="sp-layout">
+
+          <!-- Sidebar -->
+          <aside class="sp-sidebar">
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">🔍 Search Counties</div>
+              <div class="sp-sidebar-body">
+                <input class="sp-sidebar-search-input" id="county-search" type="text" placeholder="County name…" autocomplete="off"/>
               </div>
-            </a>
-            <a href="/michigan/oakland/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🚗</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Oakland County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">1.3M residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">📂 Program Type</div>
+              <div class="sp-sidebar-body">
+                <a href="#all" class="sp-sidebar-link active">All Programs</a>
+                <a href="/michigan#utilities" class="sp-sidebar-link">⚡ Utility Assistance</a>
+                <a href="/michigan#housing" class="sp-sidebar-link">🏠 Housing &amp; Rent</a>
+                <a href="/michigan#food" class="sp-sidebar-link">🥗 Food / SNAP</a>
+                <a href="/michigan#healthcare" class="sp-sidebar-link">🏥 Medicaid / Health</a>
+                <a href="/michigan#employment" class="sp-sidebar-link">💼 Employment</a>
+                <a href="/michigan#childcare" class="sp-sidebar-link">👶 Child Care</a>
+                <a href="/michigan#disability" class="sp-sidebar-link">♿ Disability</a>
+                <a href="/michigan#education" class="sp-sidebar-link">📚 Education</a>
               </div>
-            </a>
-            <a href="/michigan/macomb/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🏭</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Macomb County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">881K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">📊 At a Glance</div>
+              <div class="sp-sidebar-body">
+                <div class="sp-sidebar-stat"><span>?</span><span>Counties</span></div>
+                <div class="sp-sidebar-stat"><span>400+</span><span>Programs</span></div>
+                <div class="sp-sidebar-stat"><span>9</span><span>Categories</span></div>
+                <div class="sp-sidebar-stat"><span>Free</span><span>PDF Guide</span></div>
               </div>
-            </a>
-            <a href="/michigan/kent/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🌷</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Kent County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">657K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+          </aside>
+
+          <!-- Main content -->
+          <div class="sp-content">
+            <div class="sp-content-hd">
+              <h2>⭐ Featured Counties</h2>
+              <span>? counties total</span>
+            </div>
+            <div class="sp-featured-grid">
+            <a href="/michigan/wayne/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🏙️</span>
+                <div>
+                  <div class="sp-cc-name">Wayne County ⭐</div>
+                  <div class="sp-cc-meta">1.8M residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:50%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
-            <a href="/michigan/washtenaw/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🎓</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Washtenaw County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">372K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            <a href="/michigan/oakland/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🚗</span>
+                <div>
+                  <div class="sp-cc-name">Oakland County ⭐</div>
+                  <div class="sp-cc-meta">1.3M residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:50%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
-            <a href="/michigan/genesee/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">💧</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Genesee County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">406K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            <a href="/michigan/macomb/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🏭</span>
+                <div>
+                  <div class="sp-cc-name">Macomb County ⭐</div>
+                  <div class="sp-cc-meta">881K residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
+            <a href="/michigan/kent/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🌷</span>
+                <div>
+                  <div class="sp-cc-name">Kent County ⭐</div>
+                  <div class="sp-cc-meta">657K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            <a href="/michigan/washtenaw/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🎓</span>
+                <div>
+                  <div class="sp-cc-name">Washtenaw County ⭐</div>
+                  <div class="sp-cc-meta">372K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            <a href="/michigan/genesee/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">💧</span>
+                <div>
+                  <div class="sp-cc-name">Genesee County ⭐</div>
+                  <div class="sp-cc-meta">406K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            </div>
+            <div class="sp-section-label">All ? Counties — Alphabetical</div>
+            <div class="sp-az-grid" id="county-list">
+          <a href="/michigan/alcona/" class="sp-az-item">📍 Alcona County</a>
+          <a href="/michigan/alger/" class="sp-az-item">📍 Alger County</a>
+          <a href="/michigan/allegan/" class="sp-az-item">📍 Allegan County</a>
+          <a href="/michigan/alpena/" class="sp-az-item">📍 Alpena County</a>
+          <a href="/michigan/antrim/" class="sp-az-item">📍 Antrim County</a>
+          <a href="/michigan/arenac/" class="sp-az-item">📍 Arenac County</a>
+          <a href="/michigan/baraga/" class="sp-az-item">📍 Baraga County</a>
+          <a href="/michigan/barry/" class="sp-az-item">📍 Barry County</a>
+          <a href="/michigan/bay/" class="sp-az-item">📍 Bay County</a>
+          <a href="/michigan/benzie/" class="sp-az-item">📍 Benzie County</a>
+          <a href="/michigan/berrien/" class="sp-az-item">📍 Berrien County</a>
+          <a href="/michigan/branch/" class="sp-az-item">📍 Branch County</a>
+          <a href="/michigan/calhoun/" class="sp-az-item">📍 Calhoun County</a>
+          <a href="/michigan/cass/" class="sp-az-item">📍 Cass County</a>
+          <a href="/michigan/charlevoix/" class="sp-az-item">📍 Charlevoix County</a>
+          <a href="/michigan/cheboygan/" class="sp-az-item">📍 Cheboygan County</a>
+          <a href="/michigan/chippewa/" class="sp-az-item">📍 Chippewa County</a>
+          <a href="/michigan/clare/" class="sp-az-item">📍 Clare County</a>
+          <a href="/michigan/clinton/" class="sp-az-item">📍 Clinton County</a>
+          <a href="/michigan/crawford/" class="sp-az-item">📍 Crawford County</a>
+          <a href="/michigan/delta/" class="sp-az-item">📍 Delta County</a>
+          <a href="/michigan/dickinson/" class="sp-az-item">📍 Dickinson County</a>
+          <a href="/michigan/eaton/" class="sp-az-item">📍 Eaton County</a>
+          <a href="/michigan/emmet/" class="sp-az-item">📍 Emmet County</a>
+          <a href="/michigan/genesee/" class="sp-az-item">📍 Genesee County</a>
+          <a href="/michigan/gladwin/" class="sp-az-item">📍 Gladwin County</a>
+          <a href="/michigan/gogebic/" class="sp-az-item">📍 Gogebic County</a>
+          <a href="/michigan/grand-traverse/" class="sp-az-item">📍 Grand Traverse County</a>
+          <a href="/michigan/gratiot/" class="sp-az-item">📍 Gratiot County</a>
+          <a href="/michigan/hillsdale/" class="sp-az-item">📍 Hillsdale County</a>
+          <a href="/michigan/houghton/" class="sp-az-item">📍 Houghton County</a>
+          <a href="/michigan/huron/" class="sp-az-item">📍 Huron County</a>
+          <a href="/michigan/ingham/" class="sp-az-item">📍 Ingham County</a>
+          <a href="/michigan/ionia/" class="sp-az-item">📍 Ionia County</a>
+          <a href="/michigan/iosco/" class="sp-az-item">📍 Iosco County</a>
+          <a href="/michigan/iron/" class="sp-az-item">📍 Iron County</a>
+          <a href="/michigan/isabella/" class="sp-az-item">📍 Isabella County</a>
+          <a href="/michigan/jackson/" class="sp-az-item">📍 Jackson County</a>
+          <a href="/michigan/kalamazoo/" class="sp-az-item">📍 Kalamazoo County</a>
+          <a href="/michigan/kalkaska/" class="sp-az-item">📍 Kalkaska County</a>
+          <a href="/michigan/kent/" class="sp-az-item">📍 Kent County</a>
+          <a href="/michigan/keweenaw/" class="sp-az-item">📍 Keweenaw County</a>
+          <a href="/michigan/lake/" class="sp-az-item">📍 Lake County</a>
+          <a href="/michigan/lapeer/" class="sp-az-item">📍 Lapeer County</a>
+          <a href="/michigan/leelanau/" class="sp-az-item">📍 Leelanau County</a>
+          <a href="/michigan/lenawee/" class="sp-az-item">📍 Lenawee County</a>
+          <a href="/michigan/livingston/" class="sp-az-item">📍 Livingston County</a>
+          <a href="/michigan/luce/" class="sp-az-item">📍 Luce County</a>
+          <a href="/michigan/mackinac/" class="sp-az-item">📍 Mackinac County</a>
+          <a href="/michigan/macomb/" class="sp-az-item">📍 Macomb County</a>
+          <a href="/michigan/manistee/" class="sp-az-item">📍 Manistee County</a>
+          <a href="/michigan/marquette/" class="sp-az-item">📍 Marquette County</a>
+          <a href="/michigan/mason/" class="sp-az-item">📍 Mason County</a>
+          <a href="/michigan/mecosta/" class="sp-az-item">📍 Mecosta County</a>
+          <a href="/michigan/menominee/" class="sp-az-item">📍 Menominee County</a>
+          <a href="/michigan/midland/" class="sp-az-item">📍 Midland County</a>
+          <a href="/michigan/missaukee/" class="sp-az-item">📍 Missaukee County</a>
+          <a href="/michigan/monroe/" class="sp-az-item">📍 Monroe County</a>
+          <a href="/michigan/montcalm/" class="sp-az-item">📍 Montcalm County</a>
+          <a href="/michigan/montmorency/" class="sp-az-item">📍 Montmorency County</a>
+          <a href="/michigan/muskegon/" class="sp-az-item">📍 Muskegon County</a>
+          <a href="/michigan/newaygo/" class="sp-az-item">📍 Newaygo County</a>
+          <a href="/michigan/oakland/" class="sp-az-item">📍 Oakland County</a>
+          <a href="/michigan/oceana/" class="sp-az-item">📍 Oceana County</a>
+          <a href="/michigan/ogemaw/" class="sp-az-item">📍 Ogemaw County</a>
+          <a href="/michigan/ontonagon/" class="sp-az-item">📍 Ontonagon County</a>
+          <a href="/michigan/osceola/" class="sp-az-item">📍 Osceola County</a>
+          <a href="/michigan/oscoda/" class="sp-az-item">📍 Oscoda County</a>
+          <a href="/michigan/otsego/" class="sp-az-item">📍 Otsego County</a>
+          <a href="/michigan/ottawa/" class="sp-az-item">📍 Ottawa County</a>
+          <a href="/michigan/presque-isle/" class="sp-az-item">📍 Presque Isle County</a>
+          <a href="/michigan/roscommon/" class="sp-az-item">📍 Roscommon County</a>
+          <a href="/michigan/saginaw/" class="sp-az-item">📍 Saginaw County</a>
+          <a href="/michigan/sanilac/" class="sp-az-item">📍 Sanilac County</a>
+          <a href="/michigan/schoolcraft/" class="sp-az-item">📍 Schoolcraft County</a>
+          <a href="/michigan/shiawassee/" class="sp-az-item">📍 Shiawassee County</a>
+          <a href="/michigan/st-clair/" class="sp-az-item">📍 St. Clair County</a>
+          <a href="/michigan/st-joseph/" class="sp-az-item">📍 St. Joseph County</a>
+          <a href="/michigan/tuscola/" class="sp-az-item">📍 Tuscola County</a>
+          <a href="/michigan/van-buren/" class="sp-az-item">📍 Van Buren County</a>
+          <a href="/michigan/washtenaw/" class="sp-az-item">📍 Washtenaw County</a>
+          <a href="/michigan/wayne/" class="sp-az-item">📍 Wayne County</a>
+          <a href="/michigan/wexford/" class="sp-az-item">📍 Wexford County</a>
+            </div>
           </div>
-        </div>
-        <h3 style="color:var(--gray-600);font-size:1.1rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1.5rem;">All 83 Countys — Alphabetical</h3>
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0.75rem;">
-          <a href="/michigan/alcona/" class="county-link-item">📍 Alcona County</a>
-          <a href="/michigan/alger/" class="county-link-item">📍 Alger County</a>
-          <a href="/michigan/allegan/" class="county-link-item">📍 Allegan County</a>
-          <a href="/michigan/alpena/" class="county-link-item">📍 Alpena County</a>
-          <a href="/michigan/antrim/" class="county-link-item">📍 Antrim County</a>
-          <a href="/michigan/arenac/" class="county-link-item">📍 Arenac County</a>
-          <a href="/michigan/baraga/" class="county-link-item">📍 Baraga County</a>
-          <a href="/michigan/barry/" class="county-link-item">📍 Barry County</a>
-          <a href="/michigan/bay/" class="county-link-item">📍 Bay County</a>
-          <a href="/michigan/benzie/" class="county-link-item">📍 Benzie County</a>
-          <a href="/michigan/berrien/" class="county-link-item">📍 Berrien County</a>
-          <a href="/michigan/branch/" class="county-link-item">📍 Branch County</a>
-          <a href="/michigan/calhoun/" class="county-link-item">📍 Calhoun County</a>
-          <a href="/michigan/cass/" class="county-link-item">📍 Cass County</a>
-          <a href="/michigan/charlevoix/" class="county-link-item">📍 Charlevoix County</a>
-          <a href="/michigan/cheboygan/" class="county-link-item">📍 Cheboygan County</a>
-          <a href="/michigan/chippewa/" class="county-link-item">📍 Chippewa County</a>
-          <a href="/michigan/clare/" class="county-link-item">📍 Clare County</a>
-          <a href="/michigan/clinton/" class="county-link-item">📍 Clinton County</a>
-          <a href="/michigan/crawford/" class="county-link-item">📍 Crawford County</a>
-          <a href="/michigan/delta/" class="county-link-item">📍 Delta County</a>
-          <a href="/michigan/dickinson/" class="county-link-item">📍 Dickinson County</a>
-          <a href="/michigan/eaton/" class="county-link-item">📍 Eaton County</a>
-          <a href="/michigan/emmet/" class="county-link-item">📍 Emmet County</a>
-          <a href="/michigan/genesee/" class="county-link-item">📍 Genesee County</a>
-          <a href="/michigan/gladwin/" class="county-link-item">📍 Gladwin County</a>
-          <a href="/michigan/gogebic/" class="county-link-item">📍 Gogebic County</a>
-          <a href="/michigan/grand-traverse/" class="county-link-item">📍 Grand Traverse County</a>
-          <a href="/michigan/gratiot/" class="county-link-item">📍 Gratiot County</a>
-          <a href="/michigan/hillsdale/" class="county-link-item">📍 Hillsdale County</a>
-          <a href="/michigan/houghton/" class="county-link-item">📍 Houghton County</a>
-          <a href="/michigan/huron/" class="county-link-item">📍 Huron County</a>
-          <a href="/michigan/ingham/" class="county-link-item">📍 Ingham County</a>
-          <a href="/michigan/ionia/" class="county-link-item">📍 Ionia County</a>
-          <a href="/michigan/iosco/" class="county-link-item">📍 Iosco County</a>
-          <a href="/michigan/iron/" class="county-link-item">📍 Iron County</a>
-          <a href="/michigan/isabella/" class="county-link-item">📍 Isabella County</a>
-          <a href="/michigan/jackson/" class="county-link-item">📍 Jackson County</a>
-          <a href="/michigan/kalamazoo/" class="county-link-item">📍 Kalamazoo County</a>
-          <a href="/michigan/kalkaska/" class="county-link-item">📍 Kalkaska County</a>
-          <a href="/michigan/kent/" class="county-link-item">📍 Kent County</a>
-          <a href="/michigan/keweenaw/" class="county-link-item">📍 Keweenaw County</a>
-          <a href="/michigan/lake/" class="county-link-item">📍 Lake County</a>
-          <a href="/michigan/lapeer/" class="county-link-item">📍 Lapeer County</a>
-          <a href="/michigan/leelanau/" class="county-link-item">📍 Leelanau County</a>
-          <a href="/michigan/lenawee/" class="county-link-item">📍 Lenawee County</a>
-          <a href="/michigan/livingston/" class="county-link-item">📍 Livingston County</a>
-          <a href="/michigan/luce/" class="county-link-item">📍 Luce County</a>
-          <a href="/michigan/mackinac/" class="county-link-item">📍 Mackinac County</a>
-          <a href="/michigan/macomb/" class="county-link-item">📍 Macomb County</a>
-          <a href="/michigan/manistee/" class="county-link-item">📍 Manistee County</a>
-          <a href="/michigan/marquette/" class="county-link-item">📍 Marquette County</a>
-          <a href="/michigan/mason/" class="county-link-item">📍 Mason County</a>
-          <a href="/michigan/mecosta/" class="county-link-item">📍 Mecosta County</a>
-          <a href="/michigan/menominee/" class="county-link-item">📍 Menominee County</a>
-          <a href="/michigan/midland/" class="county-link-item">📍 Midland County</a>
-          <a href="/michigan/missaukee/" class="county-link-item">📍 Missaukee County</a>
-          <a href="/michigan/monroe/" class="county-link-item">📍 Monroe County</a>
-          <a href="/michigan/montcalm/" class="county-link-item">📍 Montcalm County</a>
-          <a href="/michigan/montmorency/" class="county-link-item">📍 Montmorency County</a>
-          <a href="/michigan/muskegon/" class="county-link-item">📍 Muskegon County</a>
-          <a href="/michigan/newaygo/" class="county-link-item">📍 Newaygo County</a>
-          <a href="/michigan/oakland/" class="county-link-item">📍 Oakland County</a>
-          <a href="/michigan/oceana/" class="county-link-item">📍 Oceana County</a>
-          <a href="/michigan/ogemaw/" class="county-link-item">📍 Ogemaw County</a>
-          <a href="/michigan/ontonagon/" class="county-link-item">📍 Ontonagon County</a>
-          <a href="/michigan/osceola/" class="county-link-item">📍 Osceola County</a>
-          <a href="/michigan/oscoda/" class="county-link-item">📍 Oscoda County</a>
-          <a href="/michigan/otsego/" class="county-link-item">📍 Otsego County</a>
-          <a href="/michigan/ottawa/" class="county-link-item">📍 Ottawa County</a>
-          <a href="/michigan/presque-isle/" class="county-link-item">📍 Presque Isle County</a>
-          <a href="/michigan/roscommon/" class="county-link-item">📍 Roscommon County</a>
-          <a href="/michigan/saginaw/" class="county-link-item">📍 Saginaw County</a>
-          <a href="/michigan/sanilac/" class="county-link-item">📍 Sanilac County</a>
-          <a href="/michigan/schoolcraft/" class="county-link-item">📍 Schoolcraft County</a>
-          <a href="/michigan/shiawassee/" class="county-link-item">📍 Shiawassee County</a>
-          <a href="/michigan/st-clair/" class="county-link-item">📍 St. Clair County</a>
-          <a href="/michigan/st-joseph/" class="county-link-item">📍 St. Joseph County</a>
-          <a href="/michigan/tuscola/" class="county-link-item">📍 Tuscola County</a>
-          <a href="/michigan/van-buren/" class="county-link-item">📍 Van Buren County</a>
-          <a href="/michigan/washtenaw/" class="county-link-item">📍 Washtenaw County</a>
-          <a href="/michigan/wayne/" class="county-link-item">📍 Wayne County</a>
-          <a href="/michigan/wexford/" class="county-link-item">📍 Wexford County</a>
+
         </div>
       </div>
-    </section>
+    </div>
+
+    <script>
+    /* County search filter */
+    (function() {
+      var inp = document.getElementById('county-search');
+      if (!inp) return;
+      inp.addEventListener('input', function() {
+        var q = inp.value.trim().toLowerCase();
+        document.querySelectorAll('#county-list .sp-az-item').forEach(function(el) {
+          el.classList.toggle('sp-hidden', q.length > 0 && el.textContent.toLowerCase().indexOf(q) === -1);
+        });
+      });
+    })();
+    </script>
+
   </main>
-  <style>
-    .county-link-item {display:flex;align-items:center;gap:0.5rem;padding:0.65rem 1rem;border:1px solid var(--gray-200);border-radius:8px;color:var(--navy);font-size:0.875rem;font-weight:600;text-decoration:none;background:#fff;transition:all 0.2s;}
-    .county-link-item:hover {border-color:var(--blue);background:rgba(45,125,210,0.04);color:var(--blue);}
-  </style>
+  
   <footer class="footer">
     <div class="container">
       <div class="footer__bottom" style="border-top:1px solid rgba(255,255,255,0.1);padding:1.5rem 0;margin-top:0;">

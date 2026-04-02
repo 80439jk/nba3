@@ -76,223 +76,281 @@
       </ol>
     </div>
   </nav>
-  <main>
-    <section style="background:linear-gradient(135deg,#0F2447,#1B3A6B);padding:4rem 0 3rem;color:#fff;">
+    <main>
+
+    <!-- State Page — Option C: Sidebar Directory -->
+    <div class="sp-hero">
       <div class="container">
-        <div style="display:flex;align-items:center;gap:1.5rem;margin-bottom:1rem;">
-          <span style="font-size:3.5rem;">🌉</span>
-          <div>
-            <span style="color:var(--gold-light);font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;">State Resource Center</span>
-            <h1 style="color:#fff;margin:0;">Missouri County Resources</h1>
+        <div class="sp-hero__inner">
+          <div class="sp-hero__left">
+            <span class="sp-hero__emoji">🌉</span>
+            <div>
+              <h1 class="sp-hero__h1">Missouri County Resources</h1>
+              <p class="sp-hero__sub">? counties · 400+ assistance programs · Always free</p>
+            </div>
           </div>
-        </div>
-        <p class="lead" style="color:rgba(255,255,255,0.78);max-width:640px;">
-          All 115 Missouri countys covered. Find free government and community assistance programs for utilities, housing, food, Missouri Medicaid, SNAP, and more — organized by your county.
-        </p>
-        <form id="zip-form" style="display:flex;gap:0;max-width:420px;margin-top:2rem;border-radius:8px;overflow:hidden;border:2px solid rgba(255,255,255,0.2);" aria-label="ZIP search">
-          <input id="zip-input" type="tel" placeholder="Enter ZIP code" maxlength="5" style="flex:1;padding:0.85rem 1rem;border:none;font-size:1rem;font-weight:600;letter-spacing:0.08em;outline:none;" />
-          <button type="submit" style="background:var(--gold);color:var(--navy-dark);border:none;padding:0.85rem 1.25rem;font-weight:700;">Go →</button>
-        </form>
-      </div>
-    </section>
-    <div style="background:var(--gray-50);border-bottom:1px solid var(--gray-200);padding:1.25rem 0;">
-      <div class="container">
-        <div style="display:flex;gap:3rem;flex-wrap:wrap;align-items:center;">
-          <div><strong style="color:var(--navy);font-size:1.4rem;">115</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Countys</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">400+</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Assistance Programs</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">9</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Resource Categories</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">Free</strong> <span style="color:var(--gray-600);font-size:0.9rem;">PDF Download</span></div>
-          <div style="margin-left:auto;">
-            <a href="tel:18006224357" style="background:var(--navy);color:#fff;padding:0.6rem 1.25rem;border-radius:6px;font-weight:700;font-size:0.9rem;text-decoration:none;">📞 Get Access Code</a>
+          <div class="sp-hero__right">
+            <form id="zip-form" class="sp-zip-form" aria-label="ZIP search">
+              <input id="zip-input" type="tel" placeholder="Enter ZIP code" maxlength="5"/>
+              <button type="submit">Go →</button>
+            </form>
+            <a href="tel:18006224357" class="sp-access-btn">📞 Get Access Code</a>
           </div>
         </div>
       </div>
     </div>
-    <section class="section" aria-labelledby="counties-heading">
+
+    <div class="sp-body">
       <div class="container">
-        <div class="section-header">
-          <span class="badge badge--gold">All Countys</span>
-          <h2 id="counties-heading">Browse All 115 Missouri Countys</h2>
-          <p>Click your county to view the full resource guide. Countys marked ⭐ have been fully verified and updated.</p>
-        </div>
-        <div style="margin-bottom:3rem;">
-          <h3 style="color:var(--gray-600);font-size:1.1rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1.5rem;">Most Populated Countys</h3>
-          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem;">
-            <a href="/missouri/st-louis/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🌉</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">St. Louis County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">1.0M residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+        <div class="sp-layout">
+
+          <!-- Sidebar -->
+          <aside class="sp-sidebar">
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">🔍 Search Counties</div>
+              <div class="sp-sidebar-body">
+                <input class="sp-sidebar-search-input" id="county-search" type="text" placeholder="County name…" autocomplete="off"/>
               </div>
-            </a>
-            <a href="/missouri/jackson/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🎺</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Jackson County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">717K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">📂 Program Type</div>
+              <div class="sp-sidebar-body">
+                <a href="#all" class="sp-sidebar-link active">All Programs</a>
+                <a href="/missouri#utilities" class="sp-sidebar-link">⚡ Utility Assistance</a>
+                <a href="/missouri#housing" class="sp-sidebar-link">🏠 Housing &amp; Rent</a>
+                <a href="/missouri#food" class="sp-sidebar-link">🥗 Food / SNAP</a>
+                <a href="/missouri#healthcare" class="sp-sidebar-link">🏥 Medicaid / Health</a>
+                <a href="/missouri#employment" class="sp-sidebar-link">💼 Employment</a>
+                <a href="/missouri#childcare" class="sp-sidebar-link">👶 Child Care</a>
+                <a href="/missouri#disability" class="sp-sidebar-link">♿ Disability</a>
+                <a href="/missouri#education" class="sp-sidebar-link">📚 Education</a>
               </div>
-            </a>
-            <a href="/missouri/st-charles/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🌾</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">St. Charles County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">424K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">📊 At a Glance</div>
+              <div class="sp-sidebar-body">
+                <div class="sp-sidebar-stat"><span>?</span><span>Counties</span></div>
+                <div class="sp-sidebar-stat"><span>400+</span><span>Programs</span></div>
+                <div class="sp-sidebar-stat"><span>9</span><span>Categories</span></div>
+                <div class="sp-sidebar-stat"><span>Free</span><span>PDF Guide</span></div>
               </div>
-            </a>
-            <a href="/missouri/jefferson/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🏛️</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Jefferson County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">226K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+          </aside>
+
+          <!-- Main content -->
+          <div class="sp-content">
+            <div class="sp-content-hd">
+              <h2>⭐ Featured Counties</h2>
+              <span>? counties total</span>
+            </div>
+            <div class="sp-featured-grid">
+            <a href="/missouri/st-louis/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🌉</span>
+                <div>
+                  <div class="sp-cc-name">St. Louis County ⭐</div>
+                  <div class="sp-cc-meta">1.0M residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:50%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
-            <a href="/missouri/greene/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🌳</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Greene County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">296K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            <a href="/missouri/jackson/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🎺</span>
+                <div>
+                  <div class="sp-cc-name">Jackson County ⭐</div>
+                  <div class="sp-cc-meta">717K residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
-            <a href="/missouri/boone/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🎓</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Boone County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">184K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            <a href="/missouri/st-charles/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🌾</span>
+                <div>
+                  <div class="sp-cc-name">St. Charles County ⭐</div>
+                  <div class="sp-cc-meta">424K residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
+            <a href="/missouri/jefferson/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🏛️</span>
+                <div>
+                  <div class="sp-cc-name">Jefferson County ⭐</div>
+                  <div class="sp-cc-meta">226K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            <a href="/missouri/greene/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🌳</span>
+                <div>
+                  <div class="sp-cc-name">Greene County ⭐</div>
+                  <div class="sp-cc-meta">296K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            <a href="/missouri/boone/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🎓</span>
+                <div>
+                  <div class="sp-cc-name">Boone County ⭐</div>
+                  <div class="sp-cc-meta">184K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            </div>
+            <div class="sp-section-label">All ? Counties — Alphabetical</div>
+            <div class="sp-az-grid" id="county-list">
+          <a href="/missouri/adair/" class="sp-az-item">📍 Adair County</a>
+          <a href="/missouri/andrew/" class="sp-az-item">📍 Andrew County</a>
+          <a href="/missouri/atchison/" class="sp-az-item">📍 Atchison County</a>
+          <a href="/missouri/audrain/" class="sp-az-item">📍 Audrain County</a>
+          <a href="/missouri/barry/" class="sp-az-item">📍 Barry County</a>
+          <a href="/missouri/barton/" class="sp-az-item">📍 Barton County</a>
+          <a href="/missouri/bates/" class="sp-az-item">📍 Bates County</a>
+          <a href="/missouri/benton/" class="sp-az-item">📍 Benton County</a>
+          <a href="/missouri/bollinger/" class="sp-az-item">📍 Bollinger County</a>
+          <a href="/missouri/boone/" class="sp-az-item">📍 Boone County</a>
+          <a href="/missouri/buchanan/" class="sp-az-item">📍 Buchanan County</a>
+          <a href="/missouri/butler/" class="sp-az-item">📍 Butler County</a>
+          <a href="/missouri/caldwell/" class="sp-az-item">📍 Caldwell County</a>
+          <a href="/missouri/callaway/" class="sp-az-item">📍 Callaway County</a>
+          <a href="/missouri/camden/" class="sp-az-item">📍 Camden County</a>
+          <a href="/missouri/cape-girardeau/" class="sp-az-item">📍 Cape Girardeau County</a>
+          <a href="/missouri/carroll/" class="sp-az-item">📍 Carroll County</a>
+          <a href="/missouri/carter/" class="sp-az-item">📍 Carter County</a>
+          <a href="/missouri/cass/" class="sp-az-item">📍 Cass County</a>
+          <a href="/missouri/cedar/" class="sp-az-item">📍 Cedar County</a>
+          <a href="/missouri/chariton/" class="sp-az-item">📍 Chariton County</a>
+          <a href="/missouri/christian/" class="sp-az-item">📍 Christian County</a>
+          <a href="/missouri/clark/" class="sp-az-item">📍 Clark County</a>
+          <a href="/missouri/clay/" class="sp-az-item">📍 Clay County</a>
+          <a href="/missouri/clinton/" class="sp-az-item">📍 Clinton County</a>
+          <a href="/missouri/cole/" class="sp-az-item">📍 Cole County</a>
+          <a href="/missouri/cooper/" class="sp-az-item">📍 Cooper County</a>
+          <a href="/missouri/crawford/" class="sp-az-item">📍 Crawford County</a>
+          <a href="/missouri/dade/" class="sp-az-item">📍 Dade County</a>
+          <a href="/missouri/dallas/" class="sp-az-item">📍 Dallas County</a>
+          <a href="/missouri/daviess/" class="sp-az-item">📍 Daviess County</a>
+          <a href="/missouri/dekalb/" class="sp-az-item">📍 DeKalb County</a>
+          <a href="/missouri/dent/" class="sp-az-item">📍 Dent County</a>
+          <a href="/missouri/douglas/" class="sp-az-item">📍 Douglas County</a>
+          <a href="/missouri/dunklin/" class="sp-az-item">📍 Dunklin County</a>
+          <a href="/missouri/franklin/" class="sp-az-item">📍 Franklin County</a>
+          <a href="/missouri/gasconade/" class="sp-az-item">📍 Gasconade County</a>
+          <a href="/missouri/gentry/" class="sp-az-item">📍 Gentry County</a>
+          <a href="/missouri/greene/" class="sp-az-item">📍 Greene County</a>
+          <a href="/missouri/grundy/" class="sp-az-item">📍 Grundy County</a>
+          <a href="/missouri/harrison/" class="sp-az-item">📍 Harrison County</a>
+          <a href="/missouri/henry/" class="sp-az-item">📍 Henry County</a>
+          <a href="/missouri/hickory/" class="sp-az-item">📍 Hickory County</a>
+          <a href="/missouri/holt/" class="sp-az-item">📍 Holt County</a>
+          <a href="/missouri/howard/" class="sp-az-item">📍 Howard County</a>
+          <a href="/missouri/howell/" class="sp-az-item">📍 Howell County</a>
+          <a href="/missouri/iron/" class="sp-az-item">📍 Iron County</a>
+          <a href="/missouri/jackson/" class="sp-az-item">📍 Jackson County</a>
+          <a href="/missouri/jasper/" class="sp-az-item">📍 Jasper County</a>
+          <a href="/missouri/jefferson/" class="sp-az-item">📍 Jefferson County</a>
+          <a href="/missouri/johnson/" class="sp-az-item">📍 Johnson County</a>
+          <a href="/missouri/knox/" class="sp-az-item">📍 Knox County</a>
+          <a href="/missouri/laclede/" class="sp-az-item">📍 Laclede County</a>
+          <a href="/missouri/lafayette/" class="sp-az-item">📍 Lafayette County</a>
+          <a href="/missouri/lawrence/" class="sp-az-item">📍 Lawrence County</a>
+          <a href="/missouri/lewis/" class="sp-az-item">📍 Lewis County</a>
+          <a href="/missouri/lincoln/" class="sp-az-item">📍 Lincoln County</a>
+          <a href="/missouri/linn/" class="sp-az-item">📍 Linn County</a>
+          <a href="/missouri/livingston/" class="sp-az-item">📍 Livingston County</a>
+          <a href="/missouri/macon/" class="sp-az-item">📍 Macon County</a>
+          <a href="/missouri/madison/" class="sp-az-item">📍 Madison County</a>
+          <a href="/missouri/maries/" class="sp-az-item">📍 Maries County</a>
+          <a href="/missouri/marion/" class="sp-az-item">📍 Marion County</a>
+          <a href="/missouri/mcdonald/" class="sp-az-item">📍 McDonald County</a>
+          <a href="/missouri/mercer/" class="sp-az-item">📍 Mercer County</a>
+          <a href="/missouri/miller/" class="sp-az-item">📍 Miller County</a>
+          <a href="/missouri/mississippi/" class="sp-az-item">📍 Mississippi County</a>
+          <a href="/missouri/moniteau/" class="sp-az-item">📍 Moniteau County</a>
+          <a href="/missouri/monroe/" class="sp-az-item">📍 Monroe County</a>
+          <a href="/missouri/montgomery/" class="sp-az-item">📍 Montgomery County</a>
+          <a href="/missouri/morgan/" class="sp-az-item">📍 Morgan County</a>
+          <a href="/missouri/new-madrid/" class="sp-az-item">📍 New Madrid County</a>
+          <a href="/missouri/newton/" class="sp-az-item">📍 Newton County</a>
+          <a href="/missouri/nodaway/" class="sp-az-item">📍 Nodaway County</a>
+          <a href="/missouri/oregon/" class="sp-az-item">📍 Oregon County</a>
+          <a href="/missouri/osage/" class="sp-az-item">📍 Osage County</a>
+          <a href="/missouri/ozark/" class="sp-az-item">📍 Ozark County</a>
+          <a href="/missouri/pemiscot/" class="sp-az-item">📍 Pemiscot County</a>
+          <a href="/missouri/perry/" class="sp-az-item">📍 Perry County</a>
+          <a href="/missouri/pettis/" class="sp-az-item">📍 Pettis County</a>
+          <a href="/missouri/phelps/" class="sp-az-item">📍 Phelps County</a>
+          <a href="/missouri/pike/" class="sp-az-item">📍 Pike County</a>
+          <a href="/missouri/platte/" class="sp-az-item">📍 Platte County</a>
+          <a href="/missouri/polk/" class="sp-az-item">📍 Polk County</a>
+          <a href="/missouri/pulaski/" class="sp-az-item">📍 Pulaski County</a>
+          <a href="/missouri/putnam/" class="sp-az-item">📍 Putnam County</a>
+          <a href="/missouri/ralls/" class="sp-az-item">📍 Ralls County</a>
+          <a href="/missouri/randolph/" class="sp-az-item">📍 Randolph County</a>
+          <a href="/missouri/ray/" class="sp-az-item">📍 Ray County</a>
+          <a href="/missouri/reynolds/" class="sp-az-item">📍 Reynolds County</a>
+          <a href="/missouri/ripley/" class="sp-az-item">📍 Ripley County</a>
+          <a href="/missouri/saline/" class="sp-az-item">📍 Saline County</a>
+          <a href="/missouri/schuyler/" class="sp-az-item">📍 Schuyler County</a>
+          <a href="/missouri/scotland/" class="sp-az-item">📍 Scotland County</a>
+          <a href="/missouri/scott/" class="sp-az-item">📍 Scott County</a>
+          <a href="/missouri/shannon/" class="sp-az-item">📍 Shannon County</a>
+          <a href="/missouri/shelby/" class="sp-az-item">📍 Shelby County</a>
+          <a href="/missouri/st-charles/" class="sp-az-item">📍 St. Charles County</a>
+          <a href="/missouri/st-clair/" class="sp-az-item">📍 St. Clair County</a>
+          <a href="/missouri/st-francois/" class="sp-az-item">📍 St. Francois County</a>
+          <a href="/missouri/st-louis/" class="sp-az-item">📍 St. Louis County</a>
+          <a href="/missouri/st-louis-city/" class="sp-az-item">📍 St. Louis City County</a>
+          <a href="/missouri/ste-genevieve/" class="sp-az-item">📍 Ste. Genevieve County</a>
+          <a href="/missouri/stoddard/" class="sp-az-item">📍 Stoddard County</a>
+          <a href="/missouri/stone/" class="sp-az-item">📍 Stone County</a>
+          <a href="/missouri/sullivan/" class="sp-az-item">📍 Sullivan County</a>
+          <a href="/missouri/taney/" class="sp-az-item">📍 Taney County</a>
+          <a href="/missouri/texas/" class="sp-az-item">📍 Texas County</a>
+          <a href="/missouri/vernon/" class="sp-az-item">📍 Vernon County</a>
+          <a href="/missouri/warren/" class="sp-az-item">📍 Warren County</a>
+          <a href="/missouri/washington/" class="sp-az-item">📍 Washington County</a>
+          <a href="/missouri/wayne/" class="sp-az-item">📍 Wayne County</a>
+          <a href="/missouri/webster/" class="sp-az-item">📍 Webster County</a>
+          <a href="/missouri/worth/" class="sp-az-item">📍 Worth County</a>
+          <a href="/missouri/wright/" class="sp-az-item">📍 Wright County</a>
+            </div>
           </div>
-        </div>
-        <h3 style="color:var(--gray-600);font-size:1.1rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1.5rem;">All 115 Countys — Alphabetical</h3>
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0.75rem;">
-          <a href="/missouri/adair/" class="county-link-item">📍 Adair County</a>
-          <a href="/missouri/andrew/" class="county-link-item">📍 Andrew County</a>
-          <a href="/missouri/atchison/" class="county-link-item">📍 Atchison County</a>
-          <a href="/missouri/audrain/" class="county-link-item">📍 Audrain County</a>
-          <a href="/missouri/barry/" class="county-link-item">📍 Barry County</a>
-          <a href="/missouri/barton/" class="county-link-item">📍 Barton County</a>
-          <a href="/missouri/bates/" class="county-link-item">📍 Bates County</a>
-          <a href="/missouri/benton/" class="county-link-item">📍 Benton County</a>
-          <a href="/missouri/bollinger/" class="county-link-item">📍 Bollinger County</a>
-          <a href="/missouri/boone/" class="county-link-item">📍 Boone County</a>
-          <a href="/missouri/buchanan/" class="county-link-item">📍 Buchanan County</a>
-          <a href="/missouri/butler/" class="county-link-item">📍 Butler County</a>
-          <a href="/missouri/caldwell/" class="county-link-item">📍 Caldwell County</a>
-          <a href="/missouri/callaway/" class="county-link-item">📍 Callaway County</a>
-          <a href="/missouri/camden/" class="county-link-item">📍 Camden County</a>
-          <a href="/missouri/cape-girardeau/" class="county-link-item">📍 Cape Girardeau County</a>
-          <a href="/missouri/carroll/" class="county-link-item">📍 Carroll County</a>
-          <a href="/missouri/carter/" class="county-link-item">📍 Carter County</a>
-          <a href="/missouri/cass/" class="county-link-item">📍 Cass County</a>
-          <a href="/missouri/cedar/" class="county-link-item">📍 Cedar County</a>
-          <a href="/missouri/chariton/" class="county-link-item">📍 Chariton County</a>
-          <a href="/missouri/christian/" class="county-link-item">📍 Christian County</a>
-          <a href="/missouri/clark/" class="county-link-item">📍 Clark County</a>
-          <a href="/missouri/clay/" class="county-link-item">📍 Clay County</a>
-          <a href="/missouri/clinton/" class="county-link-item">📍 Clinton County</a>
-          <a href="/missouri/cole/" class="county-link-item">📍 Cole County</a>
-          <a href="/missouri/cooper/" class="county-link-item">📍 Cooper County</a>
-          <a href="/missouri/crawford/" class="county-link-item">📍 Crawford County</a>
-          <a href="/missouri/dade/" class="county-link-item">📍 Dade County</a>
-          <a href="/missouri/dallas/" class="county-link-item">📍 Dallas County</a>
-          <a href="/missouri/daviess/" class="county-link-item">📍 Daviess County</a>
-          <a href="/missouri/dekalb/" class="county-link-item">📍 DeKalb County</a>
-          <a href="/missouri/dent/" class="county-link-item">📍 Dent County</a>
-          <a href="/missouri/douglas/" class="county-link-item">📍 Douglas County</a>
-          <a href="/missouri/dunklin/" class="county-link-item">📍 Dunklin County</a>
-          <a href="/missouri/franklin/" class="county-link-item">📍 Franklin County</a>
-          <a href="/missouri/gasconade/" class="county-link-item">📍 Gasconade County</a>
-          <a href="/missouri/gentry/" class="county-link-item">📍 Gentry County</a>
-          <a href="/missouri/greene/" class="county-link-item">📍 Greene County</a>
-          <a href="/missouri/grundy/" class="county-link-item">📍 Grundy County</a>
-          <a href="/missouri/harrison/" class="county-link-item">📍 Harrison County</a>
-          <a href="/missouri/henry/" class="county-link-item">📍 Henry County</a>
-          <a href="/missouri/hickory/" class="county-link-item">📍 Hickory County</a>
-          <a href="/missouri/holt/" class="county-link-item">📍 Holt County</a>
-          <a href="/missouri/howard/" class="county-link-item">📍 Howard County</a>
-          <a href="/missouri/howell/" class="county-link-item">📍 Howell County</a>
-          <a href="/missouri/iron/" class="county-link-item">📍 Iron County</a>
-          <a href="/missouri/jackson/" class="county-link-item">📍 Jackson County</a>
-          <a href="/missouri/jasper/" class="county-link-item">📍 Jasper County</a>
-          <a href="/missouri/jefferson/" class="county-link-item">📍 Jefferson County</a>
-          <a href="/missouri/johnson/" class="county-link-item">📍 Johnson County</a>
-          <a href="/missouri/knox/" class="county-link-item">📍 Knox County</a>
-          <a href="/missouri/laclede/" class="county-link-item">📍 Laclede County</a>
-          <a href="/missouri/lafayette/" class="county-link-item">📍 Lafayette County</a>
-          <a href="/missouri/lawrence/" class="county-link-item">📍 Lawrence County</a>
-          <a href="/missouri/lewis/" class="county-link-item">📍 Lewis County</a>
-          <a href="/missouri/lincoln/" class="county-link-item">📍 Lincoln County</a>
-          <a href="/missouri/linn/" class="county-link-item">📍 Linn County</a>
-          <a href="/missouri/livingston/" class="county-link-item">📍 Livingston County</a>
-          <a href="/missouri/macon/" class="county-link-item">📍 Macon County</a>
-          <a href="/missouri/madison/" class="county-link-item">📍 Madison County</a>
-          <a href="/missouri/maries/" class="county-link-item">📍 Maries County</a>
-          <a href="/missouri/marion/" class="county-link-item">📍 Marion County</a>
-          <a href="/missouri/mcdonald/" class="county-link-item">📍 McDonald County</a>
-          <a href="/missouri/mercer/" class="county-link-item">📍 Mercer County</a>
-          <a href="/missouri/miller/" class="county-link-item">📍 Miller County</a>
-          <a href="/missouri/mississippi/" class="county-link-item">📍 Mississippi County</a>
-          <a href="/missouri/moniteau/" class="county-link-item">📍 Moniteau County</a>
-          <a href="/missouri/monroe/" class="county-link-item">📍 Monroe County</a>
-          <a href="/missouri/montgomery/" class="county-link-item">📍 Montgomery County</a>
-          <a href="/missouri/morgan/" class="county-link-item">📍 Morgan County</a>
-          <a href="/missouri/new-madrid/" class="county-link-item">📍 New Madrid County</a>
-          <a href="/missouri/newton/" class="county-link-item">📍 Newton County</a>
-          <a href="/missouri/nodaway/" class="county-link-item">📍 Nodaway County</a>
-          <a href="/missouri/oregon/" class="county-link-item">📍 Oregon County</a>
-          <a href="/missouri/osage/" class="county-link-item">📍 Osage County</a>
-          <a href="/missouri/ozark/" class="county-link-item">📍 Ozark County</a>
-          <a href="/missouri/pemiscot/" class="county-link-item">📍 Pemiscot County</a>
-          <a href="/missouri/perry/" class="county-link-item">📍 Perry County</a>
-          <a href="/missouri/pettis/" class="county-link-item">📍 Pettis County</a>
-          <a href="/missouri/phelps/" class="county-link-item">📍 Phelps County</a>
-          <a href="/missouri/pike/" class="county-link-item">📍 Pike County</a>
-          <a href="/missouri/platte/" class="county-link-item">📍 Platte County</a>
-          <a href="/missouri/polk/" class="county-link-item">📍 Polk County</a>
-          <a href="/missouri/pulaski/" class="county-link-item">📍 Pulaski County</a>
-          <a href="/missouri/putnam/" class="county-link-item">📍 Putnam County</a>
-          <a href="/missouri/ralls/" class="county-link-item">📍 Ralls County</a>
-          <a href="/missouri/randolph/" class="county-link-item">📍 Randolph County</a>
-          <a href="/missouri/ray/" class="county-link-item">📍 Ray County</a>
-          <a href="/missouri/reynolds/" class="county-link-item">📍 Reynolds County</a>
-          <a href="/missouri/ripley/" class="county-link-item">📍 Ripley County</a>
-          <a href="/missouri/saline/" class="county-link-item">📍 Saline County</a>
-          <a href="/missouri/schuyler/" class="county-link-item">📍 Schuyler County</a>
-          <a href="/missouri/scotland/" class="county-link-item">📍 Scotland County</a>
-          <a href="/missouri/scott/" class="county-link-item">📍 Scott County</a>
-          <a href="/missouri/shannon/" class="county-link-item">📍 Shannon County</a>
-          <a href="/missouri/shelby/" class="county-link-item">📍 Shelby County</a>
-          <a href="/missouri/st-charles/" class="county-link-item">📍 St. Charles County</a>
-          <a href="/missouri/st-clair/" class="county-link-item">📍 St. Clair County</a>
-          <a href="/missouri/st-francois/" class="county-link-item">📍 St. Francois County</a>
-          <a href="/missouri/st-louis/" class="county-link-item">📍 St. Louis County</a>
-          <a href="/missouri/st-louis-city/" class="county-link-item">📍 St. Louis City County</a>
-          <a href="/missouri/ste-genevieve/" class="county-link-item">📍 Ste. Genevieve County</a>
-          <a href="/missouri/stoddard/" class="county-link-item">📍 Stoddard County</a>
-          <a href="/missouri/stone/" class="county-link-item">📍 Stone County</a>
-          <a href="/missouri/sullivan/" class="county-link-item">📍 Sullivan County</a>
-          <a href="/missouri/taney/" class="county-link-item">📍 Taney County</a>
-          <a href="/missouri/texas/" class="county-link-item">📍 Texas County</a>
-          <a href="/missouri/vernon/" class="county-link-item">📍 Vernon County</a>
-          <a href="/missouri/warren/" class="county-link-item">📍 Warren County</a>
-          <a href="/missouri/washington/" class="county-link-item">📍 Washington County</a>
-          <a href="/missouri/wayne/" class="county-link-item">📍 Wayne County</a>
-          <a href="/missouri/webster/" class="county-link-item">📍 Webster County</a>
-          <a href="/missouri/worth/" class="county-link-item">📍 Worth County</a>
-          <a href="/missouri/wright/" class="county-link-item">📍 Wright County</a>
+
         </div>
       </div>
-    </section>
+    </div>
+
+    <script>
+    /* County search filter */
+    (function() {
+      var inp = document.getElementById('county-search');
+      if (!inp) return;
+      inp.addEventListener('input', function() {
+        var q = inp.value.trim().toLowerCase();
+        document.querySelectorAll('#county-list .sp-az-item').forEach(function(el) {
+          el.classList.toggle('sp-hidden', q.length > 0 && el.textContent.toLowerCase().indexOf(q) === -1);
+        });
+      });
+    })();
+    </script>
+
   </main>
-  <style>
-    .county-link-item {display:flex;align-items:center;gap:0.5rem;padding:0.65rem 1rem;border:1px solid var(--gray-200);border-radius:8px;color:var(--navy);font-size:0.875rem;font-weight:600;text-decoration:none;background:#fff;transition:all 0.2s;}
-    .county-link-item:hover {border-color:var(--blue);background:rgba(45,125,210,0.04);color:var(--blue);}
-  </style>
+  
   <footer class="footer">
     <div class="container">
       <div class="footer__bottom" style="border-top:1px solid rgba(255,255,255,0.1);padding:1.5rem 0;margin-top:0;">

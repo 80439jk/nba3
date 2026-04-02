@@ -76,228 +76,286 @@
       </ol>
     </div>
   </nav>
-  <main>
-    <section style="background:linear-gradient(135deg,#0F2447,#1B3A6B);padding:4rem 0 3rem;color:#fff;">
+    <main>
+
+    <!-- State Page — Option C: Sidebar Directory -->
+    <div class="sp-hero">
       <div class="container">
-        <div style="display:flex;align-items:center;gap:1.5rem;margin-bottom:1rem;">
-          <span style="font-size:3.5rem;">🐴</span>
-          <div>
-            <span style="color:var(--gold-light);font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;">State Resource Center</span>
-            <h1 style="color:#fff;margin:0;">Kentucky County Resources</h1>
+        <div class="sp-hero__inner">
+          <div class="sp-hero__left">
+            <span class="sp-hero__emoji">🐴</span>
+            <div>
+              <h1 class="sp-hero__h1">Kentucky County Resources</h1>
+              <p class="sp-hero__sub">? counties · 400+ assistance programs · Always free</p>
+            </div>
           </div>
-        </div>
-        <p class="lead" style="color:rgba(255,255,255,0.78);max-width:640px;">
-          All 120 Kentucky countys covered. Find free government and community assistance programs for utilities, housing, food, Kentucky Medicaid, SNAP, and more — organized by your county.
-        </p>
-        <form id="zip-form" style="display:flex;gap:0;max-width:420px;margin-top:2rem;border-radius:8px;overflow:hidden;border:2px solid rgba(255,255,255,0.2);" aria-label="ZIP search">
-          <input id="zip-input" type="tel" placeholder="Enter ZIP code" maxlength="5" style="flex:1;padding:0.85rem 1rem;border:none;font-size:1rem;font-weight:600;letter-spacing:0.08em;outline:none;" />
-          <button type="submit" style="background:var(--gold);color:var(--navy-dark);border:none;padding:0.85rem 1.25rem;font-weight:700;">Go →</button>
-        </form>
-      </div>
-    </section>
-    <div style="background:var(--gray-50);border-bottom:1px solid var(--gray-200);padding:1.25rem 0;">
-      <div class="container">
-        <div style="display:flex;gap:3rem;flex-wrap:wrap;align-items:center;">
-          <div><strong style="color:var(--navy);font-size:1.4rem;">120</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Countys</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">400+</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Assistance Programs</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">9</strong> <span style="color:var(--gray-600);font-size:0.9rem;">Resource Categories</span></div>
-          <div><strong style="color:var(--navy);font-size:1.4rem;">Free</strong> <span style="color:var(--gray-600);font-size:0.9rem;">PDF Download</span></div>
-          <div style="margin-left:auto;">
-            <a href="tel:18006224357" style="background:var(--navy);color:#fff;padding:0.6rem 1.25rem;border-radius:6px;font-weight:700;font-size:0.9rem;text-decoration:none;">📞 Get Access Code</a>
+          <div class="sp-hero__right">
+            <form id="zip-form" class="sp-zip-form" aria-label="ZIP search">
+              <input id="zip-input" type="tel" placeholder="Enter ZIP code" maxlength="5"/>
+              <button type="submit">Go →</button>
+            </form>
+            <a href="tel:18006224357" class="sp-access-btn">📞 Get Access Code</a>
           </div>
         </div>
       </div>
     </div>
-    <section class="section" aria-labelledby="counties-heading">
+
+    <div class="sp-body">
       <div class="container">
-        <div class="section-header">
-          <span class="badge badge--gold">All Countys</span>
-          <h2 id="counties-heading">Browse All 120 Kentucky Countys</h2>
-          <p>Click your county to view the full resource guide. Countys marked ⭐ have been fully verified and updated.</p>
-        </div>
-        <div style="margin-bottom:3rem;">
-          <h3 style="color:var(--gray-600);font-size:1.1rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1.5rem;">Most Populated Countys</h3>
-          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem;">
-            <a href="/kentucky/jefferson/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🏙️</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Jefferson County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">783K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+        <div class="sp-layout">
+
+          <!-- Sidebar -->
+          <aside class="sp-sidebar">
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">🔍 Search Counties</div>
+              <div class="sp-sidebar-body">
+                <input class="sp-sidebar-search-input" id="county-search" type="text" placeholder="County name…" autocomplete="off"/>
               </div>
-            </a>
-            <a href="/kentucky/fayette/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🐴</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Fayette County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">323K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">📂 Program Type</div>
+              <div class="sp-sidebar-body">
+                <a href="#all" class="sp-sidebar-link active">All Programs</a>
+                <a href="/kentucky#utilities" class="sp-sidebar-link">⚡ Utility Assistance</a>
+                <a href="/kentucky#housing" class="sp-sidebar-link">🏠 Housing &amp; Rent</a>
+                <a href="/kentucky#food" class="sp-sidebar-link">🥗 Food / SNAP</a>
+                <a href="/kentucky#healthcare" class="sp-sidebar-link">🏥 Medicaid / Health</a>
+                <a href="/kentucky#employment" class="sp-sidebar-link">💼 Employment</a>
+                <a href="/kentucky#childcare" class="sp-sidebar-link">👶 Child Care</a>
+                <a href="/kentucky#disability" class="sp-sidebar-link">♿ Disability</a>
+                <a href="/kentucky#education" class="sp-sidebar-link">📚 Education</a>
               </div>
-            </a>
-            <a href="/kentucky/kenton/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🌉</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Kenton County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">167K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+            <div class="sp-sidebar-card">
+              <div class="sp-sidebar-hd">📊 At a Glance</div>
+              <div class="sp-sidebar-body">
+                <div class="sp-sidebar-stat"><span>?</span><span>Counties</span></div>
+                <div class="sp-sidebar-stat"><span>400+</span><span>Programs</span></div>
+                <div class="sp-sidebar-stat"><span>9</span><span>Categories</span></div>
+                <div class="sp-sidebar-stat"><span>Free</span><span>PDF Guide</span></div>
               </div>
-            </a>
-            <a href="/kentucky/boone/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🌾</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Boone County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">138K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            </div>
+          </aside>
+
+          <!-- Main content -->
+          <div class="sp-content">
+            <div class="sp-content-hd">
+              <h2>⭐ Featured Counties</h2>
+              <span>? counties total</span>
+            </div>
+            <div class="sp-featured-grid">
+            <a href="/kentucky/jefferson/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🏙️</span>
+                <div>
+                  <div class="sp-cc-name">Jefferson County ⭐</div>
+                  <div class="sp-cc-meta">783K residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
-            <a href="/kentucky/hardin/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🏛️</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Hardin County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">111K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            <a href="/kentucky/fayette/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🐴</span>
+                <div>
+                  <div class="sp-cc-name">Fayette County ⭐</div>
+                  <div class="sp-cc-meta">323K residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
-            <a href="/kentucky/madison/" style="display:flex;gap:1rem;align-items:center;padding:1.25rem;border:2px solid var(--gray-200);border-radius:10px;text-decoration:none;background:#fff;transition:all 0.25s;" onmouseover="this.style.borderColor='#1B3A6B';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#e9ecef';this.style.transform='none'">
-              <span style="font-size:2rem;">🎓</span>
-              <div>
-                <div style="font-weight:700;color:var(--navy);font-size:1rem;">Madison County ⭐</div>
-                <div style="font-size:0.8rem;color:var(--gray-600);">93K residents · 50+ programs</div>
-                <div style="font-size:0.75rem;color:var(--blue);margin-top:0.3rem;font-weight:600;">View Resources →</div>
+            <a href="/kentucky/kenton/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🌉</span>
+                <div>
+                  <div class="sp-cc-name">Kenton County ⭐</div>
+                  <div class="sp-cc-meta">167K residents · 50+ programs</div>
+                </div>
               </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
             </a>
+            <a href="/kentucky/boone/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🌾</span>
+                <div>
+                  <div class="sp-cc-name">Boone County ⭐</div>
+                  <div class="sp-cc-meta">138K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            <a href="/kentucky/hardin/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🏛️</span>
+                <div>
+                  <div class="sp-cc-name">Hardin County ⭐</div>
+                  <div class="sp-cc-meta">111K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            <a href="/kentucky/madison/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">🎓</span>
+                <div>
+                  <div class="sp-cc-name">Madison County ⭐</div>
+                  <div class="sp-cc-meta">93K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            </div>
+            <div class="sp-section-label">All ? Counties — Alphabetical</div>
+            <div class="sp-az-grid" id="county-list">
+          <a href="/kentucky/adair/" class="sp-az-item">📍 Adair County</a>
+          <a href="/kentucky/allen/" class="sp-az-item">📍 Allen County</a>
+          <a href="/kentucky/anderson/" class="sp-az-item">📍 Anderson County</a>
+          <a href="/kentucky/ballard/" class="sp-az-item">📍 Ballard County</a>
+          <a href="/kentucky/barren/" class="sp-az-item">📍 Barren County</a>
+          <a href="/kentucky/bath/" class="sp-az-item">📍 Bath County</a>
+          <a href="/kentucky/bell/" class="sp-az-item">📍 Bell County</a>
+          <a href="/kentucky/boone/" class="sp-az-item">📍 Boone County</a>
+          <a href="/kentucky/bourbon/" class="sp-az-item">📍 Bourbon County</a>
+          <a href="/kentucky/boyd/" class="sp-az-item">📍 Boyd County</a>
+          <a href="/kentucky/boyle/" class="sp-az-item">📍 Boyle County</a>
+          <a href="/kentucky/bracken/" class="sp-az-item">📍 Bracken County</a>
+          <a href="/kentucky/breathitt/" class="sp-az-item">📍 Breathitt County</a>
+          <a href="/kentucky/breckinridge/" class="sp-az-item">📍 Breckinridge County</a>
+          <a href="/kentucky/bullitt/" class="sp-az-item">📍 Bullitt County</a>
+          <a href="/kentucky/butler/" class="sp-az-item">📍 Butler County</a>
+          <a href="/kentucky/caldwell/" class="sp-az-item">📍 Caldwell County</a>
+          <a href="/kentucky/calloway/" class="sp-az-item">📍 Calloway County</a>
+          <a href="/kentucky/campbell/" class="sp-az-item">📍 Campbell County</a>
+          <a href="/kentucky/carlisle/" class="sp-az-item">📍 Carlisle County</a>
+          <a href="/kentucky/carroll/" class="sp-az-item">📍 Carroll County</a>
+          <a href="/kentucky/carter/" class="sp-az-item">📍 Carter County</a>
+          <a href="/kentucky/casey/" class="sp-az-item">📍 Casey County</a>
+          <a href="/kentucky/christian/" class="sp-az-item">📍 Christian County</a>
+          <a href="/kentucky/clark/" class="sp-az-item">📍 Clark County</a>
+          <a href="/kentucky/clay/" class="sp-az-item">📍 Clay County</a>
+          <a href="/kentucky/clinton/" class="sp-az-item">📍 Clinton County</a>
+          <a href="/kentucky/crittenden/" class="sp-az-item">📍 Crittenden County</a>
+          <a href="/kentucky/cumberland/" class="sp-az-item">📍 Cumberland County</a>
+          <a href="/kentucky/daviess/" class="sp-az-item">📍 Daviess County</a>
+          <a href="/kentucky/edmonson/" class="sp-az-item">📍 Edmonson County</a>
+          <a href="/kentucky/elliott/" class="sp-az-item">📍 Elliott County</a>
+          <a href="/kentucky/estill/" class="sp-az-item">📍 Estill County</a>
+          <a href="/kentucky/fayette/" class="sp-az-item">📍 Fayette County</a>
+          <a href="/kentucky/fleming/" class="sp-az-item">📍 Fleming County</a>
+          <a href="/kentucky/floyd/" class="sp-az-item">📍 Floyd County</a>
+          <a href="/kentucky/franklin/" class="sp-az-item">📍 Franklin County</a>
+          <a href="/kentucky/fulton/" class="sp-az-item">📍 Fulton County</a>
+          <a href="/kentucky/gallatin/" class="sp-az-item">📍 Gallatin County</a>
+          <a href="/kentucky/garrard/" class="sp-az-item">📍 Garrard County</a>
+          <a href="/kentucky/grant/" class="sp-az-item">📍 Grant County</a>
+          <a href="/kentucky/graves/" class="sp-az-item">📍 Graves County</a>
+          <a href="/kentucky/grayson/" class="sp-az-item">📍 Grayson County</a>
+          <a href="/kentucky/green/" class="sp-az-item">📍 Green County</a>
+          <a href="/kentucky/greenup/" class="sp-az-item">📍 Greenup County</a>
+          <a href="/kentucky/hancock/" class="sp-az-item">📍 Hancock County</a>
+          <a href="/kentucky/hardin/" class="sp-az-item">📍 Hardin County</a>
+          <a href="/kentucky/harlan/" class="sp-az-item">📍 Harlan County</a>
+          <a href="/kentucky/harrison/" class="sp-az-item">📍 Harrison County</a>
+          <a href="/kentucky/hart/" class="sp-az-item">📍 Hart County</a>
+          <a href="/kentucky/henderson/" class="sp-az-item">📍 Henderson County</a>
+          <a href="/kentucky/henry/" class="sp-az-item">📍 Henry County</a>
+          <a href="/kentucky/hickman/" class="sp-az-item">📍 Hickman County</a>
+          <a href="/kentucky/hopkins/" class="sp-az-item">📍 Hopkins County</a>
+          <a href="/kentucky/jackson/" class="sp-az-item">📍 Jackson County</a>
+          <a href="/kentucky/jefferson/" class="sp-az-item">📍 Jefferson County</a>
+          <a href="/kentucky/jessamine/" class="sp-az-item">📍 Jessamine County</a>
+          <a href="/kentucky/johnson/" class="sp-az-item">📍 Johnson County</a>
+          <a href="/kentucky/kenton/" class="sp-az-item">📍 Kenton County</a>
+          <a href="/kentucky/knott/" class="sp-az-item">📍 Knott County</a>
+          <a href="/kentucky/knox/" class="sp-az-item">📍 Knox County</a>
+          <a href="/kentucky/larue/" class="sp-az-item">📍 Larue County</a>
+          <a href="/kentucky/laurel/" class="sp-az-item">📍 Laurel County</a>
+          <a href="/kentucky/lawrence/" class="sp-az-item">📍 Lawrence County</a>
+          <a href="/kentucky/lee/" class="sp-az-item">📍 Lee County</a>
+          <a href="/kentucky/leslie/" class="sp-az-item">📍 Leslie County</a>
+          <a href="/kentucky/letcher/" class="sp-az-item">📍 Letcher County</a>
+          <a href="/kentucky/lewis/" class="sp-az-item">📍 Lewis County</a>
+          <a href="/kentucky/lincoln/" class="sp-az-item">📍 Lincoln County</a>
+          <a href="/kentucky/livingston/" class="sp-az-item">📍 Livingston County</a>
+          <a href="/kentucky/logan/" class="sp-az-item">📍 Logan County</a>
+          <a href="/kentucky/lyon/" class="sp-az-item">📍 Lyon County</a>
+          <a href="/kentucky/madison/" class="sp-az-item">📍 Madison County</a>
+          <a href="/kentucky/magoffin/" class="sp-az-item">📍 Magoffin County</a>
+          <a href="/kentucky/marion/" class="sp-az-item">📍 Marion County</a>
+          <a href="/kentucky/marshall/" class="sp-az-item">📍 Marshall County</a>
+          <a href="/kentucky/martin/" class="sp-az-item">📍 Martin County</a>
+          <a href="/kentucky/mason/" class="sp-az-item">📍 Mason County</a>
+          <a href="/kentucky/mccracken/" class="sp-az-item">📍 McCracken County</a>
+          <a href="/kentucky/mccreary/" class="sp-az-item">📍 McCreary County</a>
+          <a href="/kentucky/mclean/" class="sp-az-item">📍 McLean County</a>
+          <a href="/kentucky/meade/" class="sp-az-item">📍 Meade County</a>
+          <a href="/kentucky/menifee/" class="sp-az-item">📍 Menifee County</a>
+          <a href="/kentucky/mercer/" class="sp-az-item">📍 Mercer County</a>
+          <a href="/kentucky/metcalfe/" class="sp-az-item">📍 Metcalfe County</a>
+          <a href="/kentucky/monroe/" class="sp-az-item">📍 Monroe County</a>
+          <a href="/kentucky/montgomery/" class="sp-az-item">📍 Montgomery County</a>
+          <a href="/kentucky/morgan/" class="sp-az-item">📍 Morgan County</a>
+          <a href="/kentucky/muhlenberg/" class="sp-az-item">📍 Muhlenberg County</a>
+          <a href="/kentucky/nelson/" class="sp-az-item">📍 Nelson County</a>
+          <a href="/kentucky/nicholas/" class="sp-az-item">📍 Nicholas County</a>
+          <a href="/kentucky/ohio/" class="sp-az-item">📍 Ohio County</a>
+          <a href="/kentucky/oldham/" class="sp-az-item">📍 Oldham County</a>
+          <a href="/kentucky/owen/" class="sp-az-item">📍 Owen County</a>
+          <a href="/kentucky/owsley/" class="sp-az-item">📍 Owsley County</a>
+          <a href="/kentucky/pendleton/" class="sp-az-item">📍 Pendleton County</a>
+          <a href="/kentucky/perry/" class="sp-az-item">📍 Perry County</a>
+          <a href="/kentucky/pike/" class="sp-az-item">📍 Pike County</a>
+          <a href="/kentucky/powell/" class="sp-az-item">📍 Powell County</a>
+          <a href="/kentucky/pulaski/" class="sp-az-item">📍 Pulaski County</a>
+          <a href="/kentucky/robertson/" class="sp-az-item">📍 Robertson County</a>
+          <a href="/kentucky/rockcastle/" class="sp-az-item">📍 Rockcastle County</a>
+          <a href="/kentucky/rowan/" class="sp-az-item">📍 Rowan County</a>
+          <a href="/kentucky/russell/" class="sp-az-item">📍 Russell County</a>
+          <a href="/kentucky/scott/" class="sp-az-item">📍 Scott County</a>
+          <a href="/kentucky/shelby/" class="sp-az-item">📍 Shelby County</a>
+          <a href="/kentucky/simpson/" class="sp-az-item">📍 Simpson County</a>
+          <a href="/kentucky/spencer/" class="sp-az-item">📍 Spencer County</a>
+          <a href="/kentucky/taylor/" class="sp-az-item">📍 Taylor County</a>
+          <a href="/kentucky/todd/" class="sp-az-item">📍 Todd County</a>
+          <a href="/kentucky/trigg/" class="sp-az-item">📍 Trigg County</a>
+          <a href="/kentucky/trimble/" class="sp-az-item">📍 Trimble County</a>
+          <a href="/kentucky/union/" class="sp-az-item">📍 Union County</a>
+          <a href="/kentucky/warren/" class="sp-az-item">📍 Warren County</a>
+          <a href="/kentucky/washington/" class="sp-az-item">📍 Washington County</a>
+          <a href="/kentucky/wayne/" class="sp-az-item">📍 Wayne County</a>
+          <a href="/kentucky/webster/" class="sp-az-item">📍 Webster County</a>
+          <a href="/kentucky/whitley/" class="sp-az-item">📍 Whitley County</a>
+          <a href="/kentucky/wolfe/" class="sp-az-item">📍 Wolfe County</a>
+          <a href="/kentucky/woodford/" class="sp-az-item">📍 Woodford County</a>
+            </div>
           </div>
-        </div>
-        <h3 style="color:var(--gray-600);font-size:1.1rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1.5rem;">All 120 Countys — Alphabetical</h3>
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0.75rem;">
-          <a href="/kentucky/adair/" class="county-link-item">📍 Adair County</a>
-          <a href="/kentucky/allen/" class="county-link-item">📍 Allen County</a>
-          <a href="/kentucky/anderson/" class="county-link-item">📍 Anderson County</a>
-          <a href="/kentucky/ballard/" class="county-link-item">📍 Ballard County</a>
-          <a href="/kentucky/barren/" class="county-link-item">📍 Barren County</a>
-          <a href="/kentucky/bath/" class="county-link-item">📍 Bath County</a>
-          <a href="/kentucky/bell/" class="county-link-item">📍 Bell County</a>
-          <a href="/kentucky/boone/" class="county-link-item">📍 Boone County</a>
-          <a href="/kentucky/bourbon/" class="county-link-item">📍 Bourbon County</a>
-          <a href="/kentucky/boyd/" class="county-link-item">📍 Boyd County</a>
-          <a href="/kentucky/boyle/" class="county-link-item">📍 Boyle County</a>
-          <a href="/kentucky/bracken/" class="county-link-item">📍 Bracken County</a>
-          <a href="/kentucky/breathitt/" class="county-link-item">📍 Breathitt County</a>
-          <a href="/kentucky/breckinridge/" class="county-link-item">📍 Breckinridge County</a>
-          <a href="/kentucky/bullitt/" class="county-link-item">📍 Bullitt County</a>
-          <a href="/kentucky/butler/" class="county-link-item">📍 Butler County</a>
-          <a href="/kentucky/caldwell/" class="county-link-item">📍 Caldwell County</a>
-          <a href="/kentucky/calloway/" class="county-link-item">📍 Calloway County</a>
-          <a href="/kentucky/campbell/" class="county-link-item">📍 Campbell County</a>
-          <a href="/kentucky/carlisle/" class="county-link-item">📍 Carlisle County</a>
-          <a href="/kentucky/carroll/" class="county-link-item">📍 Carroll County</a>
-          <a href="/kentucky/carter/" class="county-link-item">📍 Carter County</a>
-          <a href="/kentucky/casey/" class="county-link-item">📍 Casey County</a>
-          <a href="/kentucky/christian/" class="county-link-item">📍 Christian County</a>
-          <a href="/kentucky/clark/" class="county-link-item">📍 Clark County</a>
-          <a href="/kentucky/clay/" class="county-link-item">📍 Clay County</a>
-          <a href="/kentucky/clinton/" class="county-link-item">📍 Clinton County</a>
-          <a href="/kentucky/crittenden/" class="county-link-item">📍 Crittenden County</a>
-          <a href="/kentucky/cumberland/" class="county-link-item">📍 Cumberland County</a>
-          <a href="/kentucky/daviess/" class="county-link-item">📍 Daviess County</a>
-          <a href="/kentucky/edmonson/" class="county-link-item">📍 Edmonson County</a>
-          <a href="/kentucky/elliott/" class="county-link-item">📍 Elliott County</a>
-          <a href="/kentucky/estill/" class="county-link-item">📍 Estill County</a>
-          <a href="/kentucky/fayette/" class="county-link-item">📍 Fayette County</a>
-          <a href="/kentucky/fleming/" class="county-link-item">📍 Fleming County</a>
-          <a href="/kentucky/floyd/" class="county-link-item">📍 Floyd County</a>
-          <a href="/kentucky/franklin/" class="county-link-item">📍 Franklin County</a>
-          <a href="/kentucky/fulton/" class="county-link-item">📍 Fulton County</a>
-          <a href="/kentucky/gallatin/" class="county-link-item">📍 Gallatin County</a>
-          <a href="/kentucky/garrard/" class="county-link-item">📍 Garrard County</a>
-          <a href="/kentucky/grant/" class="county-link-item">📍 Grant County</a>
-          <a href="/kentucky/graves/" class="county-link-item">📍 Graves County</a>
-          <a href="/kentucky/grayson/" class="county-link-item">📍 Grayson County</a>
-          <a href="/kentucky/green/" class="county-link-item">📍 Green County</a>
-          <a href="/kentucky/greenup/" class="county-link-item">📍 Greenup County</a>
-          <a href="/kentucky/hancock/" class="county-link-item">📍 Hancock County</a>
-          <a href="/kentucky/hardin/" class="county-link-item">📍 Hardin County</a>
-          <a href="/kentucky/harlan/" class="county-link-item">📍 Harlan County</a>
-          <a href="/kentucky/harrison/" class="county-link-item">📍 Harrison County</a>
-          <a href="/kentucky/hart/" class="county-link-item">📍 Hart County</a>
-          <a href="/kentucky/henderson/" class="county-link-item">📍 Henderson County</a>
-          <a href="/kentucky/henry/" class="county-link-item">📍 Henry County</a>
-          <a href="/kentucky/hickman/" class="county-link-item">📍 Hickman County</a>
-          <a href="/kentucky/hopkins/" class="county-link-item">📍 Hopkins County</a>
-          <a href="/kentucky/jackson/" class="county-link-item">📍 Jackson County</a>
-          <a href="/kentucky/jefferson/" class="county-link-item">📍 Jefferson County</a>
-          <a href="/kentucky/jessamine/" class="county-link-item">📍 Jessamine County</a>
-          <a href="/kentucky/johnson/" class="county-link-item">📍 Johnson County</a>
-          <a href="/kentucky/kenton/" class="county-link-item">📍 Kenton County</a>
-          <a href="/kentucky/knott/" class="county-link-item">📍 Knott County</a>
-          <a href="/kentucky/knox/" class="county-link-item">📍 Knox County</a>
-          <a href="/kentucky/larue/" class="county-link-item">📍 Larue County</a>
-          <a href="/kentucky/laurel/" class="county-link-item">📍 Laurel County</a>
-          <a href="/kentucky/lawrence/" class="county-link-item">📍 Lawrence County</a>
-          <a href="/kentucky/lee/" class="county-link-item">📍 Lee County</a>
-          <a href="/kentucky/leslie/" class="county-link-item">📍 Leslie County</a>
-          <a href="/kentucky/letcher/" class="county-link-item">📍 Letcher County</a>
-          <a href="/kentucky/lewis/" class="county-link-item">📍 Lewis County</a>
-          <a href="/kentucky/lincoln/" class="county-link-item">📍 Lincoln County</a>
-          <a href="/kentucky/livingston/" class="county-link-item">📍 Livingston County</a>
-          <a href="/kentucky/logan/" class="county-link-item">📍 Logan County</a>
-          <a href="/kentucky/lyon/" class="county-link-item">📍 Lyon County</a>
-          <a href="/kentucky/madison/" class="county-link-item">📍 Madison County</a>
-          <a href="/kentucky/magoffin/" class="county-link-item">📍 Magoffin County</a>
-          <a href="/kentucky/marion/" class="county-link-item">📍 Marion County</a>
-          <a href="/kentucky/marshall/" class="county-link-item">📍 Marshall County</a>
-          <a href="/kentucky/martin/" class="county-link-item">📍 Martin County</a>
-          <a href="/kentucky/mason/" class="county-link-item">📍 Mason County</a>
-          <a href="/kentucky/mccracken/" class="county-link-item">📍 McCracken County</a>
-          <a href="/kentucky/mccreary/" class="county-link-item">📍 McCreary County</a>
-          <a href="/kentucky/mclean/" class="county-link-item">📍 McLean County</a>
-          <a href="/kentucky/meade/" class="county-link-item">📍 Meade County</a>
-          <a href="/kentucky/menifee/" class="county-link-item">📍 Menifee County</a>
-          <a href="/kentucky/mercer/" class="county-link-item">📍 Mercer County</a>
-          <a href="/kentucky/metcalfe/" class="county-link-item">📍 Metcalfe County</a>
-          <a href="/kentucky/monroe/" class="county-link-item">📍 Monroe County</a>
-          <a href="/kentucky/montgomery/" class="county-link-item">📍 Montgomery County</a>
-          <a href="/kentucky/morgan/" class="county-link-item">📍 Morgan County</a>
-          <a href="/kentucky/muhlenberg/" class="county-link-item">📍 Muhlenberg County</a>
-          <a href="/kentucky/nelson/" class="county-link-item">📍 Nelson County</a>
-          <a href="/kentucky/nicholas/" class="county-link-item">📍 Nicholas County</a>
-          <a href="/kentucky/ohio/" class="county-link-item">📍 Ohio County</a>
-          <a href="/kentucky/oldham/" class="county-link-item">📍 Oldham County</a>
-          <a href="/kentucky/owen/" class="county-link-item">📍 Owen County</a>
-          <a href="/kentucky/owsley/" class="county-link-item">📍 Owsley County</a>
-          <a href="/kentucky/pendleton/" class="county-link-item">📍 Pendleton County</a>
-          <a href="/kentucky/perry/" class="county-link-item">📍 Perry County</a>
-          <a href="/kentucky/pike/" class="county-link-item">📍 Pike County</a>
-          <a href="/kentucky/powell/" class="county-link-item">📍 Powell County</a>
-          <a href="/kentucky/pulaski/" class="county-link-item">📍 Pulaski County</a>
-          <a href="/kentucky/robertson/" class="county-link-item">📍 Robertson County</a>
-          <a href="/kentucky/rockcastle/" class="county-link-item">📍 Rockcastle County</a>
-          <a href="/kentucky/rowan/" class="county-link-item">📍 Rowan County</a>
-          <a href="/kentucky/russell/" class="county-link-item">📍 Russell County</a>
-          <a href="/kentucky/scott/" class="county-link-item">📍 Scott County</a>
-          <a href="/kentucky/shelby/" class="county-link-item">📍 Shelby County</a>
-          <a href="/kentucky/simpson/" class="county-link-item">📍 Simpson County</a>
-          <a href="/kentucky/spencer/" class="county-link-item">📍 Spencer County</a>
-          <a href="/kentucky/taylor/" class="county-link-item">📍 Taylor County</a>
-          <a href="/kentucky/todd/" class="county-link-item">📍 Todd County</a>
-          <a href="/kentucky/trigg/" class="county-link-item">📍 Trigg County</a>
-          <a href="/kentucky/trimble/" class="county-link-item">📍 Trimble County</a>
-          <a href="/kentucky/union/" class="county-link-item">📍 Union County</a>
-          <a href="/kentucky/warren/" class="county-link-item">📍 Warren County</a>
-          <a href="/kentucky/washington/" class="county-link-item">📍 Washington County</a>
-          <a href="/kentucky/wayne/" class="county-link-item">📍 Wayne County</a>
-          <a href="/kentucky/webster/" class="county-link-item">📍 Webster County</a>
-          <a href="/kentucky/whitley/" class="county-link-item">📍 Whitley County</a>
-          <a href="/kentucky/wolfe/" class="county-link-item">📍 Wolfe County</a>
-          <a href="/kentucky/woodford/" class="county-link-item">📍 Woodford County</a>
+
         </div>
       </div>
-    </section>
+    </div>
+
+    <script>
+    /* County search filter */
+    (function() {
+      var inp = document.getElementById('county-search');
+      if (!inp) return;
+      inp.addEventListener('input', function() {
+        var q = inp.value.trim().toLowerCase();
+        document.querySelectorAll('#county-list .sp-az-item').forEach(function(el) {
+          el.classList.toggle('sp-hidden', q.length > 0 && el.textContent.toLowerCase().indexOf(q) === -1);
+        });
+      });
+    })();
+    </script>
+
   </main>
-  <style>
-    .county-link-item {display:flex;align-items:center;gap:0.5rem;padding:0.65rem 1rem;border:1px solid var(--gray-200);border-radius:8px;color:var(--navy);font-size:0.875rem;font-weight:600;text-decoration:none;background:#fff;transition:all 0.2s;}
-    .county-link-item:hover {border-color:var(--blue);background:rgba(45,125,210,0.04);color:var(--blue);}
-  </style>
+  
   <footer class="footer">
     <div class="container">
       <div class="footer__bottom" style="border-top:1px solid rgba(255,255,255,0.1);padding:1.5rem 0;margin-top:0;">

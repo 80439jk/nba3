@@ -2,8 +2,7 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/apply/1/assets/:path*", "destination": "/apply/1/assets/:path*" },
-    { "source": "/apply/1/:path*",        "destination": "/apply/1/index.html" },
+    { "source": "/apply/1/(.*)",           "destination": "/apply/1/index.html" },
     { "source": "/search",               "destination": "/api/search" },
     { "source": "/sitemap.xml",          "destination": "/api/sitemap" },
     { "source": "/sitemap-counties.xml", "destination": "/api/sitemap-counties" },

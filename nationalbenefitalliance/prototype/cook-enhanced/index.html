@@ -568,7 +568,7 @@
       grid-template-columns: 1fr 1fr;
       gap: 1rem;
     }
-    @media (max-width: 640px) {
+    @media (max-width: 768px) {
       .resource-item__detail-grid {
         grid-template-columns: 1fr;
       }
@@ -656,6 +656,123 @@
     /* Faith-based category */
     .resource-category--faith .resource-category__icon {
       background: rgba(147,51,234,0.08);
+    }
+
+    /* ===== MOBILE QUICK ACCESS PILL BAR ===== */
+    .mobile-quick-access {
+      display: none;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      gap: 0.4rem;
+      padding: 0.6rem 1rem;
+      background: white;
+      border-bottom: 1px solid var(--gray-200);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    .mobile-quick-access::-webkit-scrollbar { display: none; }
+    .mobile-qa-pill {
+      flex-shrink: 0;
+      padding: 0.35rem 0.75rem;
+      border-radius: 50px;
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      font-size: 0.75rem;
+      color: var(--navy);
+      font-weight: 500;
+      white-space: nowrap;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    .mobile-qa-pill:hover,
+    .mobile-qa-pill.active {
+      background: var(--navy);
+      color: white;
+      border-color: var(--navy);
+    }
+
+    /* ===== ACCORDION TOGGLE FOR DETAIL BLOCKS ===== */
+    .detail-toggle {
+      display: none; /* hidden on desktop */
+      align-items: center;
+      justify-content: space-between;
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 8px;
+      padding: 0.5rem 0.75rem;
+      margin-top: 0.5rem;
+      cursor: pointer;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--navy);
+      transition: var(--transition);
+      -webkit-tap-highlight-color: transparent;
+    }
+    .detail-toggle:hover { background: rgba(27,58,107,0.04); }
+    .detail-toggle .chevron {
+      transition: transform 0.25s ease;
+      font-size: 0.7rem;
+    }
+    .detail-toggle.open .chevron { transform: rotate(180deg); }
+
+    /* ===== MOBILE-ONLY STYLES ===== */
+    @media (max-width: 1024px) {
+      .mobile-quick-access {
+        display: flex;
+      }
+    }
+    @media (max-width: 768px) {
+      /* Show accordion toggles on mobile */
+      .detail-toggle {
+        display: flex;
+      }
+      /* Hide detail blocks by default on mobile (JS will toggle) */
+      .resource-item__detail {
+        display: none;
+      }
+      .resource-item__detail.detail-open {
+        display: block;
+      }
+
+      /* Stack resource badge below title */
+      .resource-item__header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.35rem;
+      }
+
+      /* Tighter padding on mobile */
+      .resource-item__detail {
+        padding: 0.75rem;
+      }
+      .resource-category__header {
+        padding: 0.75rem;
+      }
+      .resource-item {
+        padding: 0.75rem;
+      }
+
+      /* Reduce section padding */
+      .section.resource-section {
+        padding: 1.5rem 0;
+      }
+    }
+    @media (max-width: 480px) {
+      .resource-item__detail {
+        padding: 0.6rem;
+        font-size: 0.8rem;
+      }
+      .resource-item__detail-label {
+        font-size: 0.7rem;
+      }
+      .resource-item__detail-value {
+        font-size: 0.8rem;
+      }
+      .apply-method {
+        padding: 0.25rem 0.6rem;
+        font-size: 0.75rem;
+      }
     }
 
     /* Prototype banner */
@@ -751,6 +868,15 @@
         </p>
       </div>
     </div>
+
+    <!-- Mobile Quick Access Pill Bar (hidden on desktop) -->
+    <nav class="mobile-quick-access" aria-label="Quick category navigation">
+      <a href="#utilities" class="mobile-qa-pill active">⚡ Utility</a>
+      <a href="#housing" class="mobile-qa-pill">🏠 Housing</a>
+      <a href="#food" class="mobile-qa-pill">🥗 Food</a>
+      <a href="#faith-based" class="mobile-qa-pill">⛪ Faith</a>
+      <a href="#employment" class="mobile-qa-pill">💼 Jobs</a>
+    </nav>
 
     <!-- Resources Section -->
     <section class="section resource-section" id="resources">
@@ -1412,5 +1538,74 @@
   </footer>
 
   <script src="../../js/main.js?v=8" defer></script>
+
+  <script>
+  /* ===== MOBILE UX ENHANCEMENTS ===== */
+  document.addEventListener('DOMContentLoaded', function() {
+
+    /* --- 1. Accordion toggles for detail blocks on mobile --- */
+    var details = document.querySelectorAll('.resource-item__detail');
+    details.forEach(function(detail) {
+      var toggle = document.createElement('div');
+      toggle.className = 'detail-toggle';
+      toggle.innerHTML = '<span>View Program Details</span><span class="chevron">▾</span>';
+      toggle.setAttribute('role', 'button');
+      toggle.setAttribute('tabindex', '0');
+      toggle.setAttribute('aria-expanded', 'false');
+
+      toggle.addEventListener('click', function() {
+        var isOpen = this.classList.toggle('open');
+        detail.classList.toggle('detail-open');
+        this.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        this.querySelector('span:first-child').textContent = isOpen ? 'Hide Program Details' : 'View Program Details';
+      });
+
+      toggle.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); this.click(); }
+      });
+
+      detail.parentNode.insertBefore(toggle, detail);
+    });
+
+    /* --- 2. Mobile Quick Access pill bar — active state on scroll --- */
+    var pills = document.querySelectorAll('.mobile-qa-pill');
+    var sections = [];
+    pills.forEach(function(pill) {
+      var id = pill.getAttribute('href').replace('#', '');
+      var el = document.getElementById(id);
+      if (el) sections.push({ id: id, el: el, pill: pill });
+    });
+
+    function updateActivePill() {
+      var scrollY = window.scrollY + 120;
+      var active = null;
+      sections.forEach(function(s) {
+        if (s.el.offsetTop <= scrollY) active = s;
+      });
+      pills.forEach(function(p) { p.classList.remove('active'); });
+      if (active) active.pill.classList.add('active');
+    }
+
+    var scrollTimer;
+    window.addEventListener('scroll', function() {
+      clearTimeout(scrollTimer);
+      scrollTimer = setTimeout(updateActivePill, 50);
+    }, { passive: true });
+
+    /* Smooth scroll for pills */
+    pills.forEach(function(pill) {
+      pill.addEventListener('click', function(e) {
+        e.preventDefault();
+        var id = this.getAttribute('href').replace('#', '');
+        var target = document.getElementById(id);
+        if (target) {
+          var offset = target.offsetTop - 60;
+          window.scrollTo({ top: offset, behavior: 'smooth' });
+        }
+      });
+    });
+
+  });
+  </script>
 </body>
 </html>

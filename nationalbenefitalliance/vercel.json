@@ -2,7 +2,9 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-{ "source": "/search",               "destination": "/api/search" },
+    { "source": "/apply/1/assets/:path*", "destination": "/apply/1/assets/:path*" },
+    { "source": "/apply/1/:path*",        "destination": "/apply/1/index.html" },
+    { "source": "/search",               "destination": "/api/search" },
     { "source": "/sitemap.xml",          "destination": "/api/sitemap" },
     { "source": "/sitemap-counties.xml", "destination": "/api/sitemap-counties" },
     { "source": "/humans.txt",           "destination": "/api/humans" },
@@ -25,6 +27,10 @@
     {
       "source": "/js/(.*)",
       "headers": [{ "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }]
+    },
+    {
+      "source": "/apply/1/assets/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
     }
   ]
 }

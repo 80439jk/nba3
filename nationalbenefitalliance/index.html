@@ -285,9 +285,10 @@
             <div class="zip-card__states">
               <a href="/florida/" id="state-link-florida" class="active">🌴 Florida</a>
               <a href="/california/" id="state-link-california">🌅 California</a>
-              <a href="/coming-soon/">Texas <span style="font-size:0.7rem;color:var(--gray-400)">(soon)</span></a>
-              <a href="/coming-soon/">New York <span style="font-size:0.7rem;color:var(--gray-400)">(soon)</span></a>
-              <a href="/coming-soon/">All States →</a>
+              <a href="/texas/" id="state-link-texas">🤠 Texas</a>
+              <a href="/new-york/" id="state-link-new-york">🗽 New York</a>
+              <a href="/illinois/" id="state-link-illinois">🌬️ Illinois</a>
+              <a href="/resources/">All States →</a>
             </div>
 
             <div style="margin-top:1.25rem;padding-top:1.25rem;border-top:1px solid var(--gray-200);">
@@ -701,7 +702,10 @@
     // States we currently support
     const SUPPORTED = {
       'FL': { name: 'Florida', path: '/florida/', emoji: '🌴', counties: 67 },
-      'CA': { name: 'California', path: '/california/', emoji: '🌅', counties: 58 }
+      'CA': { name: 'California', path: '/california/', emoji: '🌅', counties: 58 },
+      'TX': { name: 'Texas', path: '/texas/', emoji: '🤠', counties: 254 },
+      'NY': { name: 'New York', path: '/new-york/', emoji: '🗽', counties: 62 },
+      'IL': { name: 'Illinois', path: '/illinois/', emoji: '🌬️', counties: 102 }
     };
 
     function applyState(stateCode) {

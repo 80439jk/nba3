@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PROTOTYPE: Enhanced Cook County Benefits — National Benefit Alliance</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="stylesheet" href="../../css/styles.css?v=8" />
+  <style>
+    /* Enhanced resource detail styles — prototype only */
+    .resource-item__detail {
+      margin-top: 0.75rem;
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 1rem 1.25rem;
+      font-size: 0.85rem;
+      line-height: 1.6;
+      color: var(--gray-800);
+    }
+    .resource-item__detail-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    @media (max-width: 640px) {
+      .resource-item__detail-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .resource-item__detail-block {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+    .resource-item__detail-label {
+      font-weight: 700;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--navy);
+    }
+    .resource-item__detail-value {
+      font-size: 0.85rem;
+      color: var(--gray-800);
+    }
+    .resource-item__detail-value ul {
+      margin: 0.25rem 0 0 1.25rem;
+      padding: 0;
+    }
+    .resource-item__detail-value li {
+      margin-bottom: 0.15rem;
+    }
+    .resource-item__detail-divider {
+      grid-column: 1 / -1;
+      border-top: 1px solid var(--gray-200);
+      margin: 0.25rem 0;
+    }
+    .resource-item__detail-full {
+      grid-column: 1 / -1;
+    }
+    .resource-item__apply-methods {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.35rem;
+    }
+    .apply-method {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: white;
+      border: 1px solid var(--gray-200);
+      border-radius: 50px;
+      padding: 0.3rem 0.75rem;
+      font-size: 0.8rem;
+      color: var(--navy);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    .apply-method:hover {
+      border-color: var(--navy);
+      background: rgba(27,58,107,0.04);
+    }
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .status-badge--open {
+      background: rgba(40,167,69,0.1);
+      color: #1a7a30;
+    }
+    .status-badge--closed {
+      background: rgba(220,53,69,0.1);
+      color: #a71d2a;
+    }
+    .status-badge--seasonal {
+      background: rgba(232,160,32,0.1);
+      color: #a06800;
+    }
+    .status-badge--rolling {
+      background: rgba(45,125,210,0.1);
+      color: #1a5fb4;
+    }
+
+    /* Faith-based category */
+    .resource-category--faith .resource-category__icon {
+      background: rgba(147,51,234,0.08);
+    }
+
+    /* Prototype banner */
+    .proto-banner {
+      background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+    .proto-banner span {
+      opacity: 0.8;
+      font-weight: 400;
+      font-size: 0.8rem;
+      display: block;
+      margin-top: 0.25rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Prototype Banner -->
+  <div class="proto-banner">
+    PROTOTYPE — Enhanced Content Format for Review
+    <span>Cook County, IL · Showing 4 categories with deep program detail + new Faith-Based category</span>
+  </div>
+
+  <!-- Nav -->
+  <header>
+    <nav class="nav">
+      <div class="container nav__inner">
+        <a href="/" class="nav__brand">
+          <div class="nav__logo-text">
+            <span class="nav__logo-name">National Benefit Alliance</span>
+            <span class="nav__logo-tagline">Free Resource Center · All 50 States</span>
+          </div>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" style="background:var(--gray-50);border-bottom:1px solid var(--gray-200);padding:0.6rem 0;">
+    <div class="container">
+      <ol style="list-style:none;padding:0;margin:0;display:flex;gap:0.5rem;font-size:0.8rem;color:var(--gray-600);">
+        <li><a href="/">Home</a> <span class="separator">›</span></li>
+        <li><a href="/illinois/">Illinois</a> <span class="separator">›</span></li>
+        <li><span class="current">Cook County (Enhanced Prototype)</span></li>
+      </ol>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- County Hero -->
+    <section class="county-hero">
+      <div class="container county-hero__inner">
+        <div class="county-hero__left">
+          <div class="county-hero__eyebrow">🌬️ Cook County · Illinois</div>
+          <h1>Cook County<br/>Free Benefits &amp; Resources</h1>
+          <p class="lead">Access verified government and community assistance programs for Cook County residents. Utilities, housing, food, healthcare, employment, and more — all free.</p>
+          <div class="county-hero__pills">
+            <span class="county-hero__pill">⚡ Utility Assistance</span><span class="county-hero__pill">🏠 Housing &amp; Rent</span><span class="county-hero__pill">🥗 SNAP / Food</span><span class="county-hero__pill">🏥 Medicaid</span><span class="county-hero__pill">💼 Employment</span><span class="county-hero__pill">⛪ Faith-Based</span><span class="county-hero__pill">+ more programs</span>
+          </div>
+          <div class="county-hero__actions">
+            <a href="#resources" class="btn btn--primary btn--lg">View All Resources →</a>
+            <a href="#pdf-download" class="btn btn--outline-white">📄 Download PDF</a>
+            <a href="tel:18006224357" class="btn btn--outline-white">📞 1-800-NBA-HELP</a>
+          </div>
+        </div>
+
+        <div class="county-hero__card">
+          <div class="county-hero__card-title">At a Glance</div>
+          <div class="county-hero__meta">
+            <div class="county-hero__meta-item"><span>5.3M</span><span>Residents</span></div>
+            <div class="county-hero__meta-item"><span>60+</span><span>Programs</span></div>
+            <div class="county-hero__meta-item"><span>10</span><span>Categories</span></div>
+            <div class="county-hero__meta-item"><span>Free</span><span>PDF Guide</span></div>
+          </div>
+          <a href="#resources" class="county-hero__card-btn">🔓 Unlock Full Guide</a>
+          <a href="tel:18006224357" class="county-hero__card-link">📞 Call for access code</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Alert -->
+    <div style="background:rgba(40,167,69,0.08);border-bottom:1px solid rgba(40,167,69,0.2);padding:0.85rem 0;">
+      <div class="container">
+        <p style="margin:0;color:#1a7a30;font-size:0.875rem;display:flex;align-items:center;gap:0.5rem;">
+          ✅ <strong>Last Updated: Q1 2026</strong> — All program information verified. Eligibility thresholds, application windows, and required documents confirmed against official sources.
+        </p>
+      </div>
+    </div>
+
+    <!-- Resources Section -->
+    <section class="section resource-section" id="resources">
+      <div class="container">
+        <div class="page-layout">
+          <div>
+
+            <!-- ================================================================ -->
+            <!--  CATEGORY 1: UTILITY ASSISTANCE (ENHANCED)                       -->
+            <!-- ================================================================ -->
+            <div class="resource-category" id="utilities">
+              <div class="resource-category__header">
+                <div class="resource-category__icon">⚡</div>
+                <div>
+                  <h3>Utility Assistance</h3>
+                  <p style="margin:0;font-size:0.85rem;color:var(--gray-600);">Help paying electric, gas, and water bills in Cook County</p>
+                </div>
+              </div>
+              <div class="resource-list">
+
+                <!-- LIHEAP — ENHANCED -->
+                <div class="resource-item">
+                  <div class="resource-item__body">
+                    <h4>LIHEAP — Low Income Home Energy Assistance Program</h4>
+                    <p>Federal program providing energy bill assistance and crisis intervention for eligible low-income Cook County residents. Covers electric, gas, propane, and cooling costs. Administered locally by CEDA (Community &amp; Economic Development Assoc.).</p>
+                    <div class="resource-item__meta">
+                      <a href="tel:18334710374" class="resource-item__phone">📞 1-833-711-0374</a>
+                      <a href="https://helpillinoisfamilies.com" target="_blank" rel="noopener" class="resource-item__web">🌐 helpillinoisfamilies.com</a>
+                    </div>
+
+                    <!-- NEW: Enhanced detail block -->
+                    <div class="resource-item__detail">
+                      <div class="resource-item__detail-grid">
+
+                        <div class="resource-item__detail-block">
+                          <span class="resource-item__detail-label">Application Period</span>
+                          <span class="resource-item__detail-value">
+                            <span class="status-badge status-badge--seasonal">🗓️ Seasonal</span><br/>
+                            Oct 1, 2025 – Aug 15, 2026 (or until funds exhausted)<br/>
+                            <em>Priority: Oct 1 for seniors 60+, disabled, families w/ children ≤5, and disconnected households. All others: Nov 1.</em>
+                          </span>
+                        </div>
+
+                        <div class="resource-item__detail-block">
+                          <span class="resource-item__detail-label">Eligibility</span>
+                          <span class="resource-item__detail-value">
+                            Household income ≤ 60% of State Median Income (SMI)<br/>
+                            <strong>1 person:</strong> $2,627/mo · <strong>2 people:</strong> $3,436/mo<br/>
+                            <strong>4 people:</strong> $5,055/mo · <strong>6 people:</strong> $6,673/mo
+                          </span>
+                        </div>
+
+                        <div class="resource-item__detail-divider"></div>
+
+                        <div class="resource-item__detail-block">
+                          <span class="resource-item__detail-label">Documents Needed</span>
+                          <span class="resource-item__detail-value">
+                            <ul>
+                              <li>Proof of income (last 30 days) — pay stubs, SSA/VA benefit letters</li>
+                              <li>Most recent utility bill (issued within 30 days)</li>
+                              <li>Social Security numbers for all household members (new applicants)</li>
+                              <li>Photo ID for head of household</li>
+                            </ul>
+                          </span>
+                        </div>
+
+                        <div class="resource-item__detail-block">
+                          <span class="resource-item__detail-label">How to Apply</span>
+                          <div class="resource-item__apply-methods">
+                            <a href="https://helpillinoisfamilies.com" target="_blank" rel="noopener" class="apply-method">🌐 Online Portal</a>
+                            <a href="tel:18334710374" class="apply-method">📞 1-833-711-0374</a>
+                            <span class="apply-method">🏢 Local CEDA Office</span>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="resource-item__actions"><span class="badge badge--green">Energy</span></div>
+                </div>
+
+                <!-- ComEd CARE — ENHANCED -->
+                <div class="resource-item">
+                  <div class="resource-item__body">
+                    <h4>ComEd CARE — Customer Assistance &amp; Rate Education</h4>
+                    <p>ComEd's assistance program offering reduced rates, bill payment plans, and budget billing for qualifying Cook County residents. Separate from LIHEAP — you can use both programs.</p>
+                    <div class="resource-item__meta">
+                      <a href="tel:18003342616" class="resource-item__phone">📞 1-800-334-7661 (ComEd)</a>
+                      <a href="https://www.comed.com/WaysToSave/ForYourHome/Pages/FinancialAssistance.aspx" target="_blank" rel="noopener" class="resource-item__web">🌐 ComEd Financial Assistance</a>
+                    </div>
+
+                    <div class="resource-item__detail">
+                      <div class="resource-item__detail-grid">
+                        <div class="resource-item__detail-block">
+                          <span class="resource-item__detail-label">Application Period</span>
+                          <span class="resource-item__detail-value"><span class="status-badge status-badge--rolling">🔄 Rolling</span><br/>Apply anytime. No seasonal deadline.</span>
+                        </div>
+                        <div class="resource-item__detail-block">
+                          <span class="resource-item__detail-label">Eligibility</span>
+                          <span class="resource-item__detail-value">Must be a ComEd residential customer. Income ≤ 200% FPL or enrolled in eligible assistance program (LIHEAP, Medicaid, SNAP).</span>
+                        </div>
+                        <div class="resource-item__detail-divider"></div>
+                        <div class="resource-item__detail-block">
+                          <span class="resource-item__detail-label">Documents Needed</span>
+                          <span class="resource-item__detail-value">
+                            <ul>
+                              <li>ComEd account number</li>
+                              <li>Proof of income or enrollment in qualifying program</li>
+                            </ul>
+                          </span>
+                        </div>
+                        <div class="resource-item__detail-block">
+                          <span class="resource-item__detail-label">How to Apply</span>
+                          <div class="resource-item__apply-methods">
+                            <a href="tel:18003342616" class="apply-method">📞 1-800-334-7661</a>
+                            <a href="https://www.comed.com" target="_blank" rel="noopener" class="apply-method">🌐 ComEd.com</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="resource-item__actions"><span class="badge badge--blue">Electric</span></div>
+                </div>
+
+                <!-- 211 — lighter detail since it's a referral service -->
+                <div class="resource-item">
+                  <div class="resource-item__body">
+                    <h4>211 Illinois — Utility Crisis Referral</h4>
+                    <p>Dial 211 anytime for immediate referrals to emergency utility assistance in Cook County, including after-hours crisis resources, LIHEAP enrollment, and utility company hardship programs.</p>
+                    <div class="resource-item__meta">
+                      <a href="tel:211" class="resource-item__phone">📞 Dial 211</a>
+                      <a href="https://www.211.org" target="_blank" rel="noopener" class="resource-item__web">🌐 211.org</a>
+                    </div>
+                    <div class="resource-item__detail">
+                      <div class="resource-item__detail-grid">
+                        <div class="resource-item__detail-block resource-item__detail-full">
+                          <span class="resource-item__detail-label">No application needed</span>
+                          <span class="resource-item__detail-value"><span class="status-badge status-badge--open">✅ Available 24/7</span> — Free, confidential. Connects you to 1,700+ local programs across Cook County. No documents required.</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="resource-item__actions"><span class="badge badge--gold">24/7 Referral</span></div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- ================================================================ -->
+            <!--  CATEGORY 2: HOUSING & RENTAL ASSISTANCE (ENHANCED)              -->
+            <!-- ================================================================ -->
+            <div class="resource-category" id="housing">
+              <div class="resource-category__header">
+                <div class="resource-category__icon">🏠</div>
+                <div>
+                  <h3>Housing &amp; Rental Assistance</h3>
+                  <p style="margin:0;font-size:0.85rem;color:var(--gray-600);">Rent help, eviction prevention, and housing stability programs</p>
+                </div>
+              </div>
+              <div class="resource-list">
+
+                <!-- ERAP / CBRAP — ENHANCED -->
+                <div class="resource-item">
+                  <div class="resource-item__body">
+                    <h4>Court-Based Rental Assistance Program (CBRAP) via IHDA</h4>
+                    <p>Emergency rental assistance for Cook County residents facing eviction. Provides up to $25,000 covering 15 months of past-due rent plus 3 months of future rent. Administered by the Illinois Housing Development Authority.</p>
+                    <div class="resource-item__meta">
+                      <a href="tel:18664543571" class="resource-item__phone">📞 1-866-454-3571</a>
+                      <a href="https://illinoishousinghelp.org/cbrap" target="_blank" rel="noopener" class="resource-item__web">🌐 illinoishousinghelp.org/cbrap</a>
+                    </div>
+
+                    <div class="resource-item__detail">
+                      <div class="resource-item__detail-grid">
+                        <div class="resource-item__detail-block">
+                          <span class="resource-item__detail-label">Application Period</span>
+                          <span class="resource-item__detail-value"><span class="status-badge status-badge--open">✅ Currently Open</span><br/>Available to tenants and landlords with pending eviction court cases. Apply through your eviction court case.</span>
+                        </div>
+                        <div class="resource-item__detail-block">
+                          <span class="resource-item__detail-label">Eligibility</span>
+                          <span class="resource-item__detail-value">Must have an active eviction case in Cook County court. Income requirements vary. Covers up to $25,000 in rental payments.</span>
+                        </div>
+                        <div class="resource-item__detail-divider"></div>
+                        <div class="resource-item__detail-block">
+                          <span class="resource-item__detail-label">Documents Needed</span>
+                          <span class="resource-item__detail-value">
+                            <ul>
+                              <li>Proof of income (pay stubs, benefit letters)</li>
+                              <li>Lease or rental agreement</li>
+                              <li>Proof of financial hardship</li>
+                              <li>Eviction court case number</li>
+                            </ul>
+                          </span>
+                        </div>
+                        <div class="resource-item__detail-block">
+                          <span class="resource-item__detail-label">How to Apply</span>
+                          <div class="resource-item__apply-methods">
+                            <a href="https://illinoishousinghelp.org/cbrap" target="_blank" rel="noopener" class="apply-method">🌐 Online at IHDA</a>
+                            <a href="tel:18664543571" class="apply-method">📞 1-866-454-3571</a>
+                            <span class="apply-method">⚖️ Through eviction court</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="resource-item__actions"><span class="badge badge--gold">Rental Aid</span></div>
+                </div>
+
+                <!-- Section 8 — ENHANCED -->
+                <div class="resource-item">
+                  <div class="resource-item__body">
+                    <h4>Section 8 Housing Choice Voucher — HACC</h4>
+                    <p>Federally-funded rental subsidy vouchers administered by the Housing Authority of Cook County (HACC). Covers the difference between 30% of your income and fair market rent. Long waitlist — sign up for notifications.</p>
+                    <div class="resource-item__meta">
+                      <a href="tel:3126630005" class="resource-item__phone">📞 (312) 663-5447</a>
+                      <a href="https://thehacc.org" target="_blank" rel="noopener" class="resource-item__web">🌐 thehacc.org</a>
+                    </div>
+
+                    <div class="resource-item__detail">
+                      <div class="resource-item__detail-grid">
+                        <div class="resource-item__detail-block">
+                          <span class="resource-item__detail-label">Application Period</span>
+                          <span class="resource-item__detail-value"><span class="status-badge status-badge--closed">🔒 Waitlist Closed</span><br/>HCV waitlist last opened Oct 19–Nov 2, 2020. No announced reopening date. Project-based voucher waitlists open periodically — check thehacc.org.</span>
+                        </div>
+                        <div class="resource-item__detail-block">
+                          <span class="resource-item__detail-label">Eligibility</span>
+                          <span class="resource-item__detail-value">Household income ≤ 50% of Area Median Income (AMI)<br/><strong>1 person:</strong> ~$36,200/yr · <strong>4 people:</strong> ~$51,700/yr<br/>Exact limits set by HUD annually for Cook County.</span>
+                        </div>
+                        <div class="resource-item__detail-divider"></div>
+                        <div class="resource-item__detail-block resource-item__detail-full">
+                          <span class="resource-item__detail-label">How to Get Notified</span>
+                          <span class="resource-item__detail-value">Sign up for email notifications at <a href="https://thehacc.org" target="_blank" rel="noopener">thehacc.org</a> to be alerted when waitlists reopen. HACC office: 10 S. La Salle St., Suite 2200, Chicago, IL 60603 (by appointment only).</span>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="resource-item__actions"><span class="badge badge--navy">Section 8</span></div>
+                </div>
+
+                <!-- Salvation Army — Housing -->
+                <div class="resource-item">
+                  <div class="resource-item__body">
+                    <h4>Salvation Army — Emergency Housing &amp; Shelter</h4>
+                    <p>Emergency shelter, transitional housing, and move-in assistance for Cook County residents facing homelessness. Includes security deposit assistance and rapid re-housing case management.</p>
+                    <div class="resource-item__meta">
+                      <a href="tel:18007258253" class="resource-item__phone">📞 1-800-SAL-ARMY</a>
+                      <a href="https://www.salarmychicago.org" target="_blank" rel="noopener" class="resource-item__web">🌐 salarmychicago.org</a>
+                    </div>
+                    <div class="resource-item__detail">
+                      <div class="resource-item__detail-grid">
+                        <div class="resource-item__detail-block">
+                          <span class="resource-item__detail-label">Application Period</span>
+                          <span class="resource-item__detail-value"><span class="status-badge status-badge--rolling">🔄 Rolling</span><br/>Walk-in or call. Emergency services available same-day based on capacity.</span>
+                        </div>
+                        <div class="resource-item__detail-block">
+                          <span class="resource-item__detail-label">Documents Needed</span>
+                          <span class="resource-item__detail-value">Photo ID preferred but not required for emergency services. Income verification needed for longer-term programs.</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="resource-item__actions"><span class="badge badge--blue">Shelter</span></div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- ================================================================ -->
+            <!--  CATEGORY 3: FOOD ASSISTANCE (ENHANCED)                          -->
+            <!-- ================================================================ -->
+            <div class="resource-category" id="food">
+              <div class="resource-category__header">
+                <div class="resource-category__icon">🥗</div>
+                <div>
+                  <h3>Food Assistance</h3>
+                  <p style="margin:0;font-size:0.85rem;color:var(--gray-600);">SNAP, food pantries, and nutrition programs in Cook County</p>
+                </div>
+              </div>
+              <div class="resource-list">
+
+                <!-- SNAP — ENHANCED -->
+                <div class="resource-item">
+                  <div class="resource-item__body">
+                    <h4>SNAP (Food Stamps) via Illinois ABE Portal</h4>
+                    <p>Supplemental Nutrition Assistance Program providing monthly benefits on an EBT card to purchase food at authorized retailers. Illinois uses expanded BBCE (Broad-Based Categorical Eligibility) with higher income limits than most states.</p>
+                    <div class="resource-item__meta">
+                      <a href="tel:18008436154" class="resource-item__phone">📞 1-800-843-6154</a>
+                      <a href="https://abe.illinois.gov" target="_blank" rel="noopener" class="resource-item__web">🌐 abe.illinois.gov</a>
+                    </div>
+
+                    <div class="resource-item__detail">
+                      <div class="resource-item__detail-grid">
+                        <div class="resource-item__detail-block">
+                          <span class="resource-item__detail-label">Application Period</span>
+                          <span class="resource-item__detail-value"><span class="status-badge status-badge--rolling">🔄 Rolling</span><br/>Apply anytime. Standard processing: 30 days. Expedited (emergency): 5 days if income is extremely low. Phone interview required within 10 days of applying.</span>
+                        </div>
+                        <div class="resource-item__detail-block">
+                          <span class="resource-item__detail-label">Eligibility (FY 2026)</span>
+                          <span class="resource-item__detail-value">
+                            Gross income ≤ 165% FPL (IL BBCE)<br/>
+                            <strong>1 person:</strong> $1,696/mo · <strong>2 people:</strong> $2,292/mo<br/>
+                            <strong>4 people:</strong> $3,483/mo · <strong>6 people:</strong> $4,675/mo<br/>
+                            <em>Seniors 60+ / disabled: up to 200% FPL. No asset test in IL.</em>
+                          </span>
+                        </div>
+                        <div class="resource-item__detail-divider"></div>
+                        <div class="resource-item__detail-block">
+                          <span class="resource-item__detail-label">Monthly Benefits (FY 2026)</span>
+                          <span class="resource-item__detail-value">
+                            <strong>1 person:</strong> up to $292/mo · <strong>2 people:</strong> $536/mo<br/>
+                            <strong>4 people:</strong> $975/mo · <strong>6 people:</strong> $1,370/mo
+                          </span>
+                        </div>
+                        <div class="resource-item__detail-block">
+                          <span class="resource-item__detail-label">Documents Needed</span>
+                          <span class="resource-item__detail-value">
+                            <ul>
+                              <li>Photo ID (state ID, driver's license, work/school ID, or birth certificate)</li>
+                              <li>Social Security numbers for all household members</li>
+                              <li>Proof of income (pay stubs, SSA letter, unemployment)</li>
+                              <li>Proof of housing costs (rent receipt, mortgage, utility bills)</li>
+                            </ul>
+                          </span>
+                        </div>
+                        <div class="resource-item__detail-divider"></div>
+                        <div class="resource-item__detail-block resource-item__detail-full">
+                          <span class="resource-item__detail-label">How to Apply</span>
+                          <div class="resource-item__apply-methods">
+                            <a href="https://abe.illinois.gov" target="_blank" rel="noopener" class="apply-method">🌐 ABE Online Portal (fastest)</a>
+                            <a href="tel:18008436154" class="apply-method">📞 1-800-843-6154</a>
+                            <span class="apply-method">🏢 Local IDHS Family Resource Center</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="resource-item__actions"><span class="badge badge--green">SNAP</span></div>
+                </div>
+
+                <!-- Greater Chicago Food Depository — ENHANCED -->
+                <div class="resource-item">
+                  <div class="resource-item__body">
+                    <h4>Greater Chicago Food Depository — Food Pantry Network</h4>
+                    <p>Cook County's primary food bank operating a network of 700+ food pantries, soup kitchens, and shelters. Serves 800,000+ people annually. Open to anyone — no application, proof of income, or ID required at most locations.</p>
+                    <div class="resource-item__meta">
+                      <a href="tel:7732473663" class="resource-item__phone">📞 (773) 247-3663</a>
+                      <a href="https://www.chicagosfoodbank.org/find-food-2/" target="_blank" rel="noopener" class="resource-item__web">🌐 Find a Food Pantry Near You</a>
+                    </div>
+
+                    <div class="resource-item__detail">
+                      <div class="resource-item__detail-grid">
+                        <div class="resource-item__detail-block">
+                          <span class="resource-item__detail-label">Access</span>
+                          <span class="resource-item__detail-value"><span class="status-badge status-badge--open">✅ Walk-In Available</span><br/>Most pantries are open to anyone who walks in. No appointment or application needed. Call the pantry first to confirm hours.</span>
+                        </div>
+                        <div class="resource-item__detail-block">
+                          <span class="resource-item__detail-label">Documents Needed</span>
+                          <span class="resource-item__detail-value">None required at most locations. Some sites may ask for a name and zip code for reporting purposes only.</span>
+                        </div>
+                        <div class="resource-item__detail-divider"></div>
+                        <div class="resource-item__detail-block resource-item__detail-full">
+                          <span class="resource-item__detail-label">How to Find a Pantry</span>
+                          <span class="resource-item__detail-value">Use the <a href="https://www.chicagosfoodbank.org/find-food-2/" target="_blank" rel="noopener">interactive map at chicagosfoodbank.org/find-food</a> to find pantries near you. Filter by hours, distance, and eligibility. 700+ locations across Cook County.</span>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="resource-item__actions"><span class="badge badge--navy">Food Bank</span></div>
+                </div>
+
+                <!-- WIC -->
+                <div class="resource-item">
+                  <div class="resource-item__body">
+                    <h4>WIC — Women, Infants &amp; Children Nutrition Program</h4>
+                    <p>Supplemental nutrition for pregnant women, new mothers, infants, and children up to age 5. Provides food vouchers for milk, cereal, eggs, fruits/vegetables, and infant formula, plus nutrition education and healthcare referrals.</p>
+                    <div class="resource-item__meta">
+                      <a href="tel:18005041110" class="resource-item__phone">📞 1-800-504-1110</a>
+                      <a href="https://dhs.state.il.us/page.aspx?item=30513" target="_blank" rel="noopener" class="resource-item__web">🌐 Illinois WIC</a>
+                    </div>
+                    <div class="resource-item__detail">
+                      <div class="resource-item__detail-grid">
+                        <div class="resource-item__detail-block">
+                          <span class="resource-item__detail-label">Eligibility</span>
+                          <span class="resource-item__detail-value"><span class="status-badge status-badge--rolling">🔄 Rolling</span><br/>Pregnant, breastfeeding, or postpartum women; infants and children ≤ 5. Income ≤ 185% FPL. Automatic eligibility if on Medicaid, SNAP, or TANF.</span>
+                        </div>
+                        <div class="resource-item__detail-block">
+                          <span class="resource-item__detail-label">Documents Needed</span>
+                          <span class="resource-item__detail-value">
+                            <ul>
+                              <li>ID for parent/guardian</li>
+                              <li>Proof of income (pay stubs) or Medicaid/SNAP card</li>
+                              <li>Proof of residency (utility bill, lease)</li>
+                              <li>Proof of pregnancy or child's birth certificate</li>
+                            </ul>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="resource-item__actions"><span class="badge badge--green">WIC</span></div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- ================================================================ -->
+            <!--  NEW CATEGORY: FAITH-BASED & COMMUNITY ORGANIZATIONS             -->
+            <!-- ================================================================ -->
+            <div class="resource-category resource-category--faith" id="faith-based">
+              <div class="resource-category__header">
+                <div class="resource-category__icon">⛪</div>
+                <div>
+                  <h3>Faith-Based &amp; Worship Community Programs</h3>
+                  <p style="margin:0;font-size:0.85rem;color:var(--gray-600);">Churches, synagogues, mosques, and faith-based organizations serving Cook County</p>
+                </div>
+              </div>
+              <div class="resource-list">
+
+                <!-- Catholic Charities -->
+                <div class="resource-item">
+                  <div class="resource-item__body">
+                    <h4>Catholic Charities of the Archdiocese of Chicago</h4>
+                    <p>One of Cook County's largest social service networks. Operates 55+ food pantries across Cook and Lake Counties, plus emergency financial assistance, immigration services, housing counseling, senior services, and veteran support. Open to all, regardless of faith.</p>
+                    <div class="resource-item__meta">
+                      <a href="tel:3126551000" class="resource-item__phone">📞 (312) 655-7700</a>
+                      <a href="https://www.catholiccharities.net" target="_blank" rel="noopener" class="resource-item__web">🌐 catholiccharities.net</a>
+                    </div>
+                    <div class="resource-item__detail">
+                      <div class="resource-item__detail-grid">
+                        <div class="resource-item__detail-block">
+                          <span class="resource-item__detail-label">Services Offered</span>
+                          <span class="resource-item__detail-value">
+                            <ul>
+                              <li>55+ food pantries &amp; community meal sites</li>
+                              <li>Emergency financial assistance (rent, utilities)</li>
+                              <li>Immigration &amp; naturalization legal services</li>
+                              <li>Counseling &amp; mental health services</li>
+                              <li>Senior in-home care &amp; day programs</li>
+                              <li>Veterans services &amp; substance abuse programs</li>
+                            </ul>
+                          </span>
+                        </div>
+                        <div class="resource-item__detail-block">
+                          <span class="resource-item__detail-label">Access</span>
+                          <span class="resource-item__detail-value"><span class="status-badge status-badge--open">✅ Open to All</span><br/>No faith requirement. Most food pantries serve anyone who walks in. Financial assistance may require intake appointment. Call or visit website for specific location hours.</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="resource-item__actions"><span class="badge badge--blue">Multi-Service</span></div>
+                </div>
+
+                <!-- Salvation Army -->
+                <div class="resource-item">
+                  <div class="resource-item__body">
+                    <h4>Salvation Army Metropolitan Division — Chicago</h4>
+                    <p>Comprehensive emergency services across 40+ Cook County locations. Food pantries, emergency shelter, utility assistance, disaster relief, after-school programs, and holiday assistance (Angel Tree, Thanksgiving meals). No faith requirement to receive services.</p>
+                    <div class="resource-item__meta">
+                      <a href="tel:18007258253" class="resource-item__phone">📞 1-800-SAL-ARMY</a>
+                      <a href="https://www.salarmychicago.org" target="_blank" rel="noopener" class="resource-item__web">🌐 salarmychicago.org</a>
+                    </div>
+                    <div class="resource-item__detail">
+                      <div class="resource-item__detail-grid">
+                        <div class="resource-item__detail-block">
+                          <span class="resource-item__detail-label">Services Offered</span>
+                          <span class="resource-item__detail-value">
+                            <ul>
+                              <li>Food pantries &amp; hot meal programs</li>
+                              <li>Emergency shelter &amp; transitional housing</li>
+                              <li>Utility &amp; rent assistance</li>
+                              <li>Disaster relief &amp; emergency supplies</li>
+                              <li>Youth after-school &amp; summer programs</li>
+                              <li>Seasonal: Angel Tree gifts, Thanksgiving/Christmas meals</li>
+                            </ul>
+                          </span>
+                        </div>
+                        <div class="resource-item__detail-block">
+                          <span class="resource-item__detail-label">Access</span>
+                          <span class="resource-item__detail-value"><span class="status-badge status-badge--open">✅ Walk-In Available</span><br/>Emergency services available same-day at most locations. No appointment needed for food pantries. ID preferred but not required for emergency aid.</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="resource-item__actions"><span class="badge badge--gold">Emergency</span></div>
+                </div>
+
+                <!-- Jewish United Fund -->
+                <div class="resource-item">
+                  <div class="resource-item__body">
+                    <h4>Jewish United Fund / Jewish Federation of Chicago</h4>
+                    <p>Supports a network of social service agencies providing food assistance, career counseling, mental health services, senior care, and disability support across Cook County. Services available to all community members regardless of background.</p>
+                    <div class="resource-item__meta">
+                      <a href="tel:3123467700" class="resource-item__phone">📞 (312) 346-6700</a>
+                      <a href="https://www.juf.org" target="_blank" rel="noopener" class="resource-item__web">🌐 juf.org</a>
+                    </div>
+                    <div class="resource-item__detail">
+                      <div class="resource-item__detail-grid">
+                        <div class="resource-item__detail-block resource-item__detail-full">
+                          <span class="resource-item__detail-label">Services Offered</span>
+                          <span class="resource-item__detail-value">Food assistance through partner agencies, career services and job training, mental health counseling, senior home care and adult day services, disability support services, and financial emergency assistance. Contact JUF or visit juf.org to connect with the right agency for your need.</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="resource-item__actions"><span class="badge badge--blue">Multi-Service</span></div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- ================================================================ -->
+            <!--  CATEGORY: EMPLOYMENT (ENHANCED — showing IDES deep detail)      -->
+            <!-- ================================================================ -->
+            <div class="resource-category" id="employment">
+              <div class="resource-category__header">
+                <div class="resource-category__icon">💼</div>
+                <div>
+                  <h3>Employment &amp; Unemployment</h3>
+                  <p style="margin:0;font-size:0.85rem;color:var(--gray-600);">Unemployment benefits, job training, and workforce programs</p>
+                </div>
+              </div>
+              <div class="resource-list">
+
+                <!-- IDES — ENHANCED -->
+                <div class="resource-item">
+                  <div class="resource-item__body">
+                    <h4>IDES — Illinois Unemployment Insurance</h4>
+                    <p>State unemployment benefits for Cook County workers who lost their job through no fault of their own. Weekly payments while you search for new employment, with up to 26 weeks of benefits.</p>
+                    <div class="resource-item__meta">
+                      <a href="tel:18002445631" class="resource-item__phone">📞 1-800-244-5631</a>
+                      <a href="https://ides.illinois.gov" target="_blank" rel="noopener" class="resource-item__web">🌐 ides.illinois.gov</a>
+                    </div>
+
+                    <div class="resource-item__detail">
+                      <div class="resource-item__detail-grid">
+                        <div class="resource-item__detail-block">
+                          <span class="resource-item__detail-label">Application Period</span>
+                          <span class="resource-item__detail-value"><span class="status-badge status-badge--rolling">🔄 File Anytime</span><br/>File immediately after losing your job. Claims are retroactive to the week you file. Online portal available 24/7 (except 8–10 PM daily).</span>
+                        </div>
+                        <div class="resource-item__detail-block">
+                          <span class="resource-item__detail-label">Eligibility</span>
+                          <span class="resource-item__detail-value">
+                            Must have earned at least $1,600 in base period with $440+ outside your highest-earning quarter. Separated from employer through no fault of your own. Must be able and available to work.
+                          </span>
+                        </div>
+                        <div class="resource-item__detail-divider"></div>
+                        <div class="resource-item__detail-block">
+                          <span class="resource-item__detail-label">Weekly Benefits (2026)</span>
+                          <span class="resource-item__detail-value">
+                            <strong>Individual:</strong> $51–$628/week<br/>
+                            <strong>With non-working spouse:</strong> up to $748/week<br/>
+                            <strong>With dependent children:</strong> up to $859/week<br/>
+                            <em>Up to 26 weeks of benefits.</em>
+                          </span>
+                        </div>
+                        <div class="resource-item__detail-block">
+                          <span class="resource-item__detail-label">How to File</span>
+                          <div class="resource-item__apply-methods">
+                            <a href="https://ides.illinois.gov" target="_blank" rel="noopener" class="apply-method">🌐 IDES Online (24/7)</a>
+                            <a href="tel:18002445631" class="apply-method">📞 1-800-244-5631 (M–F 8:30–5)</a>
+                            <span class="apply-method">🏢 IDES Office (by appt)</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="resource-item__actions"><span class="badge badge--green">Unemployment</span></div>
+                </div>
+
+              </div>
+            </div>
+
+          </div><!-- end main col -->
+
+          <!-- Sidebar -->
+          <aside class="sidebar">
+            <div class="sidebar-card">
+              <h3>Quick Access</h3>
+              <ul class="sidebar-nav">
+                <li><a href="#utilities">⚡ Utility Assistance</a></li>
+                <li><a href="#housing">🏠 Housing &amp; Rent</a></li>
+                <li><a href="#food">🥗 Food Assistance</a></li>
+                <li><a href="#faith-based">⛪ Faith-Based</a></li>
+                <li><a href="#employment">💼 Employment</a></li>
+              </ul>
+              <p style="font-size:0.75rem;color:var(--gray-500);margin-top:0.75rem;margin-bottom:0;"><em>Prototype showing 5 of 10 categories</em></p>
+            </div>
+
+            <div class="sidebar-card sidebar-card--cta" id="pdf-download">
+              <div style="font-size:2rem;">📄</div>
+              <h3>Cook County Resource Guide</h3>
+              <p>Download the complete PDF guide with all programs, contacts, eligibility details, and document checklists for Cook County.</p>
+              <a href="tel:18006224357" class="btn btn--primary" style="width:100%;text-align:center;">📞 Call to Get Your PDF</a>
+              <p style="font-size:0.75rem;color:var(--gray-500);margin-top:0.75rem;">Free · No spam · Available in English &amp; Spanish</p>
+            </div>
+
+            <div class="sidebar-card">
+              <h3>County Info</h3>
+              <ul style="list-style:none;padding:0;margin:0;font-size:0.875rem;display:flex;flex-direction:column;gap:0.5rem;">
+                <li><strong>County Seat:</strong> Chicago</li>
+                <li><strong>Population:</strong> 5,275,541</li>
+                <li><strong>Region:</strong> Northeastern Illinois</li>
+                <li><strong>Local 211:</strong> <a href="tel:211">Dial 211</a></li>
+                <li><strong>County Website:</strong> <a href="https://www.cookcountyil.gov" target="_blank" rel="noopener">cookcountyil.gov</a></li>
+              </ul>
+            </div>
+
+            <div class="sidebar-card">
+              <h3>Other Illinois Counties</h3>
+              <p style="font-size:0.875rem;color:var(--gray-600);">Find resources in a neighboring county:</p>
+              <a href="/illinois/" class="btn btn--outline" style="width:100%;text-align:center;">Browse All 102 Counties →</a>
+            </div>
+          </aside>
+
+        </div><!-- end page-layout -->
+      </div><!-- end container -->
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="nav__logo-text">
+            <span class="nav__logo-name">National Benefit Alliance</span>
+            <span class="nav__logo-tagline">Free Resource Center · All 50 States</span>
+          </div>
+          <p>Helping Americans find the government and community programs they've earned — at no cost.</p>
+        </div>
+        <div>
+          <h4>Illinois Resources</h4>
+          <ul>
+            <li><a href="/illinois/">All Illinois Counties</a></li>
+            <li><a href="https://abe.illinois.gov" target="_blank" rel="noopener">ABE Benefits Portal (DHS)</a></li>
+            <li><a href="https://ides.illinois.gov" target="_blank" rel="noopener">IDES Unemployment</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Get Help Now</h4>
+          <ul>
+            <li><a href="tel:211">Dial 211 (Crisis Line)</a></li>
+            <li><a href="tel:18006224357">1-800-NBA-HELP</a></li>
+            <li><a href="/apply/">Apply for Access Code</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2025 National Benefit Alliance · Not affiliated with any government agency · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js?v=8" defer></script>
+</body>
+</html>

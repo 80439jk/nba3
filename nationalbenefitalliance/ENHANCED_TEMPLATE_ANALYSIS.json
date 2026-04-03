@@ -1,0 +1,350 @@
+{
+  "enhanced_template_analysis": {
+    "file_path": "prototype/cook-enhanced/index.html",
+    "title": "Enhanced Cook County (Illinois) Template Analysis",
+    "date_analyzed": "2026-04-03",
+    "purpose": "Document structural and interactive enhancements beyond standard county pages"
+  },
+  "comparison_standard_vs_enhanced": {
+    "standard_template": {
+      "file": "illinois/cook/index.html (current production)",
+      "structure": [
+        "resource-item container",
+        "resource-item__body with title and description",
+        "resource-item__meta with phone and website links",
+        "No detail blocks"
+      ],
+      "mobile_behavior": "Basic responsive - phone/website links visible, no accordions"
+    },
+    "enhanced_template": {
+      "file": "prototype/cook-enhanced/index.html",
+      "structure": [
+        "resource-item container",
+        "resource-item__body with title and description",
+        "resource-item__meta with phone and website links",
+        "detail-toggle (new - accordion header)",
+        "resource-item__detail with grid layout (new)",
+        "Multiple detail-blocks with structured fields (new)"
+      ],
+      "mobile_behavior": "Advanced - accordions, smooth transitions, active pill tracking"
+    }
+  },
+  "new_html_elements_and_classes": {
+    "accordion_system": {
+      "detail_toggle": {
+        "class": "detail-toggle",
+        "role": "button",
+        "tabindex": "0",
+        "aria_expanded": "false (toggles to true)",
+        "content": "<span>View Program Details</span><span class='chevron'>▾</span>",
+        "behavior": "Click toggles .open class and .detail-open on adjacent .resource-item__detail",
+        "keyboard_support": "Enter or Space key triggers click"
+      },
+      "detail_container": {
+        "class": "resource-item__detail",
+        "parent": "resource-item__body",
+        "display_default_mobile": "none or hidden",
+        "display_default_desktop": "grid (visible)",
+        "toggle_class": "detail-open (adds this when expanded on mobile)"
+      }
+    },
+    "detail_block_components": {
+      "grid_container": {
+        "class": "resource-item__detail-grid",
+        "display": "CSS Grid",
+        "columns_desktop": "2-4 columns (auto-fit minmax)",
+        "columns_mobile": "1 column (when detail-open class added)",
+        "gap": "1rem"
+      },
+      "detail_block": {
+        "class": "resource-item__detail-block",
+        "children": [
+          "resource-item__detail-label",
+          "resource-item__detail-value"
+        ],
+        "full_width_variant": "resource-item__detail-full (spans all columns)"
+      },
+      "detail_label": {
+        "class": "resource-item__detail-label",
+        "display": "block or inline-block",
+        "font_weight": "600-700",
+        "color": "var(--gray-700 or similar)",
+        "typical_values": [
+          "Application Period",
+          "Eligibility",
+          "Monthly Benefits",
+          "Documents Needed",
+          "How to Apply"
+        ]
+      },
+      "detail_value": {
+        "class": "resource-item__detail-value",
+        "content_types": [
+          "Plain text (e.g., income thresholds)",
+          "HTML lists (ul > li with eligibility items)",
+          "Badge + text (status-badge + description)",
+          "Links (to application portals)"
+        ]
+      },
+      "detail_divider": {
+        "class": "resource-item__detail-divider",
+        "display": "horizontal line",
+        "border": "1px solid var(--gray-300 or similar)",
+        "used_for": "Visual separation between sections (e.g., eligibility and documents)"
+      }
+    },
+    "status_badges": {
+      "container": "span class='status-badge STATUS_TYPE'",
+      "types": [
+        {
+          "class": "status-badge--rolling",
+          "emoji": "0x1f504 (🔄)",
+          "meaning": "Application period ongoing year-round"
+        },
+        {
+          "class": "status-badge--open",
+          "emoji": "2705 (✅)",
+          "meaning": "Currently accepting applications or available 24/7"
+        },
+        {
+          "class": "status-badge--closed",
+          "emoji": "1f512 (🔒)",
+          "meaning": "Waitlist closed or not currently accepting applications"
+        }
+      ],
+      "usage": "Placed before status text: <span class='status-badge status-badge--rolling'>🔄 Rolling</span><br/>Apply anytime..."
+    },
+    "apply_methods_section": {
+      "container": "div class='resource-item__apply-methods'",
+      "method_buttons": "a class='apply-method'",
+      "href_patterns": [
+        "https:// (external portal links)",
+        "tel: (phone numbers)"
+      ],
+      "typical_methods": [
+        "🌐 Online Portal",
+        "📞 Phone Number",
+        "📧 Email",
+        "🏢 In-Person Office Address"
+      ],
+      "styling": "Buttons with secondary styling, flex layout"
+    }
+  },
+  "css_enhancements": {
+    "new_rules": {
+      "resource_item__detail": {
+        "desktop_display": "display: grid;",
+        "mobile_display": "display: none; (hidden by default on small screens)",
+        "with_detail_open_class": "display: grid; (shown when accordion opened)"
+      },
+      "detail_toggle": {
+        "display": "none; (hidden on desktop, shown on mobile < 768px)",
+        "cursor": "pointer",
+        "padding": "1rem",
+        "border_bottom": "1px solid var(--gray-200)",
+        "font_weight": "600",
+        "color": "var(--navy or primary color)"
+      },
+      "detail_toggle_open": {
+        "selector": ".detail-toggle.open",
+        "background": "var(--gray-50)",
+        "chevron_rotation": "transform: rotate(180deg); (animated)"
+      },
+      "resource_item__detail_grid": {
+        "display": "grid",
+        "grid_template_columns": "repeat(auto-fit, minmax(250px, 1fr)); (desktop)",
+        "grid_template_columns": "1fr; (mobile / when not expanded)",
+        "gap": "1.5rem",
+        "padding": "1.5rem"
+      },
+      "resource_item__detail_block": {
+        "display": "flex",
+        "flex_direction": "column",
+        "gap": "0.5rem"
+      },
+      "resource_item__detail_full": {
+        "grid_column": "1 / -1; (spans all columns)"
+      }
+    },
+    "responsive_breakpoints": {
+      "mobile_under_768px": {
+        "detail_toggle": "display: block;",
+        "resource_item__detail": "display: none; (until .detail-open added)",
+        "detail_grid_columns": "1fr (single column)"
+      },
+      "tablet_768px_to_1024px": {
+        "detail_toggle": "display: none; (details visible by default)",
+        "resource_item__detail": "display: grid;",
+        "detail_grid_columns": "repeat(2, 1fr); or repeat(auto-fit, minmax(300px, 1fr));"
+      },
+      "desktop_1024px_and_up": {
+        "detail_toggle": "display: none;",
+        "resource_item__detail": "display: grid;",
+        "detail_grid_columns": "repeat(auto-fit, minmax(250px, 1fr));"
+      }
+    },
+    "transitions": {
+      "detail_open_animation": "max-height or opacity transition when detail-open class added/removed",
+      "chevron_rotation": "transform transition on toggle.open class",
+      "duration": "~300-400ms (typical)"
+    }
+  },
+  "javascript_functionality": {
+    "initialization_event": "DOMContentLoaded",
+    "feature_1_accordion_toggle": {
+      "target": "All .resource-item__detail elements",
+      "for_each_detail": {
+        "create": "div.detail-toggle",
+        "set_attributes": {
+          "role": "button",
+          "tabindex": "0",
+          "aria-expanded": "false"
+        },
+        "inject_html": "<span>View Program Details</span><span class='chevron'>▾</span>"
+      },
+      "event_listeners": [
+        {
+          "event": "click",
+          "action": "Toggle .open on toggle and .detail-open on detail",
+          "update_aria": "aria-expanded to true/false"
+        },
+        {
+          "event": "keydown (Enter or Space)",
+          "action": "preventDefault and trigger click"
+        }
+      ],
+      "insertion": "Insert toggle before detail element in DOM"
+    },
+    "feature_2_mobile_pill_bar": {
+      "target": "All .mobile-qa-pill elements",
+      "initialization": {
+        "collect_pill_ids": "Extract href attribute (e.g., #utilities)",
+        "collect_sections": "Find corresponding DOM elements by id",
+        "store_references": "Array of {id, el, pill} objects"
+      },
+      "scroll_tracking": {
+        "event": "scroll (with passive listener)",
+        "throttle": "50ms debounce timer",
+        "function_name": "updateActivePill()",
+        "logic": [
+          "Calculate scrollY + offset (120px)",
+          "Find section with highest offsetTop that is still <= scrollY",
+          "Remove .active class from all pills",
+          "Add .active class to pill matching active section"
+        ]
+      },
+      "click_behavior": {
+        "event": "click on pill",
+        "preventDefault": "true",
+        "action": "Smooth scroll to target section",
+        "offset": "section.offsetTop - 60 (to account for fixed header)"
+      }
+    },
+    "code_snippets": {
+      "accordion_initialization": "var details = document.querySelectorAll('.resource-item__detail'); details.forEach(function(detail) { var toggle = document.createElement('div'); toggle.className = 'detail-toggle'; toggle.innerHTML = '<span>View Program Details</span><span class=\"chevron\">▾</span>'; toggle.setAttribute('role', 'button'); toggle.setAttribute('tabindex', '0'); toggle.setAttribute('aria-expanded', 'false'); toggle.addEventListener('click', function() { var isOpen = this.classList.toggle('open'); detail.classList.toggle('detail-open'); this.setAttribute('aria-expanded', isOpen ? 'true' : 'false'); this.querySelector('span:first-child').textContent = isOpen ? 'Hide Program Details' : 'View Program Details'; }); detail.parentNode.insertBefore(toggle, detail); });",
+      "pill_scroll_tracking": "var pills = document.querySelectorAll('.mobile-qa-pill'); var sections = []; pills.forEach(function(pill) { var id = pill.getAttribute('href').replace('#', ''); var el = document.getElementById(id); if (el) sections.push({ id: id, el: el, pill: pill }); }); function updateActivePill() { var scrollY = window.scrollY + 120; var active = null; sections.forEach(function(s) { if (s.el.offsetTop <= scrollY) active = s; }); pills.forEach(function(p) { p.classList.remove('active'); }); if (active) active.pill.classList.add('active'); } window.addEventListener('scroll', function() { clearTimeout(scrollTimer); scrollTimer = setTimeout(updateActivePill, 50); }, { passive: true });"
+    }
+  },
+  "accessibility_features": {
+    "accordion_aria": {
+      "role": "button",
+      "aria_expanded": "Dynamically updated on toggle",
+      "aria_label": "(Could be added to enhance semantics)"
+    },
+    "keyboard_navigation": {
+      "tab_key": "Can tab to accordion toggles (tabindex=0)",
+      "enter_space_keys": "Trigger expand/collapse when detail-toggle focused"
+    },
+    "semantic_html": {
+      "link_buttons": "Using native <a> elements for apply methods",
+      "label_value_pairs": "Clear structure with .detail-label and .detail-value"
+    }
+  },
+  "mobile_quick_access_pill_bar": {
+    "selector": ".mobile-qa-pill",
+    "placement": "Above resource sections (likely sticky or fixed on scroll)",
+    "visibility": "Shown on mobile only (likely hidden on desktop via CSS media query)",
+    "initial_state": "First pill has .active class",
+    "active_state": "Updates based on scroll position - whichever section is in viewport",
+    "interaction": {
+      "click": "Smooth scroll to that section",
+      "scroll": "Pill indicator updates to show current section"
+    },
+    "example_pills": [
+      "⚡ Utility",
+      "🏠 Housing",
+      "🥗 Food",
+      "⛪ Faith (state-specific category)",
+      "💼 Jobs"
+    ]
+  },
+  "state_specific_customization_example": {
+    "use_case": "Show how Cook County (Illinois) enhanced template can be adapted for other states",
+    "css_variables_used": [
+      "var(--navy)",
+      "var(--gray-50)",
+      "var(--gray-200)",
+      "var(--gray-300)",
+      "var(--gray-600)",
+      "var(--gray-700)"
+    ],
+    "all_customizations_are_content": "No hardcoded state-specific CSS - all styling is reusable"
+  },
+  "file_size_and_performance": {
+    "standard_cook_page": "~12.5 KB HTML (12517 tokens)",
+    "enhanced_cook_page": "~24 KB HTML (24233 tokens)",
+    "size_increase": "~92% larger (mostly from detail block content)",
+    "javascript_overhead": "Minimal - ~2-3 KB of script for accordions and pill tracking",
+    "css_overhead": "Added ~1-2 KB for detail-block and mobile styles",
+    "optimization_notes": [
+      "Could defer accordion initialization until first interaction",
+      "Could use CSS-only accordion without JavaScript (checkbox hack)",
+      "Detail block content should be lazy-loaded or hidden until expanded on mobile"
+    ]
+  },
+  "browser_compatibility": {
+    "requires": [
+      "ES6 support (arrow functions optional, can use traditional function syntax)",
+      "CSS Grid support (IE 11 has limited support)",
+      "CSS Variables (modern browsers)",
+      "EventListener API",
+      "DOM classList API"
+    ],
+    "fallback_considerations": [
+      "Older browsers will see details expanded by default (acceptable degradation)",
+      "Mobile pill tracking will work but may not be smooth on older devices"
+    ]
+  },
+  "implementation_recommendations": {
+    "phase_1_html_content": "Add detail blocks and structure to existing templates without JavaScript",
+    "phase_2_css": "Add media queries and styling for accordion collapse/expand",
+    "phase_3_javascript": "Add accordion toggle and pill tracking JavaScript",
+    "phase_4_optimization": "Minify, test performance, optimize for mobile"
+  },
+  "testing_checklist": {
+    "desktop_browser": [
+      "All detail blocks visible by default",
+      "Toggle buttons hidden",
+      "Multi-column grid layout",
+      "Links and buttons functional"
+    ],
+    "tablet_browser": [
+      "Transition between expanded details (visible) and collapsed (toggles)",
+      "Touch targets appropriately sized"
+    ],
+    "mobile_browser": [
+      "Accordion toggles visible",
+      "Click to expand/collapse works",
+      "Mobile pill bar appears and tracks scroll",
+      "Smooth scroll to section on pill click",
+      "Single-column layout",
+      "No layout shift on expand/collapse"
+    ],
+    "accessibility_testing": [
+      "Keyboard navigation works (Tab to toggle, Enter/Space to expand)",
+      "Screen reader announces toggle state (aria-expanded)",
+      "Color contrast adequate",
+      "Touch targets >= 44x44px"
+    ]
+  }
+}

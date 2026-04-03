@@ -1,0 +1,401 @@
+================================================================================
+STATE PROGRAM DATA EXTRACTION - QUICK REFERENCE
+================================================================================
+Generated: 2026-04-03
+Source Files Analyzed: 7 HTML pages (6 states + 1 enhanced prototype)
+================================================================================
+
+STATE PORTAL QUICK LOOKUP
+================================================================================
+
+FLORIDA
+  Portal: ACCESS Florida
+  URL: https://www.myflorida.com/accessflorida
+  SNAP Phone: 1-866-762-2237
+  Medicaid Phone: 1-800-610-8301
+  Unemployment: 1-833-352-6362 (CONNECT system)
+  Utility: 1-800-375-4357 (FPL)
+
+TEXAS (YourTexasBenefits)
+  Portal: YourTexasBenefits
+  URL: https://yourtexasbenefits.com
+  SNAP Phone: 2-1-1
+  Medicaid Phone: 2-1-1
+  Unemployment: 1-800-939-6631 (TWC)
+  Utility: 1-877-399-8939 (TDHCA)
+  Extra Hotlines: 988 (Mental Health), 311 (County Info)
+
+NEW YORK
+  Portal: myBenefits.ny.gov
+  URL: https://mybenefits.ny.gov
+  SNAP Benefit: $280/month per person (HIGHEST)
+  Health: NY State of Health (separate marketplace)
+  Unemployment: NY Dept of Labor
+
+ILLINOIS (ABE)
+  Portal: ABE - Application for Benefits Eligibility
+  URL: https://abe.illinois.gov
+  SNAP Phone: 1-800-843-6154
+  Medicaid Phone: 1-866-468-7543
+  Unemployment: 1-866-IDES-101 (IDES system)
+  Utility: 1-833-711-0374 (Help Illinois Families, seasonal Nov-Apr)
+
+CALIFORNIA (BenefitsCal)
+  Portal: BenefitsCal
+  URL: https://www.benefitscal.com
+  SNAP Name: CalFresh (NOT "SNAP")
+  CalFresh Phone: 1-877-847-3663
+  Medicaid Name: Medi-Cal (NOT "Medicaid")
+  Medi-Cal Phone: 1-800-541-5555
+  Unemployment: 1-888-353-8955 (EDD)
+
+OHIO
+  Portal: benefits.ohio.gov
+  URL: https://benefits.ohio.gov
+  Primary Contact: 211 (Dial 211)
+  Agency: Ohio JFS
+  Simple structure - 211 handles most referrals
+
+================================================================================
+PROGRAM NAMING BY STATE
+================================================================================
+
+FOOD ASSISTANCE:
+  FL, TX, NY, IL, OH: "SNAP" or "SNAP/Food Stamps"
+  CA: "CalFresh" (UNIQUE)
+
+HEALTHCARE:
+  FL, TX, NY, IL, OH: "Medicaid"
+  CA: "Medi-Cal" (UNIQUE)
+
+ENERGY/UTILITY:
+  All States: LIHEAP-based
+  IL: Called "Help Illinois Families"
+  All others: "LIHEAP" or "Low Income Home Energy Assistance"
+
+UNEMPLOYMENT:
+  FL: "Reemployment Assistance" (CONNECT system)
+  TX: "Unemployment Insurance" (TWC)
+  NY: (NY Dept of Labor)
+  IL: "Unemployment Insurance" (IDES)
+  CA: "Unemployment Insurance" (EDD)
+  OH: "Unemployment Insurance" (Ohio JFS)
+
+================================================================================
+RESOURCE CATEGORIES (GENERIC ACROSS ALL STATES)
+================================================================================
+
+Standard 8-9 Categories (All States):
+  1. ⚡ Utility Assistance
+  2. 🏠 Housing & Rental Assistance
+  3. 🥗 Food Assistance
+  4. 🏥 Healthcare & Medicaid
+  5. 💼 Employment & Unemployment
+  6. 👴 Senior Services
+  7. ♿ Disability Services
+  8. 👶 Child Care & Education
+  9. 🤝 Community & Crisis Services (Added in some states)
+
+State Additions:
+  TX: +⚖️ Legal Aid & Advocacy, +🚌 Transportation Assistance
+  (Other states: Base 8-9 categories)
+
+================================================================================
+CRISIS HOTLINES
+================================================================================
+
+Universal (All States):
+  ✓ 211 - General crisis and resource referral
+
+State-Specific Additions:
+  TX: + 988 (Mental Health Crisis)
+  TX: + 311 (Harris County Information)
+  (Other states: 211 primarily)
+
+================================================================================
+FOOTER STATE LINKS (VARIES BY STATE)
+================================================================================
+
+FLORIDA:
+  - All Florida Counties (/florida/)
+  - ACCESS Florida (DCF) [https://www.myflorida.com/accessflorida]
+  - Reemployment Assistance [https://connect.myflorida.com]
+
+TEXAS:
+  - (Texas pages use minimal footer)
+  - (Focus on 211 and local numbers)
+
+NEW YORK:
+  - myBenefits NY (OTDA) [https://mybenefits.ny.gov]
+  - NY Dept of Labor [https://dol.ny.gov]
+
+ILLINOIS:
+  - All Illinois Counties (/illinois/)
+  - ABE Benefits Portal (DHS) [https://abe.illinois.gov]
+  - IDES Unemployment [https://ides.illinois.gov]
+
+CALIFORNIA:
+  - BenefitsCal (CalFresh/Medi-Cal) [https://www.benefitscal.com]
+
+================================================================================
+ENHANCED TEMPLATE FEATURES (Cook County Prototype)
+================================================================================
+
+New Components:
+  ✓ Accordion toggles (.detail-toggle)
+  ✓ Detail blocks with multiple fields (.resource-item__detail)
+  ✓ Status badges (rolling/open/closed)
+  ✓ Mobile quick-access pill bar (.mobile-qa-pill)
+  ✓ Eligibility thresholds in grids
+  ✓ Application period indicators
+  ✓ Documents needed lists
+  ✓ Application methods buttons
+
+Mobile Behavior:
+  - Accordions: Collapsed by default
+  - Detail blocks: Hidden until expanded
+  - Pill bar: Sticky at top, tracks scroll
+  - Single column layout
+
+Desktop Behavior:
+  - Accordions: Hidden (details visible)
+  - Detail blocks: Multi-column grid visible
+  - Pill bar: Hidden
+  - Full-width layout
+
+JavaScript Functions:
+  1. Accordion toggle initialization (dynamic button creation)
+  2. Mobile pill bar active state tracking on scroll
+  3. Smooth scroll-to-section on pill click
+  4. Keyboard support (Enter/Space to expand)
+  5. ARIA attributes for accessibility
+
+================================================================================
+GENERIC vs STATE-SPECIFIC CONTENT
+================================================================================
+
+GENERIC (Same Template, Same Code):
+  ✓ All HTML structure
+  ✓ All CSS classes and layouts
+  ✓ Navigation bar
+  ✓ Hero section layout
+  ✓ Sidebar structure
+  ✓ Footer grid structure
+  ✓ Resource category icons (⚡, 🏠, 🥗, etc.)
+  ✓ All JavaScript functionality
+  ✓ Responsive breakpoints
+  ✓ Styling and colors
+
+STATE-SPECIFIC (Changes per State):
+  ✗ Portal name and URL
+  ✗ Program naming (SNAP vs CalFresh)
+  ✗ Phone numbers
+  ✗ Footer state links
+  ✗ Crisis hotlines
+  ✗ Agency names
+  ✗ Application windows
+  ✗ Benefit amounts
+
+COUNTY-SPECIFIC (Changes per County):
+  ✗ County name and seat
+  ✗ Population
+  ✗ Regional location
+  ✗ County website
+  ✗ County-specific orgs (housing, food banks)
+  ✗ Local phone numbers
+
+================================================================================
+BENEFIT AMOUNTS (Where Available)
+================================================================================
+
+SNAP Benefits (Monthly per Person):
+  New York: $280/month (highest)
+  Florida: $210/month
+  Texas: $210/month
+  California: $200+/month
+  Illinois: [Amount varies by household size]
+  Ohio: [Not specified in extracted data]
+
+================================================================================
+APPLICATION PROCESSING TIMES
+================================================================================
+
+SNAP/Food Assistance:
+  Florida: 30 days (7 days expedited)
+  Texas: 30 days (7 days expedited)
+  Illinois: 30 days (5 days expedited)
+  New York: Not specified
+  California: Not specified
+  Ohio: Not specified
+
+LIHEAP/Utility Assistance:
+  Illinois: Rolling basis (Nov-Apr seasonal window)
+  Florida: Rolling basis
+  Texas: Rolling basis
+  All others: Not specified
+
+================================================================================
+TEMPLATE VARIABLES TO REPLACE
+================================================================================
+
+State-Level Variables:
+  {{STATE_NAME}}              → "Florida", "Texas", etc.
+  {{STATE_SLUG}}              → "florida", "texas", etc.
+  {{STATE_PORTAL_NAME}}       → "ACCESS Florida", "YourTexasBenefits", etc.
+  {{STATE_PORTAL_URL}}        → "https://www.myflorida.com/accessflorida", etc.
+  {{SNAP_PHONE}}              → "1-866-762-2237", "2-1-1", etc.
+  {{MEDICAID_PHONE}}          → "1-800-610-8301", "2-1-1", etc.
+  {{SNAP_PROGRAM_NAME}}       → "SNAP", "CalFresh"
+  {{MEDICAID_PROGRAM_NAME}}   → "Medicaid", "Medi-Cal"
+  {{FOOTER_STATE_LINKS}}      → HTML list of 3-4 links
+  {{CRISIS_LINES}}            → Phone numbers and labels
+
+County-Level Variables:
+  {{COUNTY_NAME}}             → "Orange", "Harris", etc.
+  {{COUNTY_SLUG}}             → "orange", "harris", etc.
+  {{COUNTY_SEAT}}             → "Orlando", "Houston", etc.
+  {{POPULATION}}              → "1,429,908"
+  {{REGION}}                  → "Central Florida", "South Texas"
+  {{COUNTY_WEBSITE}}          → "https://www.orangecountyfl.net"
+  {{LOCAL_211}}               → "Dial 211" or county-specific
+
+================================================================================
+FILES GENERATED & OUTPUTS
+================================================================================
+
+1. STATE_PROGRAM_DATA_EXTRACTION.json (~50 KB)
+   - Raw state-specific program data
+   - Portal URLs and phone numbers
+   - Program descriptions
+   - Footer state links
+   - Crisis hotlines
+
+2. ENHANCED_TEMPLATE_ANALYSIS.json (~35 KB)
+   - Cook County prototype breakdown
+   - New HTML elements and classes
+   - CSS enhancements for accordions
+   - JavaScript functionality
+   - Mobile behavior details
+   - Accessibility features
+
+3. GENERATION_SCRIPT_TEMPLATE.md (~25 KB)
+   - State config file examples (all 6 states)
+   - County data structure
+   - Resource category mapping
+   - HTML template variables
+   - Generation script pseudocode
+   - File organization recommendations
+
+4. DATA_EXTRACTION_INDEX.md (~20 KB)
+   - Master index of all extracted data
+   - Summary tables and comparisons
+   - Key findings and recommendations
+   - Implementation phases
+
+5. QUICK_REFERENCE.txt (This file)
+   - Cheat sheet format
+   - Portal quick lookup
+   - Program naming reference
+   - Variables to replace
+   - Feature checklist
+
+================================================================================
+IMPLEMENTATION CHECKLIST
+================================================================================
+
+Phase 1: Data & Config
+  ☐ Create state config files (florida.json, texas.json, etc.)
+  ☐ Define county data schema
+  ☐ Populate 2-3 counties per state for pilot
+  ☐ Validate all portal URLs and phone numbers
+
+Phase 2: Template & Variables
+  ☐ Extract generic HTML template
+  ☐ Add {{VARIABLE}} placeholders for all state-specific content
+  ☐ Create state-specific template sections (footers, links)
+  ☐ Support both standard and enhanced templates
+
+Phase 3: Generation Script
+  ☐ Config loader (loads state/county JSON files)
+  ☐ Template engine (variable replacement)
+  ☐ Resource category generator
+  ☐ Footer/breadcrumb generator
+  ☐ File output system
+
+Phase 4: Testing & QA
+  ☐ Generate all 6 states × sample counties
+  ☐ Visual comparison to manually-created pages
+  ☐ SEO validation (title, description, schema)
+  ☐ Mobile responsiveness test
+  ☐ Link validation (all portals, phone numbers)
+
+Phase 5: Enhancement & Scale
+  ☐ Port enhanced template features (accordions)
+  ☐ Add detail block generation
+  ☐ Scale to all counties (67 FL, 254 TX, 62 NY, 102 IL, 58 CA, 88 OH)
+  ☐ Set up automated deployment
+
+================================================================================
+KEY STATISTICS
+================================================================================
+
+States Analyzed: 6 (Florida, Texas, New York, Illinois, California, Ohio)
+County Pages Analyzed: 6 (1 per state)
+HTML Files Processed: 7 (6 current + 1 enhanced prototype)
+Total Data Extracted: ~150 KB JSON
+Resource Categories: 8-9 per state (91% overlap)
+Footer Link Variations: 4 different patterns per state
+Program Phone Number Variations: 20+ unique numbers across states
+CSS Classes: 40+ reusable classes identified
+JavaScript Functions: 5+ core functions needed
+
+================================================================================
+CRITICAL DEPENDENCIES
+================================================================================
+
+State Portals (MUST keep URLs current):
+  ✓ Florida: myflorida.com/accessflorida (DCF)
+  ✓ Texas: yourtexasbenefits.com (HHSC)
+  ✓ New York: mybenefits.ny.gov (OTDA)
+  ✓ Illinois: abe.illinois.gov (DHS)
+  ✓ California: benefitscal.com (CDSS)
+  ✓ Ohio: benefits.ohio.gov (JFS)
+
+Universal Hotlines (Standard):
+  ✓ 211 (All states)
+  ✓ 988 (Some states - mental health)
+  ✓ 311 (Texas - county info)
+
+Agency Abbreviations (Research if scaling to new states):
+  ✓ DCF (Department of Children and Families - Florida)
+  ✓ HHSC (Health & Human Services Commission - Texas)
+  ✓ OTDA (Office of Temporary and Disability Assistance - NY)
+  ✓ DHS (Department of Human Services - Illinois)
+  ✓ CDSS (Department of Social Services - California)
+  ✓ JFS (Department of Job & Family Services - Ohio)
+
+================================================================================
+NOTES & WARNINGS
+================================================================================
+
+⚠ California is UNIQUE: Uses "CalFresh" instead of "SNAP" and "Medi-Cal" instead
+  of "Medicaid". Requires conditional logic in templates.
+
+⚠ Texas uses "2-1-1" for most services instead of state-specific numbers.
+  Confirm all local HHSC offices still active before using in production.
+
+⚠ New York has separate portal for Medicaid (NY State of Health) separate from
+  myBenefits.ny.gov. Do not consolidate.
+
+⚠ Illinois LIHEAP is seasonal (November-April). Include application window
+  prominently in UI.
+
+⚠ Ohio's simplified approach (relying on 211) may need special handling for
+  county-specific data. Verify county programs exist.
+
+⚠ County data (population, county seat) should be verified against latest
+  census/administrative data before generation.
+
+================================================================================
+END OF QUICK REFERENCE
+================================================================================

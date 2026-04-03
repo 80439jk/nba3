@@ -1,0 +1,581 @@
+{
+  "extraction_summary": {
+    "date": "2026-04-03",
+    "purpose": "Extract state-specific program data patterns for generation script development",
+    "sources": [
+      "florida/orange/index.html",
+      "texas/harris/index.html",
+      "new-york/kings/index.html",
+      "illinois/cook/index.html",
+      "california/los-angeles/index.html",
+      "ohio/cuyahoga/index.html",
+      "prototype/cook-enhanced/index.html"
+    ],
+    "total_states": 6,
+    "state_variations": [
+      "Florida",
+      "Texas",
+      "New York",
+      "Illinois",
+      "California",
+      "Ohio"
+    ]
+  },
+  "resource_categories": {
+    "generic_across_all_states": [
+      "Utility Assistance",
+      "Housing & Rental Assistance",
+      "Food Assistance",
+      "Healthcare & Medicaid",
+      "Employment & Unemployment",
+      "Senior Services",
+      "Disability Services",
+      "Child Care & Education"
+    ],
+    "state_specific_additions": {
+      "florida": [
+        "Community & Crisis Services"
+      ],
+      "texas": [
+        "Legal Aid & Advocacy",
+        "Transportation Assistance"
+      ],
+      "new_york": [
+        "Community & Crisis Services"
+      ],
+      "illinois": [
+        "Community & Crisis Services"
+      ],
+      "california": [
+        "Community & Crisis Services"
+      ]
+    }
+  },
+  "state_specific_program_data": {
+    "florida": {
+      "state_portal": "ACCESS Florida",
+      "portal_url": "https://www.myflorida.com/accessflorida",
+      "phone_number": "1-866-762-2237",
+      "key_programs": {
+        "snap": {
+          "name": "Florida SNAP Benefits",
+          "portal": "ACCESS Florida",
+          "phone": "1-866-762-2237",
+          "application_time": "30 days (7 days expedited)",
+          "benefit_average": "$210/month per person"
+        },
+        "medicaid": {
+          "name": "Florida Medicaid",
+          "portal": "ACCESS Florida",
+          "phone": "1-800-610-8301",
+          "application_method": "Online via ACCESS Florida or DCF Service Center"
+        },
+        "unemployment": {
+          "name": "Florida Reemployment Assistance",
+          "portal": "connect.myflorida.com",
+          "phone": "1-833-352-6362",
+          "system_name": "CONNECT"
+        },
+        "utility": {
+          "name": "LIHEAP - Low Income Home Energy Assistance",
+          "phone": "1-800-375-4357",
+          "website": "fpl.com/assistance"
+        }
+      },
+      "footer_links": [
+        {
+          "title": "All Florida Counties",
+          "url": "/florida/"
+        },
+        {
+          "title": "ACCESS Florida (DCF)",
+          "url": "https://www.myflorida.com/accessflorida"
+        },
+        {
+          "title": "Reemployment Assistance",
+          "url": "https://connect.myflorida.com"
+        }
+      ],
+      "state_crisis_lines": [
+        {
+          "name": "Local 211",
+          "action": "Dial 211"
+        }
+      ]
+    },
+    "texas": {
+      "state_portal": "YourTexasBenefits",
+      "portal_url": "https://yourtexasbenefits.com",
+      "phone_number": "2-1-1",
+      "state_system": "HHSC (Health & Human Services Commission)",
+      "key_programs": {
+        "snap": {
+          "name": "Texas SNAP / TANF",
+          "portal": "YourTexasBenefits",
+          "phone": "2-1-1",
+          "application_time": "30 days (7 days expedited)",
+          "benefit_average": "$210/month per person",
+          "application_location": "Any HHSC office in Harris County"
+        },
+        "medicaid": {
+          "name": "Texas Medicaid",
+          "portal": "YourTexasBenefits",
+          "phone": "2-1-1",
+          "application_method": "Online via YourTexasBenefits"
+        },
+        "unemployment": {
+          "name": "Texas Unemployment Insurance (TWC)",
+          "phone": "1-800-939-6631",
+          "website": "twc.texas.gov"
+        },
+        "utility": {
+          "name": "LIHEAP - Low Income Home Energy Assistance",
+          "phone": "1-877-399-8939",
+          "website": "tdhca.state.tx.us",
+          "contact_method": "Community Action Agency"
+        }
+      },
+      "footer_links": [
+        {
+          "title": "All Texas Counties",
+          "url": "/texas/"
+        }
+      ],
+      "state_crisis_lines": [
+        {
+          "name": "211 Texas",
+          "action": "Dial 211"
+        },
+        {
+          "name": "Mental Health Crisis",
+          "action": "Dial 988"
+        },
+        {
+          "name": "Harris County Info",
+          "action": "Dial 311"
+        }
+      ]
+    },
+    "new_york": {
+      "state_portal": "myBenefits.ny.gov",
+      "portal_url": "https://mybenefits.ny.gov",
+      "phone_number": "N/A - portal driven",
+      "state_system": "OTDA (Office of Temporary and Disability Assistance)",
+      "key_programs": {
+        "snap": {
+          "name": "NY SNAP (Food Stamps)",
+          "portal": "myBenefits.ny.gov",
+          "application_method": "Online or local DSS office",
+          "benefit_average": "$280/month per person"
+        },
+        "medicaid": {
+          "name": "NY Medicaid",
+          "portal": "NY State of Health",
+          "website": "nystateofhealth.ny.gov",
+          "enrollment_method": "State health marketplace"
+        },
+        "unemployment": {
+          "name": "NY Unemployment Insurance",
+          "website": "labor.ny.gov",
+          "phone": "NY Dept of Labor"
+        },
+        "utility": {
+          "name": "LIHEAP - Low Income Home Energy Assistance",
+          "phone": "211"
+        }
+      },
+      "footer_links": [
+        {
+          "title": "myBenefits NY (OTDA)",
+          "url": "https://mybenefits.ny.gov"
+        },
+        {
+          "title": "NY Dept of Labor",
+          "url": "https://dol.ny.gov"
+        }
+      ]
+    },
+    "illinois": {
+      "state_portal": "ABE (Application for Benefits Eligibility)",
+      "portal_url": "https://abe.illinois.gov",
+      "phone_number": "1-800-843-6154 (SNAP) / 1-866-468-7543 (Medicaid)",
+      "state_system": "DHS (Department of Human Services)",
+      "key_programs": {
+        "snap": {
+          "name": "Illinois SNAP / Food Stamps",
+          "portal": "ABE",
+          "phone": "1-800-843-6154",
+          "application_method": "Online via ABE portal or local DHS office",
+          "application_time": "30 days (5 days expedited)"
+        },
+        "medicaid": {
+          "name": "Illinois Medicaid / All Kids",
+          "portal": "ABE",
+          "phone": "1-866-468-7543",
+          "application_method": "Online via ABE or DHS office"
+        },
+        "unemployment": {
+          "name": "IDES (Illinois Dept of Employment Security)",
+          "website": "ides.illinois.gov",
+          "phone": "1-866-IDES-101"
+        },
+        "utility": {
+          "name": "LIHEAP - Help Illinois Families",
+          "phone": "1-833-711-0374",
+          "website": "helpillinoisfamilies.com",
+          "application_window": "Nov-Apr (seasonal)"
+        }
+      },
+      "footer_links": [
+        {
+          "title": "All Illinois Counties",
+          "url": "/illinois/"
+        },
+        {
+          "title": "ABE Benefits Portal (DHS)",
+          "url": "https://abe.illinois.gov"
+        },
+        {
+          "title": "IDES Unemployment",
+          "url": "https://ides.illinois.gov"
+        }
+      ]
+    },
+    "california": {
+      "state_portal": "BenefitsCal",
+      "portal_url": "https://www.benefitscal.com",
+      "phone_number": "1-877-847-3663 (CalFresh) / 1-800-541-5555 (Medi-Cal)",
+      "state_system": "CDSS (Department of Social Services)",
+      "program_name_variations": {
+        "snap": "CalFresh",
+        "medicaid": "Medi-Cal"
+      },
+      "key_programs": {
+        "calfresh": {
+          "name": "CalFresh - California Food Assistance (SNAP)",
+          "portal": "BenefitsCal",
+          "phone": "1-877-847-3663",
+          "application_method": "Online via BenefitsCal",
+          "benefit_average": "$200+/month per person",
+          "application_location": "LA County Department of Public Social Services"
+        },
+        "medi_cal": {
+          "name": "Medi-Cal - California Medicaid Health Coverage",
+          "portal": "BenefitsCal",
+          "phone": "1-800-541-5555",
+          "application_method": "Online via BenefitsCal"
+        },
+        "unemployment": {
+          "name": "EDD (Employment Development Department)",
+          "website": "edd.ca.gov",
+          "phone": "1-888-353-8955"
+        },
+        "utility": {
+          "name": "LIHEAP - Low Income Home Energy Assistance",
+          "phone": "1-866-675-6623",
+          "website": "liheap.ca.gov"
+        }
+      },
+      "footer_links": [
+        {
+          "title": "BenefitsCal (CalFresh/Medi-Cal)",
+          "url": "https://www.benefitscal.com"
+        }
+      ]
+    },
+    "ohio": {
+      "state_portal": "benefits.ohio.gov",
+      "portal_url": "https://benefits.ohio.gov",
+      "phone_number": "211 (Dial 211)",
+      "state_system": "JFS (Department of Job & Family Services)",
+      "key_programs": {
+        "snap": {
+          "name": "Ohio SNAP Benefits",
+          "portal": "benefits.ohio.gov",
+          "phone": "211",
+          "application_method": "Online portal"
+        },
+        "medicaid": {
+          "name": "Ohio Medicaid",
+          "website": "medicaid.ohio.gov",
+          "phone": "211"
+        },
+        "unemployment": {
+          "name": "Ohio Unemployment Insurance",
+          "website": "unemployment.ohio.gov",
+          "phone": "211"
+        },
+        "utility": {
+          "name": "LIHEAP - Low Income Home Energy Assistance",
+          "phone": "211",
+          "website": "jfs.ohio.gov/ocomm/HEAP.stm"
+        }
+      },
+      "footer_links": []
+    }
+  },
+  "generic_vs_state_specific": {
+    "generic_structure": {
+      "description": "Same HTML structure, CSS classes, and layout across all states",
+      "elements": [
+        "county-hero section",
+        "resource-section containers",
+        "resource-category headers with icons",
+        "sidebar with quick-access cards",
+        "footer grid (3-column for states with full footer)"
+      ]
+    },
+    "state_specific_customizations": {
+      "footer_grid": {
+        "florida": {
+          "column_1": "Florida Resources",
+          "column_2": "Get Help Now"
+        },
+        "texas": {
+          "column_1": "Not present (minimal footer in harris page)",
+          "column_2": "Not present"
+        },
+        "new_york": {
+          "column_1": "New York Resources",
+          "column_2": "Get Help Now"
+        },
+        "illinois": {
+          "column_1": "Illinois Resources",
+          "column_2": "Get Help Now"
+        },
+        "california": {
+          "column_1": "California Resources",
+          "column_2": "Get Help Now"
+        }
+      },
+      "state_portal_links": {
+        "florida": "myflorida.com/accessflorida",
+        "texas": "yourtexasbenefits.com",
+        "new_york": "mybenefits.ny.gov",
+        "illinois": "abe.illinois.gov",
+        "california": "benefitscal.com",
+        "ohio": "benefits.ohio.gov"
+      },
+      "program_naming": {
+        "snap_vs_calfresh": "California uses 'CalFresh' instead of SNAP",
+        "medicaid_vs_medi_cal": "California uses 'Medi-Cal' instead of Medicaid"
+      }
+    }
+  },
+  "enhanced_template_structure": {
+    "file_path": "prototype/cook-enhanced/index.html",
+    "state": "Illinois (Cook County)",
+    "enhancements_over_standard_template": {
+      "accordion_system": {
+        "description": "Detail blocks converted to accordion toggles on mobile",
+        "class_names": [
+          "resource-item__detail",
+          "detail-open",
+          "detail-toggle"
+        ],
+        "interaction": "Click-to-expand/collapse with smooth transitions",
+        "mobile_behavior": "Accordions enabled at breakpoint (likely < 768px)"
+      },
+      "detail_block_structure": {
+        "container": "resource-item__detail",
+        "layout": "resource-item__detail-grid (multi-column on desktop)",
+        "fields": [
+          {
+            "label_class": "resource-item__detail-label",
+            "value_class": "resource-item__detail-value",
+            "typical_labels": [
+              "Application Period",
+              "Eligibility",
+              "Monthly Benefits",
+              "Documents Needed",
+              "How to Apply"
+            ]
+          }
+        ],
+        "divider": "resource-item__detail-divider (horizontal line between sections)"
+      },
+      "status_badges": {
+        "rolling": "status-badge status-badge--rolling (icon: 0x1f504)",
+        "open": "status-badge status-badge--open (icon: 2705)",
+        "closed": "status-badge status-badge--closed (icon: 1f512)",
+        "available_24_7": "Shown with ✅ emoji and 'Available 24/7' text"
+      },
+      "apply_methods_section": {
+        "container": "resource-item__apply-methods",
+        "method_links": "apply-method class",
+        "typical_methods": [
+          "Online Portal",
+          "Phone Number",
+          "In-Person at Office"
+        ]
+      },
+      "mobile_quick_access_pills": {
+        "class": "mobile-qa-pill",
+        "behavior": "Sticky pill bar at top of main section",
+        "active_state": "active class added based on scroll position",
+        "smooth_scrolling": "JavaScript handles scroll-to-section on pill click"
+      },
+      "javascript_enhancements": {
+        "file": "inline script at end of HTML",
+        "features": [
+          "Accordion toggle initialization for .resource-item__detail elements",
+          "Dynamic aria-expanded attribute management",
+          "Mobile pill bar active state tracking on scroll",
+          "Smooth scroll-to-section for pill clicks"
+        ]
+      }
+    },
+    "css_additions": {
+      "detail_blocks": {
+        "display_mobile": "Collapsed by default (display: none or height: 0)",
+        "display_desktop": "Visible grid layout (3-4 columns)",
+        "detail_open_class": "Expands on mobile when .detail-open added"
+      },
+      "mobile_breakpoint": "Approximately 768px",
+      "grid_layout": "resource-item__detail-grid uses CSS Grid for multi-column on desktop"
+    },
+    "schema_org_enhancements": {
+      "same_as_standard": "GovernmentOrganization, WebPage, BreadcrumbList patterns",
+      "no_new_schema_patterns_observed": true
+    },
+    "responsive_behavior": {
+      "desktop": [
+        "Detail blocks visible as expanded grid",
+        "Multi-column layout for eligibility, documents, etc.",
+        "Status badges inline with text"
+      ],
+      "tablet": [
+        "Detail blocks may start collapsing",
+        "Two-column grid for detail sections"
+      ],
+      "mobile": [
+        "All detail blocks collapsed",
+        "Accordion toggles visible",
+        "Mobile quick-access pill bar active",
+        "Single-column layout",
+        "Full-width buttons for apply methods"
+      ]
+    }
+  },
+  "program_data_extraction_template": {
+    "structure": {
+      "resource_categories": [
+        {
+          "id": "utilities",
+          "name": "⚡ Utility Assistance",
+          "description": "State-specific LIHEAP and emergency utility programs",
+          "programs": [
+            {
+              "name": "Program Name (STATE VARIATION)",
+              "description": "Brief description",
+              "phone": "(XXX) XXX-XXXX",
+              "website": "https://...",
+              "portal": "STATE_PORTAL",
+              "application_window": "Seasonal or Rolling",
+              "eligibility": "Income threshold as % FPL",
+              "documents_needed": [
+                "Proof of income",
+                "Proof of residency"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "state_portal_mapping": {
+      "key_mapping": {
+        "florida": "ACCESS Florida (myflorida.com/accessflorida)",
+        "texas": "YourTexasBenefits (yourtexasbenefits.com)",
+        "new_york": "myBenefits.ny.gov",
+        "illinois": "ABE Portal (abe.illinois.gov)",
+        "california": "BenefitsCal (benefitscal.com)",
+        "ohio": "benefits.ohio.gov"
+      },
+      "usage": "These portals should be dynamically inserted into program URLs, phone numbers, and descriptions based on state"
+    },
+    "phone_number_variations": {
+      "description": "Each state has different central intake numbers",
+      "example_mapping": {
+        "florida_snap": "1-866-762-2237",
+        "texas_snap": "2-1-1",
+        "new_york_snap": "Via portal primarily",
+        "illinois_snap": "1-800-843-6154",
+        "california_calfresh": "1-877-847-3663",
+        "ohio_snap": "211"
+      }
+    }
+  },
+  "generation_script_recommendations": {
+    "variables_to_parameterize": [
+      "state_name",
+      "state_slug",
+      "county_name",
+      "county_slug",
+      "state_portal_name",
+      "state_portal_url",
+      "state_phone_snap",
+      "state_phone_medicaid",
+      "state_phone_unemployment",
+      "state_crisis_lines",
+      "footer_state_links",
+      "program_names (SNAP vs CalFresh, Medicaid vs Medi-Cal)"
+    ],
+    "data_structure": {
+      "format": "JSON config file per state with county data",
+      "example_config": {
+        "state": "florida",
+        "portal": {
+          "name": "ACCESS Florida",
+          "url": "https://www.myflorida.com/accessflorida",
+          "snap_phone": "1-866-762-2237",
+          "medicaid_phone": "1-800-610-8301"
+        },
+        "programs": {
+          "snap": {
+            "portal_name": "ACCESS Florida",
+            "application_time": "30 days (7 days expedited)",
+            "benefit_average": "$210/month per person"
+          }
+        },
+        "footer_links": [
+          {
+            "title": "All Florida Counties",
+            "url": "/florida/"
+          }
+        ]
+      }
+    },
+    "template_files_needed": [
+      "Base HTML template (generic structure)",
+      "State config files (6 files: FL, TX, NY, IL, CA, OH)",
+      "County data files (multiple per state)",
+      "CSS files (state-specific or fully generic)",
+      "JavaScript (generic - same across states)"
+    ],
+    "reusable_html_sections": [
+      "Navigation bar (1 global version)",
+      "Hero section (generic template, insert county/state names)",
+      "Sidebar cards (generic template, insert county info)",
+      "Footer grid (generic, insert state-specific links)",
+      "Resource category sections (generic icons and structure)"
+    ],
+    "static_vs_dynamic_content": {
+      "static": [
+        "Navigation links",
+        "Hero section layout and styling",
+        "Sidebar card structure",
+        "Footer brand info",
+        "Resource category layout"
+      ],
+      "dynamic_from_config": [
+        "County name and location",
+        "State portal links and phone numbers",
+        "Program names and descriptions",
+        "Contact phone numbers and websites",
+        "Footer state-specific links",
+        "Breadcrumb navigation",
+        "Page titles and meta descriptions"
+      ]
+    }
+  }
+}

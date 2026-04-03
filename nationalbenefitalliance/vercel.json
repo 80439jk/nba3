@@ -2,11 +2,7 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/apply/1",              "destination": "https://nbadupe-funnel.vercel.app/" },
-    { "source": "/apply/1/:path*",       "destination": "https://nbadupe-funnel.vercel.app/:path*" },
-    { "source": "/assets/:path*",        "destination": "https://nbadupe-funnel.vercel.app/assets/:path*" },
-    { "source": "/vite.svg",             "destination": "https://nbadupe-funnel.vercel.app/vite.svg" },
-    { "source": "/search",               "destination": "/api/search" },
+{ "source": "/search",               "destination": "/api/search" },
     { "source": "/sitemap.xml",          "destination": "/api/sitemap" },
     { "source": "/sitemap-counties.xml", "destination": "/api/sitemap-counties" },
     { "source": "/humans.txt",           "destination": "/api/humans" },

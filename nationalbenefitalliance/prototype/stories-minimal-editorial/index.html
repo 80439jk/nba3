@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stories - National Benefit Alliance</title>
+    <link href="https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #111827;
+            background-color: #FFFFFF;
+            line-height: 1.6;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: #FFFFFF;
+            border-bottom: 1px solid #E5E7EB;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #111827;
+            letter-spacing: -0.5px;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #111827;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #059669;
+        }
+
+        .design-label {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #111827;
+            color: #FFFFFF;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #111827;
+            padding: 120px 20px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-family: 'Georgia', serif;
+            font-size: 64px;
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #D1D5DB;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        /* Stories Grid - Vertical Stack on Desktop */
+        .stories-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            margin-bottom: 100px;
+        }
+
+        /* Story Card */
+        .story-card {
+            background-color: #FFFFFF;
+            border: none;
+            border-bottom: 1px solid #E5E7EB;
+            padding: 32px 0;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 32px;
+            position: relative;
+            border-left: 3px solid #059669;
+            padding-left: 24px;
+            transition: background-color 0.3s ease;
+        }
+
+        .story-card:hover {
+            background-color: #F9FAFB;
+        }
+
+        .story-card:last-child {
+            border-bottom: none;
+        }
+
+        .story-left {
+            flex: 0 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            min-width: 0;
+        }
+
+        .story-category {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 800;
+            padding: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #059669;
+            line-height: 1;
+        }
+
+        .story-title {
+            font-family: 'Georgia', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #111827;
+            line-height: 1.35;
+            margin: 0;
+        }
+
+        .story-excerpt {
+            font-size: 15px;
+            color: #6B7280;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .story-right {
+            flex: 0 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .story-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            font-size: 13px;
+        }
+
+        .story-source {
+            font-weight: 600;
+            color: #111827;
+        }
+
+        .story-date {
+            color: #9CA3AF;
+        }
+
+        .story-link {
+            color: #059669;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+        }
+
+        .story-link:hover {
+            gap: 12px;
+            text-decoration: underline;
+        }
+
+        /* Subscribe Section */
+        .subscribe-section {
+            background-color: #F9FAFB;
+            border-top: 1px solid #E5E7EB;
+            border-bottom: 1px solid #E5E7EB;
+            padding: 60px 40px;
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .subscribe-content {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .subscribe-content h2 {
+            font-family: 'Georgia', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 12px;
+        }
+
+        .subscribe-content p {
+            color: #6B7280;
+            margin-bottom: 24px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .subscribe-form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .subscribe-form input {
+            padding: 14px 16px;
+            border: 1px solid #E5E7EB;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: #111827;
+            background-color: #FFFFFF;
+        }
+
+        .subscribe-form button {
+            padding: 14px 24px;
+            background-color: #111827;
+            color: #FFFFFF;
+            border: none;
+            font-weight: 700;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .subscribe-form button:hover {
+            background-color: #059669;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111827;
+            color: #FFFFFF;
+            padding: 60px 20px 40px;
+        }
+
+        footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        footer h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #FFFFFF;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer li {
+            margin-bottom: 12px;
+        }
+
+        footer a {
+            color: #D1D5DB;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #059669;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 40px;
+            border-top: 1px solid #374151;
+            text-align: center;
+            color: #9CA3AF;
+            font-size: 13px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            nav {
+                gap: 16px;
+                font-size: 12px;
+            }
+
+            .hero h1 {
+                font-size: 44px;
+            }
+
+            .story-card {
+                flex-direction: column;
+                gap: 20px;
+                padding-left: 20px;
+            }
+
+            .story-right {
+                flex-direction: row;
+                align-items: center;
+                gap: 20px;
+                width: 100%;
+            }
+
+            .story-title {
+                font-size: 18px;
+            }
+
+            .story-excerpt {
+                font-size: 14px;
+            }
+
+            .subscribe-section {
+                padding: 40px 20px;
+            }
+
+            .design-label {
+                font-size: 11px;
+                padding: 4px 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .story-card {
+                padding: 20px 0 20px 16px;
+                gap: 16px;
+            }
+
+            .story-title {
+                font-size: 16px;
+            }
+
+            .story-right {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="design-label">Option C: Minimal Editorial</div>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">National Benefit Alliance</div>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#stories">Stories</a>
+                <a href="#states">All States</a>
+                <a href="#about">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Stories of Impact</h1>
+            <p>Real people, real transformations. Discover how targeted assistance changes lives across the nation.</p>
+        </div>
+    </section>
+
+    <main>
+        <div class="stories-grid">
+            <!-- Story 1: Community Heroes -->
+            <article class="story-card">
+                <div class="story-left">
+                    <span class="story-category">Community Heroes</span>
+                    <h2 class="story-title">From Crisis to Calling: How One Woman Turned Her Hardship Into a Mission</h2>
+                    <p class="story-excerpt">After a family member helped her through a devastating crisis, Gwen Clifton dedicated her life to ensuring no one in Rochester faces homelessness alone.</p>
+                </div>
+                <div class="story-right">
+                    <div class="story-meta">
+                        <span class="story-source">WXXI News</span>
+                        <span class="story-date">April 2026</span>
+                    </div>
+                    <a href="#" class="story-link">Read Story →</a>
+                </div>
+            </article>
+
+            <!-- Story 2: Eviction Prevention -->
+            <article class="story-card">
+                <div class="story-left">
+                    <span class="story-category">Eviction Prevention</span>
+                    <h2 class="story-title">Keeping the Lights On: How Catholic Charities Helped a Cancer Patient Stay Home</h2>
+                    <p class="story-excerpt">When stage-four lung cancer and a car accident threatened to leave Abbey homeless, one caseworker at Catholic Charities made sure she kept her home and her dignity.</p>
+                </div>
+                <div class="story-right">
+                    <div class="story-meta">
+                        <span class="story-source">Catholic Charities NY</span>
+                        <span class="story-date">March 2026</span>
+                    </div>
+                    <a href="#" class="story-link">Read Story →</a>
+                </div>
+            </article>
+
+            <!-- Story 3: Food Security -->
+            <article class="story-card">
+                <div class="story-left">
+                    <span class="story-category">Food Security</span>
+                    <h2 class="story-title">More Than a Meal: How a Food Pantry Helped a Single Mom Build a New Future</h2>
+                    <p class="story-excerpt">Maya skipped meals so her two daughters could eat. A visit to the local food pantry didn't just fill her fridge — it opened the door to her GED and college.</p>
+                </div>
+                <div class="story-right">
+                    <div class="story-meta">
+                        <span class="story-source">Westside Food Bank</span>
+                        <span class="story-date">February 2026</span>
+                    </div>
+                    <a href="#" class="story-link">Read Story →</a>
+                </div>
+            </article>
+
+            <!-- Story 4: Housing -->
+            <article class="story-card">
+                <div class="story-left">
+                    <span class="story-category">Housing</span>
+                    <h2 class="story-title">Hope at Home: A Small Minnesota Fund Keeping Families Housed</h2>
+                    <p class="story-excerpt">In Rochester, Minnesota, the Hope at Home Fund has distributed $60,000 in emergency assistance — proving that targeted local action can prevent eviction before it starts.</p>
+                </div>
+                <div class="story-right">
+                    <div class="story-meta">
+                        <span class="story-source">Post Bulletin</span>
+                        <span class="story-date">March 2026</span>
+                    </div>
+                    <a href="#" class="story-link">Read Story →</a>
+                </div>
+            </article>
+
+            <!-- Story 5: Utility Assistance -->
+            <article class="story-card">
+                <div class="story-left">
+                    <span class="story-category">Utility Assistance</span>
+                    <h2 class="story-title">Neighbors Helping Neighbors: When a Community Rallied to Pay a Heating Bill</h2>
+                    <p class="story-excerpt">When the Andersons faced a $1,200 heating bill they couldn't pay, their small town didn't just help — they made sure no family on their block went cold that winter.</p>
+                </div>
+                <div class="story-right">
+                    <div class="story-meta">
+                        <span class="story-source">Community Action</span>
+                        <span class="story-date">January 2026</span>
+                    </div>
+                    <a href="#" class="story-link">Read Story →</a>
+                </div>
+            </article>
+
+            <!-- Story 6: National Impact -->
+            <article class="story-card">
+                <div class="story-left">
+                    <span class="story-category">National Impact</span>
+                    <h2 class="story-title">10,000 Families, One Mission: A Silicon Valley Program Goes National</h2>
+                    <p class="story-excerpt">What started as a local pilot in San Jose has expanded to 10 cities nationwide, providing rental assistance and case management to thousands facing eviction.</p>
+                </div>
+                <div class="story-right">
+                    <div class="story-meta">
+                        <span class="story-source">San Jose Spotlight</span>
+                        <span class="story-date">March 2026</span>
+                    </div>
+                    <a href="#" class="story-link">Read Story →</a>
+                </div>
+            </article>
+        </div>
+
+        <!-- Subscribe Section -->
+        <section class="subscribe-section">
+            <div class="subscribe-content">
+                <h2>Stay Updated</h2>
+                <p>Get monthly stories about transformative assistance and impact in your community.</p>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div>
+                <h3>About</h3>
+                <ul>
+                    <li><a href="#">Our Mission</a></li>
+                    <li><a href="#">Leadership</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Programs</h3>
+                <ul>
+                    <li><a href="#">Housing Assistance</a></li>
+                    <li><a href="#">Food Security</a></li>
+                    <li><a href="#">Utility Support</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Find Local Help</a></li>
+                    <li><a href="#">Apply for Assistance</a></li>
+                    <li><a href="#">Partner With Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Connect</h3>
+                <ul>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Newsletter</a></li>
+                    <li><a href="#">Social Media</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 National Benefit Alliance. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

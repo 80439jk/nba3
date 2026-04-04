@@ -31,7 +31,7 @@
 
   <!-- ====== FRESHNESS SIGNALS ====== -->
   <meta property="article:published_time" content="2025-10-01T00:00:00-05:00" />
-  <meta property="article:modified_time" content="2026-04-04T13:13:30-05:00" />
+  <meta property="article:modified_time" content="2026-04-04T16:35:13-05:00" />
 
   <!-- ====== SCHEMA.ORG STRUCTURED DATA (JSON-LD) ====== -->
   <script type="application/ld+json">
@@ -1419,24 +1419,72 @@
   </footer>
 
   <script>
-    // Mobile accordion toggle for detail blocks
-    document.querySelectorAll('.detail-toggle').forEach(toggle => {
+  /* ===== MOBILE UX ENHANCEMENTS ===== */
+  document.addEventListener('DOMContentLoaded', function() {
+
+    /* --- 1. Accordion toggles for detail blocks on mobile --- */
+    var details = document.querySelectorAll('.resource-item__detail');
+    details.forEach(function(detail) {
+      var toggle = document.createElement('div');
+      toggle.className = 'detail-toggle';
+      toggle.innerHTML = '<span>View Program Details</span><span class="chevron">&#9662;</span>';
+      toggle.setAttribute('role', 'button');
+      toggle.setAttribute('tabindex', '0');
+      toggle.setAttribute('aria-expanded', 'false');
+
       toggle.addEventListener('click', function() {
-        const detail = this.nextElementSibling;
-        if (detail && detail.classList.contains('resource-item__detail')) {
-          detail.classList.toggle('detail-open');
-          this.classList.toggle('open');
+        var isOpen = this.classList.toggle('open');
+        detail.classList.toggle('detail-open');
+        this.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        this.querySelector('span:first-child').textContent = isOpen ? 'Hide Program Details' : 'View Program Details';
+      });
+
+      toggle.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); this.click(); }
+      });
+
+      detail.parentNode.insertBefore(toggle, detail);
+    });
+
+    /* --- 2. Mobile Quick Access pill bar — active state on scroll --- */
+    var pills = document.querySelectorAll('.mobile-qa-pill');
+    var sections = [];
+    pills.forEach(function(pill) {
+      var id = pill.getAttribute('href').replace('#', '');
+      var el = document.getElementById(id);
+      if (el) sections.push({ id: id, el: el, pill: pill });
+    });
+
+    function updateActivePill() {
+      var scrollY = window.scrollY + 120;
+      var active = null;
+      sections.forEach(function(s) {
+        if (s.el.offsetTop <= scrollY) active = s;
+      });
+      pills.forEach(function(p) { p.classList.remove('active'); });
+      if (active) active.pill.classList.add('active');
+    }
+
+    var scrollTimer;
+    window.addEventListener('scroll', function() {
+      clearTimeout(scrollTimer);
+      scrollTimer = setTimeout(updateActivePill, 50);
+    }, { passive: true });
+
+    /* Smooth scroll for pills */
+    pills.forEach(function(pill) {
+      pill.addEventListener('click', function(e) {
+        e.preventDefault();
+        var id = this.getAttribute('href').replace('#', '');
+        var target = document.getElementById(id);
+        if (target) {
+          var offset = target.offsetTop - 60;
+          window.scrollTo({ top: offset, behavior: 'smooth' });
         }
       });
     });
 
-    // Mobile pill bar active state
-    document.querySelectorAll('.mobile-qa-pill').forEach(pill => {
-      pill.addEventListener('click', function(e) {
-        document.querySelectorAll('.mobile-qa-pill').forEach(p => p.classList.remove('active'));
-        this.classList.add('active');
-      });
-    });
+  });
   </script>
 
 </body>

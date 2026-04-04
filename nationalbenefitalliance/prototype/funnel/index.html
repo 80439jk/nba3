@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Help in Hillsborough County – See What You May Qualify For | National Benefit Alliance</title>
+  <meta name="description" content="Hillsborough County residents may qualify for utility assistance, housing help, healthcare coverage, and more. Call now to check your eligibility.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: #1a2b4a;
+      background: #f4f6fa;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    /* ===== VARIABLES ===== */
+    :root {
+      --navy: #0b2545;
+      --navy-dark: #091e38;
+      --blue: #1a5ca8;
+      --blue-light: #2b7de9;
+      --gold: #c8972e;
+      --gold-light: #e5b75a;
+      --white: #ffffff;
+      --gray-50: #f8f9fb;
+      --gray-100: #f0f2f5;
+      --gray-200: #e2e5ea;
+      --gray-400: #9ba3b0;
+      --gray-600: #5a6577;
+      --gray-800: #2d3748;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+      --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+      --radius: 10px;
+      --radius-lg: 14px;
+      --transition: 0.2s ease;
+    }
+
+    /* ===== LAYOUT ===== */
+    .container { max-width: 960px; margin: 0 auto; padding: 0 1.25rem; }
+
+    /* ===== HEADER ===== */
+    .header {
+      background: var(--white);
+      border-bottom: 3px solid var(--blue);
+      padding: 0.875rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: var(--shadow-sm);
+    }
+    .header__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header__brand {
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+    }
+    .header__logo {
+      width: 42px;
+      height: 42px;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-size: 1.25rem;
+      font-weight: 800;
+      position: relative;
+      overflow: hidden;
+    }
+    .header__logo::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 40%;
+      background: linear-gradient(180deg, rgba(255,255,255,0.15) 0%, transparent 100%);
+    }
+    .header__name {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: -0.01em;
+    }
+    .header__phone {
+      font-size: 0.9rem;
+      color: var(--gray-600);
+      font-weight: 500;
+    }
+    .header__phone strong {
+      color: var(--navy);
+      font-weight: 700;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      background: linear-gradient(175deg, var(--white) 0%, var(--gray-100) 100%);
+      padding: 3rem 0 2.5rem;
+      text-align: center;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .hero__title {
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1.25;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+    }
+    .hero__subtitle {
+      font-size: 1rem;
+      color: var(--gray-600);
+      max-width: 560px;
+      margin: 0 auto 2rem;
+      line-height: 1.6;
+    }
+    .hero__label {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--gray-800);
+      margin-bottom: 1.25rem;
+    }
+
+    /* ===== CATEGORY CARDS ===== */
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.875rem;
+      max-width: 680px;
+      margin: 0 auto 2rem;
+    }
+    .cat-card {
+      background: var(--white);
+      border: 2px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 1.125rem 0.75rem;
+      text-align: center;
+      cursor: pointer;
+      transition: all var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+    }
+    .cat-card:hover {
+      border-color: var(--blue);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .cat-card__icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+    .cat-card__icon--utility { background: #e8f0fe; }
+    .cat-card__icon--housing { background: #e6f4ea; }
+    .cat-card__icon--debt { background: #fef7e0; }
+    .cat-card__icon--health { background: #fce8e8; }
+    .cat-card__icon--jobs { background: #e8f0fe; }
+    .cat-card__icon--disability { background: #f3e8fd; }
+    .cat-card__label {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--navy);
+      text-align: left;
+      line-height: 1.3;
+    }
+
+    /* ===== PRIMARY CTA ===== */
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      background: linear-gradient(180deg, var(--blue) 0%, #15478a 100%);
+      color: var(--white);
+      font-size: 1.05rem;
+      font-weight: 700;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(26,92,168,0.35);
+      transition: all var(--transition);
+      text-decoration: none;
+      letter-spacing: 0.01em;
+    }
+    .cta-btn:hover {
+      background: linear-gradient(180deg, var(--blue-light) 0%, var(--blue) 100%);
+      box-shadow: 0 6px 20px rgba(26,92,168,0.45);
+      transform: translateY(-1px);
+    }
+    .cta-btn--gold {
+      background: linear-gradient(180deg, var(--gold) 0%, #a67c24 100%);
+      box-shadow: 0 4px 14px rgba(200,151,46,0.35);
+    }
+    .cta-btn--gold:hover {
+      background: linear-gradient(180deg, var(--gold-light) 0%, var(--gold) 100%);
+      box-shadow: 0 6px 20px rgba(200,151,46,0.45);
+    }
+
+    /* ===== MULTI-BENEFIT SECTION ===== */
+    .multi-benefit {
+      padding: 3rem 0;
+      text-align: center;
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .section-title {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 1.75rem;
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+    }
+    .benefit-cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      max-width: 720px;
+      margin: 0 auto 1.5rem;
+    }
+    .benefit-card {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 1.5rem 0.75rem 1.25rem;
+      text-align: center;
+      transition: all var(--transition);
+    }
+    .benefit-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .benefit-card__icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      margin: 0 auto 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+    .benefit-card__icon--utility { background: #dbeafe; }
+    .benefit-card__icon--health { background: #fecaca; }
+    .benefit-card__icon--debt { background: #fef3c7; }
+    .benefit-card__icon--jobs { background: #d1fae5; }
+    .benefit-card__label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.35;
+    }
+    .multi-benefit__link {
+      color: var(--blue);
+      font-size: 0.95rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+    .multi-benefit__link:hover { text-decoration: underline; }
+
+    /* ===== SOCIAL PROOF SECTION ===== */
+    .social-proof {
+      padding: 3rem 0;
+      text-align: center;
+      background: var(--gray-50);
+      border-top: 1px solid var(--gray-200);
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .social-proof__text {
+      font-size: 0.95rem;
+      color: var(--gray-600);
+      max-width: 520px;
+      margin: 0 auto 1.5rem;
+    }
+    .trust-badges {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .trust-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--gray-800);
+    }
+    .trust-badge__icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--blue);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+    }
+
+    /* ===== HOW IT WORKS ===== */
+    .how-it-works {
+      padding: 3rem 0;
+      text-align: center;
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .step {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem 1rem 1.5rem;
+      position: relative;
+    }
+    .step__icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: #dbeafe;
+      margin: 0 auto 0.875rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+    }
+    .step__number {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--blue);
+    }
+    .step__label {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--gray-800);
+      line-height: 1.4;
+    }
+
+    /* ===== BENEFITS LIST ===== */
+    .benefits-list {
+      padding: 2.5rem 0;
+      text-align: center;
+      background: var(--gray-50);
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.875rem 2.5rem;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+    .benefit-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-align: left;
+    }
+    .benefit-item__icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .benefit-item__icon--utility { background: #dbeafe; }
+    .benefit-item__icon--grocery { background: #fef3c7; }
+    .benefit-item__icon--health { background: #fecaca; }
+    .benefit-item__icon--housing { background: #d1fae5; }
+    .benefit-item__label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    /* ===== BOTTOM CTA BAR ===== */
+    .bottom-cta {
+      background: linear-gradient(180deg, var(--navy) 0%, var(--navy-dark) 100%);
+      padding: 2rem 0;
+      text-align: center;
+    }
+    .bottom-cta__inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .bottom-cta__icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+    .bottom-cta__text {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+    .bottom-cta__text a {
+      color: var(--gold-light);
+      text-decoration: none;
+    }
+    .bottom-cta__text a:hover { text-decoration: underline; }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: var(--gray-100);
+      padding: 1.5rem 0;
+      text-align: center;
+      border-top: 1px solid var(--gray-200);
+    }
+    .footer__brand {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.25rem;
+    }
+    .footer__tagline {
+      font-size: 0.8rem;
+      color: var(--gray-400);
+      margin-bottom: 0.75rem;
+    }
+    .footer__links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .footer__links a {
+      font-size: 0.8rem;
+      color: var(--gray-600);
+    }
+    .footer__links a:hover { color: var(--blue); }
+    .footer__links span { color: var(--gray-400); font-size: 0.8rem; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .hero__title { font-size: 1.45rem; }
+      .categories { grid-template-columns: repeat(2, 1fr); gap: 0.625rem; }
+      .benefit-cards { grid-template-columns: repeat(2, 1fr); }
+      .steps { grid-template-columns: 1fr; max-width: 320px; }
+      .benefits-grid { grid-template-columns: 1fr; max-width: 280px; }
+      .cta-btn { font-size: 0.95rem; padding: 0.875rem 1.75rem; }
+      .bottom-cta__inner { flex-direction: column; }
+      .bottom-cta__text { font-size: 1.05rem; }
+      .trust-badges { gap: 1rem; }
+      .header__phone { display: none; }
+    }
+
+    @media (max-width: 480px) {
+      .hero { padding: 2rem 0 2rem; }
+      .hero__title { font-size: 1.25rem; }
+      .categories { grid-template-columns: 1fr 1fr; }
+      .cat-card { padding: 0.875rem 0.625rem; }
+      .benefit-cards { gap: 0.625rem; }
+      .section-title { font-size: 1.2rem; padding: 0 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <div class="header__brand">
+          <div class="header__logo">
+            <span>N</span>
+          </div>
+          <span class="header__name">National Benefit Alliance</span>
+        </div>
+        <div class="header__phone">Call for Assistance: <strong><a href="tel:18881234567">1-888-123-4567</a></strong></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero__title">Get Help in Hillsborough County &mdash; See What You May Qualify For</h1>
+      <p class="hero__subtitle">If you're struggling with bills, housing, or income, there are programs that may provide assistance.</p>
+
+      <p class="hero__label">What do you need help with right now?</p>
+
+      <div class="categories">
+        <a href="tel:18881234567" class="cat-card">
+          <div class="cat-card__icon cat-card__icon--utility">&#9889;</div>
+          <span class="cat-card__label">Paying Utility Bills</span>
+        </a>
+        <a href="tel:18881234567" class="cat-card">
+          <div class="cat-card__icon cat-card__icon--housing">&#127968;</div>
+          <span class="cat-card__label">Rent or Housing Help</span>
+        </a>
+        <a href="tel:18881234567" class="cat-card">
+          <div class="cat-card__icon cat-card__icon--debt">&#128176;</div>
+          <span class="cat-card__label">Debt &amp; Financial Stress</span>
+        </a>
+        <a href="tel:18881234567" class="cat-card">
+          <div class="cat-card__icon cat-card__icon--health">&#128153;</div>
+          <span class="cat-card__label">Health &amp; Medical Assistance</span>
+        </a>
+        <a href="tel:18881234567" class="cat-card">
+          <div class="cat-card__icon cat-card__icon--jobs">&#128188;</div>
+          <span class="cat-card__label">Finding a Job</span>
+        </a>
+        <a href="tel:18881234567" class="cat-card">
+          <div class="cat-card__icon cat-card__icon--disability">&#9829;</div>
+          <span class="cat-card__label">Disability Support</span>
+        </a>
+      </div>
+
+      <a href="tel:18881234567" class="cta-btn">&#128222; Call Now to Check Eligibility: 1-888-123-4567</a>
+    </div>
+  </section>
+
+  <!-- Multi-Benefit -->
+  <section class="multi-benefit">
+    <div class="container">
+      <h2 class="section-title">Many Residents in Hillsborough County Qualify for Multiple Types of Assistance</h2>
+
+      <div class="benefit-cards">
+        <div class="benefit-card">
+          <div class="benefit-card__icon benefit-card__icon--utility">&#127974;</div>
+          <div class="benefit-card__label">Utility Bill Assistance</div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card__icon benefit-card__icon--health">&#10010;</div>
+          <div class="benefit-card__label">Health Coverage Programs</div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card__icon benefit-card__icon--debt">&#128181;</div>
+          <div class="benefit-card__label">Debt Relief Options</div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card__icon benefit-card__icon--jobs">&#127970;</div>
+          <div class="benefit-card__label">Job Placement Support</div>
+        </div>
+      </div>
+
+      <a href="tel:18881234567" class="multi-benefit__link">Find Out What You May Be Eligible For &rarr;</a>
+    </div>
+  </section>
+
+  <!-- Social Proof -->
+  <section class="social-proof">
+    <div class="container">
+      <h2 class="section-title">You're Not Alone &mdash; Help Is Available Locally</h2>
+      <p class="social-proof__text">Thousands of people in Hillsborough County seek help each year with housing, utilities, healthcare, and more.</p>
+
+      <div class="trust-badges">
+        <div class="trust-badge">
+          <div class="trust-badge__icon">&#10003;</div>
+          <span>No Cost to Check</span>
+        </div>
+        <div class="trust-badge">
+          <div class="trust-badge__icon">&#128274;</div>
+          <span>Confidential &amp; Secure</span>
+        </div>
+        <div class="trust-badge">
+          <div class="trust-badge__icon">&#128172;</div>
+          <span>Friendly Assistance</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="how-it-works">
+    <div class="container">
+      <h2 class="section-title">How It Works</h2>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step__icon">&#128100;</div>
+          <p class="step__label"><span class="step__number">1.</span> Tell Us Your Situation</p>
+        </div>
+        <div class="step">
+          <div class="step__icon">&#128203;</div>
+          <p class="step__label"><span class="step__number">2.</span> We Review Available Programs</p>
+        </div>
+        <div class="step">
+          <div class="step__icon">&#129333;</div>
+          <p class="step__label"><span class="step__number">3.</span> Talk to a Specialist for Guidance</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits You Could Be Missing -->
+  <section class="benefits-list">
+    <div class="container">
+      <h2 class="section-title">You Could Be Missing Out on Benefits Like:</h2>
+
+      <div class="benefits-grid">
+        <div class="benefit-item">
+          <div class="benefit-item__icon benefit-item__icon--utility">&#127974;</div>
+          <span class="benefit-item__label">Monthly Utility Assistance</span>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-item__icon benefit-item__icon--grocery">&#127828;</div>
+          <span class="benefit-item__label">Grocery &amp; Living Support</span>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-item__icon benefit-item__icon--health">&#127973;</div>
+          <span class="benefit-item__label">Reduced Health Costs</span>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-item__icon benefit-item__icon--housing">&#127968;</div>
+          <span class="benefit-item__label">Emergency Housing Help</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="bottom-cta">
+    <div class="container">
+      <div class="bottom-cta__inner">
+        <div class="bottom-cta__icon">&#128222;</div>
+        <div class="bottom-cta__text">Call Now to Find Out What You Qualify For: <a href="tel:18881234567">1-888-123-4567</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__brand">National Benefit Alliance</div>
+      <div class="footer__tagline">Helping You Find the Assistance You Need</div>
+      <div class="footer__links">
+        <a href="/privacy/">Privacy Policy</a>
+        <span>|</span>
+        <a href="/terms/">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -13,8 +13,8 @@
   <!-- ====== GEO META (Local SEO) ====== -->
   <meta name="geo.region" content="US-MO" />
   <meta name="geo.placename" content="Gasconade, Missouri" />
-  <meta name="geo.position" content="40.0;-95.0" />
-  <meta name="ICBM" content="40.0, -95.0" />
+  <meta name="geo.position" content="38.456054;-92.288368" />
+  <meta name="ICBM" content="38.456054, -92.288368" />
 
   <!-- ====== OPEN GRAPH ====== -->
   <meta property="og:type" content="website" />
@@ -22,6 +22,10 @@
   <meta property="og:title" content="Gasconade Benefits &amp; Resources | Free Government Assistance" />
   <meta property="og:description" content="60+ free assistance programs in Gasconade, Missouri. Utilities, rent, SNAP, Medicaid, unemployment, faith-based aid. Eligibility details, documents needed, how to apply." />
   <meta property="og:url" content="https://nationalbenefitalliance.com/missouri/gasconade/" />
+  <meta property="og:image" content="https://nationalbenefitalliance.com/images/og-gasconade-mo.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Gasconade, Missouri - Free Government Assistance Programs" />
   <meta property="og:locale" content="en_US" />
 
   <!-- ====== TWITTER CARD ====== -->
@@ -31,7 +35,7 @@
 
   <!-- ====== FRESHNESS SIGNALS ====== -->
   <meta property="article:published_time" content="2025-10-01T00:00:00-05:00" />
-  <meta property="article:modified_time" content="2026-04-04T16:35:13-05:00" />
+  <meta property="article:modified_time" content="2026-04-04T16:45:01-05:00" />
 
   <!-- ====== SCHEMA.ORG STRUCTURED DATA (JSON-LD) ====== -->
   <script type="application/ld+json">
@@ -113,7 +117,7 @@
         },
         "speakable": {
           "@type": "SpeakableSpecification",
-          "cssSelector": [".county-hero h1", ".lead", ".resource-category__header h3"]
+          "cssSelector": [".county-hero h1", ".lead", ".resource-category__header h3", ".faq-section dt", ".faq-section dd"]
         },
         "mainEntity": { "@id": "https://nationalbenefitalliance.com/missouri/gasconade/#resourcelist" }
       },
@@ -142,8 +146,8 @@
         },
         "geo": {
           "@type": "GeoCoordinates",
-          "latitude": 40.0,
-          "longitude": -95.0
+          "latitude": 38.456054,
+          "longitude": -92.288368
         },
         "sameAs": [
           "https://gasconade.gov",
@@ -157,7 +161,7 @@
       {
         "@type": "GovernmentOrganization",
         "@id": "https://nationalbenefitalliance.com/missouri/gasconade/#countygovt",
-        "name": "Gasconade Government",
+        "name": "Gasconade County Government",
         "description": "Official government of Gasconade, Missouri. County seat located in Gasconade.",
         "url": "https://gasconade.gov",
         "address": {
@@ -514,6 +518,68 @@
       border-color: var(--navy);
       background: rgba(27,58,107,0.04);
     }
+    .apply-steps {
+      margin: 0.75rem 0 0 1.25rem;
+      padding: 0;
+      list-style-position: outside;
+    }
+    .apply-steps li {
+      margin-bottom: 0.5rem;
+      line-height: 1.5;
+      color: var(--gray-800);
+    }
+
+    /* ===== FAQ SECTION ===== */
+    .faq-section {
+      margin: 2rem 0;
+      padding: 1.5rem;
+      background: white;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+    }
+    .faq-section h2 {
+      margin: 0 0 1.25rem 0;
+      font-size: 1.5rem;
+      color: var(--navy);
+      font-weight: 700;
+    }
+    .faq-list {
+      margin: 0;
+      padding: 0;
+      display: block;
+    }
+    .faq-list dt {
+      margin: 1rem 0 0.35rem 0;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--navy);
+      padding: 0.5rem 0;
+      border-top: 1px solid var(--gray-200);
+    }
+    .faq-list dt:first-of-type {
+      border-top: none;
+      margin-top: 0;
+    }
+    .faq-list dd {
+      margin: 0 0 0.5rem 0;
+      padding: 0 0 0 1.25rem;
+      line-height: 1.6;
+      color: var(--gray-700);
+      font-size: 0.9rem;
+    }
+    @media (max-width: 768px) {
+      .faq-section {
+        padding: 1rem;
+      }
+      .faq-section h2 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+      }
+      .faq-list dt {
+        font-size: 0.9rem;
+        margin-top: 0.75rem;
+      }
+    }
     .status-badge {
       display: inline-flex;
       align-items: center;
@@ -736,6 +802,8 @@
         <div class="page-layout">
           <div>
 
+            <h2>Free Government &amp; Community Programs in Gasconade</h2>
+
             <!-- ================================================================ -->
             <!--  CATEGORY 1: UTILITY ASSISTANCE (ENHANCED)                       -->
             <!-- ================================================================ -->
@@ -793,13 +861,20 @@
                           </span>
                         </div>
 
-                        <div class="resource-item__detail-block">
+                        <div class="resource-item__detail-block resource-item__detail-full">
                           <span class="resource-item__detail-label">How to Apply</span>
                           <div class="resource-item__apply-methods">
                             <a href="tel:18004357300" class="apply-method">📞 State LIHEAP Office</a>
                             <a href="tel:211" class="apply-method">📞 Dial 211</a>
                             <span class="apply-method">🏢 Local CAA Office</span>
                           </div>
+                          <ol class="apply-steps">
+                            <li>Gather documents: proof of income (last 30 days), recent utility bill, Social Security numbers, photo ID</li>
+                            <li>Contact your state LIHEAP office, call 211, or visit your local Community Action Agency</li>
+                            <li>Complete application intake interview (in-person, phone, or online)</li>
+                            <li>Receive eligibility determination (processing typically 30-45 days during season)</li>
+                            <li>Once approved, funds are sent directly to your utility company</li>
+                          </ol>
                         </div>
 
                       </div>
@@ -1018,10 +1093,10 @@
                         <div class="resource-item__detail-block">
                           <span class="resource-item__detail-label">Eligibility</span>
                           <span class="resource-item__detail-value">
-                            Gross income ≤ 130–165% FPL (varies by state)<br/>
-                            <strong>1 person:</strong> $1,500–1,700/mo<br/>
-                            <strong>4 people:</strong> $3,100–3,500/mo<br/>
-                            <em>No asset test in most states.</em>
+                            Gross income ≤ 130% Federal Poverty Level (most states; some go to 165%)<br/>
+                            <strong>1 person:</strong> ~$1,580/mo (130% FPL to $2,430/mo at 200% FPL)<br/>
+                            <strong>4 people:</strong> ~$3,250/mo (130% FPL to $5,000/mo at 200% FPL)<br/>
+                            <em>No asset test in most states. Rates updated annually.</em>
                           </span>
                         </div>
                         <div class="resource-item__detail-divider"></div>
@@ -1036,13 +1111,20 @@
                             </ul>
                           </span>
                         </div>
-                        <div class="resource-item__detail-block">
+                        <div class="resource-item__detail-block resource-item__detail-full">
                           <span class="resource-item__detail-label">How to Apply</span>
                           <div class="resource-item__apply-methods">
                             <a href="https://www.fns.usda.gov/snap/state-directory" target="_blank" rel="noopener" class="apply-method">🌐 Online (Fastest)</a>
                             <a href="tel:18008436154" class="apply-method">📞 Phone</a>
                             <span class="apply-method">🏢 Local Office</span>
                           </div>
+                          <ol class="apply-steps">
+                            <li>Gather documents: photo ID, Social Security numbers, proof of income (pay stubs, SSA letter), proof of housing costs (rent/utilities)</li>
+                            <li>Apply online through your state's SNAP portal, call 1-800-SNAP, or visit your local SNAP office</li>
+                            <li>Complete an eligibility interview (may be done by phone)</li>
+                            <li>Receive eligibility determination: standard 30 days or expedited 5 days if eligible</li>
+                            <li>Once approved, receive EBT card in the mail and start shopping for food at authorized retailers</li>
+                          </ol>
                         </div>
                       </div>
                     </div>
@@ -1355,6 +1437,44 @@
 
               </div>
             </div>
+
+            <!-- ================================================================ -->
+            <!--  FAQ SECTION (VISIBLE)                                          -->
+            <!-- ================================================================ -->
+            <section class="faq-section" id="faq">
+              <h2>Frequently Asked Questions About Gasconade Benefits</h2>
+              <dl class="faq-list">
+                <dt>How do I apply for SNAP in Missouri?</dt>
+                <dd>Contact your local SNAP (Food Assistance) office or visit the state benefits portal. You'll need photo ID, Social Security numbers, proof of income, and proof of housing costs. Processing typically takes 30 days, or 5 days for expedited cases.</dd>
+
+                <dt>What is LIHEAP and how do I apply in Gasconade?</dt>
+                <dd>LIHEAP (Low Income Home Energy Assistance Program) provides federal energy bill assistance. Administered by Missouri Department of Social Services (DSS). You must meet income limits (typically 60% of State Median Income) and provide proof of income and utility bills. Visit the state's benefits portal or call 211 for local application help.</dd>
+
+                <dt>Where can I find free food assistance in Gasconade?</dt>
+                <dd>Apply for SNAP food stamps through SNAP (Food Assistance), visit local food banks and food pantries (use 211.org to locate), or contact faith-based organizations in your area. Most food pantries are walk-in with no appointment or application required.</dd>
+
+                <dt>What are the income limits for Missouri Medicaid in Missouri?</dt>
+                <dd>Income limits vary by family size and eligibility category. Generally, adults qualify if their income is at or below 138% of the Federal Poverty Level. Children and pregnant women may have higher income thresholds. Contact your local Missouri Department of Human Services for specific limits for your household.</dd>
+
+                <dt>How do I file for unemployment benefits in Missouri?</dt>
+                <dd>Visit the state unemployment office website (https://www.mo.gov/ides) to file online, or apply by phone. You'll need Social Security number, driver's license, and information about your job loss. Filing early is important—benefits are based on the date you file, not the date you lost your job.</dd>
+
+                <dt>What is the 211 service and how do I use it?</dt>
+                <dd>211 is a free, confidential referral service that connects you to local resources for housing, food, health care, employment, and other assistance. Simply dial 211 from any phone (no area code needed) or visit 211.org to search online for services in your area.</dd>
+
+                <dt>Can I get help paying my utility bills if I'm low-income?</dt>
+                <dd>Yes! LIHEAP provides federal energy bill assistance for households at or below 60% of State Median Income. Apply in fall (October/November) as funding is seasonal and often runs out. Other utility companies also offer assistance programs—call your provider or dial 211 to ask.</dd>
+
+                <dt>How much in benefits can I get from SNAP (food stamps)?</dt>
+                <dd>SNAP benefits depend on your household size and income. The maximum monthly benefit in 2026 is about $291 per person for a single-person household, but eligible households typically receive less based on income. Visit your state's SNAP office or online portal to estimate your benefits.</dd>
+
+                <dt>Are there housing assistance programs for renters in Gasconade?</dt>
+                <dd>Yes! Emergency Rental Assistance helps people facing eviction, Section 8 provides rental vouchers for low-income families, and faith-based organizations offer emergency shelter and transitional housing. Dial 211 to find available programs and waitlist information in your area.</dd>
+
+                <dt>What documents do I need to apply for benefits in Gasconade?</dt>
+                <dd>Most benefit applications require: photo ID, Social Security numbers, proof of income (pay stubs, SSA letters), proof of housing costs (rent/utility bills), and proof of residency. Some programs may ask for birth certificates or proof of citizenship. Check with the specific program or call 211 for detailed requirements.</dd>
+              </dl>
+            </section>
 
           </div>
 

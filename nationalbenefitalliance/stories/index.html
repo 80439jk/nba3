@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- =========================================================
+       PRIMARY SEO TAGS
+       ========================================================= -->
+  <title>Stories of Kindness & Community | National Benefit Alliance</title>
+  <meta name="description" content="Read inspiring stories of real people helped by community assistance programs. Stories of hope, resilience, and the power of neighbors helping neighbors." />
+  <meta name="keywords" content="community stories, benefit stories, assistance programs, kindness, hope, community help" />
+  <meta name="author" content="National Benefit Alliance" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <link rel="canonical" href="https://nationalbenefitalliance.com/stories/" />
+
+  <!-- =========================================================
+       OPEN GRAPH
+       ========================================================= -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://nationalbenefitalliance.com/stories/" />
+  <meta property="og:title" content="Stories of Kindness & Community | National Benefit Alliance" />
+  <meta property="og:description" content="Read inspiring stories of real people helped by community assistance programs." />
+  <meta property="og:image" content="https://nationalbenefitalliance.com/images/og-stories.jpg" />
+  <meta property="og:site_name" content="National Benefit Alliance" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- =========================================================
+       TWITTER CARD
+       ========================================================= -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@NBAbenefits" />
+  <meta name="twitter:title" content="Stories of Kindness & Community" />
+  <meta name="twitter:description" content="Read inspiring stories of real people helped by community assistance programs." />
+  <meta name="twitter:image" content="https://nationalbenefitalliance.com/images/og-stories.jpg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@700;800&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="../css/styles.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231B3A6B'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' fill='%23E8A020' font-size='18' font-weight='bold' font-family='Arial'>N</text></svg>" />
+
+  <style>
+    /* ============================================
+       STORIES LANDING PAGE STYLES
+       ============================================ */
+
+    .stories-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+      color: var(--white);
+      padding: 5rem 0;
+      text-align: center;
+    }
+
+    .stories-hero h1 {
+      color: var(--white);
+      margin-bottom: 1rem;
+    }
+
+    .stories-hero .lead {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
+
+    .stories-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+
+    @media (min-width: 768px) {
+      .stories-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .stories-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .story-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      transition: all var(--transition);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .story-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .story-card__header {
+      padding: 2rem 2rem 0;
+      flex-grow: 1;
+    }
+
+    .story-card__tag {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy-dark);
+      padding: 0.35rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 1rem;
+    }
+
+    .story-card__title {
+      font-family: var(--font-head);
+      font-size: 1.3rem;
+      color: var(--navy);
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+
+    .story-card__excerpt {
+      color: var(--gray-600);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .story-card__meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      color: var(--gray-600);
+      padding: 1.5rem 2rem;
+      border-top: 1px solid var(--gray-100);
+      margin-top: auto;
+    }
+
+    .story-card__source {
+      font-style: italic;
+    }
+
+    .story-card__date {
+      font-weight: 600;
+    }
+
+    .story-card__link {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--blue);
+      font-weight: 600;
+      text-decoration: none;
+      margin-top: 1rem;
+      transition: gap var(--transition);
+    }
+
+    .story-card__link:hover {
+      gap: 0.75rem;
+      color: var(--navy);
+    }
+
+    .story-card__link::after {
+      content: '→';
+      display: inline-block;
+    }
+
+    .stories-section {
+      padding: 4rem 0;
+    }
+
+    .stories-subscribe {
+      background: var(--gold);
+      color: var(--navy-dark);
+      padding: 3rem;
+      border-radius: var(--radius-lg);
+      text-align: center;
+      margin-top: 4rem;
+    }
+
+    .stories-subscribe h3 {
+      color: var(--navy-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .stories-subscribe p {
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .stories-subscribe-form {
+      display: flex;
+      gap: 0.5rem;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .stories-subscribe-form input {
+      flex: 1;
+      padding: 0.75rem 1rem;
+      border: none;
+      border-radius: var(--radius);
+      font-size: 0.95rem;
+    }
+
+    .stories-subscribe-form button {
+      padding: 0.75rem 1.5rem;
+      background: var(--navy);
+      color: var(--white);
+      border: none;
+      border-radius: var(--radius);
+      font-weight: 600;
+      cursor: pointer;
+      transition: background var(--transition);
+    }
+
+    .stories-subscribe-form button:hover {
+      background: var(--navy-dark);
+    }
+
+    .breadcrumb {
+      font-size: 0.9rem;
+      color: var(--gray-600);
+      margin-bottom: 2rem;
+      padding-top: 1rem;
+    }
+
+    .breadcrumb a {
+      color: var(--blue);
+    }
+
+    .breadcrumb a:hover {
+      color: var(--navy);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================================================
+       NAVIGATION
+       ========================================================= -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo" aria-label="National Benefit Alliance Home">
+        <div class="nav__logo-icon">
+          <svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M13 2L3 7v6c0 5.5 4.3 10.7 10 12 5.7-1.3 10-6.5 10-12V7L13 2z"/>
+          </svg>
+        </div>
+        <div class="nav__logo-text">
+          <span class="nav__logo-name">National Benefit Alliance</span>
+          <span class="nav__logo-tagline">Free Resource Center · All 50 States</span>
+        </div>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="/">Home</a></li>
+        <li><a href="/stories/" class="active">Stories</a></li>
+        <li><a href="/resources/">All States</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+      <a href="tel:18006224357" class="nav__cta">
+        <span class="nav__cta-icon">&#128222;</span>
+        1-800-NBA-HELP
+      </a>
+    </div>
+  </nav>
+
+  <!-- =========================================================
+       HERO SECTION
+       ========================================================= -->
+  <main id="main-content">
+  <section class="stories-hero" aria-labelledby="stories-heading">
+    <div class="container">
+      <h1 id="stories-heading">Stories of Kindness & Community</h1>
+      <p class="lead">
+        Discover inspiring real-world stories of Americans whose lives were transformed by community support and assistance programs. From eviction prevention to food security, these stories highlight the power of neighbors helping neighbors.
+      </p>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       STORIES GRID
+       ========================================================= -->
+  <section class="stories-section">
+    <div class="container">
+      <div class="stories-grid">
+
+        <!-- Story 1 -->
+        <article class="story-card">
+          <div class="story-card__header">
+            <span class="story-card__tag">Community Heroes</span>
+            <h2 class="story-card__title">From Crisis to Calling: How One Woman Turned Her Hardship Into a Mission to Help Others</h2>
+            <p class="story-card__excerpt">
+              A Rochester, NY woman once faced homelessness herself. Today, she runs a program helping others avoid the same fate—all because someone believed in her.
+            </p>
+            <a href="/stories/from-crisis-to-calling.html" class="story-card__link">Read Story</a>
+          </div>
+          <div class="story-card__meta">
+            <span class="story-card__source">WXXI News</span>
+            <span class="story-card__date">April 2026</span>
+          </div>
+        </article>
+
+        <!-- Story 2 -->
+        <article class="story-card">
+          <div class="story-card__header">
+            <span class="story-card__tag">Eviction Prevention</span>
+            <h2 class="story-card__title">Keeping the Lights On: How Catholic Charities Helped a Cancer Patient Stay in Her Home</h2>
+            <p class="story-card__excerpt">
+              When Abbey was diagnosed with stage-four lung cancer, emergency assistance made all the difference. Her caseworker Joy Willis helped her stay housed.
+            </p>
+            <a href="/stories/keeping-the-lights-on.html" class="story-card__link">Read Story</a>
+          </div>
+          <div class="story-card__meta">
+            <span class="story-card__source">Catholic Charities NY</span>
+            <span class="story-card__date">2026</span>
+          </div>
+        </article>
+
+        <!-- Story 3 -->
+        <article class="story-card">
+          <div class="story-card__header">
+            <span class="story-card__tag">Food Security</span>
+            <h2 class="story-card__title">More Than a Meal: How a Food Pantry Helped a Single Mom Build a New Future</h2>
+            <p class="story-card__excerpt">
+              Maya skipped meals so her daughters could eat. A food pantry and dedicated case managers helped her earn her GED and plan for college.
+            </p>
+            <a href="/stories/more-than-a-meal.html" class="story-card__link">Read Story</a>
+          </div>
+          <div class="story-card__meta">
+            <span class="story-card__source">Westside Food Bank</span>
+            <span class="story-card__date">2026</span>
+          </div>
+        </article>
+
+        <!-- Story 4 -->
+        <article class="story-card">
+          <div class="story-card__header">
+            <span class="story-card__tag">Housing</span>
+            <h2 class="story-card__title">Hope at Home: A Small Minnesota Fund Distributing $60,000 to Keep Families Housed</h2>
+            <p class="story-card__excerpt">
+              The Hope at Home Fund in Rochester, Minnesota is changing lives by providing emergency rental assistance to families facing eviction.
+            </p>
+            <a href="/stories/hope-at-home.html" class="story-card__link">Read Story</a>
+          </div>
+          <div class="story-card__meta">
+            <span class="story-card__source">Post Bulletin</span>
+            <span class="story-card__date">2026</span>
+          </div>
+        </article>
+
+        <!-- Story 5 -->
+        <article class="story-card">
+          <div class="story-card__header">
+            <span class="story-card__tag">Utility Assistance</span>
+            <h2 class="story-card__title">Neighbors Helping Neighbors: When a Community Rallied to Pay a Family's Heating Bill</h2>
+            <p class="story-card__excerpt">
+              In the depths of winter, a community action agency and caring neighbors came together to ensure a family wouldn't freeze in the dark.
+            </p>
+            <a href="/stories/neighbors-helping-neighbors.html" class="story-card__link">Read Story</a>
+          </div>
+          <div class="story-card__meta">
+            <span class="story-card__source">Salvation Army</span>
+            <span class="story-card__date">2026</span>
+          </div>
+        </article>
+
+        <!-- Story 6 -->
+        <article class="story-card">
+          <div class="story-card__header">
+            <span class="story-card__tag">National Impact</span>
+            <h2 class="story-card__title">10,000 Families, One Mission: How a Silicon Valley Program Went National</h2>
+            <p class="story-card__excerpt">
+              Destination: Home started in Silicon Valley helping families avoid homelessness. Now it's expanding to 10 cities across the nation.
+            </p>
+            <a href="/stories/ten-thousand-families.html" class="story-card__link">Read Story</a>
+          </div>
+          <div class="story-card__meta">
+            <span class="story-card__source">San Jose Spotlight</span>
+            <span class="story-card__date">2026</span>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Subscribe Callout -->
+      <aside class="stories-subscribe" aria-labelledby="subscribe-heading">
+        <h3 id="subscribe-heading">New Stories Added Daily</h3>
+        <p>Subscribe to hear inspiring stories of community support and hope delivered to your inbox.</p>
+        <form class="stories-subscribe-form" action="#" method="POST">
+          <input type="email" placeholder="Enter your email" aria-label="Email address" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </aside>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <div class="footer__logo-box">
+              <svg width="24" height="24" viewBox="0 0 26 26" fill="#E8A020" aria-hidden="true">
+                <path d="M13 2L3 7v6c0 5.5 4.3 10.7 10 12 5.7-1.3 10-6.5 10-12V7L13 2z"/>
+              </svg>
+            </div>
+            <span class="footer__logo-name">National Benefit Alliance</span>
+          </div>
+          <p class="footer__desc">
+            A free national resource center helping Americans navigate government and community assistance programs. Find benefits for utilities, housing, food, healthcare, and more — organized by county.
+          </p>
+          <a href="tel:18006224357" class="footer__phone">
+            📞 1-800-NBA-HELP (622-4357)
+          </a>
+          <p style="font-size:0.75rem;color:rgba(255,255,255,0.4);margin-top:0.5rem;">
+            Mon–Fri 8am–8pm ET · Sat 9am–5pm ET
+          </p>
+        </div>
+
+        <div>
+          <h4>Florida Counties</h4>
+          <ul class="footer__links">
+            <li><a href="/florida/miami-dade/">Miami-Dade County</a></li>
+            <li><a href="/florida/broward/">Broward County</a></li>
+            <li><a href="/florida/palm-beach/">Palm Beach County</a></li>
+            <li><a href="/florida/orange/">Orange County</a></li>
+            <li><a href="/florida/hillsborough/">Hillsborough County</a></li>
+            <li><a href="/florida/pinellas/">Pinellas County</a></li>
+            <li><a href="/florida/duval/">Duval County</a></li>
+            <li><a href="/florida/">All 67 Counties →</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Resources</h4>
+          <ul class="footer__links">
+            <li><a href="/resources/utility-assistance/">Utility Assistance</a></li>
+            <li><a href="/resources/housing/">Housing &amp; Rent Help</a></li>
+            <li><a href="/resources/food-assistance/">Food Assistance</a></li>
+            <li><a href="/resources/healthcare/">Healthcare &amp; Medicaid</a></li>
+            <li><a href="/resources/unemployment/">Unemployment Benefits</a></li>
+            <li><a href="/resources/childcare/">Childcare Programs</a></li>
+            <li><a href="/resources/senior-services/">Senior Services</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Company</h4>
+          <ul class="footer__links">
+            <li><a href="/about/">About Us</a></li>
+            <li><a href="/faq/">FAQ</a></li>
+            <li><a href="/contact/">Contact Us</a></li>
+            <li><a href="/apply/1">Apply Now</a></li>
+            <li><a href="/sitemap.xml">Sitemap</a></li>
+          </ul>
+          <div style="margin-top:1.5rem;">
+            <h4>Get the App</h4>
+            <p style="font-size:0.8rem;color:rgba(255,255,255,0.5);">Mobile app coming soon for iOS &amp; Android</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p>© 2024 National Benefit Alliance. All rights reserved. This site is a free public resource and is not affiliated with any government agency.</p>
+        <div class="footer__bottom-links">
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Use</a>
+          <a href="/accessibility/">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

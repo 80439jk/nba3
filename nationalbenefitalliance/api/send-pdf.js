@@ -77,7 +77,7 @@ module.exports = async (req, res) => {
                 View ${countyName} Resources →
               </a>
               <p style="margin-top:1.5rem;font-size:0.875rem;color:#6C757D;">
-                Questions? Call <strong>1-800-NBA-HELP</strong> (Mon–Fri 8am–8pm ET)
+                Questions? Call <strong>1-888-408-5650</strong> (Mon–Fri 8am–8pm ET)
               </p>
             </div>
             <div style="background:#1B3A6B;padding:1rem;text-align:center;">

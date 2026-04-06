@@ -17,7 +17,7 @@ const FL_COUNTIES   = require('../data/florida-counties.json');
 const codeLimiter = rateLimit({
   windowMs: 60 * 60 * 1000,
   max: 10,
-  message: { success: false, error: 'Too many attempts. Call 1-800-NBA-HELP.' },
+  message: { success: false, error: 'Too many attempts. Call 1-888-408-5650.' },
 });
 
 module.exports = (pool) => {
@@ -334,7 +334,7 @@ async function sendConfirmationEmail({ email, firstName, transactionId, accessCo
             View ${formatCounty(county)} Resources →
           </a>
           <p style="margin-top:1.5rem;font-size:0.875rem;color:#6C757D;">
-            Questions? Call us at <strong>1-800-NBA-HELP</strong> (Mon–Fri 8am–8pm ET)
+            Questions? Call us at <strong>1-888-408-5650</strong> (Mon–Fri 8am–8pm ET)
           </p>
         </div>
         <div style="background:#1B3A6B;padding:1rem;text-align:center;">

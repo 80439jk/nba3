@@ -70,7 +70,7 @@ app.use('/api/', apiLimiter);
 const codeLimiter = rateLimit({
   windowMs: 60 * 60 * 1000, // 1 hour
   max: 10,
-  message: { error: 'Too many code attempts. Please call 1-800-NBA-HELP for assistance.' },
+  message: { error: 'Too many code attempts. Please call 1-888-408-5650 for assistance.' },
 });
 
 // View engine

@@ -216,7 +216,7 @@ ${FL_DATA.counties.map(c => `  <url>
 Organization: National Benefit Alliance
 Website: https://nationalbenefitalliance.com
 Contact: info@nationalbenefitalliance.com
-Phone: 1-800-NBA-HELP
+Phone: 1-888-408-5650
 
 /* MISSION */
 We help Americans navigate free government and community assistance programs.

@@ -49,7 +49,7 @@ module.exports = async (req, res) => {
 
       if (result.rows.length === 0) {
         await client.end();
-        return res.status(401).json({ success: false, error: 'Code not found or expired. Call 1-800-NBA-HELP for a new code.' });
+        return res.status(401).json({ success: false, error: 'Code not found or expired. Call 1-888-408-5650 for a new code.' });
       }
 
       await client.query(

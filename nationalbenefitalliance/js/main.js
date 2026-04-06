@@ -4032,7 +4032,7 @@ function handleAccessSubmit(e) {
     sessionStorage.setItem('nba_access_time', Date.now());
   } else {
     const err = document.getElementById('code-error');
-    if (err) err.textContent = 'Invalid code. Please call our office at 1-800-NBA-HELP to get your access code.';
+    if (err) err.textContent = 'Invalid code. Please call our office at 1-888-408-5650 to get your access code.';
   }
 }
 

@@ -451,20 +451,20 @@
   <!-- =========================================================
        FLORIDA FOCUS
        ========================================================= -->
-  <section class="section florida-section" aria-labelledby="florida-heading">
+  <section class="section florida-section" aria-labelledby="state-spotlight-heading" id="state-spotlight">
     <div class="container">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;">
         <div>
           <span class="badge badge--gold" style="margin-bottom:1rem;display:inline-block;">Now Available</span>
-          <h2 id="florida-heading" style="color:var(--white);">Complete Florida<br/>County Coverage</h2>
-          <p class="lead">All 67 Florida counties are fully covered with detailed, verified resource guides. From Miami-Dade to Escambia, we have your county's assistance programs mapped out.</p>
+          <h2 id="state-spotlight-heading" style="color:var(--white);">Complete Florida<br/>County Coverage</h2>
+          <p class="lead" id="state-spotlight-desc">All 67 Florida counties are fully covered with detailed, verified resource guides. From Miami-Dade to Escambia, we have your county's assistance programs mapped out.</p>
           <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
-            <a href="/florida/" class="btn btn--primary btn--lg">View All Florida Counties</a>
+            <a href="/florida/" class="btn btn--primary btn--lg" id="state-spotlight-btn">View All Florida Counties</a>
             <a href="tel:18006224357" class="btn btn--outline-white">📞 Get Access Code</a>
           </div>
         </div>
         <div>
-          <div class="county-highlights">
+          <div class="county-highlights" id="state-spotlight-counties">
 
             <a href="/florida/miami-dade/" class="county-highlight" style="text-decoration:none;">
               <div class="county-highlight__icon">🌴</div>
@@ -511,11 +511,11 @@
               </div>
             </a>
 
-            <a href="/florida/" class="county-highlight" style="text-decoration:none;">
+            <a href="/florida/" class="county-highlight" style="text-decoration:none;" id="state-spotlight-browse">
               <div class="county-highlight__icon">🗺️</div>
               <div>
-                <h4>All 67 Counties</h4>
-                <p>Browse the complete list of Florida counties and jump to your guide</p>
+                <h4 id="state-spotlight-browse-title">All 67 Counties</h4>
+                <p id="state-spotlight-browse-desc">Browse the complete list of Florida counties and jump to your guide</p>
                 <span>Browse All →</span>
               </div>
             </a>
@@ -635,9 +635,9 @@
           </p>
         </div>
 
-        <div>
-          <h4>Florida Counties</h4>
-          <ul class="footer__links">
+        <div id="footer-counties">
+          <h4 id="footer-counties-title">Florida Counties</h4>
+          <ul class="footer__links" id="footer-counties-list">
             <li><a href="/florida/miami-dade/">Miami-Dade County</a></li>
             <li><a href="/florida/broward/">Broward County</a></li>
             <li><a href="/florida/palm-beach/">Palm Beach County</a></li>
@@ -695,62 +695,390 @@
 
   <!-- =========================================================
        GEO PERSONALIZATION
-       Detect visitor's state via IP and update banner + buttons
+       Detect visitor's state via IP and personalize:
+       - Announcement bar
+       - Hero button + stats
+       - State spotlight section (heading, description, top counties)
+       - Footer county links
+       Falls back to Florida if state can't be detected
        ========================================================= -->
   <script>
   (function () {
-    // States we currently support
-    const SUPPORTED = {
-      'FL': { name: 'Florida', path: '/florida/', emoji: '🌴', counties: 67 },
-      'CA': { name: 'California', path: '/california/', emoji: '🌅', counties: 58 },
-      'TX': { name: 'Texas', path: '/texas/', emoji: '🤠', counties: 254 },
-      'NY': { name: 'New York', path: '/new-york/', emoji: '🗽', counties: 62 },
-      'IL': { name: 'Illinois', path: '/illinois/', emoji: '🌬️', counties: 102 }
+    var STATES = {
+      'AL': { name:'Alabama', slug:'alabama', emoji:'🏈', counties:67, top:[
+        {slug:'jefferson',name:'Jefferson County',desc:'660K residents · Birmingham area · Community Action'},
+        {slug:'mobile',name:'Mobile County',desc:'410K residents · Gulf Coast · United Way of SW Alabama'},
+        {slug:'madison',name:'Madison County',desc:'390K residents · Huntsville area · Community Services'},
+        {slug:'montgomery',name:'Montgomery County',desc:'225K residents · Capital city · River Region United Way'},
+        {slug:'tuscaloosa',name:'Tuscaloosa County',desc:'225K residents · West Alabama · Community Action Agency'}]},
+      'AK': { name:'Alaska', slug:'alaska', emoji:'🏔️', counties:30, top:[
+        {slug:'anchorage',name:'Anchorage Borough',desc:'290K residents · State\'s largest city · Community Action'},
+        {slug:'fairbanks-north-star',name:'Fairbanks North Star Borough',desc:'98K residents · Interior Alaska'},
+        {slug:'matanuska-susitna',name:'Matanuska-Susitna Borough',desc:'108K residents · Mat-Su Valley'},
+        {slug:'kenai-peninsula',name:'Kenai Peninsula Borough',desc:'59K residents · Southcentral Alaska'},
+        {slug:'juneau',name:'Juneau Borough',desc:'32K residents · State capital · SE Alaska Community Action'}]},
+      'AZ': { name:'Arizona', slug:'arizona', emoji:'🌵', counties:15, top:[
+        {slug:'maricopa',name:'Maricopa County',desc:'4.5M residents · Phoenix metro · Community Action'},
+        {slug:'pima',name:'Pima County',desc:'1M residents · Tucson area · Community Action Agency'},
+        {slug:'pinal',name:'Pinal County',desc:'450K residents · Central Arizona · Community Services'},
+        {slug:'yavapai',name:'Yavapai County',desc:'240K residents · Prescott area · Catholic Charities'},
+        {slug:'mohave',name:'Mohave County',desc:'215K residents · NW Arizona · Mohave Community Services'}]},
+      'AR': { name:'Arkansas', slug:'arkansas', emoji:'💎', counties:75, top:[
+        {slug:'pulaski',name:'Pulaski County',desc:'395K residents · Little Rock metro · AR Community Action'},
+        {slug:'benton',name:'Benton County',desc:'280K residents · NW Arkansas · Community Action'},
+        {slug:'washington',name:'Washington County',desc:'240K residents · Fayetteville area · Salvation Army'},
+        {slug:'sebastian',name:'Sebastian County',desc:'130K residents · Fort Smith area · Community Services'},
+        {slug:'faulkner',name:'Faulkner County',desc:'130K residents · Conway area · Central AR Development'}]},
+      'CA': { name:'California', slug:'california', emoji:'🌅', counties:58, top:[
+        {slug:'los-angeles',name:'Los Angeles County',desc:'9.8M residents · 200+ programs · DPSS & United Way'},
+        {slug:'san-diego',name:'San Diego County',desc:'3.3M residents · 211 San Diego · Community Action'},
+        {slug:'orange',name:'Orange County',desc:'3.1M residents · OC Community Resources · Salvation Army'},
+        {slug:'riverside',name:'Riverside County',desc:'2.4M residents · DPSS · Community Action Partnership'},
+        {slug:'san-bernardino',name:'San Bernardino County',desc:'2.2M residents · TAD · Community Action'}]},
+      'CO': { name:'Colorado', slug:'colorado', emoji:'⛰️', counties:64, top:[
+        {slug:'denver',name:'Denver County',desc:'715K residents · Denver Human Services · Mile High United Way'},
+        {slug:'el-paso',name:'El Paso County',desc:'730K residents · Colorado Springs · Community Health'},
+        {slug:'arapahoe',name:'Arapahoe County',desc:'655K residents · Aurora area · Arapahoe County HSR'},
+        {slug:'jefferson',name:'Jefferson County',desc:'580K residents · Lakewood area · Action Center'},
+        {slug:'adams',name:'Adams County',desc:'520K residents · Northglenn area · Community Resources'}]},
+      'CT': { name:'Connecticut', slug:'connecticut', emoji:'🍂', counties:8, top:[
+        {slug:'fairfield',name:'Fairfield County',desc:'950K residents · Bridgeport/Stamford · Community Action'},
+        {slug:'hartford',name:'Hartford County',desc:'895K residents · Capital area · Community Renewal Team'},
+        {slug:'new-haven',name:'New Haven County',desc:'860K residents · Community Action of New Haven'},
+        {slug:'new-london',name:'New London County',desc:'270K residents · SE CT · Thames Valley Council'},
+        {slug:'middlesex',name:'Middlesex County',desc:'165K residents · Middletown area · Community Action'}]},
+      'DE': { name:'Delaware', slug:'delaware', emoji:'🏛️', counties:3, top:[
+        {slug:'new-castle',name:'New Castle County',desc:'570K residents · Wilmington area · DHSS'},
+        {slug:'sussex',name:'Sussex County',desc:'235K residents · Southern DE · First State CAP'},
+        {slug:'kent',name:'Kent County',desc:'185K residents · Dover area · State capital · DHSS'}]},
+      'FL': { name:'Florida', slug:'florida', emoji:'🌴', counties:67, top:[
+        {slug:'miami-dade',name:'Miami-Dade County',desc:'2.7M residents · Bilingual resources · DCF & United Way'},
+        {slug:'broward',name:'Broward County',desc:'1.9M residents · Community Action · Feeding South Florida'},
+        {slug:'palm-beach',name:'Palm Beach County',desc:'1.5M residents · Community Services · Area Agency on Aging'},
+        {slug:'orange',name:'Orange County',desc:'1.4M residents · Orlando area · Community Services Division'},
+        {slug:'hillsborough',name:'Hillsborough County',desc:'1.5M residents · Tampa Bay · Community Services'}]},
+      'GA': { name:'Georgia', slug:'georgia', emoji:'🍑', counties:159, top:[
+        {slug:'fulton',name:'Fulton County',desc:'1.1M residents · Atlanta · United Way of Greater Atlanta'},
+        {slug:'gwinnett',name:'Gwinnett County',desc:'950K residents · Lawrenceville · Community Services'},
+        {slug:'cobb',name:'Cobb County',desc:'770K residents · Marietta area · MUST Ministries'},
+        {slug:'dekalb',name:'DeKalb County',desc:'760K residents · Decatur area · Community Action'},
+        {slug:'chatham',name:'Chatham County',desc:'290K residents · Savannah · Salvation Army'}]},
+      'HI': { name:'Hawaii', slug:'hawaii', emoji:'🌺', counties:5, top:[
+        {slug:'honolulu',name:'Honolulu County',desc:'980K residents · Oahu · Aloha United Way'},
+        {slug:'hawaii',name:'Hawaii County',desc:'200K residents · Big Island · Hawaii Community Action'},
+        {slug:'maui',name:'Maui County',desc:'165K residents · Maui · Community Action of Maui'},
+        {slug:'kauai',name:'Kauai County',desc:'73K residents · Kauai · Kauai Economic Opportunity'}]},
+      'ID': { name:'Idaho', slug:'idaho', emoji:'🥔', counties:44, top:[
+        {slug:'ada',name:'Ada County',desc:'495K residents · Boise metro · Community Action Partnership'},
+        {slug:'canyon',name:'Canyon County',desc:'230K residents · Nampa/Caldwell · El-Ada Community Action'},
+        {slug:'kootenai',name:'Kootenai County',desc:'170K residents · Coeur d\'Alene · Community Action'},
+        {slug:'bonneville',name:'Bonneville County',desc:'120K residents · Idaho Falls · Eastern Idaho CAP'},
+        {slug:'twin-falls',name:'Twin Falls County',desc:'90K residents · South-Central Idaho · Community Action'}]},
+      'IL': { name:'Illinois', slug:'illinois', emoji:'🌬️', counties:102, top:[
+        {slug:'cook',name:'Cook County',desc:'5.3M residents · Chicago · 200+ programs · Catholic Charities'},
+        {slug:'dupage',name:'DuPage County',desc:'930K residents · Western suburbs · Community Services'},
+        {slug:'lake',name:'Lake County',desc:'700K residents · North suburbs · Lake County Community Action'},
+        {slug:'will',name:'Will County',desc:'690K residents · Joliet area · Community Services'},
+        {slug:'kane',name:'Kane County',desc:'515K residents · Aurora/Elgin · Mutual Ground'}]},
+      'IN': { name:'Indiana', slug:'indiana', emoji:'🏎️', counties:92, top:[
+        {slug:'marion',name:'Marion County',desc:'980K residents · Indianapolis · Community Action of Central IN'},
+        {slug:'lake',name:'Lake County',desc:'490K residents · Gary/Hammond · NW Indiana Community Action'},
+        {slug:'allen',name:'Allen County',desc:'380K residents · Fort Wayne · Community Action of NE Indiana'},
+        {slug:'hamilton',name:'Hamilton County',desc:'340K residents · Carmel/Fishers area · Community Services'},
+        {slug:'st-joseph',name:'St. Joseph County',desc:'270K residents · South Bend area · Real Services'}]},
+      'IA': { name:'Iowa', slug:'iowa', emoji:'🌽', counties:99, top:[
+        {slug:'polk',name:'Polk County',desc:'490K residents · Des Moines · United Way of Central Iowa'},
+        {slug:'linn',name:'Linn County',desc:'230K residents · Cedar Rapids · Hawkeye Area Community Action'},
+        {slug:'scott',name:'Scott County',desc:'175K residents · Davenport · Community Action of Eastern Iowa'},
+        {slug:'johnson',name:'Johnson County',desc:'155K residents · Iowa City · Salvation Army'},
+        {slug:'black-hawk',name:'Black Hawk County',desc:'135K residents · Waterloo · Operation Threshold'}]},
+      'KS': { name:'Kansas', slug:'kansas', emoji:'🌻', counties:105, top:[
+        {slug:'johnson',name:'Johnson County',desc:'600K residents · Overland Park · United Community Services'},
+        {slug:'sedgwick',name:'Sedgwick County',desc:'520K residents · Wichita · Community Action'},
+        {slug:'shawnee',name:'Shawnee County',desc:'180K residents · Topeka · Capital area · CAPC'},
+        {slug:'douglas',name:'Douglas County',desc:'120K residents · Lawrence · Community Action'},
+        {slug:'wyandotte',name:'Wyandotte County',desc:'170K residents · Kansas City KS · Community Action'}]},
+      'KY': { name:'Kentucky', slug:'kentucky', emoji:'🐎', counties:120, top:[
+        {slug:'jefferson',name:'Jefferson County',desc:'780K residents · Louisville metro · Community Action'},
+        {slug:'fayette',name:'Fayette County',desc:'320K residents · Lexington · Community Action Council'},
+        {slug:'kenton',name:'Kenton County',desc:'165K residents · Covington · Brighton Center'},
+        {slug:'boone',name:'Boone County',desc:'165K residents · Florence area · Community Services'},
+        {slug:'warren',name:'Warren County',desc:'135K residents · Bowling Green · Salvation Army'}]},
+      'LA': { name:'Louisiana', slug:'louisiana', emoji:'⚜️', counties:64, top:[
+        {slug:'east-baton-rouge',name:'East Baton Rouge Parish',desc:'455K residents · Capital City · CAA'},
+        {slug:'jefferson',name:'Jefferson Parish',desc:'435K residents · Metro New Orleans · Total Community Action'},
+        {slug:'orleans',name:'Orleans Parish',desc:'390K residents · New Orleans · Unity of Greater New Orleans'},
+        {slug:'caddo',name:'Caddo Parish',desc:'245K residents · Shreveport · Community Action Agency'},
+        {slug:'st-tammany',name:'St. Tammany Parish',desc:'265K residents · Northshore · Salvation Army'}]},
+      'ME': { name:'Maine', slug:'maine', emoji:'🦞', counties:16, top:[
+        {slug:'cumberland',name:'Cumberland County',desc:'300K residents · Portland area · Community Action'},
+        {slug:'penobscot',name:'Penobscot County',desc:'155K residents · Bangor area · Penquis Community Action'},
+        {slug:'york',name:'York County',desc:'210K residents · Southern Maine · York County Community Action'},
+        {slug:'kennebec',name:'Kennebec County',desc:'125K residents · Augusta · Capital area · KVCAP'},
+        {slug:'androscoggin',name:'Androscoggin County',desc:'110K residents · Lewiston · Community Concepts'}]},
+      'MD': { name:'Maryland', slug:'maryland', emoji:'🦀', counties:24, top:[
+        {slug:'montgomery',name:'Montgomery County',desc:'1M residents · Bethesda area · HHS · Community Action'},
+        {slug:'prince-georges',name:'Prince George\'s County',desc:'970K residents · Capital area · Community Action'},
+        {slug:'baltimore',name:'Baltimore County',desc:'830K residents · Community Action Agency of Baltimore'},
+        {slug:'anne-arundel',name:'Anne Arundel County',desc:'585K residents · Annapolis · Community Action'},
+        {slug:'howard',name:'Howard County',desc:'330K residents · Columbia area · Community Action Council'}]},
+      'MA': { name:'Massachusetts', slug:'massachusetts', emoji:'🏛️', counties:14, top:[
+        {slug:'middlesex',name:'Middlesex County',desc:'1.6M residents · Cambridge/Lowell · Community Action'},
+        {slug:'suffolk',name:'Suffolk County',desc:'810K residents · Boston · Action for Boston Community Dev'},
+        {slug:'worcester',name:'Worcester County',desc:'830K residents · Central MA · Community Action'},
+        {slug:'essex',name:'Essex County',desc:'790K residents · North Shore · Community Action of the Merrimack'},
+        {slug:'norfolk',name:'Norfolk County',desc:'710K residents · Quincy area · South Shore Community Action'}]},
+      'MI': { name:'Michigan', slug:'michigan', emoji:'🏖️', counties:83, top:[
+        {slug:'wayne',name:'Wayne County',desc:'1.8M residents · Detroit · United Way of SE Michigan'},
+        {slug:'oakland',name:'Oakland County',desc:'1.3M residents · Pontiac area · Community Action'},
+        {slug:'macomb',name:'Macomb County',desc:'875K residents · Warren area · Macomb Community Action'},
+        {slug:'kent',name:'Kent County',desc:'660K residents · Grand Rapids · Community Action Agency'},
+        {slug:'genesee',name:'Genesee County',desc:'405K residents · Flint · Genesee County Community Action'}]},
+      'MN': { name:'Minnesota', slug:'minnesota', emoji:'❄️', counties:87, top:[
+        {slug:'hennepin',name:'Hennepin County',desc:'1.3M residents · Minneapolis · Community Action Partnership'},
+        {slug:'ramsey',name:'Ramsey County',desc:'550K residents · St. Paul · Community Action of Ramsey'},
+        {slug:'dakota',name:'Dakota County',desc:'440K residents · Eagan area · Dakota County CDA'},
+        {slug:'anoka',name:'Anoka County',desc:'365K residents · Anoka · Community Action Council'},
+        {slug:'washington',name:'Washington County',desc:'265K residents · Stillwater · Community Action'}]},
+      'MS': { name:'Mississippi', slug:'mississippi', emoji:'🎸', counties:82, top:[
+        {slug:'hinds',name:'Hinds County',desc:'230K residents · Jackson · Central MS Community Action'},
+        {slug:'harrison',name:'Harrison County',desc:'210K residents · Gulfport/Biloxi · Gulf Coast CAA'},
+        {slug:'desoto',name:'DeSoto County',desc:'185K residents · Southaven · NW MS Community Action'},
+        {slug:'rankin',name:'Rankin County',desc:'155K residents · Brandon area · Community Action'},
+        {slug:'jackson',name:'Jackson County',desc:'145K residents · Pascagoula · Gulf Coast Community Action'}]},
+      'MO': { name:'Missouri', slug:'missouri', emoji:'⛩️', counties:115, top:[
+        {slug:'st-louis',name:'St. Louis County',desc:'1M residents · Community Action Agency of St. Louis'},
+        {slug:'jackson',name:'Jackson County',desc:'710K residents · Kansas City · Mid-America Assistance'},
+        {slug:'st-charles',name:'St. Charles County',desc:'405K residents · St. Charles · Community Council'},
+        {slug:'greene',name:'Greene County',desc:'295K residents · Springfield · Community Partnership of the Ozarks'},
+        {slug:'boone',name:'Boone County',desc:'185K residents · Columbia · Central MO Community Action'}]},
+      'MT': { name:'Montana', slug:'montana', emoji:'🦌', counties:56, top:[
+        {slug:'yellowstone',name:'Yellowstone County',desc:'165K residents · Billings · Community Action'},
+        {slug:'missoula',name:'Missoula County',desc:'120K residents · Missoula · Human Resource Council'},
+        {slug:'gallatin',name:'Gallatin County',desc:'115K residents · Bozeman · HRDC'},
+        {slug:'flathead',name:'Flathead County',desc:'105K residents · Kalispell · Community Action Partnership'},
+        {slug:'cascade',name:'Cascade County',desc:'82K residents · Great Falls · Opportunities Inc'}]},
+      'NE': { name:'Nebraska', slug:'nebraska', emoji:'🌾', counties:93, top:[
+        {slug:'douglas',name:'Douglas County',desc:'580K residents · Omaha · Community Action Partnership'},
+        {slug:'lancaster',name:'Lancaster County',desc:'320K residents · Lincoln · Community Action of NE'},
+        {slug:'sarpy',name:'Sarpy County',desc:'190K residents · Bellevue · Community Action'},
+        {slug:'hall',name:'Hall County',desc:'62K residents · Grand Island · Central NE Community Action'},
+        {slug:'buffalo',name:'Buffalo County',desc:'50K residents · Kearney · Central NE Community Services'}]},
+      'NV': { name:'Nevada', slug:'nevada', emoji:'🎰', counties:17, top:[
+        {slug:'clark',name:'Clark County',desc:'2.3M residents · Las Vegas · Help of Southern Nevada'},
+        {slug:'washoe',name:'Washoe County',desc:'490K residents · Reno · Community Services Agency'},
+        {slug:'lyon',name:'Lyon County',desc:'60K residents · Fernley/Yerington · Rural Community Action'},
+        {slug:'elko',name:'Elko County',desc:'55K residents · NE Nevada · Community Action'},
+        {slug:'carson-city',name:'Carson City',desc:'58K residents · State capital · Community Services'}]},
+      'NH': { name:'New Hampshire', slug:'new-hampshire', emoji:'🍁', counties:10, top:[
+        {slug:'hillsborough',name:'Hillsborough County',desc:'420K residents · Manchester/Nashua · Community Action'},
+        {slug:'rockingham',name:'Rockingham County',desc:'315K residents · SE NH · Rockingham Community Action'},
+        {slug:'merrimack',name:'Merrimack County',desc:'155K residents · Concord · Capital area · Community Action'},
+        {slug:'strafford',name:'Strafford County',desc:'130K residents · Dover/Rochester · Community Action'},
+        {slug:'grafton',name:'Grafton County',desc:'90K residents · Lebanon area · Tri-County Community Action'}]},
+      'NJ': { name:'New Jersey', slug:'new-jersey', emoji:'🏖️', counties:21, top:[
+        {slug:'bergen',name:'Bergen County',desc:'955K residents · NE NJ · Community Action Partnership'},
+        {slug:'middlesex',name:'Middlesex County',desc:'860K residents · New Brunswick · Puerto Rican Action Board'},
+        {slug:'essex',name:'Essex County',desc:'800K residents · Newark · Community Action Partnership'},
+        {slug:'hudson',name:'Hudson County',desc:'725K residents · Jersey City · Community Action'},
+        {slug:'monmouth',name:'Monmouth County',desc:'645K residents · Freehold · Community Affairs'}]},
+      'NM': { name:'New Mexico', slug:'new-mexico', emoji:'🌶️', counties:33, top:[
+        {slug:'bernalillo',name:'Bernalillo County',desc:'680K residents · Albuquerque · NM Community Action'},
+        {slug:'dona-ana',name:'Dona Ana County',desc:'220K residents · Las Cruces · Community Action Agency'},
+        {slug:'santa-fe',name:'Santa Fe County',desc:'155K residents · State capital · Community Action NM'},
+        {slug:'sandoval',name:'Sandoval County',desc:'150K residents · Rio Rancho · Community Action'},
+        {slug:'san-juan',name:'San Juan County',desc:'125K residents · Farmington · San Juan Community Action'}]},
+      'NY': { name:'New York', slug:'new-york', emoji:'🗽', counties:62, top:[
+        {slug:'kings',name:'Kings County (Brooklyn)',desc:'2.6M residents · Brooklyn · NYC Human Resources'},
+        {slug:'queens',name:'Queens County',desc:'2.3M residents · Queens · NYC Community Action'},
+        {slug:'new-york',name:'New York County (Manhattan)',desc:'1.6M residents · Manhattan · HRA'},
+        {slug:'suffolk',name:'Suffolk County',desc:'1.5M residents · Long Island · Community Action'},
+        {slug:'erie',name:'Erie County',desc:'950K residents · Buffalo · Community Action of Western NY'}]},
+      'NC': { name:'North Carolina', slug:'north-carolina', emoji:'🌲', counties:100, top:[
+        {slug:'mecklenburg',name:'Mecklenburg County',desc:'1.1M residents · Charlotte · Community Action'},
+        {slug:'wake',name:'Wake County',desc:'1.1M residents · Raleigh · Community Action'},
+        {slug:'guilford',name:'Guilford County',desc:'540K residents · Greensboro · Action Greensboro'},
+        {slug:'forsyth',name:'Forsyth County',desc:'380K residents · Winston-Salem · Experiment in Self-Reliance'},
+        {slug:'cumberland',name:'Cumberland County',desc:'335K residents · Fayetteville · Community Action'}]},
+      'ND': { name:'North Dakota', slug:'north-dakota', emoji:'🦬', counties:53, top:[
+        {slug:'cass',name:'Cass County',desc:'185K residents · Fargo · Community Action Partnership'},
+        {slug:'burleigh',name:'Burleigh County',desc:'98K residents · Bismarck · Capital area · Community Action'},
+        {slug:'grand-forks',name:'Grand Forks County',desc:'73K residents · Grand Forks · Community Action'},
+        {slug:'ward',name:'Ward County',desc:'70K residents · Minot · Minot Area Community Action'},
+        {slug:'williams',name:'Williams County',desc:'40K residents · Williston · Community Action'}]},
+      'OH': { name:'Ohio', slug:'ohio', emoji:'🌰', counties:88, top:[
+        {slug:'cuyahoga',name:'Cuyahoga County',desc:'1.2M residents · Cleveland · Community Action Council'},
+        {slug:'franklin',name:'Franklin County',desc:'1.3M residents · Columbus · IMPACT Community Action'},
+        {slug:'hamilton',name:'Hamilton County',desc:'830K residents · Cincinnati · Cincinnati/Hamilton CAA'},
+        {slug:'summit',name:'Summit County',desc:'540K residents · Akron · Community Action Summit'},
+        {slug:'montgomery',name:'Montgomery County',desc:'535K residents · Dayton · Miami Valley Community Action'}]},
+      'OK': { name:'Oklahoma', slug:'oklahoma', emoji:'🤠', counties:77, top:[
+        {slug:'oklahoma',name:'Oklahoma County',desc:'800K residents · OKC · Community Action Agency of OKC'},
+        {slug:'tulsa',name:'Tulsa County',desc:'670K residents · Tulsa · Community Action Project'},
+        {slug:'cleveland',name:'Cleveland County',desc:'285K residents · Norman area · Community Action'},
+        {slug:'canadian',name:'Canadian County',desc:'155K residents · Mustang/Yukon · Community Action'},
+        {slug:'comanche',name:'Comanche County',desc:'125K residents · Lawton · Great Plains Community Action'}]},
+      'OR': { name:'Oregon', slug:'oregon', emoji:'🌲', counties:36, top:[
+        {slug:'multnomah',name:'Multnomah County',desc:'810K residents · Portland · Community Action Partnership'},
+        {slug:'washington',name:'Washington County',desc:'600K residents · Beaverton · Community Action'},
+        {slug:'clackamas',name:'Clackamas County',desc:'420K residents · Oregon City · Clackamas Community Action'},
+        {slug:'lane',name:'Lane County',desc:'380K residents · Eugene · Lane County Human Services'},
+        {slug:'marion',name:'Marion County',desc:'350K residents · Salem · Mid-Willamette Valley CAA'}]},
+      'PA': { name:'Pennsylvania', slug:'pennsylvania', emoji:'🔔', counties:67, top:[
+        {slug:'philadelphia',name:'Philadelphia County',desc:'1.6M residents · Philadelphia · Community Action'},
+        {slug:'allegheny',name:'Allegheny County',desc:'1.2M residents · Pittsburgh · Community Action'},
+        {slug:'montgomery',name:'Montgomery County',desc:'850K residents · Norristown · Community Action'},
+        {slug:'bucks',name:'Bucks County',desc:'630K residents · Doylestown · Bucks County Opportunity Council'},
+        {slug:'delaware',name:'Delaware County',desc:'575K residents · Chester · Community Action Agency'}]},
+      'RI': { name:'Rhode Island', slug:'rhode-island', emoji:'⛵', counties:5, top:[
+        {slug:'providence',name:'Providence County',desc:'660K residents · Providence · Community Action Partnership'},
+        {slug:'kent',name:'Kent County',desc:'170K residents · Warwick · Tri-County Community Action'},
+        {slug:'washington',name:'Washington County',desc:'130K residents · South Kingstown · Community Action'},
+        {slug:'newport',name:'Newport County',desc:'85K residents · Newport · Newport County CAP'}]},
+      'SC': { name:'South Carolina', slug:'south-carolina', emoji:'🌙', counties:46, top:[
+        {slug:'greenville',name:'Greenville County',desc:'525K residents · Greenville · United Way of Greenville'},
+        {slug:'richland',name:'Richland County',desc:'415K residents · Columbia · Midlands Community Action'},
+        {slug:'charleston',name:'Charleston County',desc:'410K residents · Charleston · Trident United Way'},
+        {slug:'horry',name:'Horry County',desc:'350K residents · Myrtle Beach · Waccamaw Community Action'},
+        {slug:'spartanburg',name:'Spartanburg County',desc:'320K residents · Spartanburg · Community Action'}]},
+      'SD': { name:'South Dakota', slug:'south-dakota', emoji:'🗻', counties:66, top:[
+        {slug:'minnehaha',name:'Minnehaha County',desc:'200K residents · Sioux Falls · Community Action'},
+        {slug:'pennington',name:'Pennington County',desc:'115K residents · Rapid City · Western SD Community Action'},
+        {slug:'lincoln',name:'Lincoln County',desc:'65K residents · Sioux Falls suburbs · Community Action'},
+        {slug:'brown',name:'Brown County',desc:'39K residents · Aberdeen · NE SD Community Action'},
+        {slug:'brookings',name:'Brookings County',desc:'35K residents · Brookings · InterLakes Community Action'}]},
+      'TN': { name:'Tennessee', slug:'tennessee', emoji:'🎵', counties:95, top:[
+        {slug:'shelby',name:'Shelby County',desc:'930K residents · Memphis · Community Action Agency'},
+        {slug:'davidson',name:'Davidson County',desc:'700K residents · Nashville · Metro Action Commission'},
+        {slug:'knox',name:'Knox County',desc:'480K residents · Knoxville · Community Action Committee'},
+        {slug:'hamilton',name:'Hamilton County',desc:'365K residents · Chattanooga · Community Action'},
+        {slug:'rutherford',name:'Rutherford County',desc:'340K residents · Murfreesboro · Mid-Cumberland CAA'}]},
+      'TX': { name:'Texas', slug:'texas', emoji:'🤠', counties:254, top:[
+        {slug:'harris',name:'Harris County',desc:'4.7M residents · Houston · BakerRipley & United Way'},
+        {slug:'dallas',name:'Dallas County',desc:'2.6M residents · Dallas · Community Council of Greater Dallas'},
+        {slug:'tarrant',name:'Tarrant County',desc:'2.1M residents · Fort Worth · Community Action Partners'},
+        {slug:'bexar',name:'Bexar County',desc:'2M residents · San Antonio · Community Action of SA'},
+        {slug:'travis',name:'Travis County',desc:'1.3M residents · Austin · Capital area · Foundation Communities'}]},
+      'UT': { name:'Utah', slug:'utah', emoji:'🏜️', counties:29, top:[
+        {slug:'salt-lake',name:'Salt Lake County',desc:'1.2M residents · SLC · Community Action Partnership of Utah'},
+        {slug:'utah',name:'Utah County',desc:'660K residents · Provo · Community Action Services & Food Bank'},
+        {slug:'davis',name:'Davis County',desc:'365K residents · Layton · Davis Community Action'},
+        {slug:'weber',name:'Weber County',desc:'260K residents · Ogden · Ogden Community Action'},
+        {slug:'washington',name:'Washington County',desc:'190K residents · St. George · Community Action'}]},
+      'VT': { name:'Vermont', slug:'vermont', emoji:'🍁', counties:14, top:[
+        {slug:'chittenden',name:'Chittenden County',desc:'165K residents · Burlington · Champlain Valley OEO'},
+        {slug:'rutland',name:'Rutland County',desc:'58K residents · Rutland · Rutland Community Programs'},
+        {slug:'washington',name:'Washington County',desc:'60K residents · Montpelier · Central VT Community Action'},
+        {slug:'windham',name:'Windham County',desc:'43K residents · Brattleboro · SE Vermont Community Action'},
+        {slug:'windsor',name:'Windsor County',desc:'55K residents · White River Jct · Upper Valley Services'}]},
+      'VA': { name:'Virginia', slug:'virginia', emoji:'🏛️', counties:134, top:[
+        {slug:'fairfax',name:'Fairfax County',desc:'1.2M residents · Northern VA · Community Action'},
+        {slug:'prince-william',name:'Prince William County',desc:'470K residents · Woodbridge · Community Services'},
+        {slug:'loudoun',name:'Loudoun County',desc:'420K residents · Leesburg · Community Action'},
+        {slug:'virginia-beach',name:'Virginia Beach',desc:'460K residents · Hampton Roads · Salvation Army'},
+        {slug:'chesapeake',name:'Chesapeake',desc:'250K residents · Hampton Roads · ForKids Inc'}]},
+      'WA': { name:'Washington', slug:'washington', emoji:'🌧️', counties:39, top:[
+        {slug:'king',name:'King County',desc:'2.3M residents · Seattle · United Way of King County'},
+        {slug:'pierce',name:'Pierce County',desc:'920K residents · Tacoma · Community Action of Pierce County'},
+        {slug:'snohomish',name:'Snohomish County',desc:'830K residents · Everett · Community Action of Snohomish'},
+        {slug:'spokane',name:'Spokane County',desc:'540K residents · Spokane · SNAP Community Action'},
+        {slug:'clark',name:'Clark County',desc:'510K residents · Vancouver · Clark County Community Action'}]},
+      'WV': { name:'West Virginia', slug:'west-virginia', emoji:'🏔️', counties:55, top:[
+        {slug:'kanawha',name:'Kanawha County',desc:'180K residents · Charleston · Community Action'},
+        {slug:'berkeley',name:'Berkeley County',desc:'120K residents · Martinsburg · Eastern Panhandle · CAP'},
+        {slug:'cabell',name:'Cabell County',desc:'95K residents · Huntington · Community Action'},
+        {slug:'monongalia',name:'Monongalia County',desc:'105K residents · Morgantown · Community Action'},
+        {slug:'wood',name:'Wood County',desc:'84K residents · Parkersburg · Community Resources Inc'}]},
+      'WI': { name:'Wisconsin', slug:'wisconsin', emoji:'🧀', counties:72, top:[
+        {slug:'milwaukee',name:'Milwaukee County',desc:'950K residents · Milwaukee · Community Advocates'},
+        {slug:'dane',name:'Dane County',desc:'560K residents · Madison · Community Action Coalition'},
+        {slug:'waukesha',name:'Waukesha County',desc:'410K residents · Waukesha · Community Action of Waukesha'},
+        {slug:'brown',name:'Brown County',desc:'270K residents · Green Bay · Community Action Partnership'},
+        {slug:'racine',name:'Racine County',desc:'200K residents · Racine · Community Action of Racine'}]},
+      'WY': { name:'Wyoming', slug:'wyoming', emoji:'🦅', counties:23, top:[
+        {slug:'laramie',name:'Laramie County',desc:'100K residents · Cheyenne · Community Action of Laramie'},
+        {slug:'natrona',name:'Natrona County',desc:'80K residents · Casper · Central WY Community Action'},
+        {slug:'campbell',name:'Campbell County',desc:'47K residents · Gillette · NE Wyoming Community Action'},
+        {slug:'sweetwater',name:'Sweetwater County',desc:'42K residents · Rock Springs · Community Action'},
+        {slug:'fremont',name:'Fremont County',desc:'40K residents · Riverton · Wind River Community Action'}]}
     };
 
     function applyState(stateCode) {
-      const s = SUPPORTED[stateCode];
-      if (!s) return; // unsupported state — leave defaults
+      var s = STATES[stateCode];
+      if (!s) return; // Unknown state — Florida defaults remain
 
-      // Announcement bar
-      const txt = document.getElementById('announcement-text');
-      if (txt) {
-        txt.textContent = s.name + ' county resource guides now available — Enter your ZIP code below to access free benefits in your area';
-      }
+      // --- Announcement bar ---
+      var txt = document.getElementById('announcement-text');
+      if (txt) txt.textContent = s.name + ' county resource guides now available \u2014 Enter your ZIP code below to access free benefits in your area';
 
-      // Hero button
-      const heroBtn = document.getElementById('hero-state-btn');
-      if (heroBtn) {
-        heroBtn.href = s.path;
-        heroBtn.textContent = 'Browse ' + s.name + ' Counties';
-      }
+      // --- Hero button ---
+      var heroBtn = document.getElementById('hero-state-btn');
+      if (heroBtn) { heroBtn.href = '/' + s.slug + '/'; heroBtn.textContent = 'Browse ' + s.name + ' Counties'; }
 
-      // Hero counties label
-      const heroLabel = document.getElementById('hero-counties-label');
+      // --- Hero counties stat ---
+      var heroLabel = document.getElementById('hero-counties-label');
       if (heroLabel) {
         heroLabel.textContent = s.name + ' Counties';
-        // Also update the number to just the state's county count
-        const heroNum = heroLabel.previousElementSibling;
-        if (heroNum) {
-          heroNum.setAttribute('data-count', s.counties);
-          heroNum.textContent = s.counties;
-        }
+        var heroNum = heroLabel.previousElementSibling;
+        if (heroNum) { heroNum.setAttribute('data-count', s.counties); heroNum.textContent = s.counties; }
       }
 
-      // Highlight the correct state link in ZIP card
-      document.querySelectorAll('.zip-card__states a').forEach(function(a) {
-        a.classList.remove('active');
-      });
+      // --- ZIP card state pills ---
+      document.querySelectorAll('.zip-card__states a').forEach(function(a) { a.classList.remove('active'); });
       var activeLink = document.getElementById('state-link-' + stateCode.toLowerCase());
       if (activeLink) activeLink.classList.add('active');
+
+      // --- State spotlight section ---
+      var heading = document.getElementById('state-spotlight-heading');
+      if (heading) heading.innerHTML = 'Complete ' + s.name + '<br/>County Coverage';
+
+      var desc = document.getElementById('state-spotlight-desc');
+      if (desc) desc.textContent = 'All ' + s.counties + ' ' + s.name + ' counties are fully covered with detailed, verified resource guides. Find your county\u2019s assistance programs mapped out.';
+
+      var spotBtn = document.getElementById('state-spotlight-btn');
+      if (spotBtn) { spotBtn.href = '/' + s.slug + '/'; spotBtn.textContent = 'View All ' + s.name + ' Counties'; }
+
+      // Build county highlight cards
+      var grid = document.getElementById('state-spotlight-counties');
+      if (grid && s.top) {
+        var html = '';
+        var topList = s.top.slice(0, 5);
+        for (var i = 0; i < topList.length; i++) {
+          var c = topList[i];
+          html += '<a href="/' + s.slug + '/' + c.slug + '/" class="county-highlight" style="text-decoration:none;">'
+            + '<div class="county-highlight__icon">' + s.emoji + '</div>'
+            + '<div><h4>' + c.name + '</h4>'
+            + '<p>' + c.desc + '</p>'
+            + '<span>View Guide \u2192</span></div></a>';
+        }
+        // Browse all link
+        html += '<a href="/' + s.slug + '/" class="county-highlight" style="text-decoration:none;">'
+          + '<div class="county-highlight__icon">\uD83D\uDDFA\uFE0F</div>'
+          + '<div><h4>All ' + s.counties + ' Counties</h4>'
+          + '<p>Browse the complete list of ' + s.name + ' counties and jump to your guide</p>'
+          + '<span>Browse All \u2192</span></div></a>';
+        grid.innerHTML = html;
+      }
+
+      // --- Footer county links ---
+      var footerTitle = document.getElementById('footer-counties-title');
+      if (footerTitle) footerTitle.textContent = s.name + ' Counties';
+
+      var footerList = document.getElementById('footer-counties-list');
+      if (footerList && s.top) {
+        var fHtml = '';
+        var footerTop = s.top.slice(0, 7);
+        for (var j = 0; j < footerTop.length; j++) {
+          fHtml += '<li><a href="/' + s.slug + '/' + footerTop[j].slug + '/">' + footerTop[j].name + '</a></li>';
+        }
+        fHtml += '<li><a href="/' + s.slug + '/">All ' + s.counties + ' Counties \u2192</a></li>';
+        footerList.innerHTML = fHtml;
+      }
     }
 
     // Try cached state first
     var cached = sessionStorage.getItem('nba_visitor_state');
-    if (cached) {
-      applyState(cached);
-      return;
-    }
+    if (cached) { applyState(cached); return; }
 
     // Fetch IP geolocation (free, no key required)
     fetch('https://ipapi.co/json/')
@@ -761,7 +1089,7 @@
         applyState(code);
       })
       .catch(function() {
-        // Silently fail — defaults remain (Florida)
+        // Silently fail — Florida defaults remain
       });
   })();
   </script>

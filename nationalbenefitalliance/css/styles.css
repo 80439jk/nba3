@@ -535,6 +535,7 @@ p { margin-bottom: 1rem; }
 .footer__bottom-links { display: flex; gap: 1.5rem; }
 .footer__bottom-links a { font-size: 0.8rem; color: rgba(255,255,255,0.5); }
 .footer__bottom-links a:hover { color: var(--gold-light); }
+.footer__disclaimer { font-size: 0.72rem; color: rgba(255,255,255,0.4); line-height: 1.6; margin-top: 1rem; max-width: 900px; }
 
 /* ============================================================
    NOTIFICATION / ALERT

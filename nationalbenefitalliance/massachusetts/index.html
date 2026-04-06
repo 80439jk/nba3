@@ -4,46 +4,67 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Massachusetts County Resource Center | Free Benefits by County – National Benefit Alliance</title>
-  <meta name="description" content="Find free government and community assistance programs in all 14 Massachusetts countys. Enter your ZIP code or select your county to access resources for utilities, rent, food, MassHealth, and more." />
+  <meta name="description" content="Find free government and community assistance programs in all 14 Massachusetts counties. Enter your ZIP code or select your county to access resources for utilities, rent, food, MA Medicaid, SNAP, and more." />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
   <link rel="canonical" href="https://nationalbenefitalliance.com/massachusetts/" />
   <meta property="og:title" content="Massachusetts County Resource Center | National Benefit Alliance" />
-  <meta property="og:description" content="All 14 Massachusetts countys covered. Find free assistance for utilities, housing, food, MassHealth, SNAP, and more." />
+  <meta property="og:description" content="All 14 Massachusetts counties covered. Find free assistance for utilities, housing, food, MA Medicaid, SNAP, and more." />
   <meta property="og:url" content="https://nationalbenefitalliance.com/massachusetts/" />
+
+  <!-- Schema: State + Government organization -->
   <script type="application/ld+json">
   {
-    "@context":"https://schema.org","@graph":[
-      {"@type":"GovernmentOrganization","@id":"https://nationalbenefitalliance.com/massachusetts/#org",
-        "name":"National Benefit Alliance – Massachusetts Resource Center",
-        "url":"https://nationalbenefitalliance.com/massachusetts/",
-        "areaServed":{"@type":"State","name":"Massachusetts","sameAs":"https://www.wikidata.org/wiki/Q771"}},
-      {"@type":"WebPage","@id":"https://nationalbenefitalliance.com/massachusetts/#page",
-        "url":"https://nationalbenefitalliance.com/massachusetts/","name":"Massachusetts County Resource Center",
-        "breadcrumb":{"@type":"BreadcrumbList","itemListElement":[
-          {"@type":"ListItem","position":1,"name":"Home","item":"https://nationalbenefitalliance.com/"},
-          {"@type":"ListItem","position":2,"name":"Massachusetts","item":"https://nationalbenefitalliance.com/massachusetts/"}
-        ]}},
-      {"@type":"ItemList","name":"Massachusetts County Resource Guides","numberOfItems":14,
-        "itemListElement":[
-          {"@type":"ListItem","position":1,"name":"Barnstable County Resources","url":"https://nationalbenefitalliance.com/massachusetts/barnstable/"}
-          {"@type":"ListItem","position":2,"name":"Berkshire County Resources","url":"https://nationalbenefitalliance.com/massachusetts/berkshire/"}
-          {"@type":"ListItem","position":3,"name":"Bristol County Resources","url":"https://nationalbenefitalliance.com/massachusetts/bristol/"}
-          {"@type":"ListItem","position":4,"name":"Dukes County Resources","url":"https://nationalbenefitalliance.com/massachusetts/dukes/"}
-          {"@type":"ListItem","position":5,"name":"Essex County Resources","url":"https://nationalbenefitalliance.com/massachusetts/essex/"}
-          {"@type":"ListItem","position":6,"name":"Franklin County Resources","url":"https://nationalbenefitalliance.com/massachusetts/franklin/"}
-          {"@type":"ListItem","position":7,"name":"Hampden County Resources","url":"https://nationalbenefitalliance.com/massachusetts/hampden/"}
-          {"@type":"ListItem","position":8,"name":"Hampshire County Resources","url":"https://nationalbenefitalliance.com/massachusetts/hampshire/"}
-          {"@type":"ListItem","position":9,"name":"Middlesex County Resources","url":"https://nationalbenefitalliance.com/massachusetts/middlesex/"}
-          {"@type":"ListItem","position":10,"name":"Nantucket County Resources","url":"https://nationalbenefitalliance.com/massachusetts/nantucket/"}
-        ]}
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "GovernmentOrganization",
+        "@id": "https://nationalbenefitalliance.com/massachusetts/#org",
+        "name": "National Benefit Alliance – Massachusetts Resource Center",
+        "url": "https://nationalbenefitalliance.com/massachusetts/",
+        "description": "Free county-by-county resource guide for Massachusetts residents seeking government and community assistance programs.",
+        "areaServed": {
+          "@type": "State",
+          "name": "Massachusetts",
+          "sameAs": "https://www.wikidata.org/wiki/Q771"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://nationalbenefitalliance.com/massachusetts/#page",
+        "url": "https://nationalbenefitalliance.com/massachusetts/",
+        "name": "Massachusetts County Resource Center",
+        "description": "Browse all 14 Massachusetts counties for free government benefit resources.",
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type": "ListItem","position": 1,"name": "Home","item": "https://nationalbenefitalliance.com/"},
+            {"@type": "ListItem","position": 2,"name": "Massachusetts","item": "https://nationalbenefitalliance.com/massachusetts/"}
+          ]
+        }
+      },
+      {
+        "@type": "ItemList",
+        "name": "Massachusetts County Resource Guides",
+        "numberOfItems": 14,
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Middlesex County Resources","url":"https://nationalbenefitalliance.com/massachusetts/middlesex/"},
+          {"@type":"ListItem","position":2,"name":"Worcester County Resources","url":"https://nationalbenefitalliance.com/massachusetts/worcester/"},
+          {"@type":"ListItem","position":3,"name":"Suffolk County Resources","url":"https://nationalbenefitalliance.com/massachusetts/suffolk/"},
+          {"@type":"ListItem","position":4,"name":"Essex County Resources","url":"https://nationalbenefitalliance.com/massachusetts/essex/"},
+          {"@type":"ListItem","position":5,"name":"Norfolk County Resources","url":"https://nationalbenefitalliance.com/massachusetts/norfolk/"}
+        ]
+      }
     ]
   }
   </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
+
+  <!-- Nav -->
   <nav class="nav">
     <div class="nav__inner">
       <a href="/" class="nav__logo">
@@ -68,6 +89,8 @@
       </div>
     </div>
   </nav>
+
+  <!-- Breadcrumb -->
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <div class="container">
       <ol class="breadcrumb__list">
@@ -76,6 +99,7 @@
       </ol>
     </div>
   </nav>
+
     <main>
 
     <!-- State Page — Option C: Sidebar Directory -->
@@ -83,10 +107,10 @@
       <div class="container">
         <div class="sp-hero__inner">
           <div class="sp-hero__left">
-            <span class="sp-hero__emoji">🏛️</span>
+            <span class="sp-hero__emoji">🏫</span>
             <div>
               <h1 class="sp-hero__h1">Massachusetts County Resources</h1>
-              <p class="sp-hero__sub">? counties · 400+ assistance programs · Always free</p>
+              <p class="sp-hero__sub">14 counties · 500+ assistance programs · Always free</p>
             </div>
           </div>
           <div class="sp-hero__right">
@@ -129,8 +153,8 @@
             <div class="sp-sidebar-card">
               <div class="sp-sidebar-hd">📊 At a Glance</div>
               <div class="sp-sidebar-body">
-                <div class="sp-sidebar-stat"><span>?</span><span>Counties</span></div>
-                <div class="sp-sidebar-stat"><span>400+</span><span>Programs</span></div>
+                <div class="sp-sidebar-stat"><span>14</span><span>Counties</span></div>
+                <div class="sp-sidebar-stat"><span>500+</span><span>Programs</span></div>
                 <div class="sp-sidebar-stat"><span>9</span><span>Categories</span></div>
                 <div class="sp-sidebar-stat"><span>Free</span><span>PDF Guide</span></div>
               </div>
@@ -141,18 +165,18 @@
           <div class="sp-content">
             <div class="sp-content-hd">
               <h2>⭐ Featured Counties</h2>
-              <span>? counties total</span>
+              <span>14 counties total</span>
             </div>
             <div class="sp-featured-grid">
             <a href="/massachusetts/middlesex/" class="sp-county-card">
               <div class="sp-cc-top">
-                <span class="sp-cc-emoji">🎓</span>
+                <span class="sp-cc-emoji">🏫</span>
                 <div>
                   <div class="sp-cc-name">Middlesex County ⭐</div>
-                  <div class="sp-cc-meta">1.6M residents · 50+ programs</div>
+                  <div class="sp-cc-meta">1.6M residents · 60+ programs</div>
                 </div>
               </div>
-              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:50%"></div></div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
               <div class="sp-cc-link">View Resources →</div>
             </a>
             <a href="/massachusetts/worcester/" class="sp-county-card">
@@ -163,18 +187,29 @@
                   <div class="sp-cc-meta">862K residents · 50+ programs</div>
                 </div>
               </div>
-              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:90%"></div></div>
               <div class="sp-cc-link">View Resources →</div>
             </a>
             <a href="/massachusetts/suffolk/" class="sp-county-card">
               <div class="sp-cc-top">
-                <span class="sp-cc-emoji">🏛️</span>
+                <span class="sp-cc-emoji">🏙️</span>
                 <div>
                   <div class="sp-cc-name">Suffolk County ⭐</div>
-                  <div class="sp-cc-meta">804K residents · 50+ programs</div>
+                  <div class="sp-cc-meta">798K residents · 55+ programs</div>
                 </div>
               </div>
-              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:88%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            <a href="/massachusetts/essex/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">⚓</span>
+                <div>
+                  <div class="sp-cc-name">Essex County ⭐</div>
+                  <div class="sp-cc-meta">797K residents · 50+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:86%"></div></div>
               <div class="sp-cc-link">View Resources →</div>
             </a>
             <a href="/massachusetts/norfolk/" class="sp-county-card">
@@ -182,51 +217,40 @@
                 <span class="sp-cc-emoji">🌳</span>
                 <div>
                   <div class="sp-cc-name">Norfolk County ⭐</div>
-                  <div class="sp-cc-meta">726K residents · 50+ programs</div>
+                  <div class="sp-cc-meta">707K residents · 45+ programs</div>
                 </div>
               </div>
-              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:82%"></div></div>
               <div class="sp-cc-link">View Resources →</div>
             </a>
             <a href="/massachusetts/bristol/" class="sp-county-card">
               <div class="sp-cc-top">
-                <span class="sp-cc-emoji">🌊</span>
+                <span class="sp-cc-emoji">🏖️</span>
                 <div>
                   <div class="sp-cc-name">Bristol County ⭐</div>
-                  <div class="sp-cc-meta">565K residents · 50+ programs</div>
+                  <div class="sp-cc-meta">569K residents · 45+ programs</div>
                 </div>
               </div>
-              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
-              <div class="sp-cc-link">View Resources →</div>
-            </a>
-            <a href="/massachusetts/essex/" class="sp-county-card">
-              <div class="sp-cc-top">
-                <span class="sp-cc-emoji">🎃</span>
-                <div>
-                  <div class="sp-cc-name">Essex County ⭐</div>
-                  <div class="sp-cc-meta">800K residents · 50+ programs</div>
-                </div>
-              </div>
-              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:78%"></div></div>
               <div class="sp-cc-link">View Resources →</div>
             </a>
             </div>
-            <div class="sp-section-label">All ? Counties — Alphabetical</div>
+            <div class="sp-section-label">All 14 Counties — Alphabetical</div>
             <div class="sp-az-grid" id="county-list">
           <a href="/massachusetts/barnstable/" class="sp-az-item">📍 Barnstable County</a>
           <a href="/massachusetts/berkshire/" class="sp-az-item">📍 Berkshire County</a>
-          <a href="/massachusetts/bristol/" class="sp-az-item">📍 Bristol County</a>
+          <a href="/massachusetts/bristol/" class="sp-az-item sp-verified">⭐ Bristol County</a>
           <a href="/massachusetts/dukes/" class="sp-az-item">📍 Dukes County</a>
-          <a href="/massachusetts/essex/" class="sp-az-item">📍 Essex County</a>
+          <a href="/massachusetts/essex/" class="sp-az-item sp-verified">⭐ Essex County</a>
           <a href="/massachusetts/franklin/" class="sp-az-item">📍 Franklin County</a>
           <a href="/massachusetts/hampden/" class="sp-az-item">📍 Hampden County</a>
           <a href="/massachusetts/hampshire/" class="sp-az-item">📍 Hampshire County</a>
-          <a href="/massachusetts/middlesex/" class="sp-az-item">📍 Middlesex County</a>
+          <a href="/massachusetts/middlesex/" class="sp-az-item sp-verified">⭐ Middlesex County</a>
           <a href="/massachusetts/nantucket/" class="sp-az-item">📍 Nantucket County</a>
-          <a href="/massachusetts/norfolk/" class="sp-az-item">📍 Norfolk County</a>
+          <a href="/massachusetts/norfolk/" class="sp-az-item sp-verified">⭐ Norfolk County</a>
           <a href="/massachusetts/plymouth/" class="sp-az-item">📍 Plymouth County</a>
-          <a href="/massachusetts/suffolk/" class="sp-az-item">📍 Suffolk County</a>
-          <a href="/massachusetts/worcester/" class="sp-az-item">📍 Worcester County</a>
+          <a href="/massachusetts/suffolk/" class="sp-az-item sp-verified">⭐ Suffolk County</a>
+          <a href="/massachusetts/worcester/" class="sp-az-item sp-verified">⭐ Worcester County</a>
             </div>
           </div>
 
@@ -249,16 +273,44 @@
     </script>
 
   </main>
-  
+
+
+
   <footer class="footer">
     <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <h3>National Benefit Alliance</h3>
+          <p>Connecting Massachusetts families with free government and community assistance programs across all 14 counties.</p>
+        </div>
+        <div class="footer__col">
+          <h4>MA Resources</h4>
+          <ul>
+            <li><a href="https://www.mass.gov/orgs/department-of-transitional-assistance">MA Dept. of Transitional Assistance</a></li>
+            <li><a href="https://www.mass.gov/orgs/masshealth">MassHealth</a></li>
+            <li><a href="https://www.mass.gov/orgs/department-of-unemployment-assistance">MA Unemployment Assistance</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Get Help Now</h4>
+          <ul>
+            <li><a href="tel:211">📞 Dial 211</a></li>
+            <li><a href="tel:18006224357">📞 1-800-NBA-HELP</a></li>
+            <li><a href="/apply/1">Apply for Access Code</a></li>
+          </ul>
+        </div>
+      </div>
       <div class="footer__bottom">
-        <p>© 2025 National Benefit Alliance · <a href="/">Home</a> · <a href="/massachusetts/">Massachusetts</a> · <a href="/privacy/">Privacy Policy</a> · <a href="/terms/">Terms &amp; Conditions</a> · <a href="/california-privacy/">CA Privacy</a></p>
-        <div class="footer__bottom-links"><a href="/sitemap.xml">Sitemap</a><a href="/accessibility/">Accessibility</a></div>
-              <p class="footer__disclaimer">National Benefit Alliance is a privately held for-profit entity and has no affiliation or relationship, financial or otherwise, with any political party, government agency, or other outside group or persons. We do not submit any forms or documents on our members' behalf. All communication with any government, state, or private party will be done directly with them and all documentation submitted directly to them. Furthermore, National Benefit Alliance is not affiliated with or endorsed by the U.S. Department of Education. We urge you not to pay any third party offer for assistance that you can get for free elsewhere.</p>
+        <p>&copy; 2025 National Benefit Alliance · <a href="/">Home</a> · <a href="/massachusetts/">Massachusetts</a> · <a href="/privacy/">Privacy Policy</a> · <a href="/terms/">Terms &amp; Conditions</a> · <a href="/california-privacy/">CA Privacy</a></p>
+        <div class="footer__bottom-links">
+          <a href="/sitemap.xml">Sitemap</a>
+          <a href="/accessibility/">Accessibility</a>
+        </div>
+        <p class="footer__disclaimer">National Benefit Alliance is a privately held for-profit entity and has no affiliation or relationship, financial or otherwise, with any political party, government agency, or other outside group or persons. We do not submit any forms or documents on our members' behalf. All communication with any government, state, or private party will be done directly with them and all documentation submitted directly to them. Furthermore, National Benefit Alliance is not affiliated with or endorsed by the U.S. Department of Education. We urge you not to pay any third party offer for assistance that you can get for free elsewhere.</p>
       </div>
     </div>
   </footer>
+
   <script src="../js/main.js?v=8" defer></script>
 </body>
 </html>

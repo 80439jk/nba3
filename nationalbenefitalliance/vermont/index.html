@@ -4,46 +4,67 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vermont County Resource Center | Free Benefits by County – National Benefit Alliance</title>
-  <meta name="description" content="Find free government and community assistance programs in all 14 Vermont countys. Enter your ZIP code or select your county to access resources for utilities, rent, food, Vermont Medicaid, and more." />
+  <meta name="description" content="Find free government and community assistance programs in all 14 Vermont counties. Enter your ZIP code or select your county to access resources for utilities, rent, food, VT Medicaid, SNAP, and more." />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
   <link rel="canonical" href="https://nationalbenefitalliance.com/vermont/" />
   <meta property="og:title" content="Vermont County Resource Center | National Benefit Alliance" />
-  <meta property="og:description" content="All 14 Vermont countys covered. Find free assistance for utilities, housing, food, Vermont Medicaid, SNAP, and more." />
+  <meta property="og:description" content="All 14 Vermont counties covered. Find free assistance for utilities, housing, food, VT Medicaid, SNAP, and more." />
   <meta property="og:url" content="https://nationalbenefitalliance.com/vermont/" />
+
+  <!-- Schema: State + Government organization -->
   <script type="application/ld+json">
   {
-    "@context":"https://schema.org","@graph":[
-      {"@type":"GovernmentOrganization","@id":"https://nationalbenefitalliance.com/vermont/#org",
-        "name":"National Benefit Alliance – Vermont Resource Center",
-        "url":"https://nationalbenefitalliance.com/vermont/",
-        "areaServed":{"@type":"State","name":"Vermont","sameAs":"https://www.wikidata.org/wiki/Q16551"}},
-      {"@type":"WebPage","@id":"https://nationalbenefitalliance.com/vermont/#page",
-        "url":"https://nationalbenefitalliance.com/vermont/","name":"Vermont County Resource Center",
-        "breadcrumb":{"@type":"BreadcrumbList","itemListElement":[
-          {"@type":"ListItem","position":1,"name":"Home","item":"https://nationalbenefitalliance.com/"},
-          {"@type":"ListItem","position":2,"name":"Vermont","item":"https://nationalbenefitalliance.com/vermont/"}
-        ]}},
-      {"@type":"ItemList","name":"Vermont County Resource Guides","numberOfItems":14,
-        "itemListElement":[
-          {"@type":"ListItem","position":1,"name":"Addison County Resources","url":"https://nationalbenefitalliance.com/vermont/addison/"}
-          {"@type":"ListItem","position":2,"name":"Bennington County Resources","url":"https://nationalbenefitalliance.com/vermont/bennington/"}
-          {"@type":"ListItem","position":3,"name":"Caledonia County Resources","url":"https://nationalbenefitalliance.com/vermont/caledonia/"}
-          {"@type":"ListItem","position":4,"name":"Chittenden County Resources","url":"https://nationalbenefitalliance.com/vermont/chittenden/"}
-          {"@type":"ListItem","position":5,"name":"Essex County Resources","url":"https://nationalbenefitalliance.com/vermont/essex/"}
-          {"@type":"ListItem","position":6,"name":"Franklin County Resources","url":"https://nationalbenefitalliance.com/vermont/franklin/"}
-          {"@type":"ListItem","position":7,"name":"Grand Isle County Resources","url":"https://nationalbenefitalliance.com/vermont/grand-isle/"}
-          {"@type":"ListItem","position":8,"name":"Lamoille County Resources","url":"https://nationalbenefitalliance.com/vermont/lamoille/"}
-          {"@type":"ListItem","position":9,"name":"Orange County Resources","url":"https://nationalbenefitalliance.com/vermont/orange/"}
-          {"@type":"ListItem","position":10,"name":"Orleans County Resources","url":"https://nationalbenefitalliance.com/vermont/orleans/"}
-        ]}
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "GovernmentOrganization",
+        "@id": "https://nationalbenefitalliance.com/vermont/#org",
+        "name": "National Benefit Alliance – Vermont Resource Center",
+        "url": "https://nationalbenefitalliance.com/vermont/",
+        "description": "Free county-by-county resource guide for Vermont residents seeking government and community assistance programs.",
+        "areaServed": {
+          "@type": "State",
+          "name": "Vermont",
+          "sameAs": "https://www.wikidata.org/wiki/Q16551"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://nationalbenefitalliance.com/vermont/#page",
+        "url": "https://nationalbenefitalliance.com/vermont/",
+        "name": "Vermont County Resource Center",
+        "description": "Browse all 14 Vermont counties for free government benefit resources.",
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type": "ListItem","position": 1,"name": "Home","item": "https://nationalbenefitalliance.com/"},
+            {"@type": "ListItem","position": 2,"name": "Vermont","item": "https://nationalbenefitalliance.com/vermont/"}
+          ]
+        }
+      },
+      {
+        "@type": "ItemList",
+        "name": "Vermont County Resource Guides",
+        "numberOfItems": 14,
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Chittenden County Resources","url":"https://nationalbenefitalliance.com/vermont/chittenden/"},
+          {"@type":"ListItem","position":2,"name":"Rutland County Resources","url":"https://nationalbenefitalliance.com/vermont/rutland/"},
+          {"@type":"ListItem","position":3,"name":"Washington County Resources","url":"https://nationalbenefitalliance.com/vermont/washington/"},
+          {"@type":"ListItem","position":4,"name":"Windsor County Resources","url":"https://nationalbenefitalliance.com/vermont/windsor/"},
+          {"@type":"ListItem","position":5,"name":"Franklin County Resources","url":"https://nationalbenefitalliance.com/vermont/franklin/"}
+        ]
+      }
     ]
   }
   </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
+
+  <!-- Nav -->
   <nav class="nav">
     <div class="nav__inner">
       <a href="/" class="nav__logo">
@@ -68,6 +89,8 @@
       </div>
     </div>
   </nav>
+
+  <!-- Breadcrumb -->
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <div class="container">
       <ol class="breadcrumb__list">
@@ -76,6 +99,7 @@
       </ol>
     </div>
   </nav>
+
     <main>
 
     <!-- State Page — Option C: Sidebar Directory -->
@@ -86,7 +110,7 @@
             <span class="sp-hero__emoji">🍁</span>
             <div>
               <h1 class="sp-hero__h1">Vermont County Resources</h1>
-              <p class="sp-hero__sub">? counties · 400+ assistance programs · Always free</p>
+              <p class="sp-hero__sub">14 counties · 300+ assistance programs · Always free</p>
             </div>
           </div>
           <div class="sp-hero__right">
@@ -129,8 +153,8 @@
             <div class="sp-sidebar-card">
               <div class="sp-sidebar-hd">📊 At a Glance</div>
               <div class="sp-sidebar-body">
-                <div class="sp-sidebar-stat"><span>?</span><span>Counties</span></div>
-                <div class="sp-sidebar-stat"><span>400+</span><span>Programs</span></div>
+                <div class="sp-sidebar-stat"><span>14</span><span>Counties</span></div>
+                <div class="sp-sidebar-stat"><span>300+</span><span>Programs</span></div>
                 <div class="sp-sidebar-stat"><span>9</span><span>Categories</span></div>
                 <div class="sp-sidebar-stat"><span>Free</span><span>PDF Guide</span></div>
               </div>
@@ -141,15 +165,15 @@
           <div class="sp-content">
             <div class="sp-content-hd">
               <h2>⭐ Featured Counties</h2>
-              <span>? counties total</span>
+              <span>14 counties total</span>
             </div>
             <div class="sp-featured-grid">
             <a href="/vermont/chittenden/" class="sp-county-card">
               <div class="sp-cc-top">
-                <span class="sp-cc-emoji">🍁</span>
+                <span class="sp-cc-emoji">🏙️</span>
                 <div>
                   <div class="sp-cc-name">Chittenden County ⭐</div>
-                  <div class="sp-cc-meta">168K residents · 50+ programs</div>
+                  <div class="sp-cc-meta">168K residents · 45+ programs</div>
                 </div>
               </div>
               <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
@@ -157,13 +181,13 @@
             </a>
             <a href="/vermont/rutland/" class="sp-county-card">
               <div class="sp-cc-top">
-                <span class="sp-cc-emoji">🏔️</span>
+                <span class="sp-cc-emoji">⛷️</span>
                 <div>
                   <div class="sp-cc-name">Rutland County ⭐</div>
-                  <div class="sp-cc-meta">62K residents · 50+ programs</div>
+                  <div class="sp-cc-meta">58K residents · 35+ programs</div>
                 </div>
               </div>
-              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:74%"></div></div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:78%"></div></div>
               <div class="sp-cc-link">View Resources →</div>
             </a>
             <a href="/vermont/washington/" class="sp-county-card">
@@ -171,21 +195,21 @@
                 <span class="sp-cc-emoji">🏛️</span>
                 <div>
                   <div class="sp-cc-name">Washington County ⭐</div>
-                  <div class="sp-cc-meta">58K residents · 50+ programs</div>
+                  <div class="sp-cc-meta">60K residents · 35+ programs</div>
                 </div>
               </div>
-              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:69%"></div></div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:76%"></div></div>
               <div class="sp-cc-link">View Resources →</div>
             </a>
             <a href="/vermont/windsor/" class="sp-county-card">
               <div class="sp-cc-top">
-                <span class="sp-cc-emoji">🌊</span>
+                <span class="sp-cc-emoji">🌲</span>
                 <div>
                   <div class="sp-cc-name">Windsor County ⭐</div>
-                  <div class="sp-cc-meta">55K residents · 50+ programs</div>
+                  <div class="sp-cc-meta">58K residents · 35+ programs</div>
                 </div>
               </div>
-              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:66%"></div></div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:74%"></div></div>
               <div class="sp-cc-link">View Resources →</div>
             </a>
             <a href="/vermont/franklin/" class="sp-county-card">
@@ -193,40 +217,40 @@
                 <span class="sp-cc-emoji">🌾</span>
                 <div>
                   <div class="sp-cc-name">Franklin County ⭐</div>
-                  <div class="sp-cc-meta">49K residents · 50+ programs</div>
+                  <div class="sp-cc-meta">50K residents · 30+ programs</div>
                 </div>
               </div>
-              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:58%"></div></div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:70%"></div></div>
               <div class="sp-cc-link">View Resources →</div>
             </a>
-            <a href="/vermont/bennington/" class="sp-county-card">
+            <a href="/vermont/windham/" class="sp-county-card">
               <div class="sp-cc-top">
-                <span class="sp-cc-emoji">🎨</span>
+                <span class="sp-cc-emoji">🍂</span>
                 <div>
-                  <div class="sp-cc-name">Bennington County ⭐</div>
-                  <div class="sp-cc-meta">37K residents · 50+ programs</div>
+                  <div class="sp-cc-name">Windham County ⭐</div>
+                  <div class="sp-cc-meta">46K residents · 30+ programs</div>
                 </div>
               </div>
-              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:50%"></div></div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:68%"></div></div>
               <div class="sp-cc-link">View Resources →</div>
             </a>
             </div>
-            <div class="sp-section-label">All ? Counties — Alphabetical</div>
+            <div class="sp-section-label">All 14 Counties — Alphabetical</div>
             <div class="sp-az-grid" id="county-list">
           <a href="/vermont/addison/" class="sp-az-item">📍 Addison County</a>
           <a href="/vermont/bennington/" class="sp-az-item">📍 Bennington County</a>
           <a href="/vermont/caledonia/" class="sp-az-item">📍 Caledonia County</a>
-          <a href="/vermont/chittenden/" class="sp-az-item">📍 Chittenden County</a>
+          <a href="/vermont/chittenden/" class="sp-az-item sp-verified">⭐ Chittenden County</a>
           <a href="/vermont/essex/" class="sp-az-item">📍 Essex County</a>
-          <a href="/vermont/franklin/" class="sp-az-item">📍 Franklin County</a>
+          <a href="/vermont/franklin/" class="sp-az-item sp-verified">⭐ Franklin County</a>
           <a href="/vermont/grand-isle/" class="sp-az-item">📍 Grand Isle County</a>
           <a href="/vermont/lamoille/" class="sp-az-item">📍 Lamoille County</a>
           <a href="/vermont/orange/" class="sp-az-item">📍 Orange County</a>
           <a href="/vermont/orleans/" class="sp-az-item">📍 Orleans County</a>
-          <a href="/vermont/rutland/" class="sp-az-item">📍 Rutland County</a>
-          <a href="/vermont/washington/" class="sp-az-item">📍 Washington County</a>
-          <a href="/vermont/windham/" class="sp-az-item">📍 Windham County</a>
-          <a href="/vermont/windsor/" class="sp-az-item">📍 Windsor County</a>
+          <a href="/vermont/rutland/" class="sp-az-item sp-verified">⭐ Rutland County</a>
+          <a href="/vermont/washington/" class="sp-az-item sp-verified">⭐ Washington County</a>
+          <a href="/vermont/windham/" class="sp-az-item sp-verified">⭐ Windham County</a>
+          <a href="/vermont/windsor/" class="sp-az-item sp-verified">⭐ Windsor County</a>
             </div>
           </div>
 
@@ -249,16 +273,44 @@
     </script>
 
   </main>
-  
+
+
+
   <footer class="footer">
     <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <h3>National Benefit Alliance</h3>
+          <p>Connecting Vermont families with free government and community assistance programs across all 14 counties.</p>
+        </div>
+        <div class="footer__col">
+          <h4>VT Resources</h4>
+          <ul>
+            <li><a href="https://dcf.vermont.gov/">VT Dept. for Children &amp; Families</a></li>
+            <li><a href="https://dvha.vermont.gov/">VT Dept. of Health Access</a></li>
+            <li><a href="https://labor.vermont.gov/">VT Dept. of Labor</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Get Help Now</h4>
+          <ul>
+            <li><a href="tel:211">📞 Dial 211</a></li>
+            <li><a href="tel:18006224357">📞 1-800-NBA-HELP</a></li>
+            <li><a href="/apply/1">Apply for Access Code</a></li>
+          </ul>
+        </div>
+      </div>
       <div class="footer__bottom">
-        <p>© 2025 National Benefit Alliance · <a href="/">Home</a> · <a href="/vermont/">Vermont</a> · <a href="/privacy/">Privacy Policy</a> · <a href="/terms/">Terms &amp; Conditions</a> · <a href="/california-privacy/">CA Privacy</a></p>
-        <div class="footer__bottom-links"><a href="/sitemap.xml">Sitemap</a><a href="/accessibility/">Accessibility</a></div>
-              <p class="footer__disclaimer">National Benefit Alliance is a privately held for-profit entity and has no affiliation or relationship, financial or otherwise, with any political party, government agency, or other outside group or persons. We do not submit any forms or documents on our members' behalf. All communication with any government, state, or private party will be done directly with them and all documentation submitted directly to them. Furthermore, National Benefit Alliance is not affiliated with or endorsed by the U.S. Department of Education. We urge you not to pay any third party offer for assistance that you can get for free elsewhere.</p>
+        <p>&copy; 2025 National Benefit Alliance · <a href="/">Home</a> · <a href="/vermont/">Vermont</a> · <a href="/privacy/">Privacy Policy</a> · <a href="/terms/">Terms &amp; Conditions</a> · <a href="/california-privacy/">CA Privacy</a></p>
+        <div class="footer__bottom-links">
+          <a href="/sitemap.xml">Sitemap</a>
+          <a href="/accessibility/">Accessibility</a>
+        </div>
+        <p class="footer__disclaimer">National Benefit Alliance is a privately held for-profit entity and has no affiliation or relationship, financial or otherwise, with any political party, government agency, or other outside group or persons. We do not submit any forms or documents on our members' behalf. All communication with any government, state, or private party will be done directly with them and all documentation submitted directly to them. Furthermore, National Benefit Alliance is not affiliated with or endorsed by the U.S. Department of Education. We urge you not to pay any third party offer for assistance that you can get for free elsewhere.</p>
       </div>
     </div>
   </footer>
+
   <script src="../js/main.js?v=8" defer></script>
 </body>
 </html>

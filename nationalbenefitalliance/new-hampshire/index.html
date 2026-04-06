@@ -4,46 +4,67 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>New Hampshire County Resource Center | Free Benefits by County – National Benefit Alliance</title>
-  <meta name="description" content="Find free government and community assistance programs in all 10 New Hampshire countys. Enter your ZIP code or select your county to access resources for utilities, rent, food, NH Medicaid, and more." />
+  <meta name="description" content="Find free government and community assistance programs in all 10 New Hampshire counties. Enter your ZIP code or select your county to access resources for utilities, rent, food, NH Medicaid, SNAP, and more." />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
   <link rel="canonical" href="https://nationalbenefitalliance.com/new-hampshire/" />
   <meta property="og:title" content="New Hampshire County Resource Center | National Benefit Alliance" />
-  <meta property="og:description" content="All 10 New Hampshire countys covered. Find free assistance for utilities, housing, food, NH Medicaid, SNAP, and more." />
+  <meta property="og:description" content="All 10 New Hampshire counties covered. Find free assistance for utilities, housing, food, NH Medicaid, SNAP, and more." />
   <meta property="og:url" content="https://nationalbenefitalliance.com/new-hampshire/" />
+
+  <!-- Schema: State + Government organization -->
   <script type="application/ld+json">
   {
-    "@context":"https://schema.org","@graph":[
-      {"@type":"GovernmentOrganization","@id":"https://nationalbenefitalliance.com/new-hampshire/#org",
-        "name":"National Benefit Alliance – New Hampshire Resource Center",
-        "url":"https://nationalbenefitalliance.com/new-hampshire/",
-        "areaServed":{"@type":"State","name":"New Hampshire","sameAs":"https://www.wikidata.org/wiki/Q759"}},
-      {"@type":"WebPage","@id":"https://nationalbenefitalliance.com/new-hampshire/#page",
-        "url":"https://nationalbenefitalliance.com/new-hampshire/","name":"New Hampshire County Resource Center",
-        "breadcrumb":{"@type":"BreadcrumbList","itemListElement":[
-          {"@type":"ListItem","position":1,"name":"Home","item":"https://nationalbenefitalliance.com/"},
-          {"@type":"ListItem","position":2,"name":"New Hampshire","item":"https://nationalbenefitalliance.com/new-hampshire/"}
-        ]}},
-      {"@type":"ItemList","name":"New Hampshire County Resource Guides","numberOfItems":10,
-        "itemListElement":[
-          {"@type":"ListItem","position":1,"name":"Belknap County Resources","url":"https://nationalbenefitalliance.com/new-hampshire/belknap/"}
-          {"@type":"ListItem","position":2,"name":"Carroll County Resources","url":"https://nationalbenefitalliance.com/new-hampshire/carroll/"}
-          {"@type":"ListItem","position":3,"name":"Cheshire County Resources","url":"https://nationalbenefitalliance.com/new-hampshire/cheshire/"}
-          {"@type":"ListItem","position":4,"name":"Coos County Resources","url":"https://nationalbenefitalliance.com/new-hampshire/coos/"}
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "GovernmentOrganization",
+        "@id": "https://nationalbenefitalliance.com/new-hampshire/#org",
+        "name": "National Benefit Alliance – New Hampshire Resource Center",
+        "url": "https://nationalbenefitalliance.com/new-hampshire/",
+        "description": "Free county-by-county resource guide for New Hampshire residents seeking government and community assistance programs.",
+        "areaServed": {
+          "@type": "State",
+          "name": "New Hampshire",
+          "sameAs": "https://www.wikidata.org/wiki/Q759"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://nationalbenefitalliance.com/new-hampshire/#page",
+        "url": "https://nationalbenefitalliance.com/new-hampshire/",
+        "name": "New Hampshire County Resource Center",
+        "description": "Browse all 10 New Hampshire counties for free government benefit resources.",
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type": "ListItem","position": 1,"name": "Home","item": "https://nationalbenefitalliance.com/"},
+            {"@type": "ListItem","position": 2,"name": "New Hampshire","item": "https://nationalbenefitalliance.com/new-hampshire/"}
+          ]
+        }
+      },
+      {
+        "@type": "ItemList",
+        "name": "New Hampshire County Resource Guides",
+        "numberOfItems": 10,
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Hillsborough County Resources","url":"https://nationalbenefitalliance.com/new-hampshire/hillsborough/"},
+          {"@type":"ListItem","position":2,"name":"Rockingham County Resources","url":"https://nationalbenefitalliance.com/new-hampshire/rockingham/"},
+          {"@type":"ListItem","position":3,"name":"Merrimack County Resources","url":"https://nationalbenefitalliance.com/new-hampshire/merrimack/"},
+          {"@type":"ListItem","position":4,"name":"Strafford County Resources","url":"https://nationalbenefitalliance.com/new-hampshire/strafford/"},
           {"@type":"ListItem","position":5,"name":"Grafton County Resources","url":"https://nationalbenefitalliance.com/new-hampshire/grafton/"}
-          {"@type":"ListItem","position":6,"name":"Hillsborough County Resources","url":"https://nationalbenefitalliance.com/new-hampshire/hillsborough/"}
-          {"@type":"ListItem","position":7,"name":"Merrimack County Resources","url":"https://nationalbenefitalliance.com/new-hampshire/merrimack/"}
-          {"@type":"ListItem","position":8,"name":"Rockingham County Resources","url":"https://nationalbenefitalliance.com/new-hampshire/rockingham/"}
-          {"@type":"ListItem","position":9,"name":"Strafford County Resources","url":"https://nationalbenefitalliance.com/new-hampshire/strafford/"}
-          {"@type":"ListItem","position":10,"name":"Sullivan County Resources","url":"https://nationalbenefitalliance.com/new-hampshire/sullivan/"}
-        ]}
+        ]
+      }
     ]
   }
   </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
+
+  <!-- Nav -->
   <nav class="nav">
     <div class="nav__inner">
       <a href="/" class="nav__logo">
@@ -68,6 +89,8 @@
       </div>
     </div>
   </nav>
+
+  <!-- Breadcrumb -->
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <div class="container">
       <ol class="breadcrumb__list">
@@ -76,6 +99,7 @@
       </ol>
     </div>
   </nav>
+
     <main>
 
     <!-- State Page — Option C: Sidebar Directory -->
@@ -83,10 +107,10 @@
       <div class="container">
         <div class="sp-hero__inner">
           <div class="sp-hero__left">
-            <span class="sp-hero__emoji">🍂</span>
+            <span class="sp-hero__emoji">⛰️</span>
             <div>
               <h1 class="sp-hero__h1">New Hampshire County Resources</h1>
-              <p class="sp-hero__sub">? counties · 400+ assistance programs · Always free</p>
+              <p class="sp-hero__sub">10 counties · 300+ assistance programs · Always free</p>
             </div>
           </div>
           <div class="sp-hero__right">
@@ -129,8 +153,8 @@
             <div class="sp-sidebar-card">
               <div class="sp-sidebar-hd">📊 At a Glance</div>
               <div class="sp-sidebar-body">
-                <div class="sp-sidebar-stat"><span>?</span><span>Counties</span></div>
-                <div class="sp-sidebar-stat"><span>400+</span><span>Programs</span></div>
+                <div class="sp-sidebar-stat"><span>10</span><span>Counties</span></div>
+                <div class="sp-sidebar-stat"><span>300+</span><span>Programs</span></div>
                 <div class="sp-sidebar-stat"><span>9</span><span>Categories</span></div>
                 <div class="sp-sidebar-stat"><span>Free</span><span>PDF Guide</span></div>
               </div>
@@ -141,7 +165,7 @@
           <div class="sp-content">
             <div class="sp-content-hd">
               <h2>⭐ Featured Counties</h2>
-              <span>? counties total</span>
+              <span>10 counties total</span>
             </div>
             <div class="sp-featured-grid">
             <a href="/new-hampshire/hillsborough/" class="sp-county-card">
@@ -160,21 +184,21 @@
                 <span class="sp-cc-emoji">🌊</span>
                 <div>
                   <div class="sp-cc-name">Rockingham County ⭐</div>
-                  <div class="sp-cc-meta">317K residents · 50+ programs</div>
+                  <div class="sp-cc-meta">314K residents · 45+ programs</div>
                 </div>
               </div>
-              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:90%"></div></div>
               <div class="sp-cc-link">View Resources →</div>
             </a>
             <a href="/new-hampshire/merrimack/" class="sp-county-card">
               <div class="sp-cc-top">
-                <span class="sp-cc-emoji">🍂</span>
+                <span class="sp-cc-emoji">🏛️</span>
                 <div>
                   <div class="sp-cc-name">Merrimack County ⭐</div>
-                  <div class="sp-cc-meta">153K residents · 50+ programs</div>
+                  <div class="sp-cc-meta">151K residents · 40+ programs</div>
                 </div>
               </div>
-              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:82%"></div></div>
               <div class="sp-cc-link">View Resources →</div>
             </a>
             <a href="/new-hampshire/strafford/" class="sp-county-card">
@@ -182,46 +206,46 @@
                 <span class="sp-cc-emoji">🎓</span>
                 <div>
                   <div class="sp-cc-name">Strafford County ⭐</div>
-                  <div class="sp-cc-meta">133K residents · 50+ programs</div>
+                  <div class="sp-cc-meta">131K residents · 40+ programs</div>
                 </div>
               </div>
-              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:95%"></div></div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:78%"></div></div>
+              <div class="sp-cc-link">View Resources →</div>
+            </a>
+            <a href="/new-hampshire/grafton/" class="sp-county-card">
+              <div class="sp-cc-top">
+                <span class="sp-cc-emoji">⛷️</span>
+                <div>
+                  <div class="sp-cc-name">Grafton County ⭐</div>
+                  <div class="sp-cc-meta">91K residents · 35+ programs</div>
+                </div>
+              </div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:72%"></div></div>
               <div class="sp-cc-link">View Resources →</div>
             </a>
             <a href="/new-hampshire/cheshire/" class="sp-county-card">
               <div class="sp-cc-top">
-                <span class="sp-cc-emoji">🍎</span>
+                <span class="sp-cc-emoji">🌿</span>
                 <div>
                   <div class="sp-cc-name">Cheshire County ⭐</div>
-                  <div class="sp-cc-meta">77K residents · 50+ programs</div>
+                  <div class="sp-cc-meta">76K residents · 35+ programs</div>
                 </div>
               </div>
-              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:92%"></div></div>
-              <div class="sp-cc-link">View Resources →</div>
-            </a>
-            <a href="/new-hampshire/belknap/" class="sp-county-card">
-              <div class="sp-cc-top">
-                <span class="sp-cc-emoji">🏔️</span>
-                <div>
-                  <div class="sp-cc-name">Belknap County ⭐</div>
-                  <div class="sp-cc-meta">62K residents · 50+ programs</div>
-                </div>
-              </div>
-              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:74%"></div></div>
+              <div class="sp-cc-bar"><div class="sp-cc-bar-fill" style="width:68%"></div></div>
               <div class="sp-cc-link">View Resources →</div>
             </a>
             </div>
-            <div class="sp-section-label">All ? Counties — Alphabetical</div>
+            <div class="sp-section-label">All 10 Counties — Alphabetical</div>
             <div class="sp-az-grid" id="county-list">
           <a href="/new-hampshire/belknap/" class="sp-az-item">📍 Belknap County</a>
           <a href="/new-hampshire/carroll/" class="sp-az-item">📍 Carroll County</a>
-          <a href="/new-hampshire/cheshire/" class="sp-az-item">📍 Cheshire County</a>
+          <a href="/new-hampshire/cheshire/" class="sp-az-item sp-verified">⭐ Cheshire County</a>
           <a href="/new-hampshire/coos/" class="sp-az-item">📍 Coos County</a>
-          <a href="/new-hampshire/grafton/" class="sp-az-item">📍 Grafton County</a>
-          <a href="/new-hampshire/hillsborough/" class="sp-az-item">📍 Hillsborough County</a>
-          <a href="/new-hampshire/merrimack/" class="sp-az-item">📍 Merrimack County</a>
-          <a href="/new-hampshire/rockingham/" class="sp-az-item">📍 Rockingham County</a>
-          <a href="/new-hampshire/strafford/" class="sp-az-item">📍 Strafford County</a>
+          <a href="/new-hampshire/grafton/" class="sp-az-item sp-verified">⭐ Grafton County</a>
+          <a href="/new-hampshire/hillsborough/" class="sp-az-item sp-verified">⭐ Hillsborough County</a>
+          <a href="/new-hampshire/merrimack/" class="sp-az-item sp-verified">⭐ Merrimack County</a>
+          <a href="/new-hampshire/rockingham/" class="sp-az-item sp-verified">⭐ Rockingham County</a>
+          <a href="/new-hampshire/strafford/" class="sp-az-item sp-verified">⭐ Strafford County</a>
           <a href="/new-hampshire/sullivan/" class="sp-az-item">📍 Sullivan County</a>
             </div>
           </div>
@@ -245,16 +269,44 @@
     </script>
 
   </main>
-  
+
+
+
   <footer class="footer">
     <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <h3>National Benefit Alliance</h3>
+          <p>Connecting New Hampshire families with free government and community assistance programs across all 10 counties.</p>
+        </div>
+        <div class="footer__col">
+          <h4>NH Resources</h4>
+          <ul>
+            <li><a href="https://www.dhhs.nh.gov/">NH Dept. of Health &amp; Human Services</a></li>
+            <li><a href="https://www.dhhs.nh.gov/programs-services/medicaid">NH Medicaid</a></li>
+            <li><a href="https://www.nhes.nh.gov/">NH Employment Security</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Get Help Now</h4>
+          <ul>
+            <li><a href="tel:211">📞 Dial 211</a></li>
+            <li><a href="tel:18006224357">📞 1-800-NBA-HELP</a></li>
+            <li><a href="/apply/1">Apply for Access Code</a></li>
+          </ul>
+        </div>
+      </div>
       <div class="footer__bottom">
-        <p>© 2025 National Benefit Alliance · <a href="/">Home</a> · <a href="/new-hampshire/">New Hampshire</a> · <a href="/privacy/">Privacy Policy</a> · <a href="/terms/">Terms &amp; Conditions</a> · <a href="/california-privacy/">CA Privacy</a></p>
-        <div class="footer__bottom-links"><a href="/sitemap.xml">Sitemap</a><a href="/accessibility/">Accessibility</a></div>
-              <p class="footer__disclaimer">National Benefit Alliance is a privately held for-profit entity and has no affiliation or relationship, financial or otherwise, with any political party, government agency, or other outside group or persons. We do not submit any forms or documents on our members' behalf. All communication with any government, state, or private party will be done directly with them and all documentation submitted directly to them. Furthermore, National Benefit Alliance is not affiliated with or endorsed by the U.S. Department of Education. We urge you not to pay any third party offer for assistance that you can get for free elsewhere.</p>
+        <p>&copy; 2025 National Benefit Alliance · <a href="/">Home</a> · <a href="/new-hampshire/">New Hampshire</a> · <a href="/privacy/">Privacy Policy</a> · <a href="/terms/">Terms &amp; Conditions</a> · <a href="/california-privacy/">CA Privacy</a></p>
+        <div class="footer__bottom-links">
+          <a href="/sitemap.xml">Sitemap</a>
+          <a href="/accessibility/">Accessibility</a>
+        </div>
+        <p class="footer__disclaimer">National Benefit Alliance is a privately held for-profit entity and has no affiliation or relationship, financial or otherwise, with any political party, government agency, or other outside group or persons. We do not submit any forms or documents on our members' behalf. All communication with any government, state, or private party will be done directly with them and all documentation submitted directly to them. Furthermore, National Benefit Alliance is not affiliated with or endorsed by the U.S. Department of Education. We urge you not to pay any third party offer for assistance that you can get for free elsewhere.</p>
       </div>
     </div>
   </footer>
+
   <script src="../js/main.js?v=8" defer></script>
 </body>
 </html>

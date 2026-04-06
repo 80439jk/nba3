@@ -1,0 +1,138 @@
+# National Benefit Alliance
+
+> Free county-by-county resource guide connecting families with government assistance programs across all 50 US states.
+
+## About
+
+National Benefit Alliance provides a comprehensive, free resource directory for government and community assistance programs in every US county. We help individuals and families discover available support for utilities, housing, food, healthcare, employment, child care, education, and disability services.
+
+**Mission:** Make government assistance programs accessible and understandable for everyone who needs them.
+
+## Quick Links
+
+- [Homepage](https://nationalbenefitalliance.com/)
+- [Browse All States](https://nationalbenefitalliance.com/resources/)
+- [About Us](https://nationalbenefitalliance.com/about/)
+- [Frequently Asked Questions](https://nationalbenefitalliance.com/faq/)
+- [Apply for Benefits](https://nationalbenefitalliance.com/apply/1/)
+- [Success Stories](https://nationalbenefitalliance.com/stories/)
+
+## All 50 States
+
+### Eastern States
+- [Connecticut](https://nationalbenefitalliance.com/connecticut/)
+- [Delaware](https://nationalbenefitalliance.com/delaware/)
+- [Florida](https://nationalbenefitalliance.com/florida/)
+- [Georgia](https://nationalbenefitalliance.com/georgia/)
+- [Maine](https://nationalbenefitalliance.com/maine/)
+- [Maryland](https://nationalbenefitalliance.com/maryland/)
+- [Massachusetts](https://nationalbenefitalliance.com/massachusetts/)
+- [New Hampshire](https://nationalbenefitalliance.com/new-hampshire/)
+- [New Jersey](https://nationalbenefitalliance.com/new-jersey/)
+- [New York](https://nationalbenefitalliance.com/new-york/)
+- [North Carolina](https://nationalbenefitalliance.com/north-carolina/)
+- [Pennsylvania](https://nationalbenefitalliance.com/pennsylvania/)
+- [Rhode Island](https://nationalbenefitalliance.com/rhode-island/)
+- [South Carolina](https://nationalbenefitalliance.com/south-carolina/)
+- [Vermont](https://nationalbenefitalliance.com/vermont/)
+- [Virginia](https://nationalbenefitalliance.com/virginia/)
+- [West Virginia](https://nationalbenefitalliance.com/west-virginia/)
+
+### Midwest States
+- [Illinois](https://nationalbenefitalliance.com/illinois/)
+- [Indiana](https://nationalbenefitalliance.com/indiana/)
+- [Iowa](https://nationalbenefitalliance.com/iowa/)
+- [Kansas](https://nationalbenefitalliance.com/kansas/)
+- [Michigan](https://nationalbenefitalliance.com/michigan/)
+- [Minnesota](https://nationalbenefitalliance.com/minnesota/)
+- [Missouri](https://nationalbenefitalliance.com/missouri/)
+- [Nebraska](https://nationalbenefitalliance.com/nebraska/)
+- [North Dakota](https://nationalbenefitalliance.com/north-dakota/)
+- [Ohio](https://nationalbenefitalliance.com/ohio/)
+- [South Dakota](https://nationalbenefitalliance.com/south-dakota/)
+- [Wisconsin](https://nationalbenefitalliance.com/wisconsin/)
+
+### Southern States
+- [Alabama](https://nationalbenefitalliance.com/alabama/)
+- [Arkansas](https://nationalbenefitalliance.com/arkansas/)
+- [Kentucky](https://nationalbenefitalliance.com/kentucky/)
+- [Louisiana](https://nationalbenefitalliance.com/louisiana/)
+- [Mississippi](https://nationalbenefitalliance.com/mississippi/)
+- [Oklahoma](https://nationalbenefitalliance.com/oklahoma/)
+- [Tennessee](https://nationalbenefitalliance.com/tennessee/)
+- [Texas](https://nationalbenefitalliance.com/texas/)
+
+### Western States
+- [Alaska](https://nationalbenefitalliance.com/alaska/)
+- [Arizona](https://nationalbenefitalliance.com/arizona/)
+- [California](https://nationalbenefitalliance.com/california/)
+- [Colorado](https://nationalbenefitalliance.com/colorado/)
+- [Hawaii](https://nationalbenefitalliance.com/hawaii/)
+- [Idaho](https://nationalbenefitalliance.com/idaho/)
+- [Montana](https://nationalbenefitalliance.com/montana/)
+- [Nevada](https://nationalbenefitalliance.com/nevada/)
+- [New Mexico](https://nationalbenefitalliance.com/new-mexico/)
+- [Oregon](https://nationalbenefitalliance.com/oregon/)
+- [Utah](https://nationalbenefitalliance.com/utah/)
+- [Washington](https://nationalbenefitalliance.com/washington/)
+- [Wyoming](https://nationalbenefitalliance.com/wyoming/)
+
+## Coverage
+
+- **States Covered:** All 50 United States
+- **Counties:** 3,200+ counties and county equivalents
+- **Resources per County:** 15-18 assistance programs on average
+- **Updated:** April 2026
+- **Last Modified:** 2026-04-06
+
+## Resource Categories
+
+National Benefit Alliance covers these major assistance categories:
+
+1. **Utilities & Energy** - LIHEAP (Low Income Home Energy Assistance Program), utility assistance, weatherization
+2. **Housing** - Section 8 Housing Choice Vouchers, Emergency Rental Assistance, homelessness support
+3. **Food & Nutrition** - SNAP (food stamps), WIC (Women, Infants & Children), food banks, meal programs
+4. **Healthcare** - Medicaid, Medicare, subsidized health insurance, dental, mental health
+5. **Employment & Workforce** - Job training, career development, wage subsidies, vocational rehabilitation
+6. **Child Care & Education** - Child care assistance, preschool, education programs, student aid
+7. **Disability Services** - SSI/SSDI, disability support, accessibility services
+8. **Faith-Based & Community** - Religious organizations, nonprofits, mutual aid networks
+
+## Key Features
+
+- **Free Access:** No registration required to browse resources
+- **County-Specific:** Detailed listings tailored to your location
+- **Government & Community:** Mix of official programs and nonprofit organizations
+- **Application Support:** Step-by-step guidance for applying to benefits
+- **Real Stories:** Learn from families who've successfully accessed assistance
+- **FAQ & Resources:** Answers to common questions about government assistance
+
+## Contact
+
+- **Phone:** 1-888-408-5650
+- **Email:** support@nationalbenefitalliance.com
+- **Hours:** Monday-Friday, 9 AM - 6 PM EST
+
+## Data Sources
+
+- US Census Bureau (2020 Census population data)
+- Federal and state government agencies
+- County and municipal governments
+- Community nonprofits and social service organizations
+- Community partners and resource coordinators
+
+## Latest Updates
+
+**April 2026:** Complete refresh of all resource listings across all 50 states and 3,200+ counties. Enhanced mobile experience, improved search functionality, and expanded resource categories.
+
+## SEO & Bot Information
+
+This site supports modern search engine discovery and AI/LLM research through:
+
+- Comprehensive XML sitemaps (sitemap-index.xml, sitemap-main.xml, sitemap-states.xml, and per-state sitemaps)
+- robots.txt with full access for search engines and responsible AI crawlers
+- Structured data markup (Schema.org)
+- Mobile-first responsive design
+- Fast page load times and Core Web Vitals optimization
+
+For information about AI crawler access, see robots.txt.

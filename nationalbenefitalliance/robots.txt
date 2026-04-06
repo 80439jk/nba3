@@ -1,156 +1,233 @@
-# ============================================================
-# robots.txt — National Benefit Alliance
-# https://nationalbenefitalliance.com
-# Last updated: 2025-01-01
+# National Benefit Alliance - Advanced Robots.txt
+# Generated: 2026-04-06
+# Domain: https://nationalbenefitalliance.com
 #
-# Strategy: Open to legitimate search engines and AI crawlers.
-#            Block scrapers and protect internal paths.
-# ============================================================
+# This robots.txt implements modern SEO and AI crawler best practices.
+# It provides full access to search engines, major LLM/AI crawlers, and social preview bots,
+# while blocking aggressive scrapers, SEO tool bots, and TikTok's aggressive crawler.
 
-# ============================================================
-# GOOGLE — Full crawl, prioritize county pages
-# ============================================================
+# =============================================================================
+# SECTION 1: MAIN SEARCH ENGINES
+# Full access to all major search engines
+# =============================================================================
+
 User-agent: Googlebot
 Allow: /
-Allow: /florida/
-Allow: /css/
-Allow: /js/
-Allow: /images/
-Disallow: /admin/
-Disallow: /api/
-Disallow: /backend/
-Disallow: /.env
-Disallow: /search?error=
-Crawl-delay: 1
+Crawl-delay: 0
 
 User-agent: Googlebot-Image
-Allow: /images/
-Allow: /css/
-Disallow: /admin/
+Allow: /
+Crawl-delay: 0
 
 User-agent: Googlebot-News
 Allow: /
+Crawl-delay: 0
 
-# ============================================================
-# BING / MICROSOFT
-# ============================================================
+User-agent: Googlebot-Video
+Allow: /
+Crawl-delay: 0
+
 User-agent: Bingbot
 Allow: /
-Disallow: /admin/
-Disallow: /api/
-Disallow: /.env
-Crawl-delay: 2
+Crawl-delay: 1
 
-User-agent: MSNBot
-Allow: /
-Crawl-delay: 5
-
-# ============================================================
-# OTHER MAJOR SEARCH ENGINES
-# ============================================================
 User-agent: DuckDuckBot
 Allow: /
-Disallow: /admin/
-Disallow: /api/
+Crawl-delay: 0
 
-User-agent: Slurp
+User-agent: Yandexbot
 Allow: /
-Disallow: /admin/
-Crawl-delay: 5
+Crawl-delay: 3
 
 User-agent: Baiduspider
 Allow: /
-Crawl-delay: 10
-
-User-agent: YandexBot
-Allow: /
 Crawl-delay: 5
 
-# ============================================================
-# SOCIAL CRAWLERS — Allow for rich previews
-# ============================================================
-User-agent: facebot
+User-agent: Applebot
 Allow: /
+Crawl-delay: 0
 
-User-agent: Twitterbot
+User-agent: Slurp
 Allow: /
+Crawl-delay: 0
 
-User-agent: LinkedInBot
+User-agent: Seznambot
 Allow: /
+Crawl-delay: 0
 
-User-agent: WhatsApp
+User-agent: MojeekBot
 Allow: /
+Crawl-delay: 0
 
-User-agent: Slackbot
-Allow: /
+# =============================================================================
+# SECTION 2: AI/LLM CRAWLERS (2025-2026)
+# Full access to OpenAI, Google, Anthropic, Meta, and other AI platforms
+# These crawlers help power AI search, research, and content generation
+# =============================================================================
 
-# ============================================================
-# AI / LLM CRAWLERS — Allow for AI search visibility
-# Critical for appearing in ChatGPT, Perplexity, Claude, etc.
-# ============================================================
+# OpenAI and ChatGPT
 User-agent: GPTBot
 Allow: /
-Allow: /florida/
-Disallow: /admin/
-Disallow: /api/
+Crawl-delay: 0
 
 User-agent: ChatGPT-User
 Allow: /
+Crawl-delay: 0
 
+User-agent: OAI-SearchBot
+Allow: /
+Crawl-delay: 0
+
+# Google AI Overviews and Gemini
+User-agent: Google-Extended
+Allow: /
+Crawl-delay: 0
+
+# Anthropic and Claude
 User-agent: Claude-Web
 Allow: /
+Crawl-delay: 0
 
 User-agent: anthropic-ai
 Allow: /
+Crawl-delay: 0
 
+User-agent: ClaudeBot
+Allow: /
+Crawl-delay: 0
+
+# Perplexity
 User-agent: PerplexityBot
 Allow: /
+Crawl-delay: 0
 
+# Cohere
 User-agent: cohere-ai
 Allow: /
+Crawl-delay: 0
 
-User-agent: Google-Extended
-Allow: /
-
+# Common Crawl (feeds many AI models)
 User-agent: CCBot
 Allow: /
+Crawl-delay: 0
 
-User-agent: omgili
+# Diffbot (knowledge graphs, feeds AI apps)
+User-agent: Diffbot
 Allow: /
+Crawl-delay: 0
 
-# ============================================================
-# DEFAULT — All other crawlers
-# ============================================================
-User-agent: *
+# You.com search
+User-agent: YouBot
 Allow: /
-Allow: /florida/
-Allow: /css/
-Allow: /js/
-Allow: /images/
-Disallow: /admin/
-Disallow: /api/
-Disallow: /backend/
-Disallow: /node_modules/
-Disallow: /database/
-Disallow: /downloads/private/
-Disallow: /.env
-Disallow: /.git
-Disallow: /search?
-Disallow: /*?error=
-Disallow: /account/
-Disallow: /dashboard/
-Crawl-delay: 5
+Crawl-delay: 0
 
-# ============================================================
-# BLOCK MALICIOUS & SPAM BOTS
-# ============================================================
+# Amazon Alexa
+User-agent: Amazonbot
+Allow: /
+Crawl-delay: 0
+
+# Meta and Facebook AI
+User-agent: facebookexternalhit
+Allow: /
+Crawl-delay: 0
+
+User-agent: FacebookBot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Meta-ExternalAgent
+Allow: /
+Crawl-delay: 0
+
+User-agent: meta-externalfetcher
+Allow: /
+Crawl-delay: 0
+
+# Apple Intelligence
+User-agent: Applebot-Extended
+Allow: /
+Crawl-delay: 0
+
+# Allen Institute AI
+User-agent: AI2Bot
+Allow: /
+Crawl-delay: 0
+
+# Other AI/ML platforms
+User-agent: Kangaroo Bot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Timpibot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bytespider
+Disallow: /
+
+# =============================================================================
+# SECTION 3: SOCIAL MEDIA PREVIEW BOTS
+# Allow social platforms to generate rich previews for shared links
+# =============================================================================
+
+User-agent: facebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Twitterbot
+Allow: /
+Crawl-delay: 0
+
+User-agent: LinkedInBot
+Allow: /
+Crawl-delay: 0
+
+User-agent: WhatsApp
+Allow: /
+Crawl-delay: 0
+
+User-agent: Slackbot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Slackbot-LinkExpanding
+Allow: /
+Crawl-delay: 0
+
+User-agent: Discordbot
+Allow: /
+Crawl-delay: 0
+
+User-agent: TelegramBot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Pinterestbot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Googlebot-News
+Allow: /
+Crawl-delay: 0
+
+# =============================================================================
+# SECTION 4: BLOCK AGGRESSIVE SEO TOOLS
+# Block all aggressive SEO scanning bots to reduce unnecessary crawl stress
+# =============================================================================
+
 User-agent: AhrefsBot
 Disallow: /
 
-User-agent: MJ12bot
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: SemrushBot-SA
 Disallow: /
 
 User-agent: DotBot
+Disallow: /
+
+User-agent: MJ12bot
 Disallow: /
 
 User-agent: BLEXBot
@@ -162,28 +239,146 @@ Disallow: /
 User-agent: PetalBot
 Disallow: /
 
-User-agent: Bytespider
-Disallow: /
-
-User-agent: SemrushBot
-Crawl-delay: 30
-
 User-agent: rogerbot
 Disallow: /
 
-User-agent: SEOkicks
+User-agent: SEOkicks-Robot
 Disallow: /
 
 User-agent: serpstatbot
 Disallow: /
 
-User-agent: ia_archiver
+User-agent: Screaming Frog SEO Spider
+Disallow: /
+
+User-agent: Screaming Frog
+Disallow: /
+
+User-agent: MojeekBot
 Allow: /
 
-# ============================================================
-# SITEMAPS
-# ============================================================
+User-agent: ZoominfoBot
+Disallow: /
+
+User-agent: PiplBot
+Disallow: /
+
+User-agent: Scrapy
+Disallow: /
+
+User-agent: curl
+Disallow: /
+
+User-agent: wget
+Disallow: /
+
+# =============================================================================
+# SECTION 5: DEFAULT RULES FOR ALL BOTS
+# =============================================================================
+
+User-agent: *
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /
+
+# Block common exploit and spam paths
+Disallow: /admin/
+Disallow: /api/
+Disallow: /backend/
+Disallow: /.env
+Disallow: /.git
+Disallow: /.gitignore
+Disallow: /node_modules/
+Disallow: /prototype/
+Disallow: /account/
+Disallow: /dashboard/
+Disallow: /downloads/private/
+Disallow: /search?
+Disallow: /*?error=
+Disallow: /*?callback=
+Disallow: /*?utm_
+
+Crawl-delay: 5
+Request-rate: 10/1m
+
+# =============================================================================
+# SECTION 6: SITEMAP DECLARATIONS
+# Points to all sitemaps for optimal discovery and crawling
+# =============================================================================
+
 Sitemap: https://nationalbenefitalliance.com/sitemap.xml
-Sitemap: https://nationalbenefitalliance.com/sitemap-counties.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-index.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-main.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-states.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-alabama.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-alaska.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-arizona.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-arkansas.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-california.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-colorado.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-connecticut.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-delaware.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-florida.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-georgia.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-hawaii.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-idaho.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-illinois.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-indiana.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-iowa.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-kansas.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-kentucky.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-louisiana.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-maine.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-maryland.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-massachusetts.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-michigan.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-minnesota.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-mississippi.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-missouri.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-montana.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-nebraska.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-nevada.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-new-hampshire.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-new-jersey.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-new-mexico.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-new-york.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-north-carolina.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-north-dakota.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-ohio.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-oklahoma.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-oregon.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-pennsylvania.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-rhode-island.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-south-carolina.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-south-dakota.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-tennessee.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-texas.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-utah.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-vermont.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-virginia.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-washington.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-west-virginia.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-wisconsin.xml
+Sitemap: https://nationalbenefitalliance.com/sitemap-wyoming.xml
+
+# =============================================================================
+# SECTION 7: CANONICAL HOST
+# Declare canonical domain for SEO consolidation
+# =============================================================================
 
 Host: https://nationalbenefitalliance.com
+
+# =============================================================================
+# SECTION 8: ADDITIONAL ROBOT DISCOVERY FILES
+# =============================================================================
+#
+# This site also publishes:
+# - llms.txt: A brief resource guide for AI/LLM discovery
+# - llms-full.txt: A comprehensive guide for AI/LLM discovery
+#
+# These files follow the emerging llmstxt.org standard and help AI models
+# understand the purpose, structure, and content of this site.
+#
+# For more information on llms.txt: https://llmstxt.org
+# =============================================================================

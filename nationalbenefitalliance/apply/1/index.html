@@ -60,28 +60,28 @@ body {
   position: sticky;
   top: 0;
   z-index: 50;
-  background-color: var(--navy-900);
-  border-bottom: 1px solid var(--navy-800);
+  background-color: white;
+  border-bottom: 1px solid var(--gray-200);
 }
 
 .header__inner {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 1.25rem 1rem;
+  padding: 1rem 1.5rem;
   display: flex;
   align-items: center;
 }
 
 .header__logo {
-  font-size: 1rem;
-  font-weight: 600;
-  color: white;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--gray-900);
   text-decoration: none;
   transition: opacity 0.2s;
 }
 
 .header__logo:hover {
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 /* ========== FOOTER ========== */
@@ -148,8 +148,8 @@ main {
 
 /* ========== LANDING PAGE HERO ========== */
 .hero {
-  background: linear-gradient(to bottom, var(--navy-900), color-mix(in srgb, var(--navy-900) 90%, var(--navy-800)));
-  padding: 5rem 1rem 7rem;
+  background: white;
+  padding: 5rem 1rem 5rem;
 }
 
 .hero__inner {
@@ -164,25 +164,28 @@ main {
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--amber-400);
+  color: #16a34a;
   margin-bottom: 1.5rem;
 }
 
 .hero__headline {
   font-family: var(--font-head);
-  font-size: 3.75rem;
+  font-size: 3rem;
   font-weight: 700;
-  line-height: 1.1;
-  color: white;
-  margin-bottom: 2rem;
+  line-height: 1.15;
+  color: var(--gray-900);
+  margin-bottom: 1.5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero__subtitle {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   line-height: 1.6;
-  color: var(--gray-200);
+  color: var(--gray-600);
   margin-bottom: 2.5rem;
-  max-width: 768px;
+  max-width: 700px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -190,7 +193,7 @@ main {
 .hero__cta {
   display: inline-block;
   padding: 1.25rem 3rem;
-  background-color: var(--amber-500);
+  background-color: #16a34a;
   color: white;
   font-size: 1.25rem;
   font-weight: 700;
@@ -199,12 +202,12 @@ main {
   text-decoration: none;
   cursor: pointer;
   transition: all 0.2s;
-  box-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.3);
+  box-shadow: 0 10px 25px -5px rgba(22, 163, 74, 0.3);
 }
 
 .hero__cta:hover {
-  background-color: var(--amber-600);
-  box-shadow: 0 20px 35px -5px rgba(245, 158, 11, 0.4);
+  background-color: #15803d;
+  box-shadow: 0 20px 35px -5px rgba(22, 163, 74, 0.4);
   transform: translateY(-2px);
 }
 
@@ -214,135 +217,45 @@ main {
   border-top: 1px solid var(--gray-200);
   border-bottom: 1px solid var(--gray-200);
   padding: 3rem 1rem;
-  text-align: center;
 }
 
 .trust-section__inner {
-  max-width: 1024px;
+  max-width: 1200px;
   margin: 0 auto;
-}
-
-.trust-section__title {
-  font-weight: 600;
-  color: var(--gray-900);
-  margin-bottom: 1.5rem;
 }
 
 .trust-badges {
   display: flex;
   justify-content: center;
-  gap: 3rem;
+  gap: 2rem;
   flex-wrap: wrap;
   align-items: center;
 }
 
+@media (min-width: 768px) {
+  .trust-badges { gap: 4rem; }
+}
+
 .badge {
   display: flex;
-  flex-direction: column;
   align-items: center;
   gap: 0.75rem;
 }
 
 .badge__icon {
-  font-size: 2rem;
+  flex-shrink: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+  color: #16a34a;
 }
 
 .badge__text {
-  font-size: 0.875rem;
-  color: var(--gray-600);
-}
-
-/* ========== VALUE PROPS ========== */
-.value-section {
-  background-color: var(--gray-50);
-  padding: 5rem 1rem;
-}
-
-.value-section__inner {
-  max-width: 1024px;
-  margin: 0 auto;
-}
-
-.value-card {
-  background-color: white;
-  border: 1px solid var(--gray-100);
-  border-radius: 0.75rem;
-  padding: 2rem 3rem;
-  box-shadow: var(--shadow-soft-lg);
-  max-width: 768px;
-  margin: 0 auto;
-}
-
-.value-card__title {
-  font-family: var(--font-head);
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--navy-900);
-  margin-bottom: 1rem;
-  line-height: 1.2;
-}
-
-.value-card__text {
-  font-size: 1.125rem;
-  color: var(--gray-600);
-  line-height: 1.6;
-}
-
-/* ========== STEPS SECTION ========== */
-.steps-section {
-  background-color: white;
-  padding: 5rem 1rem;
-}
-
-.steps-section__inner {
-  max-width: 1024px;
-  margin: 0 auto;
-}
-
-.steps-section__title {
-  font-family: var(--font-head);
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--navy-900);
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.steps-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.step-item {
-  text-align: center;
-}
-
-.step-item__number {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  background-color: var(--amber-500);
-  color: white;
-  font-family: var(--font-head);
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.step-item__title {
+  font-size: 1rem;
   font-weight: 600;
   color: var(--navy-900);
-  margin-bottom: 0.5rem;
 }
 
-.step-item__desc {
-  font-size: 0.875rem;
-  color: var(--gray-600);
-}
+/* (landing page sections removed — simplified layout) */
 
 /* ========== FORM STEP PAGES ========== */
 .form-page {
@@ -867,8 +780,12 @@ main {
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
+  .hero {
+    padding: 3rem 1rem;
+  }
+
   .hero__headline {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
 
   .hero__subtitle {
@@ -879,8 +796,9 @@ main {
     font-size: 1.5rem;
   }
 
-  .steps-grid {
-    grid-template-columns: 1fr;
+  .trust-badges {
+    flex-direction: column;
+    gap: 1.25rem;
   }
 }
 
@@ -909,56 +827,22 @@ main {
 
     <section class="trust-section">
       <div class="trust-section__inner">
-        <div class="trust-section__title">Trusted by Thousands</div>
         <div class="trust-badges">
           <div class="badge">
-            <div class="badge__icon">A+</div>
-            <div class="badge__text">BBB Accredited</div>
+            <svg class="badge__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <span class="badge__text">BBB Accredited</span>
           </div>
           <div class="badge">
-            <div class="badge__icon">✓</div>
-            <div class="badge__text">Verified</div>
+            <svg class="badge__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            <span class="badge__text">100% Free to Apply</span>
           </div>
           <div class="badge">
-            <div class="badge__icon">✓</div>
-            <div class="badge__text">Trusted</div>
+            <svg class="badge__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <span class="badge__text">Quick 5-Minute Call</span>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="value-section">
-      <div class="value-section__inner">
-        <div class="value-card">
-          <h2 class="value-card__title">Find Government Benefits You Qualify For</h2>
-          <p class="value-card__text">We help you discover utility, housing, food, healthcare, and employment programs available in your county. No cost, no fees—ever.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="steps-section">
-      <div class="steps-section__inner">
-        <h2 class="steps-section__title">What Happens When You Call</h2>
-        <div class="steps-grid">
-          <div class="step-item">
-            <div class="step-item__number">1</div>
-            <div class="step-item__title">Tell Us Your Situation</div>
-            <div class="step-item__desc">Answer a few quick questions about your household and needs.</div>
-          </div>
-          <div class="step-item">
-            <div class="step-item__number">2</div>
-            <div class="step-item__title">We Review Options</div>
-            <div class="step-item__desc">A specialist matches you with programs you may qualify for.</div>
-          </div>
-          <div class="step-item">
-            <div class="step-item__number">3</div>
-            <div class="step-item__title">Get Help Right Away</div>
-            <div class="step-item__desc">We guide you through the application process step by step.</div>
-          </div>
-          <div class="step-item">
-            <div class="step-item__number">4</div>
-            <div class="step-item__title">Ongoing Support</div>
-            <div class="step-item__desc">We stay with you to ensure you get the benefits you deserve.</div>
+          <div class="badge">
+            <svg class="badge__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            <span class="badge__text">Trusted by Thousands</span>
           </div>
         </div>
       </div>

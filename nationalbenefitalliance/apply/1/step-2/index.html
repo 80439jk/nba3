@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Apply for Free Benefits — National Benefit Alliance</title>
+  <title>Step 2: Basic Information — National Benefit Alliance</title>
   <meta name="robots" content="noindex, nofollow" />
   <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -214,21 +214,63 @@
   </nav>
 
   <main>
-    <section class="apply-hero">
-      <div class="apply-hero__inner">
-        <span class="apply-hero__badge">&#128313; 100% Free &middot; No Fees Ever</span>
-        <h1 class="apply-hero__h1">Find Government Benefits<br/>You May Qualify For</h1>
-        <p class="apply-hero__sub">Answer a few quick questions and we&rsquo;ll match you with utility, housing, food, healthcare, and employment programs in your county.</p>
-        <div class="apply-hero__cta">
-          <a href="/apply/1/step-1/" class="btn--next">Get Started — It&rsquo;s Free &rarr;</a>
+    <div class="funnel">
+      <div class="funnel__progress">
+        <div class="funnel__bar done"></div>
+        <div class="funnel__bar active"></div>
+        <div class="funnel__bar "></div>
+        <div class="funnel__bar "></div>
+        <div class="funnel__bar "></div>
         </div>
-        <div class="apply-hero__stats">
-          <div class="apply-hero__stat"><strong>3,200+</strong><span>Counties Covered</span></div>
-          <div class="apply-hero__stat"><strong>500+</strong><span>Programs</span></div>
-          <div class="apply-hero__stat"><strong>100%</strong><span>Free</span></div>
+      <p class="funnel__step-label">Step 2 of 5</p>
+      <h1 class="funnel__title">Tell Us About Yourself</h1>
+      <p class="funnel__subtitle">This helps us find the right programs for your situation.</p>
+
+      <form class="funnel__form" id="step2Form" novalidate>
+        <div class="funnel__field">
+          <label for="dob">Date of Birth</label>
+          <input type="date" name="dob" id="dob" required />
+          <p class="field-error">Please enter your date of birth</p>
         </div>
+
+        <div class="funnel__field">
+          <label>Are you a U.S. citizen or legal resident?</label>
+          <div class="radio-grid">
+            <label class="radio-card">
+              <input type="radio" name="citizenship" value="citizen" />
+              <span class="radio-dot"></span>
+              <span class="radio-label">U.S. Citizen</span>
+            </label>
+            <label class="radio-card">
+              <input type="radio" name="citizenship" value="legal_resident" />
+              <span class="radio-dot"></span>
+              <span class="radio-label">Legal Resident</span>
+            </label>
+            <label class="radio-card">
+              <input type="radio" name="citizenship" value="neither" />
+              <span class="radio-dot"></span>
+              <span class="radio-label">Neither</span>
+            </label>
+            <label class="radio-card">
+              <input type="radio" name="citizenship" value="prefer_not" />
+              <span class="radio-dot"></span>
+              <span class="radio-label">Prefer Not to Say</span>
+            </label>
+          </div>
+          <p class="field-error">Please select an option</p>
+        </div>
+
+        <div class="funnel__actions">
+          <a href="/apply/1/step-1/" class="btn--back">&larr; Back</a>
+          <button type="submit" class="btn--next">Continue &rarr;</button>
+        </div>
+      </form>
+
+      <div class="funnel__trust">
+        <span>&#128274;</span>
+        <span>Your information is secure and never shared without your consent.</span>
       </div>
-    </section>
+    </div>
   </main>
 
   
@@ -296,6 +338,34 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    restoreField('dob');
+    // Restore citizenship radio
+    const d = getFunnelData();
+    if (d.citizenship) {
+      const r = document.querySelector('input[name="citizenship"][value="' + d.citizenship + '"]');
+      if (r) { r.checked = true; r.closest('.radio-card').classList.add('selected'); }
+    }
+    document.getElementById('step2Form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      clearAllErrors();
+      let valid = true;
+      const dob = document.getElementById('dob');
+      if (!dob.value) { showError(dob, 'Please enter your date of birth'); valid = false; }
+      const cit = document.querySelector('input[name="citizenship"]:checked');
+      if (!cit) {
+        const grid = document.querySelector('.radio-grid');
+        const errEl = grid.parentElement.querySelector('.field-error');
+        if (errEl) { errEl.classList.add('show'); }
+        valid = false;
+      }
+      if (!valid) return;
+      saveFunnelData({ dob: dob.value, citizenship: cit.value });
+      window.location.href = '/apply/1/step-3/';
+    });
+  });
+  </script>
   
   <footer class="footer" role="contentinfo">
     <div class="container">

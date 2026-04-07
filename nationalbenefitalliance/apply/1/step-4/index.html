@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Apply for Free Benefits — National Benefit Alliance</title>
+  <title>Step 4: Household & Income — National Benefit Alliance</title>
   <meta name="robots" content="noindex, nofollow" />
   <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -214,21 +214,81 @@
   </nav>
 
   <main>
-    <section class="apply-hero">
-      <div class="apply-hero__inner">
-        <span class="apply-hero__badge">&#128313; 100% Free &middot; No Fees Ever</span>
-        <h1 class="apply-hero__h1">Find Government Benefits<br/>You May Qualify For</h1>
-        <p class="apply-hero__sub">Answer a few quick questions and we&rsquo;ll match you with utility, housing, food, healthcare, and employment programs in your county.</p>
-        <div class="apply-hero__cta">
-          <a href="/apply/1/step-1/" class="btn--next">Get Started — It&rsquo;s Free &rarr;</a>
+    <div class="funnel">
+      <div class="funnel__progress">
+        <div class="funnel__bar done"></div>
+        <div class="funnel__bar done"></div>
+        <div class="funnel__bar done"></div>
+        <div class="funnel__bar active"></div>
+        <div class="funnel__bar "></div>
         </div>
-        <div class="apply-hero__stats">
-          <div class="apply-hero__stat"><strong>3,200+</strong><span>Counties Covered</span></div>
-          <div class="apply-hero__stat"><strong>500+</strong><span>Programs</span></div>
-          <div class="apply-hero__stat"><strong>100%</strong><span>Free</span></div>
+      <p class="funnel__step-label">Step 4 of 5</p>
+      <h1 class="funnel__title">Your Household Situation</h1>
+      <p class="funnel__subtitle">This helps determine which programs you may qualify for.</p>
+
+      <form class="funnel__form" id="step4Form" novalidate>
+        <div class="funnel__field">
+          <label for="annualIncome">Estimated Annual Household Income</label>
+          <select name="annualIncome" id="annualIncome" required>
+            <option value="">Select income range&hellip;</option>
+            <option value="under_15000">Under $15,000</option>
+            <option value="15000_25000">$15,000 – $25,000</option>
+            <option value="25000_35000">$25,000 – $35,000</option>
+            <option value="35000_50000">$35,000 – $50,000</option>
+            <option value="50000_75000">$50,000 – $75,000</option>
+            <option value="75000_plus">$75,000+</option>
+          </select>
+          <p class="field-error">Please select your income range</p>
         </div>
+
+        <div class="funnel__field">
+          <label>Current Employment Status</label>
+          <div class="radio-grid">
+            <label class="radio-card">
+              <input type="radio" name="employmentStatus" value="employed" />
+              <span class="radio-dot"></span>
+              <span class="radio-label">Employed</span>
+            </label>
+            <label class="radio-card">
+              <input type="radio" name="employmentStatus" value="unemployed" />
+              <span class="radio-dot"></span>
+              <span class="radio-label">Unemployed</span>
+            </label>
+            <label class="radio-card">
+              <input type="radio" name="employmentStatus" value="self_employed" />
+              <span class="radio-dot"></span>
+              <span class="radio-label">Self-Employed</span>
+            </label>
+            <label class="radio-card">
+              <input type="radio" name="employmentStatus" value="retired" />
+              <span class="radio-dot"></span>
+              <span class="radio-label">Retired</span>
+            </label>
+            <label class="radio-card">
+              <input type="radio" name="employmentStatus" value="disabled" />
+              <span class="radio-dot"></span>
+              <span class="radio-label">Disabled</span>
+            </label>
+            <label class="radio-card">
+              <input type="radio" name="employmentStatus" value="student" />
+              <span class="radio-dot"></span>
+              <span class="radio-label">Student</span>
+            </label>
+          </div>
+          <p class="field-error">Please select your employment status</p>
+        </div>
+
+        <div class="funnel__actions">
+          <a href="/apply/1/step-3/" class="btn--back">&larr; Back</a>
+          <button type="submit" class="btn--next">Continue &rarr;</button>
+        </div>
+      </form>
+
+      <div class="funnel__trust">
+        <span>&#128274;</span>
+        <span>We use income data only for program matching. It is never stored or shared.</span>
       </div>
-    </section>
+    </div>
   </main>
 
   
@@ -296,6 +356,33 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    restoreField('annualIncome');
+    const d = getFunnelData();
+    if (d.employmentStatus) {
+      const r = document.querySelector('input[name="employmentStatus"][value="' + d.employmentStatus + '"]');
+      if (r) { r.checked = true; r.closest('.radio-card').classList.add('selected'); }
+    }
+    document.getElementById('step4Form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      clearAllErrors();
+      let valid = true;
+      const income = document.getElementById('annualIncome');
+      if (!income.value) { showError(income, 'Please select your income range'); valid = false; }
+      const emp = document.querySelector('input[name="employmentStatus"]:checked');
+      if (!emp) {
+        const grid = document.querySelectorAll('.radio-grid')[0];
+        const errEl = grid.parentElement.querySelector('.field-error');
+        if (errEl) errEl.classList.add('show');
+        valid = false;
+      }
+      if (!valid) return;
+      saveFunnelData({ annualIncome: income.value, employmentStatus: emp.value });
+      window.location.href = '/apply/1/step-5/';
+    });
+  });
+  </script>
   
   <footer class="footer" role="contentinfo">
     <div class="container">

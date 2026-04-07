@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Apply for Free Benefits — National Benefit Alliance</title>
+  <title>Step 5: Contact Information — National Benefit Alliance</title>
   <meta name="robots" content="noindex, nofollow" />
   <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -214,21 +214,66 @@
   </nav>
 
   <main>
-    <section class="apply-hero">
-      <div class="apply-hero__inner">
-        <span class="apply-hero__badge">&#128313; 100% Free &middot; No Fees Ever</span>
-        <h1 class="apply-hero__h1">Find Government Benefits<br/>You May Qualify For</h1>
-        <p class="apply-hero__sub">Answer a few quick questions and we&rsquo;ll match you with utility, housing, food, healthcare, and employment programs in your county.</p>
-        <div class="apply-hero__cta">
-          <a href="/apply/1/step-1/" class="btn--next">Get Started — It&rsquo;s Free &rarr;</a>
+    <div class="funnel">
+      <div class="funnel__progress">
+        <div class="funnel__bar done"></div>
+        <div class="funnel__bar done"></div>
+        <div class="funnel__bar done"></div>
+        <div class="funnel__bar done"></div>
+        <div class="funnel__bar active"></div>
         </div>
-        <div class="apply-hero__stats">
-          <div class="apply-hero__stat"><strong>3,200+</strong><span>Counties Covered</span></div>
-          <div class="apply-hero__stat"><strong>500+</strong><span>Programs</span></div>
-          <div class="apply-hero__stat"><strong>100%</strong><span>Free</span></div>
+      <p class="funnel__step-label">Step 5 of 5 — Almost Done!</p>
+      <h1 class="funnel__title">How Can We Reach You?</h1>
+      <p class="funnel__subtitle">We&rsquo;ll send your personalized benefits summary to this contact info.</p>
+
+      <form class="funnel__form" id="step5Form" novalidate>
+        <div class="funnel__row">
+          <div class="funnel__field">
+            <label for="firstName">First Name</label>
+            <input type="text" name="firstName" id="firstName" placeholder="John" required />
+            <p class="field-error">Please enter your first name</p>
+          </div>
+          <div class="funnel__field">
+            <label for="lastName">Last Name</label>
+            <input type="text" name="lastName" id="lastName" placeholder="Smith" required />
+            <p class="field-error">Please enter your last name</p>
+          </div>
         </div>
+
+        <div class="funnel__field">
+          <label for="email">Email Address</label>
+          <input type="email" name="email" id="email" placeholder="john@example.com" required />
+          <p class="field-error">Please enter a valid email address</p>
+        </div>
+
+        <div class="funnel__field">
+          <label for="phone">Phone Number</label>
+          <input type="tel" name="phone" id="phone" placeholder="(555) 123-4567" required />
+          <p class="field-error">Please enter a valid phone number</p>
+        </div>
+
+        <div class="funnel__tcpa">
+          <input type="checkbox" name="tcpaConsent" id="tcpaConsent" required />
+          <label for="tcpaConsent">
+            By checking this box, I consent to receive calls and text messages from National Benefit Alliance
+            and its partners at the phone number provided, including by autodialer. Consent is not a condition
+            of purchase. Message &amp; data rates may apply. I agree to the
+            <a href="/terms/" target="_blank">Terms</a> and
+            <a href="/privacy/" target="_blank">Privacy Policy</a>.
+          </label>
+        </div>
+
+        <div class="funnel__actions">
+          <a href="/apply/1/step-4/" class="btn--back">&larr; Back</a>
+          <button type="submit" class="btn--next" id="submitBtn">Submit My Application &rarr;</button>
+        </div>
+      </form>
+
+      <div class="funnel__trust">
+        <span>&#128274;</span>
+        <span>256-bit encryption. Your data is never sold to third parties.</span>
       </div>
-    </section>
+    </div>
   </main>
 
   
@@ -296,6 +341,106 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
+  <script>
+  // Phone formatting
+  document.getElementById('phone').addEventListener('input', function() {
+    let v = this.value.replace(/\D/g, '');
+    if (v.length > 10) v = v.slice(0, 10);
+    if (v.length >= 7) this.value = '(' + v.slice(0,3) + ') ' + v.slice(3,6) + '-' + v.slice(6);
+    else if (v.length >= 4) this.value = '(' + v.slice(0,3) + ') ' + v.slice(3);
+    else if (v.length > 0) this.value = '(' + v;
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    ['firstName','lastName','email','phone'].forEach(restoreField);
+    // Restore TCPA
+    const d = getFunnelData();
+    if (d.tcpaConsent) document.getElementById('tcpaConsent').checked = true;
+
+    document.getElementById('step5Form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      clearAllErrors();
+      let valid = true;
+
+      const firstName = document.getElementById('firstName');
+      const lastName = document.getElementById('lastName');
+      const email = document.getElementById('email');
+      const phone = document.getElementById('phone');
+      const tcpa = document.getElementById('tcpaConsent');
+
+      if (!firstName.value.trim()) { showError(firstName, 'Please enter your first name'); valid = false; }
+      if (!lastName.value.trim()) { showError(lastName, 'Please enter your last name'); valid = false; }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) { showError(email, 'Please enter a valid email'); valid = false; }
+      const phoneDigits = phone.value.replace(/\D/g, '');
+      if (phoneDigits.length < 10) { showError(phone, 'Please enter a valid 10-digit phone number'); valid = false; }
+      if (!tcpa.checked) {
+        alert('Please agree to the terms to continue.');
+        valid = false;
+      }
+      if (!valid) return;
+
+      // Save final fields
+      saveFunnelData({
+        firstName: firstName.value.trim(),
+        lastName: lastName.value.trim(),
+        email: email.value.trim(),
+        phone: phoneDigits,
+        tcpaConsent: tcpa.checked
+      });
+
+      // Submit to Supabase
+      const btn = document.getElementById('submitBtn');
+      btn.disabled = true;
+      btn.textContent = 'Submitting...';
+
+      const data = getFunnelData();
+      try {
+        const res = await fetch('https://quhxbgsgtfvrasyjvaba.supabase.co/functions/v1/submit-lead', {
+          method: 'POST',
+          headers: {
+            'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF1aHhiZ3NndGZ2cmFzeWp2YWJhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUxNTExMDUsImV4cCI6MjA5MDcyNzEwNX0.su7odHmJvnbKVTwtH5wWDpfapk186AIWSOqYP3cSucw',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            transaction_id: data.transaction_id || '',
+            state: data.state || '',
+            dob: data.dob || '',
+            citizenship: data.citizenship || '',
+            street_address: data.streetAddress || '',
+            city: data.city || '',
+            zip: data.zip || '',
+            annual_income: data.annualIncome || '',
+            employment_status: data.employmentStatus || '',
+            first_name: data.firstName || '',
+            last_name: data.lastName || '',
+            email: data.email || '',
+            phone: data.phone || '',
+            tcpa_consent: data.tcpaConsent || false,
+            jornaya_leadid: '',
+            click_id: data.gclid || '',
+            utm_source: data.utm_source || '',
+            utm_medium: data.utm_medium || '',
+            utm_campaign: data.utm_campaign || '',
+            utm_content: data.utm_content || '',
+            utm_term: data.utm_term || ''
+          })
+        });
+
+        if (res.ok) {
+          sessionStorage.removeItem('nba_funnel');
+          window.location.href = '/apply/1/thank-you/';
+        } else {
+          throw new Error('Server returned ' + res.status);
+        }
+      } catch(err) {
+        console.error('Submission error:', err);
+        btn.disabled = false;
+        btn.textContent = 'Submit My Application →';
+        alert('Something went wrong. Please try again or call 1-888-408-5650 for assistance.');
+      }
+    });
+  });
+  </script>
   
   <footer class="footer" role="contentinfo">
     <div class="container">

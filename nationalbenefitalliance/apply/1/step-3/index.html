@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Apply for Free Benefits — National Benefit Alliance</title>
+  <title>Step 3: Your Address — National Benefit Alliance</title>
   <meta name="robots" content="noindex, nofollow" />
   <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -214,21 +214,49 @@
   </nav>
 
   <main>
-    <section class="apply-hero">
-      <div class="apply-hero__inner">
-        <span class="apply-hero__badge">&#128313; 100% Free &middot; No Fees Ever</span>
-        <h1 class="apply-hero__h1">Find Government Benefits<br/>You May Qualify For</h1>
-        <p class="apply-hero__sub">Answer a few quick questions and we&rsquo;ll match you with utility, housing, food, healthcare, and employment programs in your county.</p>
-        <div class="apply-hero__cta">
-          <a href="/apply/1/step-1/" class="btn--next">Get Started — It&rsquo;s Free &rarr;</a>
+    <div class="funnel">
+      <div class="funnel__progress">
+        <div class="funnel__bar done"></div>
+        <div class="funnel__bar done"></div>
+        <div class="funnel__bar active"></div>
+        <div class="funnel__bar "></div>
+        <div class="funnel__bar "></div>
         </div>
-        <div class="apply-hero__stats">
-          <div class="apply-hero__stat"><strong>3,200+</strong><span>Counties Covered</span></div>
-          <div class="apply-hero__stat"><strong>500+</strong><span>Programs</span></div>
-          <div class="apply-hero__stat"><strong>100%</strong><span>Free</span></div>
+      <p class="funnel__step-label">Step 3 of 5</p>
+      <h1 class="funnel__title">Where Do You Live?</h1>
+      <p class="funnel__subtitle">We use this to find county-level programs near you.</p>
+
+      <form class="funnel__form" id="step3Form" novalidate>
+        <div class="funnel__field">
+          <label for="streetAddress">Street Address</label>
+          <input type="text" name="streetAddress" id="streetAddress" placeholder="123 Main St" required />
+          <p class="field-error">Please enter your street address</p>
         </div>
+
+        <div class="funnel__row">
+          <div class="funnel__field">
+            <label for="city">City</label>
+            <input type="text" name="city" id="city" placeholder="Miami" required />
+            <p class="field-error">Please enter your city</p>
+          </div>
+          <div class="funnel__field">
+            <label for="zip">ZIP Code</label>
+            <input type="text" name="zip" id="zip" placeholder="33101" maxlength="5" pattern="[0-9]{5}" required />
+            <p class="field-error">Please enter a valid 5-digit ZIP</p>
+          </div>
+        </div>
+
+        <div class="funnel__actions">
+          <a href="/apply/1/step-2/" class="btn--back">&larr; Back</a>
+          <button type="submit" class="btn--next">Continue &rarr;</button>
+        </div>
+      </form>
+
+      <div class="funnel__trust">
+        <span>&#128274;</span>
+        <span>We only use your address to find local programs. We never share it.</span>
       </div>
-    </section>
+    </div>
   </main>
 
   
@@ -296,6 +324,25 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    ['streetAddress','city','zip'].forEach(restoreField);
+    document.getElementById('step3Form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      clearAllErrors();
+      let valid = true;
+      const street = document.getElementById('streetAddress');
+      const city = document.getElementById('city');
+      const zip = document.getElementById('zip');
+      if (!street.value.trim()) { showError(street, 'Please enter your street address'); valid = false; }
+      if (!city.value.trim()) { showError(city, 'Please enter your city'); valid = false; }
+      if (!/^\d{5}$/.test(zip.value)) { showError(zip, 'Please enter a valid 5-digit ZIP'); valid = false; }
+      if (!valid) return;
+      saveFunnelData({ streetAddress: street.value.trim(), city: city.value.trim(), zip: zip.value });
+      window.location.href = '/apply/1/step-4/';
+    });
+  });
+  </script>
   
   <footer class="footer" role="contentinfo">
     <div class="container">

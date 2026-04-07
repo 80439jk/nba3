@@ -72,33 +72,38 @@
   <style>
     /* ======== CATEGORY PAGE STYLES ======== */
 
-    /* Hero */
+    /* Hero — light background with navy illustration panel */
     .cat-hero {
-      background: linear-gradient(135deg, #1B3A6B 0%, #2A5298 50%, #1B3A6B 100%);
-      padding: 4rem 0 3.5rem; color: #fff; position: relative; overflow: hidden;
+      background: linear-gradient(135deg, #F8F9FA 0%, #FFFFFF 40%, #F1F3F5 100%);
+      padding: 4rem 0 3.5rem; color: var(--text); position: relative; overflow: hidden;
+      border-bottom: 1px solid var(--gray-200);
     }
-    .cat-hero::after {
-      content: ''; position: absolute; top: 0; right: 0; bottom: 0; width: 40%;
-      background: radial-gradient(ellipse at 70% 50%, rgba(232,160,32,0.08) 0%, transparent 70%);
-      pointer-events: none;
+    .cat-hero::before {
+      content: ''; position: absolute; top: -60%; right: -10%; width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(27,58,107,0.04) 0%, transparent 70%);
+      pointer-events: none; border-radius: 50%;
     }
     .cat-hero__inner { display: flex; align-items: center; gap: 3rem; position: relative; z-index: 1; }
     .cat-hero__text { flex: 1; }
     .cat-hero__badge {
-      display: inline-block; background: rgba(232,160,32,0.2); color: #F5C842;
+      display: inline-block; background: rgba(27,58,107,0.08); color: var(--navy);
       padding: 0.35rem 0.9rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600;
       margin-bottom: 1rem; letter-spacing: 0.03em;
     }
     .cat-hero__h1 {
       font-family: var(--font-head); font-size: 2.4rem; font-weight: 800;
-      line-height: 1.2; margin-bottom: 1rem;
+      line-height: 1.2; margin-bottom: 1rem; color: var(--navy);
     }
-    .cat-hero__sub { font-size: 1.1rem; color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 1.5rem; max-width: 540px; }
+    .cat-hero__sub { font-size: 1.1rem; color: var(--gray-600); line-height: 1.6; margin-bottom: 1.5rem; max-width: 540px; }
     .cat-hero__cta { display: flex; gap: 1rem; flex-wrap: wrap; }
-    .cat-hero__cta .btn--outline { border-color: rgba(255,255,255,0.3); color: #fff; }
-    .cat-hero__cta .btn--outline:hover { background: rgba(255,255,255,0.1); }
-    .cat-hero__ill { flex: 0 0 300px; display: flex; align-items: center; justify-content: center; }
-    .cat-hero__ill svg { width: 260px; height: 260px; }
+    .cat-hero__cta .btn--outline { border-color: var(--navy); color: var(--navy); }
+    .cat-hero__cta .btn--outline:hover { background: var(--navy); color: #fff; }
+    .cat-hero__ill {
+      flex: 0 0 300px; display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(135deg, #1B3A6B 0%, #2A5298 100%);
+      border-radius: 20px; padding: 1.5rem; box-shadow: var(--shadow-md);
+    }
+    .cat-hero__ill svg { width: 240px; height: 240px; }
 
     /* Steps */
     .cat-steps { padding: 4rem 0; }
@@ -219,12 +224,14 @@
 
     /* ======== RESPONSIVE ======== */
     @media (max-width: 1200px) {
-      .cat-hero__ill { flex: 0 0 260px; }
-      .cat-hero__ill svg { width: 220px; height: 220px; }
+      .cat-hero__ill { flex: 0 0 240px; padding: 1.25rem; }
+      .cat-hero__ill svg { width: 200px; height: 200px; }
     }
     @media (max-width: 992px) {
       .cat-hero__inner { gap: 2rem; }
       .cat-hero__h1 { font-size: 2rem; }
+      .cat-hero__ill { flex: 0 0 220px; padding: 1rem; }
+      .cat-hero__ill svg { width: 180px; height: 180px; }
       .cat-howto__sidebar { flex: 0 0 280px; }
     }
     @media (max-width: 768px) {
@@ -233,8 +240,8 @@
       .cat-hero__h1 { font-size: 1.8rem; }
       .cat-hero__sub { font-size: 1rem; margin-left: auto; margin-right: auto; }
       .cat-hero__cta { justify-content: center; }
-      .cat-hero__ill { flex: 0 0 auto; order: -1; }
-      .cat-hero__ill svg { width: 180px; height: 180px; }
+      .cat-hero__ill { flex: 0 0 auto; order: -1; padding: 1.25rem; border-radius: 16px; max-width: 240px; margin: 0 auto; }
+      .cat-hero__ill svg { width: 160px; height: 160px; }
       .cat-steps__grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
       .cat-programs__grid { grid-template-columns: 1fr; }
       .cat-elig__inner { flex-direction: column; text-align: center; padding: 1.5rem; }
@@ -245,7 +252,8 @@
     @media (max-width: 576px) {
       .cat-hero { padding: 2rem 0 1.5rem; }
       .cat-hero__h1 { font-size: 1.5rem; }
-      .cat-hero__ill svg { width: 150px; height: 150px; }
+      .cat-hero__ill { padding: 1rem; border-radius: 14px; max-width: 200px; }
+      .cat-hero__ill svg { width: 140px; height: 140px; }
       .cat-steps, .cat-programs, .cat-howto { padding: 2.5rem 0; }
       .cat-steps__title, .cat-programs__title, .cat-howto__title { font-size: 1.4rem; }
       .step-card { padding: 1.5rem 1rem; }
@@ -255,6 +263,8 @@
     @media (max-width: 400px) {
       .cat-hero__h1 { font-size: 1.3rem; }
       .cat-hero__sub { font-size: 0.9rem; }
+      .cat-hero__ill { padding: 0.75rem; border-radius: 12px; max-width: 180px; }
+      .cat-hero__ill svg { width: 120px; height: 120px; }
       .cat-hero__cta .btn { width: 100%; text-align: center; }
       .cat-cta__actions .btn { width: 100%; text-align: center; }
       .cat-cta h2 { font-size: 1.3rem; }

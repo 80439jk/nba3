@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Utility Assistance Programs | Free Help with Electric, Gas & Water Bills – National Benefit Alliance</title>
+  <meta name="description" content="Learn how to get free help paying your electric, gas, and water bills. LIHEAP, weatherization, crisis assistance, and more — find programs in your county." />
+  <link rel="canonical" href="https://nationalbenefitalliance.com/resources/utility-assistance/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ---- Variables (matches site) ---- */
+    :root {
+      --navy:       #1B3A6B;
+      --navy-dark:  #0F2447;
+      --navy-light: #2A5298;
+      --gold:       #E8A020;
+      --gold-light: #F5C842;
+      --blue:       #2D7DD2;
+      --blue-light: #4A9FE8;
+      --green:      #28A745;
+      --gray-50:    #F8F9FA;
+      --gray-100:   #F1F3F5;
+      --gray-200:   #E9ECEF;
+      --gray-400:   #ADB5BD;
+      --gray-600:   #6C757D;
+      --gray-800:   #343A40;
+      --text:       #1A1A2E;
+      --white:      #FFFFFF;
+      --shadow-sm:  0 2px 8px rgba(0,0,0,0.08);
+      --shadow-md:  0 4px 20px rgba(0,0,0,0.12);
+      --radius:     8px;
+      --radius-lg:  16px;
+      --transition: 0.25s ease;
+      --font-main:  'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --font-head:  'Poppins', 'Inter', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: var(--font-main); color: var(--text); line-height: 1.6; background: var(--white); }
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    img { max-width: 100%; height: auto; }
+
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 1.5rem; }
+
+
+    /* ---- NAV (matches site) ---- */
+    .nav { background: var(--navy); padding: 0.75rem 0; position: sticky; top: 0; z-index: 100; }
+    .nav__inner { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; }
+    .nav__logo { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; }
+    .nav__logo-icon svg { width: 28px; height: 28px; }
+    .nav__logo-icon svg path { fill: var(--gold); }
+    .nav__logo-name { font-weight: 700; color: var(--white); font-size: 1rem; display: block; }
+    .nav__logo-tagline { font-size: 0.7rem; color: rgba(255,255,255,0.55); display: block; }
+    .nav__links { list-style: none; display: flex; gap: 1.5rem; }
+    .nav__links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; font-weight: 500; }
+    .nav__links a:hover, .nav__links a.active { color: var(--white); }
+    .nav__cta { display: flex; align-items: center; gap: 1rem; }
+    .nav__phone { color: var(--gold-light); font-size: 0.85rem; font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: 0.4rem; }
+    .btn { display: inline-block; padding: 0.6rem 1.25rem; border-radius: var(--radius); font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: all var(--transition); border: none; cursor: pointer; }
+    .btn--primary { background: var(--gold); color: var(--navy-dark); }
+    .btn--primary:hover { background: var(--gold-light); text-decoration: none; }
+    .btn--navy { background: var(--navy); color: var(--white); }
+    .btn--navy:hover { background: var(--navy-dark); text-decoration: none; }
+    .btn--outline { background: transparent; border: 2px solid var(--navy); color: var(--navy); }
+    .btn--outline:hover { background: var(--navy); color: var(--white); text-decoration: none; }
+    .btn--lg { padding: 0.85rem 2rem; font-size: 1rem; }
+    .btn--sm { padding: 0.45rem 1rem; font-size: 0.8rem; }
+
+    @media (max-width: 768px) {
+      .nav__links, .nav__cta { display: none; }
+    }
+
+
+    /* ---- BREADCRUMB ---- */
+    .breadcrumb { background: var(--gray-50); border-bottom: 1px solid var(--gray-200); padding: 0.6rem 0; }
+    .breadcrumb ol { list-style: none; display: flex; gap: 0.5rem; font-size: 0.8rem; color: var(--gray-600); }
+    .breadcrumb a { color: var(--blue); text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb .current { color: var(--gray-800); font-weight: 500; }
+
+
+    /* ---- HERO ---- */
+    .hero {
+      background: linear-gradient(135deg, #1B3A6B 0%, #2A5298 50%, #1B3A6B 100%);
+      padding: 4rem 0 3.5rem;
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: '';
+      position: absolute; top: 0; right: 0; bottom: 0;
+      width: 40%;
+      background: radial-gradient(ellipse at 70% 50%, rgba(232,160,32,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero__inner { display: flex; align-items: center; gap: 3rem; position: relative; z-index: 1; }
+    .hero__text { flex: 1; }
+    .hero__badge {
+      display: inline-block; background: rgba(232,160,32,0.2); color: var(--gold-light);
+      padding: 0.35rem 0.9rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600;
+      margin-bottom: 1rem; letter-spacing: 0.03em;
+    }
+    .hero__h1 {
+      font-family: var(--font-head); font-size: 2.4rem; font-weight: 800;
+      line-height: 1.2; margin-bottom: 1rem;
+    }
+    .hero__sub { font-size: 1.1rem; color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 1.5rem; max-width: 540px; }
+    .hero__cta { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .hero__illustration {
+      flex: 0 0 320px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .hero__illustration svg { width: 280px; height: 280px; }
+
+    @media (max-width: 768px) {
+      .hero { padding: 2.5rem 0 2rem; }
+      .hero__inner { flex-direction: column; text-align: center; }
+      .hero__h1 { font-size: 1.8rem; }
+      .hero__sub { font-size: 1rem; }
+      .hero__cta { justify-content: center; }
+      .hero__illustration { flex: 0 0 auto; order: -1; }
+      .hero__illustration svg { width: 180px; height: 180px; }
+    }
+
+
+    /* ---- HOW IT WORKS (1-2-3) ---- */
+    .steps { padding: 4rem 0; background: var(--white); }
+    .steps__header { text-align: center; margin-bottom: 3rem; }
+    .steps__badge {
+      display: inline-block; background: var(--gray-100); color: var(--navy);
+      padding: 0.35rem 0.9rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+    .steps__title { font-family: var(--font-head); font-size: 1.8rem; color: var(--navy); margin-bottom: 0.5rem; }
+    .steps__subtitle { color: var(--gray-600); font-size: 1rem; max-width: 560px; margin: 0 auto; }
+    .steps__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+    .step-card {
+      background: var(--gray-50); border-radius: var(--radius-lg); padding: 2rem 1.5rem;
+      text-align: center; position: relative; border: 1px solid var(--gray-200);
+      transition: box-shadow var(--transition), transform var(--transition);
+    }
+    .step-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+    .step-card__number {
+      width: 48px; height: 48px; border-radius: 50%;
+      background: var(--navy); color: var(--white);
+      font-family: var(--font-head); font-size: 1.2rem; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1rem;
+    }
+    .step-card__icon { font-size: 2.2rem; margin-bottom: 0.75rem; }
+    .step-card h3 { font-size: 1.1rem; color: var(--navy); margin-bottom: 0.5rem; }
+    .step-card p { font-size: 0.9rem; color: var(--gray-600); line-height: 1.6; }
+
+    @media (max-width: 768px) {
+      .steps__grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+    }
+
+
+    /* ---- WHAT YOU CAN GET ---- */
+    .programs { padding: 4rem 0; background: var(--gray-50); }
+    .programs__header { text-align: center; margin-bottom: 3rem; }
+    .programs__badge {
+      display: inline-block; background: rgba(232,160,32,0.15); color: var(--navy);
+      padding: 0.35rem 0.9rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+    .programs__title { font-family: var(--font-head); font-size: 1.8rem; color: var(--navy); margin-bottom: 0.5rem; }
+    .programs__subtitle { color: var(--gray-600); font-size: 1rem; max-width: 600px; margin: 0 auto; }
+    .programs__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+    .program-card {
+      background: var(--white); border-radius: var(--radius-lg); padding: 1.75rem;
+      border: 1px solid var(--gray-200);
+      transition: box-shadow var(--transition), transform var(--transition);
+    }
+    .program-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+    .program-card__top { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 0.75rem; }
+    .program-card__icon {
+      width: 44px; height: 44px; border-radius: 10px; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center; font-size: 1.4rem;
+    }
+    .program-card__icon--liheap { background: #FFF3E0; }
+    .program-card__icon--weatherization { background: #E8F5E9; }
+    .program-card__icon--crisis { background: #FFEBEE; }
+    .program-card__icon--water { background: #E3F2FD; }
+    .program-card__icon--discount { background: #F3E5F5; }
+    .program-card__icon--solar { background: #FFFDE7; }
+    .program-card h3 { font-size: 1rem; color: var(--navy); margin-bottom: 0.15rem; }
+    .program-card__tag {
+      display: inline-block; font-size: 0.7rem; font-weight: 600;
+      padding: 0.15rem 0.5rem; border-radius: 4px; margin-top: 0.2rem;
+    }
+    .tag--federal { background: #E3F2FD; color: #1565C0; }
+    .tag--state { background: #E8F5E9; color: #2E7D32; }
+    .tag--local { background: #FFF3E0; color: #E65100; }
+    .program-card p { font-size: 0.88rem; color: var(--gray-600); line-height: 1.6; }
+    .program-card__detail { margin-top: 0.75rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .program-card__chip {
+      font-size: 0.75rem; padding: 0.25rem 0.6rem; border-radius: 20px;
+      background: var(--gray-100); color: var(--gray-800); font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+      .programs__grid { grid-template-columns: 1fr; }
+    }
+
+
+    /* ---- HOW TO APPLY ---- */
+    .howto { padding: 4rem 0; background: var(--white); }
+    .howto__inner { display: flex; gap: 3rem; align-items: flex-start; }
+    .howto__text { flex: 1; }
+    .howto__badge {
+      display: inline-block; background: var(--gray-100); color: var(--navy);
+      padding: 0.35rem 0.9rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+    .howto__title { font-family: var(--font-head); font-size: 1.8rem; color: var(--navy); margin-bottom: 1rem; }
+    .howto__checklist { list-style: none; margin-bottom: 1.5rem; }
+    .howto__checklist li {
+      padding: 0.75rem 0; border-bottom: 1px solid var(--gray-200);
+      display: flex; align-items: flex-start; gap: 0.75rem;
+      font-size: 0.95rem; color: var(--gray-800);
+    }
+    .howto__checklist li:last-child { border-bottom: none; }
+    .howto__check {
+      width: 24px; height: 24px; border-radius: 50%; flex-shrink: 0;
+      background: #E8F5E9; color: var(--green);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.8rem; font-weight: 700; margin-top: 0.1rem;
+    }
+    .howto__sidebar {
+      flex: 0 0 340px;
+      background: var(--navy); color: var(--white); border-radius: var(--radius-lg);
+      padding: 2rem; position: sticky; top: 5rem;
+    }
+    .howto__sidebar h3 { font-family: var(--font-head); font-size: 1.2rem; margin-bottom: 0.5rem; }
+    .howto__sidebar p { font-size: 0.9rem; color: rgba(255,255,255,0.75); margin-bottom: 1.25rem; line-height: 1.5; }
+    .howto__sidebar .btn { width: 100%; text-align: center; margin-bottom: 0.75rem; display: block; }
+    .howto__sidebar-note {
+      font-size: 0.78rem; color: rgba(255,255,255,0.5); text-align: center;
+      margin-top: 0.5rem; line-height: 1.4;
+    }
+
+    @media (max-width: 768px) {
+      .howto__inner { flex-direction: column; }
+      .howto__sidebar { flex: auto; position: static; }
+    }
+
+
+    /* ---- ELIGIBILITY CALLOUT ---- */
+    .eligibility {
+      padding: 3.5rem 0;
+      background: linear-gradient(135deg, #F8F9FA 0%, #E9ECEF 100%);
+    }
+    .eligibility__inner {
+      background: var(--white); border-radius: var(--radius-lg);
+      padding: 2.5rem; box-shadow: var(--shadow-sm);
+      display: flex; gap: 2.5rem; align-items: center;
+    }
+    .eligibility__icon { font-size: 3rem; flex-shrink: 0; }
+    .eligibility__text h2 { font-family: var(--font-head); font-size: 1.4rem; color: var(--navy); margin-bottom: 0.5rem; }
+    .eligibility__text p { font-size: 0.95rem; color: var(--gray-600); line-height: 1.6; margin-bottom: 1rem; }
+    .eligibility__chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .eligibility__chip {
+      padding: 0.4rem 0.9rem; border-radius: 20px; font-size: 0.82rem; font-weight: 500;
+      background: var(--gray-100); color: var(--gray-800);
+    }
+
+    @media (max-width: 768px) {
+      .eligibility__inner { flex-direction: column; text-align: center; padding: 1.5rem; }
+      .eligibility__chips { justify-content: center; }
+    }
+
+
+    /* ---- CTA BAND ---- */
+    .cta-band {
+      background: var(--navy); padding: 3rem 0; text-align: center; color: var(--white);
+    }
+    .cta-band h2 { font-family: var(--font-head); font-size: 1.6rem; margin-bottom: 0.5rem; }
+    .cta-band p { color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; font-size: 1rem; }
+    .cta-band__actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+
+    /* ---- FOOTER (matches site) ---- */
+    .footer { background: var(--navy-dark); color: rgba(255,255,255,0.7); padding: 3rem 0 1.5rem; font-size: 0.85rem; }
+    .footer__grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
+    .footer h3, .footer h4 { color: var(--white); margin-bottom: 0.75rem; }
+    .footer__desc { font-size: 0.85rem; color: rgba(255,255,255,0.6); line-height: 1.6; margin-bottom: 1rem; }
+    .footer__links { list-style: none; }
+    .footer__links li { margin-bottom: 0.4rem; }
+    .footer__links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.85rem; }
+    .footer__links a:hover { color: var(--white); }
+    .footer__phone { color: var(--gold-light); text-decoration: none; display: inline-block; margin-bottom: 0.5rem; }
+    .footer__bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem; text-align: center; }
+    .footer__bottom p { font-size: 0.8rem; color: rgba(255,255,255,0.4); margin-bottom: 0.5rem; }
+    .footer__bottom-links { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1rem; }
+    .footer__bottom-links a { color: rgba(255,255,255,0.4); text-decoration: none; font-size: 0.8rem; }
+    .footer__bottom-links a:hover { color: var(--white); }
+    .footer__disclaimer { font-size: 0.72rem; color: rgba(255,255,255,0.3); max-width: 900px; margin: 0 auto; line-height: 1.5; }
+
+    @media (max-width: 768px) {
+      .footer__grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo" aria-label="National Benefit Alliance Home">
+        <div class="nav__logo-icon">
+          <svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M13 2L3 7v6c0 5.5 4.3 10.7 10 12 5.7-1.3 10-6.5 10-12V7L13 2z"/>
+          </svg>
+        </div>
+        <div class="nav__logo-text">
+          <span class="nav__logo-name">National Benefit Alliance</span>
+          <span class="nav__logo-tagline">Free Resource Center &middot; All 50 States</span>
+        </div>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="/">Home</a></li>
+        <li><a href="/resources/">All States</a></li>
+        <li><a href="/stories/">Stories</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/faq/">FAQ</a></li>
+      </ul>
+      <div class="nav__cta">
+        <a href="tel:18884085650" class="nav__phone" aria-label="Call us">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.02 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14v2.92z"/>
+          </svg>
+          1-888-408-5650
+        </a>
+        <a href="/apply/1" class="btn btn--primary btn--sm">Apply Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <ol>
+        <li><a href="/">Home</a> &nbsp;›&nbsp;</li>
+        <li><a href="/resources/">Resources</a> &nbsp;›&nbsp;</li>
+        <li><span class="current">Utility Assistance</span></li>
+      </ol>
+    </div>
+  </nav>
+
+
+  <!-- ======== HERO ======== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__inner">
+        <div class="hero__text">
+          <span class="hero__badge">&#9889; Utility Assistance</span>
+          <h1 class="hero__h1">Keep the Lights On<br/>and the Water Running</h1>
+          <p class="hero__sub">
+            Millions of Americans qualify for programs that help pay electric, gas, and water bills. These programs exist so no family has to choose between heating their home and putting food on the table.
+          </p>
+          <div class="hero__cta">
+            <a href="/apply/1" class="btn btn--primary btn--lg">Find Programs Near Me</a>
+            <a href="tel:18884085650" class="btn btn--outline btn--lg" style="border-color:rgba(255,255,255,0.3);color:var(--white);">Call 1-888-408-5650</a>
+          </div>
+        </div>
+        <div class="hero__illustration">
+          <!-- Inline SVG illustration: house with power/utility theme -->
+          <svg viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <!-- Background circle -->
+            <circle cx="140" cy="140" r="130" fill="rgba(232,160,32,0.08)"/>
+            <circle cx="140" cy="140" r="100" fill="rgba(232,160,32,0.06)"/>
+            <!-- House body -->
+            <rect x="80" y="130" width="120" height="90" rx="4" fill="#2A5298" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+            <!-- Roof -->
+            <polygon points="60,135 140,75 220,135" fill="#1B3A6B" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+            <!-- Door -->
+            <rect x="125" y="175" width="30" height="45" rx="3" fill="#E8A020"/>
+            <circle cx="150" cy="200" r="2.5" fill="#1B3A6B"/>
+            <!-- Window left -->
+            <rect x="90" y="148" width="26" height="22" rx="2" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+            <line x1="103" y1="148" x2="103" y2="170" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+            <line x1="90" y1="159" x2="116" y2="159" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+            <!-- Window right -->
+            <rect x="164" y="148" width="26" height="22" rx="2" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+            <line x1="177" y1="148" x2="177" y2="170" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+            <line x1="164" y1="159" x2="190" y2="159" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+            <!-- Lightning bolt (utility symbol) -->
+            <polygon points="145,56 135,95 148,95 130,125 160,85 147,85 155,56" fill="#E8A020"/>
+            <!-- Power lines -->
+            <line x1="30" y1="110" x2="75" y2="100" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+            <line x1="205" y1="100" x2="250" y2="110" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+            <circle cx="75" cy="100" r="3" fill="rgba(255,255,255,0.3)"/>
+            <circle cx="205" cy="100" r="3" fill="rgba(255,255,255,0.3)"/>
+            <!-- Water drop -->
+            <path d="M55 185 C55 175, 65 165, 65 175 C65 185, 55 195, 55 185Z" fill="#4A9FE8" opacity="0.6" transform="scale(1.5) translate(-15,-65)"/>
+            <!-- Warm glow from windows -->
+            <rect x="92" y="150" width="22" height="18" rx="1" fill="#F5C842" opacity="0.15"/>
+            <rect x="166" y="150" width="22" height="18" rx="1" fill="#F5C842" opacity="0.15"/>
+            <!-- Ground -->
+            <ellipse cx="140" cy="225" rx="85" ry="8" fill="rgba(255,255,255,0.05)"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======== 1-2-3 HOW IT WORKS ======== -->
+  <section class="steps">
+    <div class="container">
+      <div class="steps__header">
+        <span class="steps__badge">How It Works</span>
+        <h2 class="steps__title">Three Simple Steps to Lower Bills</h2>
+        <p class="steps__subtitle">You don't need to be an expert. These programs were designed to be accessible — and we make finding them even easier.</p>
+      </div>
+      <div class="steps__grid">
+
+        <div class="step-card">
+          <div class="step-card__number">1</div>
+          <div class="step-card__icon">📍</div>
+          <h3>Find Your County</h3>
+          <p>Enter your ZIP code or select your state. We'll show you every utility assistance program available in your area, with local contacts and phone numbers.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-card__number">2</div>
+          <div class="step-card__icon">📋</div>
+          <h3>Check What You Qualify For</h3>
+          <p>Most programs are based on household income (typically 150-200% of poverty level). Many families qualify and don't realize it — even working households.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-card__number">3</div>
+          <div class="step-card__icon">✅</div>
+          <h3>Apply Directly</h3>
+          <p>Each program listing includes the agency name, phone number, and application instructions. Apply directly with your local provider — we never charge a fee.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======== WHAT YOU CAN GET ======== -->
+  <section class="programs">
+    <div class="container">
+      <div class="programs__header">
+        <span class="programs__badge">&#9889; Available Programs</span>
+        <h2 class="programs__title">What Utility Help Is Available?</h2>
+        <p class="programs__subtitle">Federal, state, and local programs work together to help families keep essential services connected.</p>
+      </div>
+      <div class="programs__grid">
+
+        <div class="program-card">
+          <div class="program-card__top">
+            <div class="program-card__icon program-card__icon--liheap">🔥</div>
+            <div>
+              <h3>LIHEAP</h3>
+              <span class="program-card__tag tag--federal">Federal</span>
+            </div>
+          </div>
+          <p>The Low Income Home Energy Assistance Program helps families pay heating and cooling bills. Available in all 50 states, funded by the federal government, and administered by your local community action agency.</p>
+          <div class="program-card__detail">
+            <span class="program-card__chip">Heating bills</span>
+            <span class="program-card__chip">Cooling bills</span>
+            <span class="program-card__chip">Crisis payments</span>
+            <span class="program-card__chip">Up to $1,000+</span>
+          </div>
+        </div>
+
+        <div class="program-card">
+          <div class="program-card__top">
+            <div class="program-card__icon program-card__icon--weatherization">🏗️</div>
+            <div>
+              <h3>Weatherization Assistance (WAP)</h3>
+              <span class="program-card__tag tag--federal">Federal</span>
+            </div>
+          </div>
+          <p>Free home improvements that permanently reduce energy costs. Trained crews insulate walls, seal air leaks, upgrade heating systems, and install efficient appliances at no cost to qualifying households.</p>
+          <div class="program-card__detail">
+            <span class="program-card__chip">Insulation</span>
+            <span class="program-card__chip">HVAC upgrades</span>
+            <span class="program-card__chip">Air sealing</span>
+            <span class="program-card__chip">Avg. $7,669 value</span>
+          </div>
+        </div>
+
+        <div class="program-card">
+          <div class="program-card__top">
+            <div class="program-card__icon program-card__icon--crisis">🚨</div>
+            <div>
+              <h3>Crisis / Emergency Assistance</h3>
+              <span class="program-card__tag tag--state">State</span>
+            </div>
+          </div>
+          <p>Facing a shutoff notice? Emergency programs can pay your past-due balance within 24-48 hours to prevent disconnection. Available through your state energy office or local community action agency.</p>
+          <div class="program-card__detail">
+            <span class="program-card__chip">Shutoff prevention</span>
+            <span class="program-card__chip">24-48 hr turnaround</span>
+            <span class="program-card__chip">Past-due balances</span>
+          </div>
+        </div>
+
+        <div class="program-card">
+          <div class="program-card__top">
+            <div class="program-card__icon program-card__icon--water">💧</div>
+            <div>
+              <h3>Water / Sewer Bill Assistance</h3>
+              <span class="program-card__tag tag--local">Local</span>
+            </div>
+          </div>
+          <p>Many water utilities offer low-income rate programs, payment plans, and hardship funds. The federal LIHWAP program also provides direct water bill assistance in participating states.</p>
+          <div class="program-card__detail">
+            <span class="program-card__chip">Reduced rates</span>
+            <span class="program-card__chip">Payment plans</span>
+            <span class="program-card__chip">Hardship funds</span>
+          </div>
+        </div>
+
+        <div class="program-card">
+          <div class="program-card__top">
+            <div class="program-card__icon program-card__icon--discount">💡</div>
+            <div>
+              <h3>Utility Discount Programs</h3>
+              <span class="program-card__tag tag--local">Local</span>
+            </div>
+          </div>
+          <p>Most major utilities offer their own discount programs for low-income customers — typically 15-30% off monthly bills. These stack with LIHEAP. Ask your electric or gas company directly.</p>
+          <div class="program-card__detail">
+            <span class="program-card__chip">15-30% discount</span>
+            <span class="program-card__chip">Monthly savings</span>
+            <span class="program-card__chip">Stacks with LIHEAP</span>
+          </div>
+        </div>
+
+        <div class="program-card">
+          <div class="program-card__top">
+            <div class="program-card__icon program-card__icon--solar">☀️</div>
+            <div>
+              <h3>Community Solar &amp; Efficiency</h3>
+              <span class="program-card__tag tag--state">State</span>
+            </div>
+          </div>
+          <p>Some states offer free energy audits, LED bulb giveaways, smart thermostat programs, and community solar subscriptions that can reduce bills by 10-20% with zero upfront cost.</p>
+          <div class="program-card__detail">
+            <span class="program-card__chip">Energy audits</span>
+            <span class="program-card__chip">Free LEDs</span>
+            <span class="program-card__chip">Solar savings</span>
+            <span class="program-card__chip">No upfront cost</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======== ELIGIBILITY CALLOUT ======== -->
+  <section class="eligibility">
+    <div class="container">
+      <div class="eligibility__inner">
+        <div class="eligibility__icon">🤔</div>
+        <div class="eligibility__text">
+          <h2>Do I Qualify?</h2>
+          <p>Most utility assistance programs serve households earning up to 150-200% of the Federal Poverty Level. For a family of four, that's roughly $45,000-$60,000 per year. Seniors, people with disabilities, and households with young children often receive priority. Even if you're not sure, it's always worth applying — many people qualify and don't realize it.</p>
+          <div class="eligibility__chips">
+            <span class="eligibility__chip">&#128100; Low to moderate income</span>
+            <span class="eligibility__chip">&#128116; Seniors 60+</span>
+            <span class="eligibility__chip">&#9855; Households with children</span>
+            <span class="eligibility__chip">&#9855;&#65039; People with disabilities</span>
+            <span class="eligibility__chip">&#127961; Renters &amp; homeowners</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======== HOW TO APPLY ======== -->
+  <section class="howto">
+    <div class="container">
+      <div class="howto__inner">
+        <div class="howto__text">
+          <span class="howto__badge">Step-by-Step</span>
+          <h2 class="howto__title">How Do I Apply?</h2>
+
+          <ul class="howto__checklist">
+            <li>
+              <span class="howto__check">&#10003;</span>
+              <div><strong>Gather your documents.</strong> You'll typically need a recent utility bill, proof of income (pay stubs, benefits letter, or tax return), and a photo ID. Some programs also ask for proof of household size.</div>
+            </li>
+            <li>
+              <span class="howto__check">&#10003;</span>
+              <div><strong>Find your local agency.</strong> Use our county pages to find the Community Action Agency, energy office, or social services office in your area. Each listing includes a direct phone number.</div>
+            </li>
+            <li>
+              <span class="howto__check">&#10003;</span>
+              <div><strong>Apply in person, by phone, or online.</strong> Most agencies accept walk-in, phone, and online applications. Call ahead to confirm hours and any appointment requirements.</div>
+            </li>
+            <li>
+              <span class="howto__check">&#10003;</span>
+              <div><strong>Payment goes directly to your utility.</strong> Once approved, the assistance is sent straight to your electric, gas, or water company. You don't handle the money — it's applied to your account.</div>
+            </li>
+            <li>
+              <span class="howto__check">&#10003;</span>
+              <div><strong>Reapply each year.</strong> Most programs are annual. Set a reminder to reapply at the start of each heating or cooling season so you never miss the window.</div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="howto__sidebar">
+          <h3>&#9889; Ready to Get Help?</h3>
+          <p>Find utility assistance programs in your county — with local phone numbers, eligibility details, and application instructions.</p>
+          <a href="/apply/1" class="btn btn--primary btn--lg">Find My County</a>
+          <a href="tel:18884085650" class="btn btn--outline btn--lg" style="border-color:rgba(255,255,255,0.3);color:var(--white);">Call 1-888-408-5650</a>
+          <p class="howto__sidebar-note">100% free. We never charge for information or referrals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======== CTA BAND ======== -->
+  <section class="cta-band">
+    <div class="container">
+      <h2>Don't Wait Until the Shutoff Notice</h2>
+      <p>Programs are available right now in your county. Find yours in 30 seconds.</p>
+      <div class="cta-band__actions">
+        <a href="/apply/1" class="btn btn--primary btn--lg">Find Programs Near Me</a>
+        <a href="/resources/" class="btn btn--outline btn--lg" style="border-color:rgba(255,255,255,0.3);color:var(--white);">Browse All States</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <h3>National Benefit Alliance</h3>
+          <p class="footer__desc">A free national resource center helping Americans navigate government and community assistance programs. Find benefits for utilities, housing, food, healthcare, and more &mdash; organized by county.</p>
+          <a href="tel:18884085650" class="footer__phone">&#128222; 1-888-408-5650</a>
+        </div>
+        <div>
+          <h4>Popular States</h4>
+          <ul class="footer__links">
+            <li><a href="/florida/">Florida</a></li>
+            <li><a href="/california/">California</a></li>
+            <li><a href="/texas/">Texas</a></li>
+            <li><a href="/new-york/">New York</a></li>
+            <li><a href="/georgia/">Georgia</a></li>
+            <li><a href="/resources/">All 50 States &rarr;</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul class="footer__links">
+            <li><a href="/resources/">All States</a></li>
+            <li><a href="/stories/">Stories</a></li>
+            <li><a href="/about/">About Us</a></li>
+            <li><a href="/faq/">FAQ</a></li>
+            <li><a href="/apply/1">Apply Now</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="footer__links">
+            <li><a href="/about/">About Us</a></li>
+            <li><a href="/contact/">Contact Us</a></li>
+            <li><a href="/privacy/">Privacy Policy</a></li>
+            <li><a href="/terms/">Terms &amp; Conditions</a></li>
+            <li><a href="/sitemap.xml">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2025 National Benefit Alliance. All rights reserved.</p>
+        <div class="footer__bottom-links">
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms &amp; Conditions</a>
+          <a href="/california-privacy/">CA Privacy</a>
+          <a href="/accessibility/">Accessibility</a>
+        </div>
+        <p class="footer__disclaimer">National Benefit Alliance is a privately held for-profit entity and has no affiliation or relationship, financial or otherwise, with any political party, government agency, or other outside group or persons. We do not submit any forms or documents on our members&#39; behalf. All communication with any government, state, or private party will be done directly with them and all documentation submitted directly to them. Furthermore, National Benefit Alliance is not affiliated with or endorsed by the U.S. Department of Education. We urge you not to pay any third party offer for assistance that you can get for free elsewhere.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

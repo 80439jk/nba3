@@ -3981,30 +3981,50 @@ document.addEventListener('DOMContentLoaded', () => {
   const zipForm = document.getElementById('zip-form');
   if (zipForm) zipForm.addEventListener('submit', handleZipSubmit);
 
-  // Mobile nav toggle
+  // Mobile nav toggle — build a single overlay panel
   const hamburger = document.querySelector('.nav__hamburger');
-  const navLinks = document.querySelector('.nav__links');
-  const navCta = document.querySelector('.nav__cta');
-  if (hamburger && navLinks) {
+  const navInner = document.querySelector('.nav__inner');
+  if (hamburger && navInner) {
+    // Build overlay once
+    const overlay = document.createElement('div');
+    overlay.className = 'mobile-menu-overlay';
+    // Add nav links
+    const navLinks = document.querySelector('.nav__links');
+    if (navLinks) {
+      navLinks.querySelectorAll('a').forEach(a => {
+        const link = a.cloneNode(true);
+        link.className = 'mobile-nav-link';
+        overlay.appendChild(link);
+      });
+    }
+    // Divider
+    const divider = document.createElement('div');
+    divider.className = 'mobile-divider';
+    overlay.appendChild(divider);
+    // Phone
+    const phone = document.createElement('a');
+    phone.href = 'tel:18884085650';
+    phone.className = 'mobile-phone';
+    phone.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.02 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14v2.92z"/></svg> 1-888-408-5650';
+    overlay.appendChild(phone);
+    // Apply Now
+    const apply = document.createElement('a');
+    apply.href = '/apply/1';
+    apply.className = 'mobile-apply';
+    apply.textContent = 'Apply Now';
+    overlay.appendChild(apply);
+    navInner.appendChild(overlay);
+    // Toggle
     let mobileOpen = false;
     hamburger.addEventListener('click', () => {
       mobileOpen = !mobileOpen;
-      navLinks.classList.toggle('mobile-open', mobileOpen);
-      if (navCta) navCta.classList.toggle('mobile-open', mobileOpen);
-      // Position CTA below nav links
-      if (mobileOpen && navCta) {
-        requestAnimationFrame(() => {
-          const linksRect = navLinks.getBoundingClientRect();
-          navCta.style.top = linksRect.bottom + 'px';
-        });
-      }
+      overlay.classList.toggle('open', mobileOpen);
     });
-    // Close on clicking a link
-    navLinks.querySelectorAll('a').forEach(a => {
+    // Close on clicking any link in overlay
+    overlay.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => {
         mobileOpen = false;
-        navLinks.classList.remove('mobile-open');
-        if (navCta) navCta.classList.remove('mobile-open');
+        overlay.classList.remove('open');
       });
     });
   }

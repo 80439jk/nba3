@@ -569,6 +569,32 @@ p { margin-bottom: 1rem; }
   .county-highlights { grid-template-columns: 1fr; }
   .nav__links, .nav__cta { display: none; }
   .nav__hamburger { display: block; }
+  /* Mobile menu open state */
+  .nav__links.mobile-open {
+    display: flex !important; flex-direction: column;
+    position: absolute; top: 70px; left: 0; right: 0;
+    background: #fff; padding: 0.75rem 1rem 0; z-index: 100;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    border-bottom: 3px solid var(--gold);
+  }
+  .nav__links.mobile-open li a {
+    padding: 0.75rem 1rem; border-radius: 8px; font-size: 1rem;
+  }
+  .nav__links.mobile-open li a:hover { background: var(--gray-100); }
+  .nav__cta.mobile-open {
+    display: flex !important; flex-direction: column; gap: 0.6rem;
+    position: absolute; left: 0; right: 0;
+    background: #fff; padding: 0.5rem 1rem 1rem; z-index: 100;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    border-bottom: 3px solid var(--gold);
+  }
+  .nav__cta.mobile-open .nav__phone {
+    justify-content: center; padding: 0.6rem; background: var(--gray-50);
+    border-radius: 8px; font-size: 1rem;
+  }
+  .nav__cta.mobile-open .btn {
+    width: 100%; text-align: center; justify-content: center; font-size: 1rem;
+  }
   .hero { padding: 4rem 0 3rem; }
   .hero__stats { gap: 1.5rem; flex-wrap: wrap; }
   .footer__grid { grid-template-columns: 1fr; }

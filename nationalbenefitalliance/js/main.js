@@ -3984,14 +3984,28 @@ document.addEventListener('DOMContentLoaded', () => {
   // Mobile nav toggle
   const hamburger = document.querySelector('.nav__hamburger');
   const navLinks = document.querySelector('.nav__links');
+  const navCta = document.querySelector('.nav__cta');
   if (hamburger && navLinks) {
+    let mobileOpen = false;
     hamburger.addEventListener('click', () => {
-      navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-      navLinks.style.flexDirection = 'column';
-      navLinks.style.position = 'absolute';
-      navLinks.style.top = '70px'; navLinks.style.left = '0'; navLinks.style.right = '0';
-      navLinks.style.background = '#fff'; navLinks.style.padding = '1rem';
-      navLinks.style.boxShadow = '0 8px 24px rgba(0,0,0,0.12)';
+      mobileOpen = !mobileOpen;
+      navLinks.classList.toggle('mobile-open', mobileOpen);
+      if (navCta) navCta.classList.toggle('mobile-open', mobileOpen);
+      // Position CTA below nav links
+      if (mobileOpen && navCta) {
+        requestAnimationFrame(() => {
+          const linksRect = navLinks.getBoundingClientRect();
+          navCta.style.top = linksRect.bottom + 'px';
+        });
+      }
+    });
+    // Close on clicking a link
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        mobileOpen = false;
+        navLinks.classList.remove('mobile-open');
+        if (navCta) navCta.classList.remove('mobile-open');
+      });
     });
   }
 

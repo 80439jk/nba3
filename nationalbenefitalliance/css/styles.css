@@ -301,6 +301,7 @@ p { margin-bottom: 1rem; }
   border: 2px solid var(--gray-200); cursor: pointer;
   transition: all var(--transition); text-align: left; background: var(--white);
   display: flex; flex-direction: column;
+  text-decoration: none; color: inherit;
 }
 .category-card:hover {
   border-color: var(--navy); transform: translateY(-4px);

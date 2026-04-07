@@ -12,225 +12,756 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-MTQ5WNFR');</script>
     <!-- End Google Tag Manager -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/styles.css" />
   <style>
-    /* ======== FUNNEL STYLES ======== */
-    .funnel { max-width: 640px; margin: 0 auto; padding: 2rem 1.5rem 3rem; }
-    .funnel__progress { display: flex; gap: 0.4rem; margin-bottom: 2rem; }
-    .funnel__bar {
-      flex: 1; height: 6px; border-radius: 3px; background: var(--gray-200);
-      transition: background 0.3s;
-    }
-    .funnel__bar.active { background: var(--gold); }
-    .funnel__bar.done { background: var(--navy); }
-    .funnel__step-label {
-      font-size: 0.8rem; color: var(--gray-500); font-weight: 500;
-      margin-bottom: 0.5rem; letter-spacing: 0.04em; text-transform: uppercase;
-    }
-    .funnel__title {
-      font-family: var(--font-head); font-size: 1.8rem; font-weight: 800;
-      color: var(--navy); line-height: 1.2; margin-bottom: 0.5rem;
-    }
-    .funnel__subtitle {
-      font-size: 1rem; color: var(--gray-600); line-height: 1.5; margin-bottom: 2rem;
-    }
-    .funnel__form { display: flex; flex-direction: column; gap: 1.25rem; }
-    .funnel__field label {
-      display: block; font-size: 0.85rem; font-weight: 600; color: var(--gray-800);
-      margin-bottom: 0.35rem;
-    }
-    .funnel__field input,
-    .funnel__field select {
-      width: 100%; padding: 0.8rem 1rem; font-size: 1rem; border: 2px solid var(--gray-200);
-      border-radius: 10px; background: #fff; color: var(--text);
-      transition: border-color 0.2s, box-shadow 0.2s;
-      box-sizing: border-box;
-    }
-    .funnel__field input:focus,
-    .funnel__field select:focus {
-      outline: none; border-color: var(--navy);
-      box-shadow: 0 0 0 3px rgba(27,58,107,0.1);
-    }
-    .funnel__field input.error,
-    .funnel__field select.error {
-      border-color: #DC3545;
-      box-shadow: 0 0 0 3px rgba(220,53,69,0.1);
-    }
-    .funnel__field .field-error {
-      font-size: 0.78rem; color: #DC3545; margin-top: 0.3rem; display: none;
-    }
-    .funnel__field .field-error.show { display: block; }
-    .funnel__row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-    .funnel__actions { display: flex; gap: 1rem; margin-top: 0.5rem; }
-    .funnel__actions .btn { flex: 1; text-align: center; justify-content: center; font-size: 1rem; padding: 0.9rem 1.5rem; }
-    .funnel__actions .btn--back {
-      background: var(--gray-100); color: var(--gray-700); border: 2px solid var(--gray-200);
-      border-radius: 10px; font-weight: 600; cursor: pointer; transition: all 0.2s;
-    }
-    .funnel__actions .btn--back:hover { background: var(--gray-200); }
-    .funnel__actions .btn--next {
-      background: linear-gradient(135deg, #E8A020, #D4911A); color: #fff;
-      border: none; border-radius: 10px; font-weight: 700; cursor: pointer;
-      transition: all 0.2s; box-shadow: 0 4px 12px rgba(232,160,32,0.3);
-    }
-    .funnel__actions .btn--next:hover { background: linear-gradient(135deg, #D4911A, #C07E12); transform: translateY(-1px); }
-    .funnel__actions .btn--next:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
-    .funnel__trust {
-      display: flex; align-items: center; justify-content: center; gap: 0.75rem;
-      margin-top: 1.5rem; padding: 1rem; background: var(--gray-50);
-      border-radius: 10px; border: 1px solid var(--gray-200);
-    }
-    .funnel__trust span { font-size: 0.82rem; color: var(--gray-600); }
 
-    /* Radio card grid (for state, citizenship, employment status) */
-    .radio-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
-    .radio-card {
-      display: flex; align-items: center; gap: 0.75rem;
-      padding: 0.85rem 1rem; border: 2px solid var(--gray-200);
-      border-radius: 10px; cursor: pointer; transition: all 0.2s;
-      background: #fff;
-    }
-    .radio-card:hover { border-color: var(--navy); background: rgba(27,58,107,0.02); }
-    .radio-card input { display: none; }
-    .radio-card input:checked + .radio-dot { background: var(--navy); border-color: var(--navy); }
-    .radio-card input:checked + .radio-dot::after { content: ''; display: block; width: 8px; height: 8px; border-radius: 50%; background: #fff; }
-    .radio-card.selected { border-color: var(--navy); background: rgba(27,58,107,0.04); }
-    .radio-dot {
-      width: 20px; height: 20px; border-radius: 50%; border: 2px solid var(--gray-300);
-      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
-      transition: all 0.2s;
-    }
-    .radio-label { font-size: 0.92rem; font-weight: 500; color: var(--gray-800); }
+:root {
+  
+  --navy-900: #1a2b47;
+  --navy-800: #1e3a5f;
+  --navy-950: #0a1628;
+  --navy-50: #e6eff9;
+  --amber-500: #f59e0b;
+  --amber-400: #fbbf24;
+  --amber-600: #d97706;
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-900: #111827;
+  --shadow-soft-lg: 0 10px 40px -10px rgba(0,0,0,.1), 0 20px 25px -5px rgba(0,0,0,.04);
 
-    /* Select styled like cards for state dropdown */
-    .state-select { font-size: 1rem; }
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-head: 'Poppins', 'Segoe UI', system-ui, sans-serif;
+}
 
-    /* TCPA checkbox */
-    .funnel__tcpa { display: flex; align-items: flex-start; gap: 0.75rem; margin-top: 0.25rem; }
-    .funnel__tcpa input[type="checkbox"] {
-      width: 20px; height: 20px; margin-top: 0.1rem; flex-shrink: 0;
-      accent-color: var(--navy);
-    }
-    .funnel__tcpa label {
-      font-size: 0.78rem; color: var(--gray-600); line-height: 1.5;
-    }
-    .funnel__tcpa label a { color: var(--blue); }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    /* Thank you page */
-    .thankyou { text-align: center; padding: 3rem 1.5rem; max-width: 600px; margin: 0 auto; }
-    .thankyou__icon { font-size: 4rem; margin-bottom: 1rem; }
-    .thankyou__title {
-      font-family: var(--font-head); font-size: 2rem; color: var(--navy);
-      margin-bottom: 0.75rem; font-weight: 800;
-    }
-    .thankyou__sub { font-size: 1.1rem; color: var(--gray-600); line-height: 1.6; margin-bottom: 2rem; }
-    .thankyou__actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+html {
+  scroll-behavior: smooth;
+}
 
-    /* Landing hero */
-    .apply-hero {
-      background: linear-gradient(135deg, #0D2137 0%, #1B3A6B 45%, #234B82 100%);
-      padding: 4rem 0 3.5rem; color: #fff; position: relative; overflow: hidden;
-    }
-    .apply-hero::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
-      background: linear-gradient(90deg, #E8A020, #F5C842, #E8A020); z-index: 2;
-    }
-    .apply-hero__inner { max-width: 700px; margin: 0 auto; text-align: center; padding: 0 1.5rem; position: relative; z-index: 1; }
-    .apply-hero__badge {
-      display: inline-block; background: rgba(232,160,32,0.2); color: #F5C842;
-      padding: 0.35rem 0.9rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600;
-      margin-bottom: 1rem; border: 1px solid rgba(232,160,32,0.25);
-    }
-    .apply-hero__h1 {
-      font-family: var(--font-head); font-size: 2.4rem; font-weight: 800;
-      line-height: 1.15; margin-bottom: 1rem;
-    }
-    .apply-hero__sub { font-size: 1.1rem; color: rgba(255,255,255,0.78); line-height: 1.6; margin-bottom: 2rem; max-width: 560px; margin-left: auto; margin-right: auto; }
-    .apply-hero__cta .btn--next {
-      display: inline-block; background: linear-gradient(135deg, #E8A020, #D4911A);
-      color: #fff; border: none; border-radius: 10px; font-weight: 700; font-size: 1.1rem;
-      padding: 1rem 2.5rem; cursor: pointer; text-decoration: none;
-      box-shadow: 0 4px 16px rgba(232,160,32,0.35); transition: all 0.2s;
-    }
-    .apply-hero__cta .btn--next:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(232,160,32,0.45); }
-    .apply-hero__stats {
-      display: flex; justify-content: center; gap: 3rem; margin-top: 2.5rem;
-      padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.12);
-    }
-    .apply-hero__stat strong { display: block; font-family: var(--font-head); font-size: 1.6rem; color: #E8A020; }
-    .apply-hero__stat span { font-size: 0.8rem; color: rgba(255,255,255,0.6); }
+body {
+  font-family: var(--font-sans);
+  color: var(--gray-900);
+  background-color: #fff;
+  line-height: 1.5;
+}
 
-    /* Responsive */
-    @media (max-width: 640px) {
-      .funnel__row { grid-template-columns: 1fr; }
-      .funnel__title { font-size: 1.5rem; }
-      .radio-grid { grid-template-columns: 1fr; }
-      .apply-hero__h1 { font-size: 1.8rem; }
-      .apply-hero__stats { gap: 1.5rem; }
-      .apply-hero__stat strong { font-size: 1.3rem; }
-    }
-</style>
+/* ========== HEADER ========== */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: var(--navy-900);
+  border-bottom: 1px solid var(--navy-800);
+}
+
+.header__inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 1.25rem 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.header__logo:hover {
+  opacity: 0.9;
+}
+
+/* ========== FOOTER ========== */
+.footer {
+  background-color: var(--navy-950);
+  color: var(--gray-300);
+  padding: 3rem 1rem;
+  border-top: 1px solid var(--navy-900);
+  margin-top: auto;
+}
+
+.footer__inner {
+  max-width: 1024px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer__brand {
+  font-weight: 600;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.footer__links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer__links a {
+  color: var(--gray-300);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer__links a:hover {
+  color: white;
+}
+
+.footer__disclaimer {
+  font-size: 0.75rem;
+  color: var(--gray-500);
+  line-height: 1.6;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+/* ========== MAIN LAYOUT ========== */
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* ========== LANDING PAGE HERO ========== */
+.hero {
+  background: linear-gradient(to bottom, var(--navy-900), color-mix(in srgb, var(--navy-900) 90%, var(--navy-800)));
+  padding: 5rem 1rem 7rem;
+}
+
+.hero__inner {
+  max-width: 1024px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero__label {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--amber-400);
+  margin-bottom: 1.5rem;
+}
+
+.hero__headline {
+  font-family: var(--font-head);
+  font-size: 3.75rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.hero__subtitle {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--gray-200);
+  margin-bottom: 2.5rem;
+  max-width: 768px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero__cta {
+  display: inline-block;
+  padding: 1.25rem 3rem;
+  background-color: var(--amber-500);
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.3);
+}
+
+.hero__cta:hover {
+  background-color: var(--amber-600);
+  box-shadow: 0 20px 35px -5px rgba(245, 158, 11, 0.4);
+  transform: translateY(-2px);
+}
+
+/* ========== TRUST BADGES ========== */
+.trust-section {
+  background-color: white;
+  border-top: 1px solid var(--gray-200);
+  border-bottom: 1px solid var(--gray-200);
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.trust-section__inner {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.trust-section__title {
+  font-weight: 600;
+  color: var(--gray-900);
+  margin-bottom: 1.5rem;
+}
+
+.trust-badges {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.badge__icon {
+  font-size: 2rem;
+}
+
+.badge__text {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+}
+
+/* ========== VALUE PROPS ========== */
+.value-section {
+  background-color: var(--gray-50);
+  padding: 5rem 1rem;
+}
+
+.value-section__inner {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.value-card {
+  background-color: white;
+  border: 1px solid var(--gray-100);
+  border-radius: 0.75rem;
+  padding: 2rem 3rem;
+  box-shadow: var(--shadow-soft-lg);
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.value-card__title {
+  font-family: var(--font-head);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--navy-900);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.value-card__text {
+  font-size: 1.125rem;
+  color: var(--gray-600);
+  line-height: 1.6;
+}
+
+/* ========== STEPS SECTION ========== */
+.steps-section {
+  background-color: white;
+  padding: 5rem 1rem;
+}
+
+.steps-section__inner {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.steps-section__title {
+  font-family: var(--font-head);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--navy-900);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.step-item {
+  text-align: center;
+}
+
+.step-item__number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: var(--amber-500);
+  color: white;
+  font-family: var(--font-head);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.step-item__title {
+  font-weight: 600;
+  color: var(--navy-900);
+  margin-bottom: 0.5rem;
+}
+
+.step-item__desc {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+}
+
+/* ========== FORM STEP PAGES ========== */
+.form-page {
+  background-color: var(--gray-50);
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+.form-card {
+  max-width: 672px;
+  margin: 0 auto;
+  background-color: white;
+  border: 1px solid var(--gray-100);
+  border-radius: 0.75rem;
+  padding: 2rem;
+  box-shadow: var(--shadow-soft-lg);
+}
+
+@media (min-width: 768px) {
+  .form-card {
+    padding: 2.5rem;
+  }
+}
+
+/* ========== PROGRESS BAR ========== */
+.progress-container {
+  margin-bottom: 2.5rem;
+}
+
+.progress-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  font-size: 0.875rem;
+}
+
+.progress-row__left {
+  font-weight: 600;
+  color: var(--navy-900);
+}
+
+.progress-row__right {
+  font-weight: 500;
+  color: var(--gray-600);
+}
+
+.progress-bar {
+  width: 100%;
+  height: 0.625rem;
+  background-color: var(--gray-200);
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--amber-500);
+  border-radius: 9999px;
+  transition: width 0.3s ease;
+}
+
+/* ========== FORM ELEMENTS ========== */
+.form-title {
+  font-family: var(--font-head);
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--navy-900);
+  margin-bottom: 0.75rem;
+}
+
+.form-subtitle {
+  font-size: 1.125rem;
+  color: var(--gray-600);
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--gray-900);
+  margin-bottom: 0.5rem;
+}
+
+.form-input,
+.form-select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--gray-300);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-input:focus,
+.form-select:focus {
+  outline: none;
+  border-color: var(--navy-900);
+  box-shadow: 0 0 0 3px rgba(26, 43, 71, 0.1);
+}
+
+.form-input.error,
+.form-select.error {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.form-error {
+  display: none;
+  font-size: 0.8125rem;
+  color: #dc2626;
+  margin-top: 0.25rem;
+}
+
+.form-error.show {
+  display: block;
+}
+
+/* ========== RADIO GRID ========== */
+.radio-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+@media (max-width: 640px) {
+  .radio-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.radio-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1rem;
+  border: 1px solid var(--gray-300);
+  border-radius: 0.5rem;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.radio-card:hover {
+  border-color: var(--navy-900);
+  background-color: rgba(26, 43, 71, 0.02);
+}
+
+.radio-card input[type="radio"] {
+  display: none;
+}
+
+.radio-dot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--gray-300);
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.radio-card input[type="radio"]:checked + .radio-dot {
+  background-color: var(--navy-900);
+  border-color: var(--navy-900);
+}
+
+.radio-card input[type="radio"]:checked + .radio-dot::after {
+  content: '';
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.radio-card.selected {
+  border-color: var(--navy-900);
+  background-color: rgba(26, 43, 71, 0.04);
+}
+
+.radio-label {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--gray-900);
+}
+
+/* ========== TWO-COLUMN LAYOUT ========== */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 640px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========== FORM ACTIONS ========== */
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn {
+  flex: 1;
+  padding: 0.875rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.btn-back {
+  background-color: var(--gray-100);
+  color: var(--gray-900);
+  border: 1px solid var(--gray-200);
+}
+
+.btn-back:hover {
+  background-color: var(--gray-200);
+}
+
+.btn-next {
+  background-color: var(--amber-500);
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
+}
+
+.btn-next:hover:not(:disabled) {
+  background-color: var(--amber-600);
+  box-shadow: 0 6px 16px rgba(245, 158, 11, 0.3);
+  transform: translateY(-1px);
+}
+
+.btn-next:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ========== TCPA CONSENT ========== */
+.tcpa-group {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: var(--gray-50);
+  border-radius: 0.5rem;
+  border: 1px solid var(--gray-200);
+}
+
+.tcpa-checkbox {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.tcpa-checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-top: 0.1rem;
+  flex-shrink: 0;
+  cursor: pointer;
+  accent-color: var(--navy-900);
+}
+
+.tcpa-label {
+  font-size: 0.8125rem;
+  color: var(--gray-600);
+  line-height: 1.5;
+}
+
+.tcpa-label a {
+  color: var(--blue, #2563eb);
+  text-decoration: none;
+}
+
+.tcpa-label a:hover {
+  text-decoration: underline;
+}
+
+/* ========== THANK YOU PAGE ========== */
+.thank-you {
+  text-align: center;
+  padding: 3rem 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.thank-you__icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.thank-you__title {
+  font-family: var(--font-head);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--navy-900);
+  margin-bottom: 1rem;
+}
+
+.thank-you__text {
+  font-size: 1.125rem;
+  color: var(--gray-600);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.thank-you__actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background-color: var(--amber-500);
+  color: white;
+  text-decoration: none;
+  padding: 0.875rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: var(--amber-600);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--navy-900);
+  border: 2px solid var(--navy-900);
+  text-decoration: none;
+  padding: 0.875rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.2s;
+}
+
+.btn-outline:hover {
+  background-color: var(--navy-900);
+  color: white;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .hero__headline {
+    font-size: 2.25rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1rem;
+  }
+
+  .form-title {
+    font-size: 1.5rem;
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+  </style>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MTQ5WNFR"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-  <nav class="nav" role="navigation" aria-label="Main navigation">
-    <div class="nav__inner">
-      <a href="/" class="nav__logo" aria-label="National Benefit Alliance Home">
-        <div class="nav__logo-icon">
-          <svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M13 2L3 7v6c0 5.5 4.3 10.7 10 12 5.7-1.3 10-6.5 10-12V7L13 2z"/>
-          </svg>
-        </div>
-        <div class="nav__logo-text">
-          <span class="nav__logo-name">National Benefit Alliance</span>
-          <span class="nav__logo-tagline">Free Resource Center &middot; All 50 States</span>
-        </div>
-      </a>
-      <ul class="nav__links" role="list">
-        <li><a href="/">Home</a></li>
-        <li><a href="/resources/">All States</a></li>
-        <li><a href="/stories/">Stories</a></li>
-        <li><a href="/about/">About</a></li>
-        <li><a href="/faq/">FAQ</a></li>
-      </ul>
-      <div class="nav__cta">
-        <a href="tel:18884085650" class="nav__phone" aria-label="Call us">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
-            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.02 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14v2.92z"/>
-          </svg>
-          1-888-408-5650
-        </a>
-        <a href="/apply/1/" class="btn btn--primary btn--sm">Apply Now</a>
-      </div>
-      <button class="nav__hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+  <header class="header">
+    <div class="header__inner">
+      <a href="/" class="header__logo">National Benefit Alliance</a>
     </div>
-  </nav>
+  </header>
 
-  <main>
-    <div class="funnel">
-      <div class="funnel__progress">
-        <div class="funnel__bar active"></div>
-        <div class="funnel__bar "></div>
-        <div class="funnel__bar "></div>
-        <div class="funnel__bar "></div>
-        <div class="funnel__bar "></div>
+  <main class="form-page">
+    <div class="form-card">
+      <div class="progress-container">
+        <div class="progress-row">
+          <span class="progress-row__left">Step 1 of 5</span>
+          <span class="progress-row__right">20% complete</span>
         </div>
-      <p class="funnel__step-label">Step 1 of 5</p>
-      <h1 class="funnel__title">Where Do You Live?</h1>
-      <p class="funnel__subtitle">We&rsquo;ll find programs available in your state and county.</p>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 20%;"></div>
+        </div>
+      </div>
 
-      <form class="funnel__form" id="step1Form" novalidate>
-        <div class="funnel__field">
-          <label for="state">Select Your State</label>
-          <select name="state" id="state" required>
-            <option value="">Choose your state&hellip;</option>
+      <h1 class="form-title">Where Do You Live?</h1>
+      <p class="form-subtitle">We'll find programs available in your state and county.</p>
+
+      <form id="step1Form" novalidate>
+        <div class="form-group">
+          <label for="state" class="form-label">Select Your State</label>
+          <select name="state" id="state" class="form-select" required>
+            <option value="">Choose your state...</option>
             <option value="AL">Alabama</option>
             <option value="AK">Alaska</option>
             <option value="AZ">Arizona</option>
@@ -283,22 +814,30 @@
             <option value="WY">Wyoming</option>
             <option value="DC">District of Columbia</option>
           </select>
-          <p class="field-error">Please select your state</p>
+          <div class="form-error">Please select your state</div>
         </div>
 
-        <div class="funnel__actions">
-          <a href="/apply/1/" class="btn--back">Back</a>
-          <button type="submit" class="btn--next">Continue &rarr;</button>
+        <div class="form-actions">
+          <a href="/apply/1/" class="btn btn-back">Back</a>
+          <button type="submit" class="btn btn-next">Continue</button>
         </div>
       </form>
-
-      <div class="funnel__trust">
-        <span>&#128274;</span>
-        <span>Your information is secure and never shared without your consent.</span>
-      </div>
     </div>
   </main>
 
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">National Benefit Alliance</div>
+      <div class="footer__links">
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms</a>
+        <a href="/">California Privacy Act</a>
+      </div>
+      <p class="footer__disclaimer">
+        © 2026 National Benefit Alliance. All rights reserved. National Benefit Alliance is a privately held for-profit entity and has no affiliation or relationship, financial or otherwise, with any political party, government agency, or other outside group or persons.
+      </p>
+    </div>
+  </footer>
   
 <script>
 // ---- Session data helpers ----
@@ -331,17 +870,17 @@ function getTransactionId() {
 // ---- Validation helpers ----
 function showError(el, msg) {
   el.classList.add('error');
-  const errEl = el.parentElement.querySelector('.field-error');
+  const errEl = el.parentElement.querySelector('.form-error');
   if (errEl) { errEl.textContent = msg; errEl.classList.add('show'); }
 }
 function clearError(el) {
   el.classList.remove('error');
-  const errEl = el.parentElement.querySelector('.field-error');
+  const errEl = el.parentElement.querySelector('.form-error');
   if (errEl) { errEl.classList.remove('show'); }
 }
 function clearAllErrors() {
   document.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
-  document.querySelectorAll('.field-error').forEach(el => el.classList.remove('show'));
+  document.querySelectorAll('.form-error').forEach(el => el.classList.remove('show'));
 }
 // ---- Restore saved values ----
 function restoreField(name) {
@@ -354,8 +893,10 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.radio-card').forEach(card => {
     card.addEventListener('click', function() {
       const group = this.closest('.radio-grid');
-      group.querySelectorAll('.radio-card').forEach(c => c.classList.remove('selected'));
-      this.classList.add('selected');
+      if (group) {
+        group.querySelectorAll('.radio-card').forEach(c => c.classList.remove('selected'));
+        this.classList.add('selected');
+      }
       this.querySelector('input').checked = true;
     });
   });
@@ -377,61 +918,5 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   </script>
-  
-  <footer class="footer" role="contentinfo">
-    <div class="container">
-      <div class="footer__grid">
-        <div class="footer__brand">
-          <div class="footer__logo">
-            <div class="footer__logo-box">
-              <svg width="24" height="24" viewBox="0 0 26 26" fill="#E8A020" aria-hidden="true">
-                <path d="M13 2L3 7v6c0 5.5 4.3 10.7 10 12 5.7-1.3 10-6.5 10-12V7L13 2z"/>
-              </svg>
-            </div>
-            <span class="footer__logo-name">National Benefit Alliance</span>
-          </div>
-          <p class="footer__desc">A free national resource center helping Americans navigate government and community assistance programs.</p>
-          <a href="tel:18884085650" class="footer__phone">&#128222; 1-888-408-5650</a>
-        </div>
-        <div>
-          <h4>Popular States</h4>
-          <ul class="footer__links">
-            <li><a href="/florida/">Florida</a></li>
-            <li><a href="/california/">California</a></li>
-            <li><a href="/texas/">Texas</a></li>
-            <li><a href="/new-york/">New York</a></li>
-            <li><a href="/resources/">All 50 States &rarr;</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Resources</h4>
-          <ul class="footer__links">
-            <li><a href="/resources/">All States</a></li>
-            <li><a href="/stories/">Stories</a></li>
-            <li><a href="/about/">About Us</a></li>
-            <li><a href="/faq/">FAQ</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Company</h4>
-          <ul class="footer__links">
-            <li><a href="/about/">About Us</a></li>
-            <li><a href="/privacy/">Privacy Policy</a></li>
-            <li><a href="/terms/">Terms &amp; Conditions</a></li>
-            <li><a href="/sitemap.xml">Sitemap</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer__bottom">
-        <p>&copy; 2025 National Benefit Alliance. All rights reserved.</p>
-        <div class="footer__bottom-links">
-          <a href="/privacy/">Privacy Policy</a>
-          <a href="/terms/">Terms &amp; Conditions</a>
-        </div>
-        <p class="footer__disclaimer">National Benefit Alliance is a privately held for-profit entity and has no affiliation or relationship, financial or otherwise, with any political party, government agency, or other outside group or persons. We do not submit any forms or documents on our members&#39; behalf.</p>
-      </div>
-    </div>
-  </footer>
-  <script src="/js/main.js?v=10" defer></script>
-</body>
+  </body>
 </html>

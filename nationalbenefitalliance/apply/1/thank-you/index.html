@@ -659,70 +659,210 @@ main {
 }
 
 /* ========== THANK YOU PAGE ========== */
-.thank-you {
+.ty-card {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow-soft-lg);
+  padding: 2rem;
   text-align: center;
-  padding: 3rem 1rem;
-  max-width: 600px;
+  border: 1px solid var(--gray-100);
+  max-width: 672px;
   margin: 0 auto;
 }
 
-.thank-you__icon {
-  font-size: 4rem;
-  margin-bottom: 1rem;
+@media (min-width: 768px) {
+  .ty-card { padding: 2.5rem; }
 }
 
-.thank-you__title {
+.ty-icon-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.ty-icon-circle {
+  position: relative;
+  width: 5rem;
+  height: 5rem;
+}
+
+.ty-icon-circle__pulse {
+  position: absolute;
+  inset: 0;
+  background-color: #fef3c7;
+  border-radius: 50%;
+  animation: tyPulse 2s ease-in-out infinite;
+}
+
+@keyframes tyPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.08); }
+}
+
+.ty-icon-circle__check {
+  position: relative;
+  width: 5rem;
+  height: 5rem;
+  color: var(--amber-500);
+}
+
+.ty-title {
   font-family: var(--font-head);
-  font-size: 2rem;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--navy-900);
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .ty-title { font-size: 3rem; }
+}
+
+.ty-ref {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--navy-900);
+  margin-bottom: 1.5rem;
+}
+
+/* Action needed box */
+.ty-action-box {
+  background-color: var(--navy-50);
+  border: 2px solid #bfdbfe;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.ty-action-box__title {
+  font-family: var(--font-head);
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--navy-900);
   margin-bottom: 1rem;
 }
 
-.thank-you__text {
-  font-size: 1.125rem;
-  color: var(--gray-600);
+.ty-action-box__text {
+  color: var(--gray-700);
+  font-size: 1rem;
   line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.ty-call-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: var(--amber-500);
+  color: white;
+  font-size: 1.25rem;
+  padding: 1.5rem 3rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s;
+  box-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.3);
+  margin-bottom: 1rem;
+}
+
+.ty-call-btn:hover {
+  background-color: var(--amber-600);
+  box-shadow: 0 20px 35px -5px rgba(245, 158, 11, 0.4);
+  transform: translateY(-2px);
+}
+
+.ty-phone-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--navy-900);
+  margin-bottom: 0.5rem;
+}
+
+.ty-phone-note {
+  font-size: 0.875rem;
+  color: var(--gray-700);
+  margin-bottom: 1.25rem;
+}
+
+.ty-expire-note {
+  font-size: 0.75rem;
+  color: var(--gray-600);
+  margin-top: 1.25rem;
+}
+
+.ty-tagline {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--navy-900);
   margin-bottom: 2rem;
 }
 
-.thank-you__actions {
+/* Benefit checkmarks */
+.ty-benefits {
+  text-align: left;
+  margin-bottom: 2.5rem;
+}
+
+.ty-benefit-item {
   display: flex;
+  align-items: flex-start;
   gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
 }
 
-.btn-primary {
-  background-color: var(--amber-500);
-  color: white;
-  text-decoration: none;
-  padding: 0.875rem 2rem;
-  border-radius: 0.5rem;
-  font-weight: 600;
-  display: inline-block;
-  transition: all 0.2s;
+.ty-benefit-item:last-child {
+  margin-bottom: 0;
 }
 
-.btn-primary:hover {
-  background-color: var(--amber-600);
+.ty-benefit-icon {
+  flex-shrink: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+  color: var(--amber-500);
+  margin-top: 0.125rem;
 }
 
-.btn-outline {
-  background-color: transparent;
+.ty-benefit-title {
+  font-weight: 700;
   color: var(--navy-900);
-  border: 2px solid var(--navy-900);
-  text-decoration: none;
-  padding: 0.875rem 2rem;
-  border-radius: 0.5rem;
-  font-weight: 600;
-  display: inline-block;
-  transition: all 0.2s;
+  margin-bottom: 0.25rem;
 }
 
-.btn-outline:hover {
-  background-color: var(--navy-900);
-  color: white;
+.ty-benefit-desc {
+  font-size: 0.875rem;
+  color: var(--gray-700);
+}
+
+/* User info box */
+.ty-info-box {
+  background-color: var(--gray-50);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--gray-200);
+}
+
+.ty-info-box__label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--gray-600);
+  margin-bottom: 0.75rem;
+}
+
+.ty-info-box__name {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--navy-900);
+}
+
+.ty-info-box__email {
+  color: var(--gray-700);
+}
+
+.ty-disclaimer {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  line-height: 1.6;
 }
 
 /* ========== RESPONSIVE ========== */
@@ -758,14 +898,66 @@ main {
   </header>
 
   <main class="form-page">
-    <div class="thank-you">
-      <div class="thank-you__icon">✓</div>
-      <h1 class="thank-you__title">You're All Set!</h1>
-      <p class="thank-you__text">We've received your information and are matching you with benefit programs in your area. A member of our team will reach out shortly to help you get started.</p>
-      <div class="thank-you__actions">
-        <a href="/" class="btn-primary">Browse Resources</a>
-        <a href="tel:18884085650" class="btn-outline">Call 1-888-408-5650</a>
+    <div class="ty-card">
+      <!-- Animated check icon -->
+      <div class="ty-icon-wrap">
+        <div class="ty-icon-circle">
+          <div class="ty-icon-circle__pulse"></div>
+          <svg class="ty-icon-circle__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        </div>
       </div>
+
+      <h1 class="ty-title">Congratulations!</h1>
+      <p class="ty-ref">Your Reference Number: <span id="refNumber">60223</span></p>
+
+      <!-- Action Needed Box -->
+      <div class="ty-action-box">
+        <h2 class="ty-action-box__title">Action Needed</h2>
+        <p class="ty-action-box__text">A case manager has been assigned to you. Please call the number below to verify your identity and release your available benefits to you. This call is completely free and can connect you to assistance that may help right away.</p>
+        <a href="tel:18557679422" class="ty-call-btn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          Call Now to Get Started
+        </a>
+        <p class="ty-phone-number">1-855-767-9422</p>
+        <p class="ty-phone-note">No answer? Text us or we'll call you back.</p>
+        <p class="ty-expire-note">Your Reference Number will expire in 30 Minutes so please call before expiration or you may need to resubmit an application.</p>
+      </div>
+
+      <p class="ty-tagline">National Benefit Alliance has helped more than 2 million U.S. residents receive benefits and resources</p>
+
+      <!-- Benefit items -->
+      <div class="ty-benefits">
+        <div class="ty-benefit-item">
+          <svg class="ty-benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          <div>
+            <div class="ty-benefit-title">Over 100 Programs Available</div>
+            <div class="ty-benefit-desc">Based on your information, you may qualify for multiple assistance programs</div>
+          </div>
+        </div>
+        <div class="ty-benefit-item">
+          <svg class="ty-benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          <div>
+            <div class="ty-benefit-title">Personal Guidance</div>
+            <div class="ty-benefit-desc">A specialist will help with enrollment and answer all your questions</div>
+          </div>
+        </div>
+        <div class="ty-benefit-item">
+          <svg class="ty-benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          <div>
+            <div class="ty-benefit-title">100% Free Service</div>
+            <div class="ty-benefit-desc">No hidden fees. No charges. No obligation.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- User info -->
+      <div class="ty-info-box">
+        <div class="ty-info-box__label">Your Information</div>
+        <div class="ty-info-box__name" id="tyName">Applicant</div>
+        <div class="ty-info-box__email" id="tyEmail"></div>
+      </div>
+
+      <p class="ty-disclaimer">We'll use your contact information to connect you with a benefits specialist and provide updates about programs you may qualify for. You can manage your preferences anytime.</p>
     </div>
   </main>
 
@@ -782,5 +974,21 @@ main {
       </p>
     </div>
   </footer>
+  <script>
+  // Populate user info from sessionStorage or URL params
+  document.addEventListener('DOMContentLoaded', function() {
+    try {
+      const stored = sessionStorage.getItem('nba_ty');
+      if (stored) {
+        const d = JSON.parse(stored);
+        if (d.firstName) document.getElementById('tyName').textContent = d.firstName;
+        if (d.email) document.getElementById('tyEmail').textContent = d.email;
+      }
+    } catch(e) {}
+    // Generate a pseudo-random ref number
+    const ref = Math.floor(10000 + Math.random() * 90000);
+    document.getElementById('refNumber').textContent = ref;
+  });
+  </script>
   </body>
 </html>

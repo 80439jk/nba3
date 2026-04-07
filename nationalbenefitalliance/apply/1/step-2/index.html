@@ -382,7 +382,7 @@ main {
 
 .progress-row__left {
   font-weight: 600;
-  color: var(--navy-900);
+  color: var(--gray-900);
 }
 
 .progress-row__right {
@@ -402,7 +402,7 @@ main {
   height: 100%;
   background-color: var(--amber-500);
   border-radius: 9999px;
-  transition: width 0.3s ease;
+  transition: width 0.3s ease-in-out;
 }
 
 /* ========== FORM ELEMENTS ========== */
@@ -410,8 +410,9 @@ main {
   font-family: var(--font-head);
   font-size: 1.875rem;
   font-weight: 700;
-  color: var(--navy-900);
-  margin-bottom: 0.75rem;
+  color: var(--gray-900);
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 .form-subtitle {
@@ -419,10 +420,15 @@ main {
   color: var(--gray-600);
   margin-bottom: 2rem;
   line-height: 1.5;
+  text-align: center;
 }
 
 .form-group {
   margin-bottom: 1.5rem;
+}
+
+.form-group:last-of-type {
+  margin-bottom: 0;
 }
 
 .form-label {
@@ -442,13 +448,14 @@ main {
   font-size: 1rem;
   font-family: inherit;
   transition: border-color 0.2s, box-shadow 0.2s;
+  background-color: #fff;
 }
 
 .form-input:focus,
 .form-select:focus {
   outline: none;
-  border-color: var(--navy-900);
-  box-shadow: 0 0 0 3px rgba(26, 43, 71, 0.1);
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
 }
 
 .form-input.error,
@@ -557,7 +564,7 @@ main {
 .form-actions {
   display: flex;
   gap: 1rem;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
 }
 
 .btn {
@@ -578,8 +585,9 @@ main {
 
 .btn-back {
   background-color: var(--gray-100);
-  color: var(--gray-900);
-  border: 1px solid var(--gray-200);
+  color: var(--gray-700);
+  border: 1px solid var(--gray-300);
+  font-weight: 600;
 }
 
 .btn-back:hover {
@@ -590,18 +598,25 @@ main {
   background-color: var(--amber-500);
   color: white;
   font-weight: 700;
-  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -2px rgba(0,0,0,.1);
 }
 
 .btn-next:hover:not(:disabled) {
   background-color: var(--amber-600);
-  box-shadow: 0 6px 16px rgba(245, 158, 11, 0.3);
-  transform: translateY(-1px);
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -4px rgba(0,0,0,.1);
 }
 
 .btn-next:disabled {
-  opacity: 0.5;
+  opacity: 0.3;
   cursor: not-allowed;
+}
+
+/* ========== SECURITY NOTE ========== */
+.security-note {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  margin-top: 1.5rem;
 }
 
 /* ========== TCPA CONSENT ========== */
@@ -765,30 +780,14 @@ main {
         </div>
 
         <div class="form-group">
-          <label class="form-label">Are you a U.S. citizen or legal resident?</label>
-          <div class="radio-grid">
-            <label class="radio-card">
-              <input type="radio" name="citizenship" value="citizen" />
-              <span class="radio-dot"></span>
-              <span class="radio-label">U.S. Citizen</span>
-            </label>
-            <label class="radio-card">
-              <input type="radio" name="citizenship" value="legal_resident" />
-              <span class="radio-dot"></span>
-              <span class="radio-label">Legal Resident</span>
-            </label>
-            <label class="radio-card">
-              <input type="radio" name="citizenship" value="neither" />
-              <span class="radio-dot"></span>
-              <span class="radio-label">Neither</span>
-            </label>
-            <label class="radio-card">
-              <input type="radio" name="citizenship" value="prefer_not" />
-              <span class="radio-dot"></span>
-              <span class="radio-label">Prefer Not to Say</span>
-            </label>
-          </div>
-          <div class="form-error">Please select an option</div>
+          <label for="citizenship" class="form-label">Are you a U.S. citizen or legal resident?</label>
+          <select name="citizenship" id="citizenship" class="form-select" required>
+            <option value="">Select one</option>
+            <option value="us_citizen">U.S. Citizen</option>
+            <option value="non_citizen_legal">Non-Citizen legally admitted to the U.S.</option>
+            <option value="other">Other</option>
+          </select>
+          <div class="form-error">Please select your citizenship status</div>
         </div>
 
         <div class="form-actions">
@@ -882,24 +881,15 @@ document.addEventListener('DOMContentLoaded', function() {
   <script>
   document.addEventListener('DOMContentLoaded', function() {
     restoreField('dob');
-    const d = getFunnelData();
-    if (d.citizenship) {
-      const r = document.querySelector('input[name="citizenship"][value="' + d.citizenship + '"]');
-      if (r) { r.checked = true; r.closest('.radio-card').classList.add('selected'); }
-    }
+    restoreField('citizenship');
     document.getElementById('step2Form').addEventListener('submit', function(e) {
       e.preventDefault();
       clearAllErrors();
       let valid = true;
       const dob = document.getElementById('dob');
+      const cit = document.getElementById('citizenship');
       if (!dob.value) { showError(dob, 'Please enter your date of birth'); valid = false; }
-      const cit = document.querySelector('input[name="citizenship"]:checked');
-      if (!cit) {
-        const grid = document.querySelector('.radio-grid');
-        const errEl = grid.parentElement.querySelector('.form-error');
-        if (errEl) { errEl.classList.add('show'); }
-        valid = false;
-      }
+      if (!cit.value) { showError(cit, 'Please select your citizenship status'); valid = false; }
       if (!valid) return;
       saveFunnelData({ dob: dob.value, citizenship: cit.value });
       window.location.href = '/apply/1/step-3/';

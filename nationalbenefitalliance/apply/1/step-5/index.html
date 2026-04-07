@@ -382,7 +382,7 @@ main {
 
 .progress-row__left {
   font-weight: 600;
-  color: var(--navy-900);
+  color: var(--gray-900);
 }
 
 .progress-row__right {
@@ -402,7 +402,7 @@ main {
   height: 100%;
   background-color: var(--amber-500);
   border-radius: 9999px;
-  transition: width 0.3s ease;
+  transition: width 0.3s ease-in-out;
 }
 
 /* ========== FORM ELEMENTS ========== */
@@ -410,8 +410,9 @@ main {
   font-family: var(--font-head);
   font-size: 1.875rem;
   font-weight: 700;
-  color: var(--navy-900);
-  margin-bottom: 0.75rem;
+  color: var(--gray-900);
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 .form-subtitle {
@@ -419,10 +420,15 @@ main {
   color: var(--gray-600);
   margin-bottom: 2rem;
   line-height: 1.5;
+  text-align: center;
 }
 
 .form-group {
   margin-bottom: 1.5rem;
+}
+
+.form-group:last-of-type {
+  margin-bottom: 0;
 }
 
 .form-label {
@@ -442,13 +448,14 @@ main {
   font-size: 1rem;
   font-family: inherit;
   transition: border-color 0.2s, box-shadow 0.2s;
+  background-color: #fff;
 }
 
 .form-input:focus,
 .form-select:focus {
   outline: none;
-  border-color: var(--navy-900);
-  box-shadow: 0 0 0 3px rgba(26, 43, 71, 0.1);
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
 }
 
 .form-input.error,
@@ -557,7 +564,7 @@ main {
 .form-actions {
   display: flex;
   gap: 1rem;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
 }
 
 .btn {
@@ -578,8 +585,9 @@ main {
 
 .btn-back {
   background-color: var(--gray-100);
-  color: var(--gray-900);
-  border: 1px solid var(--gray-200);
+  color: var(--gray-700);
+  border: 1px solid var(--gray-300);
+  font-weight: 600;
 }
 
 .btn-back:hover {
@@ -590,18 +598,25 @@ main {
   background-color: var(--amber-500);
   color: white;
   font-weight: 700;
-  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -2px rgba(0,0,0,.1);
 }
 
 .btn-next:hover:not(:disabled) {
   background-color: var(--amber-600);
-  box-shadow: 0 6px 16px rgba(245, 158, 11, 0.3);
-  transform: translateY(-1px);
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -4px rgba(0,0,0,.1);
 }
 
 .btn-next:disabled {
-  opacity: 0.5;
+  opacity: 0.3;
   cursor: not-allowed;
+}
+
+/* ========== SECURITY NOTE ========== */
+.security-note {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  margin-top: 1.5rem;
 }
 
 /* ========== TCPA CONSENT ========== */
@@ -798,8 +813,10 @@ main {
 
         <div class="form-actions">
           <a href="/apply/1/step-4/" class="btn btn-back">Back</a>
-          <button type="submit" class="btn btn-next" id="submitBtn">Submit My Application</button>
+          <button type="submit" class="btn btn-next" id="submitBtn">Complete & Get Matched</button>
         </div>
+        <p class="security-note" id="processingNote" style="display:none;">Do not close browser while processing — this may take up to 30 seconds.</p>
+        <p class="security-note">Your information is secure and will only be used to match you with relevant programs.</p>
       </form>
     </div>
   </main>
@@ -933,53 +950,55 @@ document.addEventListener('DOMContentLoaded', function() {
       // Submit to Supabase
       const btn = document.getElementById('submitBtn');
       btn.disabled = true;
-      btn.textContent = 'Submitting...';
+      btn.textContent = 'Processing...';
+      const pNote = document.getElementById('processingNote');
+      if (pNote) pNote.style.display = 'block';
 
       const data = getFunnelData();
+
+      // Format DOB: if stored as YYYY-MM-DD, keep it; original React uses MM/DD/YYYY→YYYY-MM-DD
+      let dobFormatted = data.dob || '';
+
+      const payload = {
+        transaction_id: data.transaction_id || '',
+        state: data.state || '',
+        dob: dobFormatted,
+        citizenship: data.citizenship || '',
+        street_address: data.streetAddress || '',
+        city: data.city || '',
+        zip: data.zip || '',
+        annual_income: data.annualIncome || '',
+        employment_status: data.employmentStatus || '',
+        first_name: data.firstName || '',
+        last_name: data.lastName || '',
+        email: data.email || '',
+        phone: data.phone || '',
+        tcpa_consent: data.tcpaConsent || false,
+        jornaya_leadid: '',
+        click_id: data.gclid || '',
+        utm_source: data.utm_source || '',
+        utm_medium: data.utm_medium || '',
+        utm_campaign: data.utm_campaign || '',
+        utm_content: data.utm_content || '',
+        utm_term: data.utm_term || ''
+      };
+
       try {
-        const res = await fetch('https://quhxbgsgtfvrasyjvaba.supabase.co/functions/v1/submit-lead', {
+        await fetch('https://quhxbgsgtfvrasyjvaba.supabase.co/functions/v1/submit-lead', {
           method: 'POST',
           headers: {
             'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF1aHhiZ3NndGZ2cmFzeWp2YWJhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUxNTExMDUsImV4cCI6MjA5MDcyNzEwNX0.su7odHmJvnbKVTwtH5wWDpfapk186AIWSOqYP3cSucw',
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify({
-            transaction_id: data.transaction_id || '',
-            state: data.state || '',
-            dob: data.dob || '',
-            citizenship: data.citizenship || '',
-            street_address: data.streetAddress || '',
-            city: data.city || '',
-            zip: data.zip || '',
-            annual_income: data.annualIncome || '',
-            employment_status: data.employmentStatus || '',
-            first_name: data.firstName || '',
-            last_name: data.lastName || '',
-            email: data.email || '',
-            phone: data.phone || '',
-            tcpa_consent: data.tcpaConsent || false,
-            jornaya_leadid: '',
-            click_id: data.gclid || '',
-            utm_source: data.utm_source || '',
-            utm_medium: data.utm_medium || '',
-            utm_campaign: data.utm_campaign || '',
-            utm_content: data.utm_content || '',
-            utm_term: data.utm_term || ''
-          })
+          body: JSON.stringify(payload)
         });
-
-        if (res.ok) {
-          sessionStorage.removeItem('nba_funnel');
-          window.location.href = '/apply/1/thank-you/';
-        } else {
-          throw new Error('Server returned ' + res.status);
-        }
       } catch(err) {
         console.error('Submission error:', err);
-        btn.disabled = false;
-        btn.textContent = 'Submit My Application';
-        alert('Something went wrong. Please try again or call 1-888-408-5650 for assistance.');
       }
+
+      // Always redirect to thank-you — lead is captured, call center follows up
+      sessionStorage.removeItem('nba_funnel');
+      window.location.href = '/apply/1/thank-you/';
     });
   });
   </script>

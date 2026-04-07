@@ -382,7 +382,7 @@ main {
 
 .progress-row__left {
   font-weight: 600;
-  color: var(--navy-900);
+  color: var(--gray-900);
 }
 
 .progress-row__right {
@@ -402,7 +402,7 @@ main {
   height: 100%;
   background-color: var(--amber-500);
   border-radius: 9999px;
-  transition: width 0.3s ease;
+  transition: width 0.3s ease-in-out;
 }
 
 /* ========== FORM ELEMENTS ========== */
@@ -410,8 +410,9 @@ main {
   font-family: var(--font-head);
   font-size: 1.875rem;
   font-weight: 700;
-  color: var(--navy-900);
-  margin-bottom: 0.75rem;
+  color: var(--gray-900);
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 .form-subtitle {
@@ -419,10 +420,15 @@ main {
   color: var(--gray-600);
   margin-bottom: 2rem;
   line-height: 1.5;
+  text-align: center;
 }
 
 .form-group {
   margin-bottom: 1.5rem;
+}
+
+.form-group:last-of-type {
+  margin-bottom: 0;
 }
 
 .form-label {
@@ -442,13 +448,14 @@ main {
   font-size: 1rem;
   font-family: inherit;
   transition: border-color 0.2s, box-shadow 0.2s;
+  background-color: #fff;
 }
 
 .form-input:focus,
 .form-select:focus {
   outline: none;
-  border-color: var(--navy-900);
-  box-shadow: 0 0 0 3px rgba(26, 43, 71, 0.1);
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
 }
 
 .form-input.error,
@@ -557,7 +564,7 @@ main {
 .form-actions {
   display: flex;
   gap: 1rem;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
 }
 
 .btn {
@@ -578,8 +585,9 @@ main {
 
 .btn-back {
   background-color: var(--gray-100);
-  color: var(--gray-900);
-  border: 1px solid var(--gray-200);
+  color: var(--gray-700);
+  border: 1px solid var(--gray-300);
+  font-weight: 600;
 }
 
 .btn-back:hover {
@@ -590,18 +598,25 @@ main {
   background-color: var(--amber-500);
   color: white;
   font-weight: 700;
-  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -2px rgba(0,0,0,.1);
 }
 
 .btn-next:hover:not(:disabled) {
   background-color: var(--amber-600);
-  box-shadow: 0 6px 16px rgba(245, 158, 11, 0.3);
-  transform: translateY(-1px);
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -4px rgba(0,0,0,.1);
 }
 
 .btn-next:disabled {
-  opacity: 0.5;
+  opacity: 0.3;
   cursor: not-allowed;
+}
+
+/* ========== SECURITY NOTE ========== */
+.security-note {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  margin-top: 1.5rem;
 }
 
 /* ========== TCPA CONSENT ========== */
@@ -761,51 +776,24 @@ main {
         <div class="form-group">
           <label for="annualIncome" class="form-label">Estimated Annual Household Income</label>
           <select name="annualIncome" id="annualIncome" class="form-select" required>
-            <option value="">Select income range...</option>
-            <option value="under_15000">Under $15,000</option>
-            <option value="15000_25000">$15,000 – $25,000</option>
-            <option value="25000_35000">$25,000 – $35,000</option>
-            <option value="35000_50000">$35,000 – $50,000</option>
-            <option value="50000_75000">$50,000 – $75,000</option>
-            <option value="75000_plus">$75,000+</option>
+            <option value="">Select one</option>
+            <option value="under_50k">Under 50k</option>
+            <option value="50k_75k">50k - 75k</option>
+            <option value="76k_150k">76k - 150k</option>
+            <option value="150k_plus">150k+</option>
           </select>
-          <div class="form-error">Please select your income range</div>
+          <div class="form-error">Please select your annual income</div>
         </div>
 
         <div class="form-group">
-          <label class="form-label">Current Employment Status</label>
-          <div class="radio-grid">
-            <label class="radio-card">
-              <input type="radio" name="employmentStatus" value="employed" />
-              <span class="radio-dot"></span>
-              <span class="radio-label">Employed</span>
-            </label>
-            <label class="radio-card">
-              <input type="radio" name="employmentStatus" value="unemployed" />
-              <span class="radio-dot"></span>
-              <span class="radio-label">Unemployed</span>
-            </label>
-            <label class="radio-card">
-              <input type="radio" name="employmentStatus" value="self_employed" />
-              <span class="radio-dot"></span>
-              <span class="radio-label">Self-Employed</span>
-            </label>
-            <label class="radio-card">
-              <input type="radio" name="employmentStatus" value="retired" />
-              <span class="radio-dot"></span>
-              <span class="radio-label">Retired</span>
-            </label>
-            <label class="radio-card">
-              <input type="radio" name="employmentStatus" value="disabled" />
-              <span class="radio-dot"></span>
-              <span class="radio-label">Disabled</span>
-            </label>
-            <label class="radio-card">
-              <input type="radio" name="employmentStatus" value="student" />
-              <span class="radio-dot"></span>
-              <span class="radio-label">Student</span>
-            </label>
-          </div>
+          <label for="employmentStatus" class="form-label">Current Employment Status</label>
+          <select name="employmentStatus" id="employmentStatus" class="form-select" required>
+            <option value="">Select one</option>
+            <option value="employed_full_time">Employed (full-time)</option>
+            <option value="employed_part_time">Employed (part-time)</option>
+            <option value="unemployed">Unemployed</option>
+            <option value="retired">Retired or not seeking work.</option>
+          </select>
           <div class="form-error">Please select your employment status</div>
         </div>
 
@@ -900,24 +888,15 @@ document.addEventListener('DOMContentLoaded', function() {
   <script>
   document.addEventListener('DOMContentLoaded', function() {
     restoreField('annualIncome');
-    const d = getFunnelData();
-    if (d.employmentStatus) {
-      const r = document.querySelector('input[name="employmentStatus"][value="' + d.employmentStatus + '"]');
-      if (r) { r.checked = true; r.closest('.radio-card').classList.add('selected'); }
-    }
+    restoreField('employmentStatus');
     document.getElementById('step4Form').addEventListener('submit', function(e) {
       e.preventDefault();
       clearAllErrors();
       let valid = true;
       const income = document.getElementById('annualIncome');
-      if (!income.value) { showError(income, 'Please select your income range'); valid = false; }
-      const emp = document.querySelector('input[name="employmentStatus"]:checked');
-      if (!emp) {
-        const grid = document.querySelectorAll('.radio-grid')[0];
-        const errEl = grid.parentElement.querySelector('.form-error');
-        if (errEl) errEl.classList.add('show');
-        valid = false;
-      }
+      const emp = document.getElementById('employmentStatus');
+      if (!income.value) { showError(income, 'Please select your annual income'); valid = false; }
+      if (!emp.value) { showError(emp, 'Please select your employment status'); valid = false; }
       if (!valid) return;
       saveFunnelData({ annualIncome: income.value, employmentStatus: emp.value });
       window.location.href = '/apply/1/step-5/';

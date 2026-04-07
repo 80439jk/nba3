@@ -225,6 +225,9 @@ p { margin-bottom: 1rem; }
   flex: 1; padding: 0.9rem 1rem; border: none; outline: none;
   font-size: 1.05rem; letter-spacing: 0.1em; font-weight: 600;
 }
+.zip-input-group input::placeholder {
+  font-size: 0.94rem; font-weight: 400; letter-spacing: 0.02em;
+}
 .zip-input-group button {
   background: var(--navy); color: var(--white);
   border: none; padding: 0.9rem 1.5rem; font-weight: 700; font-size: 0.9rem;

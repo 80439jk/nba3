@@ -3872,56 +3872,61 @@ const WY_ZIP_COUNTY = {"82001":"laramie","82002":"laramie","82003":"laramie","82
 
 function lookupZip(zip) {
   const clean = zip.replace(/\D/g, '').slice(0, 5);
-  if (FLORIDA_ZIP_COUNTY[clean]) return { state: 'florida', county: FLORIDA_ZIP_COUNTY[clean] };
-  if (CALIFORNIA_ZIP_COUNTY[clean]) return { state: 'california', county: CALIFORNIA_ZIP_COUNTY[clean] };
-  if (ALABAMA_ZIP_COUNTY[clean]) return { state: 'alabama', county: ALABAMA_ZIP_COUNTY[clean] };
-  if (GEORGIA_ZIP_COUNTY[clean]) return { state: 'georgia', county: GEORGIA_ZIP_COUNTY[clean] };
-  if (TEXAS_ZIP_COUNTY[clean]) return { state: 'texas', county: TEXAS_ZIP_COUNTY[clean] };
-  if (NEW_YORK_ZIP_COUNTY[clean]) return { state: 'new-york', county: NEW_YORK_ZIP_COUNTY[clean] };
-  if (ILLINOIS_ZIP_COUNTY[clean]) return { state: 'illinois', county: ILLINOIS_ZIP_COUNTY[clean] };
-  if (PENNSYLVANIA_ZIP_COUNTY[clean]) return { state: 'pennsylvania', county: PENNSYLVANIA_ZIP_COUNTY[clean] };
-  if (OHIO_ZIP_COUNTY[clean]) return { state: 'ohio', county: OHIO_ZIP_COUNTY[clean] };
-  if (NORTH_CAROLINA_ZIP_COUNTY[clean]) return { state: 'north-carolina', county: NORTH_CAROLINA_ZIP_COUNTY[clean] };
-  if (MICHIGAN_ZIP_COUNTY[clean]) return { state: 'michigan', county: MICHIGAN_ZIP_COUNTY[clean] };
-  if (NEW_JERSEY_ZIP_COUNTY[clean]) return { state: 'new-jersey', county: NEW_JERSEY_ZIP_COUNTY[clean] };
-  if (VIRGINIA_ZIP_COUNTY[clean]) return { state: 'virginia', county: VIRGINIA_ZIP_COUNTY[clean] };
-  if (WASHINGTON_ZIP_COUNTY[clean]) return { state: 'washington', county: WASHINGTON_ZIP_COUNTY[clean] };
-  if (ARIZONA_ZIP_COUNTY[clean]) return { state: 'arizona', county: ARIZONA_ZIP_COUNTY[clean] };
-  if (MASSACHUSETTS_ZIP_COUNTY[clean]) return { state: 'massachusetts', county: MASSACHUSETTS_ZIP_COUNTY[clean] };
-  if (TENNESSEE_ZIP_COUNTY[clean]) return { state: 'tennessee', county: TENNESSEE_ZIP_COUNTY[clean] };
-  if (INDIANA_ZIP_COUNTY[clean]) return { state: 'indiana', county: INDIANA_ZIP_COUNTY[clean] };
-  if (MISSOURI_ZIP_COUNTY[clean]) return { state: 'missouri', county: MISSOURI_ZIP_COUNTY[clean] };
-  if (MARYLAND_ZIP_COUNTY[clean]) return { state: 'maryland', county: MARYLAND_ZIP_COUNTY[clean] };
-  if (WISCONSIN_ZIP_COUNTY[clean]) return { state: 'wisconsin', county: WISCONSIN_ZIP_COUNTY[clean] };
-  if (COLORADO_ZIP_COUNTY[clean]) return { state: 'colorado', county: COLORADO_ZIP_COUNTY[clean] };
-  if (MINNESOTA_ZIP_COUNTY[clean]) return { state: 'minnesota', county: MINNESOTA_ZIP_COUNTY[clean] };
-  if (SOUTH_CAROLINA_ZIP_COUNTY[clean]) return { state: 'south-carolina', county: SOUTH_CAROLINA_ZIP_COUNTY[clean] };
-  if (LOUISIANA_ZIP_COUNTY[clean]) return { state: 'louisiana', county: LOUISIANA_ZIP_COUNTY[clean] };
-  if (KENTUCKY_ZIP_COUNTY[clean]) return { state: 'kentucky', county: KENTUCKY_ZIP_COUNTY[clean] };
-  if (OREGON_ZIP_COUNTY[clean]) return { state: 'oregon', county: OREGON_ZIP_COUNTY[clean] };
-  if (OKLAHOMA_ZIP_COUNTY[clean]) return { state: 'oklahoma', county: OKLAHOMA_ZIP_COUNTY[clean] };
-  if (CONNECTICUT_ZIP_COUNTY[clean]) return { state: 'connecticut', county: CONNECTICUT_ZIP_COUNTY[clean] };
-  if (IOWA_ZIP_COUNTY[clean]) return { state: 'iowa', county: IOWA_ZIP_COUNTY[clean] };
-  if (MISSISSIPPI_ZIP_COUNTY[clean]) return { state: 'mississippi', county: MISSISSIPPI_ZIP_COUNTY[clean] };
-  if (ARKANSAS_ZIP_COUNTY[clean]) return { state: 'arkansas', county: ARKANSAS_ZIP_COUNTY[clean] };
-  if (KANSAS_ZIP_COUNTY[clean]) return { state: 'kansas', county: KANSAS_ZIP_COUNTY[clean] };
-  if (NEVADA_ZIP_COUNTY[clean]) return { state: 'nevada', county: NEVADA_ZIP_COUNTY[clean] };
-  if (NEW_MEXICO_ZIP_COUNTY[clean]) return { state: 'new-mexico', county: NEW_MEXICO_ZIP_COUNTY[clean] };
-  if (WEST_VIRGINIA_ZIP_COUNTY[clean]) return { state: 'west-virginia', county: WEST_VIRGINIA_ZIP_COUNTY[clean] };
-  if (NEBRASKA_ZIP_COUNTY[clean]) return { state: 'nebraska', county: NEBRASKA_ZIP_COUNTY[clean] };
-  if (IDAHO_ZIP_COUNTY[clean]) return { state: 'idaho', county: IDAHO_ZIP_COUNTY[clean] };
-  if (HAWAII_ZIP_COUNTY[clean]) return { state: 'hawaii', county: HAWAII_ZIP_COUNTY[clean] };
-  if (NEW_HAMPSHIRE_ZIP_COUNTY[clean]) return { state: 'new-hampshire', county: NEW_HAMPSHIRE_ZIP_COUNTY[clean] };
-  if (MAINE_ZIP_COUNTY[clean]) return { state: 'maine', county: MAINE_ZIP_COUNTY[clean] };
-  if (RHODE_ISLAND_ZIP_COUNTY[clean]) return { state: 'rhode-island', county: RHODE_ISLAND_ZIP_COUNTY[clean] };
-  if (MONTANA_ZIP_COUNTY[clean]) return { state: 'montana', county: MONTANA_ZIP_COUNTY[clean] };
-  if (DELAWARE_ZIP_COUNTY[clean]) return { state: 'delaware', county: DELAWARE_ZIP_COUNTY[clean] };
-  if (SOUTH_DAKOTA_ZIP_COUNTY[clean]) return { state: 'south-dakota', county: SOUTH_DAKOTA_ZIP_COUNTY[clean] };
-  if (NORTH_DAKOTA_ZIP_COUNTY[clean]) return { state: 'north-dakota', county: NORTH_DAKOTA_ZIP_COUNTY[clean] };
-  if (ALASKA_ZIP_COUNTY[clean]) return { state: 'alaska', county: ALASKA_ZIP_COUNTY[clean] };
-  if (VERMONT_ZIP_COUNTY[clean]) return { state: 'vermont', county: VERMONT_ZIP_COUNTY[clean] };
-  if (UTAH_ZIP_COUNTY[clean]) return { state: 'utah', county: UTAH_ZIP_COUNTY[clean] };
-  if (WYOMING_ZIP_COUNTY[clean]) return { state: 'wyoming', county: WYOMING_ZIP_COUNTY[clean] };
+  const STATES = [
+    [FLORIDA_ZIP_COUNTY, 'florida'],
+    [CALIFORNIA_ZIP_COUNTY, 'california'],
+    [ALABAMA_ZIP_COUNTY, 'alabama'],
+    [GA_ZIP_COUNTY, 'georgia'],
+    [TX_ZIP_COUNTY, 'texas'],
+    [NY_ZIP_COUNTY, 'new-york'],
+    [IL_ZIP_COUNTY, 'illinois'],
+    [PA_ZIP_COUNTY, 'pennsylvania'],
+    [OH_ZIP_COUNTY, 'ohio'],
+    [NC_ZIP_COUNTY, 'north-carolina'],
+    [MI_ZIP_COUNTY, 'michigan'],
+    [NJ_ZIP_COUNTY, 'new-jersey'],
+    [VA_ZIP_COUNTY, 'virginia'],
+    [WA_ZIP_COUNTY, 'washington'],
+    [AZ_ZIP_COUNTY, 'arizona'],
+    [MA_ZIP_COUNTY, 'massachusetts'],
+    [TN_ZIP_COUNTY, 'tennessee'],
+    [IN_ZIP_COUNTY, 'indiana'],
+    [MO_ZIP_COUNTY, 'missouri'],
+    [MD_ZIP_COUNTY, 'maryland'],
+    [WI_ZIP_COUNTY, 'wisconsin'],
+    [CO_ZIP_COUNTY, 'colorado'],
+    [MN_ZIP_COUNTY, 'minnesota'],
+    [SC_ZIP_COUNTY, 'south-carolina'],
+    [LA_ZIP_COUNTY, 'louisiana'],
+    [KY_ZIP_COUNTY, 'kentucky'],
+    [OR_ZIP_COUNTY, 'oregon'],
+    [OK_ZIP_COUNTY, 'oklahoma'],
+    [CT_ZIP_COUNTY, 'connecticut'],
+    [IA_ZIP_COUNTY, 'iowa'],
+    [MS_ZIP_COUNTY, 'mississippi'],
+    [AR_ZIP_COUNTY, 'arkansas'],
+    [KS_ZIP_COUNTY, 'kansas'],
+    [NV_ZIP_COUNTY, 'nevada'],
+    [NM_ZIP_COUNTY, 'new-mexico'],
+    [WV_ZIP_COUNTY, 'west-virginia'],
+    [NE_ZIP_COUNTY, 'nebraska'],
+    [ID_ZIP_COUNTY, 'idaho'],
+    [HI_ZIP_COUNTY, 'hawaii'],
+    [NH_ZIP_COUNTY, 'new-hampshire'],
+    [ME_ZIP_COUNTY, 'maine'],
+    [RI_ZIP_COUNTY, 'rhode-island'],
+    [MT_ZIP_COUNTY, 'montana'],
+    [DE_ZIP_COUNTY, 'delaware'],
+    [SD_ZIP_COUNTY, 'south-dakota'],
+    [ND_ZIP_COUNTY, 'north-dakota'],
+    [AK_ZIP_COUNTY, 'alaska'],
+    [VT_ZIP_COUNTY, 'vermont'],
+    [UT_ZIP_COUNTY, 'utah'],
+    [WY_ZIP_COUNTY, 'wyoming'],
+  ];
+  for (const [map, state] of STATES) {
+    if (map[clean]) return { state, county: map[clean] };
+  }
   return null;
 }
 
@@ -3943,7 +3948,7 @@ function handleZipSubmit(e) {
   if (result) {
     window.location.href = `/${result.state}/${result.county}/`;
   } else {
-    showZipError('ZIP code not found. <a href="/florida/">Browse Florida</a> or <a href="/california/">Browse California</a>.');
+    showZipError('ZIP code not found. <a href="/resources/">Browse All States</a> to find your county.');
   }
 }
 

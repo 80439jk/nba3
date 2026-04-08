@@ -641,7 +641,7 @@ main {
   border: 1px solid var(--gray-100);
   border-radius: 0.75rem;
   padding: 2rem;
-  box-shadow: var(--shadow-soft-lg);
+  box-shadow: var(--shadow-md);
 }
 
 @media (min-width: 768px) {
@@ -683,7 +683,7 @@ main {
 
 .progress-fill {
   height: 100%;
-  background-color: var(--green-600);
+  background-color: var(--blue-600);
   border-radius: 9999px;
   transition: width 0.3s ease-in-out;
 }
@@ -847,12 +847,16 @@ main {
 .form-actions {
   display: flex;
   gap: 1rem;
-  margin-top: 2.5rem;
+  margin-top: 2rem;
+  align-items: stretch;
+}
+
+.form-actions--single .btn-next {
+  width: 100%;
 }
 
 .btn {
-  flex: 1;
-  padding: 0.875rem 2rem;
+  padding: 0.75rem 1.5rem;
   font-size: 1rem;
   font-weight: 600;
   border: none;
@@ -860,17 +864,27 @@ main {
   cursor: pointer;
   transition: all 0.2s;
   text-decoration: none;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  gap: 0.375rem;
 }
 
 .btn-back {
   background-color: var(--gray-100);
   color: var(--gray-700);
-  border: 1px solid var(--gray-300);
+  border: none;
   font-weight: 600;
+  flex: 0 0 auto;
+  min-width: 7rem;
+}
+
+.btn-back::before {
+  content: '‹';
+  font-size: 1.125rem;
+  line-height: 1;
+  margin-right: 0.25rem;
 }
 
 .btn-back:hover {
@@ -878,15 +892,14 @@ main {
 }
 
 .btn-next {
-  background-color: var(--green-600);
-  color: white;
-  font-weight: 700;
-  box-shadow: var(--shadow-md);
+  background-color: var(--blue-600);
+  color: #fff;
+  font-weight: 600;
+  flex: 1 1 auto;
 }
 
 .btn-next:hover:not(:disabled) {
-  background-color: var(--green-700);
-  box-shadow: var(--shadow-lg);
+  background-color: var(--blue-700);
 }
 
 .btn-next:disabled {
@@ -898,17 +911,17 @@ main {
 .security-note {
   text-align: center;
   font-size: 0.875rem;
-  color: var(--gray-600);
-  margin-top: 1.5rem;
+  color: var(--gray-500);
+  margin-top: 1.25rem;
 }
 
 /* ========== TCPA CONSENT ========== */
 .tcpa-group {
   margin-top: 1.5rem;
   padding: 1rem;
-  background-color: var(--gray-50);
+  background-color: var(--blue-50);
   border-radius: 0.5rem;
-  border: 1px solid var(--gray-200);
+  border: 1px solid var(--blue-200);
 }
 
 .tcpa-checkbox {
@@ -918,23 +931,23 @@ main {
 }
 
 .tcpa-checkbox input[type="checkbox"] {
-  width: 20px;
-  height: 20px;
-  margin-top: 0.1rem;
+  width: 18px;
+  height: 18px;
+  margin-top: 0.2rem;
   flex-shrink: 0;
   cursor: pointer;
-  accent-color: var(--gray-900);
+  accent-color: var(--blue-600);
 }
 
 .tcpa-label {
   font-size: 0.8125rem;
-  color: var(--gray-600);
+  color: var(--gray-700);
   line-height: 1.5;
 }
 
 .tcpa-label a {
-  color: var(--blue, #2563eb);
-  text-decoration: none;
+  color: var(--blue-600);
+  text-decoration: underline;
 }
 
 .tcpa-label a:hover {
@@ -945,7 +958,7 @@ main {
 .ty-card {
   background: white;
   border-radius: 0.75rem;
-  box-shadow: var(--shadow-soft-lg);
+  box-shadow: var(--shadow-md);
   padding: 2rem;
   text-align: center;
   border: 1px solid var(--gray-100);
@@ -1181,7 +1194,7 @@ main {
     <div class="form-card">
       <div class="progress-container">
         <div class="progress-row">
-          <span class="progress-row__left">Step 5 of 5 - Almost Done!</span>
+          <span class="progress-row__left">Step 5 of 5</span>
           <span class="progress-row__right">100% complete</span>
         </div>
         <div class="progress-bar">
@@ -1189,8 +1202,7 @@ main {
         </div>
       </div>
 
-      <h1 class="form-title">How Can We Reach You?</h1>
-      <p class="form-subtitle">We'll send your personalized benefits summary to this contact info.</p>
+      <h1 class="form-title">Contact Information</h1>
 
       <form id="step5Form" novalidate>
         <div class="form-row">
@@ -1201,7 +1213,7 @@ main {
           </div>
           <div class="form-group">
             <label for="lastName" class="form-label">Last Name</label>
-            <input type="text" name="lastName" id="lastName" class="form-input" placeholder="Smith" required />
+            <input type="text" name="lastName" id="lastName" class="form-input" placeholder="Doe" required />
             <div class="form-error">Please enter your last name</div>
           </div>
         </div>
@@ -1222,18 +1234,14 @@ main {
           <div class="tcpa-checkbox">
             <input type="checkbox" name="tcpaConsent" id="tcpaConsent" required />
             <label for="tcpaConsent" class="tcpa-label">
-              By checking this box, I consent to receive calls and text messages from National Benefit Alliance
-              and its partners at the phone number provided, including by autodialer. Consent is not a condition
-              of purchase. Message & data rates may apply. I agree to the
-              <a href="/terms/" target="_blank">Terms</a> and
-              <a href="/privacy/" target="_blank">Privacy Policy</a>.
+              By checking this box and clicking the button, you confirm that this is your mobile number and that you are 18 years of age or older. You agree to the National Benefit Alliance <a href="/terms/" target="_blank">Terms of Use</a> and <a href="/privacy/" target="_blank">Privacy Policy</a> and provide your express written consent to be contacted by National Benefit Alliance, its service providers, and marketing partners, and that your information may be shared with and used by such partners to contact you, via telephone calls and text messages (including SMS and MMS), including through the use of an automatic telephone dialing system, artificial or prerecorded voice, and AI-generated voice, at the number you provided, even if your number is listed on any federal or state Do Not Call registry. You understand that these communications may include marketing messages. Consent is not a condition of purchase. Message frequency varies (up to 10 messages per month). Message and data rates may apply. Reply STOP to opt out or HELP for help. You also agree to receive marketing emails from National Benefit Alliance and its affiliated brands and marketing partners. You may unsubscribe at any time by clicking the unsubscribe link in any email.
             </label>
           </div>
         </div>
 
         <div class="form-actions">
           <a href="/apply/1/step-4/" class="btn btn-back">Back</a>
-          <button type="submit" class="btn btn-next" id="submitBtn">Complete & Get Matched</button>
+          <button type="submit" class="btn btn-next" id="submitBtn">Complete &amp; Get Matched</button>
         </div>
         <p class="security-note" id="processingNote" style="display:none;">Do not close browser while processing — this may take up to 30 seconds.</p>
         <p class="security-note">Your information is secure and will only be used to match you with relevant programs.</p>

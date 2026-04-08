@@ -641,7 +641,7 @@ main {
   border: 1px solid var(--gray-100);
   border-radius: 0.75rem;
   padding: 2rem;
-  box-shadow: var(--shadow-soft-lg);
+  box-shadow: var(--shadow-md);
 }
 
 @media (min-width: 768px) {
@@ -683,7 +683,7 @@ main {
 
 .progress-fill {
   height: 100%;
-  background-color: var(--green-600);
+  background-color: var(--blue-600);
   border-radius: 9999px;
   transition: width 0.3s ease-in-out;
 }
@@ -847,12 +847,16 @@ main {
 .form-actions {
   display: flex;
   gap: 1rem;
-  margin-top: 2.5rem;
+  margin-top: 2rem;
+  align-items: stretch;
+}
+
+.form-actions--single .btn-next {
+  width: 100%;
 }
 
 .btn {
-  flex: 1;
-  padding: 0.875rem 2rem;
+  padding: 0.75rem 1.5rem;
   font-size: 1rem;
   font-weight: 600;
   border: none;
@@ -860,17 +864,27 @@ main {
   cursor: pointer;
   transition: all 0.2s;
   text-decoration: none;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  gap: 0.375rem;
 }
 
 .btn-back {
   background-color: var(--gray-100);
   color: var(--gray-700);
-  border: 1px solid var(--gray-300);
+  border: none;
   font-weight: 600;
+  flex: 0 0 auto;
+  min-width: 7rem;
+}
+
+.btn-back::before {
+  content: '‹';
+  font-size: 1.125rem;
+  line-height: 1;
+  margin-right: 0.25rem;
 }
 
 .btn-back:hover {
@@ -878,15 +892,14 @@ main {
 }
 
 .btn-next {
-  background-color: var(--green-600);
-  color: white;
-  font-weight: 700;
-  box-shadow: var(--shadow-md);
+  background-color: var(--blue-600);
+  color: #fff;
+  font-weight: 600;
+  flex: 1 1 auto;
 }
 
 .btn-next:hover:not(:disabled) {
-  background-color: var(--green-700);
-  box-shadow: var(--shadow-lg);
+  background-color: var(--blue-700);
 }
 
 .btn-next:disabled {
@@ -898,17 +911,17 @@ main {
 .security-note {
   text-align: center;
   font-size: 0.875rem;
-  color: var(--gray-600);
-  margin-top: 1.5rem;
+  color: var(--gray-500);
+  margin-top: 1.25rem;
 }
 
 /* ========== TCPA CONSENT ========== */
 .tcpa-group {
   margin-top: 1.5rem;
   padding: 1rem;
-  background-color: var(--gray-50);
+  background-color: var(--blue-50);
   border-radius: 0.5rem;
-  border: 1px solid var(--gray-200);
+  border: 1px solid var(--blue-200);
 }
 
 .tcpa-checkbox {
@@ -918,23 +931,23 @@ main {
 }
 
 .tcpa-checkbox input[type="checkbox"] {
-  width: 20px;
-  height: 20px;
-  margin-top: 0.1rem;
+  width: 18px;
+  height: 18px;
+  margin-top: 0.2rem;
   flex-shrink: 0;
   cursor: pointer;
-  accent-color: var(--gray-900);
+  accent-color: var(--blue-600);
 }
 
 .tcpa-label {
   font-size: 0.8125rem;
-  color: var(--gray-600);
+  color: var(--gray-700);
   line-height: 1.5;
 }
 
 .tcpa-label a {
-  color: var(--blue, #2563eb);
-  text-decoration: none;
+  color: var(--blue-600);
+  text-decoration: underline;
 }
 
 .tcpa-label a:hover {
@@ -945,7 +958,7 @@ main {
 .ty-card {
   background: white;
   border-radius: 0.75rem;
-  box-shadow: var(--shadow-soft-lg);
+  box-shadow: var(--shadow-md);
   padding: 2rem;
   text-align: center;
   border: 1px solid var(--gray-100);
@@ -1189,14 +1202,13 @@ main {
         </div>
       </div>
 
-      <h1 class="form-title">Where Do You Live?</h1>
-      <p class="form-subtitle">We'll find programs available in your state and county.</p>
+      <h1 class="form-title">Select Your State</h1>
 
       <form id="step1Form" novalidate>
         <div class="form-group">
-          <label for="state" class="form-label">Select Your State</label>
+          <label for="state" class="form-label">State</label>
           <select name="state" id="state" class="form-select" required>
-            <option value="">Choose your state...</option>
+            <option value="">Select your state</option>
             <option value="AL">Alabama</option>
             <option value="AK">Alaska</option>
             <option value="AZ">Arizona</option>
@@ -1252,10 +1264,10 @@ main {
           <div class="form-error">Please select your state</div>
         </div>
 
-        <div class="form-actions">
-          <a href="/apply/1/" class="btn btn-back">Back</a>
+        <div class="form-actions form-actions--single">
           <button type="submit" class="btn btn-next">Continue</button>
         </div>
+        <p class="security-note">Your information is secure and will only be used to match you with relevant programs.</p>
       </form>
     </div>
   </main>

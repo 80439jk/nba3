@@ -12,6 +12,9 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-MTQ5WNFR');</script>
     <!-- End Google Tag Manager -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@700;800&display=swap" rel="stylesheet" />
   <style>
 
 :root {
@@ -25,6 +28,25 @@
   --green-700: #15803d;
   --green-50: #f0fdf4;
   --green-200: #bbf7d0;
+  --navy-900: #1a2b47;
+  --navy-800: #1e3a5f;
+  --navy-50: #e6eff9;
+  --navy-100: #ccdaf0;
+  --navy-200: #abb3de;
+  --amber-500: #f59e0b;
+  --amber-600: #d97706;
+  --amber-300: #fcd34d;
+  --amber-50: #fffbeb;
+  --amber-100: #fef3c7;
+  --navy-800: #1e3a5f;
+  --navy-50: #e6eff9;
+  --navy-100: #ccdaf0;
+  --navy-200: #abb3de;
+  --amber-500: #f59e0b;
+  --amber-600: #d97706;
+  --amber-300: #fcd34d;
+  --amber-50: #fffbeb;
+  --amber-100: #fef3c7;
   --gray-50: #f9fafb;
   --gray-100: #f3f4f6;
   --gray-200: #e5e7eb;
@@ -39,8 +61,8 @@
   --shadow-lg: 0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -4px rgba(0,0,0,.1);
   --shadow-xl: 0 20px 25px -5px rgba(0,0,0,.1), 0 8px 10px -6px rgba(0,0,0,.1);
 
-  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  --font-head: 'Poppins', 'Segoe UI', system-ui, sans-serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-head: 'Poppins', 'Inter', sans-serif;
 }
 
 * {
@@ -57,7 +79,8 @@ body {
   font-family: var(--font-sans);
   color: var(--gray-900);
   background-color: #fff;
-  line-height: 1.5;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* ========== HEADER ========== */
@@ -65,22 +88,22 @@ body {
   position: sticky;
   top: 0;
   z-index: 50;
-  background-color: #fff;
-  border-bottom: 1px solid var(--gray-200);
+  background-color: var(--navy-900);
+  border-bottom: 1px solid var(--navy-800);
 }
 
 .header__inner {
   max-width: 72rem;
   margin: 0 auto;
-  padding: 1.25rem 1rem;
+  padding: 0.875rem 1rem;
   display: flex;
   align-items: center;
 }
 
 .header__logo {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 700;
-  color: var(--gray-800);
+  color: white;
   text-decoration: none;
   transition: opacity 0.2s;
 }
@@ -150,12 +173,12 @@ main {
 
 /* ========== LANDING PAGE HERO ========== */
 .hero {
-  background: linear-gradient(to bottom, var(--blue-50), #fff);
+  background: linear-gradient(to bottom, var(--navy-900), var(--navy-800));
   padding: 4rem 1rem;
 }
 
 @media (min-width: 768px) {
-  .hero { padding: 4rem 1rem; }
+  .hero { padding: 5rem 1rem; }
 }
 
 .hero__inner {
@@ -170,48 +193,45 @@ main {
   font-weight: 600;
   letter-spacing: 0.025em;
   text-transform: uppercase;
-  color: var(--blue-600);
+  color: var(--amber-500);
   margin-bottom: 1.5rem;
   margin-top: 0.5rem;
 }
 
 .hero__headline {
   font-family: var(--font-head);
-  font-size: 2.25rem;
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
   font-weight: 700;
   line-height: 1.25;
-  color: var(--gray-900);
-  margin-bottom: 2rem;
+  color: white;
+  margin-bottom: 1.25rem;
 }
 
 @media (min-width: 768px) {
-  .hero__headline { font-size: 3rem; }
 }
 
 @media (min-width: 1024px) {
-  .hero__headline { font-size: 3.75rem; }
 }
 
 .hero__subtitle {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   line-height: 1.625;
-  color: var(--gray-700);
-  margin-bottom: 2.5rem;
-  max-width: 48rem;
+  color: var(--gray-200);
+  margin-bottom: 2rem;
+  max-width: 40rem;
   margin-left: auto;
   margin-right: auto;
 }
 
 @media (min-width: 768px) {
-  .hero__subtitle { font-size: 1.5rem; }
 }
 
 .hero__cta {
   display: inline-block;
   padding: 1.25rem 2.5rem;
-  background-color: var(--green-600);
+  background-color: var(--amber-500);
   color: white;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 700;
   border: none;
   border-radius: 0.5rem;
@@ -222,7 +242,7 @@ main {
 }
 
 .hero__cta:hover {
-  background-color: var(--green-700);
+  background-color: var(--amber-600);
   box-shadow: var(--shadow-xl);
 }
 
@@ -263,8 +283,8 @@ main {
   height: 1.75rem;
 }
 
-.badge__icon--blue { color: var(--blue-600); }
-.badge__icon--green { color: var(--green-600); }
+.badge__icon--blue { color: var(--navy-900); }
+.badge__icon--green { color: var(--amber-500); }
 
 .badge__text {
   font-size: 1rem;
@@ -275,7 +295,7 @@ main {
 /* ========== PROGRAMS CARD SECTION ========== */
 .programs-section {
   background-color: var(--gray-50);
-  padding: 5rem 1rem;
+  padding: 3.5rem 1rem;
 }
 
 .programs-section__inner {
@@ -315,7 +335,7 @@ main {
 }
 
 .programs-check-list {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .programs-check-item {
@@ -344,9 +364,9 @@ main {
 
 .programs-card__cta {
   display: inline-block;
-  background-color: var(--green-600);
+  background-color: var(--amber-500);
   color: white;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 700;
   padding: 1.25rem 3rem;
   border-radius: 0.5rem;
@@ -356,14 +376,14 @@ main {
 }
 
 .programs-card__cta:hover {
-  background-color: var(--green-700);
+  background-color: var(--amber-600);
   box-shadow: var(--shadow-xl);
 }
 
 /* ========== HOW IT WORKS SECTION ========== */
 .how-section {
   background: white;
-  padding: 5rem 1rem;
+  padding: 3.5rem 1rem;
 }
 
 .how-section__inner {
@@ -373,29 +393,28 @@ main {
 
 .how-section__title {
   font-family: var(--font-head);
-  font-size: 2.25rem;
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
   font-weight: 700;
   color: var(--gray-900);
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 768px) {
-  .how-section__title { font-size: 3rem; }
 }
 
 .how-section__subtitle {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   color: var(--gray-700);
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem;
 }
 
 .how-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem;
 }
 
 @media (min-width: 768px) {
@@ -410,37 +429,37 @@ main {
 }
 
 .how-step--blue {
-  background-color: var(--blue-50);
-  border-color: var(--blue-200);
+  background-color: var(--navy-50);
+  border-color: var(--navy-100);
 }
 
 .how-step--green {
-  background-color: var(--green-50);
-  border-color: var(--green-200);
+  background-color: var(--amber-50);
+  border-color: var(--amber-100);
 }
 
 .how-step__number {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 4rem;
-  height: 4rem;
+  width: 3.5rem;
+  height: 3.5rem;
   border-radius: 50%;
   color: white;
   font-family: var(--font-head);
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-}
-
-.how-step--blue .how-step__number { background-color: var(--blue-600); }
-.how-step--green .how-step__number { background-color: var(--green-600); }
-
-.how-step__title {
   font-size: 1.25rem;
   font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+
+.how-step--blue .how-step__number { background-color: var(--navy-800); }
+.how-step--green .how-step__number { background-color: var(--amber-500); }
+
+.how-step__title {
+  font-size: 1.1rem;
+  font-weight: 700;
   color: var(--gray-900);
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .how-step__desc {
@@ -448,8 +467,8 @@ main {
 }
 
 .how-free-banner {
-  background-color: var(--green-50);
-  border: 2px solid var(--green-200);
+  background-color: var(--amber-50);
+  border: 2px solid var(--amber-100);
   border-radius: 0.75rem;
   padding: 2rem;
   text-align: center;
@@ -463,14 +482,14 @@ main {
 }
 
 .how-free-banner__text {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   color: var(--gray-700);
 }
 
 /* ========== WHAT TO EXPECT SECTION ========== */
 .expect-section {
   background-color: var(--gray-50);
-  padding: 5rem 1rem;
+  padding: 3.5rem 1rem;
 }
 
 .expect-section__inner {
@@ -480,15 +499,14 @@ main {
 
 .expect-section__title {
   font-family: var(--font-head);
-  font-size: 2.25rem;
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
   font-weight: 700;
   color: var(--gray-900);
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem;
 }
 
 @media (min-width: 768px) {
-  .expect-section__title { font-size: 3rem; }
 }
 
 .expect-card {
@@ -497,7 +515,7 @@ main {
   box-shadow: var(--shadow-md);
   padding: 2rem;
   border: 1px solid var(--gray-100);
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 @media (min-width: 768px) {
@@ -526,15 +544,15 @@ main {
 }
 
 .expect-free-banner {
-  background-color: var(--blue-50);
-  border: 2px solid var(--blue-200);
+  background-color: var(--navy-50);
+  border: 2px solid var(--navy-100);
   border-radius: 0.75rem;
   padding: 2rem;
   text-align: center;
 }
 
 .expect-free-banner__title {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: var(--gray-900);
   margin-bottom: 0.5rem;
@@ -547,8 +565,8 @@ main {
 
 /* ========== FINAL CTA SECTION ========== */
 .final-cta-section {
-  background: linear-gradient(to bottom, var(--blue-600), var(--blue-700));
-  padding: 5rem 1rem;
+  background: linear-gradient(to bottom, var(--navy-900), var(--navy-800));
+  padding: 3.5rem 1rem;
   color: white;
 }
 
@@ -560,26 +578,25 @@ main {
 
 .final-cta-section__title {
   font-family: var(--font-head);
-  font-size: 2.25rem;
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
   font-weight: 700;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 768px) {
-  .final-cta-section__title { font-size: 3rem; }
 }
 
 .final-cta-section__subtitle {
   font-size: 1.5rem;
   color: var(--gray-200);
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .final-cta-section__btn {
   display: inline-block;
-  background-color: var(--green-600);
+  background-color: var(--amber-500);
   color: white;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 700;
   padding: 1.25rem 3rem;
   border-radius: 0.5rem;
@@ -589,7 +606,7 @@ main {
 }
 
 .final-cta-section__btn:hover {
-  background-color: var(--green-700);
+  background-color: var(--amber-600);
   box-shadow: var(--shadow-xl);
 }
 
@@ -602,7 +619,7 @@ main {
 
 .bottom-cta-bar__btn {
   display: inline-block;
-  background-color: var(--green-600);
+  background-color: var(--amber-500);
   color: white;
   font-size: 1.5rem;
   font-weight: 700;
@@ -615,7 +632,7 @@ main {
 }
 
 .bottom-cta-bar__btn:hover {
-  background-color: var(--green-700);
+  background-color: var(--amber-600);
   box-shadow: var(--shadow-xl);
 }
 
@@ -636,9 +653,9 @@ main {
   margin: 0 auto;
   background-color: white;
   border: 1px solid var(--gray-100);
-  border-radius: 0.75rem;
+  border-radius: 1rem;
   padding: 2rem;
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 10px 40px -10px rgba(0,0,0,.1), 0 20px 25px -5px rgba(0,0,0,.04);
 }
 
 @media (min-width: 768px) {
@@ -649,7 +666,7 @@ main {
 
 /* ========== PROGRESS BAR ========== */
 .progress-container {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .progress-row {
@@ -680,7 +697,7 @@ main {
 
 .progress-fill {
   height: 100%;
-  background-color: var(--blue-600);
+  background-color: var(--amber-500);
   border-radius: 9999px;
   transition: width 0.3s ease-in-out;
 }
@@ -688,17 +705,17 @@ main {
 /* ========== FORM ELEMENTS ========== */
 .form-title {
   font-family: var(--font-head);
-  font-size: 1.875rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--gray-900);
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   text-align: center;
 }
 
 .form-subtitle {
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: var(--gray-600);
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   line-height: 1.5;
   text-align: center;
 }
@@ -871,7 +888,7 @@ main {
 .btn-back {
   background-color: var(--gray-100);
   color: var(--gray-700);
-  border: none;
+  border: 1px solid var(--gray-300);
   font-weight: 600;
   flex: 0 0 auto;
   min-width: 7rem;
@@ -889,14 +906,14 @@ main {
 }
 
 .btn-next {
-  background-color: var(--blue-600);
+  background-color: var(--amber-500);
   color: #fff;
   font-weight: 600;
   flex: 1 1 auto;
 }
 
 .btn-next:hover:not(:disabled) {
-  background-color: var(--blue-700);
+  background-color: var(--amber-600);
 }
 
 .btn-next:disabled {
@@ -964,7 +981,7 @@ main {
 }
 
 @media (min-width: 768px) {
-  .ty-card { padding: 2.5rem; }
+  .ty-card { padding: 2rem; }
 }
 
 .ty-icon-wrap {
@@ -996,19 +1013,18 @@ main {
   position: relative;
   width: 5rem;
   height: 5rem;
-  color: var(--green-600);
+  color: var(--amber-500);
 }
 
 .ty-title {
   font-family: var(--font-head);
-  font-size: 2.25rem;
+  font-size: 1.75rem;
   font-weight: 700;
   color: var(--gray-900);
   margin-bottom: 1.5rem;
 }
 
 @media (min-width: 768px) {
-  .ty-title { font-size: 3rem; }
 }
 
 .ty-ref {
@@ -1020,8 +1036,8 @@ main {
 
 /* Action needed box */
 .ty-action-box {
-  background-color: var(--blue-50);
-  border: 2px solid #bfdbfe;
+  background-color: var(--navy-50);
+  border: 2px solid var(--navy-100);
   border-radius: 0.75rem;
   padding: 2rem;
   margin-bottom: 2rem;
@@ -1029,7 +1045,7 @@ main {
 
 .ty-action-box__title {
   font-family: var(--font-head);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--gray-900);
   margin-bottom: 1rem;
@@ -1046,10 +1062,10 @@ main {
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  background-color: var(--green-600);
+  background-color: var(--amber-500);
   color: white;
-  font-size: 1.25rem;
-  padding: 1.5rem 3rem;
+  font-size: 1.1rem;
+  padding: 1rem 2.5rem;
   border-radius: 0.5rem;
   font-weight: 700;
   text-decoration: none;
@@ -1059,13 +1075,13 @@ main {
 }
 
 .ty-call-btn:hover {
-  background-color: var(--green-700);
+  background-color: var(--amber-600);
   box-shadow: 0 20px 35px -5px rgba(245, 158, 11, 0.4);
   transform: translateY(-2px);
 }
 
 .ty-phone-number {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--gray-900);
   margin-bottom: 0.5rem;
@@ -1093,7 +1109,7 @@ main {
 /* Benefit checkmarks */
 .ty-benefits {
   text-align: left;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .ty-benefit-item {
@@ -1111,7 +1127,7 @@ main {
   flex-shrink: 0;
   width: 1.75rem;
   height: 1.75rem;
-  color: var(--green-600);
+  color: var(--amber-500);
   margin-top: 0.125rem;
 }
 
@@ -1161,7 +1177,7 @@ main {
 /* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
   .form-title {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 
   .trust-badges {
@@ -1204,11 +1220,11 @@ main {
       <div class="ty-action-box">
         <h2 class="ty-action-box__title">Action Needed</h2>
         <p class="ty-action-box__text">A case manager has been assigned to you. Please call the number below to verify your identity and release your available benefits to you. This call is completely free and can connect you to assistance that may help right away.</p>
-        <a href="tel:18557679422" class="ty-call-btn">
+        <a href="tel:18884085650" class="ty-call-btn">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
           Call Now to Get Started
         </a>
-        <p class="ty-phone-number">1-855-767-9422</p>
+        <p class="ty-phone-number">1-888-408-5650</p>
         <p class="ty-phone-note">No answer? Text us or we'll call you back.</p>
         <p class="ty-expire-note">Your Reference Number will expire in 30 Minutes so please call before expiration or you may need to resubmit an application.</p>
       </div>

@@ -112,9 +112,18 @@ p { margin-bottom: 1rem; }
 }
 .btn--outline:hover { background: var(--navy); color: var(--white); }
 .btn--outline-white {
-  background: transparent; color: var(--white); border-color: rgba(255,255,255,0.6);
+  background: rgba(255,255,255,0.1);
+  color: var(--white);
+  border-color: #ffffff;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.18);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
 }
-.btn--outline-white:hover { background: var(--white); color: var(--navy); }
+.btn--outline-white:hover {
+  background: var(--white);
+  color: var(--navy);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
 .btn--lg { padding: 1.1rem 2.5rem; font-size: 1.1rem; }
 .btn--sm { padding: 0.6rem 1.25rem; font-size: 0.875rem; }
 .btn--full { width: 100%; justify-content: center; }

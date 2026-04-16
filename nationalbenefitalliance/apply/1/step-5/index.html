@@ -1253,6 +1253,12 @@ main {
           </div>
         </div>
 
+        <!-- Anti-bot honeypot — invisible to humans, bots auto-fill it -->
+        <div style="position:absolute;left:-9999px;height:0;width:0;overflow:hidden;" aria-hidden="true">
+          <label for="website">Website</label>
+          <input type="text" name="website" id="website" tabindex="-1" autocomplete="off" value="" />
+        </div>
+
         <div class="form-actions">
           <a href="/apply/1/step-4/" class="btn btn-back">Back</a>
           <button type="submit" class="btn btn-next" id="submitBtn">Complete &amp; Get Matched</button>
@@ -1358,6 +1364,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const d = getFunnelData();
     if (d.tcpaConsent) document.getElementById('tcpaConsent').checked = true;
 
+    // Timestamp for bot time-trap detection
+    sessionStorage.setItem('nba_form_shown', String(Date.now()));
+
     document.getElementById('step5Form').addEventListener('submit', async function(e) {
       e.preventDefault();
       clearAllErrors();
@@ -1424,7 +1433,9 @@ document.addEventListener('DOMContentLoaded', function() {
         utm_medium: data.utm_medium || '',
         utm_campaign: data.utm_campaign || '',
         utm_content: data.utm_content || '',
-        utm_term: data.utm_term || ''
+        utm_term: data.utm_term || '',
+        hp_website: document.getElementById('website').value,
+        form_duration_ms: Date.now() - parseInt(sessionStorage.getItem('nba_form_shown') || '0', 10)
       };
 
       try {

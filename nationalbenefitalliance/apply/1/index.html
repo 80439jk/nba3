@@ -1336,7 +1336,7 @@ function saveFunnelData(obj) {
 function captureUTM() {
   const p = new URLSearchParams(window.location.search);
   const utms = {};
-  ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','gclid'].forEach(k => {
+  ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','gclid','wbraid','gbraid'].forEach(k => {
     if (p.get(k)) utms[k] = p.get(k);
   });
   if (Object.keys(utms).length) saveFunnelData(utms);
@@ -1345,7 +1345,7 @@ function captureUTM() {
 function getTransactionId() {
   let d = getFunnelData();
   if (!d.transaction_id) {
-    d.transaction_id = 'nba_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    d.transaction_id = crypto.randomUUID();
     saveFunnelData(d);
   }
   return d.transaction_id;

@@ -112,6 +112,53 @@ body {
   opacity: 0.8;
 }
 
+
+/* ========== TRUST BADGES v2 ========== */
+.trust2-section {
+  background: white;
+  padding: 2.5rem 1rem;
+  border-top: 1px solid var(--gray-100);
+  border-bottom: 1px solid var(--gray-100);
+}
+.trust2-inner {
+  max-width: 52rem;
+  margin: 0 auto;
+}
+.trust2-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem 2rem;
+}
+@media (min-width: 640px) {
+  .trust2-grid { grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+}
+.trust2-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+.trust2-icon-wrap {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: var(--amber-50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--amber-500);
+}
+.trust2-icon-wrap svg {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+.trust2-label {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--navy-900);
+  line-height: 1.3;
+}
+
 /* ========== FOOTER ========== */
 .footer {
   background-color: var(--gray-900);
@@ -130,7 +177,7 @@ body {
 .footer__brand {
   font-weight: 600;
   color: white;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .footer__links {
@@ -149,7 +196,7 @@ body {
 }
 
 .footer__links a:hover {
-  color: white;
+  color: var(--amber-500);
 }
 
 .footer__disclaimer {
@@ -174,11 +221,11 @@ main {
 /* ========== LANDING PAGE HERO ========== */
 .hero {
   background: linear-gradient(to bottom, var(--navy-900), var(--navy-800), var(--navy-900));
-  padding: 4rem 1rem;
+  padding: 2.5rem 1rem;
 }
 
 @media (min-width: 768px) {
-  .hero { padding: 5rem 1rem; }
+  .hero { padding: 1.25rem 1rem 1.5rem; }
 }
 
 .hero__inner {
@@ -193,25 +240,25 @@ main {
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: #fbbf24;
-  margin-bottom: 1rem;
+  color: white;
+  margin-bottom: 0.5rem;
   margin-top: 0;
 }
 
 .hero__headline {
   font-family: var(--font-head);
-  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-size: clamp(1.35rem, 4vw, 2.75rem);
   font-weight: 700;
   line-height: 1.25;
   color: white;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.6rem;
 }
 
 .hero__subtitle {
   font-size: 1.1rem;
-  line-height: 1.7;
+  line-height: 1.35;
   color: var(--gray-200);
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
   max-width: 40rem;
   opacity: 0.9;
   margin-left: auto;
@@ -219,7 +266,7 @@ main {
 }
 
 @media (min-width: 768px) {
-  .hero__subtitle { font-size: 1.5rem; }
+  .hero__subtitle { font-size: 1.15rem; }
 }
 
 .hero__cta {
@@ -245,22 +292,22 @@ main {
 
 /* ========== HERO KEYWORD STRIP ========== */
 .hero__keywords {
-  font-size: 1rem;
-  color: var(--gray-200);
-  margin: 0 auto 2rem;
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.55);
+  margin: 0 auto 0.75rem;
   max-width: 56rem;
   line-height: 1.6;
   opacity: 0.95;
 }
 
 .hero__keywords strong {
-  font-weight: 700;
-  color: white;
+  font-weight: 600;
+  color: rgba(255,255,255,0.55);
   white-space: nowrap;
 }
 
 .hero__keywords-sep {
-  margin: 0 0.5rem;
+  margin: 0 0.3rem;
   opacity: 0.6;
 }
 
@@ -278,19 +325,26 @@ main {
 
 .hero__form-select {
   width: 100%;
-  padding: 0.875rem 1rem;
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 0.5rem;
+  padding: 1rem 1.125rem;
+  border: 2.5px solid var(--amber-500);
+  border-radius: 0.625rem;
   font-size: 1rem;
+  font-weight: 700;
   font-family: inherit;
-  background-color: white;
-  color: var(--gray-900);
-  margin-bottom: 0.875rem;
+  background-color: #fef8ee;
+  color: var(--navy-900);
+  margin-bottom: 0;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: none;
+  padding-right: 3.5rem;
+  box-shadow: inset 0 0 0 4px rgba(245, 158, 11, 0.1);
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .hero__form-select:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.4);
 }
 
 .hero__form-error {
@@ -374,7 +428,7 @@ main {
 .badge__icon--green { color: var(--amber-500); }
 
 .badge__text {
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 600;
   color: var(--gray-700);
 }
@@ -403,7 +457,7 @@ main {
 }
 
 .programs-card__intro {
-  font-size: 1rem;
+  font-size: 1.05rem;
   color: var(--gray-700);
   line-height: 1.7;
   margin-bottom: 1.5rem;
@@ -425,7 +479,7 @@ main {
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .programs-check-item:last-child { margin-bottom: 0; }
@@ -439,7 +493,7 @@ main {
 }
 
 .programs-check-text {
-  font-size: 1rem;
+  font-size: 1.05rem;
   color: var(--gray-700);
 }
 
@@ -481,7 +535,7 @@ main {
   font-weight: 700;
   color: var(--gray-900);
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .how-section__subtitle {
@@ -530,7 +584,7 @@ main {
   font-family: var(--font-head);
   font-size: 1.25rem;
   font-weight: 700;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.6rem;
 }
 
 .how-step--blue .how-step__number { background-color: var(--navy-800); }
@@ -563,7 +617,7 @@ main {
 }
 
 .how-free-banner__text {
-  font-size: 1rem;
+  font-size: 1.05rem;
   color: var(--gray-700);
 }
 
@@ -617,7 +671,7 @@ main {
 }
 
 .expect-text {
-  font-size: 1rem;
+  font-size: 1.05rem;
   color: var(--gray-700);
 }
 
@@ -637,8 +691,34 @@ main {
 }
 
 .expect-free-banner__text {
-  font-size: 1rem;
+  font-size: 1.05rem;
   color: var(--gray-700);
+}
+
+/* ========== MID-PAGE CTA ========== */
+.mid-cta-section {
+  background: var(--gray-50);
+  padding: 2.5rem 1rem;
+  text-align: center;
+  border-top: 1px solid var(--gray-200);
+  border-bottom: 1px solid var(--gray-200);
+}
+.mid-cta-btn {
+  display: inline-block;
+  background-color: var(--amber-500);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 1rem 2.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: all 0.3s;
+  box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.3);
+}
+.mid-cta-btn:hover {
+  background-color: var(--amber-600);
+  box-shadow: 0 20px 25px -5px rgba(245, 158, 11, 0.4);
+  transform: translateY(-1px);
 }
 
 /* ========== FINAL CTA SECTION ========== */
@@ -658,12 +738,17 @@ main {
   font-family: var(--font-head);
   font-size: clamp(1.5rem, 3.5vw, 2rem);
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .final-cta-section__subtitle {
   font-size: 1.2rem;
   color: var(--gray-200);
+  margin-bottom: 0.75rem;
+}
+.final-cta-section__sub2 {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.55);
   margin-bottom: 2rem;
 }
 
@@ -819,7 +904,7 @@ main {
   padding: 0.75rem 1rem;
   border: 1px solid var(--gray-300);
   border-radius: 0.5rem;
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-family: inherit;
   transition: border-color 0.2s, box-shadow 0.2s;
   background-color: #fff;
@@ -948,7 +1033,7 @@ main {
 
 .btn {
   padding: 0.75rem 1.5rem;
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 600;
   border: none;
   border-radius: 0.5rem;
@@ -1106,7 +1191,7 @@ main {
 }
 
 .ty-ref {
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 600;
   color: var(--gray-900);
   margin-bottom: 1.5rem;
@@ -1126,12 +1211,12 @@ main {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--gray-900);
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .ty-action-box__text {
   color: var(--gray-700);
-  font-size: 1rem;
+  font-size: 1.05rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
@@ -1149,7 +1234,7 @@ main {
   text-decoration: none;
   transition: all 0.2s;
   box-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.3);
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .ty-call-btn:hover {
@@ -1168,7 +1253,7 @@ main {
 .ty-phone-note {
   font-size: 0.875rem;
   color: var(--gray-700);
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.6rem;
 }
 
 .ty-expire-note {
@@ -1194,7 +1279,7 @@ main {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.6rem;
 }
 
 .ty-benefit-item:last-child {
@@ -1268,6 +1353,265 @@ main {
   }
 }
 
+
+@media (max-width: 640px) {
+  .hero__subtitle { display: none; }
+  .hero { padding: 1.5rem 1rem 2rem; }
+  .hero__keywords { margin-bottom: 1rem; }
+}
+
+.hero__form-micro {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 0.625rem;
+  text-align: center;
+}
+
+.hero__form-checks {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: 0.875rem;
+  font-size: 0.8125rem;
+  color: rgba(255,255,255,0.8);
+  font-weight: 500;
+}
+
+/* ========== HERO REVAMP ========== */
+.hero__oneliner {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.65);
+  margin: 0 auto 1.25rem;
+  max-width: 38rem;
+  line-height: 1.5;
+}
+
+
+
+/* White card */
+.hero__card {
+  background: white;
+  border-radius: 1rem;
+  padding: 2.5rem;
+  max-width: 34rem;
+  margin: 0 auto 1.5rem;
+  text-align: left;
+  box-shadow: 0 20px 60px -10px rgba(0,0,0,0.35);
+}
+@media (max-width: 640px) {
+  .hero__card { padding: 1.5rem; border-radius: 0.75rem; }
+}
+.hero__card-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  margin-bottom: 0.375rem;
+}
+.hero__card-step {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: var(--amber-500);
+  color: var(--navy-900);
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.hero__card-title {
+  font-family: var(--font-head);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 0;
+}
+.hero__card-sub {
+  font-size: 0.875rem;
+  color: var(--gray-500);
+  margin-bottom: 1.25rem;
+  line-height: 1.45;
+}
+.hero__card-divider {
+  border: none;
+  border-top: 1px solid var(--gray-100);
+  margin: 1.5rem 0;
+}
+
+/* Tiles */
+.hero__tiles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 0;
+}
+.hero__tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 1rem 0.375rem;
+  border: 1.5px solid var(--gray-200);
+  border-radius: 0.625rem;
+  cursor: pointer;
+  position: relative;
+  transition: border-color 0.15s, background 0.15s;
+  background: white;
+  user-select: none;
+}
+.hero__tile:hover {
+  border-color: var(--amber-500);
+  background: var(--amber-50);
+}
+.hero__tile--selected {
+  border-color: var(--amber-500);
+  background: var(--amber-50);
+}
+.hero__tile input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.hero__tile-check {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 1.125rem;
+  height: 1.125rem;
+  border-radius: 50%;
+  border: 1.5px solid var(--gray-300);
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+  flex-shrink: 0;
+}
+.hero__tile--selected .hero__tile-check {
+  background: var(--amber-500);
+  border-color: var(--amber-500);
+}
+.hero__tile--selected .hero__tile-check::after {
+  content: '';
+  display: block;
+  width: 0.35rem;
+  height: 0.6rem;
+  border: 2px solid white;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+.hero__tile-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--gray-500);
+}
+.hero__tile--selected .hero__tile-icon {
+  color: var(--amber-600);
+}
+.hero__tile-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--gray-700);
+  text-align: center;
+  line-height: 1.3;
+}
+.hero__tile--selected .hero__tile-label {
+  color: var(--amber-600);
+}
+
+/* Select wrapper for chevron rotation */
+.hero__select-wrap {
+  position: relative;
+  margin-bottom: 0;
+}
+.hero__select-wrap .hero__form-select {
+  padding-right: 2.75rem;
+  background-image: none;
+}
+.hero__select-chevron-box {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.875rem;
+  height: 1.875rem;
+  background: var(--amber-500);
+  border-radius: 0.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  transition: transform 0.2s;
+}
+.hero__select-chevron {
+  color: var(--navy-900);
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+.hero__select-wrap:hover .hero__form-select {
+  border-color: var(--navy-900);
+  box-shadow: inset 0 0 0 4px rgba(26, 43, 71, 0.06), 0 0 0 3px rgba(26, 43, 71, 0.12);
+}
+.hero__select-wrap:focus-within .hero__form-select {
+  border-color: var(--navy-900);
+  box-shadow: inset 0 0 0 4px rgba(26, 43, 71, 0.08), 0 0 0 3px rgba(26, 43, 71, 0.15);
+}
+.hero__select-wrap:focus-within .hero__select-chevron-box {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/* Trust marks inside card */
+.hero__card-trust {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--gray-100);
+}
+.hero__card-trust span {
+  font-size: 0.8125rem;
+  color: var(--gray-500);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.hero__card-trust-check {
+  color: #16a34a;
+  font-weight: 700;
+}
+
+/* Social proof */
+.hero__social-proof {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.5);
+  text-align: center;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.hero__social-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #16a34a;
+  flex-shrink: 0;
+  display: inline-block;
+}
+/* ========== DESKTOP COMPACT HERO ========== */
+@media (min-width: 768px) {
+  .hero__headline { font-size: 1.875rem; margin-bottom: 0.35rem; }
+  .hero__oneliner { margin-bottom: 0.75rem; }
+  .hero__card { padding: 1.75rem 2rem; margin-bottom: 0.75rem; }
+  .hero__card-divider { margin: 1rem 0; }
+}
   </style>
 </head>
 <body>
@@ -1285,32 +1629,150 @@ main {
     <!-- HERO -->
     <section class="hero">
       <div class="hero__inner">
-        <span class="hero__label">Real People, Real Benefits</span>
-        <h1 class="hero__headline">When Life Hits Hard, You Do Not Need To Navigate The System Alone</h1>
-        <p class="hero__subtitle">In one quick, free phone call, a benefits specialist can review your situation, see if you qualify, and match you to assistance programs that may help right away.</p>
-        <a href="/apply/1/step-1/" class="hero__cta">Start Your Free Eligibility Check</a>
+
+        <h1 class="hero__headline">Get matched to assistance that can help right away</h1>
+
+        <p class="hero__oneliner">Talk to a specialist. See what you qualify for.<br>Free, fast, confidential, no commitment.</p>
+
+        <div class="hero__card">
+          <div class="hero__card-header">
+            <div class="hero__card-step">1</div>
+            <h2 class="hero__card-title">What brings you here today?</h2>
+          </div>
+          <p class="hero__card-sub">Pick one or more. We'll only show you programs that actually fit.</p>
+          <div class="hero__tiles">
+            <label class="hero__tile" data-value="food">
+              <input type="checkbox" name="needs" value="food">
+              <span class="hero__tile-check"></span>
+              <svg class="hero__tile-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+              <span class="hero__tile-label">Food &amp;<br>Groceries</span>
+            </label>
+            <label class="hero__tile" data-value="utility">
+              <input type="checkbox" name="needs" value="utility">
+              <span class="hero__tile-check"></span>
+              <svg class="hero__tile-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              <span class="hero__tile-label">Utility<br>Bills</span>
+            </label>
+            <label class="hero__tile" data-value="housing">
+              <input type="checkbox" name="needs" value="housing">
+              <span class="hero__tile-check"></span>
+              <svg class="hero__tile-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              <span class="hero__tile-label">Housing<br>&amp; Rent</span>
+            </label>
+            <label class="hero__tile" data-value="other">
+              <input type="checkbox" name="needs" value="other">
+              <span class="hero__tile-check"></span>
+              <svg class="hero__tile-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              <span class="hero__tile-label">Other</span>
+            </label>
+          </div>
+
+          <hr class="hero__card-divider">
+
+          <div class="hero__card-header">
+            <div class="hero__card-step">2</div>
+            <h2 class="hero__card-title">Where do you live?</h2>
+          </div>
+          <p class="hero__card-sub">Programs vary by state — this is how we find yours.</p>
+          <div class="hero__select-wrap">
+            <select id="heroState" class="hero__form-select">
+              <option value="">Select your state to begin</option>
+              <option value="AL">Alabama</option>
+              <option value="AK">Alaska</option>
+              <option value="AZ">Arizona</option>
+              <option value="AR">Arkansas</option>
+              <option value="CA">California</option>
+              <option value="CO">Colorado</option>
+              <option value="CT">Connecticut</option>
+              <option value="DE">Delaware</option>
+              <option value="FL">Florida</option>
+              <option value="GA">Georgia</option>
+              <option value="HI">Hawaii</option>
+              <option value="ID">Idaho</option>
+              <option value="IL">Illinois</option>
+              <option value="IN">Indiana</option>
+              <option value="IA">Iowa</option>
+              <option value="KS">Kansas</option>
+              <option value="KY">Kentucky</option>
+              <option value="LA">Louisiana</option>
+              <option value="ME">Maine</option>
+              <option value="MD">Maryland</option>
+              <option value="MA">Massachusetts</option>
+              <option value="MI">Michigan</option>
+              <option value="MN">Minnesota</option>
+              <option value="MS">Mississippi</option>
+              <option value="MO">Missouri</option>
+              <option value="MT">Montana</option>
+              <option value="NE">Nebraska</option>
+              <option value="NV">Nevada</option>
+              <option value="NH">New Hampshire</option>
+              <option value="NJ">New Jersey</option>
+              <option value="NM">New Mexico</option>
+              <option value="NY">New York</option>
+              <option value="NC">North Carolina</option>
+              <option value="ND">North Dakota</option>
+              <option value="OH">Ohio</option>
+              <option value="OK">Oklahoma</option>
+              <option value="OR">Oregon</option>
+              <option value="PA">Pennsylvania</option>
+              <option value="RI">Rhode Island</option>
+              <option value="SC">South Carolina</option>
+              <option value="SD">South Dakota</option>
+              <option value="TN">Tennessee</option>
+              <option value="TX">Texas</option>
+              <option value="UT">Utah</option>
+              <option value="VT">Vermont</option>
+              <option value="VA">Virginia</option>
+              <option value="WA">Washington</option>
+              <option value="WV">West Virginia</option>
+              <option value="WI">Wisconsin</option>
+              <option value="WY">Wyoming</option>
+              <option value="DC">District of Columbia</option>
+            </select>
+            <div class="hero__select-chevron-box">
+              <svg class="hero__select-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+
+          <div class="hero__card-trust">
+            <span><span class="hero__card-trust-check">✓</span> 100% free</span>
+            <span><span class="hero__card-trust-check">✓</span> No SSN needed</span>
+            <span><span class="hero__card-trust-check">✓</span> Takes 2 minutes</span>
+          </div>
+        </div>
+
+        <p class="hero__label" style="margin-top:1.25rem; display:block;">Real People, Real Benefits</p>
+
       </div>
     </section>
 
     <!-- TRUST BADGES -->
-    <section class="trust-section">
-      <div class="trust-section__inner">
-        <div class="trust-badges">
-          <div class="badge">
-            <svg class="badge__icon badge__icon--blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-            <span class="badge__text">BBB Accredited</span>
+    <section class="trust2-section">
+      <div class="trust2-inner">
+        <div class="trust2-grid">
+          <div class="trust2-badge">
+            <div class="trust2-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <span class="trust2-label">BBB Accredited</span>
           </div>
-          <div class="badge">
-            <svg class="badge__icon badge__icon--green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-            <span class="badge__text">100% Free to Apply</span>
+          <div class="trust2-badge">
+            <div class="trust2-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <span class="trust2-label">100% Free to Apply</span>
           </div>
-          <div class="badge">
-            <svg class="badge__icon badge__icon--blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-            <span class="badge__text">No SSN Needed to Start</span>
+          <div class="trust2-badge">
+            <div class="trust2-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <span class="trust2-label">No SSN Needed to Start</span>
           </div>
-          <div class="badge">
-            <svg class="badge__icon badge__icon--green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-            <span class="badge__text">Private &amp; Confidential</span>
+          <div class="trust2-badge">
+            <div class="trust2-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <span class="trust2-label">Private &amp; Confidential</span>
           </div>
         </div>
       </div>
@@ -1330,7 +1792,7 @@ main {
             <div class="programs-check-item"><svg class="programs-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg><span class="programs-check-text">Health insurance discounts</span></div>
           </div>
           <div class="programs-card__cta-wrap">
-            <a href="/apply/1/step-1/" class="programs-card__cta">Check Your Eligibility</a>
+            <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" class="programs-card__cta">See Available Programs</a>
           </div>
         </div>
       </div>
@@ -1365,6 +1827,11 @@ main {
       </div>
     </section>
 
+    <!-- MID-PAGE CTA -->
+    <section class="mid-cta-section">
+      <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" class="mid-cta-btn">See Available Programs</a>
+    </section>
+
     <!-- WHAT TO EXPECT ON YOUR CALL -->
     <section class="expect-section">
       <div class="expect-section__inner">
@@ -1387,15 +1854,11 @@ main {
       <div class="final-cta-section__inner">
         <h2 class="final-cta-section__title">The assistance you need is out there</h2>
         <p class="final-cta-section__subtitle">We're here to help you find it</p>
-        <a href="/apply/1/step-1/" class="final-cta-section__btn">Check Your Eligibility Now</a>
+        <p class="final-cta-section__sub2">Connect to the benefits and assistance you deserve.</p>
+        <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" class="final-cta-section__btn">See Available Programs</a>
       </div>
     </section>
 
-    <!-- BOTTOM CTA BAR -->
-    <section class="bottom-cta-bar">
-      <a href="/apply/1/step-1/" class="bottom-cta-bar__btn">Start Your Free Eligibility Check</a>
-      <p class="bottom-cta-bar__text">We help connect you to the benefits and assistance you deserve</p>
-    </section>
   </main>
 
   <footer class="footer">
@@ -1475,6 +1938,32 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   captureUTM();
   getTransactionId();
+});
+
+// ---- Hero tile selection ----
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.hero__tile').forEach(function(tile) {
+    tile.addEventListener('click', function() {
+      var cb = this.querySelector('input[type="checkbox"]');
+      cb.checked = !cb.checked;
+      this.classList.toggle('hero__tile--selected', cb.checked);
+    });
+  });
+
+  // ---- State dropdown: auto-advance ----
+  var sel = document.getElementById('heroState');
+  if (sel) {
+    sel.addEventListener('change', function() {
+      if (!this.value) return;
+      var needs = [];
+      document.querySelectorAll('.hero__tile input:checked').forEach(function(cb) {
+        needs.push(cb.value);
+      });
+      saveFunnelData({ state: this.value, needs: needs });
+      window.location.href = '/apply/2/step-1-dob-citizen/';
+    });
+  }
+
 });
 </script>
 

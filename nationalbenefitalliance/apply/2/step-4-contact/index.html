@@ -645,7 +645,7 @@ main {
 .form-page {
   background-color: var(--gray-50);
   min-height: 100vh;
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
 }
 
 .form-card {
@@ -654,19 +654,19 @@ main {
   background-color: white;
   border: 1px solid var(--gray-100);
   border-radius: 1rem;
-  padding: 2rem;
+  padding: 1.25rem 1.25rem;
   box-shadow: 0 10px 40px -10px rgba(0,0,0,.1), 0 20px 25px -5px rgba(0,0,0,.04);
 }
 
 @media (min-width: 768px) {
   .form-card {
-    padding: 2.5rem;
+    padding: 1.75rem 2rem;
   }
 }
 
 /* ========== PROGRESS BAR ========== */
 .progress-container {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .progress-row {
@@ -705,23 +705,24 @@ main {
 /* ========== FORM ELEMENTS ========== */
 .form-title {
   font-family: var(--font-head);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--gray-900);
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.875rem;
+  margin-top: 0;
   text-align: center;
 }
 
 .form-subtitle {
   font-size: 1rem;
   color: var(--gray-600);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   line-height: 1.5;
   text-align: center;
 }
 
 .form-group {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .form-group:last-of-type {
@@ -730,16 +731,16 @@ main {
 
 .form-label {
   display: block;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 600;
   color: var(--gray-900);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 
 .form-input,
 .form-select {
   width: 100%;
-  padding: 0.75rem 1rem;
+  padding: 0.625rem 0.875rem;
   border: 1px solid var(--gray-300);
   border-radius: 0.5rem;
   font-size: 1rem;
@@ -848,20 +849,14 @@ main {
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-}
-
-@media (max-width: 640px) {
-  .form-row {
-    grid-template-columns: 1fr;
-  }
+  gap: 0.75rem;
 }
 
 /* ========== FORM ACTIONS ========== */
 .form-actions {
   display: flex;
-  gap: 1rem;
-  margin-top: 2rem;
+  gap: 0.75rem;
+  margin-top: 1rem;
   align-items: stretch;
 }
 
@@ -924,15 +919,16 @@ main {
 /* ========== SECURITY NOTE ========== */
 .security-note {
   text-align: center;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   color: var(--gray-500);
-  margin-top: 1.25rem;
+  margin-top: 0.625rem;
+  line-height: 1.4;
 }
 
 /* ========== TCPA CONSENT ========== */
 .tcpa-group {
-  margin-top: 1.5rem;
-  padding: 1rem;
+  margin-top: 0.875rem;
+  padding: 0.75rem 0.875rem;
   background-color: var(--blue-50);
   border-radius: 0.5rem;
   border: 1px solid var(--blue-200);
@@ -940,23 +936,23 @@ main {
 
 .tcpa-checkbox {
   display: flex;
-  gap: 0.75rem;
+  gap: 0.625rem;
   align-items: flex-start;
 }
 
 .tcpa-checkbox input[type="checkbox"] {
-  width: 18px;
-  height: 18px;
-  margin-top: 0.2rem;
+  width: 16px;
+  height: 16px;
+  margin-top: 0.15rem;
   flex-shrink: 0;
   cursor: pointer;
   accent-color: var(--blue-600);
 }
 
 .tcpa-label {
-  font-size: 0.8125rem;
+  font-size: 0.6875rem;
   color: var(--gray-700);
-  line-height: 1.5;
+  line-height: 1.3;
 }
 
 .tcpa-label a {
@@ -1178,7 +1174,8 @@ main {
 /* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
   .form-title {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
+    margin-bottom: 0.625rem;
   }
 
   .trust-badges {
@@ -1189,6 +1186,17 @@ main {
   .how-grid {
     grid-template-columns: 1fr;
   }
+
+  .form-page { padding: 0.5rem 0.75rem; }
+  .form-card { padding: 0.875rem 1rem; }
+  .progress-container { margin-bottom: 0.625rem; }
+  .form-row { gap: 0.5rem; }
+  .form-group { margin-bottom: 0.625rem; }
+  .form-input, .form-select { padding: 0.5rem 0.75rem; font-size: 0.9375rem; }
+  .tcpa-group { margin-top: 0.625rem; padding: 0.625rem 0.75rem; }
+  .tcpa-label { font-size: 0.65rem; line-height: 1.25; }
+  .form-actions { margin-top: 0.75rem; }
+  .security-note { font-size: 0.6875rem; margin-top: 0.5rem; }
 }
 
   </style>

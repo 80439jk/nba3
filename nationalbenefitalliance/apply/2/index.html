@@ -1401,20 +1401,27 @@ main {
 @media (max-width: 640px) {
   .hero__card { padding: 1.5rem; border-radius: 0.75rem; }
 }
+.hero__card-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  margin-bottom: 0.375rem;
+}
 .hero__card-step {
   font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--amber-500);
-  margin-bottom: 0.25rem;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 .hero__card-title {
   font-family: var(--font-head);
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--gray-900);
-  margin-bottom: 0.375rem;
+  margin-bottom: 0;
 }
 .hero__card-sub {
   font-size: 0.875rem;
@@ -1617,8 +1624,10 @@ main {
         <p class="hero__oneliner">Talk to a specialist. See what you qualify for.<br>Free, fast, confidential, no commitment.</p>
 
         <div class="hero__card">
-          <p class="hero__card-step">Step 1</p>
-          <h2 class="hero__card-title">What brings you here today?</h2>
+          <div class="hero__card-header">
+            <p class="hero__card-step">Step 1</p>
+            <h2 class="hero__card-title">What brings you here today?</h2>
+          </div>
           <p class="hero__card-sub">Pick one or more. We'll only show you programs that actually fit.</p>
           <div class="hero__tiles">
             <label class="hero__tile" data-value="food">
@@ -1649,8 +1658,10 @@ main {
 
           <hr class="hero__card-divider">
 
-          <p class="hero__card-step">Step 2</p>
-          <h2 class="hero__card-title">Where do you live?</h2>
+          <div class="hero__card-header">
+            <p class="hero__card-step">Step 2</p>
+            <h2 class="hero__card-title">Where do you live?</h2>
+          </div>
           <p class="hero__card-sub">Programs vary by state — this is how we find yours.</p>
           <div class="hero__select-wrap">
             <select id="heroState" class="hero__form-select">

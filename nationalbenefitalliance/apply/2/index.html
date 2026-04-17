@@ -112,6 +112,53 @@ body {
   opacity: 0.8;
 }
 
+
+/* ========== TRUST BADGES v2 ========== */
+.trust2-section {
+  background: white;
+  padding: 2.5rem 1rem;
+  border-top: 1px solid var(--gray-100);
+  border-bottom: 1px solid var(--gray-100);
+}
+.trust2-inner {
+  max-width: 52rem;
+  margin: 0 auto;
+}
+.trust2-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem 2rem;
+}
+@media (min-width: 640px) {
+  .trust2-grid { grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+}
+.trust2-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+.trust2-icon-wrap {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: var(--amber-50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--amber-500);
+}
+.trust2-icon-wrap svg {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+.trust2-label {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--navy-900);
+  line-height: 1.3;
+}
+
 /* ========== FOOTER ========== */
 .footer {
   background-color: var(--gray-900);
@@ -1588,7 +1635,7 @@ main {
 
         <h1 class="hero__headline">Get matched to assistance that can help right away</h1>
 
-        <p class="hero__oneliner">In 60 seconds, see what you qualify for. Free, confidential, no commitment.</p>
+        <p class="hero__oneliner">Talk to a specialist. See what you qualify for.<br>Free, fast, confidential, no commitment.</p>
 
         <div class="hero__progress">
           <div class="hero__progress-step hero__progress-step--active">
@@ -1598,12 +1645,12 @@ main {
           <div class="hero__progress-line"></div>
           <div class="hero__progress-step">
             <div class="hero__progress-dot">2</div>
-            <span class="hero__progress-label">Your state</span>
+            <span class="hero__progress-label">Your info</span>
           </div>
           <div class="hero__progress-line"></div>
           <div class="hero__progress-step">
             <div class="hero__progress-dot">3</div>
-            <span class="hero__progress-label">Case manager</span>
+            <span class="hero__progress-label">Quick phone call</span>
           </div>
         </div>
 
@@ -1710,6 +1757,38 @@ main {
 
         <p class="hero__label" style="margin-top:1.25rem; display:block;">Real People, Real Benefits</p>
 
+      </div>
+    </section>
+
+    <!-- TRUST BADGES -->
+    <section class="trust2-section">
+      <div class="trust2-inner">
+        <div class="trust2-grid">
+          <div class="trust2-badge">
+            <div class="trust2-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <span class="trust2-label">BBB Accredited</span>
+          </div>
+          <div class="trust2-badge">
+            <div class="trust2-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <span class="trust2-label">100% Free to Apply</span>
+          </div>
+          <div class="trust2-badge">
+            <div class="trust2-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <span class="trust2-label">No SSN Needed to Start</span>
+          </div>
+          <div class="trust2-badge">
+            <div class="trust2-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <span class="trust2-label">Private &amp; Confidential</span>
+          </div>
+        </div>
       </div>
     </section>
 

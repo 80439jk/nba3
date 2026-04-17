@@ -246,16 +246,16 @@ main {
 /* ========== HERO KEYWORD STRIP ========== */
 .hero__keywords {
   font-size: 1.05rem;
-  color: var(--gray-200);
-  margin: 0 auto 2rem;
+  color: rgba(255,255,255,0.55);
+  margin: 0 auto 0.75rem;
   max-width: 56rem;
   line-height: 1.6;
   opacity: 0.95;
 }
 
 .hero__keywords strong {
-  font-weight: 700;
-  color: white;
+  font-weight: 600;
+  color: rgba(255,255,255,0.55);
   white-space: nowrap;
 }
 
@@ -1279,7 +1279,6 @@ main {
 
 
 @media (max-width: 640px) {
-  .hero__label { display: none; }
   .hero__subtitle { display: none; }
   .hero { padding: 1.5rem 1rem 2rem; }
   .hero__keywords { margin-bottom: 1rem; }
@@ -1318,11 +1317,10 @@ main {
     <!-- HERO -->
     <section class="hero">
       <div class="hero__inner">
-        <span class="hero__label">Real People, Real Benefits</span>
-        <h1 class="hero__headline">When Life Hits Hard, You Do Not Need To Navigate The System Alone</h1>
-        <p class="hero__keywords">We help you find programs for:<br><strong>Food &amp; Groceries</strong><span class="hero__keywords-sep"> · </span><strong>Utility Bills</strong><span class="hero__keywords-sep"> · </span><strong>Rent Assistance</strong><span class="hero__keywords-sep"> · </span><strong>Housing Programs</strong><span class="hero__keywords-sep"> · </span><strong>Medical Costs</strong></p>
+        <h1 class="hero__headline">Get Matched to Assistance Programs That Can Help Right Away</h1>
+        <p class="hero__keywords"><strong>Food &amp; Groceries</strong><span class="hero__keywords-sep"> · </span><strong>Utility Bills</strong><span class="hero__keywords-sep"> · </span><strong>Rent Assistance</strong><span class="hero__keywords-sep"> · </span><strong>Housing Programs</strong><span class="hero__keywords-sep"> · </span><strong>Medical Costs</strong></p>
         <div class="hero__form">
-          <p class="hero__form-micro">Just a free phone call. No signup required.</p>
+          <p class="hero__form-micro">Talk to a specialist. Free, confidential, no commitment.</p>
           <select id="heroState" class="hero__form-select">
             <option value="">Select your state to begin →</option>
             <option value="AL">Alabama</option>
@@ -1377,12 +1375,8 @@ main {
             <option value="WY">Wyoming</option>
             <option value="DC">District of Columbia</option>
           </select>
-          <div class="hero__form-checks">
-            <span>✓ Free</span>
-            <span>✓ No Credit-Check</span>
-            <span>✓ 2 Minutes</span>
-          </div>
         </div>
+        <p class="hero__label" style="margin-top:1.25rem; display:block;">Real People, Real Benefits</p>
       </div>
     </section>
 

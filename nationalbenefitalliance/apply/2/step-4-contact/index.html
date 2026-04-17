@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Apply for Free Benefits — National Benefit Alliance</title>
+  <title>Step 5: Contact Information — National Benefit Alliance</title>
   <meta name="robots" content="noindex, nofollow" />
   <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -19,7 +19,7 @@
 
 :root {
   
-  /* Production color scheme — navy/amber design */
+  /* Production color scheme — extracted from nationalbenefitalliance.com */
   --blue-600: #2563eb;
   --blue-700: #1d4ed8;
   --blue-50: #eff6ff;
@@ -173,7 +173,7 @@ main {
 
 /* ========== LANDING PAGE HERO ========== */
 .hero {
-  background: linear-gradient(to bottom, var(--navy-900), var(--navy-800), var(--navy-900));
+  background: linear-gradient(to bottom, var(--navy-900), var(--navy-800));
   padding: 4rem 1rem;
 }
 
@@ -189,13 +189,13 @@ main {
 
 .hero__label {
   display: inline-block;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 600;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.025em;
   text-transform: uppercase;
-  color: #fbbf24;
-  margin-bottom: 1rem;
-  margin-top: 0;
+  color: var(--amber-500);
+  margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
 }
 
 .hero__headline {
@@ -207,24 +207,28 @@ main {
   margin-bottom: 1.25rem;
 }
 
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
+}
+
 .hero__subtitle {
   font-size: 1.1rem;
-  line-height: 1.7;
+  line-height: 1.625;
   color: var(--gray-200);
   margin-bottom: 2rem;
   max-width: 40rem;
-  opacity: 0.9;
   margin-left: auto;
   margin-right: auto;
 }
 
 @media (min-width: 768px) {
-  .hero__subtitle { font-size: 1.5rem; }
 }
 
 .hero__cta {
   display: inline-block;
-  padding: 1rem 2.5rem;
+  padding: 1.25rem 2.5rem;
   background-color: var(--amber-500);
   color: white;
   font-size: 1.1rem;
@@ -233,104 +237,13 @@ main {
   border-radius: 0.5rem;
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.3s;
-  box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.3), 0 4px 6px -4px rgba(245, 158, 11, 0.2);
+  transition: all 0.2s;
+  box-shadow: var(--shadow-lg);
 }
 
 .hero__cta:hover {
   background-color: var(--amber-600);
-  box-shadow: 0 20px 25px -5px rgba(245, 158, 11, 0.4), 0 8px 10px -6px rgba(245, 158, 11, 0.2);
-  transform: translateY(-1px);
-}
-
-/* ========== HERO KEYWORD STRIP ========== */
-.hero__keywords {
-  font-size: 1rem;
-  color: var(--gray-200);
-  margin: 0 auto 2rem;
-  max-width: 56rem;
-  line-height: 1.6;
-  opacity: 0.95;
-}
-
-.hero__keywords strong {
-  font-weight: 700;
-  color: white;
-  white-space: nowrap;
-}
-
-.hero__keywords-sep {
-  margin: 0 0.5rem;
-  opacity: 0.6;
-}
-
-@media (max-width: 640px) {
-  .hero__keywords { font-size: 0.95rem; }
-  .hero__keywords-sep { margin: 0 0.35rem; }
-}
-
-/* ========== HERO STATE FORM ========== */
-.hero__form {
-  max-width: 28rem;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.hero__form-select {
-  width: 100%;
-  padding: 0.875rem 1rem;
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 0.5rem;
-  font-size: 1rem;
-  font-family: inherit;
-  background-color: white;
-  color: var(--gray-900);
-  margin-bottom: 0.875rem;
-}
-
-.hero__form-select:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.4);
-}
-
-.hero__form-error {
-  display: none;
-  font-size: 0.875rem;
-  color: #fecaca;
-  margin-top: -0.5rem;
-  margin-bottom: 0.875rem;
-  text-align: left;
-}
-
-.hero__form-error.show { display: block; }
-
-.hero__form-btn {
-  width: 100%;
-  padding: 1rem 1.5rem;
-  background-color: var(--amber-500);
-  color: white;
-  font-size: 1.05rem;
-  font-weight: 700;
-  border: none;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: all 0.3s;
-  box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.3), 0 4px 6px -4px rgba(245, 158, 11, 0.2);
-  font-family: inherit;
-}
-
-.hero__form-btn:hover {
-  background-color: var(--amber-600);
-  box-shadow: 0 20px 25px -5px rgba(245, 158, 11, 0.4), 0 8px 10px -6px rgba(245, 158, 11, 0.2);
-  transform: translateY(-1px);
-}
-
-.hero__form-disclaimer {
-  font-size: 0.8125rem;
-  color: var(--gray-400);
-  margin-top: 0.875rem;
-  text-align: center;
-  line-height: 1.5;
+  box-shadow: var(--shadow-xl);
 }
 
 /* ========== TRUST BADGES ========== */
@@ -338,7 +251,7 @@ main {
   background-color: white;
   border-top: 1px solid var(--gray-200);
   border-bottom: 1px solid var(--gray-200);
-  padding: 2rem 1rem;
+  padding: 3rem 1rem;
 }
 
 .trust-section__inner {
@@ -349,13 +262,13 @@ main {
 .trust-badges {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 2rem;
   flex-wrap: wrap;
   align-items: center;
 }
 
 @media (min-width: 768px) {
-  .trust-badges { gap: 3rem; }
+  .trust-badges { gap: 4rem; }
 }
 
 .badge {
@@ -403,18 +316,22 @@ main {
 }
 
 .programs-card__intro {
-  font-size: 1rem;
+  font-size: 1.125rem;
   color: var(--gray-700);
-  line-height: 1.7;
-  margin-bottom: 1.5rem;
+  line-height: 1.625;
+  margin-bottom: 2rem;
 }
 
 .programs-card__title {
   font-family: var(--font-head);
-  font-size: clamp(1.4rem, 3vw, 1.75rem);
+  font-size: 1.875rem;
   font-weight: 700;
   color: var(--gray-900);
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .programs-card__title { font-size: 2.25rem; }
 }
 
 .programs-check-list {
@@ -439,7 +356,7 @@ main {
 }
 
 .programs-check-text {
-  font-size: 1rem;
+  font-size: 1.125rem;
   color: var(--gray-700);
 }
 
@@ -451,17 +368,16 @@ main {
   color: white;
   font-size: 1.1rem;
   font-weight: 700;
-  padding: 1rem 2.5rem;
+  padding: 1.25rem 3rem;
   border-radius: 0.5rem;
   text-decoration: none;
-  transition: all 0.3s;
-  box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.3);
+  transition: all 0.2s;
+  box-shadow: var(--shadow-lg);
 }
 
 .programs-card__cta:hover {
   background-color: var(--amber-600);
-  box-shadow: 0 20px 25px -5px rgba(245, 158, 11, 0.4);
-  transform: translateY(-1px);
+  box-shadow: var(--shadow-xl);
 }
 
 /* ========== HOW IT WORKS SECTION ========== */
@@ -484,6 +400,9 @@ main {
   margin-bottom: 1rem;
 }
 
+@media (min-width: 768px) {
+}
+
 .how-section__subtitle {
   font-size: 1.1rem;
   color: var(--gray-700);
@@ -494,7 +413,7 @@ main {
 .how-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
+  gap: 2rem;
   margin-bottom: 2.5rem;
 }
 
@@ -503,7 +422,7 @@ main {
 }
 
 .how-step {
-  border-radius: 1rem;
+  border-radius: 0.75rem;
   padding: 2rem;
   text-align: center;
   border: 1px solid;
@@ -556,14 +475,14 @@ main {
 }
 
 .how-free-banner__title {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--gray-900);
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
 }
 
 .how-free-banner__text {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: var(--gray-700);
 }
 
@@ -587,37 +506,40 @@ main {
   margin-bottom: 2.5rem;
 }
 
+@media (min-width: 768px) {
+}
+
 .expect-card {
   background: white;
   border-radius: 0.75rem;
   box-shadow: var(--shadow-md);
-  padding: 1.5rem;
+  padding: 2rem;
   border: 1px solid var(--gray-100);
   margin-bottom: 2rem;
 }
 
 @media (min-width: 768px) {
-  .expect-card { padding: 2.5rem; }
+  .expect-card { padding: 3rem; }
 }
 
 .expect-item {
   display: flex;
   align-items: flex-start;
-  gap: 0.75rem;
+  gap: 1rem;
 }
 
-.expect-item + .expect-item { margin-top: 1rem; }
+.expect-item + .expect-item { margin-top: 1.25rem; }
 
 .expect-icon {
   flex-shrink: 0;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.75rem;
+  height: 1.75rem;
   color: var(--green-600);
-  margin-top: 0.2rem;
+  margin-top: 0.25rem;
 }
 
 .expect-text {
-  font-size: 1rem;
+  font-size: 1.125rem;
   color: var(--gray-700);
 }
 
@@ -625,7 +547,7 @@ main {
   background-color: var(--navy-50);
   border: 2px solid var(--navy-100);
   border-radius: 0.75rem;
-  padding: 1.5rem;
+  padding: 2rem;
   text-align: center;
 }
 
@@ -633,11 +555,11 @@ main {
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--gray-900);
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
 }
 
 .expect-free-banner__text {
-  font-size: 1rem;
+  font-size: 1.125rem;
   color: var(--gray-700);
 }
 
@@ -661,8 +583,11 @@ main {
   margin-bottom: 1rem;
 }
 
+@media (min-width: 768px) {
+}
+
 .final-cta-section__subtitle {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: var(--gray-200);
   margin-bottom: 2rem;
 }
@@ -673,23 +598,22 @@ main {
   color: white;
   font-size: 1.1rem;
   font-weight: 700;
-  padding: 1rem 2.5rem;
+  padding: 1.25rem 3rem;
   border-radius: 0.5rem;
   text-decoration: none;
-  transition: all 0.3s;
-  box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.3);
+  transition: all 0.2s;
+  box-shadow: var(--shadow-lg);
 }
 
 .final-cta-section__btn:hover {
   background-color: var(--amber-600);
-  box-shadow: 0 20px 25px -5px rgba(245, 158, 11, 0.4);
-  transform: translateY(-1px);
+  box-shadow: var(--shadow-xl);
 }
 
 /* ========== BOTTOM CTA BAR ========== */
 .bottom-cta-bar {
   background: white;
-  padding: 3rem 1rem;
+  padding: 4rem 1rem;
   text-align: center;
 }
 
@@ -697,20 +621,19 @@ main {
   display: inline-block;
   background-color: var(--amber-500);
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  padding: 1rem 2.5rem;
+  padding: 1.5rem 3.5rem;
   border-radius: 0.5rem;
   text-decoration: none;
-  transition: all 0.3s;
-  box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.3);
+  transition: all 0.2s;
+  box-shadow: var(--shadow-lg);
   margin-bottom: 1.5rem;
 }
 
 .bottom-cta-bar__btn:hover {
   background-color: var(--amber-600);
-  box-shadow: 0 20px 25px -5px rgba(245, 158, 11, 0.4);
-  transform: translateY(-1px);
+  box-shadow: var(--shadow-xl);
 }
 
 .bottom-cta-bar__text {
@@ -743,7 +666,7 @@ main {
 
 /* ========== PROGRESS BAR ========== */
 .progress-container {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .progress-row {
@@ -782,17 +705,17 @@ main {
 /* ========== FORM ELEMENTS ========== */
 .form-title {
   font-family: var(--font-head);
-  font-size: 1.875rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--gray-900);
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   text-align: center;
 }
 
 .form-subtitle {
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: var(--gray-600);
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   line-height: 1.5;
   text-align: center;
 }
@@ -1058,7 +981,7 @@ main {
 }
 
 @media (min-width: 768px) {
-  .ty-card { padding: 2.5rem; }
+  .ty-card { padding: 2rem; }
 }
 
 .ty-icon-wrap {
@@ -1142,7 +1065,7 @@ main {
   gap: 0.75rem;
   background-color: var(--amber-500);
   color: white;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   padding: 1.5rem 3rem;
   border-radius: 0.5rem;
   font-weight: 700;
@@ -1187,7 +1110,7 @@ main {
 /* Benefit checkmarks */
 .ty-benefits {
   text-align: left;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .ty-benefit-item {
@@ -1255,7 +1178,7 @@ main {
 /* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
   .form-title {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 
   .trust-badges {
@@ -1281,121 +1204,70 @@ main {
     </div>
   </header>
 
-  <main>
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero__inner">
-        <span class="hero__label">Real People, Real Benefits</span>
-        <h1 class="hero__headline">When Life Hits Hard, You Do Not Need To Navigate The System Alone</h1>
-        <p class="hero__subtitle">In one quick, free phone call, a benefits specialist can review your situation, see if you qualify, and match you to assistance programs that may help right away.</p>
-        <a href="/apply/1/step-1/" class="hero__cta">Start Your Free Eligibility Check</a>
-      </div>
-    </section>
-
-    <!-- TRUST BADGES -->
-    <section class="trust-section">
-      <div class="trust-section__inner">
-        <div class="trust-badges">
-          <div class="badge">
-            <svg class="badge__icon badge__icon--blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-            <span class="badge__text">BBB Accredited</span>
-          </div>
-          <div class="badge">
-            <svg class="badge__icon badge__icon--green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-            <span class="badge__text">100% Free to Apply</span>
-          </div>
-          <div class="badge">
-            <svg class="badge__icon badge__icon--blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-            <span class="badge__text">No SSN Needed to Start</span>
-          </div>
-          <div class="badge">
-            <svg class="badge__icon badge__icon--green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-            <span class="badge__text">Private &amp; Confidential</span>
-          </div>
+  <main class="form-page">
+    <div class="form-card">
+      <div class="progress-container">
+        <div class="progress-row">
+          <span class="progress-row__left">Step 4 of 4</span>
+          <span class="progress-row__right">100% complete</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 100%;"></div>
         </div>
       </div>
-    </section>
 
-    <!-- PROGRAMS CARD -->
-    <section class="programs-section">
-      <div class="programs-section__inner">
-        <div class="programs-card">
-          <p class="programs-card__intro">Whether you're struggling with bills, facing a health challenge, or just trying to make ends meet, there are programs available to help. Many people qualify and don't even know it.</p>
-          <h2 class="programs-card__title">Get Matched To Programs In One Quick Call</h2>
-          <div class="programs-check-list">
-            <div class="programs-check-item"><svg class="programs-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg><span class="programs-check-text">Utilities</span></div>
-            <div class="programs-check-item"><svg class="programs-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg><span class="programs-check-text">Car payments</span></div>
-            <div class="programs-check-item"><svg class="programs-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg><span class="programs-check-text">Medical expenses</span></div>
-            <div class="programs-check-item"><svg class="programs-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg><span class="programs-check-text">Education costs</span></div>
-            <div class="programs-check-item"><svg class="programs-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg><span class="programs-check-text">Health insurance discounts</span></div>
+      <h1 class="form-title">Contact Information</h1>
+
+      <form id="step5Form" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName" class="form-label">First Name</label>
+            <input type="text" name="firstName" id="firstName" class="form-input" placeholder="John" required />
+            <div class="form-error">Please enter your first name</div>
           </div>
-          <div class="programs-card__cta-wrap">
-            <a href="/apply/1/step-1/" class="programs-card__cta">Check Your Eligibility</a>
+          <div class="form-group">
+            <label for="lastName" class="form-label">Last Name</label>
+            <input type="text" name="lastName" id="lastName" class="form-input" placeholder="Doe" required />
+            <div class="form-error">Please enter your last name</div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- HOW IT WORKS -->
-    <section class="how-section">
-      <div class="how-section__inner">
-        <h2 class="how-section__title">How It Works</h2>
-        <p class="how-section__subtitle">Three simple steps to get matched with assistance:</p>
-        <div class="how-grid">
-          <div class="how-step how-step--blue">
-            <div class="how-step__number">1</div>
-            <h3 class="how-step__title">Answer a Few Easy Questions</h3>
-            <p class="how-step__desc">Complete a quick eligibility form about your situation and needs</p>
-          </div>
-          <div class="how-step how-step--green">
-            <div class="how-step__number">2</div>
-            <h3 class="how-step__title">Speak with a Case Manager</h3>
-            <p class="how-step__desc">Get matched to programs you qualify for during your call</p>
-          </div>
-          <div class="how-step how-step--blue">
-            <div class="how-step__number">3</div>
-            <h3 class="how-step__title">Receive Personal Enrollment Help</h3>
-            <p class="how-step__desc">Your specialist guides you through the enrollment process step by step</p>
+        <div class="form-group">
+          <label for="email" class="form-label">Email Address</label>
+          <input type="email" name="email" id="email" class="form-input" placeholder="john@example.com" required />
+          <div class="form-error">Please enter a valid email address</div>
+        </div>
+
+        <div class="form-group">
+          <label for="phone" class="form-label">Phone Number</label>
+          <input type="tel" name="phone" id="phone" class="form-input" placeholder="(555) 123-4567" required />
+          <div class="form-error">Please enter a valid phone number</div>
+        </div>
+
+        <div class="tcpa-group">
+          <div class="tcpa-checkbox">
+            <input type="checkbox" name="tcpaConsent" id="tcpaConsent" required />
+            <label for="tcpaConsent" class="tcpa-label">
+              By checking this box and clicking the button, you confirm that this is your mobile number and that you are 18 years of age or older. You agree to the National Benefit Alliance <a href="/terms/" target="_blank">Terms of Use</a> and <a href="/privacy/" target="_blank">Privacy Policy</a> and provide your express written consent to be contacted by National Benefit Alliance, its service providers, and marketing partners, and that your information may be shared with and used by such partners to contact you, via telephone calls and text messages (including SMS and MMS), including through the use of an automatic telephone dialing system, artificial or prerecorded voice, and AI-generated voice, at the number you provided, even if your number is listed on any federal or state Do Not Call registry. You understand that these communications may include marketing messages. Consent is not a condition of purchase. Message frequency varies (up to 10 messages per month). Message and data rates may apply. Reply STOP to opt out or HELP for help. You also agree to receive marketing emails from National Benefit Alliance and its affiliated brands and marketing partners. You may unsubscribe at any time by clicking the unsubscribe link in any email.
+            </label>
           </div>
         </div>
-        <div class="how-free-banner">
-          <p class="how-free-banner__title">It is free to apply.</p>
-          <p class="how-free-banner__text">There are no upfront costs and no hidden fees.</p>
-        </div>
-      </div>
-    </section>
 
-    <!-- WHAT TO EXPECT ON YOUR CALL -->
-    <section class="expect-section">
-      <div class="expect-section__inner">
-        <h2 class="expect-section__title">What To Expect On Your Call</h2>
-        <div class="expect-card">
-          <div class="expect-item"><svg class="expect-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg><span class="expect-text">Introduction to your case manager</span></div>
-          <div class="expect-item"><svg class="expect-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg><span class="expect-text">A short, guided prescreening (just a couple minutes)</span></div>
-          <div class="expect-item"><svg class="expect-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg><span class="expect-text">Immediate feedback on potential eligibility</span></div>
-          <div class="expect-item"><svg class="expect-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg><span class="expect-text">Step by step help with enrollment in the programs that fit your situation</span></div>
+        <!-- Anti-bot honeypot — invisible to humans, bots auto-fill it -->
+        <div style="position:absolute;left:-9999px;height:0;width:0;overflow:hidden;" aria-hidden="true">
+          <label for="website">Website</label>
+          <input type="text" name="website" id="website" tabindex="-1" autocomplete="off" value="" />
         </div>
-        <div class="expect-free-banner">
-          <p class="expect-free-banner__title">It's completely free to apply.</p>
-          <p class="expect-free-banner__text">No hidden fees. No obligation.</p>
+
+        <div class="form-actions">
+          <a href="/apply/2/step-3-income-employ/" class="btn btn-back">Back</a>
+          <button type="submit" class="btn btn-next" id="submitBtn">Complete &amp; Get Matched</button>
         </div>
-      </div>
-    </section>
-
-    <!-- FINAL DARK CTA -->
-    <section class="final-cta-section">
-      <div class="final-cta-section__inner">
-        <h2 class="final-cta-section__title">The assistance you need is out there</h2>
-        <p class="final-cta-section__subtitle">We're here to help you find it</p>
-        <a href="/apply/1/step-1/" class="final-cta-section__btn">Check Your Eligibility Now</a>
-      </div>
-    </section>
-
-    <!-- BOTTOM CTA BAR -->
-    <section class="bottom-cta-bar">
-      <a href="/apply/1/step-1/" class="bottom-cta-bar__btn">Start Your Free Eligibility Check</a>
-      <p class="bottom-cta-bar__text">We help connect you to the benefits and assistance you deserve</p>
-    </section>
+        <p class="security-note" id="processingNote" style="display:none;">Do not close browser while processing — this may take up to 30 seconds.</p>
+        <p class="security-note">No credit check. No commitment. Just a free phone call.</p>
+          <p class="security-note">Your information is secure and will only be used to match you with relevant programs.</p>
+      </form>
+    </div>
   </main>
 
   <footer class="footer">
@@ -1478,5 +1350,121 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
+  <script>
+  // Phone formatting
+  document.getElementById('phone').addEventListener('input', function() {
+    let v = this.value.replace(/\D/g, '');
+    if (v.length > 10) v = v.slice(0, 10);
+    if (v.length >= 7) this.value = '(' + v.slice(0,3) + ') ' + v.slice(3,6) + '-' + v.slice(6);
+    else if (v.length >= 4) this.value = '(' + v.slice(0,3) + ') ' + v.slice(3);
+    else if (v.length > 0) this.value = '(' + v;
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    ['firstName','lastName','email','phone'].forEach(restoreField);
+    const d = getFunnelData();
+    if (d.tcpaConsent) document.getElementById('tcpaConsent').checked = true;
+
+    // Timestamp for bot time-trap detection
+    sessionStorage.setItem('nba_form_shown', String(Date.now()));
+
+    document.getElementById('step5Form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      clearAllErrors();
+      let valid = true;
+
+      const firstName = document.getElementById('firstName');
+      const lastName = document.getElementById('lastName');
+      const email = document.getElementById('email');
+      const phone = document.getElementById('phone');
+      const tcpa = document.getElementById('tcpaConsent');
+
+      if (!firstName.value.trim()) { showError(firstName, 'Please enter your first name'); valid = false; }
+      if (!lastName.value.trim()) { showError(lastName, 'Please enter your last name'); valid = false; }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) { showError(email, 'Please enter a valid email'); valid = false; }
+      const phoneDigits = phone.value.replace(/\D/g, '');
+      if (phoneDigits.length < 10) { showError(phone, 'Please enter a valid 10-digit phone number'); valid = false; }
+      if (!tcpa.checked) {
+        alert('Please agree to the terms to continue.');
+        valid = false;
+      }
+      if (!valid) return;
+
+      // Save final fields
+      saveFunnelData({
+        firstName: firstName.value.trim(),
+        lastName: lastName.value.trim(),
+        email: email.value.trim(),
+        phone: phoneDigits,
+        tcpaConsent: tcpa.checked
+      });
+
+      // Submit to Supabase
+      const btn = document.getElementById('submitBtn');
+      btn.disabled = true;
+      btn.textContent = 'Processing...';
+      const pNote = document.getElementById('processingNote');
+      if (pNote) pNote.style.display = 'block';
+
+      const data = getFunnelData();
+
+      // Format DOB: if stored as YYYY-MM-DD, keep it; original React uses MM/DD/YYYY→YYYY-MM-DD
+      let dobFormatted = data.dob || '';
+
+      const payload = {
+        transaction_id: data.transaction_id || '',
+        state: data.state || '',
+        dob: dobFormatted,
+        citizenship: data.citizenship || '',
+        street_address: data.streetAddress || '',
+        city: data.city || '',
+        zip: data.zip || '',
+        annual_income: data.annualIncome || '',
+        employment_status: data.employmentStatus || '',
+        first_name: data.firstName || '',
+        last_name: data.lastName || '',
+        email: data.email || '',
+        phone: data.phone || '',
+        tcpa_consent: data.tcpaConsent || false,
+        jornaya_leadid: '',
+        click_id: data.gclid || '',
+        wbraid: data.wbraid || '',
+        gbraid: data.gbraid || '',
+        utm_source: data.utm_source || '',
+        utm_medium: data.utm_medium || '',
+        utm_campaign: data.utm_campaign || '',
+        utm_content: data.utm_content || '',
+        utm_term: data.utm_term || '',
+        hp_website: document.getElementById('website').value,
+        form_duration_ms: Date.now() - parseInt(sessionStorage.getItem('nba_form_shown') || '0', 10)
+      };
+
+      try {
+        await fetch('https://quhxbgsgtfvrasyjvaba.supabase.co/functions/v1/submit-lead', {
+          method: 'POST',
+          headers: {
+            'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF1aHhiZ3NndGZ2cmFzeWp2YWJhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUxNTExMDUsImV4cCI6MjA5MDcyNzEwNX0.su7odHmJvnbKVTwtH5wWDpfapk186AIWSOqYP3cSucw',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+      } catch(err) {
+        console.error('Submission error:', err);
+      }
+
+      // Save name/email for thank-you page display before clearing
+      try {
+        sessionStorage.setItem('nba_ty', JSON.stringify({
+          firstName: data.firstName || '',
+          email: data.email || ''
+        }));
+      } catch(e) {}
+
+      // Always redirect to thank-you — lead is captured, call center follows up
+      sessionStorage.removeItem('nba_funnel');
+      window.location.href = '/apply/2/thank-you/';
+    });
+  });
+  </script>
   </body>
 </html>

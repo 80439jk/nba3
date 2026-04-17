@@ -695,6 +695,32 @@ main {
   color: var(--gray-700);
 }
 
+/* ========== MID-PAGE CTA ========== */
+.mid-cta-section {
+  background: var(--gray-50);
+  padding: 2.5rem 1rem;
+  text-align: center;
+  border-top: 1px solid var(--gray-200);
+  border-bottom: 1px solid var(--gray-200);
+}
+.mid-cta-btn {
+  display: inline-block;
+  background-color: var(--amber-500);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 1rem 2.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: all 0.3s;
+  box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.3);
+}
+.mid-cta-btn:hover {
+  background-color: var(--amber-600);
+  box-shadow: 0 20px 25px -5px rgba(245, 158, 11, 0.4);
+  transform: translateY(-1px);
+}
+
 /* ========== FINAL CTA SECTION ========== */
 .final-cta-section {
   background: linear-gradient(to bottom, var(--navy-900), var(--navy-800));
@@ -1839,6 +1865,11 @@ main {
           <p class="how-free-banner__text">There are no upfront costs and no hidden fees.</p>
         </div>
       </div>
+    </section>
+
+    <!-- MID-PAGE CTA -->
+    <section class="mid-cta-section">
+      <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" class="mid-cta-btn">See Available Programs</a>
     </section>
 
     <!-- WHAT TO EXPECT ON YOUR CALL -->

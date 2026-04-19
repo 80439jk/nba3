@@ -66,6 +66,7 @@ nba3/
     │
     ├── apply/                         # Application funnel
     │   ├── index.html                 # /apply landing
+    │   ├── popup.js                   # Inactivity popup — loaded on all 13 funnel pages (see Popup section)
     │   ├── 1/                         # Funnel version 1 — control (see detailed section below)
     │   └── 2/                         # Funnel version 2 — A/B variant (see detailed section below)
     │
@@ -257,7 +258,8 @@ The static pages originally used:
 
 ## Phone Numbers & Call Conversion Tracking
 
-- **Current number**: `1-888-408-5650` / `tel:18884085650`
+- **Main site number**: `1-888-408-5650` / `tel:18884085650` — used on the thank-you page call button and throughout the site
+- **Popup number**: `1-813-556-9953` / `tel:+18135569953` — used only in `apply/popup.js`. This is intentionally different from the main number (separate tracking line). Do not "normalize" these to the same number without confirming with the owner.
 - **Previous number**: `1-855-767-9422` / `tel:18557679422` (replaced)
 - Phone number appears on the thank-you page in **two** places only (entire `/apply/` directory verified):
   1. Display text: `<p class="ty-phone-number">1-888-408-5650</p>` (line 1227)
@@ -285,11 +287,12 @@ From `vercel.json`:
 1. **Static HTML over SPA for production** — The owner prefers the static HTML funnel (`/step-1` through `/step-5`) over the React SPA (`/form/1-state` through `/form/5-contact`) for the production funnel, even though the SPA has the desired design
 2. **Self-contained pages** — Each HTML page contains its own CSS in `<style>` tags; no shared external stylesheet for the funnel
 3. **Design direction** — Moving from blue/green scheme to navy/amber to match the SPA's look
-4. **Phone number changes** should be updated in BOTH the static pages AND the React bundle
+4. **Phone number changes** should be updated in BOTH the static pages AND the React bundle. Note the popup uses a separate number — see Phone Numbers section.
 5. **GTM tracking** is on every HTML page sitewide (GTM-MTQ5WNFR) — both the `<head>` script snippet and `<body>` noscript iframe. Originally only the 17 `/apply/1/` pages had GTM; it was rolled out to all ~3,259 pages in April 2026. **Note**: The 6 individual story pages (`stories/*.html`, not `stories/index.html`) use a different file naming convention (flat `.html` files, not `directory/index.html`) so they can be missed by scripts that only target `index.html`.
 6. **The funnel collects**: state, DOB, citizenship status, address, household income, employment status, name, email, phone (with TCPA consent). Also captures UTM params (`utm_source`, `utm_medium`, `utm_campaign`, `utm_content`, `utm_term`) and click IDs (`gclid`, `wbraid`, `gbraid`) via `captureUTM()` on every page.
 7. **Thank-you page** generates a random 5-digit reference number and pulls user info from sessionStorage (`nba_ty`). Reference number regenerates on page refresh (not persisted to sessionStorage — known minor UX issue).
 8. **Frontend→backend payload** includes `hp_website` (honeypot) and `form_duration_ms` (time-trap) fields for server-side bot detection. `transaction_id` is a UUID generated via `crypto.randomUUID()` on first page load.
+9. **New JS additions to funnel pages should be additive** — do not modify or wrap existing event listeners, tel: links, form submit handlers, or GTM dataLayer pushes. The popup (`popup.js`) is the established pattern: a self-contained IIFE that appends its own DOM and styles without touching anything on the page.
 
 ---
 
@@ -315,6 +318,50 @@ From `vercel.json`:
 - **Failure alert emails (April 2026):** Integrated Resend (free tier) into edge function. Sends email to `larazielin1@gmail.com` on every CallTools API failure with full error details + lead info.
 - **apply/2 A/B variant (April 2026):** Built and launched `/apply/2/` as a card-based redesign of the landing page for A/B testing. Descriptive step URLs (`step-1-dob-citizen`, `step-2-address`, `step-3-income-employ`, `step-4-contact`). State and needs (tile selections) captured on the landing page; funnel is one step shorter. Merged to main via squash merge from branch `landing-page-v2`.
 - **Large HTML edits via Python (April 2026):** When Claude's output filter blocks large HTML generation, the workaround is to write a Python script via the Bash tool that reads/modifies the file directly — avoiding any large HTML in Claude's response output.
+- **Inactivity popup (April 2026):** Added `apply/popup.js` — fires after 30 seconds of mouse/touch inactivity on all 13 funnel pages across apply/1 and apply/2. Uses number `1-813-556-9953` (separate from main site number). Deployed on branch `popup-30sec`.
+
+---
+
+## Google Ads & Conversion Tracking Safety
+
+This site's revenue depends entirely on Google Ads driving calls. Any development that could interfere with tracking or create policy violations **must be discussed and aligned on before any code is written**.
+
+**Do not make changes that could:**
+- Alter, wrap, or intercept `<a href="tel:...">` call buttons — GTM tracks clicks on these directly and the GFN swap depends on the exact phone number in the link
+- Modify or suppress GTM dataLayer pushes or the GTM container snippet
+- Add `onclick`, `preventDefault`, or JS redirects to call buttons or form submit handlers
+- Change the CSS class `ty-call-btn` on the thank-you page call button (GTM trigger depends on it)
+- Show different page content to crawlers vs. users (cloaking) — overlays and popups are fine as long as the underlying HTML is identical for all visitors
+- Add new `tel:` links pointing to different numbers without confirming which number should be tracked for conversions
+
+**Why inactivity popups are safe:** They only appear after 30 seconds of inactivity, well after Google's crawler and quality scoring have evaluated the page. The underlying page content is identical for all visitors. Popups triggered by user inactivity are not considered cloaking.
+
+**SessionStorage keys in use** (avoid collisions):
+- `nba_funnel` — funnel step data (state, DOB, address, income, etc.)
+- `nba_ty` — thank-you page user info display
+- `nba_popup_shown` — inactivity popup shown flag (set by `apply/popup.js`)
+
+---
+
+## Inactivity Popup (`apply/popup.js`)
+
+A self-contained script loaded on all 13 active funnel pages (both funnels, all steps, both thank-you pages). Loaded via `<script src="/apply/popup.js"></script>` just before `</body>` on each page.
+
+**Behavior:**
+- Fires after **30 seconds** of mouse inactivity (desktop) or touch inactivity (mobile/tablet)
+- Tracks `mousemove`, `touchstart`, `touchmove` events — timer resets on any activity
+- Shows **once per page visit** — sessionStorage flag `nba_popup_shown` prevents repeat
+- Dismissed by clicking the X button or the dark overlay background
+
+**Content:**
+- Heading: "Are you still there?"
+- Body: calls to speak with a Case Manager, phone number `1-813-556-9953` (bold, no-wrap)
+- Reference number: reads `document.getElementById('refNumber').textContent` on thank-you pages; falls back to `59952` on all other pages
+- Call button: "Call Now" with phone icon, links to `tel:+18135569953`
+
+**Design:** matches the navy/amber brand — dark navy overlay (`rgba(26,43,71,.82)`), white card with amber top bar, amber CTA button. All CSS is injected by the script itself (no external stylesheet dependency).
+
+**Phone number note:** The popup uses `1-813-556-9953` / `tel:+18135569953`, which is intentionally different from the main site number `1-888-408-5650`. Do not change either number without owner confirmation.
 
 ---
 

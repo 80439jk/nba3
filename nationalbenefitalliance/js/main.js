@@ -4003,9 +4003,10 @@ document.addEventListener('DOMContentLoaded', () => {
     overlay.appendChild(divider);
     // Phone
     const phone = document.createElement('a');
-    phone.href = 'tel:18884085650';
+    phone.href = 'tel:+18006058906';
     phone.className = 'mobile-phone';
-    phone.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.02 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14v2.92z"/></svg> 1-888-408-5650';
+    phone.setAttribute('aria-label', 'Call 1-800-605-8906, Monday through Friday 9:30am to 6:30pm Eastern Time');
+    phone.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.02 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14v2.92z"/></svg><span class="mobile-phone-text"><span>1-800-605-8906</span><span class="mobile-phone-hours">M-F 9:30am\u20136:30pm ET</span></span>';
     overlay.appendChild(phone);
     // Apply Now
     const apply = document.createElement('a');
@@ -4071,7 +4072,7 @@ function handleAccessSubmit(e) {
     sessionStorage.setItem('nba_access_time', Date.now());
   } else {
     const err = document.getElementById('code-error');
-    if (err) err.textContent = 'Invalid code. Please call our office at 1-888-408-5650 to get your access code.';
+    if (err) err.textContent = 'Invalid code. Please call our office at 1-800-605-8906 to get your access code.';
   }
 }
 

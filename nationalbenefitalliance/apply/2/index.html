@@ -220,7 +220,7 @@ main {
 
 /* ========== LANDING PAGE HERO ========== */
 .hero {
-  background: linear-gradient(to bottom, var(--navy-900), var(--navy-800), var(--navy-900));
+  background: white;
   padding: 2.5rem 1rem;
 }
 
@@ -240,7 +240,7 @@ main {
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: white;
+  color: var(--amber-600);
   margin-bottom: 0.5rem;
   margin-top: 0;
 }
@@ -250,17 +250,16 @@ main {
   font-size: clamp(1.35rem, 4vw, 2.75rem);
   font-weight: 700;
   line-height: 1.25;
-  color: white;
+  color: var(--navy-900);
   margin-bottom: 0.6rem;
 }
 
 .hero__subtitle {
   font-size: 1.1rem;
   line-height: 1.35;
-  color: var(--gray-200);
+  color: var(--gray-700);
   margin-bottom: 0.5rem;
   max-width: 40rem;
-  opacity: 0.9;
   margin-left: auto;
   margin-right: auto;
 }
@@ -293,16 +292,15 @@ main {
 /* ========== HERO KEYWORD STRIP ========== */
 .hero__keywords {
   font-size: 1.05rem;
-  color: rgba(255,255,255,0.55);
+  color: var(--gray-500);
   margin: 0 auto 0.75rem;
   max-width: 56rem;
   line-height: 1.6;
-  opacity: 0.95;
 }
 
 .hero__keywords strong {
   font-weight: 600;
-  color: rgba(255,255,255,0.55);
+  color: var(--gray-600);
   white-space: nowrap;
 }
 
@@ -1380,7 +1378,7 @@ main {
 /* ========== HERO REVAMP ========== */
 .hero__oneliner {
   font-size: 1rem;
-  color: rgba(255,255,255,0.65);
+  color: var(--gray-600);
   margin: 0 auto 1.25rem;
   max-width: 38rem;
   line-height: 1.5;
@@ -1391,12 +1389,13 @@ main {
 /* White card */
 .hero__card {
   background: white;
+  border: 1.5px solid var(--gray-200);
   border-radius: 1rem;
   padding: 2.5rem;
   max-width: 34rem;
   margin: 0 auto 1.5rem;
   text-align: left;
-  box-shadow: 0 20px 60px -10px rgba(0,0,0,0.35);
+  box-shadow: 0 25px 50px -8px rgba(26, 43, 71, 0.45), 0 10px 20px -6px rgba(26, 43, 71, 0.3);
 }
 @media (max-width: 640px) {
   .hero__card { padding: 1.5rem; border-radius: 0.75rem; }
@@ -1589,7 +1588,7 @@ main {
 /* Social proof */
 .hero__social-proof {
   font-size: 0.875rem;
-  color: rgba(255,255,255,0.5);
+  color: var(--gray-500);
   text-align: center;
   margin-top: 0;
   display: flex;

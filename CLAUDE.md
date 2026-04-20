@@ -257,14 +257,20 @@ The static pages originally used:
 
 ## Phone Numbers & Call Conversion Tracking
 
-- **Current number**: `1-888-408-5650` / `tel:18884085650`
-- **Previous number**: `1-855-767-9422` / `tel:18557679422` (replaced)
-- Phone number appears on the thank-you page in **two** places only (entire `/apply/` directory verified):
-  1. Display text: `<p class="ty-phone-number">1-888-408-5650</p>` (line 1227)
-  2. `<a href="tel:18884085650" class="ty-call-btn">` call button (line 1223)
-- **Google Forwarding Number (GFN) swap** is handled via GTM — no hard-coded WCM/DNI script on the page. The GTM container must have a "Google Ads Call Conversion (from website)" tag configured with Conversion ID + phone number `1-888-408-5650` firing on the thank-you page for the swap to work.
+Four distinct phone lines, one per funnel stage, so call-source attribution is unambiguous. **Never show two of these on the same page.**
+
+| Line | Number | tel: href | Where it appears |
+|---|---|---|---|
+| Main site (non-funnel) | `1-800-605-8906` | `tel:+18006058906` | Every main-site page: homepage, state/county pages, resources, stories, about, privacy, etc. Shown in header button (icon + number + hours), footer, body CTAs, schema.org `telephone`, PDF emails, `/humans.txt`, error messages. |
+| Started funnel (pre-submit) | `1-813-556-9954` | `tel:+18135569954` | Amber header button on all 11 funnel landing + step pages (`apply/1/` index + step-1..5, `apply/2/` index + step-1-dob-citizen..step-4-contact). Never on main site, thank-you, or popup. |
+| Completed funnel | `1-813-560-8063` | `tel:+18135608063` | Body call-CTA on both thank-you pages only (`apply/1/thank-you`, `apply/2/thank-you`). Thank-you header stays logo-only. |
+| Popup | `1-813-556-9953` | `tel:+18135569953` | Used only in `apply/popup.js`. Popup overlay layers on top of funnel pages; the number is only shown inside the popup card, not the underlying page. |
+| Previous numbers | `1-888-408-5650` / `1-855-767-9422` | — | Both replaced. Do not reintroduce. |
+
+- **Header button** (main site `.nav__phone`, funnel `.header__phone`): phone-icon SVG + two-line text (`1-800-605-8906` / `M-F 9:30am–6:30pm ET`). Navy fill on main site, amber fill on funnel pages (amber stands out against the navy funnel header). Visible on mobile; the logo text shrinks responsively to make room.
+- **Thank-you call button**: `<a href="tel:+18135608063" class="ty-call-btn">` — the `ty-call-btn` class is **load-bearing for GTM** (conversion trigger), do not rename.
+- **GTM tag changes required** when the thank-you number is rotated: the Google Ads Call Conversion tag and the Google Forwarding Number (GFN) swap tag both live in GTM and must be updated in the GTM UI to match the new number (`1-813-560-8063`). HTML/CSS/JS changes alone don't update the GTM config.
 - **Call button**: plain `<a href="tel:...">` — no JS interceptors, no `onclick`, no `preventDefault`. Works natively on mobile (opens dialer) and desktop (opens system handler).
-- **Conversion tracking** depends on GTM triggers: button click trigger (Click URL matches `^tel:` or Click Classes contains `ty-call-btn`) and the GFN call duration tag (Google-side, >20s connected call).
 - **Attribution**: Google Ads `_gcl_aw` cookie (90-day lifespan) persists through the multi-step funnel. The step-5→thank-you redirect clears `sessionStorage.nba_funnel` but this doesn't affect Google attribution since it uses cookies, not sessionStorage.
 
 ---
@@ -285,7 +291,7 @@ From `vercel.json`:
 1. **Static HTML over SPA for production** — The owner prefers the static HTML funnel (`/step-1` through `/step-5`) over the React SPA (`/form/1-state` through `/form/5-contact`) for the production funnel, even though the SPA has the desired design
 2. **Self-contained pages** — Each HTML page contains its own CSS in `<style>` tags; no shared external stylesheet for the funnel
 3. **Design direction** — Moving from blue/green scheme to navy/amber to match the SPA's look
-4. **Phone number changes** should be updated in BOTH the static pages AND the React bundle
+4. **Phone number changes** — four distinct lines, one per page type; never show two on the same page. See Phone Numbers section for the full map. Static pages and any React bundle must stay in sync; popup keeps its own separate number.
 5. **GTM tracking** is on every HTML page sitewide (GTM-MTQ5WNFR) — both the `<head>` script snippet and `<body>` noscript iframe. Originally only the 17 `/apply/1/` pages had GTM; it was rolled out to all ~3,259 pages in April 2026. **Note**: The 6 individual story pages (`stories/*.html`, not `stories/index.html`) use a different file naming convention (flat `.html` files, not `directory/index.html`) so they can be missed by scripts that only target `index.html`.
 6. **The funnel collects**: state, DOB, citizenship status, address, household income, employment status, name, email, phone (with TCPA consent). Also captures UTM params (`utm_source`, `utm_medium`, `utm_campaign`, `utm_content`, `utm_term`) and click IDs (`gclid`, `wbraid`, `gbraid`) via `captureUTM()` on every page.
 7. **Thank-you page** generates a random 5-digit reference number and pulls user info from sessionStorage (`nba_ty`). Reference number regenerates on page refresh (not persisted to sessionStorage — known minor UX issue).
@@ -315,6 +321,51 @@ From `vercel.json`:
 - **Failure alert emails (April 2026):** Integrated Resend (free tier) into edge function. Sends email to `larazielin1@gmail.com` on every CallTools API failure with full error details + lead info.
 - **apply/2 A/B variant (April 2026):** Built and launched `/apply/2/` as a card-based redesign of the landing page for A/B testing. Descriptive step URLs (`step-1-dob-citizen`, `step-2-address`, `step-3-income-employ`, `step-4-contact`). State and needs (tile selections) captured on the landing page; funnel is one step shorter. Merged to main via squash merge from branch `landing-page-v2`.
 - **Large HTML edits via Python (April 2026):** When Claude's output filter blocks large HTML generation, the workaround is to write a Python script via the Bash tool that reads/modifies the file directly — avoiding any large HTML in Claude's response output.
+- **Inactivity popup (April 2026):** Added `apply/popup.js` — fires after 30 seconds of mouse/touch inactivity on all 13 funnel pages across apply/1 and apply/2. Uses number `1-813-556-9953` (separate from main site number). Deployed on branch `popup-30sec`, merged to main via PR #4.
+- **Phone number segmentation (April 2026, branch `phone-num-cleanup`, branched from `main`):** Split the single `1-888-408-5650` line into four source-attribution lines — main site (`1-800-605-8906`), started funnel (`1-813-556-9954`), completed funnel (`1-813-560-8063`), popup (unchanged `1-813-556-9953`). Redesigned `.nav__phone` into a dark-navy pill button with phone icon + number + "M-F 9:30am–6:30pm ET"; mobile keeps the button visible and shrinks the "National Benefit Alliance" logo text to fit. Funnel pages got a brand-new amber `.header__phone` button injected into their previously logo-only header. Main-site updates touched every HTML file under `/` (excluding `apply/`, `backend/`, `api/`, `node_modules/`) plus `css/styles.css`, `js/main.js` (mobile menu builder + access-code error text), `llms.txt`, `llms-full.txt`, `api/send-pdf.js`, `api/humans.js`, `api/verify-code.js`, `backend/server.js`, `backend/routes/{api,seo,pages}.js`. Footer hours line "Mon–Fri 8am–8pm ET · Sat 9am–5pm ET" was rewritten to "Mon–Fri 9:30am–6:30pm ET" to match the new operating window. **GTM update required before deploy**: Google Ads Call Conversion tag and GFN swap tag on thank-you pages must be rebound from `1-888-408-5650` to `1-813-560-8063`.
+
+---
+
+## Google Ads & Conversion Tracking Safety
+
+This site's revenue depends entirely on Google Ads driving calls. Any development that could interfere with tracking or create policy violations **must be discussed and aligned on before any code is written**.
+
+**Do not make changes that could:**
+- Alter, wrap, or intercept `<a href="tel:...">` call buttons — GTM tracks clicks on these directly and the GFN swap depends on the exact phone number in the link
+- Modify or suppress GTM dataLayer pushes or the GTM container snippet
+- Add `onclick`, `preventDefault`, or JS redirects to call buttons or form submit handlers
+- Change the CSS class `ty-call-btn` on the thank-you page call button (GTM trigger depends on it)
+- Show different page content to crawlers vs. users (cloaking) — overlays and popups are fine as long as the underlying HTML is identical for all visitors
+- Add new `tel:` links pointing to different numbers without confirming which number should be tracked for conversions
+
+**Why inactivity popups are safe:** They only appear after 30 seconds of inactivity, well after Google's crawler and quality scoring have evaluated the page. The underlying page content is identical for all visitors. Popups triggered by user inactivity are not considered cloaking.
+
+**SessionStorage keys in use** (avoid collisions):
+- `nba_funnel` — funnel step data (state, DOB, address, income, etc.)
+- `nba_ty` — thank-you page user info display
+- `nba_popup_shown` — inactivity popup shown flag (set by `apply/popup.js`)
+
+---
+
+## Inactivity Popup (`apply/popup.js`)
+
+A self-contained script loaded on all 13 active funnel pages (both funnels, all steps, both thank-you pages). Loaded via `<script src="/apply/popup.js"></script>` just before `</body>` on each page.
+
+**Behavior:**
+- Fires after **30 seconds** of mouse inactivity (desktop) or touch inactivity (mobile/tablet)
+- Tracks `mousemove`, `touchstart`, `touchmove` events — timer resets on any activity
+- Shows **once per page visit** — sessionStorage flag `nba_popup_shown` prevents repeat
+- Dismissed by clicking the X button or the dark overlay background
+
+**Content:**
+- Heading: "Are you still there?"
+- Body: calls to speak with a Case Manager, phone number `1-813-556-9953` (bold, no-wrap)
+- Reference number: reads `document.getElementById('refNumber').textContent` on thank-you pages; falls back to `59952` on all other pages
+- Call button: "Call Now" with phone icon, links to `tel:+18135569953`
+
+**Design:** matches the navy/amber brand — dark navy overlay (`rgba(26,43,71,.82)`), white card with amber top bar, amber CTA button. All CSS is injected by the script itself (no external stylesheet dependency).
+
+**Phone number note:** The popup uses `1-813-556-9953` / `tel:+18135569953`, which is intentionally different from the main site number `1-800-605-8906`. Do not change either number without owner confirmation.
 
 ---
 

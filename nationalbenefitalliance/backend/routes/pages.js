@@ -174,7 +174,7 @@ function buildCountyPage(county) {
         "description":"Comprehensive guide to free government and community assistance programs in ${title}, ${stateTitle}.",
         "provider":{"@id":"https://nationalbenefitalliance.com/#organization"},
         "serviceArea":{"@id":"https://nationalbenefitalliance.com/${state}/${slug}/#place"},
-        "availableChannel":{"@type":"ServiceChannel","serviceUrl":"https://nationalbenefitalliance.com/${state}/${slug}/","servicePhone":"+1-888-408-5650"}
+        "availableChannel":{"@type":"ServiceChannel","serviceUrl":"https://nationalbenefitalliance.com/${state}/${slug}/","servicePhone":"+1-800-605-8906"}
       },
       {
         "@type":"WebPage",
@@ -216,7 +216,7 @@ function buildCountyPage(county) {
         <li><a href="/faq/">FAQ</a></li>
       </ul>
       <div class="nav__cta">
-        <a href="tel:18884085650" class="nav__phone">📞 1-888-408-5650</a>
+        <a href="tel:+18006058906" class="nav__phone">📞 1-800-605-8906</a>
         <a href="https://apply.nationalbenefitalliance.com" class="btn btn--primary btn--sm">Apply Now</a>
       </div>
     </div>
@@ -241,7 +241,7 @@ function buildCountyPage(county) {
         <div class="county-hero__actions">
           <a href="#resources" class="btn btn--primary btn--lg">View All Resources</a>
           <a href="#pdf-download" class="btn btn--outline-white">📄 Download PDF Guide</a>
-          <a href="tel:18884085650" class="btn btn--outline-white">📞 Get Access Code</a>
+          <a href="tel:+18006058906" class="btn btn--outline-white">📞 Get Access Code</a>
         </div>
         <div class="county-hero__meta">
           <div class="county-hero__meta-item"><span>${county.population ? county.population.toLocaleString() : 'N/A'}</span><span>Residents</span></div>
@@ -259,7 +259,7 @@ function buildCountyPage(county) {
             <div id="access-gate" class="access-gate">
               <div class="access-gate__icon">🔐</div>
               <h3>Full Guide Access Required</h3>
-              <p>Enter your free access code to unlock the complete ${title} resource guide. <strong>No code?</strong> Call <a href="tel:18884085650"><strong>1-888-408-5650</strong></a> — it's free.</p>
+              <p>Enter your free access code to unlock the complete ${title} resource guide. <strong>No code?</strong> Call <a href="tel:+18006058906"><strong>1-800-605-8906</strong></a> — it's free.</p>
               <form id="access-form">
                 <div class="access-form">
                   <input type="text" id="access-code-input" placeholder="ENTER CODE" maxlength="8" autocomplete="off"/>
@@ -272,7 +272,7 @@ function buildCountyPage(county) {
             <div id="resources-content" style="display:none;">
               <div class="alert alert--info" style="margin-bottom:2rem;">
                 <span>ℹ️</span>
-                <span>This county's full resource database is being compiled. In the meantime, call <strong>211</strong> or <strong>1-888-408-5650</strong> for immediate referrals.</span>
+                <span>This county's full resource database is being compiled. In the meantime, call <strong>211</strong> or <strong>1-800-605-8906</strong> for immediate referrals.</span>
               </div>
 
               <!-- Statewide resources available in all FL counties -->
@@ -313,7 +313,7 @@ function buildCountyPage(county) {
                     <h4>LIHEAP — Home Energy Assistance (Statewide)</h4>
                     <p>Federal energy assistance for low-income Floridians. Contact your local Community Action Agency for the ${title} LIHEAP office.</p>
                     <div class="resource-item__meta">
-                      <a href="tel:18006244357" class="resource-item__phone">📞 1-888-408-5650 for local office</a>
+                      <a href="tel:18006244357" class="resource-item__phone">📞 1-800-605-8906 for local office</a>
                       <a href="https://www.floridacommunitydevelopment.org" target="_blank" rel="noopener" class="resource-item__web">🌐 floridacommunitydevelopment.org</a>
                     </div>
                   </div><div class="resource-item__actions"><span class="badge badge--blue">Energy</span></div></div>
@@ -343,8 +343,8 @@ function buildCountyPage(county) {
               <div class="sidebar-card__header">📞 Get Your Access Code</div>
               <div class="sidebar-card__body">
                 <p style="font-size:0.875rem;color:var(--gray-600);margin-bottom:1rem;">Call our free helpline to receive your personal access code.</p>
-                <a href="tel:18884085650" class="btn btn--primary btn--full">📞 1-888-408-5650</a>
-                <p style="font-size:0.75rem;color:var(--gray-400);text-align:center;margin-top:0.5rem;">Mon–Fri 8am–8pm · Sat 9am–5pm</p>
+                <a href="tel:+18006058906" class="btn btn--primary btn--full">📞 1-800-605-8906</a>
+                <p style="font-size:0.75rem;color:var(--gray-400);text-align:center;margin-top:0.5rem;">Mon–Fri 9:30am–6:30pm ET</p>
               </div>
             </div>
             <div class="sidebar-card">

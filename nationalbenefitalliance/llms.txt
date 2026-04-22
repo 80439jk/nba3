@@ -14,7 +14,7 @@ National Benefit Alliance provides a comprehensive, free resource directory for 
 - [Browse All States](https://nationalbenefitalliance.com/resources/)
 - [About Us](https://nationalbenefitalliance.com/about/)
 - [Frequently Asked Questions](https://nationalbenefitalliance.com/faq/)
-- [Apply for Benefits](https://nationalbenefitalliance.com/apply/1/)
+- [Apply for Benefits](https://nationalbenefitalliance.com/apply/2/)
 - [Success Stories](https://nationalbenefitalliance.com/stories/)
 
 ## All 50 States
@@ -111,7 +111,7 @@ National Benefit Alliance covers these major assistance categories:
 
 - **Phone:** 1-800-605-8906
 - **Email:** support@nationalbenefitalliance.com
-- **Hours:** Monday-Friday, 9:30 AM - 6:30 PM ET
+- **Hours:** Monday-Thursday, 9:30 AM - 8:00 PM ET; Friday, 9:30 AM - 6:00 PM ET
 
 ## Data Sources
 

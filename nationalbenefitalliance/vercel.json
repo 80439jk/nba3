@@ -1,6 +1,10 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/apply/1",           "destination": "/apply/2", "permanent": true },
+    { "source": "/apply/1/:path*",    "destination": "/apply/2", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/search",               "destination": "/api/search" },
     { "source": "/sitemap.xml",          "destination": "/api/sitemap" },

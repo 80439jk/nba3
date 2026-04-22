@@ -344,7 +344,7 @@ function buildCountyPage(county) {
               <div class="sidebar-card__body">
                 <p style="font-size:0.875rem;color:var(--gray-600);margin-bottom:1rem;">Call our free helpline to receive your personal access code.</p>
                 <a href="tel:+18006058906" class="btn btn--primary btn--full">📞 1-800-605-8906</a>
-                <p style="font-size:0.75rem;color:var(--gray-400);text-align:center;margin-top:0.5rem;">Mon–Fri 9:30am–6:30pm ET</p>
+                <p style="font-size:0.75rem;color:var(--gray-400);text-align:center;margin-top:0.5rem;">Mon–Thu 9:30am–8pm · Fri 9:30am–6pm ET</p>
               </div>
             </div>
             <div class="sidebar-card">

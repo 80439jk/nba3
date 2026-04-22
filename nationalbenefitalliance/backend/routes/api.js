@@ -334,7 +334,7 @@ async function sendConfirmationEmail({ email, firstName, transactionId, accessCo
             View ${formatCounty(county)} Resources →
           </a>
           <p style="margin-top:1.5rem;font-size:0.875rem;color:#6C757D;">
-            Questions? Call us at <strong>1-800-605-8906</strong> (Mon–Fri 9:30am–6:30pm ET)
+            Questions? Call us at <strong>1-800-605-8906</strong> (Mon–Thu 9:30am–8pm · Fri 9:30am–6pm ET)
           </p>
         </div>
         <div style="background:#1B3A6B;padding:1rem;text-align:center;">

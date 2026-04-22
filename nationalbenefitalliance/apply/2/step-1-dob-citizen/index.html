@@ -1386,7 +1386,27 @@ document.addEventListener('DOMContentLoaded', function() {
       const dob = document.getElementById('dob');
       const cit = document.getElementById('citizenship');
       const dobMatch = dob.value.match(/^(\d{2})\s*\/\s*(\d{2})\s*\/\s*(\d{4})$/);
-      if (!dobMatch) { showError(dob, 'Please enter your date of birth'); valid = false; }
+      if (!dobMatch) {
+        showError(dob, 'Please enter your date of birth'); valid = false;
+      } else {
+        const m = parseInt(dobMatch[1], 10);
+        const d = parseInt(dobMatch[2], 10);
+        const y = parseInt(dobMatch[3], 10);
+        const dt = new Date(y, m - 1, d);
+        if (dt.getFullYear() !== y || dt.getMonth() !== m - 1 || dt.getDate() !== d) {
+          showError(dob, 'Please enter a valid date of birth'); valid = false;
+        } else {
+          const today = new Date();
+          let age = today.getFullYear() - y;
+          const mDiff = today.getMonth() - (m - 1);
+          if (mDiff < 0 || (mDiff === 0 && today.getDate() < d)) age--;
+          if (age < 18) {
+            showError(dob, 'You must be 18 or older to apply'); valid = false;
+          } else if (age > 110) {
+            showError(dob, 'Please enter a valid date of birth'); valid = false;
+          }
+        }
+      }
       if (!cit.value) { showError(cit, 'Please select your citizenship status'); valid = false; }
       if (!valid) return;
       const isoDob = dobMatch[3] + '-' + dobMatch[1] + '-' + dobMatch[2];

@@ -221,7 +221,7 @@ Each county page displays 15-18 assistance programs with:
 - Website/phone numbers
 
 ### Step 4: Apply
-Use our [Application Guide](https://nationalbenefitalliance.com/apply/1/) for step-by-step help applying to programs.
+Use our [Application Guide](https://nationalbenefitalliance.com/apply/2/) for step-by-step help applying to programs.
 
 ### Step 5: Celebrate Success
 Share your story! Read [success stories](https://nationalbenefitalliance.com/stories/) from families who've accessed assistance.
@@ -230,8 +230,8 @@ Share your story! Read [success stories](https://nationalbenefitalliance.com/sto
 
 - **First-Time Users:** Start with our [FAQ](https://nationalbenefitalliance.com/faq/) to understand how to use the site
 - **Specific Programs:** Search our database for specific programs like "SNAP" or "Medicaid"
-- **Quick Apply:** Use our [5-step application flow](https://nationalbenefitalliance.com/apply/1/) for guided assistance
-- **Questions:** Call us at **1-800-605-8906** Monday-Friday, 9:30 AM - 6:30 PM ET
+- **Quick Apply:** Use our [5-step application flow](https://nationalbenefitalliance.com/apply/2/) for guided assistance
+- **Questions:** Call us at **1-800-605-8906** Monday-Thursday, 9:30 AM - 8:00 PM ET; Friday, 9:30 AM - 6:00 PM ET
 
 ## Data Quality & Accuracy
 
@@ -286,7 +286,7 @@ National Benefit Alliance
 
 **Customer Support:**
 - Phone: 1-800-605-8906
-- Hours: Monday-Friday, 9:30 AM - 6:30 PM ET
+- Hours: Monday-Thursday, 9:30 AM - 8:00 PM ET; Friday, 9:30 AM - 6:00 PM ET
 - Email: support@nationalbenefitalliance.com
 
 **For Nonprofits & Government Agencies:**

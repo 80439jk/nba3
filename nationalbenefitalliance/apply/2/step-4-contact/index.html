@@ -1309,7 +1309,7 @@ main {
 
         <div class="form-group">
           <label for="phone" class="form-label">Phone Number</label>
-          <input type="tel" name="phone" id="phone" class="form-input" placeholder="(555) 123-4567" required />
+          <input type="tel" name="phone" id="phone" class="form-input" placeholder="(XXX) XXX-XXXX" required />
           <div class="form-error">Please enter a valid phone number</div>
         </div>
 
@@ -1396,6 +1396,19 @@ function clearAllErrors() {
   document.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
   document.querySelectorAll('.form-error').forEach(el => el.classList.remove('show'));
 }
+// ---- Phone validation (NANP) ----
+// Catches placeholder values, mistyped numbers, and bot-generated garbage
+// before they hit CallTools (which enforces these rules server-side).
+function validatePhone(d) {
+  if (d.length !== 10) return 'Please enter a valid 10-digit phone number';
+  if (d[0] === '1') return 'Enter your number without a leading 1 — just your 10-digit area code and number';
+  // NANP: area code (digits 0-2) and exchange code (digits 3-5) must each start with 2-9.
+  // Catches e.g. (555) 123-4567 → exchange 123 starts with 1, and 929-089-8075 → exchange 089 starts with 0.
+  if (d[0] < '2' || d[3] < '2') return 'Please enter a valid US phone number';
+  // Reject all-same-digit (e.g. 2222222222, 9999999999)
+  if (/^(\d)\1{9}$/.test(d)) return 'Please enter a valid phone number';
+  return null;
+}
 // ---- Restore saved values ----
 function restoreField(name) {
   const d = getFunnelData();
@@ -1452,11 +1465,8 @@ document.addEventListener('DOMContentLoaded', function() {
       if (!lastName.value.trim()) { showError(lastName, 'Please enter your last name'); valid = false; }
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) { showError(email, 'Please enter a valid email'); valid = false; }
       const phoneDigits = phone.value.replace(/\D/g, '');
-      if (phoneDigits.length !== 10) {
-        showError(phone, 'Please enter a valid 10-digit phone number'); valid = false;
-      } else if (phoneDigits[0] === '1') {
-        showError(phone, 'Enter your number without a leading 1 — just your 10-digit area code and number'); valid = false;
-      }
+      const phoneError = validatePhone(phoneDigits);
+      if (phoneError) { showError(phone, phoneError); valid = false; }
       if (!tcpa.checked) {
         alert('Please agree to the terms to continue.');
         valid = false;

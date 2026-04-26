@@ -133,11 +133,14 @@ Previously rotated numbers `1-888-408-5650` and `1-855-767-9422` are retired; do
 
 ## Backend — Supabase Edge Function `submit-lead`
 
-Repo: `/Users/larazielin/Desktop/nba/nba-supabase-backend/supabase/functions/submit-lead/index.ts`. Supabase project `quhxbgsgtfvrasyjvaba` (us-east-2, Postgres 17).
+Repo: `/Users/larazielin/Desktop/nba/nba-supabase-backend/` (under git, branch `main`, local-only — no remote yet). The function source is at `supabase/functions/submit-lead/index.ts`. Supabase project `quhxbgsgtfvrasyjvaba` (us-east-2, Postgres 17). Deployment is manual via the Supabase dashboard — paste the file contents into the Edge Functions editor and click Deploy.
 
-**What it does**: receives the contact-step submission, runs server-side bot detection (honeypot + `form_duration_ms < 3000`), inserts into `leads` with `crm_status: pending`, forwards to CallTools, logs the request/response to `api_logs`, updates `crm_status` to success/failed, and on failure sends an alert email via Resend to `larazielin1@gmail.com`. Always returns HTTP 200 to the frontend regardless of CRM outcome — the frontend cannot detect CRM failure.
+**What it does**: receives the contact-step submission, runs server-side bot detection (honeypot + `form_duration_ms < 3000`), runs server-side phone validation (NANP rules — see below), inserts valid leads into `leads` with `crm_status: pending`, forwards to CallTools, logs the request/response to `api_logs`, updates `crm_status` to success/failed, and on failure sends an alert email via Resend to `larazielin1@gmail.com`. Always returns HTTP 200 to the frontend regardless of CRM outcome — the frontend cannot detect CRM failure.
 
-**Bot drops** (honeypot filled or duration too short): fake 200 OK, log to `bot_drops`, never enter `leads` or CallTools.
+**Silent drops to `bot_drops`** (fake 200, never enter `leads` or CallTools, no Resend email):
+- Honeypot field (`hp_website`) is non-empty → `detection_reason: honeypot_filled`
+- `form_duration_ms < 3000` → `detection_reason: too_fast`
+- Phone fails NANP validation → `detection_reason: invalid_phone:<sub>` where `<sub>` is `wrong_length`, `nanp_violation`, or `all_same_digit`. Mirrors the client-side validator at `/apply/2/step-4-contact` so direct-POST attempts (curl/scripts that bypass the form) get the same rejection. Catches placeholders like `5551234567` and CallTools-rejected real-world inputs like `9290898075` without spending a CallTools call or firing an alert email.
 
 **CRM — CallTools** (`POST https://app.calltools.io/api/contacts/`, token auth):
 - Phone normalized to E.164 (`+1XXXXXXXXXX`); DOB → derived `age`; TCPA boolean → string; income enum → numeric; click ID uses `gclid → wbraid → gbraid` fallback (so iOS 14+ privacy-safe clicks still get a `click_id`)
@@ -148,14 +151,14 @@ Repo: `/Users/larazielin/Desktop/nba/nba-supabase-backend/supabase/functions/sub
 **Tables**:
 - `leads` — one row per submission; all funnel fields + UTM/click IDs + `crm_status` / `crm_lead_id` / `crm_action` / `crm_submitted_at`
 - `api_logs` — one row per CRM call; full request/response payloads, http status, success flag
-- `bot_drops` — one row per silently-dropped suspected bot; `detection_reason` (`honeypot_filled` / `too_fast`), `raw_payload`
+- `bot_drops` — one row per silently-dropped submission. `detection_reason` is one of `honeypot_filled`, `too_fast`, or `invalid_phone:<sub>` (with sub-reasons `wrong_length` / `nanp_violation` / `all_same_digit`). Use `WHERE detection_reason LIKE 'invalid_phone%'` to filter all phone drops. Also stores `ip_address`, `user_agent`, `form_duration_ms`, `raw_payload` (jsonb).
 
 **Env vars** (Edge Function Secrets): `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `CALLTOOLS_API_TOKEN`, `RESEND_API_KEY`.
 
 **Quirks**:
-- Always 200, no input validation, no retries, CRM called exactly once per submission
-- CallTools rejects obviously fake numbers (e.g. `+12222222222`) at its end — not a code bug
-- `transaction_id` column is `text` (not `uuid`) for backwards compatibility with older `nba_<ts>_<rand>` rows; new rows use proper UUIDs
+- Always 200, no retries, CRM called exactly once per submission. The only server-side validation is the NANP phone check (see "Silent drops" above); other fields go through unvalidated.
+- CallTools also rejects obviously fake numbers (e.g. `+12222222222`) at its end — caught by the server-side validator first now, but historical `api_logs` rows show this pattern.
+- `transaction_id` column is `text` (not `uuid`) for backwards compatibility with older `nba_<ts>_<rand>` rows; new rows use proper UUIDs.
 
 ---
 

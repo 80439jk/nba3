@@ -4012,7 +4012,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const apply = document.createElement('a');
     apply.href = '/apply/2';
     apply.className = 'mobile-apply';
-    apply.textContent = 'Apply Now';
+    apply.textContent = 'Find Assistance';
     overlay.appendChild(apply);
     navInner.appendChild(overlay);
     // Toggle

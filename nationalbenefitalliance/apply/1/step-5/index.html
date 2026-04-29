@@ -103,11 +103,34 @@ body {
 }
 
 .header__logo {
-  font-size: 1.125rem;
-  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
   color: white;
   text-decoration: none;
   transition: opacity 0.2s;
+}
+.header__logo-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 7px;
+  flex-shrink: 0;
+  display: block;
+}
+.header__logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+.header__logo-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+.header__logo-tagline {
+  font-size: 0.7rem;
+  opacity: 0.7;
+  font-weight: 500;
 }
 
 .header__logo:hover {
@@ -1252,6 +1275,11 @@ main {
 }
 
   </style>
+  <link rel="icon" type="image/png" href="/images/logo.png" />
+  <meta property="og:image" content="https://nationalbenefitalliance.com/images/og-default.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:image" content="https://nationalbenefitalliance.com/images/og-default.jpg" />
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -1260,7 +1288,13 @@ main {
     <!-- End Google Tag Manager (noscript) -->
   <header class="header">
     <div class="header__inner">
-      <a href="/" class="header__logo">National Benefit Alliance</a>
+      <a href="/" class="header__logo">
+        <img src="/images/logo.png" alt="" class="header__logo-img" aria-hidden="true">
+        <span class="header__logo-text">
+          <span class="header__logo-name">National Benefit Alliance</span>
+          <span class="header__logo-tagline">Community Resource Center</span>
+        </span>
+      </a>
       <a href="tel:+18135569954" class="header__phone" aria-label="Call 1-813-556-9954, Monday through Thursday 9:30am to 8pm, Friday 9:30am to 6pm Eastern Time">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
           <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.02 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14v2.92z"/>
@@ -1395,6 +1429,16 @@ function clearAllErrors() {
   document.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
   document.querySelectorAll('.form-error').forEach(el => el.classList.remove('show'));
 }
+// ---- Phone validation (NANP + assigned-area-code allowlist) ----
+const VALID_NANP_AREA_CODES = new Set(['201','202','203','204','205','206','207','208','209','210','212','213','214','215','216','217','218','219','220','223','224','225','226','228','229','231','234','235','236','239','240','242','246','248','251','252','253','254','256','257','260','262','263','264','267','268','269','270','272','274','276','279','281','283','284','289','301','302','303','304','305','306','307','308','309','310','312','313','314','315','316','317','318','319','320','321','323','324','325','326','327','329','330','331','332','334','336','337','339','340','341','343','345','346','347','350','351','352','353','354','357','360','361','363','364','365','367','368','369','380','382','385','386','401','402','403','404','405','406','407','408','409','410','412','413','414','415','416','417','418','419','423','424','425','428','430','431','432','434','435','436','437','438','440','441','442','443','445','447','448','450','457','458','463','464','468','469','470','471','472','473','474','475','478','479','480','483','484','501','502','503','504','505','506','507','508','509','510','512','513','514','515','516','517','518','519','520','521','522','523','524','525','526','527','528','529','530','531','532','533','534','539','540','541','551','557','559','561','562','563','564','567','570','571','573','574','575','579','580','581','584','585','586','587','601','602','603','604','605','606','607','608','609','610','612','613','614','615','616','617','618','619','620','623','624','626','628','630','631','636','639','641','645','646','647','649','650','651','657','659','660','661','662','667','669','670','671','672','673','678','679','680','681','682','684','685','686','687','689','701','702','703','704','705','706','707','708','709','712','713','714','715','716','717','718','719','720','724','726','727','728','729','731','732','734','737','738','740','742','743','754','757','758','760','762','763','765','769','770','771','772','773','774','775','776','777','778','779','780','781','782','783','784','785','786','787','801','802','803','804','805','806','808','809','810','812','813','814','815','816','817','818','819','820','821','823','824','825','826','828','830','831','832','835','837','838','839','840','841','843','845','847','848','850','856','857','858','859','860','861','862','863','864','865','867','868','870','872','873','878','881','901','902','903','904','905','906','907','908','909','910','912','913','914','915','916','917','918','919','920','921','925','928','929','931','936','937','938','939','940','941','942','945','947','949','951','952','954','956','970','971','972','973','978','979','980','983','984','985','986','989']);
+function validatePhone(d) {
+  if (d.length !== 10) return 'Please enter a valid 10-digit phone number';
+  if (d[0] === '1') return 'Enter your number without a leading 1 — just your 10-digit area code and number';
+  if (d[0] < '2' || d[3] < '2') return 'Please enter a valid US phone number';
+  if (/^(\d)\1{9}$/.test(d)) return 'Please enter a valid phone number';
+  if (!VALID_NANP_AREA_CODES.has(d.slice(0, 3))) return 'Please enter a valid US area code';
+  return null;
+}
 // ---- Restore saved values ----
 function restoreField(name) {
   const d = getFunnelData();
@@ -1449,13 +1493,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
       if (!firstName.value.trim()) { showError(firstName, 'Please enter your first name'); valid = false; }
       if (!lastName.value.trim()) { showError(lastName, 'Please enter your last name'); valid = false; }
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) { showError(email, 'Please enter a valid email'); valid = false; }
+      if (!/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(email.value.trim())) { showError(email, 'Please enter a valid email'); valid = false; }
       const phoneDigits = phone.value.replace(/\D/g, '');
-      if (phoneDigits.length !== 10) {
-        showError(phone, 'Please enter a valid 10-digit phone number'); valid = false;
-      } else if (phoneDigits[0] === '1') {
-        showError(phone, 'Enter your number without a leading 1 — just your 10-digit area code and number'); valid = false;
-      }
+      const phoneError = validatePhone(phoneDigits);
+      if (phoneError) { showError(phone, phoneError); valid = false; }
       if (!tcpa.checked) {
         alert('Please agree to the terms to continue.');
         valid = false;

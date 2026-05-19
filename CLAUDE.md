@@ -133,7 +133,7 @@ Previously rotated numbers `1-888-408-5650` and `1-855-767-9422` are retired; do
 
 ## Backend — Supabase Edge Function `submit-lead`
 
-Repo: `/Users/larazielin/Desktop/nba/nba-supabase-backend/` (under git, branch `main`, local-only — no remote yet). The function source is at `supabase/functions/submit-lead/index.ts`. Supabase project `quhxbgsgtfvrasyjvaba` (us-east-2, Postgres 17). Deployment is manual via the Supabase dashboard — paste the file contents into the Edge Functions editor and click Deploy.
+Repo: `/Users/larazielin/Desktop/nba/nba-supabase-backend/` (under git, branch `main`, GitHub remote `lalazeelady/nba-supabase-backend`). The function source is at `supabase/functions/submit-lead/index.ts`. Supabase project `quhxbgsgtfvrasyjvaba` (us-east-2, Postgres 17). Deployment is manual via the Supabase dashboard — paste the file contents into the Edge Functions editor and click Deploy.
 
 **What it does**: receives the contact-step submission, runs server-side bot detection (honeypot + `form_duration_ms < 3000`), runs server-side phone validation (NANP rules — see below), inserts valid leads into `leads` with `crm_status: pending`, forwards to CallTools, logs the request/response to `api_logs`, updates `crm_status` to success/failed, and on failure sends an alert email via Resend to `larazielin1@gmail.com`. Always returns HTTP 200 to the frontend regardless of CRM outcome — the frontend cannot detect CRM failure.
 

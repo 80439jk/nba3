@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Step 5: Contact Information — National Benefit Alliance</title>
+  <title>Thank You — National Benefit Alliance</title>
   <meta name="robots" content="noindex, nofollow" />
   <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -98,8 +98,6 @@ body {
   padding: 0.875rem 1rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
 }
 
 .header__logo {
@@ -136,57 +134,6 @@ body {
 .header__logo:hover {
   opacity: 0.8;
 }
-
-/* ========== HEADER PHONE BUTTON (Started Funnel line) ========== */
-.header__phone {
-  margin-left: auto;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.4rem 0.75rem;
-  background: #f59e0b;
-  color: #1a2b47;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  font-weight: 700;
-  line-height: 1.15;
-  transition: background 0.15s, transform 0.15s;
-}
-.header__phone:hover { background: #d97706; transform: translateY(-1px); }
-.header__phone svg { flex-shrink: 0; color: #1a2b47; }
-.header__phone-text { display: flex; flex-direction: column; align-items: flex-start; }
-.header__phone-number { font-size: 0.9rem; letter-spacing: 0.01em; white-space: nowrap; }
-.header__phone-hours { font-size: 0.62rem; font-weight: 500; opacity: 0.85; white-space: nowrap; margin-top: 1px; }
-@media (max-width: 480px) {
-  .header__logo { font-size: 0.82rem; line-height: 1.15; white-space: nowrap; }
-  .header__phone {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
-    justify-content: center;
-    column-gap: 0.5rem;
-    row-gap: 2px;
-    align-items: center;
-    padding: 0.4rem 0.7rem;
-    gap: 0;
-  }
-  .header__phone svg { grid-row: 1; grid-column: 1; width: 15px; height: 15px; }
-  .header__phone-text { display: contents; }
-  .header__phone-number { grid-row: 1; grid-column: 2; font-size: 0.9rem; text-align: left; }
-  .header__phone-hours {
-    grid-row: 2;
-    grid-column: 1 / span 2;
-    font-size: 0.66rem;
-    font-weight: 500;
-    opacity: 0.85;
-    text-align: center;
-    margin-top: 0;
-  }
-}
-@media (max-width: 360px) {
-  .header__logo { font-size: 0.72rem; white-space: normal; }
-}
-
 
 /* ========== FOOTER ========== */
 .footer {
@@ -781,24 +728,23 @@ main {
 /* ========== FORM ELEMENTS ========== */
 .form-title {
   font-family: var(--font-head);
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--gray-900);
-  margin-bottom: 0.875rem;
-  margin-top: 0;
+  margin-bottom: 1.5rem;
   text-align: center;
 }
 
 .form-subtitle {
   font-size: 1rem;
   color: var(--gray-600);
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   line-height: 1.5;
   text-align: center;
 }
 
 .form-group {
-  margin-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
 }
 
 .form-group:last-of-type {
@@ -807,16 +753,16 @@ main {
 
 .form-label {
   display: block;
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   font-weight: 600;
   color: var(--gray-900);
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
 }
 
 .form-input,
 .form-select {
   width: 100%;
-  padding: 0.625rem 0.875rem;
+  padding: 0.75rem 1rem;
   border: 1px solid var(--gray-300);
   border-radius: 0.5rem;
   font-size: 1rem;
@@ -925,14 +871,20 @@ main {
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.75rem;
+  gap: 1rem;
+}
+
+@media (max-width: 640px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ========== FORM ACTIONS ========== */
 .form-actions {
   display: flex;
-  gap: 0.75rem;
-  margin-top: 1rem;
+  gap: 1rem;
+  margin-top: 2rem;
   align-items: stretch;
 }
 
@@ -995,16 +947,15 @@ main {
 /* ========== SECURITY NOTE ========== */
 .security-note {
   text-align: center;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   color: var(--gray-500);
-  margin-top: 0.625rem;
-  line-height: 1.4;
+  margin-top: 1.25rem;
 }
 
 /* ========== TCPA CONSENT ========== */
 .tcpa-group {
-  margin-top: 0.875rem;
-  padding: 0.75rem 0.875rem;
+  margin-top: 1.5rem;
+  padding: 1rem;
   background-color: var(--blue-50);
   border-radius: 0.5rem;
   border: 1px solid var(--blue-200);
@@ -1012,23 +963,23 @@ main {
 
 .tcpa-checkbox {
   display: flex;
-  gap: 0.625rem;
+  gap: 0.75rem;
   align-items: flex-start;
 }
 
 .tcpa-checkbox input[type="checkbox"] {
-  width: 16px;
-  height: 16px;
-  margin-top: 0.15rem;
+  width: 18px;
+  height: 18px;
+  margin-top: 0.2rem;
   flex-shrink: 0;
   cursor: pointer;
   accent-color: var(--blue-600);
 }
 
 .tcpa-label {
-  font-size: 0.6875rem;
+  font-size: 0.8125rem;
   color: var(--gray-700);
-  line-height: 1.3;
+  line-height: 1.5;
 }
 
 .tcpa-label a {
@@ -1090,14 +1041,13 @@ main {
 
 .ty-title {
   font-family: var(--font-head);
-  font-size: 2.25rem;
+  font-size: 1.75rem;
   font-weight: 700;
   color: var(--gray-900);
   margin-bottom: 1.5rem;
 }
 
 @media (min-width: 768px) {
-  .ty-title { font-size: 3rem; }
 }
 
 .ty-ref {
@@ -1105,6 +1055,14 @@ main {
   font-weight: 600;
   color: var(--gray-900);
   margin-bottom: 1.5rem;
+}
+
+.ty-have-code {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  text-align: center;
+  margin: -0.25rem 0 1.5rem;
 }
 
 /* Action needed box */
@@ -1118,7 +1076,7 @@ main {
 
 .ty-action-box__title {
   font-family: var(--font-head);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--gray-900);
   margin-bottom: 1rem;
@@ -1133,18 +1091,19 @@ main {
 
 .ty-call-btn {
   display: inline-flex;
+  flex-direction: column;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.15rem;
   background-color: var(--amber-500);
   color: white;
-  font-size: 1.1rem;
-  padding: 1.5rem 3rem;
+  padding: 1rem 2.5rem;
   border-radius: 0.5rem;
   font-weight: 700;
   text-decoration: none;
   transition: all 0.2s;
   box-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.3);
   margin-bottom: 1rem;
+  line-height: 1.15;
 }
 
 .ty-call-btn:hover {
@@ -1153,17 +1112,46 @@ main {
   transform: translateY(-2px);
 }
 
-.ty-phone-number {
-  font-size: 1.5rem;
+.ty-call-btn__cta {
+  font-size: 1.35rem;
   font-weight: 700;
-  color: var(--gray-900);
-  margin-bottom: 0.5rem;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  line-height: 1.15;
 }
 
-.ty-phone-note {
-  font-size: 0.875rem;
-  color: var(--gray-700);
-  margin-bottom: 1.25rem;
+.ty-call-btn__phone-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  line-height: 1.15;
+}
+
+.ty-call-btn__phone-row svg {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 480px) {
+  .ty-call-btn {
+    padding: 0.85rem 1.1rem;
+    gap: 0.1rem;
+  }
+  .ty-call-btn__cta {
+    font-size: 1.15rem;
+  }
+  .ty-call-btn__phone-row {
+    font-size: 1.05rem;
+    gap: 0.35rem;
+  }
+  .ty-call-btn__phone-row svg {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .ty-expire-note {
@@ -1250,8 +1238,7 @@ main {
 /* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
   .form-title {
-    font-size: 1.0625rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
   }
 
   .trust-badges {
@@ -1262,16 +1249,6 @@ main {
   .how-grid {
     grid-template-columns: 1fr;
   }
-
-  .form-row { gap: 0.5rem; }
-  .form-group { margin-bottom: 0.375rem; }
-  .form-label { margin-bottom: 0.15rem; font-size: 0.75rem; }
-  .form-input, .form-select { padding: 0.4rem 0.75rem; font-size: 0.9375rem; }
-  .tcpa-group { margin-top: 0.5rem; padding: 0.5rem 0.625rem; }
-  .tcpa-label { font-size: 0.5875rem; line-height: 1.15; }
-  .tcpa-checkbox input[type="checkbox"] { width: 14px; height: 14px; }
-  .form-actions { margin-top: 0.5rem; }
-  .security-note { font-size: 0.6875rem; margin-top: 0.375rem; }
 }
 
   </style>
@@ -1295,84 +1272,74 @@ main {
           <span class="header__logo-tagline">Community Resource Center</span>
         </span>
       </a>
-      <a href="tel:+18135569954" class="header__phone" aria-label="Call 1-813-556-9954, Monday through Thursday 9:30am to 8pm, Friday 9:30am to 6pm Eastern Time">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
-          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.02 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14v2.92z"/>
-        </svg>
-        <span class="header__phone-text">
-          <span class="header__phone-number">1-813-556-9954</span>
-          <span class="header__phone-hours">M–Th 9:30a–8p • F 9:30a–6p ET</span>
-        </span>
-      </a>
     </div>
   </header>
 
   <main class="form-page">
-    <div class="form-card">
-      <div class="progress-container">
-        <div class="progress-row">
-          <span class="progress-row__left">Step 4 of 4</span>
-          <span class="progress-row__right">100% complete</span>
-        </div>
-        <div class="progress-bar">
-          <div class="progress-fill" style="width: 100%;"></div>
+    <div class="ty-card">
+      <!-- Animated check icon -->
+      <div class="ty-icon-wrap">
+        <div class="ty-icon-circle">
+          <div class="ty-icon-circle__pulse"></div>
+          <svg class="ty-icon-circle__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
         </div>
       </div>
 
-      <h1 class="form-title">Contact Information</h1>
+      <h1 class="ty-title">Congratulations!</h1>
+      <p class="ty-ref">Your approval code: <span id="refNumber">NBA-7K2Q</span></p>
 
-      <form id="step5Form" novalidate>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="firstName" class="form-label">First Name</label>
-            <input type="text" name="firstName" id="firstName" class="form-input" placeholder="John" required />
-            <div class="form-error">Please enter your first name</div>
-          </div>
-          <div class="form-group">
-            <label for="lastName" class="form-label">Last Name</label>
-            <input type="text" name="lastName" id="lastName" class="form-input" placeholder="Doe" required />
-            <div class="form-error">Please enter your last name</div>
-          </div>
-        </div>
+      <!-- Primary call CTA — above the action box -->
+      <a href="tel:+18135608063" class="ty-call-btn">
+        <span class="ty-call-btn__cta">Call Now to Claim</span>
+        <span class="ty-call-btn__phone-row">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <span class="ty-call-btn__phone">1-813-560-8063</span>
+        </span>
+      </a>
+      <p class="ty-have-code">Have your code ready</p>
 
-        <div class="form-group">
-          <label for="email" class="form-label">Email Address</label>
-          <input type="email" name="email" id="email" class="form-input" placeholder="john@example.com" required />
-          <div class="form-error">Please enter a valid email address</div>
-        </div>
+      <!-- Action Needed Box -->
+      <div class="ty-action-box">
+        <h2 class="ty-action-box__title">Action Needed</h2>
+        <p class="ty-action-box__text">Your approval code is reserved. Call the number above and have your code ready — a specialist will verify it and discuss the assistance programs you may qualify for. This call is completely free and can connect you to assistance that may help right away.</p>
+        <p class="ty-expire-note">Your approval code will expire in 30 minutes, so please call before it expires or you may need to resubmit.</p>
+      </div>
 
-        <div class="form-group">
-          <label for="phone" class="form-label">Phone Number</label>
-          <input type="tel" name="phone" id="phone" class="form-input" placeholder="(XXX) XXX-XXXX" required />
-          <div class="form-error">Please enter a valid phone number</div>
-        </div>
+      <p class="ty-tagline">National Benefit Alliance has helped more than 2 million U.S. residents receive benefits and resources</p>
 
-        <div class="tcpa-group">
-          <div class="tcpa-checkbox">
-            <input type="checkbox" name="tcpaConsent" id="tcpaConsent" required />
-            <label for="tcpaConsent" class="tcpa-label">
-              By checking this box and clicking the button, you confirm that this is your mobile number and that you are 18 years of age or older. You agree to the National Benefit Alliance <a href="/terms/" target="_blank">Terms of Use</a> and <a href="/privacy/" target="_blank">Privacy Policy</a> and provide your express written consent to be contacted by National Benefit Alliance, its service providers, and marketing partners, and that your information may be shared with and used by such partners to contact you, via telephone calls and text messages (including SMS and MMS), including through the use of an automatic telephone dialing system, artificial or prerecorded voice, and AI-generated voice, at the number you provided, even if your number is listed on any federal or state Do Not Call registry. You understand that these communications may include marketing messages. Consent is not a condition of purchase. Message frequency varies (up to 10 messages per month). Message and data rates may apply. Reply STOP to opt out or HELP for help. You also agree to receive marketing emails from National Benefit Alliance and its affiliated brands and marketing partners. You may unsubscribe at any time by clicking the unsubscribe link in any email.
-            </label>
+      <!-- Benefit items -->
+      <div class="ty-benefits">
+        <div class="ty-benefit-item">
+          <svg class="ty-benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          <div>
+            <div class="ty-benefit-title">Over 100 Programs Available</div>
+            <div class="ty-benefit-desc">Based on your information, you may qualify for multiple assistance programs</div>
           </div>
         </div>
-
-        <!-- Anti-bot honeypot — invisible to humans, bots auto-fill it -->
-        <div style="position:absolute;left:-9999px;height:0;width:0;overflow:hidden;" aria-hidden="true">
-          <label for="website">Website</label>
-          <input type="text" name="website" id="website" tabindex="-1" autocomplete="off" value="" />
+        <div class="ty-benefit-item">
+          <svg class="ty-benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          <div>
+            <div class="ty-benefit-title">Personal Guidance</div>
+            <div class="ty-benefit-desc">A specialist will help with enrollment and answer all your questions</div>
+          </div>
         </div>
-
-        <!-- TrustedForm certificate URL — auto-populated by trustedform.js -->
-        <input type="hidden" name="xxTrustedFormCertUrl" id="xxTrustedFormCertUrl" value="" />
-
-        <div class="form-actions">
-          <a href="/apply/2/step-3-income-employ/" class="btn btn-back">Back</a>
-          <button type="submit" class="btn btn-next" id="submitBtn">Complete &amp; Get Matched</button>
+        <div class="ty-benefit-item">
+          <svg class="ty-benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          <div>
+            <div class="ty-benefit-title">100% Free Service</div>
+            <div class="ty-benefit-desc">No hidden fees. No charges. No obligation.</div>
+          </div>
         </div>
-        <p class="security-note" id="processingNote" style="display:none;">Do not close browser while processing — this may take up to 30 seconds.</p>
-        <p class="security-note">No credit check. No commitment. Just a free phone call.</p>
-          <p class="security-note">Your information is secure and will only be used to match you with relevant programs.</p>
-      </form>
+      </div>
+
+      <!-- User info -->
+      <div class="ty-info-box">
+        <div class="ty-info-box__label">Your Information</div>
+        <div class="ty-info-box__name" id="tyName">Applicant</div>
+        <div class="ty-info-box__email" id="tyEmail"></div>
+      </div>
+
+      <p class="ty-disclaimer">We'll use your contact information to connect you with a benefits specialist and provide updates about programs you may qualify for. You can manage your preferences anytime.</p>
     </div>
   </main>
 
@@ -1389,230 +1356,30 @@ main {
       </p>
     </div>
   </footer>
-  
-<script>
-// ---- Session data helpers ----
-function getFunnelData() {
-  try { return JSON.parse(sessionStorage.getItem('nba_funnel') || '{}'); } catch(e) { return {}; }
-}
-function saveFunnelData(obj) {
-  const data = { ...getFunnelData(), ...obj };
-  sessionStorage.setItem('nba_funnel', JSON.stringify(data));
-  return data;
-}
-// ---- Capture UTM params on first page ----
-function captureUTM() {
-  const p = new URLSearchParams(window.location.search);
-  const utms = {};
-  ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','gclid','wbraid','gbraid'].forEach(k => {
-    if (p.get(k)) utms[k] = p.get(k);
-  });
-  if (Object.keys(utms).length) saveFunnelData(utms);
-}
-// ---- Generate transaction ID ----
-function getTransactionId() {
-  let d = getFunnelData();
-  if (!d.transaction_id) {
-    d.transaction_id = crypto.randomUUID();
-    saveFunnelData(d);
-  }
-  return d.transaction_id;
-}
-// ---- Validation helpers ----
-function showError(el, msg) {
-  el.classList.add('error');
-  const errEl = el.parentElement.querySelector('.form-error');
-  if (errEl) { errEl.textContent = msg; errEl.classList.add('show'); }
-}
-function clearError(el) {
-  el.classList.remove('error');
-  const errEl = el.parentElement.querySelector('.form-error');
-  if (errEl) { errEl.classList.remove('show'); }
-}
-function clearAllErrors() {
-  document.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
-  document.querySelectorAll('.form-error').forEach(el => el.classList.remove('show'));
-}
-// ---- Phone validation (NANP + assigned-area-code allowlist) ----
-// Catches placeholder values, mistyped numbers, and bot-generated garbage
-// before they hit CallTools (which enforces these rules and rejects
-// unassigned area codes server-side).
-// Allowlist of valid US area codes — 50 STATES + DC ONLY (incl. overlays like
-// 983/278/534/629). Excludes foreign NANP (e.g. 264 Anguilla), Canada, and non-
-// state US territories (PR/Guam/USVI/NMI/AmSamoa). Kept in lockstep with the
-// server-side copy in supabase/functions/submit-lead/index.ts and /apply/3.
-const VALID_NANP_AREA_CODES = new Set(['201','202','203','205','206','207','208','209','210','212','213','214','215','216','217','218','219','220','223','224','225','228','229','231','234','235','239','240','248','251','252','253','254','256','260','262','267','269','270','272','274','276','278','279','281','283','301','302','303','304','305','307','308','309','310','312','313','314','315','316','317','318','319','320','321','323','324','325','326','327','329','330','331','332','334','336','337','339','341','346','347','350','351','352','353','357','360','361','363','364','369','380','385','386','401','402','404','405','406','407','408','409','410','412','413','414','415','417','419','423','424','425','430','432','434','435','436','440','442','443','445','447','448','457','458','463','464','469','470','471','472','475','478','479','480','483','484','501','502','503','504','505','507','508','509','510','512','513','515','516','517','518','520','521','522','525','530','531','534','539','540','541','551','557','559','561','562','563','564','567','570','571','573','574','575','580','585','586','601','602','603','605','606','607','608','609','610','612','614','615','616','617','618','619','620','623','626','628','629','630','631','636','641','645','646','650','651','657','659','660','661','662','667','669','678','680','681','682','689','701','702','703','704','706','707','708','712','713','714','715','716','717','718','719','720','724','725','726','727','728','729','731','732','734','737','738','740','743','747','754','757','760','762','763','765','769','770','771','772','773','774','775','776','779','781','783','785','786','801','802','803','804','805','806','808','810','812','813','814','815','816','817','818','820','828','830','831','832','833','838','839','840','843','844','845','847','848','850','854','855','856','857','858','859','860','861','862','863','864','865','866','870','872','877','878','888','903','904','906','907','908','909','910','912','913','914','915','916','917','918','919','920','925','928','929','930','931','934','936','937','938','940','941','943','945','947','948','949','951','952','954','956','959','970','971','972','973','978','979','980','983','984','985','986','989']);
-function validatePhone(d) {
-  if (d.length !== 10) return 'Please enter a valid 10-digit phone number';
-  if (d[0] === '1') return 'Enter your number without a leading 1 — just your 10-digit area code and number';
-  // NANP: area code (digits 0-2) and exchange code (digits 3-5) must each start with 2-9.
-  if (d[0] < '2' || d[3] < '2') return 'Please enter a valid US phone number';
-  // Reject all-same-digit (e.g. 2222222222, 9999999999)
-  if (/^(\d)\1{9}$/.test(d)) return 'Please enter a valid phone number';
-  // Allowlist check — the area code must be assigned in the North American
-  // Numbering Plan. Catches well-formatted but unassigned codes (e.g. 486)
-  // that pass the structural rules but still get rejected by CallTools.
-  if (!VALID_NANP_AREA_CODES.has(d.slice(0, 3))) return 'Please enter a valid US area code';
-  return null;
-}
-// ---- Restore saved values ----
-function restoreField(name) {
-  const d = getFunnelData();
-  const el = document.querySelector('[name="' + name + '"]');
-  if (el && d[name]) el.value = d[name];
-}
-// ---- Radio card selection UI ----
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('.radio-card').forEach(card => {
-    card.addEventListener('click', function() {
-      const group = this.closest('.radio-grid');
-      if (group) {
-        group.querySelectorAll('.radio-card').forEach(c => c.classList.remove('selected'));
-        this.classList.add('selected');
-      }
-      this.querySelector('input').checked = true;
-    });
-  });
-  captureUTM();
-  getTransactionId();
-});
-</script>
-
   <script>
-  // Phone formatting
-  document.getElementById('phone').addEventListener('input', function() {
-    let v = this.value.replace(/\D/g, '');
-    if (v.length > 10) v = v.slice(0, 10);
-    if (v.length >= 7) this.value = '(' + v.slice(0,3) + ') ' + v.slice(3,6) + '-' + v.slice(6);
-    else if (v.length >= 4) this.value = '(' + v.slice(0,3) + ') ' + v.slice(3);
-    else if (v.length > 0) this.value = '(' + v;
-  });
-
+  // Populate user info from sessionStorage or URL params
   document.addEventListener('DOMContentLoaded', function() {
-    ['firstName','lastName','email','phone'].forEach(restoreField);
-    const d = getFunnelData();
-    if (d.tcpaConsent) document.getElementById('tcpaConsent').checked = true;
-
-    // Timestamp for bot time-trap detection
-    sessionStorage.setItem('nba_form_shown', String(Date.now()));
-
-    document.getElementById('step5Form').addEventListener('submit', async function(e) {
-      e.preventDefault();
-      clearAllErrors();
-      let valid = true;
-
-      const firstName = document.getElementById('firstName');
-      const lastName = document.getElementById('lastName');
-      const email = document.getElementById('email');
-      const phone = document.getElementById('phone');
-      const tcpa = document.getElementById('tcpaConsent');
-
-      if (!firstName.value.trim()) { showError(firstName, 'Please enter your first name'); valid = false; }
-      if (!lastName.value.trim()) { showError(lastName, 'Please enter your last name'); valid = false; }
-      const emailVal = email.value.trim();
-      if (!/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(emailVal) || emailVal.includes('..')) { showError(email, 'Please enter a valid email'); valid = false; }
-      const phoneDigits = phone.value.replace(/\D/g, '');
-      const phoneError = validatePhone(phoneDigits);
-      if (phoneError) { showError(phone, phoneError); valid = false; }
-      if (!tcpa.checked) {
-        alert('Please agree to the terms to continue.');
-        valid = false;
+    var codeFromStorage = '';
+    try {
+      const stored = sessionStorage.getItem('nba_ty');
+      if (stored) {
+        const d = JSON.parse(stored);
+        if (d.firstName) document.getElementById('tyName').textContent = d.firstName;
+        if (d.email) document.getElementById('tyEmail').textContent = d.email;
+        if (d.code) codeFromStorage = d.code;
       }
-      if (!valid) return;
-
-      // Save final fields
-      saveFunnelData({
-        firstName: firstName.value.trim(),
-        lastName: lastName.value.trim(),
-        email: email.value.trim(),
-        phone: phoneDigits,
-        tcpaConsent: tcpa.checked
-      });
-
-      // Submit to Supabase
-      const btn = document.getElementById('submitBtn');
-      btn.disabled = true;
-      btn.textContent = 'Processing...';
-      const pNote = document.getElementById('processingNote');
-      if (pNote) pNote.style.display = 'block';
-
-      const data = getFunnelData();
-
-      // Format DOB: if stored as YYYY-MM-DD, keep it; original React uses MM/DD/YYYY→YYYY-MM-DD
-      let dobFormatted = data.dob || '';
-
-      const payload = {
-        transaction_id: data.transaction_id || '',
-        state: data.state || '',
-        dob: dobFormatted,
-        citizenship: data.citizenship || '',
-        street_address: data.streetAddress || '',
-        city: data.city || '',
-        zip: data.zip || '',
-        annual_income: data.annualIncome || '',
-        employment_status: data.employmentStatus || '',
-        first_name: data.firstName || '',
-        last_name: data.lastName || '',
-        email: data.email || '',
-        phone: data.phone || '',
-        tcpa_consent: data.tcpaConsent || false,
-        trusted_form_cert_url: (document.getElementById('xxTrustedFormCertUrl') || {}).value || '',
-        click_id: data.gclid || '',
-        wbraid: data.wbraid || '',
-        gbraid: data.gbraid || '',
-        utm_source: data.utm_source || '',
-        utm_medium: data.utm_medium || '',
-        utm_campaign: data.utm_campaign || '',
-        utm_content: data.utm_content || '',
-        utm_term: data.utm_term || '',
-        hp_website: document.getElementById('website').value,
-        form_duration_ms: Date.now() - parseInt(sessionStorage.getItem('nba_form_shown') || '0', 10)
-      };
-
-      try {
-        await fetch('https://quhxbgsgtfvrasyjvaba.supabase.co/functions/v1/submit-lead', {
-          method: 'POST',
-          headers: {
-            'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF1aHhiZ3NndGZ2cmFzeWp2YWJhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUxNTExMDUsImV4cCI6MjA5MDcyNzEwNX0.su7odHmJvnbKVTwtH5wWDpfapk186AIWSOqYP3cSucw',
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(payload)
-        });
-      } catch(err) {
-        console.error('Submission error:', err);
-      }
-
-      // Save name/email for thank-you page display before clearing
-      try {
-        sessionStorage.setItem('nba_ty', JSON.stringify({
-          firstName: data.firstName || '',
-          email: data.email || ''
-        }));
-      } catch(e) {}
-
-      // Always redirect to thank-you — lead is captured, call center follows up
-      sessionStorage.removeItem('nba_funnel');
-      window.location.href = '/apply/2/thank-you/';
-    });
+    } catch(e) {}
+    // Show the approval code generated on the previous step. Fall back to a
+    // freshly generated one if the page is opened directly or reloaded after
+    // sessionStorage was cleared (display-only; the lead is already captured).
+    function genApprovalCode() {
+      var a = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789', o = '';
+      for (var i = 0; i < 4; i++) { o += a.charAt(Math.floor(Math.random() * a.length)); }
+      return 'NBA-' + o;
+    }
+    document.getElementById('refNumber').textContent = codeFromStorage || genApprovalCode();
   });
   </script>
   <script src="/apply/popup.js"></script>
-
-  <!-- TrustedForm -->
-  <script type="text/javascript">
-    (function() {
-      var tf = document.createElement('script');
-      tf.type = 'text/javascript';
-      tf.async = true;
-      tf.src = ("https:" == document.location.protocol ? 'https' : 'http') +
-        '://api.trustedform.com/trustedform.js?field=xxTrustedFormCertUrl&use_tagged_consent=true&l=' +
-        new Date().getTime() + Math.random();
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tf, s);
-    })();
-  </script>
-  <noscript>
-    <img src='https://api.trustedform.com/ns.gif' />
-  </noscript>
-  <!-- End TrustedForm -->
   </body>
 </html>

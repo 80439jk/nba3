@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Step 5: Contact Information — National Benefit Alliance</title>
+  <title>Get Matched with Benefit Programs — National Benefit Alliance</title>
   <meta name="robots" content="noindex, nofollow" />
   <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -19,7 +19,7 @@
 
 :root {
   
-  /* Production color scheme — extracted from nationalbenefitalliance.com */
+  /* Production color scheme — navy/amber design */
   --blue-600: #2563eb;
   --blue-700: #1d4ed8;
   --blue-50: #eff6ff;
@@ -188,6 +188,53 @@ body {
 }
 
 
+
+/* ========== TRUST BADGES v2 ========== */
+.trust2-section {
+  background: white;
+  padding: 2.5rem 1rem;
+  border-top: 1px solid var(--gray-100);
+  border-bottom: 1px solid var(--gray-100);
+}
+.trust2-inner {
+  max-width: 52rem;
+  margin: 0 auto;
+}
+.trust2-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem 2rem;
+}
+@media (min-width: 640px) {
+  .trust2-grid { grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+}
+.trust2-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+.trust2-icon-wrap {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: var(--amber-50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--amber-500);
+}
+.trust2-icon-wrap svg {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+.trust2-label {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--navy-900);
+  line-height: 1.3;
+}
+
 /* ========== FOOTER ========== */
 .footer {
   background-color: var(--gray-900);
@@ -206,7 +253,7 @@ body {
 .footer__brand {
   font-weight: 600;
   color: white;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .footer__links {
@@ -225,7 +272,7 @@ body {
 }
 
 .footer__links a:hover {
-  color: white;
+  color: var(--amber-500);
 }
 
 .footer__disclaimer {
@@ -249,12 +296,12 @@ main {
 
 /* ========== LANDING PAGE HERO ========== */
 .hero {
-  background: linear-gradient(to bottom, var(--navy-900), var(--navy-800));
-  padding: 4rem 1rem;
+  background: white;
+  padding: 2.5rem 1rem;
 }
 
 @media (min-width: 768px) {
-  .hero { padding: 5rem 1rem; }
+  .hero { padding: 1.25rem 1rem 1.5rem; }
 }
 
 .hero__inner {
@@ -265,46 +312,41 @@ main {
 
 .hero__label {
   display: inline-block;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 600;
-  letter-spacing: 0.025em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--amber-500);
-  margin-bottom: 1.5rem;
-  margin-top: 0.5rem;
+  color: var(--amber-600);
+  margin-bottom: 0.5rem;
+  margin-top: 0;
 }
 
 .hero__headline {
   font-family: var(--font-head);
-  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-size: clamp(1.35rem, 4vw, 2.75rem);
   font-weight: 700;
   line-height: 1.25;
-  color: white;
-  margin-bottom: 1.25rem;
-}
-
-@media (min-width: 768px) {
-}
-
-@media (min-width: 1024px) {
+  color: var(--navy-900);
+  margin-bottom: 0.6rem;
 }
 
 .hero__subtitle {
   font-size: 1.1rem;
-  line-height: 1.625;
-  color: var(--gray-200);
-  margin-bottom: 2rem;
+  line-height: 1.35;
+  color: var(--gray-700);
+  margin-bottom: 0.5rem;
   max-width: 40rem;
   margin-left: auto;
   margin-right: auto;
 }
 
 @media (min-width: 768px) {
+  .hero__subtitle { font-size: 1.15rem; }
 }
 
 .hero__cta {
   display: inline-block;
-  padding: 1.25rem 2.5rem;
+  padding: 1rem 2.5rem;
   background-color: var(--amber-500);
   color: white;
   font-size: 1.1rem;
@@ -313,13 +355,110 @@ main {
   border-radius: 0.5rem;
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.2s;
-  box-shadow: var(--shadow-lg);
+  transition: all 0.3s;
+  box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.3), 0 4px 6px -4px rgba(245, 158, 11, 0.2);
 }
 
 .hero__cta:hover {
   background-color: var(--amber-600);
-  box-shadow: var(--shadow-xl);
+  box-shadow: 0 20px 25px -5px rgba(245, 158, 11, 0.4), 0 8px 10px -6px rgba(245, 158, 11, 0.2);
+  transform: translateY(-1px);
+}
+
+/* ========== HERO KEYWORD STRIP ========== */
+.hero__keywords {
+  font-size: 1.05rem;
+  color: var(--gray-500);
+  margin: 0 auto 0.75rem;
+  max-width: 56rem;
+  line-height: 1.6;
+}
+
+.hero__keywords strong {
+  font-weight: 600;
+  color: var(--gray-600);
+  white-space: nowrap;
+}
+
+.hero__keywords-sep {
+  margin: 0 0.3rem;
+  opacity: 0.6;
+}
+
+@media (max-width: 640px) {
+  .hero__keywords { font-size: 0.95rem; }
+  .hero__keywords-sep { margin: 0 0.35rem; }
+}
+
+/* ========== HERO STATE FORM ========== */
+.hero__form {
+  max-width: 28rem;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.hero__form-select {
+  width: 100%;
+  padding: 1rem 1.125rem;
+  border: 2.5px solid var(--amber-500);
+  border-radius: 0.625rem;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: inherit;
+  background-color: #fef8ee;
+  color: var(--navy-900);
+  margin-bottom: 0;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: none;
+  padding-right: 3.5rem;
+  box-shadow: inset 0 0 0 4px rgba(245, 158, 11, 0.1);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.hero__form-select:focus {
+  outline: none;
+}
+
+.hero__form-error {
+  display: none;
+  font-size: 0.875rem;
+  color: #fecaca;
+  margin-top: -0.5rem;
+  margin-bottom: 0.875rem;
+  text-align: left;
+}
+
+.hero__form-error.show { display: block; }
+
+.hero__form-btn {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background-color: var(--amber-500);
+  color: white;
+  font-size: 1.05rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.3), 0 4px 6px -4px rgba(245, 158, 11, 0.2);
+  font-family: inherit;
+}
+
+.hero__form-btn:hover {
+  background-color: var(--amber-600);
+  box-shadow: 0 20px 25px -5px rgba(245, 158, 11, 0.4), 0 8px 10px -6px rgba(245, 158, 11, 0.2);
+  transform: translateY(-1px);
+}
+
+.hero__form-disclaimer {
+  font-size: 0.8125rem;
+  color: var(--gray-400);
+  margin-top: 0.875rem;
+  text-align: center;
+  line-height: 1.5;
 }
 
 /* ========== TRUST BADGES ========== */
@@ -327,7 +466,7 @@ main {
   background-color: white;
   border-top: 1px solid var(--gray-200);
   border-bottom: 1px solid var(--gray-200);
-  padding: 3rem 1rem;
+  padding: 2rem 1rem;
 }
 
 .trust-section__inner {
@@ -338,13 +477,13 @@ main {
 .trust-badges {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.5rem;
   flex-wrap: wrap;
   align-items: center;
 }
 
 @media (min-width: 768px) {
-  .trust-badges { gap: 4rem; }
+  .trust-badges { gap: 3rem; }
 }
 
 .badge {
@@ -363,7 +502,7 @@ main {
 .badge__icon--green { color: var(--amber-500); }
 
 .badge__text {
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 600;
   color: var(--gray-700);
 }
@@ -392,22 +531,18 @@ main {
 }
 
 .programs-card__intro {
-  font-size: 1.125rem;
+  font-size: 1.05rem;
   color: var(--gray-700);
-  line-height: 1.625;
-  margin-bottom: 2rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
 }
 
 .programs-card__title {
   font-family: var(--font-head);
-  font-size: 1.875rem;
+  font-size: clamp(1.4rem, 3vw, 1.75rem);
   font-weight: 700;
   color: var(--gray-900);
-  margin-bottom: 2rem;
-}
-
-@media (min-width: 768px) {
-  .programs-card__title { font-size: 2.25rem; }
+  margin-bottom: 1.5rem;
 }
 
 .programs-check-list {
@@ -418,7 +553,7 @@ main {
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .programs-check-item:last-child { margin-bottom: 0; }
@@ -432,7 +567,7 @@ main {
 }
 
 .programs-check-text {
-  font-size: 1.125rem;
+  font-size: 1.05rem;
   color: var(--gray-700);
 }
 
@@ -444,16 +579,17 @@ main {
   color: white;
   font-size: 1.1rem;
   font-weight: 700;
-  padding: 1.25rem 3rem;
+  padding: 1rem 2.5rem;
   border-radius: 0.5rem;
   text-decoration: none;
-  transition: all 0.2s;
-  box-shadow: var(--shadow-lg);
+  transition: all 0.3s;
+  box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.3);
 }
 
 .programs-card__cta:hover {
   background-color: var(--amber-600);
-  box-shadow: var(--shadow-xl);
+  box-shadow: 0 20px 25px -5px rgba(245, 158, 11, 0.4);
+  transform: translateY(-1px);
 }
 
 /* ========== HOW IT WORKS SECTION ========== */
@@ -473,10 +609,7 @@ main {
   font-weight: 700;
   color: var(--gray-900);
   text-align: center;
-  margin-bottom: 1rem;
-}
-
-@media (min-width: 768px) {
+  margin-bottom: 0.5rem;
 }
 
 .how-section__subtitle {
@@ -489,7 +622,7 @@ main {
 .how-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: 1.5rem;
   margin-bottom: 2.5rem;
 }
 
@@ -498,7 +631,7 @@ main {
 }
 
 .how-step {
-  border-radius: 0.75rem;
+  border-radius: 1rem;
   padding: 2rem;
   text-align: center;
   border: 1px solid;
@@ -525,7 +658,7 @@ main {
   font-family: var(--font-head);
   font-size: 1.25rem;
   font-weight: 700;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.6rem;
 }
 
 .how-step--blue .how-step__number { background-color: var(--navy-800); }
@@ -551,14 +684,14 @@ main {
 }
 
 .how-free-banner__title {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: var(--gray-900);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 
 .how-free-banner__text {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: var(--gray-700);
 }
 
@@ -582,40 +715,37 @@ main {
   margin-bottom: 2.5rem;
 }
 
-@media (min-width: 768px) {
-}
-
 .expect-card {
   background: white;
   border-radius: 0.75rem;
   box-shadow: var(--shadow-md);
-  padding: 2rem;
+  padding: 1.5rem;
   border: 1px solid var(--gray-100);
   margin-bottom: 2rem;
 }
 
 @media (min-width: 768px) {
-  .expect-card { padding: 3rem; }
+  .expect-card { padding: 2.5rem; }
 }
 
 .expect-item {
   display: flex;
   align-items: flex-start;
-  gap: 1rem;
+  gap: 0.75rem;
 }
 
-.expect-item + .expect-item { margin-top: 1.25rem; }
+.expect-item + .expect-item { margin-top: 1rem; }
 
 .expect-icon {
   flex-shrink: 0;
-  width: 1.75rem;
-  height: 1.75rem;
+  width: 1.5rem;
+  height: 1.5rem;
   color: var(--green-600);
-  margin-top: 0.25rem;
+  margin-top: 0.2rem;
 }
 
 .expect-text {
-  font-size: 1.125rem;
+  font-size: 1.05rem;
   color: var(--gray-700);
 }
 
@@ -623,7 +753,7 @@ main {
   background-color: var(--navy-50);
   border: 2px solid var(--navy-100);
   border-radius: 0.75rem;
-  padding: 2rem;
+  padding: 1.5rem;
   text-align: center;
 }
 
@@ -631,12 +761,38 @@ main {
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--gray-900);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 
 .expect-free-banner__text {
-  font-size: 1.125rem;
+  font-size: 1.05rem;
   color: var(--gray-700);
+}
+
+/* ========== MID-PAGE CTA ========== */
+.mid-cta-section {
+  background: var(--gray-50);
+  padding: 2.5rem 1rem;
+  text-align: center;
+  border-top: 1px solid var(--gray-200);
+  border-bottom: 1px solid var(--gray-200);
+}
+.mid-cta-btn {
+  display: inline-block;
+  background-color: var(--amber-500);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 1rem 2.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: all 0.3s;
+  box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.3);
+}
+.mid-cta-btn:hover {
+  background-color: var(--amber-600);
+  box-shadow: 0 20px 25px -5px rgba(245, 158, 11, 0.4);
+  transform: translateY(-1px);
 }
 
 /* ========== FINAL CTA SECTION ========== */
@@ -656,15 +812,17 @@ main {
   font-family: var(--font-head);
   font-size: clamp(1.5rem, 3.5vw, 2rem);
   font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-@media (min-width: 768px) {
+  margin-bottom: 0.5rem;
 }
 
 .final-cta-section__subtitle {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: var(--gray-200);
+  margin-bottom: 0.75rem;
+}
+.final-cta-section__sub2 {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.55);
   margin-bottom: 2rem;
 }
 
@@ -674,22 +832,23 @@ main {
   color: white;
   font-size: 1.1rem;
   font-weight: 700;
-  padding: 1.25rem 3rem;
+  padding: 1rem 2.5rem;
   border-radius: 0.5rem;
   text-decoration: none;
-  transition: all 0.2s;
-  box-shadow: var(--shadow-lg);
+  transition: all 0.3s;
+  box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.3);
 }
 
 .final-cta-section__btn:hover {
   background-color: var(--amber-600);
-  box-shadow: var(--shadow-xl);
+  box-shadow: 0 20px 25px -5px rgba(245, 158, 11, 0.4);
+  transform: translateY(-1px);
 }
 
 /* ========== BOTTOM CTA BAR ========== */
 .bottom-cta-bar {
   background: white;
-  padding: 4rem 1rem;
+  padding: 3rem 1rem;
   text-align: center;
 }
 
@@ -697,19 +856,20 @@ main {
   display: inline-block;
   background-color: var(--amber-500);
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  padding: 1.5rem 3.5rem;
+  padding: 1rem 2.5rem;
   border-radius: 0.5rem;
   text-decoration: none;
-  transition: all 0.2s;
-  box-shadow: var(--shadow-lg);
+  transition: all 0.3s;
+  box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.3);
   margin-bottom: 1.5rem;
 }
 
 .bottom-cta-bar__btn:hover {
   background-color: var(--amber-600);
-  box-shadow: var(--shadow-xl);
+  box-shadow: 0 20px 25px -5px rgba(245, 158, 11, 0.4);
+  transform: translateY(-1px);
 }
 
 .bottom-cta-bar__text {
@@ -742,7 +902,7 @@ main {
 
 /* ========== PROGRESS BAR ========== */
 .progress-container {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .progress-row {
@@ -781,24 +941,23 @@ main {
 /* ========== FORM ELEMENTS ========== */
 .form-title {
   font-family: var(--font-head);
-  font-size: 1.25rem;
+  font-size: 1.875rem;
   font-weight: 700;
   color: var(--gray-900);
-  margin-bottom: 0.875rem;
-  margin-top: 0;
+  margin-bottom: 2rem;
   text-align: center;
 }
 
 .form-subtitle {
-  font-size: 1rem;
+  font-size: 1.125rem;
   color: var(--gray-600);
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   line-height: 1.5;
   text-align: center;
 }
 
 .form-group {
-  margin-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
 }
 
 .form-group:last-of-type {
@@ -807,19 +966,19 @@ main {
 
 .form-label {
   display: block;
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   font-weight: 600;
   color: var(--gray-900);
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
 }
 
 .form-input,
 .form-select {
   width: 100%;
-  padding: 0.625rem 0.875rem;
+  padding: 0.75rem 1rem;
   border: 1px solid var(--gray-300);
   border-radius: 0.5rem;
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-family: inherit;
   transition: border-color 0.2s, box-shadow 0.2s;
   background-color: #fff;
@@ -925,14 +1084,20 @@ main {
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.75rem;
+  gap: 1rem;
+}
+
+@media (max-width: 640px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ========== FORM ACTIONS ========== */
 .form-actions {
   display: flex;
-  gap: 0.75rem;
-  margin-top: 1rem;
+  gap: 1rem;
+  margin-top: 2rem;
   align-items: stretch;
 }
 
@@ -942,7 +1107,7 @@ main {
 
 .btn {
   padding: 0.75rem 1.5rem;
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 600;
   border: none;
   border-radius: 0.5rem;
@@ -995,16 +1160,15 @@ main {
 /* ========== SECURITY NOTE ========== */
 .security-note {
   text-align: center;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   color: var(--gray-500);
-  margin-top: 0.625rem;
-  line-height: 1.4;
+  margin-top: 1.25rem;
 }
 
 /* ========== TCPA CONSENT ========== */
 .tcpa-group {
-  margin-top: 0.875rem;
-  padding: 0.75rem 0.875rem;
+  margin-top: 1.5rem;
+  padding: 1rem;
   background-color: var(--blue-50);
   border-radius: 0.5rem;
   border: 1px solid var(--blue-200);
@@ -1012,23 +1176,23 @@ main {
 
 .tcpa-checkbox {
   display: flex;
-  gap: 0.625rem;
+  gap: 0.75rem;
   align-items: flex-start;
 }
 
 .tcpa-checkbox input[type="checkbox"] {
-  width: 16px;
-  height: 16px;
-  margin-top: 0.15rem;
+  width: 18px;
+  height: 18px;
+  margin-top: 0.2rem;
   flex-shrink: 0;
   cursor: pointer;
   accent-color: var(--blue-600);
 }
 
 .tcpa-label {
-  font-size: 0.6875rem;
+  font-size: 0.8125rem;
   color: var(--gray-700);
-  line-height: 1.3;
+  line-height: 1.5;
 }
 
 .tcpa-label a {
@@ -1053,7 +1217,7 @@ main {
 }
 
 @media (min-width: 768px) {
-  .ty-card { padding: 2rem; }
+  .ty-card { padding: 2.5rem; }
 }
 
 .ty-icon-wrap {
@@ -1101,7 +1265,7 @@ main {
 }
 
 .ty-ref {
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 600;
   color: var(--gray-900);
   margin-bottom: 1.5rem;
@@ -1121,12 +1285,12 @@ main {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--gray-900);
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .ty-action-box__text {
   color: var(--gray-700);
-  font-size: 1rem;
+  font-size: 1.05rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
@@ -1137,14 +1301,14 @@ main {
   gap: 0.75rem;
   background-color: var(--amber-500);
   color: white;
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   padding: 1.5rem 3rem;
   border-radius: 0.5rem;
   font-weight: 700;
   text-decoration: none;
   transition: all 0.2s;
   box-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.3);
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .ty-call-btn:hover {
@@ -1163,7 +1327,7 @@ main {
 .ty-phone-note {
   font-size: 0.875rem;
   color: var(--gray-700);
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.6rem;
 }
 
 .ty-expire-note {
@@ -1182,14 +1346,14 @@ main {
 /* Benefit checkmarks */
 .ty-benefits {
   text-align: left;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .ty-benefit-item {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.6rem;
 }
 
 .ty-benefit-item:last-child {
@@ -1250,8 +1414,7 @@ main {
 /* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
   .form-title {
-    font-size: 1.0625rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
   }
 
   .trust-badges {
@@ -1262,18 +1425,268 @@ main {
   .how-grid {
     grid-template-columns: 1fr;
   }
-
-  .form-row { gap: 0.5rem; }
-  .form-group { margin-bottom: 0.375rem; }
-  .form-label { margin-bottom: 0.15rem; font-size: 0.75rem; }
-  .form-input, .form-select { padding: 0.4rem 0.75rem; font-size: 0.9375rem; }
-  .tcpa-group { margin-top: 0.5rem; padding: 0.5rem 0.625rem; }
-  .tcpa-label { font-size: 0.5875rem; line-height: 1.15; }
-  .tcpa-checkbox input[type="checkbox"] { width: 14px; height: 14px; }
-  .form-actions { margin-top: 0.5rem; }
-  .security-note { font-size: 0.6875rem; margin-top: 0.375rem; }
 }
 
+
+@media (max-width: 640px) {
+  .hero__subtitle { display: none; }
+  .hero { padding: 1.5rem 1rem 2rem; }
+  .hero__keywords { margin-bottom: 1rem; }
+}
+
+.hero__form-micro {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 0.625rem;
+  text-align: center;
+}
+
+.hero__form-checks {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: 0.875rem;
+  font-size: 0.8125rem;
+  color: rgba(255,255,255,0.8);
+  font-weight: 500;
+}
+
+/* ========== HERO REVAMP ========== */
+.hero__oneliner {
+  font-size: 1rem;
+  color: var(--gray-600);
+  margin: 0 auto 1.25rem;
+  max-width: 38rem;
+  line-height: 1.5;
+}
+
+
+
+/* White card */
+.hero__card {
+  background: white;
+  border: 1.5px solid var(--gray-200);
+  border-radius: 1rem;
+  padding: 2.5rem;
+  max-width: 34rem;
+  margin: 0 auto 1.5rem;
+  text-align: left;
+  box-shadow: 0 25px 50px -8px rgba(26, 43, 71, 0.45), 0 10px 20px -6px rgba(26, 43, 71, 0.3);
+}
+@media (max-width: 640px) {
+  .hero__card { padding: 1.5rem; border-radius: 0.75rem; }
+}
+.hero__card-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  margin-bottom: 0.375rem;
+}
+.hero__card-step {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: var(--amber-500);
+  color: var(--navy-900);
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.hero__card-title {
+  font-family: var(--font-head);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 0;
+}
+.hero__card-sub {
+  font-size: 0.875rem;
+  color: var(--gray-500);
+  margin-bottom: 1.25rem;
+  line-height: 1.45;
+}
+.hero__card-divider {
+  border: none;
+  border-top: 1px solid var(--gray-100);
+  margin: 1.5rem 0;
+}
+
+/* Tiles */
+.hero__tiles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 0;
+}
+.hero__tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 1rem 0.375rem;
+  border: 1.5px solid var(--gray-200);
+  border-radius: 0.625rem;
+  cursor: pointer;
+  position: relative;
+  transition: border-color 0.15s, background 0.15s;
+  background: white;
+  user-select: none;
+}
+.hero__tile:hover {
+  border-color: var(--amber-500);
+  background: var(--amber-50);
+}
+.hero__tile--selected {
+  border-color: var(--amber-500);
+  background: var(--amber-50);
+}
+.hero__tile input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.hero__tile-check {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 1.125rem;
+  height: 1.125rem;
+  border-radius: 50%;
+  border: 1.5px solid var(--gray-300);
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+  flex-shrink: 0;
+}
+.hero__tile--selected .hero__tile-check {
+  background: var(--amber-500);
+  border-color: var(--amber-500);
+}
+.hero__tile--selected .hero__tile-check::after {
+  content: '';
+  display: block;
+  width: 0.35rem;
+  height: 0.6rem;
+  border: 2px solid white;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+.hero__tile-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--gray-500);
+}
+.hero__tile--selected .hero__tile-icon {
+  color: var(--amber-600);
+}
+.hero__tile-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--gray-700);
+  text-align: center;
+  line-height: 1.3;
+}
+.hero__tile--selected .hero__tile-label {
+  color: var(--amber-600);
+}
+
+/* Select wrapper for chevron rotation */
+.hero__select-wrap {
+  position: relative;
+  margin-bottom: 0;
+}
+.hero__select-wrap .hero__form-select {
+  padding-right: 2.75rem;
+  background-image: none;
+}
+.hero__select-chevron-box {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.875rem;
+  height: 1.875rem;
+  background: var(--amber-500);
+  border-radius: 0.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  transition: transform 0.2s;
+}
+.hero__select-chevron {
+  color: var(--navy-900);
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+.hero__select-wrap:hover .hero__form-select {
+  border-color: var(--navy-900);
+  box-shadow: inset 0 0 0 4px rgba(26, 43, 71, 0.06), 0 0 0 3px rgba(26, 43, 71, 0.12);
+}
+.hero__select-wrap:focus-within .hero__form-select {
+  border-color: var(--navy-900);
+  box-shadow: inset 0 0 0 4px rgba(26, 43, 71, 0.08), 0 0 0 3px rgba(26, 43, 71, 0.15);
+}
+.hero__select-wrap:focus-within .hero__select-chevron-box {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/* Trust marks inside card */
+.hero__card-trust {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--gray-100);
+}
+.hero__card-trust span {
+  font-size: 0.8125rem;
+  color: var(--gray-500);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.hero__card-trust-check {
+  color: #16a34a;
+  font-weight: 700;
+}
+
+/* Social proof */
+.hero__social-proof {
+  font-size: 0.875rem;
+  color: var(--gray-500);
+  text-align: center;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.hero__social-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #16a34a;
+  flex-shrink: 0;
+  display: inline-block;
+}
+/* ========== DESKTOP COMPACT HERO ========== */
+@media (min-width: 768px) {
+  .hero__headline { font-size: 1.875rem; margin-bottom: 0.35rem; }
+  .hero__oneliner { margin-bottom: 0.75rem; }
+  .hero__card { padding: 1.75rem 2rem; margin-bottom: 0.75rem; }
+  .hero__card-divider { margin: 1rem 0; }
+}
   </style>
   <link rel="icon" type="image/png" href="/images/logo.png" />
   <meta property="og:image" content="https://nationalbenefitalliance.com/images/og-default.jpg" />
@@ -1295,85 +1708,185 @@ main {
           <span class="header__logo-tagline">Community Resource Center</span>
         </span>
       </a>
-      <a href="tel:+18135569954" class="header__phone" aria-label="Call 1-813-556-9954, Monday through Thursday 9:30am to 8pm, Friday 9:30am to 6pm Eastern Time">
+      <a href="tel:+18135569954" class="header__phone" aria-label="Call 1-813-556-9954, Monday to Friday 9am to 6pm Eastern Time">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
           <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.02 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14v2.92z"/>
         </svg>
         <span class="header__phone-text">
           <span class="header__phone-number">1-813-556-9954</span>
-          <span class="header__phone-hours">M–Th 9:30a–8p • F 9:30a–6p ET</span>
+          <span class="header__phone-hours">Mon-Fri 9-6 ET</span>
         </span>
       </a>
     </div>
   </header>
 
-  <main class="form-page">
-    <div class="form-card">
-      <div class="progress-container">
-        <div class="progress-row">
-          <span class="progress-row__left">Step 4 of 4</span>
-          <span class="progress-row__right">100% complete</span>
-        </div>
-        <div class="progress-bar">
-          <div class="progress-fill" style="width: 100%;"></div>
-        </div>
-      </div>
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__inner">
 
-      <h1 class="form-title">Contact Information</h1>
+        <h1 class="hero__headline">Get matched to assistance that can help right away</h1>
 
-      <form id="step5Form" novalidate>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="firstName" class="form-label">First Name</label>
-            <input type="text" name="firstName" id="firstName" class="form-input" placeholder="John" required />
-            <div class="form-error">Please enter your first name</div>
+        <p class="hero__oneliner">Talk to a specialist. See what you qualify for.<br>Free, fast, confidential, no commitment.</p>
+
+        <div class="hero__card">
+          <div class="hero__card-header">
+            <div class="hero__card-step">1</div>
+            <h2 class="hero__card-title">What brings you here today?</h2>
           </div>
-          <div class="form-group">
-            <label for="lastName" class="form-label">Last Name</label>
-            <input type="text" name="lastName" id="lastName" class="form-input" placeholder="Doe" required />
-            <div class="form-error">Please enter your last name</div>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="email" class="form-label">Email Address</label>
-          <input type="email" name="email" id="email" class="form-input" placeholder="john@example.com" required />
-          <div class="form-error">Please enter a valid email address</div>
-        </div>
-
-        <div class="form-group">
-          <label for="phone" class="form-label">Phone Number</label>
-          <input type="tel" name="phone" id="phone" class="form-input" placeholder="(XXX) XXX-XXXX" required />
-          <div class="form-error">Please enter a valid phone number</div>
-        </div>
-
-        <div class="tcpa-group">
-          <div class="tcpa-checkbox">
-            <input type="checkbox" name="tcpaConsent" id="tcpaConsent" required />
-            <label for="tcpaConsent" class="tcpa-label">
-              By checking this box and clicking the button, you confirm that this is your mobile number and that you are 18 years of age or older. You agree to the National Benefit Alliance <a href="/terms/" target="_blank">Terms of Use</a> and <a href="/privacy/" target="_blank">Privacy Policy</a> and provide your express written consent to be contacted by National Benefit Alliance, its service providers, and marketing partners, and that your information may be shared with and used by such partners to contact you, via telephone calls and text messages (including SMS and MMS), including through the use of an automatic telephone dialing system, artificial or prerecorded voice, and AI-generated voice, at the number you provided, even if your number is listed on any federal or state Do Not Call registry. You understand that these communications may include marketing messages. Consent is not a condition of purchase. Message frequency varies (up to 10 messages per month). Message and data rates may apply. Reply STOP to opt out or HELP for help. You also agree to receive marketing emails from National Benefit Alliance and its affiliated brands and marketing partners. You may unsubscribe at any time by clicking the unsubscribe link in any email.
+          <p class="hero__card-sub">Pick the one that most closely matches your needs.</p>
+          <div class="hero__tiles">
+            <label class="hero__tile" data-value="food">
+              <input type="checkbox" name="needs" value="food">
+              <span class="hero__tile-check"></span>
+              <svg class="hero__tile-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+              <span class="hero__tile-label">Food &amp;<br>Groceries</span>
+            </label>
+            <label class="hero__tile" data-value="utility">
+              <input type="checkbox" name="needs" value="utility">
+              <span class="hero__tile-check"></span>
+              <svg class="hero__tile-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              <span class="hero__tile-label">Utility<br>Bills</span>
+            </label>
+            <label class="hero__tile" data-value="housing">
+              <input type="checkbox" name="needs" value="housing">
+              <span class="hero__tile-check"></span>
+              <svg class="hero__tile-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              <span class="hero__tile-label">Housing<br>&amp; Rent</span>
+            </label>
+            <label class="hero__tile" data-value="other">
+              <input type="checkbox" name="needs" value="other">
+              <span class="hero__tile-check"></span>
+              <svg class="hero__tile-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              <span class="hero__tile-label">Other</span>
             </label>
           </div>
+
+          <div class="hero__card-trust">
+            <span><span class="hero__card-trust-check">✓</span> 100% free</span>
+            <span><span class="hero__card-trust-check">✓</span> No SSN needed</span>
+            <span><span class="hero__card-trust-check">✓</span> Takes 2 minutes</span>
+          </div>
         </div>
 
-        <!-- Anti-bot honeypot — invisible to humans, bots auto-fill it -->
-        <div style="position:absolute;left:-9999px;height:0;width:0;overflow:hidden;" aria-hidden="true">
-          <label for="website">Website</label>
-          <input type="text" name="website" id="website" tabindex="-1" autocomplete="off" value="" />
-        </div>
+        <p class="hero__label" style="margin-top:1.25rem; display:block;">Real People, Real Benefits</p>
 
-        <!-- TrustedForm certificate URL — auto-populated by trustedform.js -->
-        <input type="hidden" name="xxTrustedFormCertUrl" id="xxTrustedFormCertUrl" value="" />
+      </div>
+    </section>
 
-        <div class="form-actions">
-          <a href="/apply/2/step-3-income-employ/" class="btn btn-back">Back</a>
-          <button type="submit" class="btn btn-next" id="submitBtn">Complete &amp; Get Matched</button>
+    <!-- TRUST BADGES -->
+    <section class="trust2-section">
+      <div class="trust2-inner">
+        <div class="trust2-grid">
+          <div class="trust2-badge">
+            <div class="trust2-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <span class="trust2-label">BBB Accredited</span>
+          </div>
+          <div class="trust2-badge">
+            <div class="trust2-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <span class="trust2-label">100% Free to Apply</span>
+          </div>
+          <div class="trust2-badge">
+            <div class="trust2-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <span class="trust2-label">No SSN Needed to Start</span>
+          </div>
+          <div class="trust2-badge">
+            <div class="trust2-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <span class="trust2-label">Private &amp; Confidential</span>
+          </div>
         </div>
-        <p class="security-note" id="processingNote" style="display:none;">Do not close browser while processing — this may take up to 30 seconds.</p>
-        <p class="security-note">No credit check. No commitment. Just a free phone call.</p>
-          <p class="security-note">Your information is secure and will only be used to match you with relevant programs.</p>
-      </form>
-    </div>
+      </div>
+    </section>
+
+    <!-- PROGRAMS CARD -->
+    <section class="programs-section">
+      <div class="programs-section__inner">
+        <div class="programs-card">
+          <p class="programs-card__intro">Whether you're struggling with bills, facing a health challenge, or just trying to make ends meet, there are programs available to help. Many people qualify and don't even know it.</p>
+          <h2 class="programs-card__title">Get Matched To Programs In One Quick Call</h2>
+          <div class="programs-check-list">
+            <div class="programs-check-item"><svg class="programs-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg><span class="programs-check-text">Utilities</span></div>
+            <div class="programs-check-item"><svg class="programs-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg><span class="programs-check-text">Car payments</span></div>
+            <div class="programs-check-item"><svg class="programs-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg><span class="programs-check-text">Medical expenses</span></div>
+            <div class="programs-check-item"><svg class="programs-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg><span class="programs-check-text">Education costs</span></div>
+            <div class="programs-check-item"><svg class="programs-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg><span class="programs-check-text">Health insurance discounts</span></div>
+          </div>
+          <div class="programs-card__cta-wrap">
+            <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" class="programs-card__cta">See Available Programs</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how-section">
+      <div class="how-section__inner">
+        <h2 class="how-section__title">How It Works</h2>
+        <p class="how-section__subtitle">Three simple steps to get matched with assistance:</p>
+        <div class="how-grid">
+          <div class="how-step how-step--blue">
+            <div class="how-step__number">1</div>
+            <h3 class="how-step__title">Answer a Few Easy Questions</h3>
+            <p class="how-step__desc">Complete a quick eligibility form about your situation and needs</p>
+          </div>
+          <div class="how-step how-step--green">
+            <div class="how-step__number">2</div>
+            <h3 class="how-step__title">Speak with a Case Manager</h3>
+            <p class="how-step__desc">Get matched to programs you qualify for during your call</p>
+          </div>
+          <div class="how-step how-step--blue">
+            <div class="how-step__number">3</div>
+            <h3 class="how-step__title">Receive Personal Enrollment Help</h3>
+            <p class="how-step__desc">Your specialist guides you through the enrollment process step by step</p>
+          </div>
+        </div>
+        <div class="how-free-banner">
+          <p class="how-free-banner__title">It is free to apply.</p>
+          <p class="how-free-banner__text">There are no upfront costs and no hidden fees.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MID-PAGE CTA -->
+    <section class="mid-cta-section">
+      <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" class="mid-cta-btn">See Available Programs</a>
+    </section>
+
+    <!-- WHAT TO EXPECT ON YOUR CALL -->
+    <section class="expect-section">
+      <div class="expect-section__inner">
+        <h2 class="expect-section__title">What To Expect On Your Call</h2>
+        <div class="expect-card">
+          <div class="expect-item"><svg class="expect-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg><span class="expect-text">Introduction to your case manager</span></div>
+          <div class="expect-item"><svg class="expect-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg><span class="expect-text">A short, guided prescreening (just a couple minutes)</span></div>
+          <div class="expect-item"><svg class="expect-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg><span class="expect-text">Immediate feedback on potential eligibility</span></div>
+          <div class="expect-item"><svg class="expect-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg><span class="expect-text">Step by step help with enrollment in the programs that fit your situation</span></div>
+        </div>
+        <div class="expect-free-banner">
+          <p class="expect-free-banner__title">It's completely free to apply.</p>
+          <p class="expect-free-banner__text">No hidden fees. No obligation.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL DARK CTA -->
+    <section class="final-cta-section">
+      <div class="final-cta-section__inner">
+        <h2 class="final-cta-section__title">The assistance you need is out there</h2>
+        <p class="final-cta-section__subtitle">We're here to help you find it</p>
+        <p class="final-cta-section__sub2">Connect to the benefits and assistance you deserve.</p>
+        <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" class="final-cta-section__btn">See Available Programs</a>
+      </div>
+    </section>
+
   </main>
 
   <footer class="footer">
@@ -1433,28 +1946,6 @@ function clearAllErrors() {
   document.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
   document.querySelectorAll('.form-error').forEach(el => el.classList.remove('show'));
 }
-// ---- Phone validation (NANP + assigned-area-code allowlist) ----
-// Catches placeholder values, mistyped numbers, and bot-generated garbage
-// before they hit CallTools (which enforces these rules and rejects
-// unassigned area codes server-side).
-// Allowlist of valid US area codes — 50 STATES + DC ONLY (incl. overlays like
-// 983/278/534/629). Excludes foreign NANP (e.g. 264 Anguilla), Canada, and non-
-// state US territories (PR/Guam/USVI/NMI/AmSamoa). Kept in lockstep with the
-// server-side copy in supabase/functions/submit-lead/index.ts and /apply/3.
-const VALID_NANP_AREA_CODES = new Set(['201','202','203','205','206','207','208','209','210','212','213','214','215','216','217','218','219','220','223','224','225','228','229','231','234','235','239','240','248','251','252','253','254','256','260','262','267','269','270','272','274','276','278','279','281','283','301','302','303','304','305','307','308','309','310','312','313','314','315','316','317','318','319','320','321','323','324','325','326','327','329','330','331','332','334','336','337','339','341','346','347','350','351','352','353','357','360','361','363','364','369','380','385','386','401','402','404','405','406','407','408','409','410','412','413','414','415','417','419','423','424','425','430','432','434','435','436','440','442','443','445','447','448','457','458','463','464','469','470','471','472','475','478','479','480','483','484','501','502','503','504','505','507','508','509','510','512','513','515','516','517','518','520','521','522','525','530','531','534','539','540','541','551','557','559','561','562','563','564','567','570','571','573','574','575','580','585','586','601','602','603','605','606','607','608','609','610','612','614','615','616','617','618','619','620','623','626','628','629','630','631','636','641','645','646','650','651','657','659','660','661','662','667','669','678','680','681','682','689','701','702','703','704','706','707','708','712','713','714','715','716','717','718','719','720','724','725','726','727','728','729','731','732','734','737','738','740','743','747','754','757','760','762','763','765','769','770','771','772','773','774','775','776','779','781','783','785','786','801','802','803','804','805','806','808','810','812','813','814','815','816','817','818','820','828','830','831','832','833','838','839','840','843','844','845','847','848','850','854','855','856','857','858','859','860','861','862','863','864','865','866','870','872','877','878','888','903','904','906','907','908','909','910','912','913','914','915','916','917','918','919','920','925','928','929','930','931','934','936','937','938','940','941','943','945','947','948','949','951','952','954','956','959','970','971','972','973','978','979','980','983','984','985','986','989']);
-function validatePhone(d) {
-  if (d.length !== 10) return 'Please enter a valid 10-digit phone number';
-  if (d[0] === '1') return 'Enter your number without a leading 1 — just your 10-digit area code and number';
-  // NANP: area code (digits 0-2) and exchange code (digits 3-5) must each start with 2-9.
-  if (d[0] < '2' || d[3] < '2') return 'Please enter a valid US phone number';
-  // Reject all-same-digit (e.g. 2222222222, 9999999999)
-  if (/^(\d)\1{9}$/.test(d)) return 'Please enter a valid phone number';
-  // Allowlist check — the area code must be assigned in the North American
-  // Numbering Plan. Catches well-formatted but unassigned codes (e.g. 486)
-  // that pass the structural rules but still get rejected by CallTools.
-  if (!VALID_NANP_AREA_CODES.has(d.slice(0, 3))) return 'Please enter a valid US area code';
-  return null;
-}
 // ---- Restore saved values ----
 function restoreField(name) {
   const d = getFunnelData();
@@ -1476,126 +1967,33 @@ document.addEventListener('DOMContentLoaded', function() {
   captureUTM();
   getTransactionId();
 });
-</script>
 
-  <script>
-  // Phone formatting
-  document.getElementById('phone').addEventListener('input', function() {
-    let v = this.value.replace(/\D/g, '');
-    if (v.length > 10) v = v.slice(0, 10);
-    if (v.length >= 7) this.value = '(' + v.slice(0,3) + ') ' + v.slice(3,6) + '-' + v.slice(6);
-    else if (v.length >= 4) this.value = '(' + v.slice(0,3) + ') ' + v.slice(3);
-    else if (v.length > 0) this.value = '(' + v;
-  });
-
-  document.addEventListener('DOMContentLoaded', function() {
-    ['firstName','lastName','email','phone'].forEach(restoreField);
-    const d = getFunnelData();
-    if (d.tcpaConsent) document.getElementById('tcpaConsent').checked = true;
-
-    // Timestamp for bot time-trap detection
-    sessionStorage.setItem('nba_form_shown', String(Date.now()));
-
-    document.getElementById('step5Form').addEventListener('submit', async function(e) {
-      e.preventDefault();
-      clearAllErrors();
-      let valid = true;
-
-      const firstName = document.getElementById('firstName');
-      const lastName = document.getElementById('lastName');
-      const email = document.getElementById('email');
-      const phone = document.getElementById('phone');
-      const tcpa = document.getElementById('tcpaConsent');
-
-      if (!firstName.value.trim()) { showError(firstName, 'Please enter your first name'); valid = false; }
-      if (!lastName.value.trim()) { showError(lastName, 'Please enter your last name'); valid = false; }
-      const emailVal = email.value.trim();
-      if (!/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(emailVal) || emailVal.includes('..')) { showError(email, 'Please enter a valid email'); valid = false; }
-      const phoneDigits = phone.value.replace(/\D/g, '');
-      const phoneError = validatePhone(phoneDigits);
-      if (phoneError) { showError(phone, phoneError); valid = false; }
-      if (!tcpa.checked) {
-        alert('Please agree to the terms to continue.');
-        valid = false;
-      }
-      if (!valid) return;
-
-      // Save final fields
-      saveFunnelData({
-        firstName: firstName.value.trim(),
-        lastName: lastName.value.trim(),
-        email: email.value.trim(),
-        phone: phoneDigits,
-        tcpaConsent: tcpa.checked
-      });
-
-      // Submit to Supabase
-      const btn = document.getElementById('submitBtn');
-      btn.disabled = true;
-      btn.textContent = 'Processing...';
-      const pNote = document.getElementById('processingNote');
-      if (pNote) pNote.style.display = 'block';
-
-      const data = getFunnelData();
-
-      // Format DOB: if stored as YYYY-MM-DD, keep it; original React uses MM/DD/YYYY→YYYY-MM-DD
-      let dobFormatted = data.dob || '';
-
-      const payload = {
-        transaction_id: data.transaction_id || '',
-        state: data.state || '',
-        dob: dobFormatted,
-        citizenship: data.citizenship || '',
-        street_address: data.streetAddress || '',
-        city: data.city || '',
-        zip: data.zip || '',
-        annual_income: data.annualIncome || '',
-        employment_status: data.employmentStatus || '',
-        first_name: data.firstName || '',
-        last_name: data.lastName || '',
-        email: data.email || '',
-        phone: data.phone || '',
-        tcpa_consent: data.tcpaConsent || false,
-        trusted_form_cert_url: (document.getElementById('xxTrustedFormCertUrl') || {}).value || '',
-        click_id: data.gclid || '',
-        wbraid: data.wbraid || '',
-        gbraid: data.gbraid || '',
-        utm_source: data.utm_source || '',
-        utm_medium: data.utm_medium || '',
-        utm_campaign: data.utm_campaign || '',
-        utm_content: data.utm_content || '',
-        utm_term: data.utm_term || '',
-        hp_website: document.getElementById('website').value,
-        form_duration_ms: Date.now() - parseInt(sessionStorage.getItem('nba_form_shown') || '0', 10)
-      };
-
-      try {
-        await fetch('https://quhxbgsgtfvrasyjvaba.supabase.co/functions/v1/submit-lead', {
-          method: 'POST',
-          headers: {
-            'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF1aHhiZ3NndGZ2cmFzeWp2YWJhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUxNTExMDUsImV4cCI6MjA5MDcyNzEwNX0.su7odHmJvnbKVTwtH5wWDpfapk186AIWSOqYP3cSucw',
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(payload)
-        });
-      } catch(err) {
-        console.error('Submission error:', err);
-      }
-
-      // Save name/email for thank-you page display before clearing
-      try {
-        sessionStorage.setItem('nba_ty', JSON.stringify({
-          firstName: data.firstName || '',
-          email: data.email || ''
-        }));
-      } catch(e) {}
-
-      // Always redirect to thank-you — lead is captured, call center follows up
-      sessionStorage.removeItem('nba_funnel');
-      window.location.href = '/apply/2/thank-you/';
+// ---- Hero tile selection: auto-advance to step 1 on choice ----
+var advancing = false; // guard against the label/checkbox click firing twice
+// Reset the guard (and clear any stale selection) every time the page is shown,
+// INCLUDING bfcache restores when the user taps Back. Without this, the page
+// comes back from cache with advancing still = true and the tiles stop responding,
+// so you couldn't go back and change your pick.
+window.addEventListener('pageshow', function() {
+  advancing = false;
+  document.querySelectorAll('.hero__tile--selected').forEach(function(t) { t.classList.remove('hero__tile--selected'); });
+  document.querySelectorAll('.hero__tile input:checked').forEach(function(cb) { cb.checked = false; });
+});
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.hero__tile').forEach(function(tile) {
+    tile.addEventListener('click', function() {
+      if (advancing) return;
+      advancing = true;
+      var cb = this.querySelector('input[type="checkbox"]');
+      cb.checked = true;
+      this.classList.add('hero__tile--selected');
+      saveFunnelData({ needs: [cb.value] });
+      window.location.href = '/apply/3/step-1-info/';
     });
   });
-  </script>
+});
+</script>
+
   <script src="/apply/popup.js"></script>
 
   <!-- TrustedForm -->

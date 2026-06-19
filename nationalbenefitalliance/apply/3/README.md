@@ -4,10 +4,15 @@ A condensed, mobile-first variant of the live `/apply/2/` funnel, built to A/B t
 against it for call-conversion rate. Branch: **`apply3-claim-code-variant`** (never merged
 to `main` until the test is decided).
 
-The live `/apply/2/` funnel and the shared backend are **not modified** by the frontend in
-this folder — `/apply/3/` is purely additive, so it cannot break the live funnel. (One
-possible future change — collecting age instead of DOB — is described under "Future option"
-and is **not built**.)
+The `/apply/3/` funnel pages are **purely additive** — they don't change the apply/2 funnel pages,
+`vercel.json`, or the main site, so the variant itself can't break the live funnel. Two **shared**
+things were changed deliberately (both verified, both improve the live funnel too):
+1. The `submit-lead` **edge function** (Supabase **v43**): US-only phone allowlist + `.@` email
+   rule, **and** it now reads `age` from the payload (stores it in `leads.age`, forwards it to the
+   CRM, still falls back to deriving age from `dob` for apply/2). A nullable `age` column was added
+   to the `leads` table.
+2. **apply/2's client-side** phone allowlist: refreshed to the same US-only list for client/server
+   parity. (apply/2's funnel structure/markup is otherwise untouched.)
 
 ---
 
@@ -16,7 +21,7 @@ and is **not built**.)
 | Page | URL | Collects |
 |---|---|---|
 | Landing | `/apply/3/` | Needs (Food / Utilities / Housing / Other) → "Continue" |
-| Info step | `/apply/3/step-1-info/` | ZIP, First name, Last name, Date of birth, Email, Mobile + TCPA consent → "Get My Approval Code" |
+| Info step | `/apply/3/step-1-info/` | ZIP, First name, Last name, Age (dropdown 18–100), Email, Mobile + TCPA consent → "Get My Approval Code" |
 | Thank-you | `/apply/3/thank-you/` | Shows `NBA-XXXX` approval code + "Call Now to Claim" |
 
 apply/2 collects ~20 fields across 5 steps (DOB, citizenship, street address, city, income,
@@ -54,32 +59,12 @@ same anon key, same payload shape). Differences:
   We do **not** use `/api/zip` — that endpoint is **Florida-only** (`state: 'florida'`, `FL_ZIP`)
   and 404s on non-FL ZIPs. The embedded map covers all 50 states + DC + PR. It's approximate
   (a handful of 3-digit prefixes straddle state lines) but state is not load-bearing for the CRM.
-- **Date of birth** is collected directly with the exact same field, MM/DD/YYYY auto-format, and
-  18–110 validation as apply/2 step-1, and stored as ISO `dob` (`YYYY-MM-DD`). The edge function
-  derives the CRM `age` from it just as it does for apply/2. **No backend change** is required —
-  the `dob` field/column already exists.
-
----
-
-## Future option — collect age instead of DOB (NOT built)
-
-We deferred this. The plan, when ready, is to **replace** the DOB field with an Age field and add a
-real `age` column. That touches the **shared** `submit-lead` function + the `leads` table (both used
-by live apply/2) and the function deploys manually, so it's gated on explicit go-ahead. Sketch:
-
-**1. DB migration (Supabase project `quhxbgsgtfvrasyjvaba`):**
-```sql
-ALTER TABLE leads ADD COLUMN IF NOT EXISTS age integer;
-```
-Nullable → existing apply/2 inserts (which don't set age) are unaffected.
-
-**2. Edge function `submit-lead/index.ts`:** add `age?: number;` to `LeadPayload`, insert
-`age: payload.age ?? null`, and for CallTools prefer the explicit age over the DOB-derived one
-(`const effectiveAge = payload.age ?? age;`). Redeploy manually via the Supabase dashboard.
-
-**3. Frontend:** swap the DOB input/validation in `step-1-info/index.html` for an Age input and send
-`age` in the payload. (An earlier draft of this variant did exactly this with a synthesized DOB as a
-backstop; see git history on branch `apply3-claim-code-variant` if you want the reference code.)
+- **Age** is collected via a dropdown (18–100, required) and sent as a real `age` in the payload,
+  with a **blank `dob`**. The edge function (v43) stores it in `leads.age` and forwards it to
+  CallTools as the `age` field; `leads.dob` is empty for variant-B leads. Verified end-to-end:
+  a blank-dob + age-45 submission stored `leads.age = 45`, sent `age: 45` to CallTools, and the
+  lead succeeded. (apply/2, which sends a real `dob` and no `age`, is unaffected — the function
+  still derives age from its `dob` and leaves `leads.age` null.)
 
 ---
 
@@ -105,7 +90,7 @@ policy (365 area codes):
 it's a missing overlay — tell me the code and I'll add it.
 
 ✅ **Server-side: DEPLOYED.** The `submit-lead` edge function (Supabase project
-`quhxbgsgtfvrasyjvaba`, **version 42**) now uses the same 365-code US-only allowlist + the `.@`
+`quhxbgsgtfvrasyjvaba`, **version 43**) now uses the same 365-code US-only allowlist + the `.@`
 email rule. Verified with live smoke tests: a 416 (Canada) number and a `name.@gmail.com` email
 both drop to `bot_drops`; a valid US lead still reaches `leads` with `crm_status: success`. This is
 the real fix for the non-US / bad-email leads that were reaching the `leads` table from the live
@@ -145,10 +130,9 @@ slice of **Google Ads** traffic at `https://nba3.vercel.app/apply/3/` (or
   in CLAUDE.md accordingly.
 
 ## Test-phase notes (revisit before final launch)
-- **DOB is temporarily OPTIONAL** in `step-1-info/index.html` (the `required` attribute and the
-  "blank" validation guard) so we can test whether the backend/CRM accept an empty `dob`. If empty
-  dob is accepted, swapping DOB → Age later is trivial. If we keep DOB, re-add `required` and restore
-  the "Please enter your date of birth" empty-case error.
+- **Age dropdown (18–100, required)** replaced the DOB field (see "How leads reach the backend").
+  Age → synthesized Jan-1 DOB → CRM age. No backend change. The `dob`/`MM/DD/YYYY` field and its
+  validation are gone.
 - **Orphaned CSS:** the `.progress-container` / `.progress-row` / `.progress-bar` / `.progress-fill`
   rules (~lines 744–774 of `step-1-info/index.html`) are now unused — the progress bar markup was
   removed from the page. Harmless; delete if you want to tidy up (or keep to easily re-add the bar).

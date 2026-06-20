@@ -16,17 +16,22 @@ things were changed deliberately (both verified, both improve the live funnel to
 
 ---
 
-## The flow (3 pages, vs. apply/2's 6)
+## The flow (4 pages, vs. apply/2's 6)
 
 | Page | URL | Collects |
 |---|---|---|
-| Landing | `/apply/3/` | Needs (Food / Utilities / Housing / Other) → "Continue" |
-| Info step | `/apply/3/step-1-info/` | ZIP, First name, Last name, Age (dropdown 18–100), Email, Mobile + TCPA consent → "Get My Approval Code" |
+| Landing | `/apply/3/` | Needs (Food / Utilities / Housing / Other) — auto-advances on tap |
+| Step 1 — "Name, Age and Location" | `/apply/3/step-1-name/` | First name, Last name, ZIP, Age (dropdown 18–100) → "Continue" |
+| Step 2 — "Contact Details" | `/apply/3/step-2-contact/` | Email, Phone + TCPA consent disclosure → "Get My Approval Code" |
 | Thank-you | `/apply/3/thank-you/` | Shows `NBA-XXXX` approval code + "Call Now to Claim" |
 
-apply/2 collects ~20 fields across 5 steps (DOB, citizenship, street address, city, income,
-employment, …). Variant B collects **7** fields on **one** data step. Hypothesis: fewer
-fields + a "claim your code by calling" mechanic → higher call-conversion.
+apply/2 collects ~20 fields across 5 steps. Variant B collects **7** fields across **two** short,
+single-purpose steps (split from one step because the combined step was too cramped on mobile).
+Each step has a **progress bar** ("Step 1/2 of 2"), **stacked** full-width fields, and a
+**Continue/Submit button that stays disabled (grayed) until that step's required fields are valid**.
+Step 2 guards against deep-links: if the Step 1 data (name + ZIP) is missing it redirects back to
+Step 1. The age `<select>` shows its "Select age" placeholder in light gray until a value is chosen.
+Hypothesis: fewer fields + a "claim your code by calling" mechanic → higher call-conversion.
 
 ---
 
@@ -39,7 +44,12 @@ fields + a "claim your code by calling" mechanic → higher call-conversion.
   - One number per page. `popup.js` (the 30s inactivity overlay, line 1-813-556-9953) loads on all three pages, same as apply/2.
 - **Thank-you URL contains `thank-you`** (`/apply/3/thank-you/`) so the existing conversion tag keeps firing — **verify the GTM trigger isn't pinned to `/apply/2/` only** (see "Before launch").
 - **Bot detection intact:** honeypot (`hp_website`) + time-trap (`nba_form_shown` / `form_duration_ms`).
-- **TrustedForm** cert capture (`xxTrustedFormCertUrl`) on the info step, exactly as apply/2 step-4.
+- **TrustedForm** cert capture (`xxTrustedFormCertUrl`) on Step 2, exactly as apply/2 step-4.
+- **TCPA consent is now "button as consent"** on Step 2 (no checkbox): the disclosure reads "By
+  clicking the button, you confirm…" and clicking **Get My Approval Code** records consent
+  (`tcpa_consent: true` in the payload). ⚠️ This is a deliberate switch from the earlier checkbox —
+  **confirm with your compliance/legal that click-wrap consent meets your TCPA posture.** TrustedForm
+  still captures a cert on the page.
 - **Client-side phone (NANP + area-code allowlist) and email validation** mirror apply/2 step-4 and the server.
 - `tel:` links are never wrapped; `ty-call-btn` class is unchanged.
 
@@ -70,7 +80,7 @@ same anon key, same payload shape). Differences:
 
 ## Phone validation — US-only NANP policy
 
-The `VALID_NANP_AREA_CODES` allowlist in `step-1-info/index.html` is a **50 US states + DC**
+The `VALID_NANP_AREA_CODES` allowlist in `step-2-contact/index.html` is a **50 US states + DC**
 policy (365 area codes):
 
 - **Accepts** all 50-state + DC area codes, including newer US overlays like **983** (Denver),
@@ -130,12 +140,13 @@ slice of **Google Ads** traffic at `https://nba3.vercel.app/apply/3/` (or
   in CLAUDE.md accordingly.
 
 ## Test-phase notes (revisit before final launch)
-- **Age dropdown (18–100, required)** replaced the DOB field (see "How leads reach the backend").
-  Age → synthesized Jan-1 DOB → CRM age. No backend change. The `dob`/`MM/DD/YYYY` field and its
-  validation are gone.
-- **Orphaned CSS:** the `.progress-container` / `.progress-row` / `.progress-bar` / `.progress-fill`
-  rules (~lines 744–774 of `step-1-info/index.html`) are now unused — the progress bar markup was
-  removed from the page. Harmless; delete if you want to tidy up (or keep to easily re-add the bar).
+- **Age dropdown (18–100, required)** lives on Step 2; the real age is sent in the payload with a
+  **blank `dob`** (backend v43 stores it in `leads.age` and forwards it to the CRM — see "How leads
+  reach the backend"). No DOB is collected or synthesized.
+- The progress bar is back on both steps (Step 1/2 of 2). The `.progress-*` CSS is in use again.
+- `step-1-name/index.html` was trimmed of the contact-step machinery it doesn't need (phone
+  validation, the area-code allowlist, ZIP→state, approval-code generator, TrustedForm, honeypot,
+  submit/fetch) since those all live on Step 2 now.
 
 ## Possible polish (cosmetic, not blocking)
 - The landing card still shows a "1" step badge next to "What brings you here today?" (leftover

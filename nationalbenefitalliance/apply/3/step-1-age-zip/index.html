@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Info — National Benefit Alliance</title>
+  <title>Age & Location — National Benefit Alliance</title>
   <meta name="robots" content="noindex, nofollow" />
   <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -1281,7 +1281,18 @@ main {
   .security-note { font-size: 0.85rem; margin-top: 0.375rem; }
 }
 
-  </style>
+  
+/* ===== Sticky tap-to-call (mobile) ===== */
+.sticky-call{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;align-items:center;justify-content:center;gap:.55rem;background:var(--amber-500);color:#1a2b47;font-weight:800;text-decoration:none;padding:.8rem 1rem;box-shadow:0 -4px 16px rgba(0,0,0,.2);}
+.sticky-call:active{background:var(--amber-600);}
+.sticky-call svg{width:20px;height:20px;flex-shrink:0;}
+.sticky-call__text{display:flex;flex-direction:column;line-height:1.05;align-items:flex-start;}
+.sticky-call__cta{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.02em;}
+.sticky-call__num{font-size:1.1rem;font-weight:800;}
+@media(min-width:768px){.sticky-call{display:none;}}
+@media(max-width:767px){body{padding-bottom:66px;}}
+
+</style>
   <link rel="icon" type="image/png" href="/images/logo.png" />
   <meta property="og:image" content="https://nationalbenefitalliance.com/images/og-default.jpg" />
   <meta property="og:image:width" content="1200" />
@@ -1295,13 +1306,13 @@ main {
     <!-- End Google Tag Manager (noscript) -->
   <header class="header">
     <div class="header__inner">
-      <a href="/" class="header__logo">
+      <div class="header__logo">
         <img src="/images/logo.png" alt="" class="header__logo-img" width="36" height="36" aria-hidden="true">
         <span class="header__logo-text">
           <span class="header__logo-name">National Benefit Alliance</span>
           <span class="header__logo-tagline">Community Resource Center</span>
         </span>
-      </a>
+      </div>
       <a href="tel:+18135569954" class="header__phone" aria-label="Call 1-813-556-9954, Monday to Friday 9am to 6pm Eastern Time">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
           <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.02 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14v2.92z"/>
@@ -1318,50 +1329,119 @@ main {
     <div class="form-card">
       <div class="progress-container">
         <div class="progress-row">
-          <span class="progress-row__left">Step 2 of 2</span>
-          <span class="progress-row__right">Almost done</span>
+          <span class="progress-row__left">Step 1 of 3</span>
+          <span class="progress-row__right">33% complete</span>
         </div>
-        <div class="progress-bar"><div class="progress-fill" style="width: 100%;"></div></div>
+        <div class="progress-bar"><div class="progress-fill" style="width: 33%;"></div></div>
       </div>
 
-      <h1 class="form-title">Contact Details</h1>
-      <p class="form-subtitle">We'll send you a code to verify your account and keep it secure.</p>
+      <h1 class="form-title">Program availability is based on your age and location</h1>
 
-      <form id="step5Form" novalidate>
+      <form id="step1Form" novalidate>
         <div class="form-group">
-          <label for="email" class="form-label">Email Address</label>
-          <input type="email" name="email" id="email" class="form-input" placeholder="john@example.com" required />
-          <div class="form-error">Please enter a valid email address</div>
+          <label for="age" class="form-label">Age</label>
+          <select name="age" id="age" class="form-input form-select is-placeholder" required>
+              <option value="" selected disabled>Select age</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+              <option value="32">32</option>
+              <option value="33">33</option>
+              <option value="34">34</option>
+              <option value="35">35</option>
+              <option value="36">36</option>
+              <option value="37">37</option>
+              <option value="38">38</option>
+              <option value="39">39</option>
+              <option value="40">40</option>
+              <option value="41">41</option>
+              <option value="42">42</option>
+              <option value="43">43</option>
+              <option value="44">44</option>
+              <option value="45">45</option>
+              <option value="46">46</option>
+              <option value="47">47</option>
+              <option value="48">48</option>
+              <option value="49">49</option>
+              <option value="50">50</option>
+              <option value="51">51</option>
+              <option value="52">52</option>
+              <option value="53">53</option>
+              <option value="54">54</option>
+              <option value="55">55</option>
+              <option value="56">56</option>
+              <option value="57">57</option>
+              <option value="58">58</option>
+              <option value="59">59</option>
+              <option value="60">60</option>
+              <option value="61">61</option>
+              <option value="62">62</option>
+              <option value="63">63</option>
+              <option value="64">64</option>
+              <option value="65">65</option>
+              <option value="66">66</option>
+              <option value="67">67</option>
+              <option value="68">68</option>
+              <option value="69">69</option>
+              <option value="70">70</option>
+              <option value="71">71</option>
+              <option value="72">72</option>
+              <option value="73">73</option>
+              <option value="74">74</option>
+              <option value="75">75</option>
+              <option value="76">76</option>
+              <option value="77">77</option>
+              <option value="78">78</option>
+              <option value="79">79</option>
+              <option value="80">80</option>
+              <option value="81">81</option>
+              <option value="82">82</option>
+              <option value="83">83</option>
+              <option value="84">84</option>
+              <option value="85">85</option>
+              <option value="86">86</option>
+              <option value="87">87</option>
+              <option value="88">88</option>
+              <option value="89">89</option>
+              <option value="90">90</option>
+              <option value="91">91</option>
+              <option value="92">92</option>
+              <option value="93">93</option>
+              <option value="94">94</option>
+              <option value="95">95</option>
+              <option value="96">96</option>
+              <option value="97">97</option>
+              <option value="98">98</option>
+              <option value="99">99</option>
+              <option value="100">100</option>
+            </select>
+          <div class="form-error">Please select your age</div>
         </div>
 
         <div class="form-group">
-          <label for="phone" class="form-label">Phone Number</label>
-          <input type="tel" name="phone" id="phone" class="form-input" placeholder="(XXX) XXX-XXXX" required />
-          <div class="form-error">Please enter a valid phone number</div>
+          <label for="zip" class="form-label">ZIP Code</label>
+          <input type="text" inputmode="numeric" name="zip" id="zip" class="form-input" placeholder="33602" maxlength="5" autocomplete="postal-code" required />
+          <div class="form-error">Please enter a valid 5-digit ZIP code</div>
         </div>
 
-        <div class="tcpa-group">
-          <p class="tcpa-label">
-              By clicking the button, you confirm that this is your mobile number and that you are 18 years of age or older. You agree to the National Benefit Alliance <a href="/terms/" target="_blank">Terms of Use</a> and <a href="/privacy/" target="_blank">Privacy Policy</a> and provide your express written consent to be contacted by National Benefit Alliance, its service providers, and marketing partners, and that your information may be shared with and used by such partners to contact you, via telephone calls and text messages (including SMS and MMS), including through the use of an automatic telephone dialing system, artificial or prerecorded voice, and AI-generated voice, at the number you provided, even if your number is listed on any federal or state Do Not Call registry. You understand that these communications may include marketing messages. Consent is not a condition of purchase. Message frequency varies (up to 10 messages per month). Message and data rates may apply. Reply STOP to opt out or HELP for help. You also agree to receive marketing emails from National Benefit Alliance and its affiliated brands and marketing partners. You may unsubscribe at any time by clicking the unsubscribe link in any email.
-          </p>
-        </div>
-
-        <!-- Anti-bot honeypot — invisible to humans, bots auto-fill it -->
-        <div style="position:absolute;left:-9999px;height:0;width:0;overflow:hidden;" aria-hidden="true">
-          <label for="website">Website</label>
-          <input type="text" name="website" id="website" tabindex="-1" autocomplete="off" value="" />
-        </div>
-
-        <!-- TrustedForm certificate URL — auto-populated by trustedform.js -->
-        <input type="hidden" name="xxTrustedFormCertUrl" id="xxTrustedFormCertUrl" value="" />
 
         <div class="form-actions">
-          <a href="/apply/3/step-1-name/" class="btn btn-back">Back</a>
-          <button type="submit" class="btn btn-next" id="submitBtn" disabled>Get My Approval Code</button>
+          <a href="/apply/3/" class="btn btn-back">Back</a>
+          <button type="submit" class="btn btn-next" id="continueBtn">Continue</button>
         </div>
-        <p class="security-note" id="processingNote" style="display:none;">Do not close browser while processing — this may take up to 30 seconds.</p>
-        <p class="security-note">No credit check. No commitment. Just a phone call.</p>
-          <p class="security-note">Your information is secure and will only be used to match you with relevant programs.</p>
+        <p class="security-note">BBB · 100% Free · No SSN · Confidential</p>
+        <p class="security-note">We never share your info.</p>
       </form>
     </div>
   </main>
@@ -1423,63 +1503,6 @@ function clearAllErrors() {
   document.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
   document.querySelectorAll('.form-error').forEach(el => el.classList.remove('show'));
 }
-// ---- Phone validation (NANP + assigned-area-code allowlist) ----
-// Catches placeholder values, mistyped numbers, and bot-generated garbage
-// before they hit CallTools (which enforces these rules and rejects
-// unassigned area codes server-side).
-// Allowlist of valid US area codes — 50 STATES + DC ONLY. Includes US overlays
-// like 983 (Denver), 771 (DC), 278 (MI), 534 (WI), 629 (TN). EXCLUDES: foreign
-// NANP codes (Caribbean nations like 264 Anguilla), CANADA (416, 604, 905, ...),
-// and non-state US territories (PR 787/939, Guam 671, USVI 340, NMI 670, Am.
-// Samoa 684). Keep in lockstep with the server copy in submit-lead/index.ts.
-// NOTE: allowlist of valid US NPAs — new US overlays must be added here as they launch.
-const VALID_NANP_AREA_CODES = new Set(['201','202','203','205','206','207','208','209','210','212','213','214','215','216','217','218','219','220','223','224','225','228','229','231','234','235','239','240','248','251','252','253','254','256','260','262','267','269','270','272','274','276','278','279','281','283','301','302','303','304','305','307','308','309','310','312','313','314','315','316','317','318','319','320','321','323','324','325','326','327','329','330','331','332','334','336','337','339','341','346','347','350','351','352','353','357','360','361','363','364','369','380','385','386','401','402','404','405','406','407','408','409','410','412','413','414','415','417','419','423','424','425','430','432','434','435','436','440','442','443','445','447','448','457','458','463','464','469','470','471','472','475','478','479','480','483','484','501','502','503','504','505','507','508','509','510','512','513','515','516','517','518','520','521','522','525','530','531','534','539','540','541','551','557','559','561','562','563','564','567','570','571','573','574','575','580','585','586','601','602','603','605','606','607','608','609','610','612','614','615','616','617','618','619','620','623','626','628','629','630','631','636','641','645','646','650','651','657','659','660','661','662','667','669','678','680','681','682','689','701','702','703','704','706','707','708','712','713','714','715','716','717','718','719','720','724','725','726','727','728','729','731','732','734','737','738','740','743','747','754','757','760','762','763','765','769','770','771','772','773','774','775','776','779','781','783','785','786','801','802','803','804','805','806','808','810','812','813','814','815','816','817','818','820','828','830','831','832','833','838','839','840','843','844','845','847','848','850','854','855','856','857','858','859','860','861','862','863','864','865','866','870','872','877','878','888','903','904','906','907','908','909','910','912','913','914','915','916','917','918','919','920','925','928','929','930','931','934','936','937','938','940','941','943','945','947','948','949','951','952','954','956','959','970','971','972','973','978','979','980','983','984','985','986','989']);
-function validatePhone(d) {
-  if (d.length !== 10) return 'Please enter a valid 10-digit phone number';
-  if (d[0] === '1') return 'Enter your number without a leading 1 — just your 10-digit area code and number';
-  // NANP: area code (digits 0-2) and exchange code (digits 3-5) must each start with 2-9.
-  if (d[0] < '2' || d[3] < '2') return 'Please enter a valid US phone number';
-  // Reject all-same-digit (e.g. 2222222222, 9999999999)
-  if (/^(\d)\1{9}$/.test(d)) return 'Please enter a valid phone number';
-  // Allowlist check — the area code must be assigned in the North American
-  // Numbering Plan. Catches well-formatted but unassigned codes (e.g. 486)
-  // that pass the structural rules but still get rejected by CallTools.
-  if (!VALID_NANP_AREA_CODES.has(d.slice(0, 3))) return 'Please enter a valid US area code';
-  return null;
-}
-// ---- ZIP (first 3 digits) -> USPS state code. Backfills state because the
-// existing /api/zip endpoint is Florida-only. Approximate but state is not
-// load-bearing (the CRM tolerates an empty or imperfect state). ----
-function zipToState(zip) {
-  var z = parseInt(String(zip || '').replace(/\D/g, '').slice(0, 3), 10);
-  if (isNaN(z)) return '';
-  var R = [
-    [6,9,'PR'],[10,27,'MA'],[28,29,'RI'],[30,38,'NH'],[39,49,'ME'],
-    [50,54,'VT'],[55,55,'MA'],[56,59,'VT'],[60,69,'CT'],[70,89,'NJ'],
-    [100,149,'NY'],[150,196,'PA'],[197,199,'DE'],[200,205,'DC'],
-    [206,219,'MD'],[220,246,'VA'],[247,268,'WV'],[270,289,'NC'],
-    [290,299,'SC'],[300,319,'GA'],[320,349,'FL'],[350,369,'AL'],
-    [370,385,'TN'],[386,397,'MS'],[398,399,'GA'],[400,427,'KY'],
-    [430,459,'OH'],[460,479,'IN'],[480,499,'MI'],[500,528,'IA'],
-    [530,549,'WI'],[550,567,'MN'],[570,577,'SD'],[580,588,'ND'],
-    [590,599,'MT'],[600,629,'IL'],[630,658,'MO'],[660,679,'KS'],
-    [680,693,'NE'],[700,714,'LA'],[716,729,'AR'],[730,749,'OK'],
-    [750,799,'TX'],[800,816,'CO'],[820,831,'WY'],[832,838,'ID'],
-    [840,847,'UT'],[850,865,'AZ'],[870,884,'NM'],[889,899,'NV'],
-    [900,961,'CA'],[967,968,'HI'],[970,979,'OR'],[980,994,'WA'],
-    [995,999,'AK']
-  ];
-  for (var i = 0; i < R.length; i++) { if (z >= R[i][0] && z <= R[i][1]) return R[i][2]; }
-  return '';
-}
-// ---- Generate a call-center-friendly approval code: NBA-XXXX (ambiguous
-// characters I/O/0/1 omitted so it's easy to read aloud on the phone). ----
-function genApprovalCode() {
-  var alphabet = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
-  var out = '';
-  for (var i = 0; i < 4; i++) { out += alphabet.charAt(Math.floor(Math.random() * alphabet.length)); }
-  return 'NBA-' + out;
-}
 // ---- Restore saved values ----
 function restoreField(name) {
   const d = getFunnelData();
@@ -1504,160 +1527,42 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
   <script>
-  // Phone formatting
-  document.getElementById('phone').addEventListener('input', function() {
-    let v = this.value.replace(/\D/g, '');
-    if (v.length > 10) v = v.slice(0, 10);
-    if (v.length >= 7) this.value = '(' + v.slice(0,3) + ') ' + v.slice(3,6) + '-' + v.slice(6);
-    else if (v.length >= 4) this.value = '(' + v.slice(0,3) + ') ' + v.slice(3);
-    else if (v.length > 0) this.value = '(' + v;
-  });
+  // ZIP numeric-only
+  var _zipEl = document.getElementById('zip');
+  if (_zipEl) _zipEl.addEventListener('input', function() { this.value = this.value.replace(/\D/g, ''); clearError(_zipEl); });
 
-  // Clear a field's error the moment the user edits it (so an early submit
-  // doesn't leave fields stuck red).
-  ['email','phone'].forEach(function(id) {
-    var el = document.getElementById(id);
-    if (el) el.addEventListener('input', function() { clearError(el); });
-  });
-
-  // Enable the submit button only once every required field is valid.
-  function step2Valid() {
-    var em = (document.getElementById('email').value || '').trim();
-    var emailOk = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(em) && !em.includes('..') && !em.includes('.@');
-    var phoneOk = validatePhone((document.getElementById('phone').value || '').replace(/\D/g, '')) === null;
-    return emailOk && phoneOk;
-  }
-  function refreshSubmitBtn() { var b = document.getElementById('submitBtn'); if (b) b.disabled = !step2Valid(); }
-  ['email','phone'].forEach(function(id){ var e=document.getElementById(id); if(e) e.addEventListener('input', refreshSubmitBtn); });
+  // Age <select>: gray placeholder until a value is chosen
+  var _ageSel = document.getElementById('age');
+  function syncAgePlaceholder() { if (_ageSel) _ageSel.classList.toggle('is-placeholder', !_ageSel.value); }
+  if (_ageSel) _ageSel.addEventListener('change', function() { syncAgePlaceholder(); clearError(_ageSel); });
 
   document.addEventListener('DOMContentLoaded', function() {
-    // This step needs the name + ZIP captured on step 1. If they're missing
-    // (e.g. someone deep-links here), send them back to step 1.
-    var _fd = getFunnelData();
-    if (!_fd.firstName || !_fd.zip) { window.location.replace('/apply/3/step-1-name/'); return; }
-
-    ['email','phone'].forEach(restoreField);
-    refreshSubmitBtn();
-
-    // Timestamp for bot time-trap detection
-    sessionStorage.setItem('nba_form_shown', String(Date.now()));
-
-    document.getElementById('step5Form').addEventListener('submit', async function(e) {
+    ['zip'].forEach(restoreField);
+    var _d = getFunnelData();
+    if (_d.age) document.getElementById('age').value = _d.age;
+    syncAgePlaceholder();
+    document.getElementById('step1Form').addEventListener('submit', function(e) {
       e.preventDefault();
       clearAllErrors();
-      let valid = true;
-
-      const email = document.getElementById('email');
-      const phone = document.getElementById('phone');
-
-      const emailVal = email.value.trim();
-      // Reject consecutive dots and a dot immediately before the @ (e.g. "name.@gmail.com")
-      if (!/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(emailVal) || emailVal.includes('..') || emailVal.includes('.@')) { showError(email, 'Please enter a valid email'); valid = false; }
-      const phoneDigits = phone.value.replace(/\D/g, '');
-      const phoneError = validatePhone(phoneDigits);
-      if (phoneError) { showError(phone, phoneError); valid = false; }
+      var valid = true;
+      var zip = document.getElementById('zip');
+      var age = document.getElementById('age');
+      var zipDigits = zip.value.replace(/\D/g, '');
+      if (zipDigits.length !== 5) { showError(zip, 'Please enter a valid 5-digit ZIP code'); valid = false; }
+      var ageNum = parseInt(age.value, 10);
+      if (!ageNum || ageNum < 18) { showError(age, 'Please select your age'); valid = false; }
       if (!valid) return;
-
-      // State from the ZIP captured on step 1 (the /api/zip endpoint is FL-only).
-      const data0 = getFunnelData();
-      const derivedState = zipToState((data0.zip || '').replace(/\D/g, ''));
-
-      // Save step-2 fields (name + zip were saved on step 1)
-      saveFunnelData({
-        state: derivedState,
-        dob: '',
-        email: email.value.trim(),
-        phone: phoneDigits,
-        tcpaConsent: true
-      });
-
-      // Submit to Supabase
-      const btn = document.getElementById('submitBtn');
-      btn.disabled = true;
-      btn.textContent = 'Processing...';
-      const pNote = document.getElementById('processingNote');
-      if (pNote) pNote.style.display = 'block';
-
-      const data = getFunnelData();
-
-      // dob is intentionally blank for this variant — we send the real age instead.
-      let dobFormatted = data.dob || '';
-
-      const payload = {
-        transaction_id: data.transaction_id || '',
-        state: data.state || '',
-        dob: dobFormatted,
-        age: (typeof data.age === 'number' ? data.age : (parseInt(data.age, 10) || null)),
-        citizenship: data.citizenship || '',
-        street_address: data.streetAddress || '',
-        city: data.city || '',
-        zip: data.zip || '',
-        annual_income: data.annualIncome || '',
-        employment_status: data.employmentStatus || '',
-        first_name: data.firstName || '',
-        last_name: data.lastName || '',
-        email: data.email || '',
-        phone: data.phone || '',
-        tcpa_consent: data.tcpaConsent || false,
-        trusted_form_cert_url: (document.getElementById('xxTrustedFormCertUrl') || {}).value || '',
-        click_id: data.gclid || '',
-        wbraid: data.wbraid || '',
-        gbraid: data.gbraid || '',
-        utm_source: data.utm_source || '',
-        utm_medium: data.utm_medium || '',
-        utm_campaign: data.utm_campaign || '',
-        utm_content: data.utm_content || '',
-        utm_term: data.utm_term || '',
-        hp_website: document.getElementById('website').value,
-        form_duration_ms: Date.now() - parseInt(sessionStorage.getItem('nba_form_shown') || '0', 10)
-      };
-
-      try {
-        await fetch('https://quhxbgsgtfvrasyjvaba.supabase.co/functions/v1/submit-lead', {
-          method: 'POST',
-          headers: {
-            'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF1aHhiZ3NndGZ2cmFzeWp2YWJhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUxNTExMDUsImV4cCI6MjA5MDcyNzEwNX0.su7odHmJvnbKVTwtH5wWDpfapk186AIWSOqYP3cSucw',
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(payload)
-        });
-      } catch(err) {
-        console.error('Submission error:', err);
-      }
-
-      // Generate the approval code and stash display data for the thank-you page
-      const approvalCode = genApprovalCode();
-      try {
-        sessionStorage.setItem('nba_ty', JSON.stringify({
-          firstName: data.firstName || '',
-          email: data.email || '',
-          code: approvalCode
-        }));
-      } catch(e) {}
-
-      // Always redirect to thank-you — lead is captured, call center follows up
-      sessionStorage.removeItem('nba_funnel');
-      window.location.href = '/apply/3/thank-you/';
+      saveFunnelData({ zip: zipDigits, age: ageNum });
+      window.location.href = '/apply/3/step-2-name-email/';
     });
   });
   </script>
-  <script src="/apply/popup.js"></script>
+    <script src="/apply/popup.js"></script>
 
-  <!-- TrustedForm -->
-  <script type="text/javascript">
-    (function() {
-      var tf = document.createElement('script');
-      tf.type = 'text/javascript';
-      tf.async = true;
-      tf.src = ("https:" == document.location.protocol ? 'https' : 'http') +
-        '://api.trustedform.com/trustedform.js?field=xxTrustedFormCertUrl&use_tagged_consent=true&l=' +
-        new Date().getTime() + Math.random();
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tf, s);
-    })();
-  </script>
-  <noscript>
-    <img src='https://api.trustedform.com/ns.gif' />
-  </noscript>
-  <!-- End TrustedForm -->
-  </body>
+
+    <a href="tel:+18135569954" class="sticky-call" aria-label="Call a specialist at 1-813-556-9954">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    <span class="sticky-call__text"><span class="sticky-call__cta">Tap to call a specialist — free</span><span class="sticky-call__num">1-813-556-9954</span></span>
+  </a>
+</body>
 </html>

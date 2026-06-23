@@ -1688,7 +1688,33 @@ main {
   .hero__card { padding: 1.75rem 2rem; margin-bottom: 0.75rem; }
   .hero__card-divider { margin: 1rem 0; }
 }
-  </style>
+  
+/* ===== Sticky tap-to-call (mobile) ===== */
+.sticky-call{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;align-items:center;justify-content:center;gap:.55rem;background:var(--amber-500);color:#1a2b47;font-weight:800;text-decoration:none;padding:.8rem 1rem;box-shadow:0 -4px 16px rgba(0,0,0,.2);}
+.sticky-call:active{background:var(--amber-600);}
+.sticky-call svg{width:20px;height:20px;flex-shrink:0;}
+.sticky-call__text{display:flex;flex-direction:column;line-height:1.05;align-items:flex-start;}
+.sticky-call__cta{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.02em;}
+.sticky-call__num{font-size:1.1rem;font-weight:800;}
+@media(min-width:768px){.sticky-call{display:none;}}
+@media(max-width:767px){body{padding-bottom:66px;}}
+
+
+/* ===== Hero 'call now instead' route ===== */
+.hero__callnow{margin:0 auto 1.25rem;max-width:36rem;}
+.hero__callnow-q{color:#fff;font-weight:600;font-size:1rem;margin-bottom:.5rem;}
+.hero__callnow-btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--amber-500);color:#1a2b47;font-weight:800;font-size:1.05rem;line-height:1.15;padding:.85rem 1.5rem;border-radius:.5rem;text-decoration:none;box-shadow:var(--shadow-lg);}
+.hero__callnow-btn:hover{background:var(--amber-600);}
+.hero__callnow-sub{color:var(--gray-200);font-size:.85rem;margin-top:.6rem;line-height:1.4;}
+
+
+/* ===== 'What to expect' call prompt ===== */
+.expect-call-prompt{text-align:center;margin-top:1.25rem;}
+.expect-call-btn{display:inline-block;background:var(--amber-500);color:#1a2b47;font-weight:800;font-size:1.05rem;padding:.85rem 1.5rem;border-radius:.5rem;text-decoration:none;box-shadow:var(--shadow-md);}
+.expect-call-btn:hover{background:var(--amber-600);}
+.expect-call-sub{color:var(--gray-600);font-size:.85rem;margin-top:.5rem;line-height:1.4;}
+
+</style>
   <link rel="icon" type="image/png" href="/images/logo.png" />
   <meta property="og:image" content="https://nationalbenefitalliance.com/images/og-default.jpg" />
   <meta property="og:image:width" content="1200" />
@@ -1702,13 +1728,13 @@ main {
     <!-- End Google Tag Manager (noscript) -->
   <header class="header">
     <div class="header__inner">
-      <a href="/" class="header__logo">
+      <div class="header__logo">
         <img src="/images/logo.png" alt="" class="header__logo-img" width="36" height="36" aria-hidden="true">
         <span class="header__logo-text">
           <span class="header__logo-name">National Benefit Alliance</span>
           <span class="header__logo-tagline">Community Resource Center</span>
         </span>
-      </a>
+      </div>
       <a href="tel:+18135569954" class="header__phone" aria-label="Call 1-813-556-9954, Monday to Friday 9am to 6pm Eastern Time">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
           <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.02 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14v2.92z"/>
@@ -1726,9 +1752,16 @@ main {
     <section class="hero">
       <div class="hero__inner">
 
-        <h1 class="hero__headline">Get matched to assistance that can help right away</h1>
+        <h1 class="hero__headline">Need help with rent, utilities, or groceries?</h1>
 
-        <p class="hero__oneliner">Talk to a specialist. See what you qualify for.<br>Free, fast, confidential, no commitment.</p>
+        <p class="hero__oneliner">Talk to a specialist now. See what you qualify for — free, confidential, no SSN needed.</p>
+
+
+        <div class="hero__callnow">
+          <p class="hero__callnow-q">Prefer to talk now?</p>
+          <a href="tel:+18135569954" class="hero__callnow-btn"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call (813) 556-9954 — free, no wait</a>
+          <p class="hero__callnow-sub">Speak with a specialist now · Free &amp; confidential · No SSN, no obligation</p>
+        </div>
 
         <div class="hero__card">
           <div class="hero__card-header">
@@ -1875,6 +1908,10 @@ main {
           <p class="expect-free-banner__title">It's completely free to apply.</p>
           <p class="expect-free-banner__text">No hidden fees. No obligation.</p>
         </div>
+        <div class="expect-call-prompt">
+          <a href="tel:+18135569954" class="expect-call-btn">Ready? Call now: 1-813-556-9954</a>
+          <p class="expect-call-sub">Speak with a specialist now · Free &amp; confidential · No SSN, no obligation</p>
+        </div>
       </div>
     </section>
 
@@ -1989,7 +2026,7 @@ document.addEventListener('DOMContentLoaded', function() {
       cb.checked = true;
       this.classList.add('hero__tile--selected');
       saveFunnelData({ needs: [cb.value] });
-      window.location.href = '/apply/3/step-1-name/';
+      window.location.href = '/apply/3/step-1-age-zip/';
     });
   });
 });
@@ -2013,5 +2050,9 @@ document.addEventListener('DOMContentLoaded', function() {
     <img src='https://api.trustedform.com/ns.gif' />
   </noscript>
   <!-- End TrustedForm -->
-  </body>
+    <a href="tel:+18135569954" class="sticky-call" aria-label="Call a specialist at 1-813-556-9954">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    <span class="sticky-call__text"><span class="sticky-call__cta">Tap to call a specialist — free</span><span class="sticky-call__num">1-813-556-9954</span></span>
+  </a>
+</body>
 </html>

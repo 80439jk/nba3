@@ -16,22 +16,38 @@ things were changed deliberately (both verified, both improve the live funnel to
 
 ---
 
-## The flow (4 pages, vs. apply/2's 6)
+## The flow (5 pages, vs. apply/2's 6)
 
-| Page | URL | Collects |
+| Page | URL | Collects / does |
 |---|---|---|
-| Landing | `/apply/3/` | Needs (Food / Utilities / Housing / Other) — auto-advances on tap |
-| Step 1 — "Name, Age and Location" | `/apply/3/step-1-name/` | First name, Last name, ZIP, Age (dropdown 18–100) → "Continue" |
-| Step 2 — "Contact Details" | `/apply/3/step-2-contact/` | Email, Phone + TCPA consent disclosure → "Get My Approval Code" |
-| Thank-you | `/apply/3/thank-you/` | Shows `NBA-XXXX` approval code + "Call Now to Claim" |
+| Landing | `/apply/3/` | Call-intent headline + a "call now instead" route; needs tiles auto-advance on tap |
+| Step 1 — "Program availability is based on your age and location" | `/apply/3/step-1-age-zip/` | Age (dropdown 18–100), ZIP → "Continue" |
+| Step 2 — "Your information will only be used to match you…" | `/apply/3/step-2-name-email/` | First name, Last name, Email → "Continue" |
+| Step 3 — "Last step — get your approval code, then call to claim it." | `/apply/3/step-3-phone/` | Phone + click-wrap TCPA consent → "Get My Approval Code" (submits the lead) |
+| Thank-you | `/apply/3/thank-you/` | "You're matched!" + `NBA-XXXX` code + "Call Now to get your programs today" |
 
-apply/2 collects ~20 fields across 5 steps. Variant B collects **7** fields across **two** short,
-single-purpose steps (split from one step because the combined step was too cramped on mobile).
-Each step has a **progress bar** ("Step 1/2 of 2"), **stacked** full-width fields, and a
-**Continue/Submit button that stays disabled (grayed) until that step's required fields are valid**.
-Step 2 guards against deep-links: if the Step 1 data (name + ZIP) is missing it redirects back to
-Step 1. The age `<select>` shows its "Select age" placeholder in light gray until a value is chosen.
-Hypothesis: fewer fields + a "claim your code by calling" mechanic → higher call-conversion.
+Three short, single-purpose, reassuringly-headlined steps (de-risked from the earlier 2-step layout).
+Each step has a **progress bar** ("Step N of 3"), **stacked** full-width fields, and an **always-enabled**
+Continue/Submit button (validation fires on click; errors clear as you type). Step 2/3 guard against
+deep-links (redirect back to Step 1 if earlier data is missing). The lead is submitted on **Step 3**;
+`age`+`zip` come from Step 1, `name`+`email` from Step 2, `phone` from Step 3.
+
+### Call-intent / trust elements
+- **Sticky tap-to-call bar** (mobile only) pinned to the bottom of every page — number on the button.
+  Landing + steps use the **started-funnel** line `1-813-556-9954`; thank-you uses the **completed-funnel**
+  line `1-813-560-8063`.
+- Landing hero has a **"Prefer to talk now?"** amber call button + reassurance, and the "What To Expect"
+  section ends with a **"Ready? Call now: 1-813-556-9954"** prompt.
+- Every Continue/Submit button carries **"BBB · 100% Free · No SSN · Confidential"** + **"We never share
+  your info."**; Step 3 adds **"We only use your number to match you. Free, no obligation."** at the button.
+- **Header logo is no longer an outbound link** on any apply/3 page (removed `<a href="/">` → `<div>`), to
+  cut unnecessary exits from the funnel.
+
+⚠️ **Tracking note (confirm in GTM/Ads):** these new call CTAs all use existing numbers, so they fire the
+existing call-conversion actions **by `tel:` value** — landing/step CTAs → "Started funnel" (`+18135569954`),
+thank-you CTAs → "Completed funnel" (`+18135608063`). The thank-you's main button keeps the `ty-call-btn`
+class; the thank-you sticky bar uses the same `tel:` (no `ty-call-btn` class) — so it only fires the
+completed-funnel conversion if your GTM tag triggers on the `tel:` value rather than that class. Verify.
 
 ---
 

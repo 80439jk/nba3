@@ -1470,7 +1470,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if (!firstName.value.trim()) { showError(firstName, 'Please enter your first name'); valid = false; }
       if (!lastName.value.trim()) { showError(lastName, 'Please enter your last name'); valid = false; }
       var emailVal = email.value.trim();
-      if (!/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(emailVal) || emailVal.includes('..') || emailVal.includes('.@')) { showError(email, 'Please enter a valid email'); valid = false; }
+      if (!/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(emailVal) || emailVal.includes('..') || emailVal.includes('.@') || emailVal.includes('@.')) { showError(email, 'Please enter a valid email'); valid = false; }
       if (!valid) return;
       saveFunnelData({ firstName: firstName.value.trim(), lastName: lastName.value.trim(), email: emailVal });
       window.location.href = '/apply/3/step-3-phone/';

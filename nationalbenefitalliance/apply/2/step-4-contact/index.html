@@ -1511,7 +1511,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if (!firstName.value.trim()) { showError(firstName, 'Please enter your first name'); valid = false; }
       if (!lastName.value.trim()) { showError(lastName, 'Please enter your last name'); valid = false; }
       const emailVal = email.value.trim();
-      if (!/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(emailVal) || emailVal.includes('..')) { showError(email, 'Please enter a valid email'); valid = false; }
+      if (!/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(emailVal) || emailVal.includes('..') || emailVal.includes('.@') || emailVal.includes('@.')) { showError(email, 'Please enter a valid email'); valid = false; }
       const phoneDigits = phone.value.replace(/\D/g, '');
       const phoneError = validatePhone(phoneDigits);
       if (phoneError) { showError(phone, phoneError); valid = false; }

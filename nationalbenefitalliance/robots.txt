@@ -282,6 +282,9 @@ Allow: /js/
 Allow: /images/
 Allow: /
 
+# Hidden secondary-monetization click-track page (also noindex,nofollow on-page)
+Disallow: /clicktrk
+
 # Block common exploit and spam paths
 Disallow: /admin/
 Disallow: /api/

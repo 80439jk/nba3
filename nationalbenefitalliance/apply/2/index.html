@@ -2036,6 +2036,17 @@ document.addEventListener('DOMContentLoaded', function() {
   getTransactionId();
 });
 
+// ---- Reset the state dropdown every time the lander is shown, INCLUDING
+// bfcache restores when the user taps Back from step 1. Without this, the
+// select comes back from cache with the previous state still selected, so
+// reselecting the SAME state fires no 'change' event and the user is stuck
+// with no way to advance again. Clearing it forces a fresh pick that
+// auto-advances. The saved state in nba_funnel is overwritten on reselect.
+window.addEventListener('pageshow', function() {
+  var s = document.getElementById('heroState');
+  if (s) s.value = '';
+});
+
 // ---- Hero tile selection ----
 document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.hero__tile').forEach(function(tile) {

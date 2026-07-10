@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-National Benefit Alliance is a lead-generation site that connects U.S. residents with free government benefit programs. It's organized by state and county, with a multi-step application funnel that forwards leads to a CRM (CallTools). Deployed on Vercel at https://nba3.vercel.app (custom domain: nationalbenefitalliance.com).
+National Benefit Alliance is a lead-generation site that connects U.S. residents with free government benefit programs. It's organized by state and county, with a multi-step application funnel that forwards each lead to two CRMs in parallel (CallTools + Caliber Leads). Deployed on Vercel at https://nba3.vercel.app (custom domain: nationalbenefitalliance.com).
 
 - **Stack**: static HTML + Vercel serverless functions (Node ≥18, deps: `pg`, `nodemailer`)
 - **Backend**: a Supabase Edge Function (`submit-lead`) handles funnel submissions; lives in a separate repo at `/Users/larazielin/Desktop/nba/nba-supabase-backend/`
@@ -133,30 +133,40 @@ Previously rotated numbers `1-888-408-5650` and `1-855-767-9422` are retired; do
 
 ## Backend — Supabase Edge Function `submit-lead`
 
-Repo: `/Users/larazielin/Desktop/nba/nba-supabase-backend/` (under git, branch `main`, GitHub remote `lalazeelady/nba-supabase-backend`). The function source is at `supabase/functions/submit-lead/index.ts`. Supabase project `quhxbgsgtfvrasyjvaba` (us-east-2, Postgres 17). Deployment is manual via the Supabase dashboard — paste the file contents into the Edge Functions editor and click Deploy.
+Repo: `/Users/larazielin/Desktop/nba/nba-supabase-backend/` (under git, branch `main`, GitHub remote `lalazeelady/nba-supabase-backend`). The function source is at `supabase/functions/submit-lead/index.ts`. Supabase project `quhxbgsgtfvrasyjvaba` (us-east-2, Postgres 17). Deploy either via the Supabase dashboard (paste the file into the Edge Functions editor → Deploy) or via the Supabase MCP `deploy_edge_function` tool (keep `verify_jwt: true`). Live is currently version 47. Neither path is wired to GitHub — pushing/merging the repo does **not** deploy; deploy is a separate step.
 
-**What it does**: receives the contact-step submission, runs server-side bot detection (honeypot + `form_duration_ms < 3000`), runs server-side phone validation (NANP rules — see below), inserts valid leads into `leads` with `crm_status: pending`, forwards to CallTools, logs the request/response to `api_logs`, updates `crm_status` to success/failed, and on failure sends an alert email via Resend to `larazielin1@gmail.com`. Always returns HTTP 200 to the frontend regardless of CRM outcome — the frontend cannot detect CRM failure.
+**What it does**: receives the contact-step submission, runs server-side bot detection (honeypot + `form_duration_ms < 3000`), runs server-side phone + email validation (see below), inserts valid leads into `leads` with `crm_status: pending`, then dispatches to **both CRMs in parallel** (CallTools + Caliber Leads) via `Promise.all`, logs each provider's request/response to its own `api_logs` row, stamps the per-provider outcome onto the `leads` row, and on **CallTools** failure sends an alert email via Resend to `larazielin1@gmail.com` (a Caliber failure does not email — it's only visible in `caliber_status` + its `api_logs` row). Always returns HTTP 200 to the frontend regardless of either CRM's outcome — the frontend cannot detect CRM failure.
 
-**Silent drops to `bot_drops`** (fake 200, never enter `leads` or CallTools, no Resend email):
+**Silent drops to `bot_drops`** (fake 200, never enter `leads` or either CRM, no Resend email):
 - Honeypot field (`hp_website`) is non-empty → `detection_reason: honeypot_filled`
 - `form_duration_ms < 3000` → `detection_reason: too_fast`
-- Phone fails NANP validation → `detection_reason: invalid_phone:<sub>` where `<sub>` is `wrong_length`, `nanp_violation`, or `all_same_digit`. Mirrors the client-side validator at `/apply/2/step-4-contact` so direct-POST attempts (curl/scripts that bypass the form) get the same rejection. Catches placeholders like `5551234567` and CallTools-rejected real-world inputs like `9290898075` without spending a CallTools call or firing an alert email.
+- Phone fails validation → `detection_reason: invalid_phone:<sub>` where `<sub>` is `wrong_length`, `nanp_violation`, `all_same_digit`, or `bad_area_code`. NANP rules **plus a US-50-states+DC area-code allowlist** (rejects foreign NANP/Canada/territories and NANPA-unassigned codes). Mirrors the client-side validator at `/apply/2/step-4-contact`.
+- Email fails validation → `detection_reason: invalid_email` (note: **not** prefixed like the phone reasons). Regex + rejects consecutive dots / `.@` / `@.` (caught real CallTools rejects like `gmal..com`). This drops the **entire** lead from both CRMs, not just CallTools — a common cause of "valid-looking lead never arrived."
+- Catches placeholders like `5551234567` and real-world rejects like `9290898075` without spending a CRM call or firing an alert.
 
-**CRM — CallTools** (`POST https://app.calltools.io/api/contacts/`, token auth):
-- Phone normalized to E.164 (`+1XXXXXXXXXX`); DOB → derived `age`; TCPA boolean → string; income enum → numeric; click ID uses `gclid → wbraid → gbraid` fallback (so iOS 14+ privacy-safe clicks still get a `click_id`)
+**CRM 1 — CallTools** (`POST https://app.calltools.io/api/contacts/`, token auth):
+- Phone normalized to E.164 (`+1XXXXXXXXXX`); DOB → derived `age`; TCPA boolean → string; income enum → numeric; street→`address`, city→`city`, zip→`zip_code`; `add_tags: [268591]`
+- **Each click ID posts to its own named field** (`gclid`/`wbraid`/`gbraid`) — **no** cross-type fallback (that conflation caused a gclid-column mis-mapping cleaned up 2026-04-30). Empty fields are stripped before send so an Overwrite/merge (CallTools dedups by **phone**) can't clobber an existing contact's real value.
+- **Retries up to 3× on transient failure** (5xx / non-JSON HTML error page / network / 10s timeout, backoff 400→800ms); 4xx is not retried. Response body read as text first so an HTML error page can't crash JSON parsing.
 - Two response shapes handled: fresh-create (`id`) and duplicate-merge (`duplicate_contacts[0]` with `duplicate_action: "MERGE"`); `crm_action` column stores `CREATE` or `MERGE`
-- `jornaya_leadid` falls back to the literal string `"STATIC_JORNAYA_ID_PLACEHOLDER"` when empty
-- A previous CRM (Trackdrive) was fully removed; no references remain
+
+**CRM 2 — Caliber Leads** (`POST https://dblgxzhlxcviknamnskj.supabase.co/functions/v1/ingest/nba`):
+- **HMAC-SHA256 signed** over `${timestamp}.${body}` with `CALIBER_HMAC_SECRET`; sends their anon key as `apikey`; `x-request-id = nba-submit-lead-<transaction_id>` gives them 24h idempotency.
+- Body is grouped into `consent` / `contact` / `attribution` / `extended`. **IP is sent as `consent.ip`** (only when `x-forwarded-for`/`cf-connecting-ip` is present). Street `address` + `city` were added 2026-07-09 (field-name keys unverified against Caliber's spec — see memory).
+- Our enum values are **remapped** to Caliber's vocabulary (income 4→6 buckets, employment, citizenship folded to us/non-us); unmappable values are omitted. Caliber **silently drops unknown fields but 400s a bad value on a known enum field** — hence the mapping.
+- Status → `success` (201) / `duplicate` (200/409) / `failed` (other) / `skipped` (secrets missing); stamped to `caliber_status`/`caliber_lead_id`/`caliber_action`/`caliber_submitted_at`.
+
+**Shared**: TCPA field name kept as `jornaya_lead_id` (CallTools) / `jornaya_leadid` (Caliber) for their side's config, but the **VALUE is now the TrustedForm cert URL** (Jornaya was replaced). In `leads`, `trusted_form_cert_url` falls back to the literal `"STATIC_JORNAYA_ID_PLACEHOLDER"` when empty. A previous CRM (Trackdrive) was fully removed; no references remain.
 
 **Tables**:
-- `leads` — one row per submission; all funnel fields + UTM/click IDs + `crm_status` / `crm_lead_id` / `crm_action` / `crm_submitted_at`
-- `api_logs` — one row per CRM call; full request/response payloads, http status, success flag
-- `bot_drops` — one row per silently-dropped submission. `detection_reason` is one of `honeypot_filled`, `too_fast`, or `invalid_phone:<sub>` (with sub-reasons `wrong_length` / `nanp_violation` / `all_same_digit`). Use `WHERE detection_reason LIKE 'invalid_phone%'` to filter all phone drops. Also stores `ip_address`, `user_agent`, `form_duration_ms`, `raw_payload` (jsonb).
+- `leads` — one row per submission; all funnel fields + UTM/click IDs + CallTools cols (`crm_status`/`crm_lead_id`/`crm_action`/`crm_submitted_at`) + Caliber cols (`caliber_status`/`caliber_lead_id`/`caliber_action`/`caliber_submitted_at`) + `ip_address`. **The two CRM statuses are independent** — a lead can be `crm_status: failed` while `caliber_status: success`, or vice versa.
+- `api_logs` — **two rows per submission** (one CallTools, one Caliber). Filter Caliber with `WHERE request_payload->>'provider' = 'caliber_leads'`. Since 2026-07-09 the Caliber row's `request_payload.body` holds the exact JSON we sent Caliber (excludes HMAC secret/signature).
+- `bot_drops` — one row per silently-dropped submission. `detection_reason` ∈ `honeypot_filled` / `too_fast` / `invalid_phone:<sub>` (subs `wrong_length` / `nanp_violation` / `all_same_digit` / `bad_area_code`) / `invalid_email`. Use `WHERE detection_reason LIKE 'invalid_phone%'` for all phone drops. Also stores `ip_address`, `user_agent`, `form_duration_ms`, `raw_payload` (jsonb).
 
-**Env vars** (Edge Function Secrets): `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `CALLTOOLS_API_TOKEN`, `RESEND_API_KEY`.
+**Env vars** (Edge Function Secrets): `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `CALLTOOLS_API_TOKEN`, `RESEND_API_KEY`, `CALIBER_HMAC_SECRET`, `CALIBER_ANON_KEY`.
 
 **Quirks**:
-- Always 200, no retries, CRM called exactly once per submission. The only server-side validation is the NANP phone check (see "Silent drops" above); other fields go through unvalidated.
+- Always 200. Each CRM is called at most once per submission (CallTools may internally retry a transient failure up to 3×). Server-side validation covers phone + email only; other fields go through unvalidated.
 - CallTools also rejects obviously fake numbers (e.g. `+12222222222`) at its end — caught by the server-side validator first now, but historical `api_logs` rows show this pattern.
 - `transaction_id` column is `text` (not `uuid`) for backwards compatibility with older `nba_<ts>_<rand>` rows; new rows use proper UUIDs.
 

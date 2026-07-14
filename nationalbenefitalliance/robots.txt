@@ -285,6 +285,10 @@ Allow: /
 # Hidden secondary-monetization click-track page (also noindex,nofollow on-page)
 Disallow: /clicktrk
 
+# Hidden email-offer redirect pages (also noindex,nofollow on-page)
+Disallow: /Offer03
+Disallow: /Offer05
+
 # Block common exploit and spam paths
 Disallow: /admin/
 Disallow: /api/

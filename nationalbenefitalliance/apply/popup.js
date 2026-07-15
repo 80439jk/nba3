@@ -89,8 +89,20 @@
     document.body.appendChild(overlay);
   }
 
+  // Stop the popup from ever re-arming this page-load: clear the pending timer
+  // and drop the inactivity listeners. Without this, after the popup is shown or
+  // dismissed the timer keeps resetting on mouse/touch and re-fires every 30s.
+  // Kept in sync with UB (qualify/popup.js) — see CLAUDE.md "Popup behavior".
+  function teardown() {
+    clearTimeout(timer);
+    document.removeEventListener('mousemove', resetTimer);
+    document.removeEventListener('touchstart', resetTimer);
+    document.removeEventListener('touchmove', resetTimer);
+  }
+
   function show() {
     if (!overlay) return;
+    teardown();                 // fire exactly once — never re-arm this session
     sessionStorage.setItem(SESSION_KEY, '1');
     overlay.style.display = 'flex';
     // restart entry animation

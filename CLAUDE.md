@@ -117,6 +117,14 @@ Previously rotated numbers `1-888-408-5650` and `1-855-767-9422` are retired; do
 
 **Inactivity popup safety**: only fires after 30s of mouse/touch inactivity, well after Google's crawler has scored the page. Underlying HTML is identical for everyone — not cloaking.
 
+**Popup behavior (KEEP IN SYNC WITH UB `qualify/popup.js`)**: `apply/popup.js` is a sibling of the UtilityBenefits popup; the two must stay behaviorally identical — only brand skin (NBA amber/navy + Poppins vs UB emerald/green + DM Sans) and the phone number differ. When you change one, change the other and update both CLAUDE.md files. Canonical behavior:
+- Fires after **30s** of mouse/touch inactivity (`DELAY = 30000`) — never shorten.
+- Shows **once per session** (`nba_popup_shown` / UB `ub_popup_shown`).
+- **No re-pop:** on first show/dismiss, `teardown()` clears the timer and removes the inactivity listeners so it never re-appears on the same page.
+- Runs on landing + every funnel step + thank-you (`apply/2/`).
+- **Reference number:** on the thank-you page it reads `#refNumber` and shows it inside the card (UB reads `#ty-case-number`); the number lives inside the popup so a caller always has it.
+- Uses its own dedicated `tel:` line for clean attribution; plain `tel:` anchor, no `onclick`.
+
 `sessionStorage` keys in use: `nba_funnel` (step data), `nba_ty` (thank-you display), `nba_popup_shown` (popup-once flag).
 
 ---

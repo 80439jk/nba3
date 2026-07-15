@@ -60,6 +60,62 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .offer__note { margin-top: 1.5rem; font-size: 0.9rem; color: var(--gray-600); }
     @media (max-width: 600px) { .offer { padding: 2.5rem 0 3.5rem; } }
   </style>
+
+  <!-- Anura bot-traffic detection -->
+  <script type="text/javascript">
+  (function(){
+     try {
+        if (/\bgtm-msr\.appspot\b/i.exec(document.referrer)) return;
+        if (/\bfacebookexternalhit|AdsBot-Google|DMBrowser|LinkedInBot|Semrush|facebookcatalog|AdsBot|Googlebot|GoogleOther|Microsoft-BotFramework|moatbot|pingbot|Mediapartners-Google|GoogleAdSenseInfeed|SnapchatAds\b/i.exec(navigator.userAgent)) return;
+     } catch(e){}
+     var anura = document.createElement('script');
+     if ('object' === typeof anura) {
+        var urlValues = {};
+        var urlParams = window.location.search.slice(1).split('&');
+        for (var x in urlParams) urlValues[urlParams[x].split('=')[0]] = urlParams[x].split('=').slice(1).join('');
+        var additionalValues = {
+           '1': urlValues['utm_medium'] || 'undefined'
+        };
+        try {
+           var additionalData = JSON.stringify(additionalValues);
+        } catch(e) {
+           try {
+              var additionalParams = [];
+              for (var x in additionalValues) { if (additionalValues[x]) additionalParams.push('"' + x + '": "' + additionalValues[x] + '"'); }
+              var additionalData = "{" + additionalParams.join(', ') + "}";
+           } catch(e) {}
+        }
+        var request = {
+           instance: '4107474092',
+           source: urlValues['utm_source'],
+           campaign: urlValues['utm_campaign'],
+           callback: 'anuraResponseCallback',
+           additional: additionalData
+        };
+        var params = [Math.floor(1E12*Math.random()+1)];
+        for (var x in request) params.push(x+'='+encodeURIComponent(request[x]));
+        anura.type = 'text/javascript';
+        anura.async = true
+        anura.src = 'https://script.anura.io/request.js?' + params.join('&');
+        var script = document.getElementsByTagName('script')[0];
+        script.parentNode.insertBefore(anura, script);
+     }
+  })();
+  function anuraResponseCallback() {
+     if (!!Anura) {
+        var anuraResultCallback = function() {
+           if (Anura.getAnura().isGood()) {
+              // deploy custom content through javascript
+           }
+           if (Anura.getAnura().isBad()) {
+                  Anura.getLib().actions.disableInputs();
+                  window.location.replace('https://www.nationalbenefitalliance.com');
+           }
+        }
+        Anura.getAnura().hasResult() ? anuraResultCallback() : Anura.getAnura().queryResult(anuraResultCallback);
+     }
+  }
+  </script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->

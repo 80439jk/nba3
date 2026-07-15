@@ -8,6 +8,8 @@ National Benefit Alliance is a lead-generation site that connects U.S. residents
 - **Backend**: a Supabase Edge Function (`submit-lead`) handles funnel submissions; lives in a separate repo at `/Users/larazielin/Desktop/nba/nba-supabase-backend/`
 - **Tracking**: Google Tag Manager (GTM-MTQ5WNFR) on every HTML page. Google Ads is the primary traffic source and the business depends on call-conversion attribution.
 
+> **Design decisions & principles** for the lead pipeline + reporting live in [`DECISIONS.md`](DECISIONS.md). It reflects the live system and supersedes any older prose below where they conflict (e.g. the backend is now **dual-CRM** — CallTools **and** Caliber — with retry, empty-value stripping, a guaranteed `transaction_id`, and MCP-based deploys).
+
 ---
 
 ## Build Approach & Non-Negotiables

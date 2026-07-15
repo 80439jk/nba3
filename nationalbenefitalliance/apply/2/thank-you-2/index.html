@@ -5,23 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Thank You — National Benefit Alliance</title>
   <meta name="robots" content="noindex, nofollow" />
-  <!-- Gate: the completed-funnel call number is only for CRM-accepted leads.
-       If this page is reached without an accepted submission this session
-       (direct nav, bookmark, refresh after a non-accepted submit), send the
-       visitor to the started-funnel fallback page. Runs before render so the
-       number never flashes. -->
-  <script>
-    (function () {
-      try {
-        var ty = JSON.parse(sessionStorage.getItem('nba_ty') || '{}');
-        if (!ty || ty.crm_accepted !== true) {
-          window.location.replace('/apply/2/thank-you-2/');
-        }
-      } catch (e) {
-        window.location.replace('/apply/2/thank-you-2/');
-      }
-    })();
-  </script>
   <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -1099,7 +1082,7 @@ main {
   margin-bottom: 1.5rem;
 }
 
-.ty-call-btn {
+.alt-call-btn {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
@@ -1116,13 +1099,13 @@ main {
   line-height: 1.15;
 }
 
-.ty-call-btn:hover {
+.alt-call-btn:hover {
   background-color: var(--amber-600);
   box-shadow: 0 20px 35px -5px rgba(245, 158, 11, 0.4);
   transform: translateY(-2px);
 }
 
-.ty-call-btn__cta {
+.alt-call-btn__cta {
   font-size: 1.35rem;
   font-weight: 700;
   letter-spacing: 0.01em;
@@ -1130,7 +1113,7 @@ main {
   line-height: 1.15;
 }
 
-.ty-call-btn__phone-row {
+.alt-call-btn__phone-row {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
@@ -1141,24 +1124,24 @@ main {
   line-height: 1.15;
 }
 
-.ty-call-btn__phone-row svg {
+.alt-call-btn__phone-row svg {
   width: 20px;
   height: 20px;
 }
 
 @media (max-width: 480px) {
-  .ty-call-btn {
+  .alt-call-btn {
     padding: 0.85rem 1.1rem;
     gap: 0.1rem;
   }
-  .ty-call-btn__cta {
+  .alt-call-btn__cta {
     font-size: 1.15rem;
   }
-  .ty-call-btn__phone-row {
+  .alt-call-btn__phone-row {
     font-size: 1.05rem;
     gap: 0.35rem;
   }
-  .ty-call-btn__phone-row svg {
+  .alt-call-btn__phone-row svg {
     width: 18px;
     height: 18px;
   }
@@ -1302,11 +1285,11 @@ main {
       <div class="ty-action-box">
         <h2 class="ty-action-box__title">Action Needed</h2>
         <p class="ty-action-box__text">A case manager has been assigned to you. Call the number below to verify your identity and discuss assistance programs you may qualify for. This call is completely free and can connect you to assistance that may help right away.</p>
-        <a href="tel:+18135608063" class="ty-call-btn">
-          <span class="ty-call-btn__cta">Call Now to Get Started</span>
-          <span class="ty-call-btn__phone-row">
+        <a href="tel:+18135569954" class="alt-call-btn">
+          <span class="alt-call-btn__cta">Call Now to Get Started</span>
+          <span class="alt-call-btn__phone-row">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-            <span class="ty-call-btn__phone">1-813-560-8063</span>
+            <span class="alt-call-btn__phone">1-813-556-9954</span>
           </span>
         </a>
         <p class="ty-expire-note">Your Reference Number will expire in 30 Minutes so please call before expiration or you may need to resubmit an application.</p>

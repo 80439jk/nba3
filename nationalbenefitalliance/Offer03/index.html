@@ -104,13 +104,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   function anuraResponseCallback() {
      if (!!Anura) {
         var anuraResultCallback = function() {
-           if (Anura.getAnura().isGood()) {
-              // deploy custom content through javascript
-           }
            if (Anura.getAnura().isBad()) {
-                  Anura.getLib().actions.disableInputs();
-                  window.location.replace('https://www.nationalbenefitalliance.com');
+              // Bad traffic: block inputs and bounce to the homepage, never the offer.
+              Anura.getLib().actions.disableInputs();
+              window.location.replace('https://www.nationalbenefitalliance.com');
+              return;
            }
+           // Not flagged bad: release the gated redirect to the affiliate offer.
+           if (typeof window.__offerProceed === 'function') window.__offerProceed();
         }
         Anura.getAnura().hasResult() ? anuraResultCallback() : Anura.getAnura().queryResult(anuraResultCallback);
      }
@@ -287,8 +288,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     var link = document.getElementById("offer-continue");
     if (link) link.setAttribute("href", target);
 
-    // Instant, near-invisible redirect. replace() keeps this page out of history.
-    if (!freeze) window.location.replace(target);
+    // Redirect is GATED on Anura's verdict (Anura script in <head>). __offerProceed
+    // performs the actual navigation to the offer; it is invoked by the Anura
+    // callback when the visitor is not flagged bad, or by the fail-open timeout
+    // below if Anura is slow/unreachable so real visitors are never stranded.
+    var proceeded = false;
+    window.__offerProceed = function () {
+      if (proceeded || freeze) return;
+      proceeded = true;
+      window.location.replace(target); // replace() keeps this page out of history
+    };
+
+    // Fail-open safety net: proceed to the offer if no verdict arrives in time.
+    if (!freeze) setTimeout(window.__offerProceed, 5000);
   })();
   </script>
 

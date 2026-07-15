@@ -1570,30 +1570,46 @@ document.addEventListener('DOMContentLoaded', function() {
         form_duration_ms: Date.now() - parseInt(sessionStorage.getItem('nba_form_shown') || '0', 10)
       };
 
+      // Read the CRM-acceptance result so only leads CallTools actually
+      // accepted see the completed-funnel thank-you number. Fail closed on any
+      // network error/timeout (abort after 15s) so a hung request routes to the
+      // fallback page rather than exposing the completed-funnel number.
+      let crmAccepted = false;
       try {
-        await fetch('https://quhxbgsgtfvrasyjvaba.supabase.co/functions/v1/submit-lead', {
+        const ac = new AbortController();
+        const timer = setTimeout(function(){ ac.abort(); }, 15000);
+        const res = await fetch('https://quhxbgsgtfvrasyjvaba.supabase.co/functions/v1/submit-lead', {
           method: 'POST',
           headers: {
             'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF1aHhiZ3NndGZ2cmFzeWp2YWJhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUxNTExMDUsImV4cCI6MjA5MDcyNzEwNX0.su7odHmJvnbKVTwtH5wWDpfapk186AIWSOqYP3cSucw',
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify(payload)
+          body: JSON.stringify(payload),
+          signal: ac.signal
         });
+        clearTimeout(timer);
+        const result = await res.json().catch(function(){ return {}; });
+        crmAccepted = !!(result && result.crm_accepted === true);
       } catch(err) {
         console.error('Submission error:', err);
+        crmAccepted = false; // fail closed
       }
 
-      // Save name/email for thank-you page display before clearing
+      // Save name/email + acceptance flag for the thank-you page display + guard
       try {
         sessionStorage.setItem('nba_ty', JSON.stringify({
           firstName: data.firstName || '',
-          email: data.email || ''
+          email: data.email || '',
+          crm_accepted: crmAccepted
         }));
       } catch(e) {}
 
-      // Always redirect to thank-you — lead is captured, call center follows up
       sessionStorage.removeItem('nba_funnel');
-      window.location.href = '/apply/2/thank-you/';
+      // Only CRM-accepted leads get the completed-funnel number (/thank-you/).
+      // Everyone else — CallTools-rejected, dropped, or failed/timed-out submit —
+      // gets the started-funnel fallback (/thank-you-2/), which still invites an
+      // inbound call, just on the started-funnel line.
+      window.location.href = crmAccepted ? '/apply/2/thank-you/' : '/apply/2/thank-you-2/';
     });
   });
   </script>

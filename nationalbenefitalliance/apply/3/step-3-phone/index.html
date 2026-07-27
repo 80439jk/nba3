@@ -1335,7 +1335,7 @@ main {
         <div class="progress-bar"><div class="progress-fill" style="width: 100%;"></div></div>
       </div>
 
-      <h1 class="form-title">Last step - and we'll send your approval code to find programs.</h1>
+      <h1 class="form-title">Last step - and we'll send your reference number to find programs.</h1>
       <p class="form-subtitle">We only use your number to match you.</p>
 
       <form id="step5Form" novalidate>
@@ -1363,7 +1363,7 @@ main {
         <p class="security-note" style="font-weight:700;color:var(--gray-700);margin-bottom:0.25rem;">Free, no obligation.</p>
         <div class="form-actions">
           <a href="/apply/3/step-2-name-email/" class="btn btn-back">Back</a>
-          <button type="submit" class="btn btn-next" id="submitBtn">Get My Approval Code</button>
+          <button type="submit" class="btn btn-next" id="submitBtn">Get My Reference Number</button>
         </div>
         <p class="security-note" id="processingNote" style="display:none;">Do not close browser while processing — this may take up to 30 seconds.</p>
         <p class="security-note">BBB · 100% Free · No SSN · Confidential</p>
@@ -1600,32 +1600,45 @@ document.addEventListener('DOMContentLoaded', function() {
         form_duration_ms: Date.now() - parseInt(sessionStorage.getItem('nba_form_shown') || '0', 10)
       };
 
+      // Read the CRM-acceptance result so only leads the CRM actually
+      // accepted see the completed-funnel thank-you number. Fail closed on any
+      // network error/timeout (abort after 15s) so a hung request routes to the
+      // fallback page rather than exposing the completed-funnel number.
+      let crmAccepted = false;
       try {
-        await fetch('https://quhxbgsgtfvrasyjvaba.supabase.co/functions/v1/submit-lead', {
+        const ac = new AbortController();
+        const timer = setTimeout(function(){ ac.abort(); }, 15000);
+        const res = await fetch('https://quhxbgsgtfvrasyjvaba.supabase.co/functions/v1/submit-lead', {
           method: 'POST',
           headers: {
             'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF1aHhiZ3NndGZ2cmFzeWp2YWJhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUxNTExMDUsImV4cCI6MjA5MDcyNzEwNX0.su7odHmJvnbKVTwtH5wWDpfapk186AIWSOqYP3cSucw',
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify(payload)
+          body: JSON.stringify(payload),
+          signal: ac.signal
         });
+        clearTimeout(timer);
+        const result = await res.json().catch(function(){ return {}; });
+        crmAccepted = !!(result && result.crm_accepted === true);
       } catch(err) {
         console.error('Submission error:', err);
+        crmAccepted = false; // fail closed
       }
 
-      // Generate the approval code and stash display data for the thank-you page
-      const approvalCode = genApprovalCode();
+      // Save name/email + acceptance flag for the thank-you page display + guard
       try {
         sessionStorage.setItem('nba_ty', JSON.stringify({
           firstName: data.firstName || '',
           email: data.email || '',
-          code: approvalCode
+          crm_accepted: crmAccepted
         }));
       } catch(e) {}
 
-      // Always redirect to thank-you — lead is captured, call center follows up
+      // Only CRM-accepted leads get the completed-funnel number (/thank-you/).
+      // Everyone else gets the started-funnel fallback (/thank-you-2/), which
+      // still invites an inbound call on the started-funnel line.
       sessionStorage.removeItem('nba_funnel');
-      window.location.href = '/apply/3/thank-you/';
+      window.location.href = crmAccepted ? '/apply/3/thank-you/' : '/apply/3/thank-you-2/';
     });
   });
   </script>

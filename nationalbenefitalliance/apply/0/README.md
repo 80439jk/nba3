@@ -39,9 +39,12 @@ as apply/3.
   not outbound-call; leads call inbound). We simply do **not** text these leads.
 
 ## Consent copy note
-The checkbox label opens **"By checking this box, you confirm…"** (owner-updated to
-match the checkbox opt-in). Only "Terms of Use" and "Privacy Policy" were linkified to
-`/terms/` and `/privacy/`; wording is otherwise owner-supplied verbatim.
+The checkbox label is owner-supplied and opens **"By checking this box, you confirm…"**.
+Latest wording: consent is to be contacted **by National Benefit Alliance** for calls +
+texts (no third-party data-sharing clause; the email sentence still references affiliated
+brands and marketing partners). "Terms of Use"/"Privacy Policy" linkified to `/terms/`,
+`/privacy/`. **One fix:** source read "…may used by…" → rendered "…may be used by…"
+(dropped word); tell me if you want it literally.
 
 ## Thank-you pages (conformed to apply/2 + CRM-gated)
 The thank-you experience is **not** a tested variant — only the lander/steps are. So
@@ -59,11 +62,10 @@ apply/0's thank-you pages were conformed to apply/2's canonical design:
   - `/thank-you/` also has a `<head>` guard: no accepted submission this session →
     redirect to `/thank-you-2/` (closes direct-nav / bookmark / refresh holes).
 
-### ⚠️ Copy mismatch to resolve (funnel copy — left for the slower pass)
-step-3-phone still says **"…send your approval code…"** (headline) and the button reads
-**"Get My Approval Code"**, but the conformed thank-you now shows a **"Reference
-Number."** Either align step-3 copy to "reference number" or keep "approval code" as the
-funnel hook — owner's call. **apply/3 has the identical mismatch.**
+### Copy alignment (resolved)
+step-3 headline and button now read **"…send your reference number…"** and **"Get My
+Reference Number"** on **both apply/0 and apply/3**, matching the "Reference Number"
+thank-you. (`genApprovalCode()` stays defined but unused — remove on a cleanup pass.)
 
 ### Dead code
 `genApprovalCode()` is still defined in step-3 but no longer called (the thank-you

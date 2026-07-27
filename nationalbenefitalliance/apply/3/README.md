@@ -4,6 +4,15 @@ A condensed, mobile-first variant of the live `/apply/2/` funnel, built to A/B t
 against it for call-conversion rate. Branch: **`apply3-claim-code-variant`** (never merged
 to `main` until the test is decided).
 
+> **Update (branch `apply0-sms-compliance-funnel`) — thank-you conformed + CRM-gated:**
+> apply/3's `thank-you/` was replaced with apply/2's canonical "Reference Number" design
+> and a new `apply/3/thank-you-2/` fallback was added. step-3 now gates on `crm_accepted`:
+> accepted → `/apply/3/thank-you/` (completed-funnel number, `ty-call-btn`); otherwise →
+> `/apply/3/thank-you-2/` (started-funnel number `1-813-556-9954`, `alt-call-btn`, no
+> completed conversion). This **supersedes** the old "approval code" thank-you described
+> below. step-3's "approval code" wording is now a copy mismatch with the "Reference
+> Number" thank-you (see `apply/0/README.md`).
+
 The `/apply/3/` funnel pages are **purely additive** — they don't change the apply/2 funnel pages,
 `vercel.json`, or the main site, so the variant itself can't break the live funnel. Two **shared**
 things were changed deliberately (both verified, both improve the live funnel too):

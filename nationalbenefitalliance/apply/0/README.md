@@ -38,13 +38,36 @@ as apply/3.
 - Box **unchecked** → `tcpa_consent: false` → lead is **still submitted** (owner does
   not outbound-call; leads call inbound). We simply do **not** text these leads.
 
-## ⚠️ Open item for owner / compliance review
-The supplied consent copy begins **"By clicking the button, you confirm…"**, but the
-consent mechanism here is now an **optional checkbox**. A 10DLC/carrier reviewer may
-expect **"By checking this box, I agree…"** phrasing on a checkbox opt-in. Text used
-verbatim as provided — **flag for compliance before/at registration** if the
-button-vs-box wording should be aligned. (Only "Terms of Use" and "Privacy Policy"
-were linkified to `/terms/` and `/privacy/`; no other wording was changed.)
+## Consent copy note
+The checkbox label opens **"By checking this box, you confirm…"** (owner-updated to
+match the checkbox opt-in). Only "Terms of Use" and "Privacy Policy" were linkified to
+`/terms/` and `/privacy/`; wording is otherwise owner-supplied verbatim.
+
+## Thank-you pages (conformed to apply/2 + CRM-gated)
+The thank-you experience is **not** a tested variant — only the lander/steps are. So
+apply/0's thank-you pages were conformed to apply/2's canonical design:
+
+- `apply/0/thank-you/` and `apply/0/thank-you-2/` are **byte-identical to apply/2's**
+  (only the `/apply/2/` → `/apply/0/` paths differ): the "Congratulations! / Your
+  Reference Number" design (random 5-digit ref generated on the page).
+- **CRM-gate (matches apply/2):** step-3 now reads `crm_accepted` from the
+  `submit-lead` response (15s abort, **fail-closed**) and stores it in `nba_ty`.
+  - accepted → `/thank-you/` — completed-funnel number `1-813-560-8063`, `ty-call-btn`
+    (fires the completed-funnel conversion).
+  - not accepted / dropped / timed-out → `/thank-you-2/` — started-funnel number
+    `1-813-556-9954`, `alt-call-btn` (does **not** fire the completed conversion).
+  - `/thank-you/` also has a `<head>` guard: no accepted submission this session →
+    redirect to `/thank-you-2/` (closes direct-nav / bookmark / refresh holes).
+
+### ⚠️ Copy mismatch to resolve (funnel copy — left for the slower pass)
+step-3-phone still says **"…send your approval code…"** (headline) and the button reads
+**"Get My Approval Code"**, but the conformed thank-you now shows a **"Reference
+Number."** Either align step-3 copy to "reference number" or keep "approval code" as the
+funnel hook — owner's call. **apply/3 has the identical mismatch.**
+
+### Dead code
+`genApprovalCode()` is still defined in step-3 but no longer called (the thank-you
+generates its own reference number). Harmless; remove on a cleanup pass.
 
 ## GTM action (owner, not code)
 Make sure the **"Completed funnel" call-conversion trigger also fires on
@@ -66,7 +89,14 @@ Two untracked files sit in the repo root and were **left untouched**:
 - `MARKETING-PARTNERS-README.md`
 - `OFFERS-README.md`
 
+## Also changed on this branch (not just apply/0)
+- **apply/3 (LIVE variant):** its `thank-you/` was conformed to apply/2's design, a new
+  `apply/3/thank-you-2/` fallback was added, and step-3 was CRM-gated — same as apply/0.
+  This changes apply/3's live behavior (review in preview before going live).
+- **Sitewide "Find Assistance"** repoint (see above).
+- **apply/2 was NOT modified** (its thank-you is the canonical source).
+
 ## Rollback
-apply/0 is purely additive (its own folder, no `vercel.json` entry). To fully revert:
-delete `apply/0/` and re-point the two "Find Assistance" strings back to `/apply/2`.
-apply/2 and apply/3 were not modified.
+apply/0 is additive (its own folder incl. `thank-you-2/`, no `vercel.json` entry). To
+revert apply/0: delete `apply/0/` and re-point the two "Find Assistance" strings back to
+`/apply/2`. To revert the apply/3 changes: `git checkout main -- nationalbenefitalliance/apply/3`.

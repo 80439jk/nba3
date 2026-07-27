@@ -16,9 +16,12 @@ routed here; **paid traffic keeps going to `/apply/2/` and `/apply/3/`** (unchan
 | Thank-you | `/apply/0/thank-you/` |
 
 Same backend (`submit-lead` Supabase edge function), same payload shape, same
-GTM container (`GTM-MTQ5WNFR`), same TrustedForm + honeypot + time-trap, same
-phone lines (started-funnel `1-813-556-9954`, completed-funnel `1-813-560-8063`)
-as apply/3.
+GTM container (`GTM-MTQ5WNFR`), same TrustedForm + honeypot + time-trap as apply/3.
+**Phone scheme is different — funnel 0 is organic:** landing + steps use the main-site
+number **1-800-605-8906** (hours shown as Mon-Fri 8a-8p ET); the thank-you page uses a
+**dedicated organic line 1-239-456-9476**; the `thank-you-2` fallback uses the main-site
+number. Paid funnels apply/2 & apply/3 keep the started/completed funnel lines; the
+shared inactivity popup keeps its own number regardless of funnel.
 
 ## The 3 differences from apply/3 (all in `step-3-phone/index.html`)
 
@@ -50,17 +53,22 @@ brands and marketing partners). "Terms of Use"/"Privacy Policy" linkified to `/t
 The thank-you experience is **not** a tested variant — only the lander/steps are. So
 apply/0's thank-you pages were conformed to apply/2's canonical design:
 
-- `apply/0/thank-you/` and `apply/0/thank-you-2/` are **byte-identical to apply/2's**
-  (only the `/apply/2/` → `/apply/0/` paths differ): the "Congratulations! / Your
-  Reference Number" design (random 5-digit ref generated on the page).
-- **CRM-gate (matches apply/2):** step-3 now reads `crm_accepted` from the
-  `submit-lead` response (15s abort, **fail-closed**) and stores it in `nba_ty`.
-  - accepted → `/thank-you/` — completed-funnel number `1-813-560-8063`, `ty-call-btn`
-    (fires the completed-funnel conversion).
-  - not accepted / dropped / timed-out → `/thank-you-2/` — started-funnel number
-    `1-813-556-9954`, `alt-call-btn` (does **not** fire the completed conversion).
+- `apply/0/thank-you/` and `apply/0/thank-you-2/` use apply/2's "Congratulations! /
+  Reference Number" design (random 5-digit ref generated on the page); they differ from
+  apply/2 only in path **and phone number** (funnel-0 organic scheme, above).
+- **CRM-gate (matches apply/2):** step-3 reads `crm_accepted` from the `submit-lead`
+  response (15s abort, **fail-closed**) and stores it in `nba_ty`.
+  - accepted → `/thank-you/` — **dedicated organic line `1-239-456-9476`**, `ty-call-btn`.
+  - not accepted / dropped / timed-out → `/thank-you-2/` — **main-site `1-800-605-8906`**,
+    `alt-call-btn`. Keeps the new organic line exclusive to genuine completed leads.
   - `/thank-you/` also has a `<head>` guard: no accepted submission this session →
     redirect to `/thank-you-2/` (closes direct-nav / bookmark / refresh holes).
+
+⚠️ **GTM for the new organic line (owner action):** `1-239-456-9476` needs its own Google
+Ads Call Conversion action + a GTM tag mapping that `tel:` value. The funnel-0 thank-you
+button keeps the `ty-call-btn` class — if your GTM completed-funnel trigger keys on that
+**class** rather than the `tel:` value, funnel-0 calls would mis-fire the paid completed
+conversion; verify, and if so we should swap the class on funnel-0's thank-you only.
 
 ### Copy alignment (resolved)
 step-3 headline and button now read **"…send your reference number…"** and **"Get My

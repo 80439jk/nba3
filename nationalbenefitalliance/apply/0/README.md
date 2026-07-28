@@ -61,8 +61,16 @@ apply/0's thank-you pages were conformed to apply/2's canonical design:
   - accepted → `/thank-you/` — **dedicated organic line `1-239-456-9476`**, `ty-call-btn`.
   - not accepted / dropped / timed-out → `/thank-you-2/` — **main-site `1-800-605-8906`**,
     `alt-call-btn`. Keeps the new organic line exclusive to genuine completed leads.
-  - `/thank-you/` also has a `<head>` guard: no accepted submission this session →
-    redirect to `/thank-you-2/` (closes direct-nav / bookmark / refresh holes).
+- **Submission guard (`<head>`, runs before render) — thank-you pages require a
+  same-session submission.** A visitor with no `nba_ty` (never submitted this session:
+  direct nav, bookmark, cleared session) is bounced to the funnel start `/apply/0/`:
+  - `/thank-you/`: no `nba_ty` → `/apply/0/`; `nba_ty` present but not accepted →
+    `/thank-you-2/`; accepted → stays.
+  - `/thank-you-2/`: no `nba_ty` → `/apply/0/`; otherwise shows.
+  - Net effect: **reaching any thank-you page ⟺ a lead was submitted this session** (the
+    backend has their info). Accepted leads are unaffected (they always have `nba_ty`).
+  - Same guard added to **apply/3**. **apply/2 was left as-is** (its `thank-you-2` is
+    still reachable without a submission — extend on request).
 
 **GTM (confirmed by owner):** button-click tags fire on the `tel:` **value** (not a class),
 and call-connect conversions reach Google Ads via the forwarding-number + call-duration

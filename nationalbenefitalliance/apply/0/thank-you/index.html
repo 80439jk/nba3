@@ -13,7 +13,9 @@
   <script>
     (function () {
       try {
-        var ty = JSON.parse(sessionStorage.getItem('nba_ty') || '{}');
+        var raw = sessionStorage.getItem('nba_ty');
+        if (!raw) { window.location.replace('/apply/0/'); return; }
+        var ty = JSON.parse(raw);
         if (!ty || ty.crm_accepted !== true) {
           window.location.replace('/apply/0/thank-you-2/');
         }

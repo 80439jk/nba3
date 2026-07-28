@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Thank You — National Benefit Alliance</title>
   <meta name="robots" content="noindex, nofollow" />
+  <!-- Guard: thank-you pages are only for a same-session submission. If this
+       page is reached without one (direct nav, bookmark, cleared session),
+       send the visitor to the funnel start. Runs before render. -->
+  <script>
+    (function () {
+      try {
+        if (!sessionStorage.getItem('nba_ty')) { window.location.replace('/apply/0/'); }
+      } catch (e) {}
+    })();
+  </script>
   <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

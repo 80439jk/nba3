@@ -18,7 +18,7 @@ routed here; **paid traffic keeps going to `/apply/2/` and `/apply/3/`** (unchan
 Same backend (`submit-lead` Supabase edge function), same payload shape, same
 GTM container (`GTM-MTQ5WNFR`), same TrustedForm + honeypot + time-trap as apply/3.
 **Phone scheme is different — funnel 0 is organic:** landing + steps use the main-site
-number **1-800-605-8906** (hours shown as Mon-Fri 8a-8p ET); the thank-you page uses a
+number **1-800-605-8906** (hours Mon-Fri 9-6 ET); the thank-you page uses a
 **dedicated organic line 1-239-456-9476**; the `thank-you-2` fallback uses the main-site
 number. Paid funnels apply/2 & apply/3 keep the started/completed funnel lines; the
 shared inactivity popup keeps its own number regardless of funnel.
@@ -64,11 +64,10 @@ apply/0's thank-you pages were conformed to apply/2's canonical design:
   - `/thank-you/` also has a `<head>` guard: no accepted submission this session →
     redirect to `/thank-you-2/` (closes direct-nav / bookmark / refresh holes).
 
-⚠️ **GTM for the new organic line (owner action):** `1-239-456-9476` needs its own Google
-Ads Call Conversion action + a GTM tag mapping that `tel:` value. The funnel-0 thank-you
-button keeps the `ty-call-btn` class — if your GTM completed-funnel trigger keys on that
-**class** rather than the `tel:` value, funnel-0 calls would mis-fire the paid completed
-conversion; verify, and if so we should swap the class on funnel-0's thank-you only.
+**GTM (confirmed by owner):** button-click tags fire on the `tel:` **value** (not a class),
+and call-connect conversions reach Google Ads via the forwarding-number + call-duration
+criteria. So the `ty-call-btn` class is **not** a mis-fire risk and needs no change — the
+new organic line `1-239-456-9476` is tracked by its forwarding-number setup.
 
 ### Copy alignment (resolved)
 step-3 headline and button now read **"…send your reference number…"** and **"Get My

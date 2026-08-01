@@ -115,11 +115,28 @@ Four distinct lines, one per stage, so call-source attribution is unambiguous. *
 
 Previously rotated numbers `1-888-408-5650` and `1-855-767-9422` are retired; do not reintroduce.
 
+### Source-specific funnel clones (OpenAI, organic, …)
+
+Traffic-source attribution is handled by **cloning the funnel per source and hardcoding a dedicated line into the clone** — NOT by dynamically swapping numbers inside the Google funnel. This keeps the Google funnel (`apply/2`) and its Google Ads / GFN / GTM tracking completely untouched. Each clone is `noindex, nofollow` (inherited) and ad-only.
+
+| Source funnel | Dedicated line | Notes |
+|---|---|---|
+| `apply/oa1` | **OpenAI** `1-239-456-9477` / `tel:+12394569477` | Clone of `apply/2`. **All** funnel-visible lines (started + completed thank-you + popup) use this one OpenAI number. Ads point at `/apply/oa1/`. |
+| `apply/0` | Organic `1-239-456-9476` (thank-you only) | Pre-existing organic clone; uses the shared `/apply/popup.js` (813 popup line). |
+
+**`apply/oa1` specifics** (OpenAI PPC funnel):
+- **Number:** every call button (`.header__phone`, thank-you `.ty-call-btn`, popup) dials `+12394569477`. The footer main-site line `+18006058906` is intentionally left as-is.
+- **Dedicated popup:** `apply/oa1/popup.js` is a copy of `apply/popup.js` with only the phone number changed. It is a divergent copy — **if you change popup behavior, mirror it here too** (see popup-sync note below).
+- **OpenAI Pixel:** the vendor snippet (pixel id `QGuEefUgZBP6rpS45mJE5u`, `debug:true`) is hardcoded near the top of `<head>` on all 7 oa1 pages. Loads for every oa1 visitor (all of whom are OpenAI). Verbatim — do not edit the vendor snippet.
+- **Conversion:** `apply/oa1/oa-track.js` fires `oaiq("measure","registration_completed",{type:"customer_action"})` on any click of the OpenAI call button (`tel:+12394569477`). It is a **passive** listener — no `onclick`/`preventDefault`, so the call dials normally.
+
+**Rule for any NEW source funnel:** clone `apply/2`, rewrite `/apply/2/` → `/apply/<name>/`, substitute the dedicated line into every call button (and its dedicated popup copy), add the source's pixel to `<head>`, and add the source's conversion-fire script. Do **not** add source-detection or number-swap logic to the Google funnel.
+
 **GTM setup**: each of the four numbers has its own Google Ads Call Conversion action and a matching GTM tag mapping that `tel:` value to the correct conversion label. Owner-managed in the GTM/Ads UI. Attribution uses the `_gcl_aw` cookie (90-day), so clearing `sessionStorage` between steps doesn't break it.
 
 **Inactivity popup safety**: only fires after 30s of mouse/touch inactivity, well after Google's crawler has scored the page. Underlying HTML is identical for everyone — not cloaking.
 
-**Popup behavior (KEEP IN SYNC WITH UB `qualify/popup.js`)**: `apply/popup.js` is a sibling of the UtilityBenefits popup; the two must stay behaviorally identical — only brand skin (NBA amber/navy + Poppins vs UB emerald/green + DM Sans) and the phone number differ. When you change one, change the other and update both CLAUDE.md files. Canonical behavior:
+**Popup behavior (KEEP IN SYNC WITH UB `qualify/popup.js`)**: `apply/popup.js` is a sibling of the UtilityBenefits popup; the two must stay behaviorally identical — only brand skin (NBA amber/navy + Poppins vs UB emerald/green + DM Sans) and the phone number differ. When you change one, change the other and update both CLAUDE.md files. **Also mirror any behavior change into `apply/oa1/popup.js`** — it is a number-only fork of this file for the OpenAI funnel. Canonical behavior:
 - Fires after **30s** of mouse/touch inactivity (`DELAY = 30000`) — never shorten.
 - Shows **once per session** (`nba_popup_shown` / UB `ub_popup_shown`).
 - **Re-pops after close:** once shown per session, the popup **re-appears 30s after the visitor closes it** on that page (the inactivity timer re-arms on mouse/touch — intentionally no teardown). This is the long-standing behavior the owner wants; do not add a once-and-done teardown without owner sign-off.

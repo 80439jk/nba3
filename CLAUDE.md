@@ -48,7 +48,10 @@ nationalbenefitalliance/
 ├── apply/
 │   ├── popup.js                # 30-second inactivity popup, loaded on every funnel page
 │   ├── 1/                      # legacy funnel — redirected to /apply/2; kept as fallback
-│   └── 2/                      # live funnel (declared A/B winner)
+│   ├── 2/                      # primary Google funnel (declared A/B winner)
+│   ├── 3/                      # RETIRED A/B variant — redirected to /apply/2; archived, not deleted
+│   ├── 4/                      # active A/B variant — lean funnel (fewer fields/step); ad-only, noindex
+│   └── 0/, oa1/, bg1/          # source-specific clones (organic, OpenAI, Bing) — see clones section
 ├── about/, privacy/, terms/, stories/, resources/{...10 categories}
 ├── prototype/                  # design experiments — not linked from production
 ├── [50 state directories]/     # state landing pages
@@ -64,7 +67,9 @@ County pages use `<html lang="en" prefix="og: https://ogp.me/ns#">` while core/s
 
 ## The Apply Funnel
 
-`/apply/2/` is the only funnel receiving traffic. `vercel.json` issues permanent (308) redirects from `/apply/1` and `/apply/1/:path*` → `/apply/2` so any legacy bookmarks, ad variants, or deep links restart in funnel 2. The `/apply/1/` HTML is preserved as a rollback path; do not modify it or link to it.
+`/apply/2/` is the primary Google funnel. `vercel.json` issues permanent (308) redirects from `/apply/1`, `/apply/1/:path*`, `/apply/3`, and `/apply/3/:path*` → `/apply/2`, so legacy bookmarks, retired-variant links, and deep links restart in funnel 2. The `/apply/1/` and `/apply/3/` HTML is preserved as a rollback/archive path; do not modify it or link to it.
+
+**`/apply/4/` is an active lean A/B variant** of apply/2 (fewer fields per step) — ad-only, `noindex`, served statically. It's live but dormant until a slice of Google Ads traffic is pointed at it to test call-conversion rate against apply/2. Source-specific clones (`apply/0` organic, `apply/oa1` OpenAI, `apply/bg1` Bing) are covered in the clones section below.
 
 ### apply/2 — live funnel
 
@@ -82,6 +87,14 @@ Each step file is self-contained (~1,300–1,450 lines), CSS embedded in `<head>
 ### apply/1 — redirected fallback
 
 Same general step structure as apply/2 but with generic step names (`step-1` … `step-5`) and one extra step at the front (state selection) since apply/2 collects state on the landing page. Reference only.
+
+### apply/4 — active lean A/B variant
+
+A conversion-rate variant of apply/2 with **fewer fields per step**. Flow: landing (need type only, **no state**) → `step-1-dob` (DOB only, **no citizenship**) → `step-2-zip` (ZIP only, **no street/city**) → `step-3-phone` (phone only) → `step-4-name-email` (first/last/email + TCPA consent + TrustedForm + honeypot/time-trap, **submits the lead**) → `thank-you` / `thank-you-2`. Purely additive; reuses apply/2's phone numbers (so it fires the **same** call conversions by `tel:` value — no new Ads setup), backend edge function, GTM, and bot detection. Dropped fields (`citizenship`, `street_address`, `city`, `annual_income`, `employment_status`) post as blank strings — the backend accepts this; `state` is backfilled from the ZIP via an embedded `zipToState()` map. DOB is kept, so `age` derives normally. **Before pointing ads here**, confirm the GTM "Completed funnel" trigger matches `/apply/4/thank-you/` and run one test lead. See `apply/4/README.md`.
+
+### apply/3 — retired A/B variant (archived)
+
+"Claim Code" Variant B. **A/B tested against apply/2 and lost**, so it's retired: `vercel.json` 308-redirects `/apply/3` and `/apply/3/:path*` → `/apply/2`, and it's removed from the sitemap. The HTML is **preserved in place as a rollback/archive reference** (see the RETIRED banner in `apply/3/README.md`) — do not modify it or link to it.
 
 ---
 
@@ -161,7 +174,7 @@ Traffic-source attribution is handled by **cloning the funnel per source and har
 ## Vercel Configuration (`vercel.json`)
 
 - Clean URLs, no trailing slashes
-- **Redirects (308)**: `/apply/1` and `/apply/1/:path*` → `/apply/2`
+- **Redirects (308)**: `/apply/1`, `/apply/1/:path*`, `/apply/3`, `/apply/3/:path*` → `/apply/2` (apply/1 legacy + apply/3 retired variant)
 - **Rewrites**: `/search` → `/api/search`, `/sitemap.xml` → `/api/sitemap`, `/humans.txt` → `/api/humans`
 - Security headers: `X-Content-Type-Options: nosniff`, `X-Frame-Options: SAMEORIGIN`, `X-XSS-Protection: 1; mode=block`, `Referrer-Policy: strict-origin-when-cross-origin`
 - Cache: `/css/*` immutable 1y, `/js/*` `must-revalidate`

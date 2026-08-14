@@ -69,13 +69,14 @@ CallTools + Caliber accept this lean record** with those five blank.
 3. **Same step *count* as apply/2 (5), fewer *fields*.** The friction reduction is per-screen, not
    fewer screens (the owner chose to keep the DOB step). If you later want a shorter funnel, the
    DOB step is the obvious one to drop.
-4. **`apply/3` is a very similar short-funnel variant** ("Claim Code" Variant B) that also exists
-   unmerged. Two near-duplicate variants now exist — decide which to run and **retire the other**
-   before this proliferates. apply/4 matches the owner's exact spec; apply/3 additionally collects
-   age and orders phone last.
+4. **Retire `apply/3`.** It's a similar short-funnel variant ("Claim Code" Variant B) that was
+   **A/B tested against apply/2 and did not win** — so it should be retired. **apply/4 is the active
+   variant going forward.** Retiring apply/3 means: delete the `apply/3/` directory **and** remove
+   its entries from `sitemap-main.xml`. Best done on its own small branch so it doesn't ride along
+   with this variant's A/B test — ask and I'll do it.
 5. **`apply/3` appears in `sitemap-main.xml`.** Ad-only funnels are `noindex` and normally stay out
-   of the sitemap. **apply/4 was intentionally NOT added to the sitemap.** Consider removing apply/3
-   from the sitemap too (observation only — not changed here).
+   of the sitemap. **apply/4 was intentionally NOT added to the sitemap.** These apply/3 sitemap
+   entries should be removed as part of retiring apply/3 (see #4).
 6. **`_build_apply4_variant.py`** (repo root) is the one-off build script. It can be deleted after
    review, or kept for reference. Re-running it is a safe no-op.
 

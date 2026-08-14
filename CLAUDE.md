@@ -122,6 +122,7 @@ Traffic-source attribution is handled by **cloning the funnel per source and har
 | Source funnel | Dedicated line | Notes |
 |---|---|---|
 | `apply/oa1` | **OpenAI** `1-239-456-9477` / `tel:+12394569477` | Clone of `apply/2`. **All** funnel-visible lines (started + completed thank-you + popup) use this one OpenAI number. Ads point at `/apply/oa1/`. |
+| `apply/bg1` | **Bing/Microsoft** — 3 lines: Funnel `1-239-480-9440` / `tel:+12394809440` · ThankYou `1-239-480-9438` / `tel:+12394809438` · Popup `1-645-238-9372` / `tel:+16452389372` | Clone of `apply/2`. **Keeps the 3-way segmentation** (started/completed/popup) rather than collapsing to one number like oa1. UET tracking lives in **GTM**, not inline. Ads point at `/apply/bg1/`. See `BING-SOURCE-README.md`. |
 | `apply/0` | Organic `1-239-456-9476` (thank-you only) | Pre-existing organic clone; uses the shared `/apply/popup.js` (813 popup line). |
 
 **`apply/oa1` specifics** (OpenAI PPC funnel):
@@ -130,13 +131,22 @@ Traffic-source attribution is handled by **cloning the funnel per source and har
 - **OpenAI Pixel:** the vendor snippet (pixel id `QGuEefUgZBP6rpS45mJE5u`, `debug:true`) is hardcoded near the top of `<head>` on all 7 oa1 pages. Loads for every oa1 visitor (all of whom are OpenAI). Verbatim — do not edit the vendor snippet.
 - **Conversion:** `apply/oa1/oa-track.js` fires `oaiq("measure","registration_completed",{type:"customer_action"})` on any click of the OpenAI call button (`tel:+12394569477`). It is a **passive** listener — no `onclick`/`preventDefault`, so the call dials normally.
 
-**Rule for any NEW source funnel:** clone `apply/2`, rewrite `/apply/2/` → `/apply/<name>/`, substitute the dedicated line into every call button (and its dedicated popup copy), add the source's pixel to `<head>`, and add the source's conversion-fire script. Do **not** add source-detection or number-swap logic to the Google funnel.
+**`apply/bg1` specifics** (Bing/Microsoft PPC funnel):
+- **Numbers — 3-way segmentation (deliberately unlike oa1's single line):**
+  - **Funnel** `+12394809440` — header `.header__phone` pill + step CTAs on landing + steps 1–4 + the `thank-you-2` fallback page.
+  - **ThankYou** `+12394809438` — the CRM-accepted `thank-you` body call button (`.ty-call-btn`) only.
+  - **Popup** `+16452389372` — `apply/bg1/popup.js` only.
+  - The footer main-site line is left as-is (apply/2 has no other numbers inside the funnel).
+- **Dedicated popup:** `apply/bg1/popup.js` is a number-only copy of `apply/popup.js` — same divergent-copy rule as oa1: mirror any popup *behavior* change here too.
+- **No inline pixel, no conversion-fire script.** Microsoft UET is a standard GTM tag, so it lives in the **GTM container** (`GTM-MTQ5WNFR`, already on every page). The owner installs the UET base tag + a UET conversion/event tag in GTM, scoping the conversion trigger to the Bing `tel:` values (`+12394809440` / `+12394809438`) or the `/apply/bg1/` path so Bing calls stay isolated from Google-funnel calls. This is the intentional difference from oa1, whose OpenAI pixel isn't GTM-manageable.
+
+**Rule for any NEW source funnel:** clone `apply/2`, rewrite `/apply/2/` → `/apply/<name>/`, substitute the dedicated line into every call button (and its dedicated popup copy), add the source's pixel to `<head>`, and add the source's conversion-fire script. Do **not** add source-detection or number-swap logic to the Google funnel. *(Exception: when the source's tracking is a standard GTM tag — e.g. Microsoft UET, as in `apply/bg1` — install it in the GTM container instead, and skip the inline pixel + conversion-fire script.)*
 
 **GTM setup**: each of the four numbers has its own Google Ads Call Conversion action and a matching GTM tag mapping that `tel:` value to the correct conversion label. Owner-managed in the GTM/Ads UI. Attribution uses the `_gcl_aw` cookie (90-day), so clearing `sessionStorage` between steps doesn't break it.
 
 **Inactivity popup safety**: only fires after 30s of mouse/touch inactivity, well after Google's crawler has scored the page. Underlying HTML is identical for everyone — not cloaking.
 
-**Popup behavior (KEEP IN SYNC WITH UB `qualify/popup.js`)**: `apply/popup.js` is a sibling of the UtilityBenefits popup; the two must stay behaviorally identical — only brand skin (NBA amber/navy + Poppins vs UB emerald/green + DM Sans) and the phone number differ. When you change one, change the other and update both CLAUDE.md files. **Also mirror any behavior change into `apply/oa1/popup.js`** — it is a number-only fork of this file for the OpenAI funnel. Canonical behavior:
+**Popup behavior (KEEP IN SYNC WITH UB `qualify/popup.js`)**: `apply/popup.js` is a sibling of the UtilityBenefits popup; the two must stay behaviorally identical — only brand skin (NBA amber/navy + Poppins vs UB emerald/green + DM Sans) and the phone number differ. When you change one, change the other and update both CLAUDE.md files. **Also mirror any behavior change into the number-only forks `apply/oa1/popup.js` (OpenAI) and `apply/bg1/popup.js` (Bing).** Canonical behavior:
 - Fires after **30s** of mouse/touch inactivity (`DELAY = 30000`) — never shorten.
 - Shows **once per session** (`nba_popup_shown` / UB `ub_popup_shown`).
 - **Re-pops after close:** once shown per session, the popup **re-appears 30s after the visitor closes it** on that page (the inactivity timer re-arms on mouse/touch — intentionally no teardown). This is the long-standing behavior the owner wants; do not add a once-and-done teardown without owner sign-off.

@@ -74,9 +74,13 @@ CallTools + Caliber accept this lean record** with those five blank.
    variant going forward.** Retiring apply/3 means: delete the `apply/3/` directory **and** remove
    its entries from `sitemap-main.xml`. Best done on its own small branch so it doesn't ride along
    with this variant's A/B test — ask and I'll do it.
-5. **`apply/3` appears in `sitemap-main.xml`.** Ad-only funnels are `noindex` and normally stay out
-   of the sitemap. **apply/4 was intentionally NOT added to the sitemap.** These apply/3 sitemap
-   entries should be removed as part of retiring apply/3 (see #4).
+5. **`sitemap-main.xml` lists ad-only funnels it shouldn't** — separate cleanup. It contains
+   entries for `apply/2` (**listed twice**), `apply/3`, `apply/4`, **and `apply/5` (which does not
+   exist)** — all added long ago by a "sitemap architecture" commit. These are `noindex` ad-only
+   funnels, so none of them belong in a public sitemap. (Correction to an earlier note: `apply/4`
+   was already in the sitemap before this variant existed — it wasn't added here, and wasn't
+   "intentionally left out" either.) Recommended follow-up: drop all `apply/N` funnel entries from
+   the sitemap and de-dupe `apply/2`. Retiring apply/3 removes its entry (see #4); the rest is broader.
 6. **`_build_apply4_variant.py`** (repo root) is the one-off build script. It can be deleted after
    review, or kept for reference. Re-running it is a safe no-op.
 

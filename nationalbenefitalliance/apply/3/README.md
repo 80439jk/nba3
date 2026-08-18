@@ -4,7 +4,7 @@
 > retired via a 308 redirect in `vercel.json` (`/apply/3` and `/apply/3/:path*` → `/apply/2`,
 > mirroring how `/apply/1` is handled), and the `/apply/3/` entry was removed from
 > `sitemap-main.xml`. **Do not send ad traffic here** (it will bounce to apply/2). The active
-> lean variant going forward is **`/apply/4/`**. Everything below is preserved history.
+> lean variant going forward is **`/info/01/`**. Everything below is preserved history.
 
 ---
 

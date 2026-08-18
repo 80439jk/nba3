@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Get Matched with Benefit Programs — National Benefit Alliance</title>
+  <title>Step 2: Basic Information — National Benefit Alliance</title>
   <meta name="robots" content="noindex, nofollow" />
   <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -20,7 +20,7 @@
 
 :root {
   
-  /* Production color scheme — navy/amber design */
+  /* Production color scheme — extracted from nationalbenefitalliance.com */
   --blue-600: #2563eb;
   --blue-700: #1d4ed8;
   --blue-50: #eff6ff;
@@ -189,53 +189,6 @@ body {
 }
 
 
-
-/* ========== TRUST BADGES v2 ========== */
-.trust2-section {
-  background: white;
-  padding: 2.5rem 1rem;
-  border-top: 1px solid var(--gray-100);
-  border-bottom: 1px solid var(--gray-100);
-}
-.trust2-inner {
-  max-width: 52rem;
-  margin: 0 auto;
-}
-.trust2-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem 2rem;
-}
-@media (min-width: 640px) {
-  .trust2-grid { grid-template-columns: repeat(4, 1fr); gap: 1rem; }
-}
-.trust2-badge {
-  display: flex;
-  align-items: center;
-  gap: 0.875rem;
-}
-.trust2-icon-wrap {
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  background-color: var(--amber-50);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  color: var(--amber-500);
-}
-.trust2-icon-wrap svg {
-  width: 1.125rem;
-  height: 1.125rem;
-}
-.trust2-label {
-  font-size: 0.9375rem;
-  font-weight: 700;
-  color: var(--navy-900);
-  line-height: 1.3;
-}
-
 /* ========== FOOTER ========== */
 .footer {
   background-color: var(--gray-900);
@@ -254,7 +207,7 @@ body {
 .footer__brand {
   font-weight: 600;
   color: white;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .footer__links {
@@ -273,7 +226,7 @@ body {
 }
 
 .footer__links a:hover {
-  color: var(--amber-500);
+  color: white;
 }
 
 .footer__disclaimer {
@@ -297,12 +250,12 @@ main {
 
 /* ========== LANDING PAGE HERO ========== */
 .hero {
-  background: white;
-  padding: 2.5rem 1rem;
+  background: linear-gradient(to bottom, var(--navy-900), var(--navy-800));
+  padding: 4rem 1rem;
 }
 
 @media (min-width: 768px) {
-  .hero { padding: 1.25rem 1rem 1.5rem; }
+  .hero { padding: 5rem 1rem; }
 }
 
 .hero__inner {
@@ -313,41 +266,46 @@ main {
 
 .hero__label {
   display: inline-block;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 600;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.025em;
   text-transform: uppercase;
-  color: var(--amber-600);
-  margin-bottom: 0.5rem;
-  margin-top: 0;
+  color: var(--amber-500);
+  margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
 }
 
 .hero__headline {
   font-family: var(--font-head);
-  font-size: clamp(1.35rem, 4vw, 2.75rem);
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
   font-weight: 700;
   line-height: 1.25;
-  color: var(--navy-900);
-  margin-bottom: 0.6rem;
+  color: white;
+  margin-bottom: 1.25rem;
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
 }
 
 .hero__subtitle {
   font-size: 1.1rem;
-  line-height: 1.35;
-  color: var(--gray-700);
-  margin-bottom: 0.5rem;
+  line-height: 1.625;
+  color: var(--gray-200);
+  margin-bottom: 2rem;
   max-width: 40rem;
   margin-left: auto;
   margin-right: auto;
 }
 
 @media (min-width: 768px) {
-  .hero__subtitle { font-size: 1.15rem; }
 }
 
 .hero__cta {
   display: inline-block;
-  padding: 1rem 2.5rem;
+  padding: 1.25rem 2.5rem;
   background-color: var(--amber-500);
   color: white;
   font-size: 1.1rem;
@@ -356,110 +314,13 @@ main {
   border-radius: 0.5rem;
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.3s;
-  box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.3), 0 4px 6px -4px rgba(245, 158, 11, 0.2);
+  transition: all 0.2s;
+  box-shadow: var(--shadow-lg);
 }
 
 .hero__cta:hover {
   background-color: var(--amber-600);
-  box-shadow: 0 20px 25px -5px rgba(245, 158, 11, 0.4), 0 8px 10px -6px rgba(245, 158, 11, 0.2);
-  transform: translateY(-1px);
-}
-
-/* ========== HERO KEYWORD STRIP ========== */
-.hero__keywords {
-  font-size: 1.05rem;
-  color: var(--gray-500);
-  margin: 0 auto 0.75rem;
-  max-width: 56rem;
-  line-height: 1.6;
-}
-
-.hero__keywords strong {
-  font-weight: 600;
-  color: var(--gray-600);
-  white-space: nowrap;
-}
-
-.hero__keywords-sep {
-  margin: 0 0.3rem;
-  opacity: 0.6;
-}
-
-@media (max-width: 640px) {
-  .hero__keywords { font-size: 0.95rem; }
-  .hero__keywords-sep { margin: 0 0.35rem; }
-}
-
-/* ========== HERO STATE FORM ========== */
-.hero__form {
-  max-width: 28rem;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.hero__form-select {
-  width: 100%;
-  padding: 1rem 1.125rem;
-  border: 2.5px solid var(--amber-500);
-  border-radius: 0.625rem;
-  font-size: 1rem;
-  font-weight: 700;
-  font-family: inherit;
-  background-color: #fef8ee;
-  color: var(--navy-900);
-  margin-bottom: 0;
-  cursor: pointer;
-  appearance: none;
-  -webkit-appearance: none;
-  background-image: none;
-  padding-right: 3.5rem;
-  box-shadow: inset 0 0 0 4px rgba(245, 158, 11, 0.1);
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-.hero__form-select:focus {
-  outline: none;
-}
-
-.hero__form-error {
-  display: none;
-  font-size: 0.875rem;
-  color: #fecaca;
-  margin-top: -0.5rem;
-  margin-bottom: 0.875rem;
-  text-align: left;
-}
-
-.hero__form-error.show { display: block; }
-
-.hero__form-btn {
-  width: 100%;
-  padding: 1rem 1.5rem;
-  background-color: var(--amber-500);
-  color: white;
-  font-size: 1.05rem;
-  font-weight: 700;
-  border: none;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: all 0.3s;
-  box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.3), 0 4px 6px -4px rgba(245, 158, 11, 0.2);
-  font-family: inherit;
-}
-
-.hero__form-btn:hover {
-  background-color: var(--amber-600);
-  box-shadow: 0 20px 25px -5px rgba(245, 158, 11, 0.4), 0 8px 10px -6px rgba(245, 158, 11, 0.2);
-  transform: translateY(-1px);
-}
-
-.hero__form-disclaimer {
-  font-size: 0.8125rem;
-  color: var(--gray-400);
-  margin-top: 0.875rem;
-  text-align: center;
-  line-height: 1.5;
+  box-shadow: var(--shadow-xl);
 }
 
 /* ========== TRUST BADGES ========== */
@@ -467,7 +328,7 @@ main {
   background-color: white;
   border-top: 1px solid var(--gray-200);
   border-bottom: 1px solid var(--gray-200);
-  padding: 2rem 1rem;
+  padding: 3rem 1rem;
 }
 
 .trust-section__inner {
@@ -478,13 +339,13 @@ main {
 .trust-badges {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 2rem;
   flex-wrap: wrap;
   align-items: center;
 }
 
 @media (min-width: 768px) {
-  .trust-badges { gap: 3rem; }
+  .trust-badges { gap: 4rem; }
 }
 
 .badge {
@@ -503,7 +364,7 @@ main {
 .badge__icon--green { color: var(--amber-500); }
 
 .badge__text {
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--gray-700);
 }
@@ -532,18 +393,22 @@ main {
 }
 
 .programs-card__intro {
-  font-size: 1.05rem;
+  font-size: 1.125rem;
   color: var(--gray-700);
-  line-height: 1.7;
-  margin-bottom: 1.5rem;
+  line-height: 1.625;
+  margin-bottom: 2rem;
 }
 
 .programs-card__title {
   font-family: var(--font-head);
-  font-size: clamp(1.4rem, 3vw, 1.75rem);
+  font-size: 1.875rem;
   font-weight: 700;
   color: var(--gray-900);
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .programs-card__title { font-size: 2.25rem; }
 }
 
 .programs-check-list {
@@ -554,7 +419,7 @@ main {
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .programs-check-item:last-child { margin-bottom: 0; }
@@ -568,7 +433,7 @@ main {
 }
 
 .programs-check-text {
-  font-size: 1.05rem;
+  font-size: 1.125rem;
   color: var(--gray-700);
 }
 
@@ -580,17 +445,16 @@ main {
   color: white;
   font-size: 1.1rem;
   font-weight: 700;
-  padding: 1rem 2.5rem;
+  padding: 1.25rem 3rem;
   border-radius: 0.5rem;
   text-decoration: none;
-  transition: all 0.3s;
-  box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.3);
+  transition: all 0.2s;
+  box-shadow: var(--shadow-lg);
 }
 
 .programs-card__cta:hover {
   background-color: var(--amber-600);
-  box-shadow: 0 20px 25px -5px rgba(245, 158, 11, 0.4);
-  transform: translateY(-1px);
+  box-shadow: var(--shadow-xl);
 }
 
 /* ========== HOW IT WORKS SECTION ========== */
@@ -610,7 +474,10 @@ main {
   font-weight: 700;
   color: var(--gray-900);
   text-align: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
 }
 
 .how-section__subtitle {
@@ -623,7 +490,7 @@ main {
 .how-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
+  gap: 2rem;
   margin-bottom: 2.5rem;
 }
 
@@ -632,7 +499,7 @@ main {
 }
 
 .how-step {
-  border-radius: 1rem;
+  border-radius: 0.75rem;
   padding: 2rem;
   text-align: center;
   border: 1px solid;
@@ -659,7 +526,7 @@ main {
   font-family: var(--font-head);
   font-size: 1.25rem;
   font-weight: 700;
-  margin-bottom: 0.6rem;
+  margin-bottom: 1.25rem;
 }
 
 .how-step--blue .how-step__number { background-color: var(--navy-800); }
@@ -685,14 +552,14 @@ main {
 }
 
 .how-free-banner__title {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--gray-900);
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
 }
 
 .how-free-banner__text {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   color: var(--gray-700);
 }
 
@@ -716,37 +583,40 @@ main {
   margin-bottom: 2.5rem;
 }
 
+@media (min-width: 768px) {
+}
+
 .expect-card {
   background: white;
   border-radius: 0.75rem;
   box-shadow: var(--shadow-md);
-  padding: 1.5rem;
+  padding: 2rem;
   border: 1px solid var(--gray-100);
   margin-bottom: 2rem;
 }
 
 @media (min-width: 768px) {
-  .expect-card { padding: 2.5rem; }
+  .expect-card { padding: 3rem; }
 }
 
 .expect-item {
   display: flex;
   align-items: flex-start;
-  gap: 0.75rem;
+  gap: 1rem;
 }
 
-.expect-item + .expect-item { margin-top: 1rem; }
+.expect-item + .expect-item { margin-top: 1.25rem; }
 
 .expect-icon {
   flex-shrink: 0;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.75rem;
+  height: 1.75rem;
   color: var(--green-600);
-  margin-top: 0.2rem;
+  margin-top: 0.25rem;
 }
 
 .expect-text {
-  font-size: 1.05rem;
+  font-size: 1.125rem;
   color: var(--gray-700);
 }
 
@@ -754,7 +624,7 @@ main {
   background-color: var(--navy-50);
   border: 2px solid var(--navy-100);
   border-radius: 0.75rem;
-  padding: 1.5rem;
+  padding: 2rem;
   text-align: center;
 }
 
@@ -762,38 +632,12 @@ main {
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--gray-900);
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
 }
 
 .expect-free-banner__text {
-  font-size: 1.05rem;
+  font-size: 1.125rem;
   color: var(--gray-700);
-}
-
-/* ========== MID-PAGE CTA ========== */
-.mid-cta-section {
-  background: var(--gray-50);
-  padding: 2.5rem 1rem;
-  text-align: center;
-  border-top: 1px solid var(--gray-200);
-  border-bottom: 1px solid var(--gray-200);
-}
-.mid-cta-btn {
-  display: inline-block;
-  background-color: var(--amber-500);
-  color: white;
-  font-size: 1.1rem;
-  font-weight: 700;
-  padding: 1rem 2.5rem;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  transition: all 0.3s;
-  box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.3);
-}
-.mid-cta-btn:hover {
-  background-color: var(--amber-600);
-  box-shadow: 0 20px 25px -5px rgba(245, 158, 11, 0.4);
-  transform: translateY(-1px);
 }
 
 /* ========== FINAL CTA SECTION ========== */
@@ -813,17 +657,15 @@ main {
   font-family: var(--font-head);
   font-size: clamp(1.5rem, 3.5vw, 2rem);
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
 }
 
 .final-cta-section__subtitle {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: var(--gray-200);
-  margin-bottom: 0.75rem;
-}
-.final-cta-section__sub2 {
-  font-size: 1rem;
-  color: rgba(255,255,255,0.55);
   margin-bottom: 2rem;
 }
 
@@ -833,23 +675,22 @@ main {
   color: white;
   font-size: 1.1rem;
   font-weight: 700;
-  padding: 1rem 2.5rem;
+  padding: 1.25rem 3rem;
   border-radius: 0.5rem;
   text-decoration: none;
-  transition: all 0.3s;
-  box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.3);
+  transition: all 0.2s;
+  box-shadow: var(--shadow-lg);
 }
 
 .final-cta-section__btn:hover {
   background-color: var(--amber-600);
-  box-shadow: 0 20px 25px -5px rgba(245, 158, 11, 0.4);
-  transform: translateY(-1px);
+  box-shadow: var(--shadow-xl);
 }
 
 /* ========== BOTTOM CTA BAR ========== */
 .bottom-cta-bar {
   background: white;
-  padding: 3rem 1rem;
+  padding: 4rem 1rem;
   text-align: center;
 }
 
@@ -857,20 +698,19 @@ main {
   display: inline-block;
   background-color: var(--amber-500);
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  padding: 1rem 2.5rem;
+  padding: 1.5rem 3.5rem;
   border-radius: 0.5rem;
   text-decoration: none;
-  transition: all 0.3s;
-  box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.3);
+  transition: all 0.2s;
+  box-shadow: var(--shadow-lg);
   margin-bottom: 1.5rem;
 }
 
 .bottom-cta-bar__btn:hover {
   background-color: var(--amber-600);
-  box-shadow: 0 20px 25px -5px rgba(245, 158, 11, 0.4);
-  transform: translateY(-1px);
+  box-shadow: var(--shadow-xl);
 }
 
 .bottom-cta-bar__text {
@@ -903,7 +743,7 @@ main {
 
 /* ========== PROGRESS BAR ========== */
 .progress-container {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .progress-row {
@@ -942,19 +782,20 @@ main {
 /* ========== FORM ELEMENTS ========== */
 .form-title {
   font-family: var(--font-head);
-  font-size: 1.875rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--gray-900);
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   text-align: center;
 }
 
 .form-subtitle {
-  font-size: 1.125rem;
-  color: var(--gray-600);
-  margin-bottom: 2rem;
+  font-size: 0.9375rem;
   line-height: 1.5;
-  text-align: center;
+  color: #1a2b47;
+  font-weight: 700;
+  margin: -0.25rem 0 1.25rem;
+  text-align: left;
 }
 
 .form-group {
@@ -979,7 +820,7 @@ main {
   padding: 0.75rem 1rem;
   border: 1px solid var(--gray-300);
   border-radius: 0.5rem;
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-family: inherit;
   transition: border-color 0.2s, box-shadow 0.2s;
   background-color: #fff;
@@ -1108,7 +949,7 @@ main {
 
 .btn {
   padding: 0.75rem 1.5rem;
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 600;
   border: none;
   border-radius: 0.5rem;
@@ -1218,7 +1059,7 @@ main {
 }
 
 @media (min-width: 768px) {
-  .ty-card { padding: 2.5rem; }
+  .ty-card { padding: 2rem; }
 }
 
 .ty-icon-wrap {
@@ -1266,7 +1107,7 @@ main {
 }
 
 .ty-ref {
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--gray-900);
   margin-bottom: 1.5rem;
@@ -1286,12 +1127,12 @@ main {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--gray-900);
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .ty-action-box__text {
   color: var(--gray-700);
-  font-size: 1.05rem;
+  font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
@@ -1302,14 +1143,14 @@ main {
   gap: 0.75rem;
   background-color: var(--amber-500);
   color: white;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   padding: 1.5rem 3rem;
   border-radius: 0.5rem;
   font-weight: 700;
   text-decoration: none;
   transition: all 0.2s;
   box-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.3);
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .ty-call-btn:hover {
@@ -1328,7 +1169,7 @@ main {
 .ty-phone-note {
   font-size: 0.875rem;
   color: var(--gray-700);
-  margin-bottom: 0.6rem;
+  margin-bottom: 1.25rem;
 }
 
 .ty-expire-note {
@@ -1347,14 +1188,14 @@ main {
 /* Benefit checkmarks */
 .ty-benefits {
   text-align: left;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .ty-benefit-item {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
-  margin-bottom: 0.6rem;
+  margin-bottom: 1.25rem;
 }
 
 .ty-benefit-item:last-child {
@@ -1415,7 +1256,7 @@ main {
 /* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
   .form-title {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 
   .trust-badges {
@@ -1428,266 +1269,6 @@ main {
   }
 }
 
-
-@media (max-width: 640px) {
-  .hero__subtitle { display: none; }
-  .hero { padding: 1.5rem 1rem 2rem; }
-  .hero__keywords { margin-bottom: 1rem; }
-}
-
-.hero__form-micro {
-  font-size: 0.875rem;
-  color: rgba(255,255,255,0.7);
-  margin-bottom: 0.625rem;
-  text-align: center;
-}
-
-.hero__form-checks {
-  display: flex;
-  justify-content: center;
-  gap: 1.25rem;
-  margin-top: 0.875rem;
-  font-size: 0.8125rem;
-  color: rgba(255,255,255,0.8);
-  font-weight: 500;
-}
-
-/* ========== HERO REVAMP ========== */
-.hero__oneliner {
-  font-size: 1rem;
-  color: var(--gray-600);
-  margin: 0 auto 1.25rem;
-  max-width: 38rem;
-  line-height: 1.5;
-}
-
-
-
-/* White card */
-.hero__card {
-  background: white;
-  border: 1.5px solid var(--gray-200);
-  border-radius: 1rem;
-  padding: 2.5rem;
-  max-width: 34rem;
-  margin: 0 auto 1.5rem;
-  text-align: left;
-  box-shadow: 0 25px 50px -8px rgba(26, 43, 71, 0.45), 0 10px 20px -6px rgba(26, 43, 71, 0.3);
-}
-@media (max-width: 640px) {
-  .hero__card { padding: 1.5rem; border-radius: 0.75rem; }
-}
-.hero__card-header {
-  display: flex;
-  align-items: baseline;
-  gap: 0.6rem;
-  margin-bottom: 0.375rem;
-}
-.hero__card-step {
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: 50%;
-  background-color: var(--amber-500);
-  color: var(--navy-900);
-  font-size: 0.8rem;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-.hero__card-title {
-  font-family: var(--font-head);
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--gray-900);
-  margin-bottom: 0;
-}
-.hero__card-sub {
-  font-size: 0.875rem;
-  color: var(--gray-500);
-  margin-bottom: 1.25rem;
-  line-height: 1.45;
-}
-.hero__card-divider {
-  border: none;
-  border-top: 1px solid var(--gray-100);
-  margin: 1.5rem 0;
-}
-
-/* Tiles */
-.hero__tiles {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.5rem;
-  margin-bottom: 1.25rem;
-}
-.hero__tile {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.375rem;
-  padding: 1rem 0.375rem;
-  border: 1.5px solid var(--gray-200);
-  border-radius: 0.625rem;
-  cursor: pointer;
-  position: relative;
-  transition: border-color 0.15s, background 0.15s;
-  background: white;
-  user-select: none;
-}
-.hero__tile:hover {
-  border-color: var(--amber-500);
-  background: var(--amber-50);
-}
-.hero__tile--selected {
-  border-color: var(--amber-500);
-  background: var(--amber-50);
-}
-.hero__tile input[type="checkbox"] {
-  position: absolute;
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-.hero__tile-check {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-  width: 1.125rem;
-  height: 1.125rem;
-  border-radius: 50%;
-  border: 1.5px solid var(--gray-300);
-  background: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.15s;
-  flex-shrink: 0;
-}
-.hero__tile--selected .hero__tile-check {
-  background: var(--amber-500);
-  border-color: var(--amber-500);
-}
-.hero__tile--selected .hero__tile-check::after {
-  content: '';
-  display: block;
-  width: 0.35rem;
-  height: 0.6rem;
-  border: 2px solid white;
-  border-top: none;
-  border-left: none;
-  transform: rotate(45deg) translate(-1px, -1px);
-}
-.hero__tile-icon {
-  width: 1.5rem;
-  height: 1.5rem;
-  color: var(--gray-500);
-}
-.hero__tile--selected .hero__tile-icon {
-  color: var(--amber-600);
-}
-.hero__tile-label {
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--gray-700);
-  text-align: center;
-  line-height: 1.3;
-}
-.hero__tile--selected .hero__tile-label {
-  color: var(--amber-600);
-}
-
-/* Select wrapper for chevron rotation */
-.hero__select-wrap {
-  position: relative;
-  margin-bottom: 0;
-}
-.hero__select-wrap .hero__form-select {
-  padding-right: 2.75rem;
-  background-image: none;
-}
-.hero__select-chevron-box {
-  position: absolute;
-  right: 0.75rem;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 1.875rem;
-  height: 1.875rem;
-  background: var(--amber-500);
-  border-radius: 0.375rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
-  transition: transform 0.2s;
-}
-.hero__select-chevron {
-  color: var(--navy-900);
-  width: 1rem;
-  height: 1rem;
-  flex-shrink: 0;
-}
-.hero__select-wrap:hover .hero__form-select {
-  border-color: var(--navy-900);
-  box-shadow: inset 0 0 0 4px rgba(26, 43, 71, 0.06), 0 0 0 3px rgba(26, 43, 71, 0.12);
-}
-.hero__select-wrap:focus-within .hero__form-select {
-  border-color: var(--navy-900);
-  box-shadow: inset 0 0 0 4px rgba(26, 43, 71, 0.08), 0 0 0 3px rgba(26, 43, 71, 0.15);
-}
-.hero__select-wrap:focus-within .hero__select-chevron-box {
-  transform: translateY(-50%) rotate(180deg);
-}
-
-/* Trust marks inside card */
-.hero__card-trust {
-  display: flex;
-  justify-content: center;
-  gap: 1.25rem;
-  flex-wrap: wrap;
-  margin-top: 1rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--gray-100);
-}
-.hero__card-trust span {
-  font-size: 0.8125rem;
-  color: var(--gray-500);
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
-}
-.hero__card-trust-check {
-  color: #16a34a;
-  font-weight: 700;
-}
-
-/* Social proof */
-.hero__social-proof {
-  font-size: 0.875rem;
-  color: var(--gray-500);
-  text-align: center;
-  margin-top: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-}
-.hero__social-dot {
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 50%;
-  background: #16a34a;
-  flex-shrink: 0;
-  display: inline-block;
-}
-/* ========== DESKTOP COMPACT HERO ========== */
-@media (min-width: 768px) {
-  .hero__headline { font-size: 1.875rem; margin-bottom: 0.35rem; }
-  .hero__oneliner { margin-bottom: 0.75rem; }
-  .hero__card { padding: 1.75rem 2rem; margin-bottom: 0.75rem; }
-  .hero__card-divider { margin: 1rem 0; }
-}
   </style>
   <link rel="icon" type="image/png" href="/images/logo.png" />
   <meta property="og:image" content="https://nationalbenefitalliance.com/images/og-default.jpg" />
@@ -1721,175 +1302,35 @@ main {
     </div>
   </header>
 
-  <main>
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero__inner">
-
-        <h1 class="hero__headline">Get matched to assistance that can help right away</h1>
-
-        <p class="hero__oneliner">Talk to a specialist. See what you qualify for.<br>Free, fast, confidential, no commitment.</p>
-
-        <div class="hero__card">
-          <div class="hero__card-header">
-            <h2 class="hero__card-title">What brings you here today?</h2>
-          </div>
-          <p class="hero__card-sub">Pick one or more. We'll only show you programs that actually fit.</p>
-          <div class="hero__tiles">
-            <label class="hero__tile" data-value="food">
-              <input type="checkbox" name="needs" value="food">
-              <span class="hero__tile-check"></span>
-              <svg class="hero__tile-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
-              <span class="hero__tile-label">Food &amp;<br>Groceries</span>
-            </label>
-            <label class="hero__tile" data-value="utility">
-              <input type="checkbox" name="needs" value="utility">
-              <span class="hero__tile-check"></span>
-              <svg class="hero__tile-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-              <span class="hero__tile-label">Utility<br>Bills</span>
-            </label>
-            <label class="hero__tile" data-value="housing">
-              <input type="checkbox" name="needs" value="housing">
-              <span class="hero__tile-check"></span>
-              <svg class="hero__tile-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-              <span class="hero__tile-label">Housing<br>&amp; Rent</span>
-            </label>
-            <label class="hero__tile" data-value="other">
-              <input type="checkbox" name="needs" value="other">
-              <span class="hero__tile-check"></span>
-              <svg class="hero__tile-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-              <span class="hero__tile-label">Other</span>
-            </label>
-          </div>
-
-          <button type="button" id="heroContinue" class="hero__form-btn">See Available Programs</button>
-          <div class="hero__form-error" id="needsError">Please pick at least one so we can match you.</div>
-
-          <div class="hero__card-trust">
-            <span><span class="hero__card-trust-check">✓</span> 100% free</span>
-            <span><span class="hero__card-trust-check">✓</span> No SSN needed</span>
-            <span><span class="hero__card-trust-check">✓</span> Takes 2 minutes</span>
-          </div>
+  <main class="form-page">
+    <div class="form-card">
+      <div class="progress-container">
+        <div class="progress-row">
+          <span class="progress-row__left">Step 1 of 4</span>
+          <span class="progress-row__right">25% complete</span>
         </div>
-
-        <p class="hero__label" style="margin-top:1.25rem; display:block;">Real People, Real Benefits</p>
-
-      </div>
-    </section>
-
-    <!-- TRUST BADGES -->
-    <section class="trust2-section">
-      <div class="trust2-inner">
-        <div class="trust2-grid">
-          <div class="trust2-badge">
-            <div class="trust2-icon-wrap">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            </div>
-            <span class="trust2-label">BBB Accredited</span>
-          </div>
-          <div class="trust2-badge">
-            <div class="trust2-icon-wrap">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            </div>
-            <span class="trust2-label">100% Free to Apply</span>
-          </div>
-          <div class="trust2-badge">
-            <div class="trust2-icon-wrap">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
-            <span class="trust2-label">No SSN Needed to Start</span>
-          </div>
-          <div class="trust2-badge">
-            <div class="trust2-icon-wrap">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            </div>
-            <span class="trust2-label">Private &amp; Confidential</span>
-          </div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 25%;"></div>
         </div>
       </div>
-    </section>
 
-    <!-- PROGRAMS CARD -->
-    <section class="programs-section">
-      <div class="programs-section__inner">
-        <div class="programs-card">
-          <p class="programs-card__intro">Whether you're struggling with bills, facing a health challenge, or just trying to make ends meet, there are programs available to help. Many people qualify and don't even know it.</p>
-          <h2 class="programs-card__title">Get Matched To Programs In One Quick Call</h2>
-          <div class="programs-check-list">
-            <div class="programs-check-item"><svg class="programs-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg><span class="programs-check-text">Utilities</span></div>
-            <div class="programs-check-item"><svg class="programs-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg><span class="programs-check-text">Car payments</span></div>
-            <div class="programs-check-item"><svg class="programs-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg><span class="programs-check-text">Medical expenses</span></div>
-            <div class="programs-check-item"><svg class="programs-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg><span class="programs-check-text">Education costs</span></div>
-            <div class="programs-check-item"><svg class="programs-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg><span class="programs-check-text">Health insurance discounts</span></div>
-          </div>
-          <div class="programs-card__cta-wrap">
-            <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" class="programs-card__cta">See Available Programs</a>
-          </div>
+      <h1 class="form-title">What’s your date of birth?</h1>
+      <p class="form-subtitle">We keep your information private — this just helps with the application process.</p>
+
+      <form id="step2Form" novalidate>
+        <div class="form-group">
+          <label for="dob" class="form-label">Date of Birth</label>
+          <input type="text" inputmode="numeric" name="dob" id="dob" class="form-input" placeholder="MM / DD / YYYY" maxlength="14" required />
+          <div class="form-error">Please enter your date of birth</div>
         </div>
-      </div>
-    </section>
 
-    <!-- HOW IT WORKS -->
-    <section class="how-section">
-      <div class="how-section__inner">
-        <h2 class="how-section__title">How It Works</h2>
-        <p class="how-section__subtitle">Three simple steps to get matched with assistance:</p>
-        <div class="how-grid">
-          <div class="how-step how-step--blue">
-            <div class="how-step__number">1</div>
-            <h3 class="how-step__title">Answer a Few Easy Questions</h3>
-            <p class="how-step__desc">Complete a quick eligibility form about your situation and needs</p>
-          </div>
-          <div class="how-step how-step--green">
-            <div class="how-step__number">2</div>
-            <h3 class="how-step__title">Speak with a Case Manager</h3>
-            <p class="how-step__desc">Get matched to programs you qualify for during your call</p>
-          </div>
-          <div class="how-step how-step--blue">
-            <div class="how-step__number">3</div>
-            <h3 class="how-step__title">Receive Personal Enrollment Help</h3>
-            <p class="how-step__desc">Your specialist guides you through the enrollment process step by step</p>
-          </div>
+        <div class="form-actions">
+          <a href="/info/01/" class="btn btn-back">Back</a>
+          <button type="submit" class="btn btn-next">Continue</button>
         </div>
-        <div class="how-free-banner">
-          <p class="how-free-banner__title">It is free to apply.</p>
-          <p class="how-free-banner__text">There are no upfront costs and no hidden fees.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- MID-PAGE CTA -->
-    <section class="mid-cta-section">
-      <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" class="mid-cta-btn">See Available Programs</a>
-    </section>
-
-    <!-- WHAT TO EXPECT ON YOUR CALL -->
-    <section class="expect-section">
-      <div class="expect-section__inner">
-        <h2 class="expect-section__title">What To Expect On Your Call</h2>
-        <div class="expect-card">
-          <div class="expect-item"><svg class="expect-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg><span class="expect-text">Introduction to your case manager</span></div>
-          <div class="expect-item"><svg class="expect-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg><span class="expect-text">A short, guided prescreening (just a couple minutes)</span></div>
-          <div class="expect-item"><svg class="expect-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg><span class="expect-text">Immediate feedback on potential eligibility</span></div>
-          <div class="expect-item"><svg class="expect-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg><span class="expect-text">Step by step help with enrollment in the programs that fit your situation</span></div>
-        </div>
-        <div class="expect-free-banner">
-          <p class="expect-free-banner__title">It's completely free to apply.</p>
-          <p class="expect-free-banner__text">No hidden fees. No obligation.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- FINAL DARK CTA -->
-    <section class="final-cta-section">
-      <div class="final-cta-section__inner">
-        <h2 class="final-cta-section__title">The assistance you need is out there</h2>
-        <p class="final-cta-section__subtitle">We're here to help you find it</p>
-        <p class="final-cta-section__sub2">Connect to the benefits and assistance you deserve.</p>
-        <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" class="final-cta-section__btn">See Available Programs</a>
-      </div>
-    </section>
-
+        <p class="security-note" style="font-weight:600;font-size:0.9375rem;color:#1a2b47;line-height:1.45;margin-top:1.125rem;">🔒 Your information is secure and only used to match you with relevant&nbsp;programs.</p>
+      </form>
+    </div>
   </main>
 
   <footer class="footer">
@@ -1970,37 +1411,54 @@ document.addEventListener('DOMContentLoaded', function() {
   captureUTM();
   getTransactionId();
 });
-
-
-// ---- Hero tile selection ----
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('.hero__tile').forEach(function(tile) {
-    tile.addEventListener('click', function() {
-      var cb = this.querySelector('input[type="checkbox"]');
-      cb.checked = !cb.checked;
-      this.classList.toggle('hero__tile--selected', cb.checked);
-    });
-  });
-
-  // ---- Continue button: require >=1 need, save, advance ----
-  var cont = document.getElementById('heroContinue');
-  var err = document.getElementById('needsError');
-  if (cont) {
-    cont.addEventListener('click', function() {
-      var needs = [];
-      document.querySelectorAll('.hero__tile input:checked').forEach(function(cb) {
-        needs.push(cb.value);
-      });
-      if (!needs.length) { if (err) err.classList.add('show'); return; }
-      if (err) err.classList.remove('show');
-      saveFunnelData({ needs: needs });
-      window.location.href = '/apply/4/step-1-dob/';
-    });
-  }
-
-});
 </script>
 
+  <script>
+  // DOB auto-format MM / DD / YYYY
+  document.getElementById('dob').addEventListener('input', function() {
+    let v = this.value.replace(/\D/g, '').slice(0, 8);
+    if (v.length >= 5) this.value = v.slice(0,2) + ' / ' + v.slice(2,4) + ' / ' + v.slice(4);
+    else if (v.length >= 3) this.value = v.slice(0,2) + ' / ' + v.slice(2);
+    else this.value = v;
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const _d = getFunnelData();
+    if (_d.dobDisplay) document.getElementById('dob').value = _d.dobDisplay;
+    document.getElementById('step2Form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      clearAllErrors();
+      let valid = true;
+      const dob = document.getElementById('dob');
+      const dobMatch = dob.value.match(/^(\d{2})\s*\/\s*(\d{2})\s*\/\s*(\d{4})$/);
+      if (!dobMatch) {
+        showError(dob, 'Please enter your date of birth'); valid = false;
+      } else {
+        const m = parseInt(dobMatch[1], 10);
+        const d = parseInt(dobMatch[2], 10);
+        const y = parseInt(dobMatch[3], 10);
+        const dt = new Date(y, m - 1, d);
+        if (dt.getFullYear() !== y || dt.getMonth() !== m - 1 || dt.getDate() !== d) {
+          showError(dob, 'Please enter a valid date of birth'); valid = false;
+        } else {
+          const today = new Date();
+          let age = today.getFullYear() - y;
+          const mDiff = today.getMonth() - (m - 1);
+          if (mDiff < 0 || (mDiff === 0 && today.getDate() < d)) age--;
+          if (age < 18) {
+            showError(dob, 'You must be 18 or older to apply'); valid = false;
+          } else if (age > 110) {
+            showError(dob, 'Please enter a valid date of birth'); valid = false;
+          }
+        }
+      }
+      if (!valid) return;
+      const isoDob = dobMatch[3] + '-' + dobMatch[1] + '-' + dobMatch[2];
+      saveFunnelData({ dob: isoDob, dobDisplay: dob.value });
+      window.location.href = '/info/01/step-2-zip/';
+    });
+  });
+  </script>
   <script src="/apply/popup.js"></script>
 
   <!-- TrustedForm -->

@@ -1325,7 +1325,7 @@ main {
         </div>
 
         <div class="form-actions">
-          <a href="/apply/4/step-1-dob/" class="btn btn-back">Back</a>
+          <a href="/info/01/step-1-dob/" class="btn btn-back">Back</a>
           <button type="submit" class="btn btn-next">Continue</button>
         </div>
         <p class="security-note" style="font-weight:600;font-size:0.9375rem;color:#1a2b47;line-height:1.45;margin-top:1.125rem;">🔒 Your information is secure and only used to match you with relevant&nbsp;programs.</p>
@@ -1424,7 +1424,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if (!/^\d{5}$/.test(zip.value)) { showError(zip, 'Please enter a valid 5-digit ZIP'); valid = false; }
       if (!valid) return;
       saveFunnelData({ zip: zip.value });
-      window.location.href = '/apply/4/step-3-phone/';
+      window.location.href = '/info/01/step-3-phone/';
     });
   });
   </script>

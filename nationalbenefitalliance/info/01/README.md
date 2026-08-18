@@ -1,10 +1,16 @@
-# `/apply/4/` — Lean Funnel A/B Variant
+# `/info/01/` — Lean Funnel A/B Variant
+
+> **URL note:** this variant lives at **`/info/01/`** (neutral base — no "apply"/"qualify" in the
+> ad-landing path). It was originally built at `/apply/4/`; `vercel.json` 308-redirects
+> `/apply/4` → `/info/01`. Future funnel variants go under `/info/NN/`. The page still loads the
+> shared `/apply/popup.js` script (a subresource, not a landing/redirect URL).
+
 
 A conversion-rate variant of the live `/apply/2/` funnel. **Fewer fields per step**
 to reduce friction. Branch: **`apply4-lean-funnel-variant`** (never merge to `main`
 until the A/B test is decided).
 
-**Purely additive** — only files under `apply/4/` were created. Nothing in `apply/2`,
+**Purely additive** — only files under `info/01/` were created. Nothing in `apply/2`,
 `apply/3`, `vercel.json`, the backend, or the main site was touched, so this variant
 **cannot break the live funnel.** Built by a one-off script committed alongside it:
 `_build_apply4_variant.py` (repo root; idempotent; anchored on apply/2 text).
@@ -15,12 +21,12 @@ until the A/B test is decided).
 
 | Page | URL | Collects |
 |---|---|---|
-| Landing | `/apply/4/` | **Need type only** (tiles). "Continue" requires ≥1 tile, then advances. *State removed.* |
-| Step 1 | `/apply/4/step-1-dob/` | **Date of birth only.** *Citizenship removed.* |
-| Step 2 | `/apply/4/step-2-zip/` | **ZIP only** + "Programs vary by location — this is how we find yours." *Street + city removed.* |
-| Step 3 | `/apply/4/step-3-phone/` | **Phone only** + "We will never call you without your permission." NANP/area-code validation kept. |
-| Step 4 | `/apply/4/step-4-name-email/` | **First name, last name, email** + TCPA consent + TrustedForm + honeypot + time-trap → **submits the lead.** *Phone moved to Step 3.* |
-| Thank-you | `/apply/4/thank-you/` · `/apply/4/thank-you-2/` | Unchanged (cloned from apply/2). CRM-accepted → `thank-you/`; otherwise → `thank-you-2/`. |
+| Landing | `/info/01/` | **Need type only** (tiles). "Continue" requires ≥1 tile, then advances. *State removed.* |
+| Step 1 | `/info/01/step-1-dob/` | **Date of birth only.** *Citizenship removed.* |
+| Step 2 | `/info/01/step-2-zip/` | **ZIP only** + "Programs vary by location — this is how we find yours." *Street + city removed.* |
+| Step 3 | `/info/01/step-3-phone/` | **Phone only** + "We will never call you without your permission." NANP/area-code validation kept. |
+| Step 4 | `/info/01/step-4-name-email/` | **First name, last name, email** + TCPA consent + TrustedForm + honeypot + time-trap → **submits the lead.** *Phone moved to Step 3.* |
+| Thank-you | `/info/01/thank-you/` · `/info/01/thank-you-2/` | Unchanged (cloned from apply/2). CRM-accepted → `thank-you/`; otherwise → `thank-you-2/`. |
 
 ### How it maps to the original request
 The owner numbered the *live apply/2* steps 1–5 and gave per-step edits. Final mapping:
@@ -70,14 +76,14 @@ CallTools + Caliber accept this lean record** with those five blank.
    fewer screens (the owner chose to keep the DOB step). If you later want a shorter funnel, the
    DOB step is the obvious one to drop.
 4. **Retire `apply/3`.** It's a similar short-funnel variant ("Claim Code" Variant B) that was
-   **A/B tested against apply/2 and did not win** — so it should be retired. **apply/4 is the active
+   **A/B tested against apply/2 and did not win** — so it should be retired. **info/01 is the active
    variant going forward.** Retiring apply/3 means: delete the `apply/3/` directory **and** remove
    its entries from `sitemap-main.xml`. Best done on its own small branch so it doesn't ride along
    with this variant's A/B test — ask and I'll do it.
 5. **`sitemap-main.xml` lists ad-only funnels it shouldn't** — separate cleanup. It contains
-   entries for `apply/2` (**listed twice**), `apply/3`, `apply/4`, **and `apply/5` (which does not
+   entries for `apply/2` (**listed twice**), `apply/3`, `info/01`, **and `apply/5` (which does not
    exist)** — all added long ago by a "sitemap architecture" commit. These are `noindex` ad-only
-   funnels, so none of them belong in a public sitemap. (Correction to an earlier note: `apply/4`
+   funnels, so none of them belong in a public sitemap. (Correction to an earlier note: `info/01`
    was already in the sitemap before this variant existed — it wasn't added here, and wasn't
    "intentionally left out" either.) Recommended follow-up: drop all `apply/N` funnel entries from
    the sitemap and de-dupe `apply/2`. Retiring apply/3 removes its entry (see #4); the rest is broader.
@@ -88,26 +94,26 @@ CallTools + Caliber accept this lean record** with those five blank.
 
 ## Before launch — verify (owner/GTM tasks code can't do)
 
-1. **GTM "Completed funnel" trigger must fire on `/apply/4/thank-you/`.** If the trigger's URL match
-   is pinned to `/apply/2/` (or `/apply/3/`), add `/apply/4/thank-you/` or loosen it to "URL contains
+1. **GTM "Completed funnel" trigger must fire on `/info/01/thank-you/`.** If the trigger's URL match
+   is pinned to `/apply/2/` (or `/apply/3/`), add `/info/01/thank-you/` or loosen it to "URL contains
    `thank-you`". The completed-funnel Call Conversion fires by `tel:` value + `ty-call-btn`, but the
    trigger's page condition still has to match. **Code alone can't move a conversion.**
 2. **Run one real end-to-end test lead** and confirm it lands in `leads` with the correct
    `phone`, `email`, `dob`→derived `age`, and ZIP-derived `state`, and that CallTools + Caliber
    accept it (should mirror apply/3's verified result). Note: submitting on the live pages creates a
    **real** lead + CRM call — use an obvious test name.
-3. **GFN number swap** shows the right number on `/apply/4/thank-you/` (it will — `tel:` unwrapped,
+3. **GFN number swap** shows the right number on `/info/01/thank-you/` (it will — `tel:` unwrapped,
    visible number present).
-4. **Popup** behaves on all `apply/4` pages (uses the shared `/apply/popup.js`).
+4. **Popup** behaves on all `info/01` pages (uses the shared `/apply/popup.js`).
 
 ## Running the A/B test
 No traffic splitter is built (keeps the live funnel untouched). Point a slice of Google Ads traffic
-at `https://nba3.vercel.app/apply/4/` and compare call-conversions against `/apply/2/`. `vercel.json`
-needs no changes — `/apply/4/` serves statically.
+at `https://nba3.vercel.app/info/01/` and compare call-conversions against `/apply/2/`. `vercel.json`
+needs no changes — `/info/01/` serves statically.
 
 ## If the variant wins / loses
-- **Loses:** delete the `apply/4/` directory. Nothing else references it.
-- **Wins:** treat `apply/4/` as the new funnel (mirror apply/2's 308-redirect pattern in
+- **Loses:** delete the `info/01/` directory. Nothing else references it.
+- **Wins:** treat `info/01/` as the new funnel (mirror apply/2's 308-redirect pattern in
   `vercel.json` if you retire apply/2), reconcile with apply/3, and update CLAUDE.md's funnel section.
 
 ---

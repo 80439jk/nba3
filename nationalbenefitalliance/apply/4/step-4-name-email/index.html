@@ -1342,14 +1342,9 @@ main {
           <div class="form-error">Please enter a valid email address</div>
         </div>
 
-        <div class="tcpa-group">
-          <div class="tcpa-checkbox">
-            <input type="checkbox" name="tcpaConsent" id="tcpaConsent" required />
-            <label for="tcpaConsent" class="tcpa-label">
-              By checking this box and clicking the button, you confirm that this is your mobile number and that you are 18 years of age or older. You agree to the National Benefit Alliance <a href="/terms/" target="_blank">Terms of Use</a> and <a href="/privacy/" target="_blank">Privacy Policy</a> and provide your express written consent to be contacted by National Benefit Alliance, its service providers, and marketing partners, and that your information may be shared with and used by such partners to contact you, via telephone calls and text messages (including SMS and MMS), including through the use of an automatic telephone dialing system, artificial or prerecorded voice, and AI-generated voice, at the number you provided, even if your number is listed on any federal or state Do Not Call registry. You understand that these communications may include marketing messages. Consent is not a condition of purchase. Message frequency varies (up to 10 messages per month). Message and data rates may apply. Reply STOP to opt out or HELP for help. You also agree to receive marketing emails from National Benefit Alliance and its affiliated brands and <a href="/marketing-partners/" target="_blank">marketing partners</a>. You may unsubscribe at any time by clicking the unsubscribe link in any email.
-            </label>
-          </div>
-        </div>
+        <p class="tcpa-label" style="margin-top:1.25rem;font-size:0.75rem;line-height:1.5;text-align:left;">
+          By clicking the button below, you confirm that this is your mobile number and that you are 18 years of age or older. You agree to the National Benefit Alliance <a href="/terms/" target="_blank">Terms of Use</a> and <a href="/privacy/" target="_blank">Privacy Policy</a> and provide your express written consent to be contacted by National Benefit Alliance, its service providers, and marketing partners, and that your information may be shared with and used by such partners to contact you, via telephone calls and text messages (including SMS and MMS), including through the use of an automatic telephone dialing system, artificial or prerecorded voice, and AI-generated voice, at the number you provided, even if your number is listed on any federal or state Do Not Call registry. You understand that these communications may include marketing messages. Consent is not a condition of purchase. Message frequency varies (up to 10 messages per month). Message and data rates may apply. Reply STOP to opt out or HELP for help. You also agree to receive marketing emails from National Benefit Alliance and its affiliated brands and <a href="/marketing-partners/" target="_blank">marketing partners</a>. You may unsubscribe at any time by clicking the unsubscribe link in any email.
+        </p>
 
         <!-- Anti-bot honeypot — invisible to humans, bots auto-fill it -->
         <div style="position:absolute;left:-9999px;height:0;width:0;overflow:hidden;" aria-hidden="true">
@@ -1365,8 +1360,7 @@ main {
           <button type="submit" class="btn btn-next" id="submitBtn">Complete &amp; Get Matched</button>
         </div>
         <p class="security-note" id="processingNote" style="display:none;">Do not close browser while processing — this may take up to 30 seconds.</p>
-        <p class="security-note">No credit check. No commitment. Just a free phone call.</p>
-          <p class="security-note">Your information is secure and will only be used to match you with relevant programs.</p>
+          <p class="security-note" style="font-weight:700;font-size:0.95rem;color:#1a2b47;">🔒 Your information is secure and will only be used to match you with relevant programs.</p>
       </form>
     </div>
   </main>
@@ -1503,7 +1497,6 @@ document.addEventListener('DOMContentLoaded', function() {
   document.addEventListener('DOMContentLoaded', function() {
     ['firstName','lastName','email'].forEach(restoreField);
     const d = getFunnelData();
-    if (d.tcpaConsent) document.getElementById('tcpaConsent').checked = true;
 
     // Timestamp for bot time-trap detection
     sessionStorage.setItem('nba_form_shown', String(Date.now()));
@@ -1516,16 +1509,11 @@ document.addEventListener('DOMContentLoaded', function() {
       const firstName = document.getElementById('firstName');
       const lastName = document.getElementById('lastName');
       const email = document.getElementById('email');
-      const tcpa = document.getElementById('tcpaConsent');
 
       if (!firstName.value.trim()) { showError(firstName, 'Please enter your first name'); valid = false; }
       if (!lastName.value.trim()) { showError(lastName, 'Please enter your last name'); valid = false; }
       const emailVal = email.value.trim();
       if (!/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(emailVal) || emailVal.includes('..') || emailVal.includes('.@') || emailVal.includes('@.')) { showError(email, 'Please enter a valid email'); valid = false; }
-      if (!tcpa.checked) {
-        alert('Please agree to the terms to continue.');
-        valid = false;
-      }
       if (!valid) return;
 
       // Save final fields
@@ -1533,7 +1521,7 @@ document.addEventListener('DOMContentLoaded', function() {
         firstName: firstName.value.trim(),
         lastName: lastName.value.trim(),
         email: email.value.trim(),
-        tcpaConsent: tcpa.checked
+        tcpaConsent: true
       });
 
       // Submit to Supabase

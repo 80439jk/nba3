@@ -791,11 +791,12 @@ main {
 }
 
 .form-subtitle {
-  font-size: 1rem;
-  color: var(--gray-600);
-  margin-bottom: 1rem;
+  font-size: 0.9375rem;
   line-height: 1.5;
-  text-align: center;
+  color: #1a2b47;
+  font-weight: 700;
+  margin: -0.25rem 0 1.25rem;
+  text-align: left;
 }
 
 .form-group {
@@ -1320,20 +1321,19 @@ main {
         </div>
       </div>
 
-      <h1 class="form-title">Last step — where should we send your match?</h1>
+      <h1 class="form-title">A few more details about yourself</h1>
+      <p class="form-subtitle">We’ll never email you without permission — we only use it to send program info or confirm details.</p>
 
       <form id="step5Form" novalidate>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="firstName" class="form-label">First Name</label>
-            <input type="text" name="firstName" id="firstName" class="form-input" placeholder="John" required />
-            <div class="form-error">Please enter your first name</div>
-          </div>
-          <div class="form-group">
-            <label for="lastName" class="form-label">Last Name</label>
-            <input type="text" name="lastName" id="lastName" class="form-input" placeholder="Doe" required />
-            <div class="form-error">Please enter your last name</div>
-          </div>
+        <div class="form-group">
+          <label for="firstName" class="form-label">First Name</label>
+          <input type="text" name="firstName" id="firstName" class="form-input" placeholder="John" required />
+          <div class="form-error">Please enter your first name</div>
+        </div>
+        <div class="form-group">
+          <label for="lastName" class="form-label">Last Name</label>
+          <input type="text" name="lastName" id="lastName" class="form-input" placeholder="Doe" required />
+          <div class="form-error">Please enter your last name</div>
         </div>
 
         <div class="form-group">
@@ -1342,8 +1342,8 @@ main {
           <div class="form-error">Please enter a valid email address</div>
         </div>
 
-        <p class="tcpa-label" style="margin-top:1.25rem;font-size:0.75rem;line-height:1.5;text-align:left;">
-          By clicking the button below, you confirm that this is your mobile number and that you are 18 years of age or older. You agree to the National Benefit Alliance <a href="/terms/" target="_blank">Terms of Use</a> and <a href="/privacy/" target="_blank">Privacy Policy</a> and provide your express written consent to be contacted by National Benefit Alliance, its service providers, and marketing partners, and that your information may be shared with and used by such partners to contact you, via telephone calls and text messages (including SMS and MMS), including through the use of an automatic telephone dialing system, artificial or prerecorded voice, and AI-generated voice, at the number you provided, even if your number is listed on any federal or state Do Not Call registry. You understand that these communications may include marketing messages. Consent is not a condition of purchase. Message frequency varies (up to 10 messages per month). Message and data rates may apply. Reply STOP to opt out or HELP for help. You also agree to receive marketing emails from National Benefit Alliance and its affiliated brands and <a href="/marketing-partners/" target="_blank">marketing partners</a>. You may unsubscribe at any time by clicking the unsubscribe link in any email.
+        <p class="tcpa-label" style="margin-top:0.875rem;font-size:0.72rem;line-height:1.4;text-align:left;">
+          By clicking the button below, you confirm that this is your mobile number and that you are at least 18 years old. You agree to the National Benefit Alliance <a href="/terms/" target="_blank">Terms of Use</a> and <a href="/privacy/" target="_blank">Privacy Policy</a> and provide your express written consent to be contacted by National Benefit Alliance, its service providers, and marketing partners, and that your information may be shared with and used by such partners to contact you, via telephone calls and text messages (including SMS and MMS), including through the use of an automatic telephone dialing system, artificial or prerecorded voice, and AI-generated voice, at the number you provided, even if your number is listed on any federal or state Do Not Call registry. You understand that these communications may include marketing messages. Consent is not a condition of purchase. Message frequency varies (up to 10 messages per month). Message and data rates may apply. Reply STOP to opt out or HELP for help. You also agree to receive marketing emails from National Benefit Alliance and its affiliated brands and <a href="/marketing-partners/" target="_blank">marketing partners</a>. You may unsubscribe at any time by clicking the unsubscribe link in any email.
         </p>
 
         <!-- Anti-bot honeypot — invisible to humans, bots auto-fill it -->
@@ -1360,7 +1360,7 @@ main {
           <button type="submit" class="btn btn-next" id="submitBtn">Complete &amp; Get Matched</button>
         </div>
         <p class="security-note" id="processingNote" style="display:none;">Do not close browser while processing — this may take up to 30 seconds.</p>
-          <p class="security-note" style="font-weight:700;font-size:0.95rem;color:#1a2b47;">🔒 Your information is secure and will only be used to match you with relevant programs.</p>
+          <p class="security-note" style="font-weight:600;font-size:0.9375rem;color:#1a2b47;line-height:1.45;margin-top:1.125rem;">🔒 Your information is secure and only used to match you with relevant&nbsp;programs.</p>
       </form>
     </div>
   </main>

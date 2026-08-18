@@ -31,7 +31,7 @@ import sys
 
 # ─────────────────────────────────────────────────────────────────────────────
 #  EDIT THIS ONE LINE to change the availability caption everywhere:
-SET_TO = "Mon-Fri 9-6 ET"
+SET_TO = "Available 24/7"
 # ─────────────────────────────────────────────────────────────────────────────
 
 # The folder Vercel serves, relative to this script.

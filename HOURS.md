@@ -68,10 +68,9 @@ rewrites the real phone-hours captions.
 
 ## Current value
 
-**Live captions are now unified at `Mon-Fri 9-6 ET`** across funnels and core
-pages. (Previously the core pages showed a different, more generous window,
-`Mon–Thu 9:30am–8pm · Fri 9:30am–6pm ET`; this run corrected them to match the
-funnels.)
+**Captions are now set to `Available 24/7`** across funnels and core pages
+(overnight-coverage test). Previous value was `Mon-Fri 9-6 ET`.
 
-**To go 24/7 when you're ready:** set `SET_TO = "Available 24/7"` and run the
-script (steps above).
+**To change back to business hours (or any other hours):** set
+`SET_TO = "Mon-Fri 9-6 ET"` (or whatever you want) and run the script (steps
+above). It's a forward change — all other site work is preserved.

@@ -1407,7 +1407,7 @@ function saveFunnelData(obj) {
 function captureUTM() {
   const p = new URLSearchParams(window.location.search);
   const utms = {};
-  ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','gclid','wbraid','gbraid'].forEach(k => {
+  ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','gclid','wbraid','gbraid','msclkid','fbclid','oppref','ttclid','li_fat_id','twclid','epik'].forEach(k => {
     if (p.get(k)) utms[k] = p.get(k);
   });
   if (Object.keys(utms).length) saveFunnelData(utms);
@@ -1560,7 +1560,15 @@ document.addEventListener('DOMContentLoaded', function() {
         phone: data.phone || '',
         tcpa_consent: data.tcpaConsent || false,
         trusted_form_cert_url: (document.getElementById('xxTrustedFormCertUrl') || {}).value || '',
-        click_id: data.gclid || '',
+        gclid: data.gclid || '',
+        msclkid: data.msclkid || '',
+        oppref: data.oppref || '',
+        fbclid: data.fbclid || '',
+        ttclid: data.ttclid || '',
+        li_fat_id: data.li_fat_id || '',
+        twclid: data.twclid || '',
+        epik: data.epik || '',
+        landing_page: 'oa1',
         wbraid: data.wbraid || '',
         gbraid: data.gbraid || '',
         utm_source: data.utm_source || '',

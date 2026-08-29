@@ -1371,7 +1371,7 @@ function saveFunnelData(obj) {
 function captureUTM() {
   const p = new URLSearchParams(window.location.search);
   const utms = {};
-  ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','gclid','wbraid','gbraid'].forEach(k => {
+  ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','gclid','wbraid','gbraid','msclkid','fbclid','oppref','ttclid','li_fat_id','twclid','epik'].forEach(k => {
     if (p.get(k)) utms[k] = p.get(k);
   });
   if (Object.keys(utms).length) saveFunnelData(utms);

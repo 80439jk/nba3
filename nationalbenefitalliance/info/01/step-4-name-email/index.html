@@ -1569,6 +1569,7 @@ document.addEventListener('DOMContentLoaded', function() {
         utm_campaign: data.utm_campaign || '',
         utm_content: data.utm_content || '',
         utm_term: data.utm_term || '',
+        needs: data.needs || [],
         hp_website: document.getElementById('website').value,
         form_duration_ms: Date.now() - parseInt(sessionStorage.getItem('nba_form_shown') || '0', 10)
       };

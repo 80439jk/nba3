@@ -83,7 +83,9 @@ County pages use `<html lang="en" prefix="og: https://ogp.me/ns#">` while core/s
 | `/apply/2/step-4-contact/` | Name, email, phone, TCPA consent + honeypot + time-trap |
 | `/apply/2/thank-you/` | Generates a 5-digit reference number (regenerates on refresh — known minor UX issue), shows the call CTA |
 
-Each step file is self-contained (~1,300–1,450 lines), CSS embedded in `<head>`. Funnel state lives in `sessionStorage.nba_funnel`; thank-you display data in `sessionStorage.nba_ty`. Every page calls `captureUTM()` to persist UTM params (`utm_source/medium/campaign/content/term`) and Google Ads click IDs (`gclid`, `wbraid`, `gbraid`). `transaction_id` is a `crypto.randomUUID()` generated on first page load and forwarded with the submission.
+Each step file is self-contained (~1,300–1,450 lines), CSS embedded in `<head>`. Funnel state lives in `sessionStorage.nba_funnel`; thank-you display data in `sessionStorage.nba_ty`. Every page calls `captureUTM()` to persist UTM params (`utm_source/medium/campaign/content/term`) and every click ID we track — `gclid`, `wbraid`, `gbraid`, `msclkid`, `fbclid`, `oppref`, plus `ttclid`/`li_fat_id`/`twclid`/`epik` for channels not running yet. `transaction_id` is a `crypto.randomUUID()` generated on first page load and forwarded with the submission.
+
+**All five live funnels post the same field set** (`apply/0`, `apply/2`, `apply/bg1`, `apply/oa1`, `info/01`). Each submit step also sends a `landing_page` identifier (`apply0` / `apply2` / `bg1` / `oa1` / `info01`) and `needs[]` — the benefit tiles from the landing page. Keep them in lockstep: a funnel that drifts loses attribution silently, which is exactly what happened to `apply/0` before Sep 2026. `_field_parity.py` in the repo root is the idempotent migrator for this class of change.
 
 ### apply/1 — redirected fallback
 

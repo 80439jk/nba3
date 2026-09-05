@@ -36,12 +36,26 @@ description), **this file reflects the live system** and wins.
   (Overwrite), so it keeps only the *latest* submission's txn per phone. `crm_action` `CREATE` =
   net-new contact, `MERGE` = overwrite of an existing one. The Supabase number that matches a
   CallTools contact pull for a date range is **distinct phones among `crm_status='success'`**.
-- **What survives in CallTools (verified via the response echo in `api_logs`).** Everything we
-  send lands **except `employment_status`** — CallTools has no field mapped to it, so it's
-  silently dropped (fix: add a matching custom field in the CallTools account; no code change).
-  `transaction_id`, `gclid`, `gbraid`, all UTMs, **TrustedForm** (`jornaya_lead_id`),
-  citizenship, address, zip, income, TCPA, name/email/phone/dob/age all persist 100%. `add_tags`
-  is stored under CallTools' native `tags`.
+- **What survives in CallTools (verified via the response echo in `api_logs`).**
+  `transaction_id`, `gclid`, `gbraid`, all UTMs, **TrustedForm** (`jornaya_lead_id` and
+  `trusted_form`), citizenship, address, zip, income, TCPA, name/email/phone/dob/age all
+  persist 100%. `add_tags` is stored under CallTools' native `tags`.
+- **The response echo returns the whole contact record — read it to learn the schema.**
+  Doing so (2026-09-03) corrected a long-standing wrong conclusion here. `employment_status`
+  was never "a field CallTools has no mapping for": the real field is **`employment`**, and
+  two more were also being posted under names that do not exist (`oppref` → **`oppref_id`**,
+  and `trusted_form` is separate from `jornaya_lead_id`). `consent_url` exists too and now
+  carries the referring funnel URL. The renames are live.
+- **`employment` is a CONSTRAINED ENUM and our form's values are not in it.** Deploying the
+  rename produced, within 40 seconds of live traffic:
+  `400 {"employment":["\"employed_full_time\" is not a valid choice."]}`. We reverted to the
+  old, ignored `employment_status` key. **Do not rename it back without CallTools' accepted
+  choice list** — see `CONFIG-TODO.md` §4 in the backend repo.
+- **Never let a CRM field cost a lead.** CallTools reports rejections per field, DRF-style, so
+  on a 4xx `submit-lead` retries with just the named field(s) stripped; failing that, once more
+  with the field set that has worked for months. Only fields added after 2026-09-03 are
+  strippable, so a rejection on a long-standing field still surfaces as a real failure. This is
+  what makes adding CallTools custom fields safe to do against live traffic.
 
 ## Reporting
 

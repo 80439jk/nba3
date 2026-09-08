@@ -123,3 +123,25 @@ This was built in a separate git worktree (`NBA-wt-apply4/`) because another Cla
 concurrently building a Bing funnel (`bing-ppc-funnel-bg1`) in the main working directory. The
 worktree keeps the two tasks from clobbering each other's branch checkouts. The branch content is
 normal; only the working directory location differs.
+
+## TCPA consent — real checkbox (10DLC parity, Sep 2026)
+
+Step 4 shows the consent text as the label of a real checkbox (`#tcpaConsent`).
+
+Before this change, the page showed the text as a bare paragraph and then sent
+`tcpaConsent: true` from the code. The lead recorded consent that the user never
+gave. This blocked 10DLC registration.
+
+Behavior now, which is the same as `apply/0`:
+
+- The checkbox is **clear by default**.
+- The checkbox is **not `required`**, and it **does not disable the submit button**.
+  Thus lead volume does not change.
+- Box **selected** → `tcpa_consent: true`. It is permitted to send an SMS.
+- Box **clear** → `tcpa_consent: false`. The lead still goes to the CRM. Do **not**
+  send an SMS to this lead.
+- The page restores the checkbox state if the user navigates back and then forward.
+
+The page keeps the bare layout. It uses `.tcpa-checkbox` for the flex layout only.
+It does **not** use `.tcpa-group`, because that class draws a blue box that this
+page has never had.

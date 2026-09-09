@@ -43,9 +43,12 @@ shared inactivity popup keeps its own number regardless of funnel.
 
 ## Consent copy note
 The checkbox label is owner-supplied and opens **"By checking this box, you confirm…"**.
-Latest wording: consent is to be contacted **by National Benefit Alliance** for calls +
-texts (no third-party data-sharing clause; the email sentence still references affiliated
-brands and marketing partners). "Terms of Use"/"Privacy Policy" linkified to `/terms/`,
+Latest wording (9 Sep 2026): consent is to be contacted **by National Benefit Alliance**
+for calls + texts, with **no third-party reference anywhere in the block**. The two
+trailing email-marketing sentences — which named "affiliated brands and marketing
+partners" — were removed; a carrier agent reads the whole label, so the phrase was a
+rejection risk even scoped to email. The block is now SMS only and ends at
+"Reply STOP to opt out or HELP for help." UB `qualify/0` carries the identical text. "Terms of Use"/"Privacy Policy" linkified to `/terms/`,
 `/privacy/`. **One fix:** source read "…may used by…" → rendered "…may be used by…"
 (dropped word); tell me if you want it literally.
 

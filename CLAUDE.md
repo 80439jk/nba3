@@ -45,7 +45,7 @@ nationalbenefitalliance/
 ├── apply/popup.js         # shared 30s inactivity popup
 ├── apply/{0,2,bg1,oa1}/   # live funnels
 ├── apply/{1,3}/           # archived, redirected
-├── info/{01,yt1}/         # live funnels (neutral URLs)
+├── info/{01,02,yt1}/      # live funnels (neutral URLs)
 ├── prototype/             # experiments, not linked
 ├── about/, privacy/, terms/, stories/, resources/
 └── [state]/[county]/index.html   # ~3,200 county pages, one template
@@ -56,6 +56,7 @@ nationalbenefitalliance/
 | Funnel | Role | `landing_page` | TCPA checkbox |
 |---|---|---|---|
 | `apply/2` | Primary Google funnel. Paid Google ads land here. | `apply2` | required |
+| `info/02` | Govt-services-policy rewrite of `apply/2`. Live, **no traffic yet**. | `info02` | required |
 | `apply/0` | Organic. **All main-site CTAs point here.** | `apply0` | optional |
 | `info/01` | Lean A/B variant (fewer fields). Ad-only, not in use yet. | `info01` | optional |
 | `apply/oa1` | OpenAI clone of apply/2 | `oa1` | required |
@@ -65,7 +66,8 @@ nationalbenefitalliance/
 - **apply/2 flow:** landing (needs tiles + state) → `step-1-dob-citizen` → `step-2-address` → `step-3-income-employ` → `step-4-contact` (submits) → `thank-you`.
 - **info/01 flow:** landing (needs only) → `step-1-dob` → `step-2-zip` → `step-3-phone` → `step-4-name-email` (submits). Dropped fields post as blank strings. `state` comes from the ZIP (`zipToState()`). Before ads go here, confirm the GTM "Completed funnel" trigger matches `/info/01/thank-you/` and send one test lead. See `info/01/README.md`.
 - **Put new funnel variants under `/info/NN/`**, not `/apply/`. Ad URLs must not contain "apply" or "qualify".
-- **Field parity:** all 6 live funnels post the same field set, plus `landing_page` and `needs[]`. Keep them identical. Drift loses attribution silently. Use `_field_parity.py` for this type of change.
+- **info/02** is apply/2 with the copy rewritten for Google's updated government-services policy: nothing may imply NBA applies for, matches you to, or enrolls you in a government program. Same flow, fields and phone lines as apply/2, so the existing Call Conversions fire unchanged. Built by `_build_info02_variant.py` (idempotent) — change the script, not the pages. **apply/2 is still live and duplicates it**; retire apply/2 only after ads move and conversions are confirmed. Before ads go here, confirm the GTM "Completed funnel" trigger matches `/info/02/thank-you/` and send one test lead. See `info/02/README.md`.
+- **Field parity:** all 7 live funnels post the same field set, plus `landing_page` and `needs[]`. Keep them identical. Drift loses attribution silently. Use `_field_parity.py` for this type of change.
 - **TCPA consent** must be a real checkbox. Never hardcode `true` or use a hidden field. An unchecked box posts `tcpa_consent: false`. Do not SMS those leads. `.tcpa-group` is spacing only: no background, no border (owner decision; UB `.tcpa-box` matches).
 - **Client state:** `sessionStorage` keys `nba_funnel` (step data), `nba_ty` (thank-you data), `nba_popup_shown`. Each page calls `captureUTM()` (UTMs + `gclid`, `wbraid`, `gbraid`, `msclkid`, `fbclid`, `oppref`, `ttclid`, `li_fat_id`, `twclid`, `epik`). `transaction_id` = `crypto.randomUUID()` on first load.
 - Known minor issue: the thank-you reference number changes on refresh.
@@ -77,7 +79,7 @@ Main site + Google funnel. Each line has its own Google Ads Call Conversion and 
 | Line | Number | `tel:` | Where |
 |---|---|---|---|
 | Main site | 1-800-605-8906 | `+18006058906` | All non-funnel pages, funnel footers, schema.org, PDF emails, humans.txt |
-| Started funnel | 1-813-556-9954 | `+18135569954` | `.header__phone` pill on apply/2 and info/01 |
+| Started funnel | 1-813-556-9954 | `+18135569954` | `.header__phone` pill on apply/2, info/01, info/02 |
 | Completed funnel | 1-813-560-8063 | `+18135608063` | `.ty-call-btn` on thank-you pages |
 | Popup | 1-813-556-9953 | `+18135569953` | `apply/popup.js` only |
 

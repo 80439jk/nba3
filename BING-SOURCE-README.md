@@ -1,5 +1,18 @@
 # Bing / Microsoft-Ads PPC Funnel — `apply/bg1`
 
+> **MOVED AND REGENERATED — 24 Sep 2026.** This funnel now lives at **`/info/bg1/`**, not `/apply/bg1/`.
+> It is **generated** from `/info/02/` by `_build_source_funnels.py` — do not hand-edit it; change
+> the script and re-run. `/apply/bg1/` stays on disk behind a 308 redirect in `vercel.json` as the
+> rollback path, and its copy is the old, non-compliant wording.
+>
+> What changed: the landing/step/thank-you **copy** is now the government-services-policy rewrite
+> (no "get matched", no "see what you qualify for", no "free to apply"), plus the `.gov-bar`
+> disclosure strip and the combined footer disclosure. **Phone lines, tracking and form fields are
+> byte-identical to the old funnel.**
+>
+> **Owner action:** point Bing ads at `/info/bg1/`, and check that any GTM trigger scoped to
+> `/apply/bg1/` also matches `/info/bg1/`.
+
 A dedicated, standalone clone of the live Google funnel (`apply/2`) built for **Bing / Microsoft
 Advertising** paid traffic. It exists so Bing can be tracked with its **own phone lines** (for clean
 call attribution) without touching the Google funnel or any Google/GTM/GFN tracking.

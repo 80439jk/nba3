@@ -22,7 +22,8 @@ Not changed, on purpose (see info/02/README.md):
   - honeypot hp_website, time-trap form_duration_ms, TrustedForm
   - TCPA consent text and checkbox
   - the form field set (field parity with the other 5 live funnels)
-  - /apply/popup.js  (shared subresource, still loaded by apply/2 and apply/0)
+  - the popup's behaviour. It moved to /info/popup.js; apply/2 and info/01 still
+    request /apply/popup.js, which vercel.json rewrites to the same file.
 
 Usage:  python3 _build_info02_variant.py
 """
@@ -54,6 +55,9 @@ GLOBAL_EDITS = [
     ("/apply/2/", "/info/02/"),
     # Backend attribution.
     ("landing_page: 'apply2'", "landing_page: 'info02'"),
+    # Popup moved to a neutral URL. /apply/popup.js still rewrites to it in
+    # vercel.json, so apply/2 and info/01 keep working untouched.
+    ("/apply/popup.js", "/info/popup.js"),
 ]
 
 # Footer government disclosure. Sits immediately above the existing legal

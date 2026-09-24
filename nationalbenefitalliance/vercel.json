@@ -12,6 +12,7 @@
     { "source": "/apply/4/:path*",    "destination": "/info/01/:path*", "permanent": true }
   ],
   "rewrites": [
+    { "source": "/apply/popup.js",        "destination": "/info/popup.js" },
     { "source": "/search",               "destination": "/api/search" },
     { "source": "/sitemap.xml",          "destination": "/api/sitemap" },
     { "source": "/sitemap-counties.xml", "destination": "/api/sitemap-counties" },

@@ -46,7 +46,7 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 SITE = os.path.join(ROOT, 'nationalbenefitalliance')
 SRC = os.path.join(SITE, 'info', '02')
 DST = os.path.join(SITE, 'info', 'yt1')
-SRC_POPUP = os.path.join(SITE, 'apply', 'popup.js')
+SRC_POPUP = os.path.join(SITE, 'info', 'popup.js')
 DST_POPUP = os.path.join(DST, 'popup.js')
 
 # The one YouTube line. Funnel header pill, thank-you call button, thank-you-2
@@ -78,7 +78,7 @@ RULES = [
     ('completed tel',   'tel:+18135608063',         YT_TEL,                  True),
     ('completed display', '1-813-560-8063',         YT_DISPLAY,              True),
     # Dedicated popup copy, so popup calls are attributed to YouTube too.
-    ('popup src',       '/apply/popup.js',          '/info/yt1/popup.js',    True),
+    ('popup src',       '/info/popup.js',           '/info/yt1/popup.js',    True),
     # Backend identifier, so leads are separable in Supabase / CallTools.
     ('landing_page',    "landing_page: 'info02'",   "landing_page: 'yt1'",   True),
 ]

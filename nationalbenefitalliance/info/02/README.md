@@ -93,11 +93,10 @@ Touching any of these needs owner approval — see `CLAUDE.md` "Non-negotiables"
 
 ## Orphans, leftovers and cleanup for later
 
-1. **`/apply/popup.js` is still the popup source on all 7 pages.** The URL contains "apply". It was
-   not moved, because `apply/2`, `apply/0` and `info/01` all load the same file and moving it would
-   break them. If the "no 'apply' in any URL" rule needs to cover subresources too, the fix is to
-   copy it to `/info/popup.js` and repoint only `info/02` — a landing/redirect URL is what ad policy
-   actually inspects, so this is low priority. `info/01` has the same situation.
+1. **The popup now lives at `/info/popup.js`.** It used to be `/apply/popup.js`; the file moved and
+   `vercel.json` rewrites the old path to the new one, so `apply/2` and `info/01` keep working with
+   no edit to either. This funnel references the neutral path directly.
+
 2. **Popup copy** ("speak with a Case Manager … explore available assistance and benefits") is
    unchanged. Owner confirmed "case manager" is compliant. If the *"assistance and benefits"* tail
    ever needs to go, remember `CLAUDE.md` requires copying behavior changes to UB and to the

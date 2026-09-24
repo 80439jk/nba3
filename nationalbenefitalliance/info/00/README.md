@@ -91,9 +91,10 @@ Verified identical to `apply/0` after the build:
 2. **`apply/0/README.md` is now stale** — it documents `/apply/0/` URLs that redirect away. Its
    consent-behavior section is still the authoritative description of the TCPA logic, which is why
    it wasn't deleted. Fold it into this file when `apply/0/` is removed.
-3. **`/apply/popup.js`** is still the popup source on all 6 pages — the URL contains "apply". Not
-   moved, because `apply/2`, `info/01` and `info/02` load the same file. Ad policy inspects
-   landing and redirect URLs, not subresources, so this is low priority. Same situation as info/02.
+3. **The popup now lives at `/info/popup.js`.** It used to be `/apply/popup.js`; the file moved and
+   `vercel.json` rewrites the old path to the new one, so `apply/2` and `info/01` keep working with
+   no edit to either. This funnel references the neutral path directly.
+
 4. **The 3,250 repointed pages still have their own non-compliant copy.** Only the CTA *href*
    changed. County pages, state pages and stories still say "apply", "benefits" and "qualify" in
    their body text. That is the next and much larger job — use a one-off script per `CLAUDE.md`

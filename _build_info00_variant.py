@@ -30,7 +30,7 @@ Not changed, on purpose (see info/00/README.md):
   - GTM, dataLayer, ty-call-btn
   - honeypot hp_website, time-trap form_duration_ms, TrustedForm
   - the form field set and the 3-step flow
-  - /apply/popup.js (shared subresource)
+  - the popup's behaviour. It moved to /info/popup.js.
 
 The sitewide CTA repoint is a SEPARATE script: _repoint_apply0_to_info00.py
 
@@ -60,6 +60,9 @@ ALL_PAGES = [LANDING] + STEPS + THANKYOUS
 GLOBAL_EDITS = [
     ("/apply/0/", "/info/00/"),
     ("landing_page: 'apply0'", "landing_page: 'info00'"),
+    # Popup moved to a neutral URL. /apply/popup.js still rewrites to it in
+    # vercel.json, so apply/2 and info/01 keep working untouched.
+    ("/apply/popup.js", "/info/popup.js"),
 ]
 
 FOOTER_DISCLOSURE = (

@@ -42,10 +42,10 @@ nationalbenefitalliance/
 ├── index.html, vercel.json, css/styles.css, js/main.js
 ├── api/                   # Vercel functions
 ├── backend/               # old Express + Postgres server. NOT deployed.
-├── apply/popup.js         # shared 30s inactivity popup
-├── apply/{0,2,bg1,oa1}/   # live funnels
-├── apply/{1,3}/           # archived, redirected
-├── info/{01,02,yt1}/      # live funnels (neutral URLs)
+├── info/popup.js          # shared 30s inactivity popup
+├── apply/2/               # old Google funnel, still live, to retire
+├── apply/{0,1,3,bg1,oa1}/ # archived, 308-redirected to /info/ replacements
+├── info/{00,01,02,bg1,oa1,yt1}/  # live funnels (neutral URLs)
 ├── prototype/             # experiments, not linked
 ├── about/, privacy/, terms/, stories/, resources/
 └── [state]/[county]/index.html   # ~3,200 county pages, one template
@@ -55,18 +55,20 @@ nationalbenefitalliance/
 
 | Funnel | Role | `landing_page` | TCPA checkbox |
 |---|---|---|---|
-| `apply/2` | Primary Google funnel. Paid Google ads land here. | `apply2` | required |
-| `info/02` | Govt-services-policy rewrite of `apply/2`. Live, **no traffic yet**. | `info02` | required |
-| `apply/0` | Organic. **All main-site CTAs point here.** | `apply0` | optional |
-| `info/01` | Lean A/B variant (fewer fields). Ad-only, not in use yet. | `info01` | optional |
-| `apply/oa1` | OpenAI clone of apply/2 | `oa1` | required |
-| `apply/bg1` | Bing clone of apply/2 | `bg1` | required |
-| `info/yt1` | YouTube clone of apply/2 (generated) | `yt1` | required |
+| `info/02` | Primary Google funnel. Paid Google ads land here. | `info02` | required |
+| `info/00` | Organic. **All main-site CTAs point here.** | `info00` | optional |
+| `info/01` | Lean A/B variant (fewer fields). Ad-only. Has live traffic; do not edit. | `info01` | optional |
+| `info/bg1` | Bing clone of info/02 (generated) | `bg1` | required |
+| `info/oa1` | OpenAI clone of info/02 (generated) | `oa1` | required |
+| `info/yt1` | YouTube clone of info/02 (generated) | `yt1` | required |
+| `apply/2` | Old Google funnel. Superseded by info/02, still live. Retire it. | `apply2` | required |
 
-- **apply/2 flow:** landing (needs tiles + state) → `step-1-dob-citizen` → `step-2-address` → `step-3-income-employ` → `step-4-contact` (submits) → `thank-you`.
+- **info/02 flow:** landing (needs tiles + state) → `step-1-dob-citizen` → `step-2-address` → `step-3-income-employ` → `step-4-contact` (submits) → `thank-you`.
 - **info/01 flow:** landing (needs only) → `step-1-dob` → `step-2-zip` → `step-3-phone` → `step-4-name-email` (submits). Dropped fields post as blank strings. `state` comes from the ZIP (`zipToState()`). Before ads go here, confirm the GTM "Completed funnel" trigger matches `/info/01/thank-you/` and send one test lead. See `info/01/README.md`.
 - **Put new funnel variants under `/info/NN/`**, not `/apply/`. Ad URLs must not contain "apply" or "qualify".
-- **info/02** is apply/2 with the copy rewritten for Google's updated government-services policy: nothing may imply NBA applies for, matches you to, or enrolls you in a government program. Same flow, fields and phone lines as apply/2, so the existing Call Conversions fire unchanged. Built by `_build_info02_variant.py` (idempotent) — change the script, not the pages. **apply/2 is still live and duplicates it**; retire apply/2 only after ads move and conversions are confirmed. Before ads go here, confirm the GTM "Completed funnel" trigger matches `/info/02/thank-you/` and send one test lead. See `info/02/README.md`.
+- **The govt-services-policy rewrite (Sep 2026).** No page may imply NBA applies for, matches you to, or enrolls you in a government program. `info/02` is the rewritten Google funnel, `info/00` the rewritten organic one; `apply/0` and the old source funnels 308-redirect to their replacements. Every page carries the `.gov-bar` disclosure strip or the combined footer disclosure. **`info/01` was deliberately left out** — it has live traffic and those ads are being paused instead.
+- **Generated funnels.** `info/yt1` comes from `_build_yt1_variant.py`; `info/bg1` and `info/oa1` from `_build_source_funnels.py`. All three clone **`info/02`**, so a copy change there must be followed by re-running both scripts. Do not hand-edit the generated directories. `_build_source_funnels.py` asserts **per page** that the source's own line is present and that no other `tel:` appears, so a number that drifts on a single page fails the build instead of shipping silently. Both scripts also refuse to write a page still containing a Google-funnel string.
+- **`apply/2` is still live and duplicates `info/02`.** Retire it once conversions are confirmed on the new URL: delete the directory and add the 308 in `vercel.json`, the same way `apply/0` was retired.
 - **Field parity:** all 7 live funnels post the same field set, plus `landing_page` and `needs[]`. Keep them identical. Drift loses attribution silently. Use `_field_parity.py` for this type of change.
 - **TCPA consent** must be a real checkbox. Never hardcode `true` or use a hidden field. An unchecked box posts `tcpa_consent: false`. Do not SMS those leads. `.tcpa-group` is spacing only: no background, no border (owner decision; UB `.tcpa-box` matches).
 - **Client state:** `sessionStorage` keys `nba_funnel` (step data), `nba_ty` (thank-you data), `nba_popup_shown`. Each page calls `captureUTM()` (UTMs + `gclid`, `wbraid`, `gbraid`, `msclkid`, `fbclid`, `oppref`, `ttclid`, `li_fat_id`, `twclid`, `epik`). `transaction_id` = `crypto.randomUUID()` on first load.
@@ -79,26 +81,26 @@ Main site + Google funnel. Each line has its own Google Ads Call Conversion and 
 | Line | Number | `tel:` | Where |
 |---|---|---|---|
 | Main site | 1-800-605-8906 | `+18006058906` | All non-funnel pages, funnel footers, schema.org, PDF emails, humans.txt |
-| Started funnel | 1-813-556-9954 | `+18135569954` | `.header__phone` pill on apply/2, info/01, info/02 |
+| Started funnel | 1-813-556-9954 | `+18135569954` | `.header__phone` pill on info/02, info/01, apply/2 |
 | Completed funnel | 1-813-560-8063 | `+18135608063` | `.ty-call-btn` on thank-you pages |
-| Popup | 1-813-556-9953 | `+18135569953` | `apply/popup.js` only |
+| Popup | 1-813-556-9953 | `+18135569953` | `info/popup.js` only (`/apply/popup.js` rewrites to it) |
 
 Source clones. Lines are hardcoded. Details are in each README.
 
 | Funnel | Lines | Tracking | README |
 |---|---|---|---|
-| `apply/oa1` | OpenAI `+12394569477` on all call buttons + popup | Inline OpenAI pixel (vendor code, do not edit) + `oa-track.js` passive click listener | `OPENAI-SOURCE-README.md` |
-| `apply/bg1` | Funnel `+12394809440`, thank-you `+12394809438`, popup `+16452389372` | Microsoft UET in GTM (no inline pixel) | `BING-SOURCE-README.md` |
+| `info/oa1` | OpenAI `+12394569477` on all call buttons + popup | Inline OpenAI pixel (vendor code, do not edit) + `oa-track.js` passive click listener | `OPENAI-SOURCE-README.md` |
+| `info/bg1` | Funnel `+12394809440`, thank-you `+12394809438`, popup `+16452389372` | Microsoft UET in GTM (no inline pixel) | `BING-SOURCE-README.md` |
 | `info/yt1` | YouTube `+18883121358` on all call buttons + popup | GTM + Google Ads (no page code) | `YOUTUBE-SOURCE-README.md` |
-| `apply/0` | Organic `+12394569476` on thank-you only. Shared popup. | — | — |
+| `info/00` | Organic `+12394569476` on thank-you only. Shared popup. | — | — |
 
 Retired. Never use again: 1-888-408-5650, 1-855-767-9422.
 
-**New source funnel:** clone `apply/2` → change `/apply/2/` paths → put the dedicated line in every call button and in a dedicated popup copy → add the source pixel + conversion script (if the source uses a standard GTM tag, install it in GTM instead). Never add source detection or number swaps to `apply/2`.
+**New source funnel:** add it to `_build_source_funnels.py` — a name, its phone lines and whether it needs page-level pixel code — then run the script. It clones `info/02`, repoints the paths, puts the dedicated line in every call button and in a dedicated popup fork, and refuses to write a page that still contains a Google-funnel string. Never add source detection or runtime number swaps to a shared funnel.
 
-## Popup (`apply/popup.js`)
+## Popup (`info/popup.js`)
 
-Behavior must stay identical to UB `qualify/popup.js`. Only brand skin and phone number differ. Copy every behavior change to UB and to the number-only forks `apply/oa1/popup.js`, `apply/bg1/popup.js`, `info/yt1/popup.js` (regenerate with its script). Update both CLAUDE.md files.
+Lives at `info/popup.js`; `vercel.json` rewrites `/apply/popup.js` to it so `apply/2` and `info/01` keep working untouched. Behavior must stay identical to UB `qualify/popup.js`. Only brand skin and phone number differ. The number-only forks `info/bg1/popup.js`, `info/oa1/popup.js` and `info/yt1/popup.js` are generated from it — change this file, then re-run `_build_source_funnels.py` and `_build_yt1_variant.py`. Copy every behavior change to UB. Update both CLAUDE.md files.
 - Shows after 30s of mouse/touch inactivity (`DELAY = 30000`). Never make it shorter.
 - After it shows, other pages in the session do not show it (`nba_popup_shown`). On the same page, it shows again 30s after close. The owner wants this. Do not remove it without owner approval.
 - Runs on landing, every step, and thank-you. On thank-you, it shows `#refNumber`.

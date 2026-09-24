@@ -1,5 +1,18 @@
 # OpenAI PPC Funnel — `apply/oa1`
 
+> **MOVED AND REGENERATED — 24 Sep 2026.** This funnel now lives at **`/info/oa1/`**, not `/apply/oa1/`.
+> It is **generated** from `/info/02/` by `_build_source_funnels.py` — do not hand-edit it; change
+> the script and re-run. `/apply/oa1/` stays on disk behind a 308 redirect in `vercel.json` as the
+> rollback path, and its copy is the old, non-compliant wording.
+>
+> What changed: the landing/step/thank-you **copy** is now the government-services-policy rewrite
+> (no "get matched", no "see what you qualify for", no "free to apply"), plus the `.gov-bar`
+> disclosure strip and the combined footer disclosure. **Phone lines, tracking and form fields are
+> byte-identical to the old funnel.**
+>
+> **Owner action:** point OpenAI ads at `/info/oa1/`, and check that any GTM trigger scoped to
+> `/apply/oa1/` also matches `/info/oa1/`.
+
 A dedicated, standalone clone of the live Google funnel (`apply/2`) built for OpenAI paid traffic. It exists so OpenAI can be tracked with its **own phone line + its own pixel** without touching the Google funnel or any Google/GTM/GFN tracking.
 
 **Branch:** `openai-ppc-funnel-oa1` · **Point OpenAI ads at:** `https://nba3.vercel.app/apply/oa1/` (or the custom domain `/apply/oa1/`)

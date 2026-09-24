@@ -8,6 +8,10 @@
     { "source": "/apply/3/:path*",    "destination": "/apply/2", "permanent": true },
     { "source": "/apply/0",           "destination": "/info/00", "permanent": true },
     { "source": "/apply/0/:path*",    "destination": "/info/00/:path*", "permanent": true },
+    { "source": "/apply/bg1",         "destination": "/info/bg1", "permanent": true },
+    { "source": "/apply/bg1/:path*",  "destination": "/info/bg1/:path*", "permanent": true },
+    { "source": "/apply/oa1",         "destination": "/info/oa1", "permanent": true },
+    { "source": "/apply/oa1/:path*",  "destination": "/info/oa1/:path*", "permanent": true },
     { "source": "/apply/4",           "destination": "/info/01", "permanent": true },
     { "source": "/apply/4/:path*",    "destination": "/info/01/:path*", "permanent": true }
   ],

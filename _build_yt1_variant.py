@@ -1,19 +1,24 @@
 #!/usr/bin/env python3
 """
-Build the YouTube source funnel at /info/yt1/ from the live Google funnel
-/apply/2/.
+Build the YouTube source funnel at /info/yt1/ from /info/02/ — the
+government-services-policy rewrite of the Google funnel.
+
+SOURCE CHANGED 2026-09-24: this used to clone /apply/2/. It now clones
+/info/02/ so yt1 carries the compliant copy, the .gov-bar disclosure strip and
+the footer SNAP/LIHEAP/211 disclosure. The YouTube phone line is unchanged.
 
 WHY THIS EXISTS
 ---------------
 Call attribution on this site is done by URL + a hardcoded phone number, never
 by swapping numbers at runtime. A runtime swap would break the Google
-Forwarding Number pairing that Google Ads uses to count calls on /apply/2/.
+Forwarding Number pairing that Google Ads uses to count calls on the Google
+funnel.
 So each traffic source gets its own copy of the funnel with its own line.
 See apply/bg1 (Bing) and apply/oa1 (OpenAI) for the same pattern.
 
 WHAT IT DOES
 ------------
-Copies the 7 pages of apply/2 into info/yt1, then applies string-level
+Copies the 7 pages of info/02 into info/yt1, then applies string-level
 substitutions only. No structural change. The clone therefore inherits, byte
 for byte: the GTM container, `noindex, nofollow`, the TCPA consent checkbox,
 the honeypot (hp_website), the time-trap (form_duration_ms), TrustedForm,
@@ -25,7 +30,7 @@ re-pops 30s after close).
 
 IDEMPOTENT
 ----------
-The script regenerates info/yt1 from apply/2 on every run, so a second run
+The script regenerates info/yt1 from info/02 on every run, so a second run
 produces identical bytes. info/yt1 is a GENERATED directory: change this
 script, then re-run. Do not hand-edit info/yt1.
 
@@ -39,7 +44,7 @@ import sys
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 SITE = os.path.join(ROOT, 'nationalbenefitalliance')
-SRC = os.path.join(SITE, 'apply', '2')
+SRC = os.path.join(SITE, 'info', '02')
 DST = os.path.join(SITE, 'info', 'yt1')
 SRC_POPUP = os.path.join(SITE, 'apply', 'popup.js')
 DST_POPUP = os.path.join(DST, 'popup.js')
@@ -65,7 +70,7 @@ PAGES = [
 # no `new` string reintroduces an earlier `old`.
 RULES = [
     # Internal navigation + JS redirects must stay inside the clone.
-    ('nav path',        '/apply/2/',                '/info/yt1/',            True),
+    ('nav path',        '/info/02/',                '/info/yt1/',            True),
     # Started-funnel line -> YouTube line (header pill + thank-you-2 fallback).
     ('started tel',     'tel:+18135569954',         YT_TEL,                  True),
     ('started display', '1-813-556-9954',           YT_DISPLAY,              True),
@@ -75,15 +80,16 @@ RULES = [
     # Dedicated popup copy, so popup calls are attributed to YouTube too.
     ('popup src',       '/apply/popup.js',          '/info/yt1/popup.js',    True),
     # Backend identifier, so leads are separable in Supabase / CallTools.
-    ('landing_page',    "landing_page: 'apply2'",   "landing_page: 'yt1'",   True),
+    ('landing_page',    "landing_page: 'info02'",   "landing_page: 'yt1'",   True),
 ]
 
 # Nothing from the Google funnel may survive in the clone.
 FORBIDDEN = [
-    '/apply/2/', 'tel:+18135569954', '1-813-556-9954',
+    '/info/02/', '/apply/2/',
+    'tel:+18135569954', '1-813-556-9954',
     'tel:+18135608063', '1-813-560-8063',
     'tel:+18135569953', '1-813-556-9953',   # shared popup line
-    "landing_page: 'apply2'",
+    "landing_page: 'info02'", "landing_page: 'apply2'",
 ]
 
 
@@ -104,13 +110,13 @@ def build_pages():
                 counts[label] += n
         for bad in FORBIDDEN:
             if bad in s:
-                sys.exit('LEFTOVER apply/2 string %r in %s' % (bad, rel))
+                sys.exit('LEFTOVER source-funnel string %r in %s' % (bad, rel))
         with open(dst, 'w', encoding='utf-8') as f:
             f.write(s)
         print('  wrote info/yt1/%s' % rel)
     for label, _old, _new, req in RULES:
         if req and counts[label] == 0:
-            sys.exit('NO MATCH: rule %r never matched. apply/2 changed shape.'
+            sys.exit('NO MATCH: rule %r never matched. info/02 changed shape.'
                      % label)
     print('\n  substitutions: %s'
           % ', '.join('%s=%d' % (k, v) for k, v in counts.items()))

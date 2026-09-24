@@ -8,9 +8,9 @@ Two owner-approved changes, 2026-09-24:
    combined paragraph; this removes the standalone <p> and replaces the
    copyright text with the owner's wording, verbatim.
 
-   Note: the owner's text drops the "not affiliated with or endorsed by the
-   U.S. Department of Education" sentence and folds it into the broader "any
-   political party, government agency, or other outside group" clause.
+   The Department of Education disclaimer is preserved, folded into the
+   affiliation clause as "government agency (including U.S. Department of
+   Education)" per the owner's edit.
 
 2. HOMEPAGE — three headings.
    "Find Free Benefits"        -> "Find Free Assistance"
@@ -62,7 +62,8 @@ OLD_COPYRIGHT = (
 NEW_COPYRIGHT = (
     "© 2026 National Benefit Alliance. All rights reserved. National Benefit Alliance "
     "is a privately held for-profit entity and is not affiliated with or endorsed by any "
-    "political party, government agency, or other outside group or persons. We are not a "
+    "political party, government agency (including U.S. Department of Education), or other "
+    "outside group or persons. We are not a "
     "government agency and do not apply for or enroll individuals in SNAP, LIHEAP, "
     "Section 8, or rental assistance. We do not submit forms or documents on our members' "
     "behalf; all communications and documentation must be submitted directly to the "

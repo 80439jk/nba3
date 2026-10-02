@@ -57,8 +57,9 @@ SITE = os.path.join(ROOT, 'nationalbenefitalliance')
 SRC = os.path.join(SITE, 'info', '02')
 SRC_POPUP = os.path.join(SITE, 'info', 'popup.js')
 
-# Where the OpenAI extras are carried over from. Read, never edited.
-OA_LEGACY = os.path.join(SITE, 'apply', 'oa1')
+# OpenAI vendor code (pixel block + oa-track.js), saved verbatim from the retired
+# /apply/oa1/ funnel. Lives outside the deployed site. Read, never edited.
+OA_VENDOR = os.path.join(ROOT, '_vendor', 'openai')
 
 PAGES = [
     'index.html',
@@ -122,13 +123,12 @@ def rules(name, cfg):
 
 
 def openai_extras():
-    """The pixel block and the oa-track.js body, read verbatim from the old funnel."""
-    src = open(os.path.join(OA_LEGACY, 'index.html'), encoding='utf-8').read()
-    m = re.search(r'<!-- OpenAI Pixel -->\n<script>.*?</script>\n', src, re.S)
-    if not m:
-        sys.exit('MISSING: OpenAI pixel block in %s/index.html' % OA_LEGACY)
-    tracker = open(os.path.join(OA_LEGACY, 'oa-track.js'), encoding='utf-8').read()
-    return m.group(0), tracker
+    """The pixel block and the oa-track.js body, read verbatim from _vendor/openai/."""
+    pixel = open(os.path.join(OA_VENDOR, 'pixel.html'), encoding='utf-8').read()
+    if not pixel.startswith('<!-- OpenAI Pixel -->'):
+        sys.exit('MISSING: OpenAI pixel block in %s/pixel.html' % OA_VENDOR)
+    tracker = open(os.path.join(OA_VENDOR, 'oa-track.js'), encoding='utf-8').read()
+    return pixel, tracker
 
 
 def build(name, cfg):

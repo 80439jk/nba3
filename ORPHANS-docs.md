@@ -14,7 +14,13 @@ Review each item before you remove or fix it. See also `ORPHANS-pipeline.md` and
 | Branch `docs-funnel-playbook` (`FUNNEL-PLAYBOOK.md`, 706 lines) | Not merged | Decide: merge (and link it from CLAUDE.md) or delete. |
 | PR #39 `field-parity-audit` (`FIELD-PARITY.md`) | Open | Decide: merge or close. |
 | `nationalbenefitalliance/backend/` | Not deployed | Old Express + Postgres server. `api/send-pdf.js` and `backend/routes/*` still quote old hours (see `ORPHANS-hours.md`). Decide: keep or delete. |
-| `nationalbenefitalliance/apply/1/`, `apply/3/` | Unreachable | 308-redirected to `/apply/2`. Kept for rollback. Already listed in `ORPHANS-pipeline.md`. |
+| `nationalbenefitalliance/apply/` (all of it) | **Deleted 2026-10-02** | Every `/apply` URL now 308s to `/info/`. Resolved. |
+| `info/yt1/` vs `_build_yt1_variant.py` | Drift (found 2026-10-02) | Re-running the script adds a `footer__disclaimer--gov` paragraph that is in `info/02` but not in the live `info/yt1`. Someone edited one side by hand. Decide which footer is right, then re-run the script so they match. |
+| `/apply/3` in code comments | Cosmetic | `step-4-contact` in info/02, bg1, oa1, yt1 and two info/01 pages mention the retired `/apply/3` in a JS comment. Not a link. Fix in info/02 and regenerate once the yt1 drift is settled. |
+| `_field_parity.py` | Stale | Its file list points at the deleted `apply/0`, `apply/2`, `apply/bg1`, `apply/oa1`. It skips missing files, so it does nothing now. Update its list to the `info/` funnels before using it again. |
+| `_build_info02_variant.py`, `_build_info00_variant.py`, `_build_apply4_variant.py`, `_repoint_apply0_to_info00.py`, `_repoint_apply2_to_apply0.py`, `_retext_apply_ctas.py` | Dead one-offs | They read from the deleted `apply/` folders. They can't run again. Delete them. |
+| `apply.nationalbenefitalliance.com` in `DEPLOYMENT.md` and `backend/` | Third party | That subdomain is another party's social funnel. Left alone on purpose. |
+| `info/01/README.md`, `info/02/README.md`, `info/00/README.md` | History | They describe the move from `/apply/` as steps to do. Those steps are done. |
 
 ## Removed from CLAUDE.md (still true, kept here for reference)
 

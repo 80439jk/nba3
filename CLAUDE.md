@@ -17,13 +17,13 @@ Lead-generation site. It connects U.S. residents with free government benefit pr
    - Show crawlers different content than users. Overlays and popups are OK if the HTML is the same for all.
 3. **One phone line per page.** To add or move a number, the owner must update GTM and Google Ads. A code change alone does not move conversions.
 4. **Bot-detection fields are load-bearing:** honeypot `hp_website` and time-trap `form_duration_ms`. Do not remove, autofill, or bypass them against production.
-5. **Do not change or link to the archived funnels** `apply/1/` and `apply/3/`. They redirect to `/apply/2` and stay for rollback.
+5. **No `/apply/` pages exist (retired 2026-10-02).** Every `/apply` URL 308-redirects to its `/info/` replacement. Never recreate an `/apply/` folder or link to one. Rollback lives in git history.
 6. **`info/yt1/` is generated** by `_build_yt1_variant.py`. Do not hand-edit it. Change the script and run it again.
 
 ## Sitewide edits (~3,300 HTML pages)
 
 Use a one-off, idempotent Python script in the repo root (`_descriptive_name.py`):
-1. Walk `nationalbenefitalliance/`. Skip `node_modules/`, `.git/`, and folders out of scope (usually `apply/` + `info/`, or all main-site folders).
+1. Walk `nationalbenefitalliance/`. Skip `node_modules/`, `.git/`, and folders out of scope (usually `info/`, or all main-site folders).
 2. Match a unique string and replace it. Skip files that do not contain it, so a second run changes nothing.
 3. Print the count of changed files. Spot-check 2–3 files and the homepage in a Vercel preview.
 4. Commit the script only if it is reusable.
@@ -43,8 +43,6 @@ nationalbenefitalliance/
 ├── api/                   # Vercel functions
 ├── backend/               # old Express + Postgres server. NOT deployed.
 ├── info/popup.js          # shared 30s inactivity popup
-├── apply/2/               # old Google funnel, still live, to retire
-├── apply/{0,1,3,bg1,oa1}/ # archived, 308-redirected to /info/ replacements
 ├── info/{00,01,02,bg1,oa1,yt1}/  # live funnels (neutral URLs)
 ├── prototype/             # experiments, not linked
 ├── about/, privacy/, terms/, stories/, resources/
@@ -61,14 +59,14 @@ nationalbenefitalliance/
 | `info/bg1` | Bing clone of info/02 (generated) | `bg1` | required |
 | `info/oa1` | OpenAI clone of info/02 (generated) | `oa1` | required |
 | `info/yt1` | YouTube clone of info/02 (generated) | `yt1` | required |
-| `apply/2` | Old Google funnel. Superseded by info/02, still live. Retire it. | `apply2` | required |
 
 - **info/02 flow:** landing (needs tiles + state) → `step-1-dob-citizen` → `step-2-address` → `step-3-income-employ` → `step-4-contact` (submits) → `thank-you`.
 - **info/01 flow:** landing (needs only) → `step-1-dob` → `step-2-zip` → `step-3-phone` → `step-4-name-email` (submits). Dropped fields post as blank strings. `state` comes from the ZIP (`zipToState()`). Before ads go here, confirm the GTM "Completed funnel" trigger matches `/info/01/thank-you/` and send one test lead. See `info/01/README.md`.
 - **Put new funnel variants under `/info/NN/`**, not `/apply/`. Ad URLs must not contain "apply" or "qualify".
-- **The govt-services-policy rewrite (Sep 2026).** No page may imply NBA applies for, matches you to, or enrolls you in a government program. `info/02` is the rewritten Google funnel, `info/00` the rewritten organic one; `apply/0` and the old source funnels 308-redirect to their replacements. Every page carries the `.gov-bar` disclosure strip or the combined footer disclosure. **`info/01` was deliberately left out** — it has live traffic and those ads are being paused instead.
+- **The govt-services-policy rewrite (Sep 2026).** No page may imply NBA applies for, matches you to, or enrolls you in a government program. `info/02` is the rewritten Google funnel, `info/00` the rewritten organic one; all old `/apply/*` URLs 308-redirect to their replacements. Every page carries the `.gov-bar` disclosure strip or the combined footer disclosure. **`info/01` was deliberately left out** of the copy rewrite — its ads are paused. Its only change: the popup script path moved to `/info/popup.js` (owner-approved, 2026-10-02).
 - **Generated funnels.** `info/yt1` comes from `_build_yt1_variant.py`; `info/bg1` and `info/oa1` from `_build_source_funnels.py`. All three clone **`info/02`**, so a copy change there must be followed by re-running both scripts. Do not hand-edit the generated directories. `_build_source_funnels.py` asserts **per page** that the source's own line is present and that no other `tel:` appears, so a number that drifts on a single page fails the build instead of shipping silently. Both scripts also refuse to write a page still containing a Google-funnel string.
-- **`apply/2` is still live and duplicates `info/02`.** Retire it once conversions are confirmed on the new URL: delete the directory and add the 308 in `vercel.json`, the same way `apply/0` was retired.
+- **`apply/` retired 2026-10-02.** All ads were moved off `/apply` URLs and `/apply/2` leads dropped to zero before the folder was deleted. Old `apply2`/`apply0` values in `leads.landing_page` are historical.
+- **OpenAI vendor code** (pixel + `oa-track.js`) that `_build_source_funnels.py` injects lives in `_vendor/openai/` at the repo root (not deployed). Do not edit it.
 - **Field parity:** all 7 live funnels post the same field set, plus `landing_page` and `needs[]`. Keep them identical. Drift loses attribution silently. Use `_field_parity.py` for this type of change.
 - **TCPA consent** must be a real checkbox. Never hardcode `true` or use a hidden field. An unchecked box posts `tcpa_consent: false`. Do not SMS those leads. `.tcpa-group` is spacing only: no background, no border (owner decision; UB `.tcpa-box` matches).
 - **Client state:** `sessionStorage` keys `nba_funnel` (step data), `nba_ty` (thank-you data), `nba_popup_shown`. Each page calls `captureUTM()` (UTMs + `gclid`, `wbraid`, `gbraid`, `msclkid`, `fbclid`, `oppref`, `ttclid`, `li_fat_id`, `twclid`, `epik`). `transaction_id` = `crypto.randomUUID()` on first load.
@@ -81,9 +79,9 @@ Main site + Google funnel. Each line has its own Google Ads Call Conversion and 
 | Line | Number | `tel:` | Where |
 |---|---|---|---|
 | Main site | 1-800-605-8906 | `+18006058906` | All non-funnel pages, funnel footers, schema.org, PDF emails, humans.txt |
-| Started funnel | 1-813-556-9954 | `+18135569954` | `.header__phone` pill on info/02, info/01, apply/2 |
+| Started funnel | 1-813-556-9954 | `+18135569954` | `.header__phone` pill on info/02, info/01 |
 | Completed funnel | 1-813-560-8063 | `+18135608063` | `.ty-call-btn` on thank-you pages |
-| Popup | 1-813-556-9953 | `+18135569953` | `info/popup.js` only (`/apply/popup.js` rewrites to it) |
+| Popup | 1-813-556-9953 | `+18135569953` | `info/popup.js` only (`/apply/popup.js` 308s to it) |
 
 Source clones. Lines are hardcoded. Details are in each README.
 
@@ -100,7 +98,7 @@ Retired. Never use again: 1-888-408-5650, 1-855-767-9422.
 
 ## Popup (`info/popup.js`)
 
-Lives at `info/popup.js`; `vercel.json` rewrites `/apply/popup.js` to it so `apply/2` and `info/01` keep working untouched. Behavior must stay identical to UB `qualify/popup.js`. Only brand skin and phone number differ. The number-only forks `info/bg1/popup.js`, `info/oa1/popup.js` and `info/yt1/popup.js` are generated from it — change this file, then re-run `_build_source_funnels.py` and `_build_yt1_variant.py`. Copy every behavior change to UB. Update both CLAUDE.md files.
+Lives at `info/popup.js`. `vercel.json` 308-redirects the old `/apply/popup.js` address to it, for cached pages. Behavior must stay identical to UB `qualify/popup.js`. Only brand skin and phone number differ. The number-only forks `info/bg1/popup.js`, `info/oa1/popup.js` and `info/yt1/popup.js` are generated from it — change this file, then re-run `_build_source_funnels.py` and `_build_yt1_variant.py`. Copy every behavior change to UB. Update both CLAUDE.md files.
 - Shows after 30s of mouse/touch inactivity (`DELAY = 30000`). Never make it shorter.
 - After it shows, other pages in the session do not show it (`nba_popup_shown`). On the same page, it shows again 30s after close. The owner wants this. Do not remove it without owner approval.
 - Runs on landing, every step, and thank-you. On thank-you, it shows `#refNumber`.
@@ -108,4 +106,4 @@ Lives at `info/popup.js`; `vercel.json` rewrites `/apply/popup.js` to it so `app
 
 ## Vercel (`vercel.json`)
 
-308 redirects: `/apply/1*` and `/apply/3*` → `/apply/2`; `/apply/4*` → `/info/01`. Rewrites: `/search`, `/sitemap.xml`, `/sitemap-counties.xml`, `/humans.txt`, `/api/zip/:zip`. Read the file for headers and cache rules.
+308 redirects: `/apply/2*`, `/apply/1*`, `/apply/3*` → `/info/02`; `/apply/0*` → `/info/00`; `/apply/bg1*`, `/apply/oa1*` → `/info/bg1`, `/info/oa1`; `/apply/4*` → `/info/01`; any other `/apply*` → `/info/02`. Rewrites: `/search`, `/sitemap.xml`, `/sitemap-counties.xml`, `/humans.txt`, `/api/zip/:zip`. Read the file for headers and cache rules.

@@ -4010,7 +4010,7 @@ document.addEventListener('DOMContentLoaded', () => {
     overlay.appendChild(phone);
     // Apply Now
     const apply = document.createElement('a');
-    apply.href = '/apply/2';
+    apply.href = '/info/00';
     apply.className = 'mobile-apply';
     apply.textContent = 'Find Assistance';
     overlay.appendChild(apply);

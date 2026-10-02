@@ -1378,9 +1378,17 @@ function saveFunnelData(obj) {
 function captureUTM() {
   const p = new URLSearchParams(window.location.search);
   const utms = {};
-  ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','gclid','wbraid','gbraid','msclkid','fbclid','oppref','ttclid','li_fat_id','twclid','epik'].forEach(k => {
+  ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','gclid','wbraid','gbraid','msclkid','fbclid','oppref','ttclid','li_fat_id','twclid','epik',
+   'gcid','gagid','gkid','gad','mcid','magid','mkid','mad'].forEach(k => {
     if (p.get(k)) utms[k] = p.get(k);
   });
+  // Full landing URL + where the visitor came from (Caliber attribution). Taken on the
+  // first funnel page of the session, or on any page that arrives with tracking params
+  // (a fresh ad click), so a newer click replaces an older one, like gclid does.
+  if (Object.keys(utms).length || !getFunnelData().landing_url) {
+    utms.landing_url = window.location.href;
+    utms.page_referrer = document.referrer || '';
+  }
   if (Object.keys(utms).length) saveFunnelData(utms);
 }
 // ---- Generate transaction ID ----

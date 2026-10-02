@@ -69,7 +69,7 @@ nationalbenefitalliance/
 - **OpenAI vendor code** (pixel + `oa-track.js`) that `_build_source_funnels.py` injects lives in `_vendor/openai/` at the repo root (not deployed). Do not edit it.
 - **Field parity:** all 7 live funnels post the same field set, plus `landing_page` and `needs[]`. Keep them identical. Drift loses attribution silently. Use `_field_parity.py` for this type of change.
 - **TCPA consent** must be a real checkbox. Never hardcode `true` or use a hidden field. An unchecked box posts `tcpa_consent: false`. Do not SMS those leads. `.tcpa-group` is spacing only: no background, no border (owner decision; UB `.tcpa-box` matches).
-- **Client state:** `sessionStorage` keys `nba_funnel` (step data), `nba_ty` (thank-you data), `nba_popup_shown`. Each page calls `captureUTM()` (UTMs + `gclid`, `wbraid`, `gbraid`, `msclkid`, `fbclid`, `oppref`, `ttclid`, `li_fat_id`, `twclid`, `epik`). `transaction_id` = `crypto.randomUUID()` on first load.
+- **Client state:** `sessionStorage` keys `nba_funnel` (step data), `nba_ty` (thank-you data), `nba_popup_shown`. Each page calls `captureUTM()` (UTMs + `gclid`, `wbraid`, `gbraid`, `msclkid`, `fbclid`, `oppref`, `ttclid`, `li_fat_id`, `twclid`, `epik`, and the Google/Bing ad ids `gcid gagid gkid gad mcid magid mkid mad`). It also saves `landing_url` (full URL) and `page_referrer` (`document.referrer`) on the first funnel page of the session or on any page arriving with tracking params. Submit pages post those 10 keys only when present; `submit-lead` sends `landing_url` to Caliber as `attribution.landing_page` (Caliber request, 2026-10-02). `transaction_id` = `crypto.randomUUID()` on first load.
 - Known minor issue: the thank-you reference number changes on refresh.
 
 ## Phone numbers

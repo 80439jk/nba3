@@ -19,49 +19,422 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta property="og:url" content="https://nationalbenefitalliance.com/west-virginia/" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "GovernmentOrganization",
-        "@id": "https://nationalbenefitalliance.com/west-virginia/#org",
-        "name": "National Benefit Alliance – West Virginia Resource Center",
-        "url": "https://nationalbenefitalliance.com/west-virginia/",
-        "description": "Free county-by-county resource guide for West Virginia residents seeking government and community assistance programs.",
-        "areaServed": {
-          "@type": "State",
-          "name": "West Virginia",
-          "sameAs": "https://www.wikidata.org/wiki/Q1371"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/west-virginia/#page",
-        "url": "https://nationalbenefitalliance.com/west-virginia/",
-        "name": "West Virginia County Resource Center",
-        "description": "Browse all 56 West Virginia counties for community benefit resources.",
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem","position": 1,"name": "Home","item": "https://nationalbenefitalliance.com/"},
-            {"@type": "ListItem","position": 2,"name": "West Virginia","item": "https://nationalbenefitalliance.com/west-virginia/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "ItemList",
-        "name": "West Virginia County Resource Guides",
-        "numberOfItems": 56,
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Kanawha County Resources","url":"https://nationalbenefitalliance.com/west-virginia/kanawha/"},
-          {"@type":"ListItem","position":2,"name":"Berkeley County Resources","url":"https://nationalbenefitalliance.com/west-virginia/berkeley/"},
-          {"@type":"ListItem","position":3,"name":"Cabell County Resources","url":"https://nationalbenefitalliance.com/west-virginia/cabell/"},
-          {"@type":"ListItem","position":4,"name":"Monongalia County Resources","url":"https://nationalbenefitalliance.com/west-virginia/monongalia/"},
-          {"@type":"ListItem","position":5,"name":"Wood County Resources","url":"https://nationalbenefitalliance.com/west-virginia/wood/"}
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://nationalbenefitalliance.com/west-virginia/#page",
+      "url": "https://nationalbenefitalliance.com/west-virginia/",
+      "name": "Assistance programs by county in West Virginia",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
+      },
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US",
+      "about": {
+        "@type": "AdministrativeArea",
+        "name": "West Virginia"
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "West Virginia",
+          "item": "https://nationalbenefitalliance.com/west-virginia/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "West Virginia counties",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 56,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Barbour County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/barbour/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Berkeley County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/berkeley/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Boone County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/boone/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Braxton County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/braxton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Brooke County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/brooke/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Cabell County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/cabell/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Calhoun County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/calhoun/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Clay County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/clay/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Doddridge County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/doddridge/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Fayette County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/fayette/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Gilmer County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/gilmer/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "Grant County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/grant/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Greenbrier County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/greenbrier/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Hampshire County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/hampshire/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Hancock County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/hancock/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "Hardy County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/hardy/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "Harrison County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/harrison/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "Jackson County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/jackson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "name": "Jefferson County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/jefferson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "name": "Kanawha County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/kanawha/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "name": "Lewis County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/lewis/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "name": "Lincoln County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/lincoln/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "name": "Logan County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/logan/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "name": "Marion County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/marion/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "name": "Marshall County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/marshall/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "name": "Mason County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/mason/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "name": "Mcdowell County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/mcdowell/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "name": "Mercer County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/mercer/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "name": "Mineral County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/mineral/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "name": "Mingo County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/mingo/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 31,
+          "name": "Monongalia County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/monongalia/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 32,
+          "name": "Monroe County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/monroe/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 33,
+          "name": "Morgan County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/morgan/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 34,
+          "name": "Nicholas County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/nicholas/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 35,
+          "name": "Ohio County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/ohio/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 36,
+          "name": "Pendleton County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/pendleton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 37,
+          "name": "Pleasants County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/pleasants/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 38,
+          "name": "Pocahontas County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/pocahontas/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 39,
+          "name": "Preston County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/preston/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 40,
+          "name": "Putnam County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/putnam/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 41,
+          "name": "Raleigh County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/raleigh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 42,
+          "name": "Randolph County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/randolph/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 43,
+          "name": "Ritchie County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/ritchie/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 44,
+          "name": "Roane County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/roane/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 45,
+          "name": "Summers County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/summers/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 46,
+          "name": "Taylor County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/taylor/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 47,
+          "name": "Tucker County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/tucker/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 48,
+          "name": "Tyler County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/tyler/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 49,
+          "name": "Upshur County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/upshur/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 50,
+          "name": "Washington County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/washington/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 51,
+          "name": "Wayne County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/wayne/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 52,
+          "name": "Webster County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/webster/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 53,
+          "name": "Wetzel County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/wetzel/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 54,
+          "name": "Wirt County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/wirt/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 55,
+          "name": "Wood County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/wood/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 56,
+          "name": "Wyoming County",
+          "url": "https://nationalbenefitalliance.com/west-virginia/wyoming/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

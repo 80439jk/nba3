@@ -19,49 +19,434 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta property="og:url" content="https://nationalbenefitalliance.com/california/" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "GovernmentOrganization",
-        "@id": "https://nationalbenefitalliance.com/california/#org",
-        "name": "National Benefit Alliance – California Resource Center",
-        "url": "https://nationalbenefitalliance.com/california/",
-        "description": "Free county-by-county resource guide for California residents seeking government and community assistance programs.",
-        "areaServed": {
-          "@type": "State",
-          "name": "California",
-          "sameAs": "https://www.wikidata.org/wiki/Q99"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/california/#page",
-        "url": "https://nationalbenefitalliance.com/california/",
-        "name": "California County Resource Center",
-        "description": "Browse all 58 California counties for community benefit resources.",
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem","position": 1,"name": "Home","item": "https://nationalbenefitalliance.com/"},
-            {"@type": "ListItem","position": 2,"name": "California","item": "https://nationalbenefitalliance.com/california/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "ItemList",
-        "name": "California County Resource Guides",
-        "numberOfItems": 58,
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Los Angeles Resources","url":"https://nationalbenefitalliance.com/california/los-angeles/"},
-          {"@type":"ListItem","position":2,"name":"San Diego Resources","url":"https://nationalbenefitalliance.com/california/san-diego/"},
-          {"@type":"ListItem","position":3,"name":"Orange Resources","url":"https://nationalbenefitalliance.com/california/orange/"},
-          {"@type":"ListItem","position":4,"name":"Riverside Resources","url":"https://nationalbenefitalliance.com/california/riverside/"},
-          {"@type":"ListItem","position":5,"name":"San Bernardino Resources","url":"https://nationalbenefitalliance.com/california/san-bernardino/"}
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://nationalbenefitalliance.com/california/#page",
+      "url": "https://nationalbenefitalliance.com/california/",
+      "name": "Assistance programs by county in California",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
+      },
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US",
+      "about": {
+        "@type": "AdministrativeArea",
+        "name": "California"
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "California",
+          "item": "https://nationalbenefitalliance.com/california/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "California counties",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 58,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Alameda",
+          "url": "https://nationalbenefitalliance.com/california/alameda/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Alpine",
+          "url": "https://nationalbenefitalliance.com/california/alpine/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Amador",
+          "url": "https://nationalbenefitalliance.com/california/amador/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Butte",
+          "url": "https://nationalbenefitalliance.com/california/butte/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Calaveras",
+          "url": "https://nationalbenefitalliance.com/california/calaveras/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Colusa",
+          "url": "https://nationalbenefitalliance.com/california/colusa/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Contra Costa",
+          "url": "https://nationalbenefitalliance.com/california/contra-costa/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Del Norte",
+          "url": "https://nationalbenefitalliance.com/california/del-norte/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "El Dorado",
+          "url": "https://nationalbenefitalliance.com/california/el-dorado/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Fresno",
+          "url": "https://nationalbenefitalliance.com/california/fresno/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Glenn",
+          "url": "https://nationalbenefitalliance.com/california/glenn/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "Humboldt",
+          "url": "https://nationalbenefitalliance.com/california/humboldt/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Imperial",
+          "url": "https://nationalbenefitalliance.com/california/imperial/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Inyo",
+          "url": "https://nationalbenefitalliance.com/california/inyo/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Kern",
+          "url": "https://nationalbenefitalliance.com/california/kern/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "Kings",
+          "url": "https://nationalbenefitalliance.com/california/kings/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "Lake",
+          "url": "https://nationalbenefitalliance.com/california/lake/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "Lassen",
+          "url": "https://nationalbenefitalliance.com/california/lassen/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "name": "Los Angeles",
+          "url": "https://nationalbenefitalliance.com/california/los-angeles/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "name": "Madera",
+          "url": "https://nationalbenefitalliance.com/california/madera/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "name": "Marin",
+          "url": "https://nationalbenefitalliance.com/california/marin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "name": "Mariposa",
+          "url": "https://nationalbenefitalliance.com/california/mariposa/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "name": "Mendocino",
+          "url": "https://nationalbenefitalliance.com/california/mendocino/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "name": "Merced",
+          "url": "https://nationalbenefitalliance.com/california/merced/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "name": "Modoc",
+          "url": "https://nationalbenefitalliance.com/california/modoc/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "name": "Mono",
+          "url": "https://nationalbenefitalliance.com/california/mono/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "name": "Monterey",
+          "url": "https://nationalbenefitalliance.com/california/monterey/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "name": "Napa",
+          "url": "https://nationalbenefitalliance.com/california/napa/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "name": "Nevada",
+          "url": "https://nationalbenefitalliance.com/california/nevada/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "name": "Orange",
+          "url": "https://nationalbenefitalliance.com/california/orange/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 31,
+          "name": "Placer",
+          "url": "https://nationalbenefitalliance.com/california/placer/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 32,
+          "name": "Plumas",
+          "url": "https://nationalbenefitalliance.com/california/plumas/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 33,
+          "name": "Riverside",
+          "url": "https://nationalbenefitalliance.com/california/riverside/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 34,
+          "name": "Sacramento",
+          "url": "https://nationalbenefitalliance.com/california/sacramento/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 35,
+          "name": "San Benito",
+          "url": "https://nationalbenefitalliance.com/california/san-benito/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 36,
+          "name": "San Bernardino",
+          "url": "https://nationalbenefitalliance.com/california/san-bernardino/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 37,
+          "name": "San Diego",
+          "url": "https://nationalbenefitalliance.com/california/san-diego/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 38,
+          "name": "San Francisco",
+          "url": "https://nationalbenefitalliance.com/california/san-francisco/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 39,
+          "name": "San Joaquin",
+          "url": "https://nationalbenefitalliance.com/california/san-joaquin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 40,
+          "name": "San Luis Obispo",
+          "url": "https://nationalbenefitalliance.com/california/san-luis-obispo/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 41,
+          "name": "San Mateo",
+          "url": "https://nationalbenefitalliance.com/california/san-mateo/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 42,
+          "name": "Santa Barbara",
+          "url": "https://nationalbenefitalliance.com/california/santa-barbara/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 43,
+          "name": "Santa Clara",
+          "url": "https://nationalbenefitalliance.com/california/santa-clara/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 44,
+          "name": "Santa Cruz",
+          "url": "https://nationalbenefitalliance.com/california/santa-cruz/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 45,
+          "name": "Shasta",
+          "url": "https://nationalbenefitalliance.com/california/shasta/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 46,
+          "name": "Sierra",
+          "url": "https://nationalbenefitalliance.com/california/sierra/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 47,
+          "name": "Siskiyou",
+          "url": "https://nationalbenefitalliance.com/california/siskiyou/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 48,
+          "name": "Solano",
+          "url": "https://nationalbenefitalliance.com/california/solano/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 49,
+          "name": "Sonoma",
+          "url": "https://nationalbenefitalliance.com/california/sonoma/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 50,
+          "name": "Stanislaus",
+          "url": "https://nationalbenefitalliance.com/california/stanislaus/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 51,
+          "name": "Sutter",
+          "url": "https://nationalbenefitalliance.com/california/sutter/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 52,
+          "name": "Tehama",
+          "url": "https://nationalbenefitalliance.com/california/tehama/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 53,
+          "name": "Trinity",
+          "url": "https://nationalbenefitalliance.com/california/trinity/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 54,
+          "name": "Tulare",
+          "url": "https://nationalbenefitalliance.com/california/tulare/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 55,
+          "name": "Tuolumne",
+          "url": "https://nationalbenefitalliance.com/california/tuolumne/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 56,
+          "name": "Ventura",
+          "url": "https://nationalbenefitalliance.com/california/ventura/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 57,
+          "name": "Yolo",
+          "url": "https://nationalbenefitalliance.com/california/yolo/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 58,
+          "name": "Yuba",
+          "url": "https://nationalbenefitalliance.com/california/yuba/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

@@ -20,49 +20,146 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <!-- Schema: State + Government organization -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "GovernmentOrganization",
-        "@id": "https://nationalbenefitalliance.com/new-hampshire/#org",
-        "name": "National Benefit Alliance – New Hampshire Resource Center",
-        "url": "https://nationalbenefitalliance.com/new-hampshire/",
-        "description": "Free county-by-county resource guide for New Hampshire residents seeking government and community assistance programs.",
-        "areaServed": {
-          "@type": "State",
-          "name": "New Hampshire",
-          "sameAs": "https://www.wikidata.org/wiki/Q759"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/new-hampshire/#page",
-        "url": "https://nationalbenefitalliance.com/new-hampshire/",
-        "name": "New Hampshire County Resource Center",
-        "description": "Browse all 10 New Hampshire counties for community benefit resources.",
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem","position": 1,"name": "Home","item": "https://nationalbenefitalliance.com/"},
-            {"@type": "ListItem","position": 2,"name": "New Hampshire","item": "https://nationalbenefitalliance.com/new-hampshire/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "ItemList",
-        "name": "New Hampshire County Resource Guides",
-        "numberOfItems": 10,
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Hillsborough County Resources","url":"https://nationalbenefitalliance.com/new-hampshire/hillsborough/"},
-          {"@type":"ListItem","position":2,"name":"Rockingham County Resources","url":"https://nationalbenefitalliance.com/new-hampshire/rockingham/"},
-          {"@type":"ListItem","position":3,"name":"Merrimack County Resources","url":"https://nationalbenefitalliance.com/new-hampshire/merrimack/"},
-          {"@type":"ListItem","position":4,"name":"Strafford County Resources","url":"https://nationalbenefitalliance.com/new-hampshire/strafford/"},
-          {"@type":"ListItem","position":5,"name":"Grafton County Resources","url":"https://nationalbenefitalliance.com/new-hampshire/grafton/"}
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://nationalbenefitalliance.com/new-hampshire/#page",
+      "url": "https://nationalbenefitalliance.com/new-hampshire/",
+      "name": "Assistance programs by county in New Hampshire",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
+      },
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US",
+      "about": {
+        "@type": "AdministrativeArea",
+        "name": "New Hampshire"
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "New Hampshire",
+          "item": "https://nationalbenefitalliance.com/new-hampshire/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "New Hampshire counties",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 10,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Belknap County",
+          "url": "https://nationalbenefitalliance.com/new-hampshire/belknap/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Carroll County",
+          "url": "https://nationalbenefitalliance.com/new-hampshire/carroll/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Cheshire County",
+          "url": "https://nationalbenefitalliance.com/new-hampshire/cheshire/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Coos County",
+          "url": "https://nationalbenefitalliance.com/new-hampshire/coos/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Grafton County",
+          "url": "https://nationalbenefitalliance.com/new-hampshire/grafton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Hillsborough County",
+          "url": "https://nationalbenefitalliance.com/new-hampshire/hillsborough/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Merrimack County",
+          "url": "https://nationalbenefitalliance.com/new-hampshire/merrimack/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Rockingham County",
+          "url": "https://nationalbenefitalliance.com/new-hampshire/rockingham/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Strafford County",
+          "url": "https://nationalbenefitalliance.com/new-hampshire/strafford/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Sullivan County",
+          "url": "https://nationalbenefitalliance.com/new-hampshire/sullivan/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

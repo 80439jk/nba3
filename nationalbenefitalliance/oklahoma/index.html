@@ -19,49 +19,548 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta property="og:url" content="https://nationalbenefitalliance.com/oklahoma/" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "GovernmentOrganization",
-        "@id": "https://nationalbenefitalliance.com/oklahoma/#org",
-        "name": "National Benefit Alliance – Oklahoma County Resources Resource Center",
-        "url": "https://nationalbenefitalliance.com/oklahoma/",
-        "description": "Free counties-by-countie resource guide for Oklahoma residents seeking government and community assistance programs.",
-        "areaServed": {
-          "@type": "State",
-          "name": "Oklahoma",
-          "sameAs": "https://www.wikidata.org/wiki/Q1649"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/oklahoma/#page",
-        "url": "https://nationalbenefitalliance.com/oklahoma/",
-        "name": "Oklahoma County Resources",
-        "description": "Browse all 77 Oklahoma counties for community benefit resources.",
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem","position": 1,"name": "Home","item": "https://nationalbenefitalliance.com/"},
-            {"@type": "ListItem","position": 2,"name": "Oklahoma","item": "https://nationalbenefitalliance.com/oklahoma/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "ItemList",
-        "name": "Oklahoma County Resources Resource Guides",
-        "numberOfItems": 77,
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Oklahoma Counties Resources","url":"https://nationalbenefitalliance.com/oklahoma/oklahoma/"},
-          {"@type":"ListItem","position":2,"name":"Tulsa Counties Resources","url":"https://nationalbenefitalliance.com/oklahoma/tulsa/"},
-          {"@type":"ListItem","position":3,"name":"Cleveland Counties Resources","url":"https://nationalbenefitalliance.com/oklahoma/cleveland/"},
-          {"@type":"ListItem","position":4,"name":"Canadian Counties Resources","url":"https://nationalbenefitalliance.com/oklahoma/canadian/"},
-          {"@type":"ListItem","position":5,"name":"Comanche Counties Resources","url":"https://nationalbenefitalliance.com/oklahoma/comanche/"}
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://nationalbenefitalliance.com/oklahoma/#page",
+      "url": "https://nationalbenefitalliance.com/oklahoma/",
+      "name": "Assistance programs by county in Oklahoma",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
+      },
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US",
+      "about": {
+        "@type": "AdministrativeArea",
+        "name": "Oklahoma"
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Oklahoma",
+          "item": "https://nationalbenefitalliance.com/oklahoma/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Oklahoma counties",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 77,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Adair Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/adair/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Alfalfa Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/alfalfa/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Atoka Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/atoka/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Beaver Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/beaver/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Beckham Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/beckham/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Blaine Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/blaine/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Bryan Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/bryan/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Caddo Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/caddo/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Canadian Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/canadian/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Carter Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/carter/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Cherokee Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/cherokee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "Choctaw Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/choctaw/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Cimarron Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/cimarron/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Cleveland Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/cleveland/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Coal Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/coal/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "Comanche Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/comanche/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "Cotton Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/cotton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "Craig Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/craig/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "name": "Creek Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/creek/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "name": "Custer Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/custer/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "name": "Delaware Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/delaware/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "name": "Dewey Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/dewey/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "name": "Ellis Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/ellis/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "name": "Garfield Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/garfield/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "name": "Garvin Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/garvin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "name": "Grady Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/grady/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "name": "Grant Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/grant/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "name": "Greer Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/greer/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "name": "Harmon Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/harmon/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "name": "Harper Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/harper/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 31,
+          "name": "Haskell Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/haskell/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 32,
+          "name": "Hughes Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/hughes/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 33,
+          "name": "Jackson Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/jackson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 34,
+          "name": "Jefferson Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/jefferson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 35,
+          "name": "Johnston Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/johnston/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 36,
+          "name": "Kay Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/kay/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 37,
+          "name": "Kingfisher Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/kingfisher/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 38,
+          "name": "Kiowa Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/kiowa/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 39,
+          "name": "Latimer Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/latimer/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 40,
+          "name": "Le Flore Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/le-flore/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 41,
+          "name": "Lincoln Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/lincoln/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 42,
+          "name": "Logan Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/logan/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 43,
+          "name": "Love Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/love/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 44,
+          "name": "Major Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/major/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 45,
+          "name": "Marshall Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/marshall/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 46,
+          "name": "Mayes Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/mayes/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 47,
+          "name": "Mcclain Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/mcclain/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 48,
+          "name": "Mccurtain Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/mccurtain/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 49,
+          "name": "Mcintosh Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/mcintosh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 50,
+          "name": "Murray Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/murray/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 51,
+          "name": "Muskogee Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/muskogee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 52,
+          "name": "Noble Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/noble/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 53,
+          "name": "Nowata Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/nowata/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 54,
+          "name": "Okfuskee Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/okfuskee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 55,
+          "name": "Oklahoma Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/oklahoma/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 56,
+          "name": "Okmulgee Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/okmulgee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 57,
+          "name": "Osage Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/osage/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 58,
+          "name": "Ottawa Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/ottawa/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 59,
+          "name": "Pawnee Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/pawnee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 60,
+          "name": "Payne Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/payne/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 61,
+          "name": "Pittsburg Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/pittsburg/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 62,
+          "name": "Pontotoc Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/pontotoc/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 63,
+          "name": "Pottawatomie Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/pottawatomie/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 64,
+          "name": "Pushmataha Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/pushmataha/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 65,
+          "name": "Roger Mills Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/roger-mills/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 66,
+          "name": "Rogers Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/rogers/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 67,
+          "name": "Seminole Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/seminole/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 68,
+          "name": "Sequoyah Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/sequoyah/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 69,
+          "name": "Stephens Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/stephens/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 70,
+          "name": "Texas Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/texas/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 71,
+          "name": "Tillman Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/tillman/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 72,
+          "name": "Tulsa Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/tulsa/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 73,
+          "name": "Wagoner Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/wagoner/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 74,
+          "name": "Washington Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/washington/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 75,
+          "name": "Washita Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/washita/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 76,
+          "name": "Woods Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/woods/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 77,
+          "name": "Woodward Counties",
+          "url": "https://nationalbenefitalliance.com/oklahoma/woodward/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

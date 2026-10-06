@@ -19,49 +19,350 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta property="og:url" content="https://nationalbenefitalliance.com/idaho/" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "GovernmentOrganization",
-        "@id": "https://nationalbenefitalliance.com/idaho/#org",
-        "name": "National Benefit Alliance – Idaho Resource Center",
-        "url": "https://nationalbenefitalliance.com/idaho/",
-        "description": "Free county-by-county resource guide for Idaho residents seeking government and community assistance programs.",
-        "areaServed": {
-          "@type": "State",
-          "name": "Idaho",
-          "sameAs": "https://www.wikidata.org/wiki/Q1221"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/idaho/#page",
-        "url": "https://nationalbenefitalliance.com/idaho/",
-        "name": "Idaho County Resource Center",
-        "description": "Browse all 44 Idaho counties for community benefit resources.",
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem","position": 1,"name": "Home","item": "https://nationalbenefitalliance.com/"},
-            {"@type": "ListItem","position": 2,"name": "Idaho","item": "https://nationalbenefitalliance.com/idaho/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "ItemList",
-        "name": "Idaho County Resource Guides",
-        "numberOfItems": 44,
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Ada Resources","url":"https://nationalbenefitalliance.com/idaho/ada/"},
-          {"@type":"ListItem","position":2,"name":"Canyon Resources","url":"https://nationalbenefitalliance.com/idaho/canyon/"},
-          {"@type":"ListItem","position":3,"name":"Kootenai Resources","url":"https://nationalbenefitalliance.com/idaho/kootenai/"},
-          {"@type":"ListItem","position":4,"name":"Bonneville Resources","url":"https://nationalbenefitalliance.com/idaho/bonneville/"},
-          {"@type":"ListItem","position":5,"name":"Twin Falls Resources","url":"https://nationalbenefitalliance.com/idaho/twin-falls/"}
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://nationalbenefitalliance.com/idaho/#page",
+      "url": "https://nationalbenefitalliance.com/idaho/",
+      "name": "Assistance programs by county in Idaho",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
+      },
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US",
+      "about": {
+        "@type": "AdministrativeArea",
+        "name": "Idaho"
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Idaho",
+          "item": "https://nationalbenefitalliance.com/idaho/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Idaho counties",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 44,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Ada",
+          "url": "https://nationalbenefitalliance.com/idaho/ada/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Adams",
+          "url": "https://nationalbenefitalliance.com/idaho/adams/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Bannock",
+          "url": "https://nationalbenefitalliance.com/idaho/bannock/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Bear Lake",
+          "url": "https://nationalbenefitalliance.com/idaho/bear-lake/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Benewah",
+          "url": "https://nationalbenefitalliance.com/idaho/benewah/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Bingham",
+          "url": "https://nationalbenefitalliance.com/idaho/bingham/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Blaine",
+          "url": "https://nationalbenefitalliance.com/idaho/blaine/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Boise",
+          "url": "https://nationalbenefitalliance.com/idaho/boise/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Bonner",
+          "url": "https://nationalbenefitalliance.com/idaho/bonner/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Bonneville",
+          "url": "https://nationalbenefitalliance.com/idaho/bonneville/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Boundary",
+          "url": "https://nationalbenefitalliance.com/idaho/boundary/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "Butte",
+          "url": "https://nationalbenefitalliance.com/idaho/butte/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Camas",
+          "url": "https://nationalbenefitalliance.com/idaho/camas/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Canyon",
+          "url": "https://nationalbenefitalliance.com/idaho/canyon/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Caribou",
+          "url": "https://nationalbenefitalliance.com/idaho/caribou/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "Cassia",
+          "url": "https://nationalbenefitalliance.com/idaho/cassia/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "Clark",
+          "url": "https://nationalbenefitalliance.com/idaho/clark/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "Clearwater",
+          "url": "https://nationalbenefitalliance.com/idaho/clearwater/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "name": "Custer",
+          "url": "https://nationalbenefitalliance.com/idaho/custer/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "name": "Elmore",
+          "url": "https://nationalbenefitalliance.com/idaho/elmore/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "name": "Franklin",
+          "url": "https://nationalbenefitalliance.com/idaho/franklin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "name": "Fremont",
+          "url": "https://nationalbenefitalliance.com/idaho/fremont/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "name": "Gem",
+          "url": "https://nationalbenefitalliance.com/idaho/gem/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "name": "Gooding",
+          "url": "https://nationalbenefitalliance.com/idaho/gooding/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "name": "Idaho",
+          "url": "https://nationalbenefitalliance.com/idaho/idaho/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "name": "Jefferson",
+          "url": "https://nationalbenefitalliance.com/idaho/jefferson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "name": "Jerome",
+          "url": "https://nationalbenefitalliance.com/idaho/jerome/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "name": "Kootenai",
+          "url": "https://nationalbenefitalliance.com/idaho/kootenai/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "name": "Latah",
+          "url": "https://nationalbenefitalliance.com/idaho/latah/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "name": "Lemhi",
+          "url": "https://nationalbenefitalliance.com/idaho/lemhi/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 31,
+          "name": "Lewis",
+          "url": "https://nationalbenefitalliance.com/idaho/lewis/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 32,
+          "name": "Lincoln",
+          "url": "https://nationalbenefitalliance.com/idaho/lincoln/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 33,
+          "name": "Madison",
+          "url": "https://nationalbenefitalliance.com/idaho/madison/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 34,
+          "name": "Minidoka",
+          "url": "https://nationalbenefitalliance.com/idaho/minidoka/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 35,
+          "name": "Nez Perce",
+          "url": "https://nationalbenefitalliance.com/idaho/nez-perce/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 36,
+          "name": "Oneida",
+          "url": "https://nationalbenefitalliance.com/idaho/oneida/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 37,
+          "name": "Owyhee",
+          "url": "https://nationalbenefitalliance.com/idaho/owyhee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 38,
+          "name": "Payette",
+          "url": "https://nationalbenefitalliance.com/idaho/payette/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 39,
+          "name": "Power",
+          "url": "https://nationalbenefitalliance.com/idaho/power/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 40,
+          "name": "Shoshone",
+          "url": "https://nationalbenefitalliance.com/idaho/shoshone/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 41,
+          "name": "Teton",
+          "url": "https://nationalbenefitalliance.com/idaho/teton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 42,
+          "name": "Twin Falls",
+          "url": "https://nationalbenefitalliance.com/idaho/twin-falls/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 43,
+          "name": "Valley",
+          "url": "https://nationalbenefitalliance.com/idaho/valley/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 44,
+          "name": "Washington",
+          "url": "https://nationalbenefitalliance.com/idaho/washington/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

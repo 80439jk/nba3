@@ -19,49 +19,686 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta property="og:url" content="https://nationalbenefitalliance.com/north-carolina/" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "GovernmentOrganization",
-        "@id": "https://nationalbenefitalliance.com/north-carolina/#org",
-        "name": "National Benefit Alliance – North Carolina Resource Center",
-        "url": "https://nationalbenefitalliance.com/north-carolina/",
-        "description": "Free county-by-county resource guide for North Carolina residents seeking government and community assistance programs.",
-        "areaServed": {
-          "@type": "State",
-          "name": "North Carolina",
-          "sameAs": "https://www.wikidata.org/wiki/Q1454"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/north-carolina/#page",
-        "url": "https://nationalbenefitalliance.com/north-carolina/",
-        "name": "North Carolina County Resource Center",
-        "description": "Browse all 100 North Carolina counties for community benefit resources.",
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem","position": 1,"name": "Home","item": "https://nationalbenefitalliance.com/"},
-            {"@type": "ListItem","position": 2,"name": "North Carolina","item": "https://nationalbenefitalliance.com/north-carolina/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "ItemList",
-        "name": "North Carolina County Resource Guides",
-        "numberOfItems": 100,
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Mecklenburg County Resources","url":"https://nationalbenefitalliance.com/north-carolina/mecklenburg/"},
-          {"@type":"ListItem","position":2,"name":"Wake County Resources","url":"https://nationalbenefitalliance.com/north-carolina/wake/"},
-          {"@type":"ListItem","position":3,"name":"Guilford County Resources","url":"https://nationalbenefitalliance.com/north-carolina/guilford/"},
-          {"@type":"ListItem","position":4,"name":"Forsyth County Resources","url":"https://nationalbenefitalliance.com/north-carolina/forsyth/"},
-          {"@type":"ListItem","position":5,"name":"Cumberland County Resources","url":"https://nationalbenefitalliance.com/north-carolina/cumberland/"}
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://nationalbenefitalliance.com/north-carolina/#page",
+      "url": "https://nationalbenefitalliance.com/north-carolina/",
+      "name": "Assistance programs by county in North Carolina",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
+      },
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US",
+      "about": {
+        "@type": "AdministrativeArea",
+        "name": "North Carolina"
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "North Carolina",
+          "item": "https://nationalbenefitalliance.com/north-carolina/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "North Carolina counties",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 100,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Alamance County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/alamance/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Alexander County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/alexander/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Alleghany County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/alleghany/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Anson County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/anson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Ashe County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/ashe/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Avery County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/avery/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Beaufort County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/beaufort/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Bertie County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/bertie/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Bladen County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/bladen/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Brunswick County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/brunswick/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Buncombe County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/buncombe/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "Burke County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/burke/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Cabarrus County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/cabarrus/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Caldwell County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/caldwell/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Camden County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/camden/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "Carteret County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/carteret/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "Caswell County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/caswell/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "Catawba County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/catawba/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "name": "Chatham County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/chatham/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "name": "Cherokee County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/cherokee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "name": "Chowan County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/chowan/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "name": "Clay County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/clay/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "name": "Cleveland County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/cleveland/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "name": "Columbus County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/columbus/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "name": "Craven County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/craven/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "name": "Cumberland County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/cumberland/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "name": "Currituck County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/currituck/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "name": "Dare County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/dare/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "name": "Davidson County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/davidson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "name": "Davie County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/davie/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 31,
+          "name": "Duplin County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/duplin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 32,
+          "name": "Durham County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/durham/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 33,
+          "name": "Edgecombe County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/edgecombe/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 34,
+          "name": "Forsyth County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/forsyth/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 35,
+          "name": "Franklin County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/franklin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 36,
+          "name": "Gaston County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/gaston/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 37,
+          "name": "Gates County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/gates/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 38,
+          "name": "Graham County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/graham/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 39,
+          "name": "Granville County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/granville/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 40,
+          "name": "Greene County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/greene/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 41,
+          "name": "Guilford County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/guilford/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 42,
+          "name": "Halifax County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/halifax/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 43,
+          "name": "Harnett County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/harnett/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 44,
+          "name": "Haywood County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/haywood/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 45,
+          "name": "Henderson County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/henderson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 46,
+          "name": "Hertford County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/hertford/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 47,
+          "name": "Hoke County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/hoke/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 48,
+          "name": "Hyde County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/hyde/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 49,
+          "name": "Iredell County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/iredell/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 50,
+          "name": "Jackson County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/jackson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 51,
+          "name": "Johnston County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/johnston/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 52,
+          "name": "Jones County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/jones/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 53,
+          "name": "Lee County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/lee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 54,
+          "name": "Lenoir County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/lenoir/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 55,
+          "name": "Lincoln County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/lincoln/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 56,
+          "name": "Macon County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/macon/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 57,
+          "name": "Madison County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/madison/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 58,
+          "name": "Martin County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/martin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 59,
+          "name": "Mcdowell County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/mcdowell/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 60,
+          "name": "Mecklenburg County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/mecklenburg/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 61,
+          "name": "Mitchell County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/mitchell/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 62,
+          "name": "Montgomery County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/montgomery/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 63,
+          "name": "Moore County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/moore/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 64,
+          "name": "Nash County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/nash/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 65,
+          "name": "New Hanover County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/new-hanover/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 66,
+          "name": "Northampton County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/northampton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 67,
+          "name": "Onslow County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/onslow/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 68,
+          "name": "Orange County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/orange/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 69,
+          "name": "Pamlico County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/pamlico/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 70,
+          "name": "Pasquotank County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/pasquotank/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 71,
+          "name": "Pender County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/pender/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 72,
+          "name": "Perquimans County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/perquimans/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 73,
+          "name": "Person County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/person/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 74,
+          "name": "Pitt County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/pitt/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 75,
+          "name": "Polk County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/polk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 76,
+          "name": "Randolph County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/randolph/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 77,
+          "name": "Richmond County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/richmond/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 78,
+          "name": "Robeson County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/robeson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 79,
+          "name": "Rockingham County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/rockingham/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 80,
+          "name": "Rowan County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/rowan/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 81,
+          "name": "Rutherford County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/rutherford/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 82,
+          "name": "Sampson County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/sampson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 83,
+          "name": "Scotland County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/scotland/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 84,
+          "name": "Stanly County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/stanly/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 85,
+          "name": "Stokes County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/stokes/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 86,
+          "name": "Surry County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/surry/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 87,
+          "name": "Swain County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/swain/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 88,
+          "name": "Transylvania County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/transylvania/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 89,
+          "name": "Tyrrell County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/tyrrell/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 90,
+          "name": "Union County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/union/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 91,
+          "name": "Vance County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/vance/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 92,
+          "name": "Wake County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/wake/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 93,
+          "name": "Warren County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/warren/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 94,
+          "name": "Washington County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/washington/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 95,
+          "name": "Watauga County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/watauga/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 96,
+          "name": "Wayne County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/wayne/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 97,
+          "name": "Wilkes County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/wilkes/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 98,
+          "name": "Wilson County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/wilson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 99,
+          "name": "Yadkin County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/yadkin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 100,
+          "name": "Yancey County",
+          "url": "https://nationalbenefitalliance.com/north-carolina/yancey/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

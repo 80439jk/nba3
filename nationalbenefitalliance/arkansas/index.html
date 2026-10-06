@@ -19,49 +19,536 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta property="og:url" content="https://nationalbenefitalliance.com/arkansas/" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "GovernmentOrganization",
-        "@id": "https://nationalbenefitalliance.com/arkansas/#org",
-        "name": "National Benefit Alliance – Arkansas County Resources Resource Center",
-        "url": "https://nationalbenefitalliance.com/arkansas/",
-        "description": "Free counties-by-countie resource guide for Arkansas residents seeking government and community assistance programs.",
-        "areaServed": {
-          "@type": "State",
-          "name": "Arkansas",
-          "sameAs": "https://www.wikidata.org/wiki/Q1612"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/arkansas/#page",
-        "url": "https://nationalbenefitalliance.com/arkansas/",
-        "name": "Arkansas County Resources",
-        "description": "Browse all 75 Arkansas counties for community benefit resources.",
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem","position": 1,"name": "Home","item": "https://nationalbenefitalliance.com/"},
-            {"@type": "ListItem","position": 2,"name": "Arkansas","item": "https://nationalbenefitalliance.com/arkansas/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "ItemList",
-        "name": "Arkansas County Resources Resource Guides",
-        "numberOfItems": 75,
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Pulaski Counties Resources","url":"https://nationalbenefitalliance.com/arkansas/pulaski/"},
-          {"@type":"ListItem","position":2,"name":"Benton Counties Resources","url":"https://nationalbenefitalliance.com/arkansas/benton/"},
-          {"@type":"ListItem","position":3,"name":"Washington Counties Resources","url":"https://nationalbenefitalliance.com/arkansas/washington/"},
-          {"@type":"ListItem","position":4,"name":"Sebastian Counties Resources","url":"https://nationalbenefitalliance.com/arkansas/sebastian/"},
-          {"@type":"ListItem","position":5,"name":"Faulkner Counties Resources","url":"https://nationalbenefitalliance.com/arkansas/faulkner/"}
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://nationalbenefitalliance.com/arkansas/#page",
+      "url": "https://nationalbenefitalliance.com/arkansas/",
+      "name": "Assistance programs by county in Arkansas",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
+      },
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US",
+      "about": {
+        "@type": "AdministrativeArea",
+        "name": "Arkansas"
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Arkansas",
+          "item": "https://nationalbenefitalliance.com/arkansas/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Arkansas counties",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 75,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Arkansas Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/arkansas/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Ashley Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/ashley/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Baxter Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/baxter/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Benton Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/benton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Boone Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/boone/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Bradley Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/bradley/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Calhoun Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/calhoun/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Carroll Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/carroll/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Chicot Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/chicot/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Clark Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/clark/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Clay Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/clay/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "Cleburne Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/cleburne/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Cleveland Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/cleveland/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Columbia Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/columbia/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Conway Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/conway/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "Craighead Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/craighead/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "Crawford Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/crawford/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "Crittenden Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/crittenden/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "name": "Cross Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/cross/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "name": "Dallas Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/dallas/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "name": "Desha Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/desha/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "name": "Drew Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/drew/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "name": "Faulkner Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/faulkner/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "name": "Franklin Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/franklin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "name": "Fulton Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/fulton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "name": "Garland Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/garland/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "name": "Grant Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/grant/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "name": "Greene Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/greene/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "name": "Hempstead Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/hempstead/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "name": "Hot Spring Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/hot-spring/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 31,
+          "name": "Howard Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/howard/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 32,
+          "name": "Independence Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/independence/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 33,
+          "name": "Izard Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/izard/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 34,
+          "name": "Jackson Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/jackson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 35,
+          "name": "Jefferson Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/jefferson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 36,
+          "name": "Johnson Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/johnson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 37,
+          "name": "Lafayette Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/lafayette/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 38,
+          "name": "Lawrence Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/lawrence/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 39,
+          "name": "Lee Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/lee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 40,
+          "name": "Lincoln Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/lincoln/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 41,
+          "name": "Little River Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/little-river/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 42,
+          "name": "Logan Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/logan/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 43,
+          "name": "Lonoke Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/lonoke/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 44,
+          "name": "Madison Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/madison/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 45,
+          "name": "Marion Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/marion/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 46,
+          "name": "Miller Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/miller/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 47,
+          "name": "Mississippi Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/mississippi/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 48,
+          "name": "Monroe Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/monroe/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 49,
+          "name": "Montgomery Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/montgomery/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 50,
+          "name": "Nevada Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/nevada/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 51,
+          "name": "Newton Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/newton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 52,
+          "name": "Ouachita Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/ouachita/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 53,
+          "name": "Perry Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/perry/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 54,
+          "name": "Phillips Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/phillips/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 55,
+          "name": "Pike Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/pike/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 56,
+          "name": "Poinsett Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/poinsett/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 57,
+          "name": "Polk Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/polk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 58,
+          "name": "Pope Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/pope/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 59,
+          "name": "Prairie Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/prairie/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 60,
+          "name": "Pulaski Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/pulaski/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 61,
+          "name": "Randolph Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/randolph/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 62,
+          "name": "Saline Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/saline/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 63,
+          "name": "Scott Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/scott/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 64,
+          "name": "Searcy Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/searcy/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 65,
+          "name": "Sebastian Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/sebastian/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 66,
+          "name": "Sevier Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/sevier/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 67,
+          "name": "Sharp Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/sharp/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 68,
+          "name": "St. Francis Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/st-francis/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 69,
+          "name": "Stone Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/stone/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 70,
+          "name": "Union Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/union/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 71,
+          "name": "Van Buren Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/van-buren/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 72,
+          "name": "Washington Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/washington/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 73,
+          "name": "White Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/white/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 74,
+          "name": "Woodruff Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/woodruff/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 75,
+          "name": "Yell Counties",
+          "url": "https://nationalbenefitalliance.com/arkansas/yell/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

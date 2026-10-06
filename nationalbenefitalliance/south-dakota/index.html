@@ -19,47 +19,482 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta property="og:url" content="https://nationalbenefitalliance.com/south-dakota/" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "GovernmentOrganization",
-        "@id": "https://nationalbenefitalliance.com/south-dakota/#org",
-        "name": "National Benefit Alliance – South Dakota Resource Center",
-        "url": "https://nationalbenefitalliance.com/south-dakota/",
-        "description": "Free county-by-county resource guide for South Dakota residents seeking government and community assistance programs.",
-        "areaServed": {
-          "@type": "State",
-          "name": "South Dakota",
-          "sameAs": "https://www.wikidata.org/wiki/Q1211"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/south-dakota/#page",
-        "url": "https://nationalbenefitalliance.com/south-dakota/",
-        "name": "South Dakota County Resource Center",
-        "description": "Browse all 66 South Dakota counties for community benefit resources.",
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem","position": 1,"name": "Home","item": "https://nationalbenefitalliance.com/"},
-            {"@type": "ListItem","position": 2,"name": "South Dakota","item": "https://nationalbenefitalliance.com/south-dakota/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "ItemList",
-        "name": "South Dakota County Resource Guides",
-        "numberOfItems": 66,
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Aurora County Resources","url":"https://nationalbenefitalliance.com/south-dakota/aurora/"},
-          {"@type":"ListItem","position":2,"name":"Beadle County Resources","url":"https://nationalbenefitalliance.com/south-dakota/beadle/"},
-          {"@type":"ListItem","position":3,"name":"Bennett County Resources","url":"https://nationalbenefitalliance.com/south-dakota/bennett/"}
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://nationalbenefitalliance.com/south-dakota/#page",
+      "url": "https://nationalbenefitalliance.com/south-dakota/",
+      "name": "Assistance programs by county in South Dakota",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
+      },
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US",
+      "about": {
+        "@type": "AdministrativeArea",
+        "name": "South Dakota"
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "South Dakota",
+          "item": "https://nationalbenefitalliance.com/south-dakota/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "South Dakota counties",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 66,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Aurora County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/aurora/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Beadle County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/beadle/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Bennett County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/bennett/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Bon Homme County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/bon-homme/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Brookings",
+          "url": "https://nationalbenefitalliance.com/south-dakota/brookings/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Brown",
+          "url": "https://nationalbenefitalliance.com/south-dakota/brown/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Brule County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/brule/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Buffalo County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/buffalo/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Butte County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/butte/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Campbell County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/campbell/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Charles Mix County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/charles-mix/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "Clark County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/clark/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Clay County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/clay/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Codington",
+          "url": "https://nationalbenefitalliance.com/south-dakota/codington/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Corson County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/corson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "Custer County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/custer/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "Davison County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/davison/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "Day County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/day/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "name": "Deuel County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/deuel/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "name": "Dewey County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/dewey/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "name": "Douglas County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/douglas/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "name": "Edmunds County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/edmunds/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "name": "Fall River County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/fall-river/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "name": "Faulk County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/faulk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "name": "Grant County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/grant/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "name": "Gregory County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/gregory/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "name": "Haakon County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/haakon/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "name": "Hamlin County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/hamlin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "name": "Hand County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/hand/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "name": "Hanson County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/hanson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 31,
+          "name": "Harding County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/harding/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 32,
+          "name": "Hughes County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/hughes/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 33,
+          "name": "Hutchinson County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/hutchinson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 34,
+          "name": "Hyde County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/hyde/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 35,
+          "name": "Jackson County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/jackson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 36,
+          "name": "Jerauld County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/jerauld/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 37,
+          "name": "Jones County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/jones/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 38,
+          "name": "Kingsbury County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/kingsbury/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 39,
+          "name": "Lake County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/lake/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 40,
+          "name": "Lawrence County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/lawrence/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 41,
+          "name": "Lincoln",
+          "url": "https://nationalbenefitalliance.com/south-dakota/lincoln/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 42,
+          "name": "Lyman County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/lyman/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 43,
+          "name": "Marshall County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/marshall/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 44,
+          "name": "Mccook County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/mccook/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 45,
+          "name": "McPherson County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/mcpherson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 46,
+          "name": "Meade County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/meade/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 47,
+          "name": "Mellette County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/mellette/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 48,
+          "name": "Miner County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/miner/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 49,
+          "name": "Minnehaha",
+          "url": "https://nationalbenefitalliance.com/south-dakota/minnehaha/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 50,
+          "name": "Moody County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/moody/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 51,
+          "name": "Oglala Lakota County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/oglala-lakota/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 52,
+          "name": "Pennington",
+          "url": "https://nationalbenefitalliance.com/south-dakota/pennington/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 53,
+          "name": "Perkins County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/perkins/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 54,
+          "name": "Potter County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/potter/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 55,
+          "name": "Roberts County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/roberts/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 56,
+          "name": "Sanborn County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/sanborn/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 57,
+          "name": "Spink County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/spink/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 58,
+          "name": "Stanley County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/stanley/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 59,
+          "name": "Sully County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/sully/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 60,
+          "name": "Todd County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/todd/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 61,
+          "name": "Tripp County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/tripp/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 62,
+          "name": "Turner County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/turner/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 63,
+          "name": "Union County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/union/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 64,
+          "name": "Walworth County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/walworth/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 65,
+          "name": "Yankton County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/yankton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 66,
+          "name": "Ziebach County",
+          "url": "https://nationalbenefitalliance.com/south-dakota/ziebach/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

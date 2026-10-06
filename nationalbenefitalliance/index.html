@@ -46,114 +46,60 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
        SCHEMA.ORG STRUCTURED DATA
        ========================================================= -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://nationalbenefitalliance.com/#organization",
-        "name": "National Benefit Alliance",
-        "url": "https://nationalbenefitalliance.com",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://nationalbenefitalliance.com/images/logo.png",
-          "width": 200,
-          "height": 60
-        },
-        "description": "National Benefit Alliance is a free resource center helping Americans find government and community assistance programs for utilities, housing, food, healthcare, and employment.",
-        "contactPoint": {
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
           "@type": "ContactPoint",
           "telephone": "+1-800-605-8906",
           "contactType": "customer service",
           "areaServed": "US",
-          "availableLanguage": ["English", "Spanish"]
-        },
-        "sameAs": [
-          "https://www.facebook.com/nationalbenefitalliance",
-          "https://twitter.com/nbabenefits"
-        ],
-        "areaServed": {
-          "@type": "Country",
-          "name": "United States"
-        }
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://nationalbenefitalliance.com/#website",
-        "url": "https://nationalbenefitalliance.com",
-        "name": "National Benefit Alliance",
-        "publisher": { "@id": "https://nationalbenefitalliance.com/#organization" },
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": {
-            "@type": "EntryPoint",
-            "urlTemplate": "https://nationalbenefitalliance.com/search?zip={search_term_string}"
-          },
-          "query-input": "required name=search_term_string"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/#webpage",
-        "url": "https://nationalbenefitalliance.com/",
-        "name": "National Benefit Alliance | Community Resource Center",
-        "isPartOf": { "@id": "https://nationalbenefitalliance.com/#website" },
-        "about": { "@id": "https://nationalbenefitalliance.com/#organization" },
-        "description": "Find community assistance programs near you by ZIP code.",
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nationalbenefitalliance.com/" }
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "How do I find benefits programs in my county?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Enter your ZIP code in the search box on our homepage. We will automatically identify your county and show you a comprehensive list of available assistance programs for utilities, housing, food, healthcare, and more."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do I need an access code to view resources?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Some county resource pages require a free access code to view the full detailed guide. Simply call our office at 1-800-605-8906 to receive your code at no charge."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can I download the county resource guide as a PDF?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes! Every county resource page includes a free downloadable PDF guide. You can also have it emailed directly to you by providing your email address on the county page."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is the National Benefit Alliance free to use?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Absolutely. The National Benefit Alliance is a free public resource. We never charge fees to access our resource guides or county benefit information."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What types of assistance programs are listed?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "We list programs for utility assistance (LIHEAP, energy help), rental and housing assistance, food assistance (SNAP, food banks, WIC), Medicaid and healthcare, unemployment benefits, childcare, transportation, legal aid, and senior services — organized by county."
-            }
-          }
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://nationalbenefitalliance.com/#page",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
+      },
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US",
+      "about": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       }
-    ]
-  }
+    }
+  ]
+}
   </script>
 
   <!-- Fonts -->

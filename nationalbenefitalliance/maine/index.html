@@ -20,49 +20,182 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <!-- Schema: State + Government organization -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "GovernmentOrganization",
-        "@id": "https://nationalbenefitalliance.com/maine/#org",
-        "name": "National Benefit Alliance – Maine Resource Center",
-        "url": "https://nationalbenefitalliance.com/maine/",
-        "description": "Free county-by-county resource guide for Maine residents seeking government and community assistance programs.",
-        "areaServed": {
-          "@type": "State",
-          "name": "Maine",
-          "sameAs": "https://www.wikidata.org/wiki/Q724"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/maine/#page",
-        "url": "https://nationalbenefitalliance.com/maine/",
-        "name": "Maine County Resource Center",
-        "description": "Browse all 16 Maine counties for community benefit resources.",
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem","position": 1,"name": "Home","item": "https://nationalbenefitalliance.com/"},
-            {"@type": "ListItem","position": 2,"name": "Maine","item": "https://nationalbenefitalliance.com/maine/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "ItemList",
-        "name": "Maine County Resource Guides",
-        "numberOfItems": 16,
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Cumberland County Resources","url":"https://nationalbenefitalliance.com/maine/cumberland/"},
-          {"@type":"ListItem","position":2,"name":"York County Resources","url":"https://nationalbenefitalliance.com/maine/york/"},
-          {"@type":"ListItem","position":3,"name":"Penobscot County Resources","url":"https://nationalbenefitalliance.com/maine/penobscot/"},
-          {"@type":"ListItem","position":4,"name":"Kennebec County Resources","url":"https://nationalbenefitalliance.com/maine/kennebec/"},
-          {"@type":"ListItem","position":5,"name":"Androscoggin County Resources","url":"https://nationalbenefitalliance.com/maine/androscoggin/"}
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://nationalbenefitalliance.com/maine/#page",
+      "url": "https://nationalbenefitalliance.com/maine/",
+      "name": "Assistance programs by county in Maine",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
+      },
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US",
+      "about": {
+        "@type": "AdministrativeArea",
+        "name": "Maine"
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Maine",
+          "item": "https://nationalbenefitalliance.com/maine/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Maine counties",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 16,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Androscoggin County",
+          "url": "https://nationalbenefitalliance.com/maine/androscoggin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Aroostook County",
+          "url": "https://nationalbenefitalliance.com/maine/aroostook/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Cumberland County",
+          "url": "https://nationalbenefitalliance.com/maine/cumberland/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Franklin County",
+          "url": "https://nationalbenefitalliance.com/maine/franklin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Hancock County",
+          "url": "https://nationalbenefitalliance.com/maine/hancock/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Kennebec County",
+          "url": "https://nationalbenefitalliance.com/maine/kennebec/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Knox County",
+          "url": "https://nationalbenefitalliance.com/maine/knox/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Lincoln County",
+          "url": "https://nationalbenefitalliance.com/maine/lincoln/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Oxford County",
+          "url": "https://nationalbenefitalliance.com/maine/oxford/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Penobscot County",
+          "url": "https://nationalbenefitalliance.com/maine/penobscot/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Piscataquis County",
+          "url": "https://nationalbenefitalliance.com/maine/piscataquis/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "Sagadahoc County",
+          "url": "https://nationalbenefitalliance.com/maine/sagadahoc/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Somerset County",
+          "url": "https://nationalbenefitalliance.com/maine/somerset/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Waldo County",
+          "url": "https://nationalbenefitalliance.com/maine/waldo/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Washington County",
+          "url": "https://nationalbenefitalliance.com/maine/washington/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "York County",
+          "url": "https://nationalbenefitalliance.com/maine/york/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

@@ -19,49 +19,776 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta property="og:url" content="https://nationalbenefitalliance.com/missouri/" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "GovernmentOrganization",
-        "@id": "https://nationalbenefitalliance.com/missouri/#org",
-        "name": "National Benefit Alliance – Missouri Resource Center",
-        "url": "https://nationalbenefitalliance.com/missouri/",
-        "description": "Free county-by-county resource guide for Missouri residents seeking government and community assistance programs.",
-        "areaServed": {
-          "@type": "State",
-          "name": "Missouri",
-          "sameAs": "https://www.wikidata.org/wiki/Q1581"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/missouri/#page",
-        "url": "https://nationalbenefitalliance.com/missouri/",
-        "name": "Missouri County Resource Center",
-        "description": "Browse all 115 Missouri counties for community benefit resources.",
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem","position": 1,"name": "Home","item": "https://nationalbenefitalliance.com/"},
-            {"@type": "ListItem","position": 2,"name": "Missouri","item": "https://nationalbenefitalliance.com/missouri/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "ItemList",
-        "name": "Missouri County Resource Guides",
-        "numberOfItems": 115,
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"St. Louis County Resources","url":"https://nationalbenefitalliance.com/missouri/st-louis/"},
-          {"@type":"ListItem","position":2,"name":"Jackson County County Resources","url":"https://nationalbenefitalliance.com/missouri/jackson/"},
-          {"@type":"ListItem","position":3,"name":"St. Charles County Resources","url":"https://nationalbenefitalliance.com/missouri/st-charles/"},
-          {"@type":"ListItem","position":4,"name":"St. Louis City County Resources","url":"https://nationalbenefitalliance.com/missouri/st-louis-city/"},
-          {"@type":"ListItem","position":5,"name":"Greene County County Resources","url":"https://nationalbenefitalliance.com/missouri/greene/"}
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://nationalbenefitalliance.com/missouri/#page",
+      "url": "https://nationalbenefitalliance.com/missouri/",
+      "name": "Assistance programs by county in Missouri",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
+      },
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US",
+      "about": {
+        "@type": "AdministrativeArea",
+        "name": "Missouri"
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Missouri",
+          "item": "https://nationalbenefitalliance.com/missouri/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Missouri counties",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 115,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Adair County",
+          "url": "https://nationalbenefitalliance.com/missouri/adair/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Andrew County",
+          "url": "https://nationalbenefitalliance.com/missouri/andrew/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Atchison County",
+          "url": "https://nationalbenefitalliance.com/missouri/atchison/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Audrain County",
+          "url": "https://nationalbenefitalliance.com/missouri/audrain/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Barry County",
+          "url": "https://nationalbenefitalliance.com/missouri/barry/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Barton County",
+          "url": "https://nationalbenefitalliance.com/missouri/barton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Bates County",
+          "url": "https://nationalbenefitalliance.com/missouri/bates/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Benton County",
+          "url": "https://nationalbenefitalliance.com/missouri/benton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Bollinger County",
+          "url": "https://nationalbenefitalliance.com/missouri/bollinger/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Boone County",
+          "url": "https://nationalbenefitalliance.com/missouri/boone/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Buchanan County",
+          "url": "https://nationalbenefitalliance.com/missouri/buchanan/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "Butler County",
+          "url": "https://nationalbenefitalliance.com/missouri/butler/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Caldwell County",
+          "url": "https://nationalbenefitalliance.com/missouri/caldwell/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Callaway County",
+          "url": "https://nationalbenefitalliance.com/missouri/callaway/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Camden County",
+          "url": "https://nationalbenefitalliance.com/missouri/camden/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "Cape Girardeau",
+          "url": "https://nationalbenefitalliance.com/missouri/cape-girardeau/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "Carroll County",
+          "url": "https://nationalbenefitalliance.com/missouri/carroll/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "Carter County",
+          "url": "https://nationalbenefitalliance.com/missouri/carter/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "name": "Cass County",
+          "url": "https://nationalbenefitalliance.com/missouri/cass/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "name": "Cedar County",
+          "url": "https://nationalbenefitalliance.com/missouri/cedar/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "name": "Chariton County",
+          "url": "https://nationalbenefitalliance.com/missouri/chariton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "name": "Christian County",
+          "url": "https://nationalbenefitalliance.com/missouri/christian/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "name": "Clark County",
+          "url": "https://nationalbenefitalliance.com/missouri/clark/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "name": "Clay County",
+          "url": "https://nationalbenefitalliance.com/missouri/clay/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "name": "Clinton County",
+          "url": "https://nationalbenefitalliance.com/missouri/clinton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "name": "Cole County",
+          "url": "https://nationalbenefitalliance.com/missouri/cole/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "name": "Cooper County",
+          "url": "https://nationalbenefitalliance.com/missouri/cooper/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "name": "Crawford County",
+          "url": "https://nationalbenefitalliance.com/missouri/crawford/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "name": "Dade County",
+          "url": "https://nationalbenefitalliance.com/missouri/dade/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "name": "Dallas County",
+          "url": "https://nationalbenefitalliance.com/missouri/dallas/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 31,
+          "name": "Daviess County",
+          "url": "https://nationalbenefitalliance.com/missouri/daviess/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 32,
+          "name": "Dekalb County",
+          "url": "https://nationalbenefitalliance.com/missouri/dekalb/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 33,
+          "name": "Dent County",
+          "url": "https://nationalbenefitalliance.com/missouri/dent/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 34,
+          "name": "Douglas County",
+          "url": "https://nationalbenefitalliance.com/missouri/douglas/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 35,
+          "name": "Dunklin County",
+          "url": "https://nationalbenefitalliance.com/missouri/dunklin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 36,
+          "name": "Franklin County",
+          "url": "https://nationalbenefitalliance.com/missouri/franklin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 37,
+          "name": "Gasconade County",
+          "url": "https://nationalbenefitalliance.com/missouri/gasconade/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 38,
+          "name": "Gentry County",
+          "url": "https://nationalbenefitalliance.com/missouri/gentry/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 39,
+          "name": "Greene County",
+          "url": "https://nationalbenefitalliance.com/missouri/greene/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 40,
+          "name": "Grundy County",
+          "url": "https://nationalbenefitalliance.com/missouri/grundy/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 41,
+          "name": "Harrison County",
+          "url": "https://nationalbenefitalliance.com/missouri/harrison/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 42,
+          "name": "Henry County",
+          "url": "https://nationalbenefitalliance.com/missouri/henry/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 43,
+          "name": "Hickory County",
+          "url": "https://nationalbenefitalliance.com/missouri/hickory/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 44,
+          "name": "Holt County",
+          "url": "https://nationalbenefitalliance.com/missouri/holt/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 45,
+          "name": "Howard County",
+          "url": "https://nationalbenefitalliance.com/missouri/howard/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 46,
+          "name": "Howell County",
+          "url": "https://nationalbenefitalliance.com/missouri/howell/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 47,
+          "name": "Iron County",
+          "url": "https://nationalbenefitalliance.com/missouri/iron/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 48,
+          "name": "Jackson County",
+          "url": "https://nationalbenefitalliance.com/missouri/jackson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 49,
+          "name": "Jasper County",
+          "url": "https://nationalbenefitalliance.com/missouri/jasper/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 50,
+          "name": "Jefferson County",
+          "url": "https://nationalbenefitalliance.com/missouri/jefferson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 51,
+          "name": "Johnson County",
+          "url": "https://nationalbenefitalliance.com/missouri/johnson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 52,
+          "name": "Knox County",
+          "url": "https://nationalbenefitalliance.com/missouri/knox/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 53,
+          "name": "Laclede County",
+          "url": "https://nationalbenefitalliance.com/missouri/laclede/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 54,
+          "name": "Lafayette County",
+          "url": "https://nationalbenefitalliance.com/missouri/lafayette/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 55,
+          "name": "Lawrence County",
+          "url": "https://nationalbenefitalliance.com/missouri/lawrence/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 56,
+          "name": "Lewis County",
+          "url": "https://nationalbenefitalliance.com/missouri/lewis/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 57,
+          "name": "Lincoln County",
+          "url": "https://nationalbenefitalliance.com/missouri/lincoln/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 58,
+          "name": "Linn County",
+          "url": "https://nationalbenefitalliance.com/missouri/linn/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 59,
+          "name": "Livingston County",
+          "url": "https://nationalbenefitalliance.com/missouri/livingston/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 60,
+          "name": "Macon County",
+          "url": "https://nationalbenefitalliance.com/missouri/macon/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 61,
+          "name": "Madison County",
+          "url": "https://nationalbenefitalliance.com/missouri/madison/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 62,
+          "name": "Maries County",
+          "url": "https://nationalbenefitalliance.com/missouri/maries/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 63,
+          "name": "Marion County",
+          "url": "https://nationalbenefitalliance.com/missouri/marion/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 64,
+          "name": "Mcdonald County",
+          "url": "https://nationalbenefitalliance.com/missouri/mcdonald/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 65,
+          "name": "Mercer County",
+          "url": "https://nationalbenefitalliance.com/missouri/mercer/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 66,
+          "name": "Miller County",
+          "url": "https://nationalbenefitalliance.com/missouri/miller/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 67,
+          "name": "Mississippi County",
+          "url": "https://nationalbenefitalliance.com/missouri/mississippi/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 68,
+          "name": "Moniteau County",
+          "url": "https://nationalbenefitalliance.com/missouri/moniteau/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 69,
+          "name": "Monroe County",
+          "url": "https://nationalbenefitalliance.com/missouri/monroe/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 70,
+          "name": "Montgomery County",
+          "url": "https://nationalbenefitalliance.com/missouri/montgomery/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 71,
+          "name": "Morgan County",
+          "url": "https://nationalbenefitalliance.com/missouri/morgan/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 72,
+          "name": "New Madrid",
+          "url": "https://nationalbenefitalliance.com/missouri/new-madrid/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 73,
+          "name": "Newton County",
+          "url": "https://nationalbenefitalliance.com/missouri/newton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 74,
+          "name": "Nodaway County",
+          "url": "https://nationalbenefitalliance.com/missouri/nodaway/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 75,
+          "name": "Oregon County",
+          "url": "https://nationalbenefitalliance.com/missouri/oregon/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 76,
+          "name": "Osage County",
+          "url": "https://nationalbenefitalliance.com/missouri/osage/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 77,
+          "name": "Ozark County",
+          "url": "https://nationalbenefitalliance.com/missouri/ozark/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 78,
+          "name": "Pemiscot County",
+          "url": "https://nationalbenefitalliance.com/missouri/pemiscot/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 79,
+          "name": "Perry County",
+          "url": "https://nationalbenefitalliance.com/missouri/perry/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 80,
+          "name": "Pettis County",
+          "url": "https://nationalbenefitalliance.com/missouri/pettis/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 81,
+          "name": "Phelps County",
+          "url": "https://nationalbenefitalliance.com/missouri/phelps/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 82,
+          "name": "Pike County",
+          "url": "https://nationalbenefitalliance.com/missouri/pike/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 83,
+          "name": "Platte County",
+          "url": "https://nationalbenefitalliance.com/missouri/platte/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 84,
+          "name": "Polk County",
+          "url": "https://nationalbenefitalliance.com/missouri/polk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 85,
+          "name": "Pulaski County",
+          "url": "https://nationalbenefitalliance.com/missouri/pulaski/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 86,
+          "name": "Putnam County",
+          "url": "https://nationalbenefitalliance.com/missouri/putnam/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 87,
+          "name": "Ralls County",
+          "url": "https://nationalbenefitalliance.com/missouri/ralls/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 88,
+          "name": "Randolph County",
+          "url": "https://nationalbenefitalliance.com/missouri/randolph/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 89,
+          "name": "Ray County",
+          "url": "https://nationalbenefitalliance.com/missouri/ray/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 90,
+          "name": "Reynolds County",
+          "url": "https://nationalbenefitalliance.com/missouri/reynolds/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 91,
+          "name": "Ripley County",
+          "url": "https://nationalbenefitalliance.com/missouri/ripley/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 92,
+          "name": "Saline County",
+          "url": "https://nationalbenefitalliance.com/missouri/saline/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 93,
+          "name": "Schuyler County",
+          "url": "https://nationalbenefitalliance.com/missouri/schuyler/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 94,
+          "name": "Scotland County",
+          "url": "https://nationalbenefitalliance.com/missouri/scotland/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 95,
+          "name": "Scott County",
+          "url": "https://nationalbenefitalliance.com/missouri/scott/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 96,
+          "name": "Shannon County",
+          "url": "https://nationalbenefitalliance.com/missouri/shannon/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 97,
+          "name": "Shelby County",
+          "url": "https://nationalbenefitalliance.com/missouri/shelby/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 98,
+          "name": "St. Charles",
+          "url": "https://nationalbenefitalliance.com/missouri/st-charles/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 99,
+          "name": "St. Clair",
+          "url": "https://nationalbenefitalliance.com/missouri/st-clair/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 100,
+          "name": "St. Francois",
+          "url": "https://nationalbenefitalliance.com/missouri/st-francois/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 101,
+          "name": "St. Louis",
+          "url": "https://nationalbenefitalliance.com/missouri/st-louis/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 102,
+          "name": "St. Louis City",
+          "url": "https://nationalbenefitalliance.com/missouri/st-louis-city/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 103,
+          "name": "Ste. Genevieve",
+          "url": "https://nationalbenefitalliance.com/missouri/ste-genevieve/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 104,
+          "name": "Stoddard County",
+          "url": "https://nationalbenefitalliance.com/missouri/stoddard/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 105,
+          "name": "Stone County",
+          "url": "https://nationalbenefitalliance.com/missouri/stone/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 106,
+          "name": "Sullivan County",
+          "url": "https://nationalbenefitalliance.com/missouri/sullivan/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 107,
+          "name": "Taney County",
+          "url": "https://nationalbenefitalliance.com/missouri/taney/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 108,
+          "name": "Texas County",
+          "url": "https://nationalbenefitalliance.com/missouri/texas/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 109,
+          "name": "Vernon County",
+          "url": "https://nationalbenefitalliance.com/missouri/vernon/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 110,
+          "name": "Warren County",
+          "url": "https://nationalbenefitalliance.com/missouri/warren/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 111,
+          "name": "Washington County",
+          "url": "https://nationalbenefitalliance.com/missouri/washington/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 112,
+          "name": "Wayne County",
+          "url": "https://nationalbenefitalliance.com/missouri/wayne/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 113,
+          "name": "Webster County",
+          "url": "https://nationalbenefitalliance.com/missouri/webster/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 114,
+          "name": "Worth County",
+          "url": "https://nationalbenefitalliance.com/missouri/worth/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 115,
+          "name": "Wright County",
+          "url": "https://nationalbenefitalliance.com/missouri/wright/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

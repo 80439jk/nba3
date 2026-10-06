@@ -19,49 +19,260 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta property="og:url" content="https://nationalbenefitalliance.com/utah/" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "GovernmentOrganization",
-        "@id": "https://nationalbenefitalliance.com/utah/#org",
-        "name": "National Benefit Alliance – Utah Resource Center",
-        "url": "https://nationalbenefitalliance.com/utah/",
-        "description": "Free county-by-county resource guide for Utah residents seeking government and community assistance programs.",
-        "areaServed": {
-          "@type": "State",
-          "name": "Utah",
-          "sameAs": "https://www.wikidata.org/wiki/Q829"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/utah/#page",
-        "url": "https://nationalbenefitalliance.com/utah/",
-        "name": "Utah County Resource Center",
-        "description": "Browse all 29 Utah counties for community benefit resources.",
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem","position": 1,"name": "Home","item": "https://nationalbenefitalliance.com/"},
-            {"@type": "ListItem","position": 2,"name": "Utah","item": "https://nationalbenefitalliance.com/utah/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "ItemList",
-        "name": "Utah County Resource Guides",
-        "numberOfItems": 29,
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Salt Lake County Resources","url":"https://nationalbenefitalliance.com/utah/salt-lake/"},
-          {"@type":"ListItem","position":2,"name":"Utah County Resources","url":"https://nationalbenefitalliance.com/utah/utah/"},
-          {"@type":"ListItem","position":3,"name":"Davis County Resources","url":"https://nationalbenefitalliance.com/utah/davis/"},
-          {"@type":"ListItem","position":4,"name":"Weber County Resources","url":"https://nationalbenefitalliance.com/utah/weber/"},
-          {"@type":"ListItem","position":5,"name":"Washington County Resources","url":"https://nationalbenefitalliance.com/utah/washington/"}
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://nationalbenefitalliance.com/utah/#page",
+      "url": "https://nationalbenefitalliance.com/utah/",
+      "name": "Assistance programs by county in Utah",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
+      },
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US",
+      "about": {
+        "@type": "AdministrativeArea",
+        "name": "Utah"
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Utah",
+          "item": "https://nationalbenefitalliance.com/utah/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Utah counties",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 29,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Beaver County",
+          "url": "https://nationalbenefitalliance.com/utah/beaver/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Box Elder County",
+          "url": "https://nationalbenefitalliance.com/utah/box-elder/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Cache",
+          "url": "https://nationalbenefitalliance.com/utah/cache/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Carbon County",
+          "url": "https://nationalbenefitalliance.com/utah/carbon/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Daggett County",
+          "url": "https://nationalbenefitalliance.com/utah/daggett/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Davis",
+          "url": "https://nationalbenefitalliance.com/utah/davis/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Duchesne County",
+          "url": "https://nationalbenefitalliance.com/utah/duchesne/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Emery County",
+          "url": "https://nationalbenefitalliance.com/utah/emery/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Garfield County",
+          "url": "https://nationalbenefitalliance.com/utah/garfield/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Grand County",
+          "url": "https://nationalbenefitalliance.com/utah/grand/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Iron County",
+          "url": "https://nationalbenefitalliance.com/utah/iron/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "Juab County",
+          "url": "https://nationalbenefitalliance.com/utah/juab/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Kane County",
+          "url": "https://nationalbenefitalliance.com/utah/kane/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Millard County",
+          "url": "https://nationalbenefitalliance.com/utah/millard/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Morgan County",
+          "url": "https://nationalbenefitalliance.com/utah/morgan/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "Piute County",
+          "url": "https://nationalbenefitalliance.com/utah/piute/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "Rich County",
+          "url": "https://nationalbenefitalliance.com/utah/rich/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "Salt Lake",
+          "url": "https://nationalbenefitalliance.com/utah/salt-lake/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "name": "San Juan County",
+          "url": "https://nationalbenefitalliance.com/utah/san-juan/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "name": "Sanpete County",
+          "url": "https://nationalbenefitalliance.com/utah/sanpete/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "name": "Sevier County",
+          "url": "https://nationalbenefitalliance.com/utah/sevier/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "name": "Summit County",
+          "url": "https://nationalbenefitalliance.com/utah/summit/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "name": "Tooele County",
+          "url": "https://nationalbenefitalliance.com/utah/tooele/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "name": "Uintah County",
+          "url": "https://nationalbenefitalliance.com/utah/uintah/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "name": "Utah",
+          "url": "https://nationalbenefitalliance.com/utah/utah/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "name": "Wasatch County",
+          "url": "https://nationalbenefitalliance.com/utah/wasatch/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "name": "Washington",
+          "url": "https://nationalbenefitalliance.com/utah/washington/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "name": "Wayne County",
+          "url": "https://nationalbenefitalliance.com/utah/wayne/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "name": "Weber",
+          "url": "https://nationalbenefitalliance.com/utah/weber/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

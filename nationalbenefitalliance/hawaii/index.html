@@ -19,49 +19,116 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta property="og:url" content="https://nationalbenefitalliance.com/hawaii/" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "GovernmentOrganization",
-        "@id": "https://nationalbenefitalliance.com/hawaii/#org",
-        "name": "National Benefit Alliance – Hawaii Resource Center",
-        "url": "https://nationalbenefitalliance.com/hawaii/",
-        "description": "Free counties-by-county resource guide for Hawaii residents seeking government and community assistance programs.",
-        "areaServed": {
-          "@type": "State",
-          "name": "Hawaii",
-          "sameAs": "https://www.wikidata.org/wiki/Q782"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/hawaii/#page",
-        "url": "https://nationalbenefitalliance.com/hawaii/",
-        "name": "Hawaii Counties Resource Center",
-        "description": "Browse all 5 Hawaii Counties for community benefit resources.",
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem","position": 1,"name": "Home","item": "https://nationalbenefitalliance.com/"},
-            {"@type": "ListItem","position": 2,"name": "Hawaii","item": "https://nationalbenefitalliance.com/hawaii/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "ItemList",
-        "name": "Hawaii Counties Resource Guides",
-        "numberOfItems": 5,
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Honolulu Resources","url":"https://nationalbenefitalliance.com/hawaii/honolulu/"},
-          {"@type":"ListItem","position":2,"name":"Hawaii Resources","url":"https://nationalbenefitalliance.com/hawaii/hawaii/"},
-          {"@type":"ListItem","position":3,"name":"Maui Resources","url":"https://nationalbenefitalliance.com/hawaii/maui/"},
-          {"@type":"ListItem","position":4,"name":"Kauai Resources","url":"https://nationalbenefitalliance.com/hawaii/kauai/"},
-          {"@type":"ListItem","position":5,"name":"Kalawao Resources","url":"https://nationalbenefitalliance.com/hawaii/kalawao/"},
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://nationalbenefitalliance.com/hawaii/#page",
+      "url": "https://nationalbenefitalliance.com/hawaii/",
+      "name": "Assistance programs by county in Hawaii",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
+      },
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US",
+      "about": {
+        "@type": "AdministrativeArea",
+        "name": "Hawaii"
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Hawaii",
+          "item": "https://nationalbenefitalliance.com/hawaii/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Hawaii counties",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 5,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Hawaii",
+          "url": "https://nationalbenefitalliance.com/hawaii/hawaii/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Honolulu",
+          "url": "https://nationalbenefitalliance.com/hawaii/honolulu/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Kalawao",
+          "url": "https://nationalbenefitalliance.com/hawaii/kalawao/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Kauai",
+          "url": "https://nationalbenefitalliance.com/hawaii/kauai/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Maui",
+          "url": "https://nationalbenefitalliance.com/hawaii/maui/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

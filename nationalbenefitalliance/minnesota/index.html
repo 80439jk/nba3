@@ -19,49 +19,608 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta property="og:url" content="https://nationalbenefitalliance.com/minnesota/" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "GovernmentOrganization",
-        "@id": "https://nationalbenefitalliance.com/minnesota/#org",
-        "name": "National Benefit Alliance – Minnesota Resource Center",
-        "url": "https://nationalbenefitalliance.com/minnesota/",
-        "description": "Free county-by-county resource guide for Minnesota residents seeking government and community assistance programs.",
-        "areaServed": {
-          "@type": "State",
-          "name": "Minnesota",
-          "sameAs": "https://www.wikidata.org/wiki/Q1527"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/minnesota/#page",
-        "url": "https://nationalbenefitalliance.com/minnesota/",
-        "name": "Minnesota County Resource Center",
-        "description": "Browse all 87 Minnesota counties for community benefit resources.",
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem","position": 1,"name": "Home","item": "https://nationalbenefitalliance.com/"},
-            {"@type": "ListItem","position": 2,"name": "Minnesota","item": "https://nationalbenefitalliance.com/minnesota/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "ItemList",
-        "name": "Minnesota County Resource Guides",
-        "numberOfItems": 87,
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Hennepin County County Resources","url":"https://nationalbenefitalliance.com/minnesota/hennepin/"},
-          {"@type":"ListItem","position":2,"name":"Ramsey County County Resources","url":"https://nationalbenefitalliance.com/minnesota/ramsey/"},
-          {"@type":"ListItem","position":3,"name":"Dakota County County Resources","url":"https://nationalbenefitalliance.com/minnesota/dakota/"},
-          {"@type":"ListItem","position":4,"name":"Anoka County County Resources","url":"https://nationalbenefitalliance.com/minnesota/anoka/"},
-          {"@type":"ListItem","position":5,"name":"Washington County County Resources","url":"https://nationalbenefitalliance.com/minnesota/washington/"}
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://nationalbenefitalliance.com/minnesota/#page",
+      "url": "https://nationalbenefitalliance.com/minnesota/",
+      "name": "Assistance programs by county in Minnesota",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
+      },
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US",
+      "about": {
+        "@type": "AdministrativeArea",
+        "name": "Minnesota"
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Minnesota",
+          "item": "https://nationalbenefitalliance.com/minnesota/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Minnesota counties",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 87,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Aitkin County",
+          "url": "https://nationalbenefitalliance.com/minnesota/aitkin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Anoka County",
+          "url": "https://nationalbenefitalliance.com/minnesota/anoka/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Becker County",
+          "url": "https://nationalbenefitalliance.com/minnesota/becker/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Beltrami County",
+          "url": "https://nationalbenefitalliance.com/minnesota/beltrami/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Benton County",
+          "url": "https://nationalbenefitalliance.com/minnesota/benton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Big Stone",
+          "url": "https://nationalbenefitalliance.com/minnesota/big-stone/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Blue Earth",
+          "url": "https://nationalbenefitalliance.com/minnesota/blue-earth/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Brown County",
+          "url": "https://nationalbenefitalliance.com/minnesota/brown/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Carlton County",
+          "url": "https://nationalbenefitalliance.com/minnesota/carlton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Carver County",
+          "url": "https://nationalbenefitalliance.com/minnesota/carver/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Cass County",
+          "url": "https://nationalbenefitalliance.com/minnesota/cass/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "Chippewa County",
+          "url": "https://nationalbenefitalliance.com/minnesota/chippewa/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Chisago County",
+          "url": "https://nationalbenefitalliance.com/minnesota/chisago/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Clay County",
+          "url": "https://nationalbenefitalliance.com/minnesota/clay/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Clearwater County",
+          "url": "https://nationalbenefitalliance.com/minnesota/clearwater/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "Cook County",
+          "url": "https://nationalbenefitalliance.com/minnesota/cook/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "Cottonwood County",
+          "url": "https://nationalbenefitalliance.com/minnesota/cottonwood/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "Crow Wing",
+          "url": "https://nationalbenefitalliance.com/minnesota/crow-wing/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "name": "Dakota County",
+          "url": "https://nationalbenefitalliance.com/minnesota/dakota/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "name": "Dodge County",
+          "url": "https://nationalbenefitalliance.com/minnesota/dodge/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "name": "Douglas County",
+          "url": "https://nationalbenefitalliance.com/minnesota/douglas/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "name": "Faribault County",
+          "url": "https://nationalbenefitalliance.com/minnesota/faribault/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "name": "Fillmore County",
+          "url": "https://nationalbenefitalliance.com/minnesota/fillmore/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "name": "Freeborn County",
+          "url": "https://nationalbenefitalliance.com/minnesota/freeborn/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "name": "Goodhue County",
+          "url": "https://nationalbenefitalliance.com/minnesota/goodhue/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "name": "Grant County",
+          "url": "https://nationalbenefitalliance.com/minnesota/grant/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "name": "Hennepin County",
+          "url": "https://nationalbenefitalliance.com/minnesota/hennepin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "name": "Houston County",
+          "url": "https://nationalbenefitalliance.com/minnesota/houston/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "name": "Hubbard County",
+          "url": "https://nationalbenefitalliance.com/minnesota/hubbard/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "name": "Isanti County",
+          "url": "https://nationalbenefitalliance.com/minnesota/isanti/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 31,
+          "name": "Itasca County",
+          "url": "https://nationalbenefitalliance.com/minnesota/itasca/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 32,
+          "name": "Jackson County",
+          "url": "https://nationalbenefitalliance.com/minnesota/jackson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 33,
+          "name": "Kanabec County",
+          "url": "https://nationalbenefitalliance.com/minnesota/kanabec/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 34,
+          "name": "Kandiyohi County",
+          "url": "https://nationalbenefitalliance.com/minnesota/kandiyohi/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 35,
+          "name": "Kittson County",
+          "url": "https://nationalbenefitalliance.com/minnesota/kittson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 36,
+          "name": "Koochiching County",
+          "url": "https://nationalbenefitalliance.com/minnesota/koochiching/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 37,
+          "name": "Lac Qui Parle",
+          "url": "https://nationalbenefitalliance.com/minnesota/lac-qui-parle/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 38,
+          "name": "Lake County",
+          "url": "https://nationalbenefitalliance.com/minnesota/lake/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 39,
+          "name": "Lake of the Woods",
+          "url": "https://nationalbenefitalliance.com/minnesota/lake-of-the-woods/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 40,
+          "name": "Le Sueur",
+          "url": "https://nationalbenefitalliance.com/minnesota/le-sueur/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 41,
+          "name": "Lincoln County",
+          "url": "https://nationalbenefitalliance.com/minnesota/lincoln/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 42,
+          "name": "Lyon County",
+          "url": "https://nationalbenefitalliance.com/minnesota/lyon/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 43,
+          "name": "Mahnomen County",
+          "url": "https://nationalbenefitalliance.com/minnesota/mahnomen/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 44,
+          "name": "Marshall County",
+          "url": "https://nationalbenefitalliance.com/minnesota/marshall/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 45,
+          "name": "Martin County",
+          "url": "https://nationalbenefitalliance.com/minnesota/martin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 46,
+          "name": "McLeod",
+          "url": "https://nationalbenefitalliance.com/minnesota/mcleod/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 47,
+          "name": "Meeker County",
+          "url": "https://nationalbenefitalliance.com/minnesota/meeker/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 48,
+          "name": "Mille Lacs",
+          "url": "https://nationalbenefitalliance.com/minnesota/mille-lacs/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 49,
+          "name": "Morrison County",
+          "url": "https://nationalbenefitalliance.com/minnesota/morrison/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 50,
+          "name": "Mower County",
+          "url": "https://nationalbenefitalliance.com/minnesota/mower/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 51,
+          "name": "Murray County",
+          "url": "https://nationalbenefitalliance.com/minnesota/murray/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 52,
+          "name": "Nicollet County",
+          "url": "https://nationalbenefitalliance.com/minnesota/nicollet/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 53,
+          "name": "Nobles County",
+          "url": "https://nationalbenefitalliance.com/minnesota/nobles/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 54,
+          "name": "Norman County",
+          "url": "https://nationalbenefitalliance.com/minnesota/norman/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 55,
+          "name": "Olmsted County",
+          "url": "https://nationalbenefitalliance.com/minnesota/olmsted/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 56,
+          "name": "Otter Tail",
+          "url": "https://nationalbenefitalliance.com/minnesota/otter-tail/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 57,
+          "name": "Pennington County",
+          "url": "https://nationalbenefitalliance.com/minnesota/pennington/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 58,
+          "name": "Pine County",
+          "url": "https://nationalbenefitalliance.com/minnesota/pine/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 59,
+          "name": "Pipestone County",
+          "url": "https://nationalbenefitalliance.com/minnesota/pipestone/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 60,
+          "name": "Polk County",
+          "url": "https://nationalbenefitalliance.com/minnesota/polk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 61,
+          "name": "Pope County",
+          "url": "https://nationalbenefitalliance.com/minnesota/pope/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 62,
+          "name": "Ramsey County",
+          "url": "https://nationalbenefitalliance.com/minnesota/ramsey/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 63,
+          "name": "Red Lake",
+          "url": "https://nationalbenefitalliance.com/minnesota/red-lake/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 64,
+          "name": "Redwood County",
+          "url": "https://nationalbenefitalliance.com/minnesota/redwood/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 65,
+          "name": "Renville County",
+          "url": "https://nationalbenefitalliance.com/minnesota/renville/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 66,
+          "name": "Rice County",
+          "url": "https://nationalbenefitalliance.com/minnesota/rice/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 67,
+          "name": "Rock County",
+          "url": "https://nationalbenefitalliance.com/minnesota/rock/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 68,
+          "name": "Roseau County",
+          "url": "https://nationalbenefitalliance.com/minnesota/roseau/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 69,
+          "name": "Scott County",
+          "url": "https://nationalbenefitalliance.com/minnesota/scott/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 70,
+          "name": "Sherburne County",
+          "url": "https://nationalbenefitalliance.com/minnesota/sherburne/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 71,
+          "name": "Sibley County",
+          "url": "https://nationalbenefitalliance.com/minnesota/sibley/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 72,
+          "name": "St. Louis",
+          "url": "https://nationalbenefitalliance.com/minnesota/st-louis/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 73,
+          "name": "Stearns County",
+          "url": "https://nationalbenefitalliance.com/minnesota/stearns/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 74,
+          "name": "Steele County",
+          "url": "https://nationalbenefitalliance.com/minnesota/steele/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 75,
+          "name": "Stevens County",
+          "url": "https://nationalbenefitalliance.com/minnesota/stevens/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 76,
+          "name": "Swift County",
+          "url": "https://nationalbenefitalliance.com/minnesota/swift/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 77,
+          "name": "Todd County",
+          "url": "https://nationalbenefitalliance.com/minnesota/todd/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 78,
+          "name": "Traverse County",
+          "url": "https://nationalbenefitalliance.com/minnesota/traverse/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 79,
+          "name": "Wabasha County",
+          "url": "https://nationalbenefitalliance.com/minnesota/wabasha/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 80,
+          "name": "Wadena County",
+          "url": "https://nationalbenefitalliance.com/minnesota/wadena/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 81,
+          "name": "Waseca County",
+          "url": "https://nationalbenefitalliance.com/minnesota/waseca/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 82,
+          "name": "Washington County",
+          "url": "https://nationalbenefitalliance.com/minnesota/washington/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 83,
+          "name": "Watonwan County",
+          "url": "https://nationalbenefitalliance.com/minnesota/watonwan/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 84,
+          "name": "Wilkin County",
+          "url": "https://nationalbenefitalliance.com/minnesota/wilkin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 85,
+          "name": "Winona County",
+          "url": "https://nationalbenefitalliance.com/minnesota/winona/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 86,
+          "name": "Wright County",
+          "url": "https://nationalbenefitalliance.com/minnesota/wright/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 87,
+          "name": "Yellow Medicine",
+          "url": "https://nationalbenefitalliance.com/minnesota/yellow-medicine/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

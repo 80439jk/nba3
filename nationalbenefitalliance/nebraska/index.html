@@ -19,47 +19,650 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta property="og:url" content="https://nationalbenefitalliance.com/nebraska/" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "GovernmentOrganization",
-        "@id": "https://nationalbenefitalliance.com/nebraska/#org",
-        "name": "National Benefit Alliance – Nebraska Resource Center",
-        "url": "https://nationalbenefitalliance.com/nebraska/",
-        "description": "Free county-by-county resource guide for Nebraska residents seeking government and community assistance programs.",
-        "areaServed": {
-          "@type": "State",
-          "name": "Nebraska",
-          "sameAs": "https://www.wikidata.org/wiki/Q1553"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/nebraska/#page",
-        "url": "https://nationalbenefitalliance.com/nebraska/",
-        "name": "Nebraska County Resource Center",
-        "description": "Browse all 94 Nebraska counties for community benefit resources.",
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem","position": 1,"name": "Home","item": "https://nationalbenefitalliance.com/"},
-            {"@type": "ListItem","position": 2,"name": "Nebraska","item": "https://nationalbenefitalliance.com/nebraska/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "ItemList",
-        "name": "Nebraska County Resource Guides",
-        "numberOfItems": 94,
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Adams County Resources","url":"https://nationalbenefitalliance.com/nebraska/adams/"},
-          {"@type":"ListItem","position":2,"name":"Antelope County Resources","url":"https://nationalbenefitalliance.com/nebraska/antelope/"},
-          {"@type":"ListItem","position":3,"name":"Arthur County Resources","url":"https://nationalbenefitalliance.com/nebraska/arthur/"}
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://nationalbenefitalliance.com/nebraska/#page",
+      "url": "https://nationalbenefitalliance.com/nebraska/",
+      "name": "Assistance programs by county in Nebraska",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
+      },
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US",
+      "about": {
+        "@type": "AdministrativeArea",
+        "name": "Nebraska"
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Nebraska",
+          "item": "https://nationalbenefitalliance.com/nebraska/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Nebraska counties",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 94,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Adams County",
+          "url": "https://nationalbenefitalliance.com/nebraska/adams/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Antelope County",
+          "url": "https://nationalbenefitalliance.com/nebraska/antelope/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Arthur County",
+          "url": "https://nationalbenefitalliance.com/nebraska/arthur/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Banner County",
+          "url": "https://nationalbenefitalliance.com/nebraska/banner/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Blaine County",
+          "url": "https://nationalbenefitalliance.com/nebraska/blaine/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Boone County",
+          "url": "https://nationalbenefitalliance.com/nebraska/boone/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Box Butte County",
+          "url": "https://nationalbenefitalliance.com/nebraska/box-butte/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Boyd County",
+          "url": "https://nationalbenefitalliance.com/nebraska/boyd/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Brown County",
+          "url": "https://nationalbenefitalliance.com/nebraska/brown/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Buffalo",
+          "url": "https://nationalbenefitalliance.com/nebraska/buffalo/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Burt County",
+          "url": "https://nationalbenefitalliance.com/nebraska/burt/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "Butler County",
+          "url": "https://nationalbenefitalliance.com/nebraska/butler/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Cass County",
+          "url": "https://nationalbenefitalliance.com/nebraska/cass/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Cedar County",
+          "url": "https://nationalbenefitalliance.com/nebraska/cedar/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Chase County",
+          "url": "https://nationalbenefitalliance.com/nebraska/chase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "Cherry County",
+          "url": "https://nationalbenefitalliance.com/nebraska/cherry/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "Cheyenne County",
+          "url": "https://nationalbenefitalliance.com/nebraska/cheyenne/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "Clay County",
+          "url": "https://nationalbenefitalliance.com/nebraska/clay/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "name": "Colfax County",
+          "url": "https://nationalbenefitalliance.com/nebraska/colfax/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "name": "Cuming County",
+          "url": "https://nationalbenefitalliance.com/nebraska/cuming/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "name": "Custer County",
+          "url": "https://nationalbenefitalliance.com/nebraska/custer/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "name": "Dakota County",
+          "url": "https://nationalbenefitalliance.com/nebraska/dakota/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "name": "Dawes County",
+          "url": "https://nationalbenefitalliance.com/nebraska/dawes/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "name": "Dawson County",
+          "url": "https://nationalbenefitalliance.com/nebraska/dawson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "name": "Deuel County",
+          "url": "https://nationalbenefitalliance.com/nebraska/deuel/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "name": "Dixon County",
+          "url": "https://nationalbenefitalliance.com/nebraska/dixon/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "name": "Dodge",
+          "url": "https://nationalbenefitalliance.com/nebraska/dodge/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "name": "Douglas",
+          "url": "https://nationalbenefitalliance.com/nebraska/douglas/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "name": "Dundy County",
+          "url": "https://nationalbenefitalliance.com/nebraska/dundy/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "name": "Fillmore County",
+          "url": "https://nationalbenefitalliance.com/nebraska/fillmore/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 31,
+          "name": "Franklin County",
+          "url": "https://nationalbenefitalliance.com/nebraska/franklin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 32,
+          "name": "Frontier County",
+          "url": "https://nationalbenefitalliance.com/nebraska/frontier/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 33,
+          "name": "Furnas County",
+          "url": "https://nationalbenefitalliance.com/nebraska/furnas/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 34,
+          "name": "Gage County",
+          "url": "https://nationalbenefitalliance.com/nebraska/gage/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 35,
+          "name": "Garden County",
+          "url": "https://nationalbenefitalliance.com/nebraska/garden/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 36,
+          "name": "Garfield County",
+          "url": "https://nationalbenefitalliance.com/nebraska/garfield/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 37,
+          "name": "Gosper County",
+          "url": "https://nationalbenefitalliance.com/nebraska/gosper/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 38,
+          "name": "Grant County",
+          "url": "https://nationalbenefitalliance.com/nebraska/grant/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 39,
+          "name": "Greeley County",
+          "url": "https://nationalbenefitalliance.com/nebraska/greeley/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 40,
+          "name": "Hall",
+          "url": "https://nationalbenefitalliance.com/nebraska/hall/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 41,
+          "name": "Hamilton County",
+          "url": "https://nationalbenefitalliance.com/nebraska/hamilton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 42,
+          "name": "Harlan County",
+          "url": "https://nationalbenefitalliance.com/nebraska/harlan/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 43,
+          "name": "Hayes County",
+          "url": "https://nationalbenefitalliance.com/nebraska/hayes/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 44,
+          "name": "Hitchcock County",
+          "url": "https://nationalbenefitalliance.com/nebraska/hitchcock/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 45,
+          "name": "Holt County",
+          "url": "https://nationalbenefitalliance.com/nebraska/holt/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 46,
+          "name": "Hooker County",
+          "url": "https://nationalbenefitalliance.com/nebraska/hooker/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 47,
+          "name": "Howard County",
+          "url": "https://nationalbenefitalliance.com/nebraska/howard/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 48,
+          "name": "Jefferson County",
+          "url": "https://nationalbenefitalliance.com/nebraska/jefferson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 49,
+          "name": "Johnson County",
+          "url": "https://nationalbenefitalliance.com/nebraska/johnson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 50,
+          "name": "Kearney County",
+          "url": "https://nationalbenefitalliance.com/nebraska/kearney/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 51,
+          "name": "Keith County",
+          "url": "https://nationalbenefitalliance.com/nebraska/keith/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 52,
+          "name": "Keya Paha County",
+          "url": "https://nationalbenefitalliance.com/nebraska/keya-paha/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 53,
+          "name": "Kimball County",
+          "url": "https://nationalbenefitalliance.com/nebraska/kimball/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 54,
+          "name": "Knox County",
+          "url": "https://nationalbenefitalliance.com/nebraska/knox/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 55,
+          "name": "Lancaster",
+          "url": "https://nationalbenefitalliance.com/nebraska/lancaster/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 56,
+          "name": "Lincoln County",
+          "url": "https://nationalbenefitalliance.com/nebraska/lincoln/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 57,
+          "name": "Logan County",
+          "url": "https://nationalbenefitalliance.com/nebraska/logan/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 58,
+          "name": "Loup County",
+          "url": "https://nationalbenefitalliance.com/nebraska/loup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 59,
+          "name": "Madison County",
+          "url": "https://nationalbenefitalliance.com/nebraska/madison/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 60,
+          "name": "McPherson County",
+          "url": "https://nationalbenefitalliance.com/nebraska/mcpherson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 61,
+          "name": "Merrick County",
+          "url": "https://nationalbenefitalliance.com/nebraska/merrick/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 62,
+          "name": "Morrill County",
+          "url": "https://nationalbenefitalliance.com/nebraska/morrill/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 63,
+          "name": "Nance County",
+          "url": "https://nationalbenefitalliance.com/nebraska/nance/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 64,
+          "name": "Nemaha County",
+          "url": "https://nationalbenefitalliance.com/nebraska/nemaha/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 65,
+          "name": "Nuckolls County",
+          "url": "https://nationalbenefitalliance.com/nebraska/nuckolls/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 66,
+          "name": "Otoe County",
+          "url": "https://nationalbenefitalliance.com/nebraska/otoe/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 67,
+          "name": "Pawnee County",
+          "url": "https://nationalbenefitalliance.com/nebraska/pawnee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 68,
+          "name": "Perkins County",
+          "url": "https://nationalbenefitalliance.com/nebraska/perkins/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 69,
+          "name": "Phelps County",
+          "url": "https://nationalbenefitalliance.com/nebraska/phelps/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 70,
+          "name": "Pierce County",
+          "url": "https://nationalbenefitalliance.com/nebraska/pierce/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 71,
+          "name": "Platte County",
+          "url": "https://nationalbenefitalliance.com/nebraska/platte/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 72,
+          "name": "Polk County",
+          "url": "https://nationalbenefitalliance.com/nebraska/polk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 73,
+          "name": "Red Willow County",
+          "url": "https://nationalbenefitalliance.com/nebraska/red-willow/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 74,
+          "name": "Richardson County",
+          "url": "https://nationalbenefitalliance.com/nebraska/richardson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 75,
+          "name": "Rock County",
+          "url": "https://nationalbenefitalliance.com/nebraska/rock/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 76,
+          "name": "Saline County",
+          "url": "https://nationalbenefitalliance.com/nebraska/saline/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 77,
+          "name": "Sarpy",
+          "url": "https://nationalbenefitalliance.com/nebraska/sarpy/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 78,
+          "name": "Saunders County",
+          "url": "https://nationalbenefitalliance.com/nebraska/saunders/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 79,
+          "name": "Scotts Bluff County",
+          "url": "https://nationalbenefitalliance.com/nebraska/scotts-bluff/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 80,
+          "name": "Seward County",
+          "url": "https://nationalbenefitalliance.com/nebraska/seward/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 81,
+          "name": "Sheridan County",
+          "url": "https://nationalbenefitalliance.com/nebraska/sheridan/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 82,
+          "name": "Sherman County",
+          "url": "https://nationalbenefitalliance.com/nebraska/sherman/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 83,
+          "name": "Sioux County",
+          "url": "https://nationalbenefitalliance.com/nebraska/sioux/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 84,
+          "name": "Stanton County",
+          "url": "https://nationalbenefitalliance.com/nebraska/stanton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 85,
+          "name": "Thayer County",
+          "url": "https://nationalbenefitalliance.com/nebraska/thayer/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 86,
+          "name": "Thomas County",
+          "url": "https://nationalbenefitalliance.com/nebraska/thomas/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 87,
+          "name": "Thurston County",
+          "url": "https://nationalbenefitalliance.com/nebraska/thurston/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 88,
+          "name": "Todd County",
+          "url": "https://nationalbenefitalliance.com/nebraska/todd/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 89,
+          "name": "Valley County",
+          "url": "https://nationalbenefitalliance.com/nebraska/valley/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 90,
+          "name": "Washington County",
+          "url": "https://nationalbenefitalliance.com/nebraska/washington/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 91,
+          "name": "Wayne County",
+          "url": "https://nationalbenefitalliance.com/nebraska/wayne/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 92,
+          "name": "Webster County",
+          "url": "https://nationalbenefitalliance.com/nebraska/webster/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 93,
+          "name": "Wheeler County",
+          "url": "https://nationalbenefitalliance.com/nebraska/wheeler/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 94,
+          "name": "York County",
+          "url": "https://nationalbenefitalliance.com/nebraska/york/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

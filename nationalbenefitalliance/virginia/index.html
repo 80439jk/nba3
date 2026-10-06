@@ -19,49 +19,986 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta property="og:url" content="https://nationalbenefitalliance.com/virginia/" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "GovernmentOrganization",
-        "@id": "https://nationalbenefitalliance.com/virginia/#org",
-        "name": "National Benefit Alliance – Virginia Resource Center",
-        "url": "https://nationalbenefitalliance.com/virginia/",
-        "description": "Free county-by-county resource guide for Virginia residents seeking government and community assistance programs.",
-        "areaServed": {
-          "@type": "State",
-          "name": "Virginia",
-          "sameAs": "https://www.wikidata.org/wiki/Q1370"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/virginia/#page",
-        "url": "https://nationalbenefitalliance.com/virginia/",
-        "name": "Virginia County Resource Center",
-        "description": "Browse all 150 Virginia counties for community benefit resources.",
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem","position": 1,"name": "Home","item": "https://nationalbenefitalliance.com/"},
-            {"@type": "ListItem","position": 2,"name": "Virginia","item": "https://nationalbenefitalliance.com/virginia/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "ItemList",
-        "name": "Virginia County Resource Guides",
-        "numberOfItems": 150,
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Fairfax County Resources","url":"https://nationalbenefitalliance.com/virginia/fairfax/"},
-          {"@type":"ListItem","position":2,"name":"Virginia Beach County Resources","url":"https://nationalbenefitalliance.com/virginia/virginia-beach/"},
-          {"@type":"ListItem","position":3,"name":"Loudoun County Resources","url":"https://nationalbenefitalliance.com/virginia/loudoun/"},
-          {"@type":"ListItem","position":4,"name":"Chesterfield County Resources","url":"https://nationalbenefitalliance.com/virginia/chesterfield/"},
-          {"@type":"ListItem","position":5,"name":"Henrico County Resources","url":"https://nationalbenefitalliance.com/virginia/henrico/"}
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://nationalbenefitalliance.com/virginia/#page",
+      "url": "https://nationalbenefitalliance.com/virginia/",
+      "name": "Assistance programs by county in Virginia",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
+      },
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US",
+      "about": {
+        "@type": "AdministrativeArea",
+        "name": "Virginia"
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Virginia",
+          "item": "https://nationalbenefitalliance.com/virginia/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Virginia counties",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 150,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accomack County",
+          "url": "https://nationalbenefitalliance.com/virginia/accomack/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Albemarle County",
+          "url": "https://nationalbenefitalliance.com/virginia/albemarle/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Alexandria City County",
+          "url": "https://nationalbenefitalliance.com/virginia/alexandria-city/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Alexandria County",
+          "url": "https://nationalbenefitalliance.com/virginia/alexandria/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Alleghany County",
+          "url": "https://nationalbenefitalliance.com/virginia/alleghany/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Amelia County",
+          "url": "https://nationalbenefitalliance.com/virginia/amelia/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Amherst County",
+          "url": "https://nationalbenefitalliance.com/virginia/amherst/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Appomattox County",
+          "url": "https://nationalbenefitalliance.com/virginia/appomattox/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Arlington County",
+          "url": "https://nationalbenefitalliance.com/virginia/arlington/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Augusta County",
+          "url": "https://nationalbenefitalliance.com/virginia/augusta/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Bath County",
+          "url": "https://nationalbenefitalliance.com/virginia/bath/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "Bedford County",
+          "url": "https://nationalbenefitalliance.com/virginia/bedford/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Bland County",
+          "url": "https://nationalbenefitalliance.com/virginia/bland/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Botetourt County",
+          "url": "https://nationalbenefitalliance.com/virginia/botetourt/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Bristol City County",
+          "url": "https://nationalbenefitalliance.com/virginia/bristol-city/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "Bristol County",
+          "url": "https://nationalbenefitalliance.com/virginia/bristol/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "Brunswick County",
+          "url": "https://nationalbenefitalliance.com/virginia/brunswick/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "Buchanan County",
+          "url": "https://nationalbenefitalliance.com/virginia/buchanan/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "name": "Buckingham County",
+          "url": "https://nationalbenefitalliance.com/virginia/buckingham/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "name": "Buena Vista County",
+          "url": "https://nationalbenefitalliance.com/virginia/buena-vista/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "name": "Campbell County",
+          "url": "https://nationalbenefitalliance.com/virginia/campbell/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "name": "Caroline County",
+          "url": "https://nationalbenefitalliance.com/virginia/caroline/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "name": "Carroll County",
+          "url": "https://nationalbenefitalliance.com/virginia/carroll/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "name": "Charles City County",
+          "url": "https://nationalbenefitalliance.com/virginia/charles-city/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "name": "Charlotte County",
+          "url": "https://nationalbenefitalliance.com/virginia/charlotte/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "name": "Charlottesville City County",
+          "url": "https://nationalbenefitalliance.com/virginia/charlottesville-city/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "name": "Charlottesville County",
+          "url": "https://nationalbenefitalliance.com/virginia/charlottesville/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "name": "Chesapeake City County",
+          "url": "https://nationalbenefitalliance.com/virginia/chesapeake-city/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "name": "Chesapeake County",
+          "url": "https://nationalbenefitalliance.com/virginia/chesapeake/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "name": "Chesterfield County",
+          "url": "https://nationalbenefitalliance.com/virginia/chesterfield/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 31,
+          "name": "Clarke County",
+          "url": "https://nationalbenefitalliance.com/virginia/clarke/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 32,
+          "name": "Colonial Heights County",
+          "url": "https://nationalbenefitalliance.com/virginia/colonial-heights/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 33,
+          "name": "Craig County",
+          "url": "https://nationalbenefitalliance.com/virginia/craig/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 34,
+          "name": "Culpeper County",
+          "url": "https://nationalbenefitalliance.com/virginia/culpeper/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 35,
+          "name": "Cumberland County",
+          "url": "https://nationalbenefitalliance.com/virginia/cumberland/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 36,
+          "name": "Danville City County",
+          "url": "https://nationalbenefitalliance.com/virginia/danville-city/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 37,
+          "name": "Danville County",
+          "url": "https://nationalbenefitalliance.com/virginia/danville/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 38,
+          "name": "Dickenson County",
+          "url": "https://nationalbenefitalliance.com/virginia/dickenson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 39,
+          "name": "Dinwiddie County",
+          "url": "https://nationalbenefitalliance.com/virginia/dinwiddie/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 40,
+          "name": "Essex County",
+          "url": "https://nationalbenefitalliance.com/virginia/essex/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 41,
+          "name": "Fairfax City County",
+          "url": "https://nationalbenefitalliance.com/virginia/fairfax-city/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 42,
+          "name": "Fairfax County",
+          "url": "https://nationalbenefitalliance.com/virginia/fairfax/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 43,
+          "name": "Falls Church City County",
+          "url": "https://nationalbenefitalliance.com/virginia/falls-church-city/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 44,
+          "name": "Falls Church County",
+          "url": "https://nationalbenefitalliance.com/virginia/falls-church/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 45,
+          "name": "Fauquier County",
+          "url": "https://nationalbenefitalliance.com/virginia/fauquier/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 46,
+          "name": "Floyd County",
+          "url": "https://nationalbenefitalliance.com/virginia/floyd/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 47,
+          "name": "Fluvanna County",
+          "url": "https://nationalbenefitalliance.com/virginia/fluvanna/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 48,
+          "name": "Franklin County",
+          "url": "https://nationalbenefitalliance.com/virginia/franklin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 49,
+          "name": "Frederick County",
+          "url": "https://nationalbenefitalliance.com/virginia/frederick/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 50,
+          "name": "Fredericksburg City County",
+          "url": "https://nationalbenefitalliance.com/virginia/fredericksburg-city/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 51,
+          "name": "Fredericksburg County",
+          "url": "https://nationalbenefitalliance.com/virginia/fredericksburg/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 52,
+          "name": "Galax County",
+          "url": "https://nationalbenefitalliance.com/virginia/galax/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 53,
+          "name": "Giles County",
+          "url": "https://nationalbenefitalliance.com/virginia/giles/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 54,
+          "name": "Gloucester County",
+          "url": "https://nationalbenefitalliance.com/virginia/gloucester/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 55,
+          "name": "Goochland County",
+          "url": "https://nationalbenefitalliance.com/virginia/goochland/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 56,
+          "name": "Grayson County",
+          "url": "https://nationalbenefitalliance.com/virginia/grayson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 57,
+          "name": "Greene County",
+          "url": "https://nationalbenefitalliance.com/virginia/greene/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 58,
+          "name": "Greensville County",
+          "url": "https://nationalbenefitalliance.com/virginia/greensville/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 59,
+          "name": "Halifax County",
+          "url": "https://nationalbenefitalliance.com/virginia/halifax/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 60,
+          "name": "Hampton City County",
+          "url": "https://nationalbenefitalliance.com/virginia/hampton-city/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 61,
+          "name": "Hampton County",
+          "url": "https://nationalbenefitalliance.com/virginia/hampton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 62,
+          "name": "Hanover County",
+          "url": "https://nationalbenefitalliance.com/virginia/hanover/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 63,
+          "name": "Harrisonburg City County",
+          "url": "https://nationalbenefitalliance.com/virginia/harrisonburg-city/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 64,
+          "name": "Harrisonburg County",
+          "url": "https://nationalbenefitalliance.com/virginia/harrisonburg/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 65,
+          "name": "Henrico County",
+          "url": "https://nationalbenefitalliance.com/virginia/henrico/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 66,
+          "name": "Henry County",
+          "url": "https://nationalbenefitalliance.com/virginia/henry/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 67,
+          "name": "Highland County",
+          "url": "https://nationalbenefitalliance.com/virginia/highland/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 68,
+          "name": "Hopewell County",
+          "url": "https://nationalbenefitalliance.com/virginia/hopewell/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 69,
+          "name": "Isle Of Wight County",
+          "url": "https://nationalbenefitalliance.com/virginia/isle-of-wight/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 70,
+          "name": "James City County",
+          "url": "https://nationalbenefitalliance.com/virginia/james-city/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 71,
+          "name": "King And Queen County",
+          "url": "https://nationalbenefitalliance.com/virginia/king-and-queen/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 72,
+          "name": "King George County",
+          "url": "https://nationalbenefitalliance.com/virginia/king-george/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 73,
+          "name": "King William County",
+          "url": "https://nationalbenefitalliance.com/virginia/king-william/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 74,
+          "name": "Lancaster County",
+          "url": "https://nationalbenefitalliance.com/virginia/lancaster/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 75,
+          "name": "Lee County",
+          "url": "https://nationalbenefitalliance.com/virginia/lee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 76,
+          "name": "Loudoun County",
+          "url": "https://nationalbenefitalliance.com/virginia/loudoun/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 77,
+          "name": "Louisa County",
+          "url": "https://nationalbenefitalliance.com/virginia/louisa/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 78,
+          "name": "Lunenburg County",
+          "url": "https://nationalbenefitalliance.com/virginia/lunenburg/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 79,
+          "name": "Lynchburg City County",
+          "url": "https://nationalbenefitalliance.com/virginia/lynchburg-city/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 80,
+          "name": "Lynchburg County",
+          "url": "https://nationalbenefitalliance.com/virginia/lynchburg/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 81,
+          "name": "Madison County",
+          "url": "https://nationalbenefitalliance.com/virginia/madison/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 82,
+          "name": "Manassas City County",
+          "url": "https://nationalbenefitalliance.com/virginia/manassas-city/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 83,
+          "name": "Manassas County",
+          "url": "https://nationalbenefitalliance.com/virginia/manassas/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 84,
+          "name": "Martinsville City County",
+          "url": "https://nationalbenefitalliance.com/virginia/martinsville-city/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 85,
+          "name": "Mathews County",
+          "url": "https://nationalbenefitalliance.com/virginia/mathews/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 86,
+          "name": "Mcdowell County",
+          "url": "https://nationalbenefitalliance.com/virginia/mcdowell/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 87,
+          "name": "Mecklenburg County",
+          "url": "https://nationalbenefitalliance.com/virginia/mecklenburg/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 88,
+          "name": "Middlesex County",
+          "url": "https://nationalbenefitalliance.com/virginia/middlesex/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 89,
+          "name": "Montgomery County",
+          "url": "https://nationalbenefitalliance.com/virginia/montgomery/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 90,
+          "name": "Nelson County",
+          "url": "https://nationalbenefitalliance.com/virginia/nelson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 91,
+          "name": "New Kent County",
+          "url": "https://nationalbenefitalliance.com/virginia/new-kent/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 92,
+          "name": "Newport News City County",
+          "url": "https://nationalbenefitalliance.com/virginia/newport-news-city/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 93,
+          "name": "Newport News County",
+          "url": "https://nationalbenefitalliance.com/virginia/newport-news/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 94,
+          "name": "Norfolk City County",
+          "url": "https://nationalbenefitalliance.com/virginia/norfolk-city/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 95,
+          "name": "Norfolk County",
+          "url": "https://nationalbenefitalliance.com/virginia/norfolk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 96,
+          "name": "Northampton County",
+          "url": "https://nationalbenefitalliance.com/virginia/northampton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 97,
+          "name": "Northumberland County",
+          "url": "https://nationalbenefitalliance.com/virginia/northumberland/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 98,
+          "name": "Norton County",
+          "url": "https://nationalbenefitalliance.com/virginia/norton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 99,
+          "name": "Nottoway County",
+          "url": "https://nationalbenefitalliance.com/virginia/nottoway/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 100,
+          "name": "Orange County",
+          "url": "https://nationalbenefitalliance.com/virginia/orange/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 101,
+          "name": "Page County",
+          "url": "https://nationalbenefitalliance.com/virginia/page/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 102,
+          "name": "Patrick County",
+          "url": "https://nationalbenefitalliance.com/virginia/patrick/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 103,
+          "name": "Petersburg City County",
+          "url": "https://nationalbenefitalliance.com/virginia/petersburg-city/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 104,
+          "name": "Petersburg County",
+          "url": "https://nationalbenefitalliance.com/virginia/petersburg/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 105,
+          "name": "Pittsylvania County",
+          "url": "https://nationalbenefitalliance.com/virginia/pittsylvania/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 106,
+          "name": "Poquoson County",
+          "url": "https://nationalbenefitalliance.com/virginia/poquoson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 107,
+          "name": "Portsmouth City County",
+          "url": "https://nationalbenefitalliance.com/virginia/portsmouth-city/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 108,
+          "name": "Portsmouth County",
+          "url": "https://nationalbenefitalliance.com/virginia/portsmouth/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 109,
+          "name": "Powhatan County",
+          "url": "https://nationalbenefitalliance.com/virginia/powhatan/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 110,
+          "name": "Prince Edward County",
+          "url": "https://nationalbenefitalliance.com/virginia/prince-edward/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 111,
+          "name": "Prince George County",
+          "url": "https://nationalbenefitalliance.com/virginia/prince-george/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 112,
+          "name": "Prince William County",
+          "url": "https://nationalbenefitalliance.com/virginia/prince-william/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 113,
+          "name": "Pulaski County",
+          "url": "https://nationalbenefitalliance.com/virginia/pulaski/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 114,
+          "name": "Radford City County",
+          "url": "https://nationalbenefitalliance.com/virginia/radford-city/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 115,
+          "name": "Radford County",
+          "url": "https://nationalbenefitalliance.com/virginia/radford/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 116,
+          "name": "Rappahannock County",
+          "url": "https://nationalbenefitalliance.com/virginia/rappahannock/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 117,
+          "name": "Richmond City County",
+          "url": "https://nationalbenefitalliance.com/virginia/richmond-city/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 118,
+          "name": "Richmond County",
+          "url": "https://nationalbenefitalliance.com/virginia/richmond/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 119,
+          "name": "Roanoke City County",
+          "url": "https://nationalbenefitalliance.com/virginia/roanoke-city/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 120,
+          "name": "Roanoke County",
+          "url": "https://nationalbenefitalliance.com/virginia/roanoke/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 121,
+          "name": "Rockbridge County",
+          "url": "https://nationalbenefitalliance.com/virginia/rockbridge/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 122,
+          "name": "Rockingham County",
+          "url": "https://nationalbenefitalliance.com/virginia/rockingham/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 123,
+          "name": "Russell County",
+          "url": "https://nationalbenefitalliance.com/virginia/russell/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 124,
+          "name": "Salem County",
+          "url": "https://nationalbenefitalliance.com/virginia/salem/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 125,
+          "name": "Scott County",
+          "url": "https://nationalbenefitalliance.com/virginia/scott/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 126,
+          "name": "Shenandoah County",
+          "url": "https://nationalbenefitalliance.com/virginia/shenandoah/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 127,
+          "name": "Smyth County",
+          "url": "https://nationalbenefitalliance.com/virginia/smyth/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 128,
+          "name": "Southampton County",
+          "url": "https://nationalbenefitalliance.com/virginia/southampton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 129,
+          "name": "Spotsylvania County",
+          "url": "https://nationalbenefitalliance.com/virginia/spotsylvania/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 130,
+          "name": "Stafford County",
+          "url": "https://nationalbenefitalliance.com/virginia/stafford/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 131,
+          "name": "Staunton City County",
+          "url": "https://nationalbenefitalliance.com/virginia/staunton-city/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 132,
+          "name": "Staunton County",
+          "url": "https://nationalbenefitalliance.com/virginia/staunton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 133,
+          "name": "Suffolk City County",
+          "url": "https://nationalbenefitalliance.com/virginia/suffolk-city/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 134,
+          "name": "Suffolk County",
+          "url": "https://nationalbenefitalliance.com/virginia/suffolk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 135,
+          "name": "Surry County",
+          "url": "https://nationalbenefitalliance.com/virginia/surry/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 136,
+          "name": "Sussex County",
+          "url": "https://nationalbenefitalliance.com/virginia/sussex/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 137,
+          "name": "Tazewell County",
+          "url": "https://nationalbenefitalliance.com/virginia/tazewell/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 138,
+          "name": "Virginia Beach City County",
+          "url": "https://nationalbenefitalliance.com/virginia/virginia-beach-city/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 139,
+          "name": "Virginia Beach County",
+          "url": "https://nationalbenefitalliance.com/virginia/virginia-beach/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 140,
+          "name": "Warren County",
+          "url": "https://nationalbenefitalliance.com/virginia/warren/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 141,
+          "name": "Washington County",
+          "url": "https://nationalbenefitalliance.com/virginia/washington/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 142,
+          "name": "Waynesboro County",
+          "url": "https://nationalbenefitalliance.com/virginia/waynesboro/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 143,
+          "name": "Westmoreland County",
+          "url": "https://nationalbenefitalliance.com/virginia/westmoreland/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 144,
+          "name": "Williamsburg City County",
+          "url": "https://nationalbenefitalliance.com/virginia/williamsburg-city/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 145,
+          "name": "Williamsburg County",
+          "url": "https://nationalbenefitalliance.com/virginia/williamsburg/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 146,
+          "name": "Winchester City County",
+          "url": "https://nationalbenefitalliance.com/virginia/winchester-city/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 147,
+          "name": "Winchester County",
+          "url": "https://nationalbenefitalliance.com/virginia/winchester/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 148,
+          "name": "Wise County",
+          "url": "https://nationalbenefitalliance.com/virginia/wise/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 149,
+          "name": "Wythe County",
+          "url": "https://nationalbenefitalliance.com/virginia/wythe/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 150,
+          "name": "York County",
+          "url": "https://nationalbenefitalliance.com/virginia/york/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

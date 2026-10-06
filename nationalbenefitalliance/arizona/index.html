@@ -19,49 +19,176 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta property="og:url" content="https://nationalbenefitalliance.com/arizona/" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "GovernmentOrganization",
-        "@id": "https://nationalbenefitalliance.com/arizona/#org",
-        "name": "National Benefit Alliance – Arizona Resource Center",
-        "url": "https://nationalbenefitalliance.com/arizona/",
-        "description": "Free county-by-county resource guide for Arizona residents seeking government and community assistance programs.",
-        "areaServed": {
-          "@type": "State",
-          "name": "Arizona",
-          "sameAs": "https://www.wikidata.org/wiki/Q816"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/arizona/#page",
-        "url": "https://nationalbenefitalliance.com/arizona/",
-        "name": "Arizona County Resource Center",
-        "description": "Browse all 15 Arizona counties for community benefit resources.",
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem","position": 1,"name": "Home","item": "https://nationalbenefitalliance.com/"},
-            {"@type": "ListItem","position": 2,"name": "Arizona","item": "https://nationalbenefitalliance.com/arizona/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "ItemList",
-        "name": "Arizona County Resource Guides",
-        "numberOfItems": 15,
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Maricopa County Resources","url":"https://nationalbenefitalliance.com/arizona/maricopa/"},
-          {"@type":"ListItem","position":2,"name":"Pima County Resources","url":"https://nationalbenefitalliance.com/arizona/pima/"},
-          {"@type":"ListItem","position":3,"name":"Pinal County Resources","url":"https://nationalbenefitalliance.com/arizona/pinal/"},
-          {"@type":"ListItem","position":4,"name":"Yavapai County Resources","url":"https://nationalbenefitalliance.com/arizona/yavapai/"},
-          {"@type":"ListItem","position":5,"name":"Mohave County Resources","url":"https://nationalbenefitalliance.com/arizona/mohave/"}
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://nationalbenefitalliance.com/arizona/#page",
+      "url": "https://nationalbenefitalliance.com/arizona/",
+      "name": "Assistance programs by county in Arizona",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
+      },
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US",
+      "about": {
+        "@type": "AdministrativeArea",
+        "name": "Arizona"
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Arizona",
+          "item": "https://nationalbenefitalliance.com/arizona/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Arizona counties",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 15,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Apache County",
+          "url": "https://nationalbenefitalliance.com/arizona/apache/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Cochise County",
+          "url": "https://nationalbenefitalliance.com/arizona/cochise/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Coconino County",
+          "url": "https://nationalbenefitalliance.com/arizona/coconino/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Gila County",
+          "url": "https://nationalbenefitalliance.com/arizona/gila/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Graham County",
+          "url": "https://nationalbenefitalliance.com/arizona/graham/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Greenlee County",
+          "url": "https://nationalbenefitalliance.com/arizona/greenlee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "La Paz County",
+          "url": "https://nationalbenefitalliance.com/arizona/la-paz/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Maricopa",
+          "url": "https://nationalbenefitalliance.com/arizona/maricopa/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Mohave",
+          "url": "https://nationalbenefitalliance.com/arizona/mohave/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Navajo County",
+          "url": "https://nationalbenefitalliance.com/arizona/navajo/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Pima",
+          "url": "https://nationalbenefitalliance.com/arizona/pima/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "Pinal",
+          "url": "https://nationalbenefitalliance.com/arizona/pinal/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Santa Cruz County",
+          "url": "https://nationalbenefitalliance.com/arizona/santa-cruz/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Yavapai",
+          "url": "https://nationalbenefitalliance.com/arizona/yavapai/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Yuma",
+          "url": "https://nationalbenefitalliance.com/arizona/yuma/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

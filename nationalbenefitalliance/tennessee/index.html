@@ -19,49 +19,656 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta property="og:url" content="https://nationalbenefitalliance.com/tennessee/" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "GovernmentOrganization",
-        "@id": "https://nationalbenefitalliance.com/tennessee/#org",
-        "name": "National Benefit Alliance – Tennessee County Resources Resource Center",
-        "url": "https://nationalbenefitalliance.com/tennessee/",
-        "description": "Free counties-by-countie resource guide for Tennessee residents seeking government and community assistance programs.",
-        "areaServed": {
-          "@type": "State",
-          "name": "Tennessee",
-          "sameAs": "https://www.wikidata.org/wiki/Q1509"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/tennessee/#page",
-        "url": "https://nationalbenefitalliance.com/tennessee/",
-        "name": "Tennessee County Resources",
-        "description": "Browse all 95 Tennessee counties for community benefit resources.",
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem","position": 1,"name": "Home","item": "https://nationalbenefitalliance.com/"},
-            {"@type": "ListItem","position": 2,"name": "Tennessee","item": "https://nationalbenefitalliance.com/tennessee/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "ItemList",
-        "name": "Tennessee County Resources Resource Guides",
-        "numberOfItems": 95,
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Shelby Counties Resources","url":"https://nationalbenefitalliance.com/tennessee/shelby/"},
-          {"@type":"ListItem","position":2,"name":"Davidson Counties Resources","url":"https://nationalbenefitalliance.com/tennessee/davidson/"},
-          {"@type":"ListItem","position":3,"name":"Knox Counties Resources","url":"https://nationalbenefitalliance.com/tennessee/knox/"},
-          {"@type":"ListItem","position":4,"name":"Hamilton Counties Resources","url":"https://nationalbenefitalliance.com/tennessee/hamilton/"},
-          {"@type":"ListItem","position":5,"name":"Rutherford Counties Resources","url":"https://nationalbenefitalliance.com/tennessee/rutherford/"}
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://nationalbenefitalliance.com/tennessee/#page",
+      "url": "https://nationalbenefitalliance.com/tennessee/",
+      "name": "Assistance programs by county in Tennessee",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
+      },
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US",
+      "about": {
+        "@type": "AdministrativeArea",
+        "name": "Tennessee"
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tennessee",
+          "item": "https://nationalbenefitalliance.com/tennessee/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Tennessee counties",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 95,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Anderson Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/anderson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Bedford Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/bedford/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Benton Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/benton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Bledsoe Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/bledsoe/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Blount Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/blount/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Bradley Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/bradley/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Campbell Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/campbell/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Cannon Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/cannon/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Carroll Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/carroll/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Carter Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/carter/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Cheatham Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/cheatham/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "Chester Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/chester/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Claiborne Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/claiborne/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Clay Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/clay/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Cocke Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/cocke/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "Coffee Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/coffee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "Crockett Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/crockett/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "Cumberland Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/cumberland/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "name": "Davidson Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/davidson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "name": "Decatur Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/decatur/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "name": "Dekalb Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/dekalb/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "name": "Dickson Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/dickson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "name": "Dyer Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/dyer/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "name": "Fayette Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/fayette/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "name": "Fentress Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/fentress/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "name": "Franklin Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/franklin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "name": "Gibson Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/gibson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "name": "Giles Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/giles/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "name": "Grainger Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/grainger/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "name": "Greene Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/greene/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 31,
+          "name": "Grundy Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/grundy/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 32,
+          "name": "Hamblen Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/hamblen/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 33,
+          "name": "Hamilton Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/hamilton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 34,
+          "name": "Hancock Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/hancock/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 35,
+          "name": "Hardeman Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/hardeman/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 36,
+          "name": "Hardin Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/hardin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 37,
+          "name": "Hawkins Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/hawkins/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 38,
+          "name": "Haywood Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/haywood/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 39,
+          "name": "Henderson Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/henderson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 40,
+          "name": "Henry Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/henry/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 41,
+          "name": "Hickman Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/hickman/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 42,
+          "name": "Houston Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/houston/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 43,
+          "name": "Humphreys Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/humphreys/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 44,
+          "name": "Jackson Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/jackson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 45,
+          "name": "Jefferson Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/jefferson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 46,
+          "name": "Johnson Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/johnson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 47,
+          "name": "Knox Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/knox/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 48,
+          "name": "Lake Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/lake/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 49,
+          "name": "Lauderdale Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/lauderdale/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 50,
+          "name": "Lawrence Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/lawrence/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 51,
+          "name": "Lewis Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/lewis/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 52,
+          "name": "Lincoln Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/lincoln/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 53,
+          "name": "Loudon Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/loudon/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 54,
+          "name": "Macon Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/macon/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 55,
+          "name": "Madison Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/madison/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 56,
+          "name": "Marion Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/marion/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 57,
+          "name": "Marshall Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/marshall/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 58,
+          "name": "Maury Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/maury/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 59,
+          "name": "Mcminn Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/mcminn/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 60,
+          "name": "Mcnairy Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/mcnairy/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 61,
+          "name": "Meigs Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/meigs/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 62,
+          "name": "Monroe Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/monroe/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 63,
+          "name": "Montgomery Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/montgomery/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 64,
+          "name": "Moore Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/moore/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 65,
+          "name": "Morgan Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/morgan/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 66,
+          "name": "Obion Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/obion/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 67,
+          "name": "Overton Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/overton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 68,
+          "name": "Perry Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/perry/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 69,
+          "name": "Pickett Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/pickett/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 70,
+          "name": "Polk Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/polk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 71,
+          "name": "Putnam Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/putnam/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 72,
+          "name": "Rhea Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/rhea/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 73,
+          "name": "Roane Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/roane/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 74,
+          "name": "Robertson Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/robertson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 75,
+          "name": "Rutherford Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/rutherford/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 76,
+          "name": "Scott Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/scott/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 77,
+          "name": "Sequatchie Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/sequatchie/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 78,
+          "name": "Sevier Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/sevier/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 79,
+          "name": "Shelby Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/shelby/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 80,
+          "name": "Smith Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/smith/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 81,
+          "name": "Stewart Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/stewart/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 82,
+          "name": "Sullivan Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/sullivan/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 83,
+          "name": "Sumner Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/sumner/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 84,
+          "name": "Tipton Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/tipton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 85,
+          "name": "Trousdale Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/trousdale/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 86,
+          "name": "Unicoi Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/unicoi/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 87,
+          "name": "Union Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/union/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 88,
+          "name": "Van Buren Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/van-buren/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 89,
+          "name": "Warren Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/warren/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 90,
+          "name": "Washington Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/washington/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 91,
+          "name": "Wayne Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/wayne/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 92,
+          "name": "Weakley Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/weakley/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 93,
+          "name": "White Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/white/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 94,
+          "name": "Williamson Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/williamson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 95,
+          "name": "Wilson Counties",
+          "url": "https://nationalbenefitalliance.com/tennessee/wilson/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

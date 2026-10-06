@@ -19,47 +19,104 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta property="og:url" content="https://nationalbenefitalliance.com/delaware/" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "GovernmentOrganization",
-        "@id": "https://nationalbenefitalliance.com/delaware/#org",
-        "name": "National Benefit Alliance – Delaware Resource Center",
-        "url": "https://nationalbenefitalliance.com/delaware/",
-        "description": "Free county-by-county resource guide for Delaware residents seeking government and community assistance programs.",
-        "areaServed": {
-          "@type": "State",
-          "name": "Delaware",
-          "sameAs": "https://www.wikidata.org/wiki/Q1393"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/delaware/#page",
-        "url": "https://nationalbenefitalliance.com/delaware/",
-        "name": "Delaware County Resource Center",
-        "description": "Browse all 3 Delaware counties for community benefit resources.",
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem","position": 1,"name": "Home","item": "https://nationalbenefitalliance.com/"},
-            {"@type": "ListItem","position": 2,"name": "Delaware","item": "https://nationalbenefitalliance.com/delaware/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "ItemList",
-        "name": "Delaware County Resource Guides",
-        "numberOfItems": 3,
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"New Castle County Resources","url":"https://nationalbenefitalliance.com/delaware/new-castle/"},
-          {"@type":"ListItem","position":2,"name":"Sussex County Resources","url":"https://nationalbenefitalliance.com/delaware/sussex/"},
-          {"@type":"ListItem","position":3,"name":"Kent County Resources","url":"https://nationalbenefitalliance.com/delaware/kent/"},
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://nationalbenefitalliance.com/delaware/#page",
+      "url": "https://nationalbenefitalliance.com/delaware/",
+      "name": "Assistance programs by county in Delaware",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
+      },
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US",
+      "about": {
+        "@type": "AdministrativeArea",
+        "name": "Delaware"
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Delaware",
+          "item": "https://nationalbenefitalliance.com/delaware/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Delaware counties",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 3,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Kent County",
+          "url": "https://nationalbenefitalliance.com/delaware/kent/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "New Castle County",
+          "url": "https://nationalbenefitalliance.com/delaware/new-castle/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Sussex County",
+          "url": "https://nationalbenefitalliance.com/delaware/sussex/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

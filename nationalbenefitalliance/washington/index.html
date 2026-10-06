@@ -19,49 +19,320 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta property="og:url" content="https://nationalbenefitalliance.com/washington/" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "GovernmentOrganization",
-        "@id": "https://nationalbenefitalliance.com/washington/#org",
-        "name": "National Benefit Alliance – Washington Resource Center",
-        "url": "https://nationalbenefitalliance.com/washington/",
-        "description": "Free county-by-county resource guide for Washington residents seeking government and community assistance programs.",
-        "areaServed": {
-          "@type": "State",
-          "name": "Washington",
-          "sameAs": "https://www.wikidata.org/wiki/Q1223"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/washington/#page",
-        "url": "https://nationalbenefitalliance.com/washington/",
-        "name": "Washington County Resource Center",
-        "description": "Browse all 39 Washington counties for community benefit resources.",
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem","position": 1,"name": "Home","item": "https://nationalbenefitalliance.com/"},
-            {"@type": "ListItem","position": 2,"name": "Washington","item": "https://nationalbenefitalliance.com/washington/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "ItemList",
-        "name": "Washington County Resource Guides",
-        "numberOfItems": 39,
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"King Resources","url":"https://nationalbenefitalliance.com/washington/king/"},
-          {"@type":"ListItem","position":2,"name":"Pierce Resources","url":"https://nationalbenefitalliance.com/washington/pierce/"},
-          {"@type":"ListItem","position":3,"name":"Snohomish Resources","url":"https://nationalbenefitalliance.com/washington/snohomish/"},
-          {"@type":"ListItem","position":4,"name":"Spokane Resources","url":"https://nationalbenefitalliance.com/washington/spokane/"},
-          {"@type":"ListItem","position":5,"name":"Clark Resources","url":"https://nationalbenefitalliance.com/washington/clark/"}
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://nationalbenefitalliance.com/washington/#page",
+      "url": "https://nationalbenefitalliance.com/washington/",
+      "name": "Assistance programs by county in Washington",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
+      },
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US",
+      "about": {
+        "@type": "AdministrativeArea",
+        "name": "Washington"
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Washington",
+          "item": "https://nationalbenefitalliance.com/washington/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Washington counties",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 39,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Adams",
+          "url": "https://nationalbenefitalliance.com/washington/adams/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Asotin",
+          "url": "https://nationalbenefitalliance.com/washington/asotin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Benton",
+          "url": "https://nationalbenefitalliance.com/washington/benton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Chelan",
+          "url": "https://nationalbenefitalliance.com/washington/chelan/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Clallam",
+          "url": "https://nationalbenefitalliance.com/washington/clallam/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Clark",
+          "url": "https://nationalbenefitalliance.com/washington/clark/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Columbia",
+          "url": "https://nationalbenefitalliance.com/washington/columbia/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Cowlitz",
+          "url": "https://nationalbenefitalliance.com/washington/cowlitz/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Douglas",
+          "url": "https://nationalbenefitalliance.com/washington/douglas/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Ferry",
+          "url": "https://nationalbenefitalliance.com/washington/ferry/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Franklin",
+          "url": "https://nationalbenefitalliance.com/washington/franklin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "Garfield",
+          "url": "https://nationalbenefitalliance.com/washington/garfield/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Grant",
+          "url": "https://nationalbenefitalliance.com/washington/grant/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Grays Harbor",
+          "url": "https://nationalbenefitalliance.com/washington/grays-harbor/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Island",
+          "url": "https://nationalbenefitalliance.com/washington/island/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "Jefferson",
+          "url": "https://nationalbenefitalliance.com/washington/jefferson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "King",
+          "url": "https://nationalbenefitalliance.com/washington/king/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "Kitsap",
+          "url": "https://nationalbenefitalliance.com/washington/kitsap/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "name": "Kittitas",
+          "url": "https://nationalbenefitalliance.com/washington/kittitas/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "name": "Klickitat",
+          "url": "https://nationalbenefitalliance.com/washington/klickitat/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "name": "Lewis",
+          "url": "https://nationalbenefitalliance.com/washington/lewis/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "name": "Lincoln",
+          "url": "https://nationalbenefitalliance.com/washington/lincoln/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "name": "Mason",
+          "url": "https://nationalbenefitalliance.com/washington/mason/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "name": "Okanogan",
+          "url": "https://nationalbenefitalliance.com/washington/okanogan/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "name": "Pacific",
+          "url": "https://nationalbenefitalliance.com/washington/pacific/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "name": "Pend Oreille",
+          "url": "https://nationalbenefitalliance.com/washington/pend-oreille/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "name": "Pierce",
+          "url": "https://nationalbenefitalliance.com/washington/pierce/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "name": "San Juan",
+          "url": "https://nationalbenefitalliance.com/washington/san-juan/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "name": "Skagit",
+          "url": "https://nationalbenefitalliance.com/washington/skagit/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "name": "Skamania",
+          "url": "https://nationalbenefitalliance.com/washington/skamania/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 31,
+          "name": "Snohomish",
+          "url": "https://nationalbenefitalliance.com/washington/snohomish/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 32,
+          "name": "Spokane",
+          "url": "https://nationalbenefitalliance.com/washington/spokane/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 33,
+          "name": "Stevens",
+          "url": "https://nationalbenefitalliance.com/washington/stevens/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 34,
+          "name": "Thurston",
+          "url": "https://nationalbenefitalliance.com/washington/thurston/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 35,
+          "name": "Wahkiakum",
+          "url": "https://nationalbenefitalliance.com/washington/wahkiakum/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 36,
+          "name": "Walla Walla",
+          "url": "https://nationalbenefitalliance.com/washington/walla-walla/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 37,
+          "name": "Whatcom",
+          "url": "https://nationalbenefitalliance.com/washington/whatcom/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 38,
+          "name": "Whitman",
+          "url": "https://nationalbenefitalliance.com/washington/whitman/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 39,
+          "name": "Yakima",
+          "url": "https://nationalbenefitalliance.com/washington/yakima/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

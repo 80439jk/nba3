@@ -19,49 +19,680 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta property="og:url" content="https://nationalbenefitalliance.com/iowa/" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "GovernmentOrganization",
-        "@id": "https://nationalbenefitalliance.com/iowa/#org",
-        "name": "National Benefit Alliance – Iowa Resource Center",
-        "url": "https://nationalbenefitalliance.com/iowa/",
-        "description": "Free county-by-county resource guide for Iowa residents seeking government and community assistance programs.",
-        "areaServed": {
-          "@type": "State",
-          "name": "Iowa",
-          "sameAs": "https://www.wikidata.org/wiki/Q1546"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/iowa/#page",
-        "url": "https://nationalbenefitalliance.com/iowa/",
-        "name": "Iowa County Resource Center",
-        "description": "Browse all 99 Iowa counties for community benefit resources.",
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem","position": 1,"name": "Home","item": "https://nationalbenefitalliance.com/"},
-            {"@type": "ListItem","position": 2,"name": "Iowa","item": "https://nationalbenefitalliance.com/iowa/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "ItemList",
-        "name": "Iowa County Resource Guides",
-        "numberOfItems": 99,
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Polk County County Resources","url":"https://nationalbenefitalliance.com/iowa/polk/"},
-          {"@type":"ListItem","position":2,"name":"Linn County County Resources","url":"https://nationalbenefitalliance.com/iowa/linn/"},
-          {"@type":"ListItem","position":3,"name":"Scott County County Resources","url":"https://nationalbenefitalliance.com/iowa/scott/"},
-          {"@type":"ListItem","position":4,"name":"Johnson County County Resources","url":"https://nationalbenefitalliance.com/iowa/johnson/"},
-          {"@type":"ListItem","position":5,"name":"Black Hawk County Resources","url":"https://nationalbenefitalliance.com/iowa/black-hawk/"}
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://nationalbenefitalliance.com/iowa/#page",
+      "url": "https://nationalbenefitalliance.com/iowa/",
+      "name": "Assistance programs by county in Iowa",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
+      },
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US",
+      "about": {
+        "@type": "AdministrativeArea",
+        "name": "Iowa"
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Iowa",
+          "item": "https://nationalbenefitalliance.com/iowa/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Iowa counties",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 99,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Adair County",
+          "url": "https://nationalbenefitalliance.com/iowa/adair/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Adams County",
+          "url": "https://nationalbenefitalliance.com/iowa/adams/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Allamakee County",
+          "url": "https://nationalbenefitalliance.com/iowa/allamakee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Appanoose County",
+          "url": "https://nationalbenefitalliance.com/iowa/appanoose/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Audubon County",
+          "url": "https://nationalbenefitalliance.com/iowa/audubon/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Benton County",
+          "url": "https://nationalbenefitalliance.com/iowa/benton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Black Hawk",
+          "url": "https://nationalbenefitalliance.com/iowa/black-hawk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Boone County",
+          "url": "https://nationalbenefitalliance.com/iowa/boone/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Bremer County",
+          "url": "https://nationalbenefitalliance.com/iowa/bremer/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Buchanan County",
+          "url": "https://nationalbenefitalliance.com/iowa/buchanan/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Buena Vista",
+          "url": "https://nationalbenefitalliance.com/iowa/buena-vista/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "Butler County",
+          "url": "https://nationalbenefitalliance.com/iowa/butler/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Calhoun County",
+          "url": "https://nationalbenefitalliance.com/iowa/calhoun/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Carroll County",
+          "url": "https://nationalbenefitalliance.com/iowa/carroll/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Cass County",
+          "url": "https://nationalbenefitalliance.com/iowa/cass/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "Cedar County",
+          "url": "https://nationalbenefitalliance.com/iowa/cedar/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "Cerro Gordo",
+          "url": "https://nationalbenefitalliance.com/iowa/cerro-gordo/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "Cherokee County",
+          "url": "https://nationalbenefitalliance.com/iowa/cherokee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "name": "Chickasaw County",
+          "url": "https://nationalbenefitalliance.com/iowa/chickasaw/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "name": "Clarke County",
+          "url": "https://nationalbenefitalliance.com/iowa/clarke/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "name": "Clay County",
+          "url": "https://nationalbenefitalliance.com/iowa/clay/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "name": "Clayton County",
+          "url": "https://nationalbenefitalliance.com/iowa/clayton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "name": "Clinton County",
+          "url": "https://nationalbenefitalliance.com/iowa/clinton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "name": "Crawford County",
+          "url": "https://nationalbenefitalliance.com/iowa/crawford/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "name": "Dallas County",
+          "url": "https://nationalbenefitalliance.com/iowa/dallas/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "name": "Davis County",
+          "url": "https://nationalbenefitalliance.com/iowa/davis/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "name": "Decatur County",
+          "url": "https://nationalbenefitalliance.com/iowa/decatur/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "name": "Delaware County",
+          "url": "https://nationalbenefitalliance.com/iowa/delaware/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "name": "Des Moines",
+          "url": "https://nationalbenefitalliance.com/iowa/des-moines/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "name": "Dickinson County",
+          "url": "https://nationalbenefitalliance.com/iowa/dickinson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 31,
+          "name": "Dubuque County",
+          "url": "https://nationalbenefitalliance.com/iowa/dubuque/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 32,
+          "name": "Emmet County",
+          "url": "https://nationalbenefitalliance.com/iowa/emmet/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 33,
+          "name": "Fayette County",
+          "url": "https://nationalbenefitalliance.com/iowa/fayette/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 34,
+          "name": "Floyd County",
+          "url": "https://nationalbenefitalliance.com/iowa/floyd/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 35,
+          "name": "Franklin County",
+          "url": "https://nationalbenefitalliance.com/iowa/franklin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 36,
+          "name": "Fremont County",
+          "url": "https://nationalbenefitalliance.com/iowa/fremont/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 37,
+          "name": "Greene County",
+          "url": "https://nationalbenefitalliance.com/iowa/greene/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 38,
+          "name": "Grundy County",
+          "url": "https://nationalbenefitalliance.com/iowa/grundy/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 39,
+          "name": "Guthrie County",
+          "url": "https://nationalbenefitalliance.com/iowa/guthrie/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 40,
+          "name": "Hamilton County",
+          "url": "https://nationalbenefitalliance.com/iowa/hamilton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 41,
+          "name": "Hancock County",
+          "url": "https://nationalbenefitalliance.com/iowa/hancock/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 42,
+          "name": "Hardin County",
+          "url": "https://nationalbenefitalliance.com/iowa/hardin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 43,
+          "name": "Harrison County",
+          "url": "https://nationalbenefitalliance.com/iowa/harrison/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 44,
+          "name": "Henry County",
+          "url": "https://nationalbenefitalliance.com/iowa/henry/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 45,
+          "name": "Howard County",
+          "url": "https://nationalbenefitalliance.com/iowa/howard/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 46,
+          "name": "Humboldt County",
+          "url": "https://nationalbenefitalliance.com/iowa/humboldt/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 47,
+          "name": "Ida County",
+          "url": "https://nationalbenefitalliance.com/iowa/ida/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 48,
+          "name": "Iowa County",
+          "url": "https://nationalbenefitalliance.com/iowa/iowa/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 49,
+          "name": "Jackson County",
+          "url": "https://nationalbenefitalliance.com/iowa/jackson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 50,
+          "name": "Jasper County",
+          "url": "https://nationalbenefitalliance.com/iowa/jasper/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 51,
+          "name": "Jefferson County",
+          "url": "https://nationalbenefitalliance.com/iowa/jefferson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 52,
+          "name": "Johnson County",
+          "url": "https://nationalbenefitalliance.com/iowa/johnson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 53,
+          "name": "Jones County",
+          "url": "https://nationalbenefitalliance.com/iowa/jones/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 54,
+          "name": "Keokuk County",
+          "url": "https://nationalbenefitalliance.com/iowa/keokuk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 55,
+          "name": "Kossuth County",
+          "url": "https://nationalbenefitalliance.com/iowa/kossuth/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 56,
+          "name": "Lee County",
+          "url": "https://nationalbenefitalliance.com/iowa/lee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 57,
+          "name": "Linn County",
+          "url": "https://nationalbenefitalliance.com/iowa/linn/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 58,
+          "name": "Louisa County",
+          "url": "https://nationalbenefitalliance.com/iowa/louisa/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 59,
+          "name": "Lucas County",
+          "url": "https://nationalbenefitalliance.com/iowa/lucas/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 60,
+          "name": "Lyon County",
+          "url": "https://nationalbenefitalliance.com/iowa/lyon/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 61,
+          "name": "Madison County",
+          "url": "https://nationalbenefitalliance.com/iowa/madison/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 62,
+          "name": "Mahaska County",
+          "url": "https://nationalbenefitalliance.com/iowa/mahaska/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 63,
+          "name": "Marion County",
+          "url": "https://nationalbenefitalliance.com/iowa/marion/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 64,
+          "name": "Marshall County",
+          "url": "https://nationalbenefitalliance.com/iowa/marshall/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 65,
+          "name": "Mills County",
+          "url": "https://nationalbenefitalliance.com/iowa/mills/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 66,
+          "name": "Mitchell County",
+          "url": "https://nationalbenefitalliance.com/iowa/mitchell/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 67,
+          "name": "Monona County",
+          "url": "https://nationalbenefitalliance.com/iowa/monona/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 68,
+          "name": "Monroe County",
+          "url": "https://nationalbenefitalliance.com/iowa/monroe/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 69,
+          "name": "Montgomery County",
+          "url": "https://nationalbenefitalliance.com/iowa/montgomery/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 70,
+          "name": "Muscatine County",
+          "url": "https://nationalbenefitalliance.com/iowa/muscatine/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 71,
+          "name": "O Brien County",
+          "url": "https://nationalbenefitalliance.com/iowa/o-brien/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 72,
+          "name": "Osceola County",
+          "url": "https://nationalbenefitalliance.com/iowa/osceola/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 73,
+          "name": "Page County",
+          "url": "https://nationalbenefitalliance.com/iowa/page/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 74,
+          "name": "Palo Alto",
+          "url": "https://nationalbenefitalliance.com/iowa/palo-alto/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 75,
+          "name": "Plymouth County",
+          "url": "https://nationalbenefitalliance.com/iowa/plymouth/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 76,
+          "name": "Pocahontas County",
+          "url": "https://nationalbenefitalliance.com/iowa/pocahontas/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 77,
+          "name": "Polk County",
+          "url": "https://nationalbenefitalliance.com/iowa/polk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 78,
+          "name": "Pottawattamie County",
+          "url": "https://nationalbenefitalliance.com/iowa/pottawattamie/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 79,
+          "name": "Poweshiek County",
+          "url": "https://nationalbenefitalliance.com/iowa/poweshiek/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 80,
+          "name": "Ringgold County",
+          "url": "https://nationalbenefitalliance.com/iowa/ringgold/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 81,
+          "name": "Sac County",
+          "url": "https://nationalbenefitalliance.com/iowa/sac/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 82,
+          "name": "Scott County",
+          "url": "https://nationalbenefitalliance.com/iowa/scott/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 83,
+          "name": "Shelby County",
+          "url": "https://nationalbenefitalliance.com/iowa/shelby/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 84,
+          "name": "Sioux County",
+          "url": "https://nationalbenefitalliance.com/iowa/sioux/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 85,
+          "name": "Story County",
+          "url": "https://nationalbenefitalliance.com/iowa/story/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 86,
+          "name": "Tama County",
+          "url": "https://nationalbenefitalliance.com/iowa/tama/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 87,
+          "name": "Taylor County",
+          "url": "https://nationalbenefitalliance.com/iowa/taylor/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 88,
+          "name": "Union County",
+          "url": "https://nationalbenefitalliance.com/iowa/union/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 89,
+          "name": "Van Buren",
+          "url": "https://nationalbenefitalliance.com/iowa/van-buren/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 90,
+          "name": "Wapello County",
+          "url": "https://nationalbenefitalliance.com/iowa/wapello/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 91,
+          "name": "Warren County",
+          "url": "https://nationalbenefitalliance.com/iowa/warren/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 92,
+          "name": "Washington County",
+          "url": "https://nationalbenefitalliance.com/iowa/washington/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 93,
+          "name": "Wayne County",
+          "url": "https://nationalbenefitalliance.com/iowa/wayne/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 94,
+          "name": "Webster County",
+          "url": "https://nationalbenefitalliance.com/iowa/webster/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 95,
+          "name": "Winnebago County",
+          "url": "https://nationalbenefitalliance.com/iowa/winnebago/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 96,
+          "name": "Winneshiek County",
+          "url": "https://nationalbenefitalliance.com/iowa/winneshiek/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 97,
+          "name": "Woodbury County",
+          "url": "https://nationalbenefitalliance.com/iowa/woodbury/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 98,
+          "name": "Worth County",
+          "url": "https://nationalbenefitalliance.com/iowa/worth/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 99,
+          "name": "Wright County",
+          "url": "https://nationalbenefitalliance.com/iowa/wright/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

@@ -29,47 +29,80 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <!-- JSON-LD Schema -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/resources/transportation/#page",
-        "url": "https://nationalbenefitalliance.com/resources/transportation/",
-        "name": "Transportation Assistance | Free & Reduced Rides, Medical Transport & More",
-        "description": "Find free and reduced-cost transportation: Medicaid medical transport, county bus programs, ride assistance, gas vouchers, and vehicle repair help in your county.",
-        "isPartOf": {"@id": "https://nationalbenefitalliance.com/#website"},
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type":"ListItem","position":1,"name":"Home","item":"https://nationalbenefitalliance.com/"},
-            {"@type":"ListItem","position":2,"name":"Resources","item":"https://nationalbenefitalliance.com/resources/"},
-            {"@type":"ListItem","position":3,"name":"Transportation","item":"https://nationalbenefitalliance.com/resources/transportation/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {"@type":"Question","name":"What is Medicaid Non-Emergency Medical Transportation?","acceptedAnswer":{"@type":"Answer","text":"If you are enrolled in Medicaid, you have a right to free transportation to and from medical appointments. This includes rides to the doctor, pharmacy, dialysis, and therapy. Call your Medicaid plan to arrange rides."}},
-          {"@type":"Question","name":"How do I get a reduced-fare bus pass?","acceptedAnswer":{"@type":"Answer","text":"Contact your local transit agency to apply for a reduced-fare or free pass. You will typically need proof of age (seniors), disability documentation, or enrollment in a qualifying benefit program."}},
-          {"@type":"Question","name":"Are there programs that help with car repairs?","acceptedAnswer":{"@type":"Answer","text":"Yes. Many nonprofits and community action agencies offer free or reduced-cost vehicle repairs for low-income workers. Some organizations also donate vehicles to qualifying families."}}
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://nationalbenefitalliance.com/resources/transportation/#page",
+      "url": "https://nationalbenefitalliance.com/resources/transportation/",
+      "name": "Transportation Assistance",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
       },
-      {
-        "@type": "HowTo",
-        "name": "How to Apply for Transportation",
-        "description": "Step-by-step guide to accessing transportation programs in your county.",
-        "step": [
-          {"@type":"HowToStep","position":1,"name":"Check if you qualify for Medicaid transport","text":"Check if you qualify for Medicaid transport. If you have Medicaid, call the number on your insurance card and ask about Non-Emergency Medical Transportation. You\'re entitled to free rides to medical appointments."},
-          {"@type":"HowToStep","position":2,"name":"Find your county's transit system","text":"Find your county\'s transit system. Use our county pages to find local bus routes, schedules, and reduced-fare applications. Many transit agencies have online trip planners."},
-          {"@type":"HowToStep","position":3,"name":"Call 211 for ride assistance","text":"Call 211 for ride assistance. Dial 211 to be connected with community ride programs, volunteer driver services, and gas voucher programs in your area."},
-          {"@type":"HowToStep","position":4,"name":"Book rides in advance","text":"Book rides in advance. Most medical transport and paratransit require 48-hour advance booking. Schedule recurring appointments (like dialysis) as standing rides."},
-          {"@type":"HowToStep","position":5,"name":"Explore vehicle assistance","text":"Explore vehicle assistance. If you need a car for work, search for vehicle donation programs and low-cost repair services on your county page or through your local community action agency."}
-        ]
-      }
-    ]
-  }
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Resources",
+          "item": "https://nationalbenefitalliance.com/resources/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Transportation",
+          "item": "https://nationalbenefitalliance.com/resources/transportation/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

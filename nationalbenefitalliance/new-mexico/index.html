@@ -19,49 +19,284 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta property="og:url" content="https://nationalbenefitalliance.com/new-mexico/" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "GovernmentOrganization",
-        "@id": "https://nationalbenefitalliance.com/new-mexico/#org",
-        "name": "National Benefit Alliance – New Mexico Resource Center",
-        "url": "https://nationalbenefitalliance.com/new-mexico/",
-        "description": "Free county-by-county resource guide for New Mexico residents seeking government and community assistance programs.",
-        "areaServed": {
-          "@type": "State",
-          "name": "New Mexico",
-          "sameAs": "https://www.wikidata.org/wiki/Q1522"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/new-mexico/#page",
-        "url": "https://nationalbenefitalliance.com/new-mexico/",
-        "name": "New Mexico County Resource Center",
-        "description": "Browse all 33 New Mexico counties for community benefit resources.",
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem","position": 1,"name": "Home","item": "https://nationalbenefitalliance.com/"},
-            {"@type": "ListItem","position": 2,"name": "New Mexico","item": "https://nationalbenefitalliance.com/new-mexico/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "ItemList",
-        "name": "New Mexico County Resource Guides",
-        "numberOfItems": 33,
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Bernalillo County Resources","url":"https://nationalbenefitalliance.com/new-mexico/bernalillo/"},
-          {"@type":"ListItem","position":2,"name":"Dona Ana County Resources","url":"https://nationalbenefitalliance.com/new-mexico/dona-ana/"},
-          {"@type":"ListItem","position":3,"name":"Santa Fe County Resources","url":"https://nationalbenefitalliance.com/new-mexico/santa-fe/"},
-          {"@type":"ListItem","position":4,"name":"Sandoval County Resources","url":"https://nationalbenefitalliance.com/new-mexico/sandoval/"},
-          {"@type":"ListItem","position":5,"name":"San Juan County Resources","url":"https://nationalbenefitalliance.com/new-mexico/san-juan/"}
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://nationalbenefitalliance.com/new-mexico/#page",
+      "url": "https://nationalbenefitalliance.com/new-mexico/",
+      "name": "Assistance programs by county in New Mexico",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
+      },
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US",
+      "about": {
+        "@type": "AdministrativeArea",
+        "name": "New Mexico"
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "New Mexico",
+          "item": "https://nationalbenefitalliance.com/new-mexico/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "New Mexico counties",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 33,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Bernalillo",
+          "url": "https://nationalbenefitalliance.com/new-mexico/bernalillo/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Catron County",
+          "url": "https://nationalbenefitalliance.com/new-mexico/catron/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Chaves County",
+          "url": "https://nationalbenefitalliance.com/new-mexico/chaves/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Cibola County",
+          "url": "https://nationalbenefitalliance.com/new-mexico/cibola/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Colfax County",
+          "url": "https://nationalbenefitalliance.com/new-mexico/colfax/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Curry County",
+          "url": "https://nationalbenefitalliance.com/new-mexico/curry/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "De Baca County",
+          "url": "https://nationalbenefitalliance.com/new-mexico/de-baca/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Dona Ana",
+          "url": "https://nationalbenefitalliance.com/new-mexico/dona-ana/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Eddy County",
+          "url": "https://nationalbenefitalliance.com/new-mexico/eddy/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Grant County",
+          "url": "https://nationalbenefitalliance.com/new-mexico/grant/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Guadalupe County",
+          "url": "https://nationalbenefitalliance.com/new-mexico/guadalupe/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "Harding County",
+          "url": "https://nationalbenefitalliance.com/new-mexico/harding/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Hidalgo County",
+          "url": "https://nationalbenefitalliance.com/new-mexico/hidalgo/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Lea County",
+          "url": "https://nationalbenefitalliance.com/new-mexico/lea/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Lincoln County",
+          "url": "https://nationalbenefitalliance.com/new-mexico/lincoln/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "Los Alamos County",
+          "url": "https://nationalbenefitalliance.com/new-mexico/los-alamos/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "Luna County",
+          "url": "https://nationalbenefitalliance.com/new-mexico/luna/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "McKinley County",
+          "url": "https://nationalbenefitalliance.com/new-mexico/mckinley/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "name": "Mora County",
+          "url": "https://nationalbenefitalliance.com/new-mexico/mora/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "name": "Otero County",
+          "url": "https://nationalbenefitalliance.com/new-mexico/otero/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "name": "Quay County",
+          "url": "https://nationalbenefitalliance.com/new-mexico/quay/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "name": "Rio Arriba County",
+          "url": "https://nationalbenefitalliance.com/new-mexico/rio-arriba/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "name": "Roosevelt County",
+          "url": "https://nationalbenefitalliance.com/new-mexico/roosevelt/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "name": "San Juan",
+          "url": "https://nationalbenefitalliance.com/new-mexico/san-juan/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "name": "San Miguel County",
+          "url": "https://nationalbenefitalliance.com/new-mexico/san-miguel/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "name": "Sandoval",
+          "url": "https://nationalbenefitalliance.com/new-mexico/sandoval/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "name": "Santa Fe",
+          "url": "https://nationalbenefitalliance.com/new-mexico/santa-fe/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "name": "Sierra County",
+          "url": "https://nationalbenefitalliance.com/new-mexico/sierra/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "name": "Socorro County",
+          "url": "https://nationalbenefitalliance.com/new-mexico/socorro/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "name": "Taos County",
+          "url": "https://nationalbenefitalliance.com/new-mexico/taos/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 31,
+          "name": "Torrance County",
+          "url": "https://nationalbenefitalliance.com/new-mexico/torrance/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 32,
+          "name": "Union County",
+          "url": "https://nationalbenefitalliance.com/new-mexico/union/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 33,
+          "name": "Valencia",
+          "url": "https://nationalbenefitalliance.com/new-mexico/valencia/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

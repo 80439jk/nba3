@@ -29,47 +29,80 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <!-- JSON-LD Schema -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/resources/employment/#page",
-        "url": "https://nationalbenefitalliance.com/resources/employment/",
-        "name": "Employment & Unemployment Programs | Job Training, UI Benefits & Career Help",
-        "description": "Find unemployment benefits, job training, career counseling, workforce development, and re-employment programs in your county. Get back on your feet.",
-        "isPartOf": {"@id": "https://nationalbenefitalliance.com/#website"},
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type":"ListItem","position":1,"name":"Home","item":"https://nationalbenefitalliance.com/"},
-            {"@type":"ListItem","position":2,"name":"Resources","item":"https://nationalbenefitalliance.com/resources/"},
-            {"@type":"ListItem","position":3,"name":"Employment & Unemployment","item":"https://nationalbenefitalliance.com/resources/employment/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {"@type":"Question","name":"How do I file for unemployment?","acceptedAnswer":{"@type":"Answer","text":"Visit your state's unemployment insurance website and file a claim online. You will need your Social Security number, recent employment history, and the reason you are no longer working."}},
-          {"@type":"Question","name":"What is an American Job Center?","acceptedAnswer":{"@type":"Answer","text":"American Job Centers (formerly One-Stop Career Centers) are free public employment offices funded by the federal government. They offer career counseling, job listings, training referrals, and workshops to all job seekers."}},
-          {"@type":"Question","name":"Can I get free job training?","acceptedAnswer":{"@type":"Answer","text":"Yes. The Workforce Innovation and Opportunity Act (WIOA) funds free training programs through American Job Centers. These cover certifications in high-demand fields like healthcare, IT, and skilled trades."}}
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://nationalbenefitalliance.com/resources/employment/#page",
+      "url": "https://nationalbenefitalliance.com/resources/employment/",
+      "name": "Employment & Unemployment Programs",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
       },
-      {
-        "@type": "HowTo",
-        "name": "How to Apply for Employment & Unemployment",
-        "description": "Step-by-step guide to accessing employment & unemployment programs in your county.",
-        "step": [
-          {"@type":"HowToStep","position":1,"name":"File for unemployment benefits","text":"File for unemployment benefits. Visit your state\'s unemployment website immediately after job loss. You\'ll need your Social Security number, employment history, and reason for separation."},
-          {"@type":"HowToStep","position":2,"name":"Visit your American Job Center","text":"Visit your American Job Center. Find your nearest center through our county pages or careeronestop.org. Services include career assessment, job listings, training referrals, and workshops."},
-          {"@type":"HowToStep","position":3,"name":"Explore training options","text":"Explore training options. Ask about WIOA-funded training programs (called Individual Training Accounts). These cover tuition for certifications in high-demand fields."},
-          {"@type":"HowToStep","position":4,"name":"Work with a career counselor","text":"Work with a career counselor. Schedule a free appointment for one-on-one help with your resume, interview skills, and job search strategy."},
-          {"@type":"HowToStep","position":5,"name":"Stay connected","text":"Stay connected. Many programs offer ongoing support — networking events, job fairs, and follow-up services even after you\'re employed."}
-        ]
-      }
-    ]
-  }
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Resources",
+          "item": "https://nationalbenefitalliance.com/resources/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Employment & Unemployment",
+          "item": "https://nationalbenefitalliance.com/resources/employment/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

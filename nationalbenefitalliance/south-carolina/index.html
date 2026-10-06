@@ -20,49 +20,362 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <!-- Schema: State + Government organization -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "GovernmentOrganization",
-        "@id": "https://nationalbenefitalliance.com/south-carolina/#org",
-        "name": "National Benefit Alliance – South Carolina Resource Center",
-        "url": "https://nationalbenefitalliance.com/south-carolina/",
-        "description": "Free county-by-county resource guide for South Carolina residents seeking government and community assistance programs.",
-        "areaServed": {
-          "@type": "State",
-          "name": "South Carolina",
-          "sameAs": "https://www.wikidata.org/wiki/Q1456"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/south-carolina/#page",
-        "url": "https://nationalbenefitalliance.com/south-carolina/",
-        "name": "South Carolina County Resource Center",
-        "description": "Browse all 46 South Carolina counties for community benefit resources.",
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem","position": 1,"name": "Home","item": "https://nationalbenefitalliance.com/"},
-            {"@type": "ListItem","position": 2,"name": "South Carolina","item": "https://nationalbenefitalliance.com/south-carolina/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "ItemList",
-        "name": "South Carolina County Resource Guides",
-        "numberOfItems": 46,
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Greenville County Resources","url":"https://nationalbenefitalliance.com/south-carolina/greenville/"},
-          {"@type":"ListItem","position":2,"name":"Richland County Resources","url":"https://nationalbenefitalliance.com/south-carolina/richland/"},
-          {"@type":"ListItem","position":3,"name":"Charleston County Resources","url":"https://nationalbenefitalliance.com/south-carolina/charleston/"},
-          {"@type":"ListItem","position":4,"name":"Horry County Resources","url":"https://nationalbenefitalliance.com/south-carolina/horry/"},
-          {"@type":"ListItem","position":5,"name":"Spartanburg County Resources","url":"https://nationalbenefitalliance.com/south-carolina/spartanburg/"}
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://nationalbenefitalliance.com/south-carolina/#page",
+      "url": "https://nationalbenefitalliance.com/south-carolina/",
+      "name": "Assistance programs by county in South Carolina",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
+      },
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US",
+      "about": {
+        "@type": "AdministrativeArea",
+        "name": "South Carolina"
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "South Carolina",
+          "item": "https://nationalbenefitalliance.com/south-carolina/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "South Carolina counties",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 46,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Abbeville County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/abbeville/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Aiken County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/aiken/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Allendale County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/allendale/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Anderson County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/anderson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Bamberg County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/bamberg/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Barnwell County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/barnwell/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Beaufort County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/beaufort/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Berkeley County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/berkeley/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Calhoun County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/calhoun/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Charleston County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/charleston/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Cherokee County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/cherokee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "Chester County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/chester/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Chesterfield County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/chesterfield/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Clarendon County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/clarendon/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Colleton County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/colleton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "Darlington County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/darlington/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "Dillon County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/dillon/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "Dorchester County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/dorchester/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "name": "Edgefield County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/edgefield/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "name": "Fairfield County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/fairfield/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "name": "Florence County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/florence/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "name": "Georgetown County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/georgetown/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "name": "Greenville County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/greenville/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "name": "Greenwood County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/greenwood/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "name": "Hampton County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/hampton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "name": "Horry County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/horry/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "name": "Jasper County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/jasper/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "name": "Kershaw County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/kershaw/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "name": "Lancaster County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/lancaster/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "name": "Laurens County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/laurens/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 31,
+          "name": "Lee County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/lee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 32,
+          "name": "Lexington County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/lexington/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 33,
+          "name": "Marion County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/marion/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 34,
+          "name": "Marlboro County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/marlboro/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 35,
+          "name": "McCormick County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/mccormick/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 36,
+          "name": "Newberry County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/newberry/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 37,
+          "name": "Oconee County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/oconee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 38,
+          "name": "Orangeburg County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/orangeburg/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 39,
+          "name": "Pickens County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/pickens/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 40,
+          "name": "Richland County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/richland/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 41,
+          "name": "Saluda County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/saluda/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 42,
+          "name": "Spartanburg County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/spartanburg/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 43,
+          "name": "Sumter County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/sumter/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 44,
+          "name": "Union County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/union/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 45,
+          "name": "Williamsburg County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/williamsburg/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 46,
+          "name": "York County",
+          "url": "https://nationalbenefitalliance.com/south-carolina/york/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

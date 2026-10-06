@@ -19,49 +19,578 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta property="og:url" content="https://nationalbenefitalliance.com/mississippi/" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "GovernmentOrganization",
-        "@id": "https://nationalbenefitalliance.com/mississippi/#org",
-        "name": "National Benefit Alliance – Mississippi Resource Center",
-        "url": "https://nationalbenefitalliance.com/mississippi/",
-        "description": "Free county-by-county resource guide for Mississippi residents seeking government and community assistance programs.",
-        "areaServed": {
-          "@type": "State",
-          "name": "Mississippi",
-          "sameAs": "https://www.wikidata.org/wiki/Q1494"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/mississippi/#page",
-        "url": "https://nationalbenefitalliance.com/mississippi/",
-        "name": "Mississippi County Resource Center",
-        "description": "Browse all 82 Mississippi counties for community benefit resources.",
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem","position": 1,"name": "Home","item": "https://nationalbenefitalliance.com/"},
-            {"@type": "ListItem","position": 2,"name": "Mississippi","item": "https://nationalbenefitalliance.com/mississippi/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "ItemList",
-        "name": "Mississippi County Resource Guides",
-        "numberOfItems": 82,
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Hinds County Resources","url":"https://nationalbenefitalliance.com/mississippi/hinds/"},
-          {"@type":"ListItem","position":2,"name":"DeSoto County Resources","url":"https://nationalbenefitalliance.com/mississippi/desoto/"},
-          {"@type":"ListItem","position":3,"name":"Harrison County Resources","url":"https://nationalbenefitalliance.com/mississippi/harrison/"},
-          {"@type":"ListItem","position":4,"name":"Rankin County Resources","url":"https://nationalbenefitalliance.com/mississippi/rankin/"},
-          {"@type":"ListItem","position":5,"name":"Jackson County Resources","url":"https://nationalbenefitalliance.com/mississippi/jackson/"}
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://nationalbenefitalliance.com/mississippi/#page",
+      "url": "https://nationalbenefitalliance.com/mississippi/",
+      "name": "Assistance programs by county in Mississippi",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
+      },
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US",
+      "about": {
+        "@type": "AdministrativeArea",
+        "name": "Mississippi"
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Mississippi",
+          "item": "https://nationalbenefitalliance.com/mississippi/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Mississippi counties",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 82,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Adams County",
+          "url": "https://nationalbenefitalliance.com/mississippi/adams/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Alcorn County",
+          "url": "https://nationalbenefitalliance.com/mississippi/alcorn/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Amite County",
+          "url": "https://nationalbenefitalliance.com/mississippi/amite/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Attala County",
+          "url": "https://nationalbenefitalliance.com/mississippi/attala/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Benton County",
+          "url": "https://nationalbenefitalliance.com/mississippi/benton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Bolivar County",
+          "url": "https://nationalbenefitalliance.com/mississippi/bolivar/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Calhoun County",
+          "url": "https://nationalbenefitalliance.com/mississippi/calhoun/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Carroll County",
+          "url": "https://nationalbenefitalliance.com/mississippi/carroll/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Chickasaw County",
+          "url": "https://nationalbenefitalliance.com/mississippi/chickasaw/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Choctaw County",
+          "url": "https://nationalbenefitalliance.com/mississippi/choctaw/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Claiborne County",
+          "url": "https://nationalbenefitalliance.com/mississippi/claiborne/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "Clarke County",
+          "url": "https://nationalbenefitalliance.com/mississippi/clarke/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Clay County",
+          "url": "https://nationalbenefitalliance.com/mississippi/clay/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Coahoma County",
+          "url": "https://nationalbenefitalliance.com/mississippi/coahoma/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Copiah County",
+          "url": "https://nationalbenefitalliance.com/mississippi/copiah/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "Covington County",
+          "url": "https://nationalbenefitalliance.com/mississippi/covington/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "DeSoto County",
+          "url": "https://nationalbenefitalliance.com/mississippi/desoto/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "Forrest County",
+          "url": "https://nationalbenefitalliance.com/mississippi/forrest/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "name": "Franklin County",
+          "url": "https://nationalbenefitalliance.com/mississippi/franklin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "name": "George County",
+          "url": "https://nationalbenefitalliance.com/mississippi/george/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "name": "Greene County",
+          "url": "https://nationalbenefitalliance.com/mississippi/greene/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "name": "Grenada County",
+          "url": "https://nationalbenefitalliance.com/mississippi/grenada/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "name": "Hancock County",
+          "url": "https://nationalbenefitalliance.com/mississippi/hancock/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "name": "Harrison County",
+          "url": "https://nationalbenefitalliance.com/mississippi/harrison/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "name": "Hinds County",
+          "url": "https://nationalbenefitalliance.com/mississippi/hinds/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "name": "Holmes County",
+          "url": "https://nationalbenefitalliance.com/mississippi/holmes/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "name": "Humphreys County",
+          "url": "https://nationalbenefitalliance.com/mississippi/humphreys/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "name": "Issaquena County",
+          "url": "https://nationalbenefitalliance.com/mississippi/issaquena/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "name": "Itawamba County",
+          "url": "https://nationalbenefitalliance.com/mississippi/itawamba/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "name": "Jackson County",
+          "url": "https://nationalbenefitalliance.com/mississippi/jackson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 31,
+          "name": "Jasper County",
+          "url": "https://nationalbenefitalliance.com/mississippi/jasper/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 32,
+          "name": "Jefferson County",
+          "url": "https://nationalbenefitalliance.com/mississippi/jefferson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 33,
+          "name": "Jefferson Davis County",
+          "url": "https://nationalbenefitalliance.com/mississippi/jefferson-davis/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 34,
+          "name": "Jones County",
+          "url": "https://nationalbenefitalliance.com/mississippi/jones/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 35,
+          "name": "Kemper County",
+          "url": "https://nationalbenefitalliance.com/mississippi/kemper/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 36,
+          "name": "Lafayette County",
+          "url": "https://nationalbenefitalliance.com/mississippi/lafayette/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 37,
+          "name": "Lamar County",
+          "url": "https://nationalbenefitalliance.com/mississippi/lamar/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 38,
+          "name": "Lauderdale County",
+          "url": "https://nationalbenefitalliance.com/mississippi/lauderdale/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 39,
+          "name": "Lawrence County",
+          "url": "https://nationalbenefitalliance.com/mississippi/lawrence/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 40,
+          "name": "Leake County",
+          "url": "https://nationalbenefitalliance.com/mississippi/leake/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 41,
+          "name": "Lee County",
+          "url": "https://nationalbenefitalliance.com/mississippi/lee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 42,
+          "name": "Leflore County",
+          "url": "https://nationalbenefitalliance.com/mississippi/leflore/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 43,
+          "name": "Lincoln County",
+          "url": "https://nationalbenefitalliance.com/mississippi/lincoln/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 44,
+          "name": "Lowndes County",
+          "url": "https://nationalbenefitalliance.com/mississippi/lowndes/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 45,
+          "name": "Madison County",
+          "url": "https://nationalbenefitalliance.com/mississippi/madison/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 46,
+          "name": "Marion County",
+          "url": "https://nationalbenefitalliance.com/mississippi/marion/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 47,
+          "name": "Marshall County",
+          "url": "https://nationalbenefitalliance.com/mississippi/marshall/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 48,
+          "name": "Monroe County",
+          "url": "https://nationalbenefitalliance.com/mississippi/monroe/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 49,
+          "name": "Montgomery County",
+          "url": "https://nationalbenefitalliance.com/mississippi/montgomery/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 50,
+          "name": "Neshoba County",
+          "url": "https://nationalbenefitalliance.com/mississippi/neshoba/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 51,
+          "name": "Newton County",
+          "url": "https://nationalbenefitalliance.com/mississippi/newton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 52,
+          "name": "Noxubee County",
+          "url": "https://nationalbenefitalliance.com/mississippi/noxubee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 53,
+          "name": "Oktibbeha County",
+          "url": "https://nationalbenefitalliance.com/mississippi/oktibbeha/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 54,
+          "name": "Panola County",
+          "url": "https://nationalbenefitalliance.com/mississippi/panola/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 55,
+          "name": "Pearl River County",
+          "url": "https://nationalbenefitalliance.com/mississippi/pearl-river/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 56,
+          "name": "Perry County",
+          "url": "https://nationalbenefitalliance.com/mississippi/perry/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 57,
+          "name": "Pike County",
+          "url": "https://nationalbenefitalliance.com/mississippi/pike/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 58,
+          "name": "Pontotoc County",
+          "url": "https://nationalbenefitalliance.com/mississippi/pontotoc/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 59,
+          "name": "Prentiss County",
+          "url": "https://nationalbenefitalliance.com/mississippi/prentiss/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 60,
+          "name": "Quitman County",
+          "url": "https://nationalbenefitalliance.com/mississippi/quitman/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 61,
+          "name": "Rankin County",
+          "url": "https://nationalbenefitalliance.com/mississippi/rankin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 62,
+          "name": "Scott County",
+          "url": "https://nationalbenefitalliance.com/mississippi/scott/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 63,
+          "name": "Sharkey County",
+          "url": "https://nationalbenefitalliance.com/mississippi/sharkey/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 64,
+          "name": "Simpson County",
+          "url": "https://nationalbenefitalliance.com/mississippi/simpson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 65,
+          "name": "Smith County",
+          "url": "https://nationalbenefitalliance.com/mississippi/smith/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 66,
+          "name": "Stone County",
+          "url": "https://nationalbenefitalliance.com/mississippi/stone/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 67,
+          "name": "Sunflower County",
+          "url": "https://nationalbenefitalliance.com/mississippi/sunflower/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 68,
+          "name": "Tallahatchie County",
+          "url": "https://nationalbenefitalliance.com/mississippi/tallahatchie/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 69,
+          "name": "Tate County",
+          "url": "https://nationalbenefitalliance.com/mississippi/tate/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 70,
+          "name": "Tippah County",
+          "url": "https://nationalbenefitalliance.com/mississippi/tippah/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 71,
+          "name": "Tishomingo County",
+          "url": "https://nationalbenefitalliance.com/mississippi/tishomingo/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 72,
+          "name": "Tunica County",
+          "url": "https://nationalbenefitalliance.com/mississippi/tunica/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 73,
+          "name": "Union County",
+          "url": "https://nationalbenefitalliance.com/mississippi/union/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 74,
+          "name": "Walthall County",
+          "url": "https://nationalbenefitalliance.com/mississippi/walthall/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 75,
+          "name": "Warren County",
+          "url": "https://nationalbenefitalliance.com/mississippi/warren/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 76,
+          "name": "Washington County",
+          "url": "https://nationalbenefitalliance.com/mississippi/washington/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 77,
+          "name": "Wayne County",
+          "url": "https://nationalbenefitalliance.com/mississippi/wayne/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 78,
+          "name": "Webster County",
+          "url": "https://nationalbenefitalliance.com/mississippi/webster/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 79,
+          "name": "Wilkinson County",
+          "url": "https://nationalbenefitalliance.com/mississippi/wilkinson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 80,
+          "name": "Winston County",
+          "url": "https://nationalbenefitalliance.com/mississippi/winston/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 81,
+          "name": "Yalobusha County",
+          "url": "https://nationalbenefitalliance.com/mississippi/yalobusha/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 82,
+          "name": "Yazoo County",
+          "url": "https://nationalbenefitalliance.com/mississippi/yazoo/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

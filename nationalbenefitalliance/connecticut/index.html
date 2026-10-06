@@ -20,49 +20,134 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <!-- Schema: State + Government organization -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "GovernmentOrganization",
-        "@id": "https://nationalbenefitalliance.com/connecticut/#org",
-        "name": "National Benefit Alliance – Connecticut Resource Center",
-        "url": "https://nationalbenefitalliance.com/connecticut/",
-        "description": "Free county-by-county resource guide for Connecticut residents seeking government and community assistance programs.",
-        "areaServed": {
-          "@type": "State",
-          "name": "Connecticut",
-          "sameAs": "https://www.wikidata.org/wiki/Q779"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/connecticut/#page",
-        "url": "https://nationalbenefitalliance.com/connecticut/",
-        "name": "Connecticut County Resource Center",
-        "description": "Browse all 8 Connecticut counties for community benefit resources.",
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem","position": 1,"name": "Home","item": "https://nationalbenefitalliance.com/"},
-            {"@type": "ListItem","position": 2,"name": "Connecticut","item": "https://nationalbenefitalliance.com/connecticut/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "ItemList",
-        "name": "Connecticut County Resource Guides",
-        "numberOfItems": 8,
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Fairfield County Resources","url":"https://nationalbenefitalliance.com/connecticut/fairfield/"},
-          {"@type":"ListItem","position":2,"name":"Hartford County Resources","url":"https://nationalbenefitalliance.com/connecticut/hartford/"},
-          {"@type":"ListItem","position":3,"name":"New Haven County Resources","url":"https://nationalbenefitalliance.com/connecticut/new-haven/"},
-          {"@type":"ListItem","position":4,"name":"New London County Resources","url":"https://nationalbenefitalliance.com/connecticut/new-london/"},
-          {"@type":"ListItem","position":5,"name":"Litchfield County Resources","url":"https://nationalbenefitalliance.com/connecticut/litchfield/"}
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://nationalbenefitalliance.com/connecticut/#page",
+      "url": "https://nationalbenefitalliance.com/connecticut/",
+      "name": "Assistance programs by county in Connecticut",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
+      },
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US",
+      "about": {
+        "@type": "AdministrativeArea",
+        "name": "Connecticut"
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Connecticut",
+          "item": "https://nationalbenefitalliance.com/connecticut/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Connecticut counties",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 8,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Fairfield County",
+          "url": "https://nationalbenefitalliance.com/connecticut/fairfield/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Hartford County",
+          "url": "https://nationalbenefitalliance.com/connecticut/hartford/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Litchfield County",
+          "url": "https://nationalbenefitalliance.com/connecticut/litchfield/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Middlesex County",
+          "url": "https://nationalbenefitalliance.com/connecticut/middlesex/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "New Haven County",
+          "url": "https://nationalbenefitalliance.com/connecticut/new-haven/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "New London County",
+          "url": "https://nationalbenefitalliance.com/connecticut/new-london/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Tolland County",
+          "url": "https://nationalbenefitalliance.com/connecticut/tolland/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Windham County",
+          "url": "https://nationalbenefitalliance.com/connecticut/windham/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

@@ -20,49 +20,488 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <!-- Schema: State + Government organization -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "GovernmentOrganization",
-        "@id": "https://nationalbenefitalliance.com/florida/#org",
-        "name": "National Benefit Alliance – Florida Resource Center",
-        "url": "https://nationalbenefitalliance.com/florida/",
-        "description": "Free county-by-county resource guide for Florida residents seeking government and community assistance programs.",
-        "areaServed": {
-          "@type": "State",
-          "name": "Florida",
-          "sameAs": "https://www.wikidata.org/wiki/Q812"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/florida/#page",
-        "url": "https://nationalbenefitalliance.com/florida/",
-        "name": "Florida County Resource Center",
-        "description": "Browse all 67 Florida counties for community benefit resources.",
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem","position": 1,"name": "Home","item": "https://nationalbenefitalliance.com/"},
-            {"@type": "ListItem","position": 2,"name": "Florida","item": "https://nationalbenefitalliance.com/florida/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "ItemList",
-        "name": "Florida County Resource Guides",
-        "numberOfItems": 67,
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Miami-Dade County Resources","url":"https://nationalbenefitalliance.com/florida/miami-dade/"},
-          {"@type":"ListItem","position":2,"name":"Broward County Resources","url":"https://nationalbenefitalliance.com/florida/broward/"},
-          {"@type":"ListItem","position":3,"name":"Palm Beach County Resources","url":"https://nationalbenefitalliance.com/florida/palm-beach/"},
-          {"@type":"ListItem","position":4,"name":"Orange County Resources","url":"https://nationalbenefitalliance.com/florida/orange/"},
-          {"@type":"ListItem","position":5,"name":"Hillsborough County Resources","url":"https://nationalbenefitalliance.com/florida/hillsborough/"}
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://nationalbenefitalliance.com/florida/#page",
+      "url": "https://nationalbenefitalliance.com/florida/",
+      "name": "Assistance programs by county in Florida",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
+      },
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US",
+      "about": {
+        "@type": "AdministrativeArea",
+        "name": "Florida"
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Florida",
+          "item": "https://nationalbenefitalliance.com/florida/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Florida counties",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 67,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Alachua County",
+          "url": "https://nationalbenefitalliance.com/florida/alachua/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Baker County",
+          "url": "https://nationalbenefitalliance.com/florida/baker/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Bay County",
+          "url": "https://nationalbenefitalliance.com/florida/bay/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Bradford County",
+          "url": "https://nationalbenefitalliance.com/florida/bradford/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Brevard County",
+          "url": "https://nationalbenefitalliance.com/florida/brevard/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Broward County",
+          "url": "https://nationalbenefitalliance.com/florida/broward/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Calhoun County",
+          "url": "https://nationalbenefitalliance.com/florida/calhoun/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Charlotte County",
+          "url": "https://nationalbenefitalliance.com/florida/charlotte/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Citrus County",
+          "url": "https://nationalbenefitalliance.com/florida/citrus/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Clay County",
+          "url": "https://nationalbenefitalliance.com/florida/clay/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Collier County",
+          "url": "https://nationalbenefitalliance.com/florida/collier/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "Columbia County",
+          "url": "https://nationalbenefitalliance.com/florida/columbia/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "DeSoto County",
+          "url": "https://nationalbenefitalliance.com/florida/desoto/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Dixie County",
+          "url": "https://nationalbenefitalliance.com/florida/dixie/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Duval County",
+          "url": "https://nationalbenefitalliance.com/florida/duval/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "Escambia County",
+          "url": "https://nationalbenefitalliance.com/florida/escambia/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "Flagler County",
+          "url": "https://nationalbenefitalliance.com/florida/flagler/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "Franklin County",
+          "url": "https://nationalbenefitalliance.com/florida/franklin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "name": "Gadsden County",
+          "url": "https://nationalbenefitalliance.com/florida/gadsden/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "name": "Gilchrist County",
+          "url": "https://nationalbenefitalliance.com/florida/gilchrist/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "name": "Glades County",
+          "url": "https://nationalbenefitalliance.com/florida/glades/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "name": "Gulf County",
+          "url": "https://nationalbenefitalliance.com/florida/gulf/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "name": "Hamilton County",
+          "url": "https://nationalbenefitalliance.com/florida/hamilton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "name": "Hardee County",
+          "url": "https://nationalbenefitalliance.com/florida/hardee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "name": "Hendry County",
+          "url": "https://nationalbenefitalliance.com/florida/hendry/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "name": "Hernando County",
+          "url": "https://nationalbenefitalliance.com/florida/hernando/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "name": "Highlands County",
+          "url": "https://nationalbenefitalliance.com/florida/highlands/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "name": "Hillsborough County",
+          "url": "https://nationalbenefitalliance.com/florida/hillsborough/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "name": "Holmes County",
+          "url": "https://nationalbenefitalliance.com/florida/holmes/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "name": "Indian River County",
+          "url": "https://nationalbenefitalliance.com/florida/indian-river/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 31,
+          "name": "Jackson County",
+          "url": "https://nationalbenefitalliance.com/florida/jackson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 32,
+          "name": "Jefferson County",
+          "url": "https://nationalbenefitalliance.com/florida/jefferson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 33,
+          "name": "Lafayette County",
+          "url": "https://nationalbenefitalliance.com/florida/lafayette/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 34,
+          "name": "Lake County",
+          "url": "https://nationalbenefitalliance.com/florida/lake/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 35,
+          "name": "Lee County",
+          "url": "https://nationalbenefitalliance.com/florida/lee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 36,
+          "name": "Leon County",
+          "url": "https://nationalbenefitalliance.com/florida/leon/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 37,
+          "name": "Levy County",
+          "url": "https://nationalbenefitalliance.com/florida/levy/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 38,
+          "name": "Liberty County",
+          "url": "https://nationalbenefitalliance.com/florida/liberty/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 39,
+          "name": "Madison County",
+          "url": "https://nationalbenefitalliance.com/florida/madison/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 40,
+          "name": "Manatee County",
+          "url": "https://nationalbenefitalliance.com/florida/manatee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 41,
+          "name": "Marion County",
+          "url": "https://nationalbenefitalliance.com/florida/marion/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 42,
+          "name": "Martin County",
+          "url": "https://nationalbenefitalliance.com/florida/martin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 43,
+          "name": "Miami-Dade County",
+          "url": "https://nationalbenefitalliance.com/florida/miami-dade/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 44,
+          "name": "Monroe County",
+          "url": "https://nationalbenefitalliance.com/florida/monroe/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 45,
+          "name": "Nassau County",
+          "url": "https://nationalbenefitalliance.com/florida/nassau/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 46,
+          "name": "Okaloosa County",
+          "url": "https://nationalbenefitalliance.com/florida/okaloosa/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 47,
+          "name": "Okeechobee County",
+          "url": "https://nationalbenefitalliance.com/florida/okeechobee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 48,
+          "name": "Orange County",
+          "url": "https://nationalbenefitalliance.com/florida/orange/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 49,
+          "name": "Osceola County",
+          "url": "https://nationalbenefitalliance.com/florida/osceola/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 50,
+          "name": "Palm Beach County",
+          "url": "https://nationalbenefitalliance.com/florida/palm-beach/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 51,
+          "name": "Pasco County",
+          "url": "https://nationalbenefitalliance.com/florida/pasco/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 52,
+          "name": "Pinellas County",
+          "url": "https://nationalbenefitalliance.com/florida/pinellas/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 53,
+          "name": "Polk County",
+          "url": "https://nationalbenefitalliance.com/florida/polk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 54,
+          "name": "Putnam County",
+          "url": "https://nationalbenefitalliance.com/florida/putnam/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 55,
+          "name": "Santa Rosa County",
+          "url": "https://nationalbenefitalliance.com/florida/santa-rosa/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 56,
+          "name": "Sarasota County",
+          "url": "https://nationalbenefitalliance.com/florida/sarasota/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 57,
+          "name": "Seminole County",
+          "url": "https://nationalbenefitalliance.com/florida/seminole/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 58,
+          "name": "St. Johns County",
+          "url": "https://nationalbenefitalliance.com/florida/st-johns/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 59,
+          "name": "St. Lucie County",
+          "url": "https://nationalbenefitalliance.com/florida/st-lucie/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 60,
+          "name": "Sumter County",
+          "url": "https://nationalbenefitalliance.com/florida/sumter/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 61,
+          "name": "Suwannee County",
+          "url": "https://nationalbenefitalliance.com/florida/suwannee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 62,
+          "name": "Taylor County",
+          "url": "https://nationalbenefitalliance.com/florida/taylor/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 63,
+          "name": "Union County",
+          "url": "https://nationalbenefitalliance.com/florida/union/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 64,
+          "name": "Volusia County",
+          "url": "https://nationalbenefitalliance.com/florida/volusia/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 65,
+          "name": "Wakulla County",
+          "url": "https://nationalbenefitalliance.com/florida/wakulla/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 66,
+          "name": "Walton County",
+          "url": "https://nationalbenefitalliance.com/florida/walton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 67,
+          "name": "Washington County",
+          "url": "https://nationalbenefitalliance.com/florida/washington/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

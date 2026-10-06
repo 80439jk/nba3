@@ -19,47 +19,422 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta property="og:url" content="https://nationalbenefitalliance.com/montana/" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "GovernmentOrganization",
-        "@id": "https://nationalbenefitalliance.com/montana/#org",
-        "name": "National Benefit Alliance – Montana Resource Center",
-        "url": "https://nationalbenefitalliance.com/montana/",
-        "description": "Free county-by-county resource guide for Montana residents seeking government and community assistance programs.",
-        "areaServed": {
-          "@type": "State",
-          "name": "Montana",
-          "sameAs": "https://www.wikidata.org/wiki/Q1212"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/montana/#page",
-        "url": "https://nationalbenefitalliance.com/montana/",
-        "name": "Montana County Resource Center",
-        "description": "Browse all 56 Montana counties for community benefit resources.",
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem","position": 1,"name": "Home","item": "https://nationalbenefitalliance.com/"},
-            {"@type": "ListItem","position": 2,"name": "Montana","item": "https://nationalbenefitalliance.com/montana/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "ItemList",
-        "name": "Montana County Resource Guides",
-        "numberOfItems": 56,
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Beaverhead County Resources","url":"https://nationalbenefitalliance.com/montana/beaverhead/"},
-          {"@type":"ListItem","position":2,"name":"Big Horn County Resources","url":"https://nationalbenefitalliance.com/montana/big-horn/"},
-          {"@type":"ListItem","position":3,"name":"Blaine County Resources","url":"https://nationalbenefitalliance.com/montana/blaine/"}
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://nationalbenefitalliance.com/montana/#page",
+      "url": "https://nationalbenefitalliance.com/montana/",
+      "name": "Assistance programs by county in Montana",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
+      },
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US",
+      "about": {
+        "@type": "AdministrativeArea",
+        "name": "Montana"
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Montana",
+          "item": "https://nationalbenefitalliance.com/montana/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Montana counties",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 56,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Beaverhead County",
+          "url": "https://nationalbenefitalliance.com/montana/beaverhead/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Big Horn County",
+          "url": "https://nationalbenefitalliance.com/montana/big-horn/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Blaine County",
+          "url": "https://nationalbenefitalliance.com/montana/blaine/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Broadwater County",
+          "url": "https://nationalbenefitalliance.com/montana/broadwater/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Carbon County",
+          "url": "https://nationalbenefitalliance.com/montana/carbon/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Carter County",
+          "url": "https://nationalbenefitalliance.com/montana/carter/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Cascade",
+          "url": "https://nationalbenefitalliance.com/montana/cascade/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Chouteau County",
+          "url": "https://nationalbenefitalliance.com/montana/chouteau/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Custer County",
+          "url": "https://nationalbenefitalliance.com/montana/custer/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Daniels County",
+          "url": "https://nationalbenefitalliance.com/montana/daniels/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Dawson County",
+          "url": "https://nationalbenefitalliance.com/montana/dawson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "Deer Lodge County",
+          "url": "https://nationalbenefitalliance.com/montana/deer-lodge/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Fallon County",
+          "url": "https://nationalbenefitalliance.com/montana/fallon/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Fergus County",
+          "url": "https://nationalbenefitalliance.com/montana/fergus/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Flathead",
+          "url": "https://nationalbenefitalliance.com/montana/flathead/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "Gallatin",
+          "url": "https://nationalbenefitalliance.com/montana/gallatin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "Garfield County",
+          "url": "https://nationalbenefitalliance.com/montana/garfield/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "Glacier County",
+          "url": "https://nationalbenefitalliance.com/montana/glacier/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "name": "Golden Valley County",
+          "url": "https://nationalbenefitalliance.com/montana/golden-valley/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "name": "Granite County",
+          "url": "https://nationalbenefitalliance.com/montana/granite/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "name": "Hill County",
+          "url": "https://nationalbenefitalliance.com/montana/hill/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "name": "Jefferson County",
+          "url": "https://nationalbenefitalliance.com/montana/jefferson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "name": "Judith Basin County",
+          "url": "https://nationalbenefitalliance.com/montana/judith-basin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "name": "Lake County",
+          "url": "https://nationalbenefitalliance.com/montana/lake/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "name": "Lewis And Clark",
+          "url": "https://nationalbenefitalliance.com/montana/lewis-and-clark/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "name": "Liberty County",
+          "url": "https://nationalbenefitalliance.com/montana/liberty/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "name": "Lincoln County",
+          "url": "https://nationalbenefitalliance.com/montana/lincoln/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "name": "Madison County",
+          "url": "https://nationalbenefitalliance.com/montana/madison/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "name": "Mccone County",
+          "url": "https://nationalbenefitalliance.com/montana/mccone/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "name": "Meagher County",
+          "url": "https://nationalbenefitalliance.com/montana/meagher/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 31,
+          "name": "Mineral County",
+          "url": "https://nationalbenefitalliance.com/montana/mineral/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 32,
+          "name": "Missoula",
+          "url": "https://nationalbenefitalliance.com/montana/missoula/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 33,
+          "name": "Musselshell County",
+          "url": "https://nationalbenefitalliance.com/montana/musselshell/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 34,
+          "name": "Park County",
+          "url": "https://nationalbenefitalliance.com/montana/park/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 35,
+          "name": "Petroleum County",
+          "url": "https://nationalbenefitalliance.com/montana/petroleum/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 36,
+          "name": "Phillips County",
+          "url": "https://nationalbenefitalliance.com/montana/phillips/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 37,
+          "name": "Pondera County",
+          "url": "https://nationalbenefitalliance.com/montana/pondera/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 38,
+          "name": "Powder River County",
+          "url": "https://nationalbenefitalliance.com/montana/powder-river/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 39,
+          "name": "Powell County",
+          "url": "https://nationalbenefitalliance.com/montana/powell/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 40,
+          "name": "Prairie County",
+          "url": "https://nationalbenefitalliance.com/montana/prairie/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 41,
+          "name": "Ravalli County",
+          "url": "https://nationalbenefitalliance.com/montana/ravalli/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 42,
+          "name": "Richland County",
+          "url": "https://nationalbenefitalliance.com/montana/richland/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 43,
+          "name": "Roosevelt County",
+          "url": "https://nationalbenefitalliance.com/montana/roosevelt/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 44,
+          "name": "Rosebud County",
+          "url": "https://nationalbenefitalliance.com/montana/rosebud/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 45,
+          "name": "Sanders County",
+          "url": "https://nationalbenefitalliance.com/montana/sanders/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 46,
+          "name": "Sheridan County",
+          "url": "https://nationalbenefitalliance.com/montana/sheridan/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 47,
+          "name": "Silver Bow County",
+          "url": "https://nationalbenefitalliance.com/montana/silver-bow/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 48,
+          "name": "Stillwater County",
+          "url": "https://nationalbenefitalliance.com/montana/stillwater/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 49,
+          "name": "Sweet Grass County",
+          "url": "https://nationalbenefitalliance.com/montana/sweet-grass/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 50,
+          "name": "Teton County",
+          "url": "https://nationalbenefitalliance.com/montana/teton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 51,
+          "name": "Toole County",
+          "url": "https://nationalbenefitalliance.com/montana/toole/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 52,
+          "name": "Treasure County",
+          "url": "https://nationalbenefitalliance.com/montana/treasure/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 53,
+          "name": "Valley County",
+          "url": "https://nationalbenefitalliance.com/montana/valley/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 54,
+          "name": "Wheatland County",
+          "url": "https://nationalbenefitalliance.com/montana/wheatland/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 55,
+          "name": "Wibaux County",
+          "url": "https://nationalbenefitalliance.com/montana/wibaux/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 56,
+          "name": "Yellowstone",
+          "url": "https://nationalbenefitalliance.com/montana/yellowstone/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

@@ -19,47 +19,410 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta property="og:url" content="https://nationalbenefitalliance.com/north-dakota/" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "GovernmentOrganization",
-        "@id": "https://nationalbenefitalliance.com/north-dakota/#org",
-        "name": "National Benefit Alliance – North Dakota Resource Center",
-        "url": "https://nationalbenefitalliance.com/north-dakota/",
-        "description": "Free county-by-county resource guide for North Dakota residents seeking government and community assistance programs.",
-        "areaServed": {
-          "@type": "State",
-          "name": "North Dakota",
-          "sameAs": "https://www.wikidata.org/wiki/Q1207"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/north-dakota/#page",
-        "url": "https://nationalbenefitalliance.com/north-dakota/",
-        "name": "North Dakota County Resource Center",
-        "description": "Browse all 54 North Dakota counties for community benefit resources.",
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem","position": 1,"name": "Home","item": "https://nationalbenefitalliance.com/"},
-            {"@type": "ListItem","position": 2,"name": "North Dakota","item": "https://nationalbenefitalliance.com/north-dakota/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "ItemList",
-        "name": "North Dakota County Resource Guides",
-        "numberOfItems": 54,
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Adams County Resources","url":"https://nationalbenefitalliance.com/north-dakota/adams/"},
-          {"@type":"ListItem","position":2,"name":"Barnes County Resources","url":"https://nationalbenefitalliance.com/north-dakota/barnes/"},
-          {"@type":"ListItem","position":3,"name":"Benson County Resources","url":"https://nationalbenefitalliance.com/north-dakota/benson/"}
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://nationalbenefitalliance.com/north-dakota/#page",
+      "url": "https://nationalbenefitalliance.com/north-dakota/",
+      "name": "Assistance programs by county in North Dakota",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
+      },
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US",
+      "about": {
+        "@type": "AdministrativeArea",
+        "name": "North Dakota"
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "North Dakota",
+          "item": "https://nationalbenefitalliance.com/north-dakota/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "North Dakota counties",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 54,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Adams County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/adams/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Barnes County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/barnes/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Benson County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/benson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Billings County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/billings/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Bottineau County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/bottineau/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Bowman County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/bowman/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Burke County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/burke/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Burleigh",
+          "url": "https://nationalbenefitalliance.com/north-dakota/burleigh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Cass",
+          "url": "https://nationalbenefitalliance.com/north-dakota/cass/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Cavalier County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/cavalier/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Dickey County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/dickey/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "Divide County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/divide/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Dunn County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/dunn/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Eddy County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/eddy/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Emmons County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/emmons/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "Foster County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/foster/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "Golden Valley County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/golden-valley/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "Grand Forks",
+          "url": "https://nationalbenefitalliance.com/north-dakota/grand-forks/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "name": "Grant County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/grant/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "name": "Griggs County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/griggs/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "name": "Hettinger County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/hettinger/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "name": "Kidder County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/kidder/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "name": "LaMoure County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/lamoure/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "name": "Logan County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/logan/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "name": "McHenry County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/mchenry/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "name": "McIntosh County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/mcintosh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "name": "McKenzie County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/mckenzie/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "name": "McLean County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/mclean/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "name": "McPherson County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/mcpherson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "name": "Mercer County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/mercer/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 31,
+          "name": "Morton County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/morton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 32,
+          "name": "Mountrail County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/mountrail/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 33,
+          "name": "Nelson County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/nelson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 34,
+          "name": "Oliver County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/oliver/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 35,
+          "name": "Pembina County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/pembina/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 36,
+          "name": "Pierce County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/pierce/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 37,
+          "name": "Ramsey County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/ramsey/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 38,
+          "name": "Ransom County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/ransom/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 39,
+          "name": "Renville County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/renville/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 40,
+          "name": "Richland County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/richland/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 41,
+          "name": "Rolette County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/rolette/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 42,
+          "name": "Sargent County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/sargent/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 43,
+          "name": "Sheridan County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/sheridan/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 44,
+          "name": "Sioux County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/sioux/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 45,
+          "name": "Slope County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/slope/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 46,
+          "name": "Stark",
+          "url": "https://nationalbenefitalliance.com/north-dakota/stark/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 47,
+          "name": "Steele County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/steele/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 48,
+          "name": "Stutsman County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/stutsman/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 49,
+          "name": "Towner County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/towner/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 50,
+          "name": "Traill County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/traill/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 51,
+          "name": "Walsh County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/walsh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 52,
+          "name": "Ward",
+          "url": "https://nationalbenefitalliance.com/north-dakota/ward/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 53,
+          "name": "Wells County",
+          "url": "https://nationalbenefitalliance.com/north-dakota/wells/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 54,
+          "name": "Williams",
+          "url": "https://nationalbenefitalliance.com/north-dakota/williams/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

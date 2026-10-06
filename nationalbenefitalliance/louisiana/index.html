@@ -19,49 +19,470 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta property="og:url" content="https://nationalbenefitalliance.com/louisiana/" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "GovernmentOrganization",
-        "@id": "https://nationalbenefitalliance.com/louisiana/#org",
-        "name": "National Benefit Alliance – Louisiana Parish Resources Resource Center",
-        "url": "https://nationalbenefitalliance.com/louisiana/",
-        "description": "Free parishes-by-parishe resource guide for Louisiana residents seeking government and community assistance programs.",
-        "areaServed": {
-          "@type": "State",
-          "name": "Louisiana",
-          "sameAs": "https://www.wikidata.org/wiki/Q1588"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/louisiana/#page",
-        "url": "https://nationalbenefitalliance.com/louisiana/",
-        "name": "Louisiana Parish Resources",
-        "description": "Browse all 64 Louisiana parishes for community benefit resources.",
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem","position": 1,"name": "Home","item": "https://nationalbenefitalliance.com/"},
-            {"@type": "ListItem","position": 2,"name": "Louisiana","item": "https://nationalbenefitalliance.com/louisiana/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "ItemList",
-        "name": "Louisiana Parish Resources Resource Guides",
-        "numberOfItems": 64,
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"East Baton Rouge Parishes Resources","url":"https://nationalbenefitalliance.com/louisiana/east-baton-rouge/"},
-          {"@type":"ListItem","position":2,"name":"Jefferson Parishes Resources","url":"https://nationalbenefitalliance.com/louisiana/jefferson/"},
-          {"@type":"ListItem","position":3,"name":"Orleans Parishes Resources","url":"https://nationalbenefitalliance.com/louisiana/orleans/"},
-          {"@type":"ListItem","position":4,"name":"St. Tammany Parishes Resources","url":"https://nationalbenefitalliance.com/louisiana/st-tammany/"},
-          {"@type":"ListItem","position":5,"name":"Lafayette Parishes Resources","url":"https://nationalbenefitalliance.com/louisiana/lafayette/"}
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://nationalbenefitalliance.com/louisiana/#page",
+      "url": "https://nationalbenefitalliance.com/louisiana/",
+      "name": "Assistance programs by parish in Louisiana",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
+      },
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US",
+      "about": {
+        "@type": "AdministrativeArea",
+        "name": "Louisiana"
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Louisiana",
+          "item": "https://nationalbenefitalliance.com/louisiana/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Louisiana parishes",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 64,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Acadia Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/acadia/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Allen Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/allen/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Ascension Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/ascension/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Assumption Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/assumption/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Avoyelles Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/avoyelles/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Beauregard Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/beauregard/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Bienville Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/bienville/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Bossier Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/bossier/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Caddo Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/caddo/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Calcasieu Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/calcasieu/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Caldwell Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/caldwell/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "Cameron Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/cameron/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Catahoula Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/catahoula/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Claiborne Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/claiborne/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Concordia Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/concordia/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "De Soto Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/de-soto/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "East Baton Rouge Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/east-baton-rouge/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "East Carroll Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/east-carroll/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "name": "East Feliciana Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/east-feliciana/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "name": "Evangeline Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/evangeline/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "name": "Franklin Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/franklin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "name": "Grant Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/grant/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "name": "Iberia Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/iberia/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "name": "Iberville Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/iberville/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "name": "Jackson Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/jackson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "name": "Jefferson Davis Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/jefferson-davis/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "name": "Jefferson Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/jefferson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "name": "Lafayette Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/lafayette/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "name": "Lafourche Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/lafourche/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "name": "Lasalle Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/lasalle/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 31,
+          "name": "Lincoln Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/lincoln/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 32,
+          "name": "Livingston Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/livingston/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 33,
+          "name": "Madison Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/madison/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 34,
+          "name": "Morehouse Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/morehouse/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 35,
+          "name": "Natchitoches Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/natchitoches/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 36,
+          "name": "Orleans Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/orleans/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 37,
+          "name": "Ouachita Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/ouachita/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 38,
+          "name": "Plaquemines Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/plaquemines/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 39,
+          "name": "Pointe Coupee Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/pointe-coupee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 40,
+          "name": "Rapides Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/rapides/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 41,
+          "name": "Red River Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/red-river/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 42,
+          "name": "Richland Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/richland/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 43,
+          "name": "Sabine Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/sabine/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 44,
+          "name": "St. Bernard Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/st-bernard/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 45,
+          "name": "St. Charles Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/st-charles/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 46,
+          "name": "St. Helena Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/st-helena/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 47,
+          "name": "St. James Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/st-james/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 48,
+          "name": "St. John The Baptist Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/st-john-the-baptist/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 49,
+          "name": "St. Landry Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/st-landry/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 50,
+          "name": "St. Martin Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/st-martin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 51,
+          "name": "St. Mary Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/st-mary/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 52,
+          "name": "St. Tammany Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/st-tammany/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 53,
+          "name": "Tangipahoa Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/tangipahoa/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 54,
+          "name": "Tensas Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/tensas/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 55,
+          "name": "Terrebonne Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/terrebonne/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 56,
+          "name": "Union Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/union/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 57,
+          "name": "Vermilion Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/vermilion/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 58,
+          "name": "Vernon Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/vernon/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 59,
+          "name": "Washington Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/washington/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 60,
+          "name": "Webster Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/webster/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 61,
+          "name": "West Baton Rouge Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/west-baton-rouge/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 62,
+          "name": "West Carroll Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/west-carroll/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 63,
+          "name": "West Feliciana Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/west-feliciana/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 64,
+          "name": "Winn Parishes",
+          "url": "https://nationalbenefitalliance.com/louisiana/winn/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

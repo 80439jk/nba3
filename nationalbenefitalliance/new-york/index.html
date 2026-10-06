@@ -19,49 +19,458 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta property="og:url" content="https://nationalbenefitalliance.com/new-york/" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "GovernmentOrganization",
-        "@id": "https://nationalbenefitalliance.com/new-york/#org",
-        "name": "National Benefit Alliance – New York Resource Center",
-        "url": "https://nationalbenefitalliance.com/new-york/",
-        "description": "Free county-by-county resource guide for New York residents seeking government and community assistance programs.",
-        "areaServed": {
-          "@type": "State",
-          "name": "New York",
-          "sameAs": "https://www.wikidata.org/wiki/Q1384"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/new-york/#page",
-        "url": "https://nationalbenefitalliance.com/new-york/",
-        "name": "New York County Resource Center",
-        "description": "Browse all 62 New York counties for community benefit resources.",
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem","position": 1,"name": "Home","item": "https://nationalbenefitalliance.com/"},
-            {"@type": "ListItem","position": 2,"name": "New York","item": "https://nationalbenefitalliance.com/new-york/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "ItemList",
-        "name": "New York County Resource Guides",
-        "numberOfItems": 62,
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Kings (Brooklyn) County Resources","url":"https://nationalbenefitalliance.com/new-york/kings/"},
-          {"@type":"ListItem","position":2,"name":"Queens County Resources","url":"https://nationalbenefitalliance.com/new-york/queens/"},
-          {"@type":"ListItem","position":3,"name":"New York (Manhattan) County Resources","url":"https://nationalbenefitalliance.com/new-york/new-york/"},
-          {"@type":"ListItem","position":4,"name":"Suffolk County Resources","url":"https://nationalbenefitalliance.com/new-york/suffolk/"},
-          {"@type":"ListItem","position":5,"name":"Bronx County Resources","url":"https://nationalbenefitalliance.com/new-york/bronx/"}
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://nationalbenefitalliance.com/new-york/#page",
+      "url": "https://nationalbenefitalliance.com/new-york/",
+      "name": "Assistance programs by county in New York",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
+      },
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US",
+      "about": {
+        "@type": "AdministrativeArea",
+        "name": "New York"
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "New York",
+          "item": "https://nationalbenefitalliance.com/new-york/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "New York counties",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 62,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Albany County",
+          "url": "https://nationalbenefitalliance.com/new-york/albany/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Allegany County",
+          "url": "https://nationalbenefitalliance.com/new-york/allegany/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Bronx County",
+          "url": "https://nationalbenefitalliance.com/new-york/bronx/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Broome County",
+          "url": "https://nationalbenefitalliance.com/new-york/broome/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Cattaraugus County",
+          "url": "https://nationalbenefitalliance.com/new-york/cattaraugus/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Cayuga County",
+          "url": "https://nationalbenefitalliance.com/new-york/cayuga/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Chautauqua County",
+          "url": "https://nationalbenefitalliance.com/new-york/chautauqua/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Chemung County",
+          "url": "https://nationalbenefitalliance.com/new-york/chemung/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Chenango County",
+          "url": "https://nationalbenefitalliance.com/new-york/chenango/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Clinton County",
+          "url": "https://nationalbenefitalliance.com/new-york/clinton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Columbia County",
+          "url": "https://nationalbenefitalliance.com/new-york/columbia/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "Cortland County",
+          "url": "https://nationalbenefitalliance.com/new-york/cortland/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Delaware County",
+          "url": "https://nationalbenefitalliance.com/new-york/delaware/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Dutchess County",
+          "url": "https://nationalbenefitalliance.com/new-york/dutchess/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Erie County",
+          "url": "https://nationalbenefitalliance.com/new-york/erie/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "Essex County",
+          "url": "https://nationalbenefitalliance.com/new-york/essex/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "Franklin County",
+          "url": "https://nationalbenefitalliance.com/new-york/franklin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "Fulton County",
+          "url": "https://nationalbenefitalliance.com/new-york/fulton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "name": "Genesee County",
+          "url": "https://nationalbenefitalliance.com/new-york/genesee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "name": "Greene County",
+          "url": "https://nationalbenefitalliance.com/new-york/greene/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "name": "Hamilton County",
+          "url": "https://nationalbenefitalliance.com/new-york/hamilton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "name": "Herkimer County",
+          "url": "https://nationalbenefitalliance.com/new-york/herkimer/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "name": "Jefferson County",
+          "url": "https://nationalbenefitalliance.com/new-york/jefferson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "name": "Kings County",
+          "url": "https://nationalbenefitalliance.com/new-york/kings/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "name": "Lewis County",
+          "url": "https://nationalbenefitalliance.com/new-york/lewis/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "name": "Livingston County",
+          "url": "https://nationalbenefitalliance.com/new-york/livingston/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "name": "Madison County",
+          "url": "https://nationalbenefitalliance.com/new-york/madison/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "name": "Monroe County",
+          "url": "https://nationalbenefitalliance.com/new-york/monroe/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "name": "Montgomery County",
+          "url": "https://nationalbenefitalliance.com/new-york/montgomery/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "name": "Nassau County",
+          "url": "https://nationalbenefitalliance.com/new-york/nassau/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 31,
+          "name": "New York County",
+          "url": "https://nationalbenefitalliance.com/new-york/new-york/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 32,
+          "name": "Niagara County",
+          "url": "https://nationalbenefitalliance.com/new-york/niagara/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 33,
+          "name": "Oneida County",
+          "url": "https://nationalbenefitalliance.com/new-york/oneida/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 34,
+          "name": "Onondaga County",
+          "url": "https://nationalbenefitalliance.com/new-york/onondaga/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 35,
+          "name": "Ontario County",
+          "url": "https://nationalbenefitalliance.com/new-york/ontario/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 36,
+          "name": "Orange County",
+          "url": "https://nationalbenefitalliance.com/new-york/orange/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 37,
+          "name": "Orleans County",
+          "url": "https://nationalbenefitalliance.com/new-york/orleans/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 38,
+          "name": "Oswego County",
+          "url": "https://nationalbenefitalliance.com/new-york/oswego/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 39,
+          "name": "Otsego County",
+          "url": "https://nationalbenefitalliance.com/new-york/otsego/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 40,
+          "name": "Putnam County",
+          "url": "https://nationalbenefitalliance.com/new-york/putnam/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 41,
+          "name": "Queens County",
+          "url": "https://nationalbenefitalliance.com/new-york/queens/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 42,
+          "name": "Rensselaer County",
+          "url": "https://nationalbenefitalliance.com/new-york/rensselaer/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 43,
+          "name": "Richmond County",
+          "url": "https://nationalbenefitalliance.com/new-york/richmond/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 44,
+          "name": "Rockland County",
+          "url": "https://nationalbenefitalliance.com/new-york/rockland/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 45,
+          "name": "Saratoga County",
+          "url": "https://nationalbenefitalliance.com/new-york/saratoga/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 46,
+          "name": "Schenectady County",
+          "url": "https://nationalbenefitalliance.com/new-york/schenectady/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 47,
+          "name": "Schoharie County",
+          "url": "https://nationalbenefitalliance.com/new-york/schoharie/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 48,
+          "name": "Schuyler County",
+          "url": "https://nationalbenefitalliance.com/new-york/schuyler/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 49,
+          "name": "Seneca County",
+          "url": "https://nationalbenefitalliance.com/new-york/seneca/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 50,
+          "name": "St. Lawrence County",
+          "url": "https://nationalbenefitalliance.com/new-york/st-lawrence/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 51,
+          "name": "Steuben County",
+          "url": "https://nationalbenefitalliance.com/new-york/steuben/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 52,
+          "name": "Suffolk County",
+          "url": "https://nationalbenefitalliance.com/new-york/suffolk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 53,
+          "name": "Sullivan County",
+          "url": "https://nationalbenefitalliance.com/new-york/sullivan/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 54,
+          "name": "Tioga County",
+          "url": "https://nationalbenefitalliance.com/new-york/tioga/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 55,
+          "name": "Tompkins County",
+          "url": "https://nationalbenefitalliance.com/new-york/tompkins/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 56,
+          "name": "Ulster County",
+          "url": "https://nationalbenefitalliance.com/new-york/ulster/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 57,
+          "name": "Warren County",
+          "url": "https://nationalbenefitalliance.com/new-york/warren/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 58,
+          "name": "Washington County",
+          "url": "https://nationalbenefitalliance.com/new-york/washington/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 59,
+          "name": "Wayne County",
+          "url": "https://nationalbenefitalliance.com/new-york/wayne/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 60,
+          "name": "Westchester County",
+          "url": "https://nationalbenefitalliance.com/new-york/westchester/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 61,
+          "name": "Wyoming County",
+          "url": "https://nationalbenefitalliance.com/new-york/wyoming/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 62,
+          "name": "Yates County",
+          "url": "https://nationalbenefitalliance.com/new-york/yates/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

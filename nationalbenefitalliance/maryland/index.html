@@ -19,49 +19,236 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta property="og:url" content="https://nationalbenefitalliance.com/maryland/" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "GovernmentOrganization",
-        "@id": "https://nationalbenefitalliance.com/maryland/#org",
-        "name": "National Benefit Alliance – Maryland Resource Center",
-        "url": "https://nationalbenefitalliance.com/maryland/",
-        "description": "Free county-by-county resource guide for Maryland residents seeking government and community assistance programs.",
-        "areaServed": {
-          "@type": "State",
-          "name": "Maryland",
-          "sameAs": "https://www.wikidata.org/wiki/Q1391"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/maryland/#page",
-        "url": "https://nationalbenefitalliance.com/maryland/",
-        "name": "Maryland County Resource Center",
-        "description": "Browse all 24 Maryland counties for community benefit resources.",
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem","position": 1,"name": "Home","item": "https://nationalbenefitalliance.com/"},
-            {"@type": "ListItem","position": 2,"name": "Maryland","item": "https://nationalbenefitalliance.com/maryland/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "ItemList",
-        "name": "Maryland County Resource Guides",
-        "numberOfItems": 24,
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Montgomery County Resources","url":"https://nationalbenefitalliance.com/maryland/montgomery/"},
-          {"@type":"ListItem","position":2,"name":"Prince George's County Resources","url":"https://nationalbenefitalliance.com/maryland/prince-georges/"},
-          {"@type":"ListItem","position":3,"name":"Baltimore County County Resources","url":"https://nationalbenefitalliance.com/maryland/baltimore/"},
-          {"@type":"ListItem","position":4,"name":"Baltimore City County Resources","url":"https://nationalbenefitalliance.com/maryland/baltimore-city/"},
-          {"@type":"ListItem","position":5,"name":"Anne Arundel County Resources","url":"https://nationalbenefitalliance.com/maryland/anne-arundel/"}
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://nationalbenefitalliance.com/maryland/#page",
+      "url": "https://nationalbenefitalliance.com/maryland/",
+      "name": "Assistance programs by county in Maryland",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
+      },
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US",
+      "about": {
+        "@type": "AdministrativeArea",
+        "name": "Maryland"
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Maryland",
+          "item": "https://nationalbenefitalliance.com/maryland/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Maryland counties",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 25,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Allegany County",
+          "url": "https://nationalbenefitalliance.com/maryland/allegany/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Anne Arundel County",
+          "url": "https://nationalbenefitalliance.com/maryland/anne-arundel/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Baltimore City County",
+          "url": "https://nationalbenefitalliance.com/maryland/baltimore-city/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Baltimore County",
+          "url": "https://nationalbenefitalliance.com/maryland/baltimore/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Calvert County",
+          "url": "https://nationalbenefitalliance.com/maryland/calvert/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Caroline County",
+          "url": "https://nationalbenefitalliance.com/maryland/caroline/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Carroll County",
+          "url": "https://nationalbenefitalliance.com/maryland/carroll/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Cecil County",
+          "url": "https://nationalbenefitalliance.com/maryland/cecil/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Charles County",
+          "url": "https://nationalbenefitalliance.com/maryland/charles/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Dorchester County",
+          "url": "https://nationalbenefitalliance.com/maryland/dorchester/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Frederick County",
+          "url": "https://nationalbenefitalliance.com/maryland/frederick/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "Garrett County",
+          "url": "https://nationalbenefitalliance.com/maryland/garrett/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Harford County",
+          "url": "https://nationalbenefitalliance.com/maryland/harford/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Howard County",
+          "url": "https://nationalbenefitalliance.com/maryland/howard/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Kent County",
+          "url": "https://nationalbenefitalliance.com/maryland/kent/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "Montgomery County",
+          "url": "https://nationalbenefitalliance.com/maryland/montgomery/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "Prince George S County",
+          "url": "https://nationalbenefitalliance.com/maryland/prince-george-s/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "Prince George's County",
+          "url": "https://nationalbenefitalliance.com/maryland/prince-georges/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "name": "Queen Anne S County",
+          "url": "https://nationalbenefitalliance.com/maryland/queen-anne-s/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "name": "Somerset County",
+          "url": "https://nationalbenefitalliance.com/maryland/somerset/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "name": "St Mary S County",
+          "url": "https://nationalbenefitalliance.com/maryland/st-mary-s/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "name": "Talbot County",
+          "url": "https://nationalbenefitalliance.com/maryland/talbot/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "name": "Washington County",
+          "url": "https://nationalbenefitalliance.com/maryland/washington/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "name": "Wicomico County",
+          "url": "https://nationalbenefitalliance.com/maryland/wicomico/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "name": "Worcester County",
+          "url": "https://nationalbenefitalliance.com/maryland/worcester/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

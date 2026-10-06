@@ -19,49 +19,488 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta property="og:url" content="https://nationalbenefitalliance.com/pennsylvania/" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "GovernmentOrganization",
-        "@id": "https://nationalbenefitalliance.com/pennsylvania/#org",
-        "name": "National Benefit Alliance – Pennsylvania Resource Center",
-        "url": "https://nationalbenefitalliance.com/pennsylvania/",
-        "description": "Free county-by-county resource guide for Pennsylvania residents seeking government and community assistance programs.",
-        "areaServed": {
-          "@type": "State",
-          "name": "Pennsylvania",
-          "sameAs": "https://www.wikidata.org/wiki/Q1400"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/pennsylvania/#page",
-        "url": "https://nationalbenefitalliance.com/pennsylvania/",
-        "name": "Pennsylvania County Resource Center",
-        "description": "Browse all 67 Pennsylvania counties for community benefit resources.",
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem","position": 1,"name": "Home","item": "https://nationalbenefitalliance.com/"},
-            {"@type": "ListItem","position": 2,"name": "Pennsylvania","item": "https://nationalbenefitalliance.com/pennsylvania/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "ItemList",
-        "name": "Pennsylvania County Resource Guides",
-        "numberOfItems": 67,
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Philadelphia County Resources","url":"https://nationalbenefitalliance.com/pennsylvania/philadelphia/"},
-          {"@type":"ListItem","position":2,"name":"Allegheny County Resources","url":"https://nationalbenefitalliance.com/pennsylvania/allegheny/"},
-          {"@type":"ListItem","position":3,"name":"Montgomery County Resources","url":"https://nationalbenefitalliance.com/pennsylvania/montgomery/"},
-          {"@type":"ListItem","position":4,"name":"Bucks County Resources","url":"https://nationalbenefitalliance.com/pennsylvania/bucks/"},
-          {"@type":"ListItem","position":5,"name":"Delaware County Resources","url":"https://nationalbenefitalliance.com/pennsylvania/delaware/"}
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://nationalbenefitalliance.com/pennsylvania/#page",
+      "url": "https://nationalbenefitalliance.com/pennsylvania/",
+      "name": "Assistance programs by county in Pennsylvania",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
+      },
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US",
+      "about": {
+        "@type": "AdministrativeArea",
+        "name": "Pennsylvania"
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Pennsylvania",
+          "item": "https://nationalbenefitalliance.com/pennsylvania/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Pennsylvania counties",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 67,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Adams County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/adams/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Allegheny County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/allegheny/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Armstrong County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/armstrong/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Beaver County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/beaver/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Bedford County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/bedford/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Berks County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/berks/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Blair County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/blair/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Bradford County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/bradford/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Bucks County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/bucks/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Butler County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/butler/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Cambria County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/cambria/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "Cameron County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/cameron/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Carbon County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/carbon/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Centre County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/centre/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Chester County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/chester/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "Clarion County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/clarion/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "Clearfield County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/clearfield/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "Clinton County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/clinton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "name": "Columbia County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/columbia/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "name": "Crawford County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/crawford/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "name": "Cumberland County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/cumberland/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "name": "Dauphin County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/dauphin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "name": "Delaware County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/delaware/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "name": "Elk County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/elk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "name": "Erie County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/erie/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "name": "Fayette County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/fayette/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "name": "Forest County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/forest/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "name": "Franklin County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/franklin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "name": "Fulton County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/fulton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "name": "Greene County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/greene/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 31,
+          "name": "Huntingdon County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/huntingdon/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 32,
+          "name": "Indiana County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/indiana/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 33,
+          "name": "Jefferson County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/jefferson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 34,
+          "name": "Juniata County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/juniata/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 35,
+          "name": "Lackawanna County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/lackawanna/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 36,
+          "name": "Lancaster County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/lancaster/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 37,
+          "name": "Lawrence County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/lawrence/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 38,
+          "name": "Lebanon County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/lebanon/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 39,
+          "name": "Lehigh County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/lehigh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 40,
+          "name": "Luzerne County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/luzerne/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 41,
+          "name": "Lycoming County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/lycoming/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 42,
+          "name": "McKean County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/mckean/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 43,
+          "name": "Mercer County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/mercer/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 44,
+          "name": "Mifflin County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/mifflin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 45,
+          "name": "Monroe County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/monroe/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 46,
+          "name": "Montgomery County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/montgomery/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 47,
+          "name": "Montour County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/montour/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 48,
+          "name": "Northampton County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/northampton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 49,
+          "name": "Northumberland County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/northumberland/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 50,
+          "name": "Perry County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/perry/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 51,
+          "name": "Philadelphia County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/philadelphia/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 52,
+          "name": "Pike County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/pike/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 53,
+          "name": "Potter County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/potter/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 54,
+          "name": "Schuylkill County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/schuylkill/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 55,
+          "name": "Snyder County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/snyder/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 56,
+          "name": "Somerset County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/somerset/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 57,
+          "name": "Sullivan County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/sullivan/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 58,
+          "name": "Susquehanna County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/susquehanna/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 59,
+          "name": "Tioga County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/tioga/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 60,
+          "name": "Union County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/union/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 61,
+          "name": "Venango County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/venango/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 62,
+          "name": "Warren County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/warren/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 63,
+          "name": "Washington County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/washington/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 64,
+          "name": "Wayne County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/wayne/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 65,
+          "name": "Westmoreland County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/westmoreland/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 66,
+          "name": "Wyoming County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/wyoming/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 67,
+          "name": "York County",
+          "url": "https://nationalbenefitalliance.com/pennsylvania/york/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

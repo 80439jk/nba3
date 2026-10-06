@@ -20,49 +20,170 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <!-- Schema: State + Government organization -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "GovernmentOrganization",
-        "@id": "https://nationalbenefitalliance.com/vermont/#org",
-        "name": "National Benefit Alliance – Vermont Resource Center",
-        "url": "https://nationalbenefitalliance.com/vermont/",
-        "description": "Free county-by-county resource guide for Vermont residents seeking government and community assistance programs.",
-        "areaServed": {
-          "@type": "State",
-          "name": "Vermont",
-          "sameAs": "https://www.wikidata.org/wiki/Q16551"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/vermont/#page",
-        "url": "https://nationalbenefitalliance.com/vermont/",
-        "name": "Vermont County Resource Center",
-        "description": "Browse all 14 Vermont counties for community benefit resources.",
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem","position": 1,"name": "Home","item": "https://nationalbenefitalliance.com/"},
-            {"@type": "ListItem","position": 2,"name": "Vermont","item": "https://nationalbenefitalliance.com/vermont/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "ItemList",
-        "name": "Vermont County Resource Guides",
-        "numberOfItems": 14,
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Chittenden County Resources","url":"https://nationalbenefitalliance.com/vermont/chittenden/"},
-          {"@type":"ListItem","position":2,"name":"Rutland County Resources","url":"https://nationalbenefitalliance.com/vermont/rutland/"},
-          {"@type":"ListItem","position":3,"name":"Washington County Resources","url":"https://nationalbenefitalliance.com/vermont/washington/"},
-          {"@type":"ListItem","position":4,"name":"Windsor County Resources","url":"https://nationalbenefitalliance.com/vermont/windsor/"},
-          {"@type":"ListItem","position":5,"name":"Franklin County Resources","url":"https://nationalbenefitalliance.com/vermont/franklin/"}
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://nationalbenefitalliance.com/vermont/#page",
+      "url": "https://nationalbenefitalliance.com/vermont/",
+      "name": "Assistance programs by county in Vermont",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
+      },
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US",
+      "about": {
+        "@type": "AdministrativeArea",
+        "name": "Vermont"
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Vermont",
+          "item": "https://nationalbenefitalliance.com/vermont/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Vermont counties",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 14,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Addison County",
+          "url": "https://nationalbenefitalliance.com/vermont/addison/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Bennington County",
+          "url": "https://nationalbenefitalliance.com/vermont/bennington/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Caledonia County",
+          "url": "https://nationalbenefitalliance.com/vermont/caledonia/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Chittenden County",
+          "url": "https://nationalbenefitalliance.com/vermont/chittenden/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Essex County",
+          "url": "https://nationalbenefitalliance.com/vermont/essex/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Franklin County",
+          "url": "https://nationalbenefitalliance.com/vermont/franklin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Grand Isle County",
+          "url": "https://nationalbenefitalliance.com/vermont/grand-isle/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Lamoille County",
+          "url": "https://nationalbenefitalliance.com/vermont/lamoille/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Orange County",
+          "url": "https://nationalbenefitalliance.com/vermont/orange/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Orleans County",
+          "url": "https://nationalbenefitalliance.com/vermont/orleans/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Rutland County",
+          "url": "https://nationalbenefitalliance.com/vermont/rutland/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "Washington County",
+          "url": "https://nationalbenefitalliance.com/vermont/washington/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Windham County",
+          "url": "https://nationalbenefitalliance.com/vermont/windham/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Windsor County",
+          "url": "https://nationalbenefitalliance.com/vermont/windsor/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

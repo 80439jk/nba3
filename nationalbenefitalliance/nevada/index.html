@@ -19,49 +19,188 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta property="og:url" content="https://nationalbenefitalliance.com/nevada/" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "GovernmentOrganization",
-        "@id": "https://nationalbenefitalliance.com/nevada/#org",
-        "name": "National Benefit Alliance – Nevada Resource Center",
-        "url": "https://nationalbenefitalliance.com/nevada/",
-        "description": "Free county-by-county resource guide for Nevada residents seeking government and community assistance programs.",
-        "areaServed": {
-          "@type": "State",
-          "name": "Nevada",
-          "sameAs": "https://www.wikidata.org/wiki/Q1227"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/nevada/#page",
-        "url": "https://nationalbenefitalliance.com/nevada/",
-        "name": "Nevada County Resource Center",
-        "description": "Browse all 17 Nevada counties for community benefit resources.",
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem","position": 1,"name": "Home","item": "https://nationalbenefitalliance.com/"},
-            {"@type": "ListItem","position": 2,"name": "Nevada","item": "https://nationalbenefitalliance.com/nevada/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "ItemList",
-        "name": "Nevada County Resource Guides",
-        "numberOfItems": 17,
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Clark Resources","url":"https://nationalbenefitalliance.com/nevada/clark/"},
-          {"@type":"ListItem","position":2,"name":"Washoe Resources","url":"https://nationalbenefitalliance.com/nevada/washoe/"},
-          {"@type":"ListItem","position":3,"name":"Carson City Resources","url":"https://nationalbenefitalliance.com/nevada/carson-city/"},
-          {"@type":"ListItem","position":4,"name":"Lyon Resources","url":"https://nationalbenefitalliance.com/nevada/lyon/"},
-          {"@type":"ListItem","position":5,"name":"Elko Resources","url":"https://nationalbenefitalliance.com/nevada/elko/"}
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://nationalbenefitalliance.com/nevada/#page",
+      "url": "https://nationalbenefitalliance.com/nevada/",
+      "name": "Assistance programs by county in Nevada",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
+      },
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US",
+      "about": {
+        "@type": "AdministrativeArea",
+        "name": "Nevada"
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Nevada",
+          "item": "https://nationalbenefitalliance.com/nevada/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Nevada counties",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 17,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Carson City",
+          "url": "https://nationalbenefitalliance.com/nevada/carson-city/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Churchill",
+          "url": "https://nationalbenefitalliance.com/nevada/churchill/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Clark",
+          "url": "https://nationalbenefitalliance.com/nevada/clark/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Douglas",
+          "url": "https://nationalbenefitalliance.com/nevada/douglas/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Elko",
+          "url": "https://nationalbenefitalliance.com/nevada/elko/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Esmeralda",
+          "url": "https://nationalbenefitalliance.com/nevada/esmeralda/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Eureka",
+          "url": "https://nationalbenefitalliance.com/nevada/eureka/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Humboldt",
+          "url": "https://nationalbenefitalliance.com/nevada/humboldt/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Lander",
+          "url": "https://nationalbenefitalliance.com/nevada/lander/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Lincoln",
+          "url": "https://nationalbenefitalliance.com/nevada/lincoln/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Lyon",
+          "url": "https://nationalbenefitalliance.com/nevada/lyon/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "Mineral",
+          "url": "https://nationalbenefitalliance.com/nevada/mineral/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Nye",
+          "url": "https://nationalbenefitalliance.com/nevada/nye/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Pershing",
+          "url": "https://nationalbenefitalliance.com/nevada/pershing/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Storey",
+          "url": "https://nationalbenefitalliance.com/nevada/storey/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "Washoe",
+          "url": "https://nationalbenefitalliance.com/nevada/washoe/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "White Pine",
+          "url": "https://nationalbenefitalliance.com/nevada/white-pine/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

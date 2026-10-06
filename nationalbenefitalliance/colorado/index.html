@@ -19,49 +19,470 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta property="og:url" content="https://nationalbenefitalliance.com/colorado/" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "GovernmentOrganization",
-        "@id": "https://nationalbenefitalliance.com/colorado/#org",
-        "name": "National Benefit Alliance – Colorado Resource Center",
-        "url": "https://nationalbenefitalliance.com/colorado/",
-        "description": "Free county-by-county resource guide for Colorado residents seeking government and community assistance programs.",
-        "areaServed": {
-          "@type": "State",
-          "name": "Colorado",
-          "sameAs": "https://www.wikidata.org/wiki/Q1261"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/colorado/#page",
-        "url": "https://nationalbenefitalliance.com/colorado/",
-        "name": "Colorado County Resource Center",
-        "description": "Browse all 64 Colorado counties for community benefit resources.",
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem","position": 1,"name": "Home","item": "https://nationalbenefitalliance.com/"},
-            {"@type": "ListItem","position": 2,"name": "Colorado","item": "https://nationalbenefitalliance.com/colorado/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "ItemList",
-        "name": "Colorado County Resource Guides",
-        "numberOfItems": 64,
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Denver County Resources","url":"https://nationalbenefitalliance.com/colorado/denver/"},
-          {"@type":"ListItem","position":2,"name":"Arapahoe County Resources","url":"https://nationalbenefitalliance.com/colorado/arapahoe/"},
-          {"@type":"ListItem","position":3,"name":"El Paso County Resources","url":"https://nationalbenefitalliance.com/colorado/el-paso/"},
-          {"@type":"ListItem","position":4,"name":"Jefferson County Resources","url":"https://nationalbenefitalliance.com/colorado/jefferson/"},
-          {"@type":"ListItem","position":5,"name":"Adams County Resources","url":"https://nationalbenefitalliance.com/colorado/adams/"}
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://nationalbenefitalliance.com/colorado/#page",
+      "url": "https://nationalbenefitalliance.com/colorado/",
+      "name": "Assistance programs by county in Colorado",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
+      },
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US",
+      "about": {
+        "@type": "AdministrativeArea",
+        "name": "Colorado"
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Colorado",
+          "item": "https://nationalbenefitalliance.com/colorado/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Colorado counties",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 64,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Adams",
+          "url": "https://nationalbenefitalliance.com/colorado/adams/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Alamosa County",
+          "url": "https://nationalbenefitalliance.com/colorado/alamosa/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Arapahoe",
+          "url": "https://nationalbenefitalliance.com/colorado/arapahoe/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Archuleta County",
+          "url": "https://nationalbenefitalliance.com/colorado/archuleta/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Baca County",
+          "url": "https://nationalbenefitalliance.com/colorado/baca/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Bent County",
+          "url": "https://nationalbenefitalliance.com/colorado/bent/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Boulder County",
+          "url": "https://nationalbenefitalliance.com/colorado/boulder/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Broomfield County",
+          "url": "https://nationalbenefitalliance.com/colorado/broomfield/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Chaffee County",
+          "url": "https://nationalbenefitalliance.com/colorado/chaffee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Cheyenne County",
+          "url": "https://nationalbenefitalliance.com/colorado/cheyenne/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Clear Creek County",
+          "url": "https://nationalbenefitalliance.com/colorado/clear-creek/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "Conejos County",
+          "url": "https://nationalbenefitalliance.com/colorado/conejos/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Costilla County",
+          "url": "https://nationalbenefitalliance.com/colorado/costilla/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Crowley County",
+          "url": "https://nationalbenefitalliance.com/colorado/crowley/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Custer County",
+          "url": "https://nationalbenefitalliance.com/colorado/custer/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "Delta County",
+          "url": "https://nationalbenefitalliance.com/colorado/delta/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "Denver",
+          "url": "https://nationalbenefitalliance.com/colorado/denver/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "Dolores County",
+          "url": "https://nationalbenefitalliance.com/colorado/dolores/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "name": "Douglas",
+          "url": "https://nationalbenefitalliance.com/colorado/douglas/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "name": "Eagle County",
+          "url": "https://nationalbenefitalliance.com/colorado/eagle/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "name": "El Paso",
+          "url": "https://nationalbenefitalliance.com/colorado/el-paso/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "name": "Elbert County",
+          "url": "https://nationalbenefitalliance.com/colorado/elbert/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "name": "Fremont County",
+          "url": "https://nationalbenefitalliance.com/colorado/fremont/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "name": "Garfield County",
+          "url": "https://nationalbenefitalliance.com/colorado/garfield/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "name": "Gilpin County",
+          "url": "https://nationalbenefitalliance.com/colorado/gilpin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "name": "Grand County",
+          "url": "https://nationalbenefitalliance.com/colorado/grand/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "name": "Gunnison County",
+          "url": "https://nationalbenefitalliance.com/colorado/gunnison/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "name": "Hinsdale County",
+          "url": "https://nationalbenefitalliance.com/colorado/hinsdale/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "name": "Huerfano County",
+          "url": "https://nationalbenefitalliance.com/colorado/huerfano/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "name": "Jackson County",
+          "url": "https://nationalbenefitalliance.com/colorado/jackson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 31,
+          "name": "Jefferson",
+          "url": "https://nationalbenefitalliance.com/colorado/jefferson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 32,
+          "name": "Kiowa County",
+          "url": "https://nationalbenefitalliance.com/colorado/kiowa/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 33,
+          "name": "Kit Carson County",
+          "url": "https://nationalbenefitalliance.com/colorado/kit-carson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 34,
+          "name": "La Plata County",
+          "url": "https://nationalbenefitalliance.com/colorado/la-plata/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 35,
+          "name": "Lake County",
+          "url": "https://nationalbenefitalliance.com/colorado/lake/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 36,
+          "name": "Larimer County",
+          "url": "https://nationalbenefitalliance.com/colorado/larimer/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 37,
+          "name": "Las Animas County",
+          "url": "https://nationalbenefitalliance.com/colorado/las-animas/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 38,
+          "name": "Lincoln County",
+          "url": "https://nationalbenefitalliance.com/colorado/lincoln/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 39,
+          "name": "Logan County",
+          "url": "https://nationalbenefitalliance.com/colorado/logan/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 40,
+          "name": "Mesa County",
+          "url": "https://nationalbenefitalliance.com/colorado/mesa/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 41,
+          "name": "Mineral County",
+          "url": "https://nationalbenefitalliance.com/colorado/mineral/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 42,
+          "name": "Moffat County",
+          "url": "https://nationalbenefitalliance.com/colorado/moffat/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 43,
+          "name": "Montezuma County",
+          "url": "https://nationalbenefitalliance.com/colorado/montezuma/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 44,
+          "name": "Montrose County",
+          "url": "https://nationalbenefitalliance.com/colorado/montrose/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 45,
+          "name": "Morgan County",
+          "url": "https://nationalbenefitalliance.com/colorado/morgan/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 46,
+          "name": "Otero County",
+          "url": "https://nationalbenefitalliance.com/colorado/otero/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 47,
+          "name": "Ouray County",
+          "url": "https://nationalbenefitalliance.com/colorado/ouray/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 48,
+          "name": "Park County",
+          "url": "https://nationalbenefitalliance.com/colorado/park/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 49,
+          "name": "Phillips County",
+          "url": "https://nationalbenefitalliance.com/colorado/phillips/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 50,
+          "name": "Pitkin County",
+          "url": "https://nationalbenefitalliance.com/colorado/pitkin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 51,
+          "name": "Prowers County",
+          "url": "https://nationalbenefitalliance.com/colorado/prowers/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 52,
+          "name": "Pueblo County",
+          "url": "https://nationalbenefitalliance.com/colorado/pueblo/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 53,
+          "name": "Rio Blanco County",
+          "url": "https://nationalbenefitalliance.com/colorado/rio-blanco/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 54,
+          "name": "Rio Grande County",
+          "url": "https://nationalbenefitalliance.com/colorado/rio-grande/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 55,
+          "name": "Routt County",
+          "url": "https://nationalbenefitalliance.com/colorado/routt/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 56,
+          "name": "Saguache County",
+          "url": "https://nationalbenefitalliance.com/colorado/saguache/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 57,
+          "name": "San Juan County",
+          "url": "https://nationalbenefitalliance.com/colorado/san-juan/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 58,
+          "name": "San Miguel County",
+          "url": "https://nationalbenefitalliance.com/colorado/san-miguel/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 59,
+          "name": "Sedgwick County",
+          "url": "https://nationalbenefitalliance.com/colorado/sedgwick/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 60,
+          "name": "Summit County",
+          "url": "https://nationalbenefitalliance.com/colorado/summit/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 61,
+          "name": "Teller County",
+          "url": "https://nationalbenefitalliance.com/colorado/teller/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 62,
+          "name": "Washington County",
+          "url": "https://nationalbenefitalliance.com/colorado/washington/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 63,
+          "name": "Weld County",
+          "url": "https://nationalbenefitalliance.com/colorado/weld/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 64,
+          "name": "Yuma County",
+          "url": "https://nationalbenefitalliance.com/colorado/yuma/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

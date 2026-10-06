@@ -29,47 +29,80 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <!-- JSON-LD Schema -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/resources/senior-services/#page",
-        "url": "https://nationalbenefitalliance.com/resources/senior-services/",
-        "name": "Senior Services & Programs | Meals on Wheels, Medicare Help & Elder Care",
-        "description": "Find senior services in your county: Meals on Wheels, Medicare counseling, home care assistance, senior centers, caregiver support, and elder abuse prevention.",
-        "isPartOf": {"@id": "https://nationalbenefitalliance.com/#website"},
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type":"ListItem","position":1,"name":"Home","item":"https://nationalbenefitalliance.com/"},
-            {"@type":"ListItem","position":2,"name":"Resources","item":"https://nationalbenefitalliance.com/resources/"},
-            {"@type":"ListItem","position":3,"name":"Senior Services","item":"https://nationalbenefitalliance.com/resources/senior-services/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {"@type":"Question","name":"What is Meals on Wheels?","acceptedAnswer":{"@type":"Answer","text":"Meals on Wheels is a network of community programs that deliver nutritious meals to homebound seniors and serve meals at senior centers. Beyond food, the daily visit provides a wellness check and reduces social isolation."}},
-          {"@type":"Question","name":"What does my Area Agency on Aging do?","acceptedAnswer":{"@type":"Answer","text":"Your local Area Agency on Aging (AAA) is the gateway to senior services in your community. They provide information and referral, benefits counseling, care management, meal programs, transportation, in-home services, and caregiver support."}},
-          {"@type":"Question","name":"How do I get free Medicare help?","acceptedAnswer":{"@type":"Answer","text":"Contact your State Health Insurance Assistance Program (SHIP) for free, unbiased Medicare counseling. SHIP counselors can help you choose plans, understand benefits, resolve billing issues, and file appeals."}}
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://nationalbenefitalliance.com/resources/senior-services/#page",
+      "url": "https://nationalbenefitalliance.com/resources/senior-services/",
+      "name": "Senior Services & Programs",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
       },
-      {
-        "@type": "HowTo",
-        "name": "How to Apply for Senior Services",
-        "description": "Step-by-step guide to accessing senior services programs in your county.",
-        "step": [
-          {"@type":"HowToStep","position":1,"name":"Call your Area Agency on Aging","text":"Call your Area Agency on Aging. Your AAA is the single best starting point. Find the phone number on your county page or call the Eldercare Locator at 1-800-677-1116."},
-          {"@type":"HowToStep","position":2,"name":"Request an assessment","text":"Request an assessment. A care manager can assess your needs and connect you with the right combination of services — meals, transportation, home care, and more."},
-          {"@type":"HowToStep","position":3,"name":"Enroll in Meals on Wheels","text":"Enroll in Meals on Wheels. Call your local Meals on Wheels program or ask your AAA for a referral. Home-delivered meals typically start within days of enrollment."},
-          {"@type":"HowToStep","position":4,"name":"Schedule Medicare counseling","text":"Schedule Medicare counseling. Contact your SHIP counselor for free, one-on-one help understanding your Medicare options, especially during Open Enrollment (October 15 – December 7)."},
-          {"@type":"HowToStep","position":5,"name":"Report concerns","text":"Report concerns. If you suspect elder abuse or neglect, contact Adult Protective Services through your county page or call the Eldercare Locator."}
-        ]
-      }
-    ]
-  }
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Resources",
+          "item": "https://nationalbenefitalliance.com/resources/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Senior Services",
+          "item": "https://nationalbenefitalliance.com/resources/senior-services/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

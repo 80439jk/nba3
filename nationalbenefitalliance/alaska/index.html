@@ -19,49 +19,284 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta property="og:url" content="https://nationalbenefitalliance.com/alaska/" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "GovernmentOrganization",
-        "@id": "https://nationalbenefitalliance.com/alaska/#org",
-        "name": "National Benefit Alliance – Alaska Resource Center",
-        "url": "https://nationalbenefitalliance.com/alaska/",
-        "description": "Free boroughs & census areas-by-borough resource guide for Alaska residents seeking government and community assistance programs.",
-        "areaServed": {
-          "@type": "State",
-          "name": "Alaska",
-          "sameAs": "https://www.wikidata.org/wiki/Q797"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/alaska/#page",
-        "url": "https://nationalbenefitalliance.com/alaska/",
-        "name": "Alaska Boroughs & Census Areas Resource Center",
-        "description": "Browse all 33 Alaska Boroughs & Census Areas for community benefit resources.",
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem","position": 1,"name": "Home","item": "https://nationalbenefitalliance.com/"},
-            {"@type": "ListItem","position": 2,"name": "Alaska","item": "https://nationalbenefitalliance.com/alaska/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "ItemList",
-        "name": "Alaska Boroughs & Census Areas Resource Guides",
-        "numberOfItems": 33,
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Anchorage Resources","url":"https://nationalbenefitalliance.com/alaska/anchorage/"},
-          {"@type":"ListItem","position":2,"name":"Matanuska Susitna Resources","url":"https://nationalbenefitalliance.com/alaska/matanuska-susitna/"},
-          {"@type":"ListItem","position":3,"name":"Fairbanks North Star Resources","url":"https://nationalbenefitalliance.com/alaska/fairbanks-north-star/"},
-          {"@type":"ListItem","position":4,"name":"Kenai Peninsula Resources","url":"https://nationalbenefitalliance.com/alaska/kenai-peninsula/"},
-          {"@type":"ListItem","position":5,"name":"Juneau Resources","url":"https://nationalbenefitalliance.com/alaska/city-and-borough-of-juneau/"},
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://nationalbenefitalliance.com/alaska/#page",
+      "url": "https://nationalbenefitalliance.com/alaska/",
+      "name": "Assistance programs by borough in Alaska",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
+      },
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US",
+      "about": {
+        "@type": "AdministrativeArea",
+        "name": "Alaska"
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Alaska",
+          "item": "https://nationalbenefitalliance.com/alaska/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Alaska boroughs and census areas",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 33,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Aleutians East",
+          "url": "https://nationalbenefitalliance.com/alaska/aleutians-east/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Aleutians West",
+          "url": "https://nationalbenefitalliance.com/alaska/aleutians-west/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Anchorage",
+          "url": "https://nationalbenefitalliance.com/alaska/anchorage/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Bethel",
+          "url": "https://nationalbenefitalliance.com/alaska/bethel/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Bristol Bay",
+          "url": "https://nationalbenefitalliance.com/alaska/bristol-bay/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Chugach",
+          "url": "https://nationalbenefitalliance.com/alaska/chugach/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Copper River",
+          "url": "https://nationalbenefitalliance.com/alaska/copper-river/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Denali",
+          "url": "https://nationalbenefitalliance.com/alaska/denali/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Dillingham",
+          "url": "https://nationalbenefitalliance.com/alaska/dillingham/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Fairbanks North Star",
+          "url": "https://nationalbenefitalliance.com/alaska/fairbanks-north-star/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Haines",
+          "url": "https://nationalbenefitalliance.com/alaska/haines/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "Hoonah Angoon",
+          "url": "https://nationalbenefitalliance.com/alaska/hoonah-angoon/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Juneau",
+          "url": "https://nationalbenefitalliance.com/alaska/city-and-borough-of-juneau/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Juneau",
+          "url": "https://nationalbenefitalliance.com/alaska/juneau-city-and/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Kenai Peninsula",
+          "url": "https://nationalbenefitalliance.com/alaska/kenai-peninsula/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "Ketchikan Gateway",
+          "url": "https://nationalbenefitalliance.com/alaska/ketchikan-gateway/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "Kodiak Island",
+          "url": "https://nationalbenefitalliance.com/alaska/kodiak-island/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "Kusilvak",
+          "url": "https://nationalbenefitalliance.com/alaska/kusilvak/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "name": "Lake And Peninsula",
+          "url": "https://nationalbenefitalliance.com/alaska/lake-and-peninsula/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "name": "Matanuska Susitna",
+          "url": "https://nationalbenefitalliance.com/alaska/matanuska-susitna/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "name": "Municipality Of Anchorage",
+          "url": "https://nationalbenefitalliance.com/alaska/municipality-of-anchorage/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "name": "Nome",
+          "url": "https://nationalbenefitalliance.com/alaska/nome/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "name": "North Slope",
+          "url": "https://nationalbenefitalliance.com/alaska/north-slope/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "name": "Northwest Arctic",
+          "url": "https://nationalbenefitalliance.com/alaska/northwest-arctic/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "name": "Petersburg",
+          "url": "https://nationalbenefitalliance.com/alaska/petersburg/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "name": "Prince Of Wales Hyder",
+          "url": "https://nationalbenefitalliance.com/alaska/prince-of-wales-hyder/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "name": "Prince Of Wales Outer Ketchikan",
+          "url": "https://nationalbenefitalliance.com/alaska/prince-of-wales-outer-ketchikan/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "name": "Sitka",
+          "url": "https://nationalbenefitalliance.com/alaska/sitka-city-and/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "name": "Skagway",
+          "url": "https://nationalbenefitalliance.com/alaska/skagway/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "name": "Southeast Fairbanks",
+          "url": "https://nationalbenefitalliance.com/alaska/southeast-fairbanks/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 31,
+          "name": "Wrangell",
+          "url": "https://nationalbenefitalliance.com/alaska/wrangell-city-and/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 32,
+          "name": "Yakutat",
+          "url": "https://nationalbenefitalliance.com/alaska/yakutat-city-and/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 33,
+          "name": "Yukon Koyukuk",
+          "url": "https://nationalbenefitalliance.com/alaska/yukon-koyukuk/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

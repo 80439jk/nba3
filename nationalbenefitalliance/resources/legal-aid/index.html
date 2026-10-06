@@ -29,47 +29,80 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <!-- JSON-LD Schema -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/resources/legal-aid/#page",
-        "url": "https://nationalbenefitalliance.com/resources/legal-aid/",
-        "name": "Free Legal Aid & Advocacy | Tenant Rights, Immigration & Consumer Protection",
-        "description": "Find free legal services, tenant rights advocacy, immigration assistance, disability rights, and consumer protection resources in your county.",
-        "isPartOf": {"@id": "https://nationalbenefitalliance.com/#website"},
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type":"ListItem","position":1,"name":"Home","item":"https://nationalbenefitalliance.com/"},
-            {"@type":"ListItem","position":2,"name":"Resources","item":"https://nationalbenefitalliance.com/resources/"},
-            {"@type":"ListItem","position":3,"name":"Legal Aid & Advocacy","item":"https://nationalbenefitalliance.com/resources/legal-aid/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {"@type":"Question","name":"What is legal aid?","acceptedAnswer":{"@type":"Answer","text":"Legal aid organizations provide free civil legal services to low-income individuals. They handle cases involving housing, family law, consumer issues, immigration, public benefits, and disability rights."}},
-          {"@type":"Question","name":"How do I qualify for free legal help?","acceptedAnswer":{"@type":"Answer","text":"Most legal aid offices serve people earning below 125–200% of the federal poverty level. Some cases (domestic violence, veteran issues) may be accepted regardless of income. Call your local legal aid office for a free screening."}},
-          {"@type":"Question","name":"Does legal aid handle criminal cases?","acceptedAnswer":{"@type":"Answer","text":"Generally no. Legal aid focuses on civil matters. If you need a criminal defense attorney and cannot afford one, you have a constitutional right to a public defender appointed by the court."}}
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://nationalbenefitalliance.com/resources/legal-aid/#page",
+      "url": "https://nationalbenefitalliance.com/resources/legal-aid/",
+      "name": "Free Legal Aid & Advocacy",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
       },
-      {
-        "@type": "HowTo",
-        "name": "How to Apply for Legal Aid & Advocacy",
-        "description": "Step-by-step guide to accessing legal aid & advocacy programs in your county.",
-        "step": [
-          {"@type":"HowToStep","position":1,"name":"Contact your local legal aid office","text":"Contact your local legal aid office. Find the legal aid organization serving your county on our county pages. Call their intake line to describe your legal issue and schedule a screening."},
-          {"@type":"HowToStep","position":2,"name":"Complete the intake process","text":"Complete the intake process. An intake specialist will ask about your legal issue, income, and household size to determine eligibility. Have recent pay stubs or benefits letters ready."},
-          {"@type":"HowToStep","position":3,"name":"Get assigned an attorney","text":"Get assigned an attorney. If you qualify, you\'ll be matched with a staff attorney or pro bono volunteer. They\'ll handle your case from consultation through resolution."},
-          {"@type":"HowToStep","position":4,"name":"Attend your hearings and appointments","text":"Attend your hearings and appointments. Your attorney will prepare you for any court dates, hearings, or negotiations. Follow their guidance on deadlines and document requests."},
-          {"@type":"HowToStep","position":5,"name":"Know your self-help options","text":"Know your self-help options. Even if you don\'t qualify for full representation, many legal aid offices offer self-help clinics, document preparation, and legal information hotlines."}
-        ]
-      }
-    ]
-  }
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Resources",
+          "item": "https://nationalbenefitalliance.com/resources/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Legal Aid & Advocacy",
+          "item": "https://nationalbenefitalliance.com/resources/legal-aid/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

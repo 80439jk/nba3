@@ -29,47 +29,80 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <!-- JSON-LD Schema -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/resources/food-assistance/#page",
-        "url": "https://nationalbenefitalliance.com/resources/food-assistance/",
-        "name": "Food Assistance Programs | SNAP, WIC, Food Banks & Free Meals",
-        "description": "Find food assistance programs near you: SNAP benefits, WIC, local food banks, free school meals, and senior nutrition. No family should go hungry.",
-        "isPartOf": {"@id": "https://nationalbenefitalliance.com/#website"},
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type":"ListItem","position":1,"name":"Home","item":"https://nationalbenefitalliance.com/"},
-            {"@type":"ListItem","position":2,"name":"Resources","item":"https://nationalbenefitalliance.com/resources/"},
-            {"@type":"ListItem","position":3,"name":"Food Assistance","item":"https://nationalbenefitalliance.com/resources/food-assistance/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {"@type":"Question","name":"What is SNAP?","acceptedAnswer":{"@type":"Answer","text":"SNAP (Supplemental Nutrition Assistance Program), formerly known as food stamps, provides monthly benefits on an EBT card that can be used to buy groceries at most stores. Over 42 million Americans receive SNAP benefits."}},
-          {"@type":"Question","name":"Do I need proof of income for a food bank?","acceptedAnswer":{"@type":"Answer","text":"Most food banks and pantries do not require proof of income. They serve anyone experiencing food insecurity. Simply visit during distribution hours."}},
-          {"@type":"Question","name":"How do I apply for WIC?","acceptedAnswer":{"@type":"Answer","text":"Contact your local WIC clinic or county health department. You'll need to show that you are pregnant, postpartum, or have a child under 5, and that your household income is at or below 185% of the poverty level."}}
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://nationalbenefitalliance.com/resources/food-assistance/#page",
+      "url": "https://nationalbenefitalliance.com/resources/food-assistance/",
+      "name": "Food Assistance Programs",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
       },
-      {
-        "@type": "HowTo",
-        "name": "How to Apply for Food Assistance",
-        "description": "Step-by-step guide to accessing food assistance programs in your county.",
-        "step": [
-          {"@type":"HowToStep","position":1,"name":"Apply for SNAP online or in person","text":"Apply for SNAP online or in person. Visit your state\'s benefits portal or your local SNAP office. You\'ll need proof of identity, income, and residency. Interviews are typically by phone."},
-          {"@type":"HowToStep","position":2,"name":"Find a WIC clinic","text":"Find a WIC clinic. Call your county health department or search our county pages. Bring ID, proof of address, income verification, and your child\'s immunization records."},
-          {"@type":"HowToStep","position":3,"name":"Visit a food bank","text":"Visit a food bank. Locate your nearest food bank or pantry through our county pages or feedingamerica.org. Many offer drive-through distribution and don\'t require appointments."},
-          {"@type":"HowToStep","position":4,"name":"Enroll children in free school meals","text":"Enroll children in free school meals. Complete the application through your child\'s school. If your school participates in Community Eligibility Provision, all students eat free — no application needed."},
-          {"@type":"HowToStep","position":5,"name":"Check for additional programs","text":"Check for additional programs. Many states offer farmers market vouchers, summer feeding sites, and commodity distribution. Check your county page for the full list of food programs."}
-        ]
-      }
-    ]
-  }
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Resources",
+          "item": "https://nationalbenefitalliance.com/resources/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Food Assistance",
+          "item": "https://nationalbenefitalliance.com/resources/food-assistance/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

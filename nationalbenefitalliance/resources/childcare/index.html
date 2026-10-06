@@ -29,47 +29,80 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <!-- JSON-LD Schema -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/resources/childcare/#page",
-        "url": "https://nationalbenefitalliance.com/resources/childcare/",
-        "name": "Childcare & Education Programs | Free Pre-K, Head Start & School Help",
-        "description": "Find childcare subsidies, Head Start, free Pre-K, after-school programs, school supply assistance, and education programs for families in your county.",
-        "isPartOf": {"@id": "https://nationalbenefitalliance.com/#website"},
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type":"ListItem","position":1,"name":"Home","item":"https://nationalbenefitalliance.com/"},
-            {"@type":"ListItem","position":2,"name":"Resources","item":"https://nationalbenefitalliance.com/resources/"},
-            {"@type":"ListItem","position":3,"name":"Childcare & Education","item":"https://nationalbenefitalliance.com/resources/childcare/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {"@type":"Question","name":"What is Head Start?","acceptedAnswer":{"@type":"Answer","text":"Head Start is a federally funded program that provides free early childhood education, health screenings, nutrition, and family support to children from low-income families, from birth to age 5."}},
-          {"@type":"Question","name":"How do I get childcare subsidies?","acceptedAnswer":{"@type":"Answer","text":"Apply through your state's childcare assistance program. You typically need to be working, in school, or in job training, and your household income must be below your state's limit (usually around 85% of State Median Income)."}},
-          {"@type":"Question","name":"Is Pre-K free?","acceptedAnswer":{"@type":"Answer","text":"Many states offer free Pre-K for 4-year-olds, and some include 3-year-olds. Availability and eligibility vary by state. Check with your local school district for enrollment information."}}
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://nationalbenefitalliance.com/resources/childcare/#page",
+      "url": "https://nationalbenefitalliance.com/resources/childcare/",
+      "name": "Childcare & Education Programs",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
       },
-      {
-        "@type": "HowTo",
-        "name": "How to Apply for Childcare & Education",
-        "description": "Step-by-step guide to accessing childcare & education programs in your county.",
-        "step": [
-          {"@type":"HowToStep","position":1,"name":"Contact your Child Care Resource & Referral agency","text":"Contact your Child Care Resource & Referral agency. Your local CCR&R can help you find licensed childcare, check subsidy eligibility, and start the application process. Find yours on our county pages."},
-          {"@type":"HowToStep","position":2,"name":"Apply for childcare subsidies","text":"Apply for childcare subsidies. Apply through your state\'s childcare assistance office. You\'ll need proof of income, work schedule or school enrollment, and your child\'s birth certificate."},
-          {"@type":"HowToStep","position":3,"name":"Enroll in Head Start","text":"Enroll in Head Start. Contact your local Head Start center directly. Priority goes to families below the poverty line, but foster children, children with disabilities, and homeless families also qualify."},
-          {"@type":"HowToStep","position":4,"name":"Check your school district for Pre-K","text":"Check your school district for Pre-K. Ask your local school district about free Pre-K enrollment. Registration typically opens in spring for the following fall."},
-          {"@type":"HowToStep","position":5,"name":"Claim your tax credits","text":"Claim your tax credits. File your federal tax return to claim the Child Tax Credit and Earned Income Tax Credit. Free filing is available through IRS Free File or VITA sites."}
-        ]
-      }
-    ]
-  }
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Resources",
+          "item": "https://nationalbenefitalliance.com/resources/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Childcare & Education",
+          "item": "https://nationalbenefitalliance.com/resources/childcare/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

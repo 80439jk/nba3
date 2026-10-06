@@ -29,47 +29,80 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <!-- JSON-LD Schema -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/resources/healthcare/#page",
-        "url": "https://nationalbenefitalliance.com/resources/healthcare/",
-        "name": "Healthcare & Medicaid Programs | Free & Low-Cost Medical Coverage",
-        "description": "Find free and low-cost healthcare: Medicaid, CHIP for children, community health centers, free clinics, mental health services, and prescription assistance.",
-        "isPartOf": {"@id": "https://nationalbenefitalliance.com/#website"},
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type":"ListItem","position":1,"name":"Home","item":"https://nationalbenefitalliance.com/"},
-            {"@type":"ListItem","position":2,"name":"Resources","item":"https://nationalbenefitalliance.com/resources/"},
-            {"@type":"ListItem","position":3,"name":"Healthcare & Medicaid","item":"https://nationalbenefitalliance.com/resources/healthcare/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {"@type":"Question","name":"What is Medicaid?","acceptedAnswer":{"@type":"Answer","text":"Medicaid is a joint federal-state program that provides free or low-cost health coverage to low-income individuals and families. It covers doctor visits, hospital stays, prescriptions, preventive care, and more."}},
-          {"@type":"Question","name":"What is the difference between Medicaid and Medicare?","acceptedAnswer":{"@type":"Answer","text":"Medicaid is based on income and serves low-income individuals of any age. Medicare is based on age (65+) or disability status regardless of income. Some people qualify for both."}},
-          {"@type":"Question","name":"Can I visit a community health center without insurance?","acceptedAnswer":{"@type":"Answer","text":"Yes. Federally Qualified Health Centers are required by law to serve all patients regardless of insurance status or ability to pay. Fees are based on a sliding scale tied to your income."}}
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://nationalbenefitalliance.com/resources/healthcare/#page",
+      "url": "https://nationalbenefitalliance.com/resources/healthcare/",
+      "name": "Healthcare & Medicaid Programs",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
       },
-      {
-        "@type": "HowTo",
-        "name": "How to Apply for Healthcare & Medicaid",
-        "description": "Step-by-step guide to accessing healthcare & medicaid programs in your county.",
-        "step": [
-          {"@type":"HowToStep","position":1,"name":"Check if you qualify for Medicaid","text":"Check if you qualify for Medicaid. Visit your state\'s Medicaid website or healthcare.gov. Income limits vary by state. In expansion states, most adults under 138% FPL qualify."},
-          {"@type":"HowToStep","position":2,"name":"Apply online, by phone, or in person","text":"Apply online, by phone, or in person. Most states allow online Medicaid applications. You can also call your local SNAP/Medicaid office or apply in person at your county social services office."},
-          {"@type":"HowToStep","position":3,"name":"Find a community health center","text":"Find a community health center. Search our county pages or findahealthcenter.hrsa.gov to locate FQHCs near you. They accept Medicaid, Medicare, private insurance, and uninsured patients."},
-          {"@type":"HowToStep","position":4,"name":"Ask about prescription assistance","text":"Ask about prescription assistance. If you can\'t afford medications, ask your doctor or pharmacist about patient assistance programs, $4 generics, and state pharmaceutical assistance programs."},
-          {"@type":"HowToStep","position":5,"name":"Know your crisis resources","text":"Know your crisis resources. Save 988 (Suicide & Crisis Lifeline) in your phone. Your county page lists local crisis centers and mental health providers."}
-        ]
-      }
-    ]
-  }
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Resources",
+          "item": "https://nationalbenefitalliance.com/resources/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Healthcare & Medicaid",
+          "item": "https://nationalbenefitalliance.com/resources/healthcare/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

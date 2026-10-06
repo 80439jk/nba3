@@ -19,49 +19,806 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta property="og:url" content="https://nationalbenefitalliance.com/kentucky/" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "GovernmentOrganization",
-        "@id": "https://nationalbenefitalliance.com/kentucky/#org",
-        "name": "National Benefit Alliance – Kentucky County Resources Resource Center",
-        "url": "https://nationalbenefitalliance.com/kentucky/",
-        "description": "Free counties-by-countie resource guide for Kentucky residents seeking government and community assistance programs.",
-        "areaServed": {
-          "@type": "State",
-          "name": "Kentucky",
-          "sameAs": "https://www.wikidata.org/wiki/Q1603"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/kentucky/#page",
-        "url": "https://nationalbenefitalliance.com/kentucky/",
-        "name": "Kentucky County Resources",
-        "description": "Browse all 120 Kentucky counties for community benefit resources.",
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem","position": 1,"name": "Home","item": "https://nationalbenefitalliance.com/"},
-            {"@type": "ListItem","position": 2,"name": "Kentucky","item": "https://nationalbenefitalliance.com/kentucky/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "ItemList",
-        "name": "Kentucky County Resources Resource Guides",
-        "numberOfItems": 120,
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Jefferson Counties Resources","url":"https://nationalbenefitalliance.com/kentucky/jefferson/"},
-          {"@type":"ListItem","position":2,"name":"Fayette Counties Resources","url":"https://nationalbenefitalliance.com/kentucky/fayette/"},
-          {"@type":"ListItem","position":3,"name":"Kenton Counties Resources","url":"https://nationalbenefitalliance.com/kentucky/kenton/"},
-          {"@type":"ListItem","position":4,"name":"Boone Counties Resources","url":"https://nationalbenefitalliance.com/kentucky/boone/"},
-          {"@type":"ListItem","position":5,"name":"Warren Counties Resources","url":"https://nationalbenefitalliance.com/kentucky/warren/"}
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://nationalbenefitalliance.com/kentucky/#page",
+      "url": "https://nationalbenefitalliance.com/kentucky/",
+      "name": "Assistance programs by county in Kentucky",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
+      },
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US",
+      "about": {
+        "@type": "AdministrativeArea",
+        "name": "Kentucky"
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Kentucky",
+          "item": "https://nationalbenefitalliance.com/kentucky/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Kentucky counties",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 120,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Adair Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/adair/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Allen Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/allen/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Anderson Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/anderson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Ballard Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/ballard/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Barren Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/barren/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Bath Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/bath/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Bell Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/bell/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Boone Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/boone/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Bourbon Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/bourbon/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Boyd Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/boyd/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Boyle Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/boyle/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "Bracken Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/bracken/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Breathitt Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/breathitt/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Breckinridge Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/breckinridge/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Bullitt Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/bullitt/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "Butler Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/butler/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "Caldwell Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/caldwell/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "Calloway Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/calloway/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "name": "Campbell Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/campbell/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "name": "Carlisle Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/carlisle/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "name": "Carroll Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/carroll/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "name": "Carter Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/carter/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "name": "Casey Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/casey/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "name": "Christian Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/christian/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "name": "Clark Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/clark/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "name": "Clay Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/clay/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "name": "Clinton Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/clinton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "name": "Crittenden Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/crittenden/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "name": "Cumberland Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/cumberland/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "name": "Daviess Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/daviess/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 31,
+          "name": "Edmonson Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/edmonson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 32,
+          "name": "Elliott Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/elliott/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 33,
+          "name": "Estill Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/estill/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 34,
+          "name": "Fayette Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/fayette/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 35,
+          "name": "Fleming Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/fleming/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 36,
+          "name": "Floyd Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/floyd/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 37,
+          "name": "Franklin Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/franklin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 38,
+          "name": "Fulton Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/fulton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 39,
+          "name": "Gallatin Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/gallatin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 40,
+          "name": "Garrard Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/garrard/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 41,
+          "name": "Grant Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/grant/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 42,
+          "name": "Graves Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/graves/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 43,
+          "name": "Grayson Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/grayson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 44,
+          "name": "Green Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/green/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 45,
+          "name": "Greenup Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/greenup/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 46,
+          "name": "Hancock Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/hancock/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 47,
+          "name": "Hardin Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/hardin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 48,
+          "name": "Harlan Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/harlan/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 49,
+          "name": "Harrison Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/harrison/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 50,
+          "name": "Hart Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/hart/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 51,
+          "name": "Henderson Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/henderson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 52,
+          "name": "Henry Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/henry/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 53,
+          "name": "Hickman Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/hickman/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 54,
+          "name": "Hopkins Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/hopkins/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 55,
+          "name": "Jackson Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/jackson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 56,
+          "name": "Jefferson Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/jefferson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 57,
+          "name": "Jessamine Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/jessamine/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 58,
+          "name": "Johnson Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/johnson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 59,
+          "name": "Kenton Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/kenton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 60,
+          "name": "Knott Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/knott/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 61,
+          "name": "Knox Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/knox/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 62,
+          "name": "Larue Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/larue/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 63,
+          "name": "Laurel Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/laurel/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 64,
+          "name": "Lawrence Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/lawrence/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 65,
+          "name": "Lee Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/lee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 66,
+          "name": "Leslie Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/leslie/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 67,
+          "name": "Letcher Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/letcher/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 68,
+          "name": "Lewis Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/lewis/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 69,
+          "name": "Lincoln Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/lincoln/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 70,
+          "name": "Livingston Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/livingston/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 71,
+          "name": "Logan Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/logan/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 72,
+          "name": "Lyon Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/lyon/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 73,
+          "name": "Madison Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/madison/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 74,
+          "name": "Magoffin Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/magoffin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 75,
+          "name": "Marion Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/marion/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 76,
+          "name": "Marshall Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/marshall/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 77,
+          "name": "Martin Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/martin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 78,
+          "name": "Mason Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/mason/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 79,
+          "name": "Mccracken Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/mccracken/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 80,
+          "name": "Mccreary Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/mccreary/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 81,
+          "name": "Mclean Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/mclean/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 82,
+          "name": "Meade Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/meade/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 83,
+          "name": "Menifee Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/menifee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 84,
+          "name": "Mercer Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/mercer/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 85,
+          "name": "Metcalfe Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/metcalfe/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 86,
+          "name": "Monroe Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/monroe/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 87,
+          "name": "Montgomery Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/montgomery/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 88,
+          "name": "Morgan Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/morgan/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 89,
+          "name": "Muhlenberg Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/muhlenberg/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 90,
+          "name": "Nelson Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/nelson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 91,
+          "name": "Nicholas Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/nicholas/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 92,
+          "name": "Ohio Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/ohio/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 93,
+          "name": "Oldham Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/oldham/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 94,
+          "name": "Owen Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/owen/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 95,
+          "name": "Owsley Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/owsley/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 96,
+          "name": "Pendleton Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/pendleton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 97,
+          "name": "Perry Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/perry/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 98,
+          "name": "Pike Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/pike/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 99,
+          "name": "Powell Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/powell/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 100,
+          "name": "Pulaski Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/pulaski/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 101,
+          "name": "Robertson Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/robertson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 102,
+          "name": "Rockcastle Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/rockcastle/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 103,
+          "name": "Rowan Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/rowan/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 104,
+          "name": "Russell Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/russell/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 105,
+          "name": "Scott Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/scott/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 106,
+          "name": "Shelby Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/shelby/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 107,
+          "name": "Simpson Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/simpson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 108,
+          "name": "Spencer Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/spencer/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 109,
+          "name": "Taylor Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/taylor/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 110,
+          "name": "Todd Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/todd/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 111,
+          "name": "Trigg Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/trigg/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 112,
+          "name": "Trimble Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/trimble/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 113,
+          "name": "Union Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/union/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 114,
+          "name": "Warren Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/warren/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 115,
+          "name": "Washington Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/washington/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 116,
+          "name": "Wayne Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/wayne/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 117,
+          "name": "Webster Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/webster/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 118,
+          "name": "Whitley Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/whitley/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 119,
+          "name": "Wolfe Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/wolfe/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 120,
+          "name": "Woodford Counties",
+          "url": "https://nationalbenefitalliance.com/kentucky/woodford/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

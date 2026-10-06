@@ -46,401 +46,121 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <!-- ====== SCHEMA.ORG STRUCTURED DATA (JSON-LD) ====== -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-
-      /* ──────────────────────────────────────────────
-         1. ORGANIZATION — National Benefit Alliance
-         ────────────────────────────────────────────── */
-      {
-        "@type": "Organization",
-        "@id": "https://nationalbenefitalliance.com/#organization",
-        "name": "National Benefit Alliance",
-        "alternateName": "NBA",
-        "url": "https://nationalbenefitalliance.com",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://nationalbenefitalliance.com/images/logo.png",
-          "width": 512,
-          "height": 512
-        },
-        "description": "Free resource center helping Americans find government and community assistance programs across all 50 states.",
-        "telephone": "+1-800-605-8906",
-        "email": "help@nationalbenefitalliance.com",
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "US"
-        },
-        "sameAs": [
-          "https://www.facebook.com/nationalbenefitalliance",
-          "https://twitter.com/naborgs"
-        ],
-        "contactPoint": {
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
           "@type": "ContactPoint",
           "telephone": "+1-800-605-8906",
           "contactType": "customer service",
-          "availableLanguage": ["English", "Spanish"],
-          "areaServed": "US"
-        }
-      },
-
-      /* ──────────────────────────────────────────────
-         2. WEBSITE
-         ────────────────────────────────────────────── */
-      {
-        "@type": "WebSite",
-        "@id": "https://nationalbenefitalliance.com/#website",
-        "url": "https://nationalbenefitalliance.com",
-        "name": "National Benefit Alliance",
-        "publisher": {
-          "@id": "https://nationalbenefitalliance.com/#organization"
-        },
-        "inLanguage": "en-US"
-      },
-
-      /* ──────────────────────────────────────────────
-         3. WEBPAGE
-         ────────────────────────────────────────────── */
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/texas/harrison/#page",
-        "url": "https://nationalbenefitalliance.com/texas/harrison/",
-        "name": "Harrison Community Resources | Local Programs – National Benefit Alliance",
-        "description": "Complete 2026 guide to 60+ community assistance programs in Harrison, Texas.",
-        "isPartOf": { "@id": "https://nationalbenefitalliance.com/#website" },
-        "about": { "@id": "https://nationalbenefitalliance.com/texas/harrison/#place" },
-        "datePublished": "2025-10-01",
-        "dateModified": "2026-04-06",
-        "inLanguage": "en-US",
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "@id": "https://nationalbenefitalliance.com/texas/harrison/#breadcrumb",
-          "itemListElement": [
-            {"@type":"ListItem","position":1,"name":"Home","item":"https://nationalbenefitalliance.com/"},
-            {"@type":"ListItem","position":2,"name":"Texas","item":"https://nationalbenefitalliance.com/texas/"},
-            {"@type":"ListItem","position":3,"name":"Harrison","item":"https://nationalbenefitalliance.com/texas/harrison/"}
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
-        },
-        "speakable": {
-          "@type": "SpeakableSpecification",
-          "cssSelector": [".county-hero h1", ".lead", ".resource-category__header h3", ".faq-section dt", ".faq-section dd"]
-        },
-        "mainEntity": { "@id": "https://nationalbenefitalliance.com/texas/harrison/#resourcelist" }
-      },
-
-      /* ──────────────────────────────────────────────
-         4. ADMINISTRATIVE AREA / PLACE — County
-         ────────────────────────────────────────────── */
-      {
-        "@type": ["AdministrativeArea", "Place"],
-        "@id": "https://nationalbenefitalliance.com/texas/harrison/#place",
-        "name": "Harrison",
-        "alternateName": "Harrison, Texas",
-        "description": "Harrison is located in Texas with a population of approximately 66,553 residents. The county seat is Marshall.",
-        "containedInPlace": {
-          "@type": "State",
-          "name": "Texas",
-          "sameAs": "https://www.wikidata.org/wiki/QTX"
-        },
-        "url": "https://nationalbenefitalliance.com/texas/harrison/",
-        "hasMap": "https://www.google.com/maps/place/Harrison+County,+TX",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Marshall",
-          "addressRegion": "TX",
-          "addressCountry": "US"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 31.968599,
-          "longitude": -99.901813
-        },
-        "sameAs": [
-          "https://harrison.gov",
-          "https://en.wikipedia.org/wiki/Harrison_County,_Texas"
-        ]
-      },
-
-      /* ──────────────────────────────────────────────
-         5. GOVERNMENT ORGANIZATION — County Govt
-         ────────────────────────────────────────────── */
-      {
-        "@type": "GovernmentOrganization",
-        "@id": "https://nationalbenefitalliance.com/texas/harrison/#countygovt",
-        "name": "Harrison County Government",
-        "description": "Official government of Harrison, Texas. County seat located in Marshall.",
-        "url": "https://harrison.gov",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Marshall",
-          "addressRegion": "TX",
-          "addressCountry": "US"
-        },
-        "areaServed": { "@id": "https://nationalbenefitalliance.com/texas/harrison/#place" },
-        "sameAs": [
-          "https://harrison.gov",
-          "https://en.wikipedia.org/wiki/Harrison_County,_Texas"
-        ]
-      },
-
-      /* ──────────────────────────────────────────────
-         6. PER-PROGRAM GOVERNMENT SERVICES
-         ────────────────────────────────────────────── */
-
-      /* 6a. LIHEAP */
-      {
-        "@type": "GovernmentService",
-        "@id": "https://nationalbenefitalliance.com/texas/harrison/#liheap",
-        "name": "LIHEAP — Low Income Home Energy Assistance Program",
-        "description": "Federal energy bill assistance and crisis intervention for low-income Harrison residents. Covers electric, gas, propane, and cooling costs.",
-        "serviceType": "Utility Assistance",
-        "category": "Energy Assistance",
-        "provider": {
-          "@type": "GovernmentOrganization",
-          "name": "Texas Department of Housing and Community Affairs (TDHCA)"
-        },
-        "areaServed": { "@id": "https://nationalbenefitalliance.com/texas/harrison/#place" },
-        "audience": {
-          "@type": "Audience",
-          "name": "Low-income Harrison households at or below 60% of State Median Income",
-          "audienceType": "Low-income residents"
-        },
-        "availableChannel": [
-          {
-            "@type": "ServiceChannel",
-            "name": "State LIHEAP Office",
-            "servicePhone": "+1-211"
-          }
-        ],
-        "termsOfService": "Household income must be at or below 60% of State Median Income. Documents: 30-day income proof, recent utility bill, Social Security numbers.",
-        "hoursAvailable": {
-          "@type": "OpeningHoursSpecification",
-          "description": "Seasonal: typically October through May or until funds exhausted"
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-
-      /* 6b. SNAP */
-      {
-        "@type": "GovernmentService",
-        "@id": "https://nationalbenefitalliance.com/texas/harrison/#snap",
-        "name": "SNAP (Food Assistance) — Supplemental Nutrition Assistance Program",
-        "description": "Monthly EBT food benefits for low-income Harrison residents.",
-        "serviceType": "Food Assistance",
-        "category": "Nutrition Assistance",
-        "provider": {
-          "@type": "GovernmentOrganization",
-          "name": "Texas Department of Human Services"
-        },
-        "areaServed": { "@id": "https://nationalbenefitalliance.com/texas/harrison/#place" },
-        "audience": {
-          "@type": "Audience",
-          "name": "Harrison households with gross income at or below 130-200% FPL",
-          "audienceType": "Low-income residents"
-        },
-        "availableChannel": [
-          {
-            "@type": "ServiceChannel",
-            "name": "Online Application",
-            "serviceUrl": ""
-          }
-        ],
-        "termsOfService": "Gross income limits vary by household size and state. Processing: 30 days standard, 5 days expedited."
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://nationalbenefitalliance.com/texas/harrison/#page",
+      "url": "https://nationalbenefitalliance.com/texas/harrison/",
+      "name": "Community resources in Harrison, Texas",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
       },
-
-      /* 6c. Section 8 Housing */
-      {
-        "@type": "GovernmentService",
-        "@id": "https://nationalbenefitalliance.com/texas/harrison/#section8",
-        "name": "Section 8 Housing Choice Voucher Program — Harrison",
-        "description": "Federally-funded rental subsidy vouchers for Harrison residents. Covers the difference between 30% of tenant income and fair market rent.",
-        "serviceType": "Housing Assistance",
-        "category": "Rental Assistance",
-        "areaServed": { "@id": "https://nationalbenefitalliance.com/texas/harrison/#place" },
-        "audience": {
-          "@type": "Audience",
-          "name": "Harrison households with income below 50% of Area Median Income",
-          "audienceType": "Low-income residents"
-        }
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-
-      /* 6d. Emergency Rental Assistance */
-      {
-        "@type": "GovernmentService",
-        "@id": "https://nationalbenefitalliance.com/texas/harrison/#erap",
-        "name": "Emergency Rental Assistance Program — Harrison",
-        "description": "Emergency rental assistance for Harrison residents facing eviction.",
-        "serviceType": "Housing Assistance",
-        "category": "Emergency Rental Assistance",
-        "areaServed": { "@id": "https://nationalbenefitalliance.com/texas/harrison/#place" }
-      },
-
-      /* 6e. Medicaid */
-      {
-        "@type": "GovernmentService",
-        "@id": "https://nationalbenefitalliance.com/texas/harrison/#medicaid",
-        "name": "Texas Medicaid",
-        "description": "Free or low-cost health insurance for eligible Harrison residents.",
-        "serviceType": "Healthcare",
-        "category": "Health Insurance",
-        "provider": {
-          "@type": "GovernmentOrganization",
-          "name": "Texas Department of Health"
-        },
-        "areaServed": { "@id": "https://nationalbenefitalliance.com/texas/harrison/#place" },
-        "audience": {
-          "@type": "Audience",
-          "name": "Harrison residents at or below 138% FPL (adults)",
-          "audienceType": "Low-income residents"
-        }
-      },
-
-      /* 6f. Unemployment */
-      {
-        "@type": "GovernmentService",
-        "@id": "https://nationalbenefitalliance.com/texas/harrison/#unemployment",
-        "name": "Texas Unemployment Insurance",
-        "description": "State unemployment benefits for Harrison workers who lost their job through no fault of their own.",
-        "serviceType": "Employment",
-        "category": "Unemployment Benefits",
-        "provider": {
-          "@type": "GovernmentOrganization",
-          "name": "Texas Department of Labor"
-        },
-        "areaServed": { "@id": "https://nationalbenefitalliance.com/texas/harrison/#place" },
-        "availableChannel": [
-          {
-            "@type": "ServiceChannel",
-            "name": "Online Filing",
-            "serviceUrl": "https://www.twc.texas.gov"
-          }
-        ]
-      },
-
-      /* ──────────────────────────────────────────────
-         7. NON-PROFIT / FAITH-BASED ORGANIZATIONS
-         ────────────────────────────────────────────── */
-
-      /* 7a. Catholic Charities */
-      {
-        "@type": ["NGO", "Organization"],
-        "@id": "https://nationalbenefitalliance.com/texas/harrison/#catholiccharities",
-        "name": "Catholic Charities / Catholic Social Services",
-        "description": "One of Harrison's largest faith-based social service networks. Food pantries, emergency financial assistance, immigration services, housing counseling, and senior care. Open to all regardless of faith.",
-        "url": "https://www.catholiccharitiesusa.org",
-        "nonprofitStatus": "https://schema.org/Charitable",
-        "areaServed": { "@id": "https://nationalbenefitalliance.com/texas/harrison/#place" },
-        "knowsAbout": ["food assistance", "emergency financial aid", "immigration services", "senior services", "housing counseling"]
-      },
-
-      /* 7b. Salvation Army */
-      {
-        "@type": ["NGO", "Organization"],
-        "@id": "https://nationalbenefitalliance.com/texas/harrison/#salvationarmy",
-        "name": "Salvation Army — Harrison",
-        "description": "Comprehensive emergency services in Harrison. Food pantries, emergency shelter, utility assistance, disaster relief, and youth programs.",
-        "url": "https://www.salvationarmyusa.org",
-        "telephone": "+1-800-725-2769",
-        "nonprofitStatus": "https://schema.org/Charitable",
-        "areaServed": { "@id": "https://nationalbenefitalliance.com/texas/harrison/#place" },
-        "knowsAbout": ["emergency shelter", "food assistance", "utility assistance", "disaster relief", "youth programs"]
-      },
-
-      /* 7c. Jewish United Fund / Federation */
-      {
-        "@type": ["NGO", "Organization"],
-        "@id": "https://nationalbenefitalliance.com/texas/harrison/#juf",
-        "name": "Jewish United Fund / Local Jewish Federation",
-        "description": "Supports social service agencies providing food assistance, career counseling, mental health services, senior care, and disability support in Harrison.",
-        "url": "https://www.jewishfederations.org",
-        "nonprofitStatus": "https://schema.org/Charitable",
-        "areaServed": { "@id": "https://nationalbenefitalliance.com/texas/harrison/#place" }
-      },
-
-      /* ──────────────────────────────────────────────
-         8. ITEM LIST — Resource Categories
-         ────────────────────────────────────────────── */
-      {
-        "@type": "ItemList",
-        "@id": "https://nationalbenefitalliance.com/texas/harrison/#resourcelist",
-        "name": "Harrison Community Resource Categories",
-        "description": "Complete directory of community assistance programs available in Harrison, Texas.",
-        "numberOfItems": 10,
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Utility Assistance","url":"https://nationalbenefitalliance.com/texas/harrison/#utilities","description":"LIHEAP, utility programs, and crisis referrals"},
-          {"@type":"ListItem","position":2,"name":"Housing &amp; Rental Assistance","url":"https://nationalbenefitalliance.com/texas/harrison/#housing","description":"Emergency rental aid, Section 8 vouchers, shelter"},
-          {"@type":"ListItem","position":3,"name":"Food Assistance","url":"https://nationalbenefitalliance.com/texas/harrison/#food","description":"SNAP food stamps, food banks, WIC nutrition"},
-          {"@type":"ListItem","position":4,"name":"Healthcare","url":"https://nationalbenefitalliance.com/texas/harrison/#healthcare","description":"Texas Medicaid, community health centers"},
-          {"@type":"ListItem","position":5,"name":"Employment &amp; Unemployment","url":"https://nationalbenefitalliance.com/texas/harrison/#employment","description":"Unemployment insurance, workforce development, job training"},
-          {"@type":"ListItem","position":6,"name":"Senior Services","url":"https://nationalbenefitalliance.com/texas/harrison/#seniors","description":"Area Agency on Aging, Meals on Wheels, senior programs"},
-          {"@type":"ListItem","position":7,"name":"Disability Services","url":"https://nationalbenefitalliance.com/texas/harrison/#disability","description":"SSI/SSDI, vocational rehabilitation services"},
-          {"@type":"ListItem","position":8,"name":"Child Care &amp; Education","url":"https://nationalbenefitalliance.com/texas/harrison/#childcare","description":"Childcare subsidies, Head Start, Preschool programs"},
-          {"@type":"ListItem","position":9,"name":"Faith-Based &amp; Community Programs","url":"https://nationalbenefitalliance.com/texas/harrison/#faith-based","description":"Catholic Charities, Salvation Army, faith-based community organizations"},
-          {"@type":"ListItem","position":10,"name":"Community &amp; Crisis Services","url":"https://nationalbenefitalliance.com/texas/harrison/#community","description":"211 referral, domestic violence hotline, crisis services"}
-        ]
-      },
-
-      /* ──────────────────────────────────────────────
-         7. FAQ PAGE — 5 Key Questions
-         ────────────────────────────────────────────── */
-      {
-        "@type": "FAQPage",
-        "@id": "https://nationalbenefitalliance.com/texas/harrison/#faq",
-        "mainEntity": [
-          {
-            "@type":"Question",
-            "name":"How do I apply for SNAP in Texas?",
-            "acceptedAnswer":{"@type":"Answer","text":"Contact your local SNAP (Food Assistance) office or visit the state benefits portal. You'll need photo ID, Social Security numbers, proof of income, and proof of housing costs. Processing typically takes 30 days, or 5 days for expedited cases."}
-          },
-          {
-            "@type":"Question",
-            "name":"What is LIHEAP and how do I apply in Harrison?",
-            "acceptedAnswer":{"@type":"Answer","text":"LIHEAP (Low Income Home Energy Assistance Program) provides federal energy bill assistance. Administered by Texas Department of Housing and Community Affairs (TDHCA). You must meet income limits (typically 60% of State Median Income) and provide proof of income and utility bills. Visit the state's benefits portal or call 211 for local application help."}
-          },
-          {
-            "@type":"Question",
-            "name":"Where can I find free food assistance in Harrison?",
-            "acceptedAnswer":{"@type":"Answer","text":"Apply for SNAP food stamps through SNAP (Food Assistance), visit local food banks and food pantries (use 211.org to locate), or contact faith-based organizations in your area. Most food pantries are walk-in with no appointment or application required."}
-          },
-          {
-            "@type":"Question",
-            "name":"What are the income limits for Texas Medicaid in Texas?",
-            "acceptedAnswer":{"@type":"Answer","text":"Medicaid income limits vary by category (adults, children, pregnant women, elderly, disabled). Contact the state Medicaid office or visit your state's benefits portal for exact limits. Many people qualify with no asset test required."}
-          },
-          {
-            "@type":"Question",
-            "name":"How do I file for unemployment in Texas?",
-            "acceptedAnswer":{"@type":"Answer","text":"File for unemployment insurance online at https://www.twc.texas.gov, by phone, or in person at your local unemployment office. You must have lost your job through no fault of your own. Benefits typically last up to 26 weeks."}
-          },
-          {
-            "@type":"Question",
-            "name":"Is the Section 8 waiting list open in Harrison?",
-            "acceptedAnswer":{"@type":"Answer","text":"Section 8 Housing Choice Voucher waitlists open periodically and availability varies by county. Contact your local housing authority or call 211 to check the current status of the waitlist in Harrison. Sign up for email notifications from your local housing authority to be alerted when waitlists reopen."}
-          },
-          {
-            "@type":"Question",
-            "name":"How do I apply for Texas Medicaid in Harrison?",
-            "acceptedAnswer":{"@type":"Answer","text":"Apply for Texas Medicaid through your state benefits portal, by calling the state Medicaid office, or by visiting a local office. Adults 19-64 typically qualify with income at or below 138% FPL. No documents are required for the initial application; verification is requested afterward. Processing takes 45-60 days."}
-          },
-          {
-            "@type":"Question",
-            "name":"Are there food pantries in Harrison that don't require ID?",
-            "acceptedAnswer":{"@type":"Answer","text":"Yes. Most food pantries in Harrison are walk-in with no appointment, ID, or proof of income required. Some sites may ask for a name and zip code for reporting purposes only. Use the interactive map at 211.org or call 211 to locate food pantries near you."}
-          },
-          {
-            "@type":"Question",
-            "name":"Do churches in Harrison offer assistance programs?",
-            "acceptedAnswer":{"@type":"Answer","text":"Yes. Catholic Charities and Catholic Social Services operate food pantries and emergency financial assistance programs across Harrison — open to everyone regardless of faith. The Salvation Army provides food, shelter, utility help, and youth programs at multiple locations. Jewish Federations support career services, mental health, senior care, and disability services through partner agencies. Call 211 for local faith-based assistance."}
-          },
-          {
-            "@type":"Question",
-            "name":"How do I get emergency rental assistance to prevent eviction in Harrison?",
-            "acceptedAnswer":{"@type":"Answer","text":"Contact your local Emergency Rental Assistance Program (ERAP) through the state housing authority, call 211 for referrals, or visit a local Salvation Army location for emergency shelter and move-in assistance. You may need proof of income, lease, and proof of financial hardship. Legal aid organizations can also help with eviction defense."}
-          }
-        ]
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US",
+      "about": {
+        "@type": "AdministrativeArea",
+        "name": "Harrison, Texas"
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Texas",
+          "item": "https://nationalbenefitalliance.com/texas/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Harrison",
+          "item": "https://nationalbenefitalliance.com/texas/harrison/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Resource categories in Harrison, Texas",
+      "numberOfItems": 5,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Utility Assistance",
+          "url": "https://nationalbenefitalliance.com/texas/harrison/#utilities"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Housing & Rental Assistance",
+          "url": "https://nationalbenefitalliance.com/texas/harrison/#housing"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Food Assistance",
+          "url": "https://nationalbenefitalliance.com/texas/harrison/#food"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Faith-Based & Community Organizations",
+          "url": "https://nationalbenefitalliance.com/texas/harrison/#faith-based"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Employment & Unemployment",
+          "url": "https://nationalbenefitalliance.com/texas/harrison/#employment"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <!-- ====== FONTS & STYLES ====== -->

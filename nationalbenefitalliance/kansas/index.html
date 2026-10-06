@@ -19,49 +19,716 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta property="og:url" content="https://nationalbenefitalliance.com/kansas/" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "GovernmentOrganization",
-        "@id": "https://nationalbenefitalliance.com/kansas/#org",
-        "name": "National Benefit Alliance – Kansas Resource Center",
-        "url": "https://nationalbenefitalliance.com/kansas/",
-        "description": "Free county-by-county resource guide for Kansas residents seeking government and community assistance programs.",
-        "areaServed": {
-          "@type": "State",
-          "name": "Kansas",
-          "sameAs": "https://www.wikidata.org/wiki/Q1558"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/kansas/#page",
-        "url": "https://nationalbenefitalliance.com/kansas/",
-        "name": "Kansas County Resource Center",
-        "description": "Browse all 105 Kansas counties for community benefit resources.",
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem","position": 1,"name": "Home","item": "https://nationalbenefitalliance.com/"},
-            {"@type": "ListItem","position": 2,"name": "Kansas","item": "https://nationalbenefitalliance.com/kansas/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "ItemList",
-        "name": "Kansas County Resource Guides",
-        "numberOfItems": 105,
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Johnson County County Resources","url":"https://nationalbenefitalliance.com/kansas/johnson/"},
-          {"@type":"ListItem","position":2,"name":"Sedgwick County County Resources","url":"https://nationalbenefitalliance.com/kansas/sedgwick/"},
-          {"@type":"ListItem","position":3,"name":"Shawnee County County Resources","url":"https://nationalbenefitalliance.com/kansas/shawnee/"},
-          {"@type":"ListItem","position":4,"name":"Wyandotte County County Resources","url":"https://nationalbenefitalliance.com/kansas/wyandotte/"},
-          {"@type":"ListItem","position":5,"name":"Douglas County County Resources","url":"https://nationalbenefitalliance.com/kansas/douglas/"}
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://nationalbenefitalliance.com/kansas/#page",
+      "url": "https://nationalbenefitalliance.com/kansas/",
+      "name": "Assistance programs by county in Kansas",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
+      },
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US",
+      "about": {
+        "@type": "AdministrativeArea",
+        "name": "Kansas"
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Kansas",
+          "item": "https://nationalbenefitalliance.com/kansas/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Kansas counties",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 105,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Allen County",
+          "url": "https://nationalbenefitalliance.com/kansas/allen/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Anderson County",
+          "url": "https://nationalbenefitalliance.com/kansas/anderson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Atchison County",
+          "url": "https://nationalbenefitalliance.com/kansas/atchison/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Barber County",
+          "url": "https://nationalbenefitalliance.com/kansas/barber/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Barton County",
+          "url": "https://nationalbenefitalliance.com/kansas/barton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Bourbon County",
+          "url": "https://nationalbenefitalliance.com/kansas/bourbon/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Brown County",
+          "url": "https://nationalbenefitalliance.com/kansas/brown/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Butler County",
+          "url": "https://nationalbenefitalliance.com/kansas/butler/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Chase County",
+          "url": "https://nationalbenefitalliance.com/kansas/chase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Chautauqua County",
+          "url": "https://nationalbenefitalliance.com/kansas/chautauqua/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Cherokee County",
+          "url": "https://nationalbenefitalliance.com/kansas/cherokee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "Cheyenne County",
+          "url": "https://nationalbenefitalliance.com/kansas/cheyenne/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Clark County",
+          "url": "https://nationalbenefitalliance.com/kansas/clark/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Clay County",
+          "url": "https://nationalbenefitalliance.com/kansas/clay/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Cloud County",
+          "url": "https://nationalbenefitalliance.com/kansas/cloud/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "Coffey County",
+          "url": "https://nationalbenefitalliance.com/kansas/coffey/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "Comanche County",
+          "url": "https://nationalbenefitalliance.com/kansas/comanche/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "Cowley County",
+          "url": "https://nationalbenefitalliance.com/kansas/cowley/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "name": "Crawford County",
+          "url": "https://nationalbenefitalliance.com/kansas/crawford/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "name": "Decatur County",
+          "url": "https://nationalbenefitalliance.com/kansas/decatur/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "name": "Dickinson County",
+          "url": "https://nationalbenefitalliance.com/kansas/dickinson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "name": "Doniphan County",
+          "url": "https://nationalbenefitalliance.com/kansas/doniphan/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "name": "Douglas County",
+          "url": "https://nationalbenefitalliance.com/kansas/douglas/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "name": "Edwards County",
+          "url": "https://nationalbenefitalliance.com/kansas/edwards/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "name": "Elk County",
+          "url": "https://nationalbenefitalliance.com/kansas/elk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "name": "Ellis County",
+          "url": "https://nationalbenefitalliance.com/kansas/ellis/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "name": "Ellsworth County",
+          "url": "https://nationalbenefitalliance.com/kansas/ellsworth/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "name": "Finney County",
+          "url": "https://nationalbenefitalliance.com/kansas/finney/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "name": "Ford County",
+          "url": "https://nationalbenefitalliance.com/kansas/ford/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "name": "Franklin County",
+          "url": "https://nationalbenefitalliance.com/kansas/franklin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 31,
+          "name": "Geary County",
+          "url": "https://nationalbenefitalliance.com/kansas/geary/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 32,
+          "name": "Gove County",
+          "url": "https://nationalbenefitalliance.com/kansas/gove/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 33,
+          "name": "Graham County",
+          "url": "https://nationalbenefitalliance.com/kansas/graham/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 34,
+          "name": "Grant County",
+          "url": "https://nationalbenefitalliance.com/kansas/grant/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 35,
+          "name": "Gray County",
+          "url": "https://nationalbenefitalliance.com/kansas/gray/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 36,
+          "name": "Greeley County",
+          "url": "https://nationalbenefitalliance.com/kansas/greeley/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 37,
+          "name": "Greenwood County",
+          "url": "https://nationalbenefitalliance.com/kansas/greenwood/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 38,
+          "name": "Hamilton County",
+          "url": "https://nationalbenefitalliance.com/kansas/hamilton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 39,
+          "name": "Harper County",
+          "url": "https://nationalbenefitalliance.com/kansas/harper/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 40,
+          "name": "Harvey County",
+          "url": "https://nationalbenefitalliance.com/kansas/harvey/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 41,
+          "name": "Haskell County",
+          "url": "https://nationalbenefitalliance.com/kansas/haskell/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 42,
+          "name": "Hodgeman County",
+          "url": "https://nationalbenefitalliance.com/kansas/hodgeman/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 43,
+          "name": "Jackson County",
+          "url": "https://nationalbenefitalliance.com/kansas/jackson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 44,
+          "name": "Jefferson County",
+          "url": "https://nationalbenefitalliance.com/kansas/jefferson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 45,
+          "name": "Jewell County",
+          "url": "https://nationalbenefitalliance.com/kansas/jewell/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 46,
+          "name": "Johnson County",
+          "url": "https://nationalbenefitalliance.com/kansas/johnson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 47,
+          "name": "Kearny County",
+          "url": "https://nationalbenefitalliance.com/kansas/kearny/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 48,
+          "name": "Kingman County",
+          "url": "https://nationalbenefitalliance.com/kansas/kingman/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 49,
+          "name": "Kiowa County",
+          "url": "https://nationalbenefitalliance.com/kansas/kiowa/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 50,
+          "name": "Labette County",
+          "url": "https://nationalbenefitalliance.com/kansas/labette/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 51,
+          "name": "Lane County",
+          "url": "https://nationalbenefitalliance.com/kansas/lane/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 52,
+          "name": "Leavenworth County",
+          "url": "https://nationalbenefitalliance.com/kansas/leavenworth/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 53,
+          "name": "Lincoln County",
+          "url": "https://nationalbenefitalliance.com/kansas/lincoln/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 54,
+          "name": "Linn County",
+          "url": "https://nationalbenefitalliance.com/kansas/linn/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 55,
+          "name": "Logan County",
+          "url": "https://nationalbenefitalliance.com/kansas/logan/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 56,
+          "name": "Lyon County",
+          "url": "https://nationalbenefitalliance.com/kansas/lyon/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 57,
+          "name": "Marion County",
+          "url": "https://nationalbenefitalliance.com/kansas/marion/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 58,
+          "name": "Marshall County",
+          "url": "https://nationalbenefitalliance.com/kansas/marshall/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 59,
+          "name": "McPherson",
+          "url": "https://nationalbenefitalliance.com/kansas/mcpherson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 60,
+          "name": "Meade County",
+          "url": "https://nationalbenefitalliance.com/kansas/meade/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 61,
+          "name": "Miami County",
+          "url": "https://nationalbenefitalliance.com/kansas/miami/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 62,
+          "name": "Mitchell County",
+          "url": "https://nationalbenefitalliance.com/kansas/mitchell/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 63,
+          "name": "Montgomery County",
+          "url": "https://nationalbenefitalliance.com/kansas/montgomery/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 64,
+          "name": "Morris County",
+          "url": "https://nationalbenefitalliance.com/kansas/morris/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 65,
+          "name": "Morton County",
+          "url": "https://nationalbenefitalliance.com/kansas/morton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 66,
+          "name": "Nemaha County",
+          "url": "https://nationalbenefitalliance.com/kansas/nemaha/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 67,
+          "name": "Neosho County",
+          "url": "https://nationalbenefitalliance.com/kansas/neosho/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 68,
+          "name": "Ness County",
+          "url": "https://nationalbenefitalliance.com/kansas/ness/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 69,
+          "name": "Norton County",
+          "url": "https://nationalbenefitalliance.com/kansas/norton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 70,
+          "name": "Osage County",
+          "url": "https://nationalbenefitalliance.com/kansas/osage/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 71,
+          "name": "Osborne County",
+          "url": "https://nationalbenefitalliance.com/kansas/osborne/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 72,
+          "name": "Ottawa County",
+          "url": "https://nationalbenefitalliance.com/kansas/ottawa/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 73,
+          "name": "Pawnee County",
+          "url": "https://nationalbenefitalliance.com/kansas/pawnee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 74,
+          "name": "Phillips County",
+          "url": "https://nationalbenefitalliance.com/kansas/phillips/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 75,
+          "name": "Pottawatomie County",
+          "url": "https://nationalbenefitalliance.com/kansas/pottawatomie/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 76,
+          "name": "Pratt County",
+          "url": "https://nationalbenefitalliance.com/kansas/pratt/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 77,
+          "name": "Rawlins County",
+          "url": "https://nationalbenefitalliance.com/kansas/rawlins/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 78,
+          "name": "Reno County",
+          "url": "https://nationalbenefitalliance.com/kansas/reno/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 79,
+          "name": "Republic County",
+          "url": "https://nationalbenefitalliance.com/kansas/republic/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 80,
+          "name": "Rice County",
+          "url": "https://nationalbenefitalliance.com/kansas/rice/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 81,
+          "name": "Riley County",
+          "url": "https://nationalbenefitalliance.com/kansas/riley/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 82,
+          "name": "Rooks County",
+          "url": "https://nationalbenefitalliance.com/kansas/rooks/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 83,
+          "name": "Rush County",
+          "url": "https://nationalbenefitalliance.com/kansas/rush/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 84,
+          "name": "Russell County",
+          "url": "https://nationalbenefitalliance.com/kansas/russell/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 85,
+          "name": "Saline County",
+          "url": "https://nationalbenefitalliance.com/kansas/saline/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 86,
+          "name": "Scott County",
+          "url": "https://nationalbenefitalliance.com/kansas/scott/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 87,
+          "name": "Sedgwick County",
+          "url": "https://nationalbenefitalliance.com/kansas/sedgwick/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 88,
+          "name": "Seward County",
+          "url": "https://nationalbenefitalliance.com/kansas/seward/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 89,
+          "name": "Shawnee County",
+          "url": "https://nationalbenefitalliance.com/kansas/shawnee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 90,
+          "name": "Sheridan County",
+          "url": "https://nationalbenefitalliance.com/kansas/sheridan/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 91,
+          "name": "Sherman County",
+          "url": "https://nationalbenefitalliance.com/kansas/sherman/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 92,
+          "name": "Smith County",
+          "url": "https://nationalbenefitalliance.com/kansas/smith/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 93,
+          "name": "Stafford County",
+          "url": "https://nationalbenefitalliance.com/kansas/stafford/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 94,
+          "name": "Stanton County",
+          "url": "https://nationalbenefitalliance.com/kansas/stanton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 95,
+          "name": "Stevens County",
+          "url": "https://nationalbenefitalliance.com/kansas/stevens/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 96,
+          "name": "Sumner County",
+          "url": "https://nationalbenefitalliance.com/kansas/sumner/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 97,
+          "name": "Thomas County",
+          "url": "https://nationalbenefitalliance.com/kansas/thomas/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 98,
+          "name": "Trego County",
+          "url": "https://nationalbenefitalliance.com/kansas/trego/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 99,
+          "name": "Wabaunsee County",
+          "url": "https://nationalbenefitalliance.com/kansas/wabaunsee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 100,
+          "name": "Wallace County",
+          "url": "https://nationalbenefitalliance.com/kansas/wallace/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 101,
+          "name": "Washington County",
+          "url": "https://nationalbenefitalliance.com/kansas/washington/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 102,
+          "name": "Wichita County",
+          "url": "https://nationalbenefitalliance.com/kansas/wichita/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 103,
+          "name": "Wilson County",
+          "url": "https://nationalbenefitalliance.com/kansas/wilson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 104,
+          "name": "Woodson County",
+          "url": "https://nationalbenefitalliance.com/kansas/woodson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 105,
+          "name": "Wyandotte County",
+          "url": "https://nationalbenefitalliance.com/kansas/wyandotte/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

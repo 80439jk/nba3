@@ -19,49 +19,488 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta property="og:url" content="https://nationalbenefitalliance.com/alabama/" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "GovernmentOrganization",
-        "@id": "https://nationalbenefitalliance.com/alabama/#org",
-        "name": "National Benefit Alliance – Alabama Resource Center",
-        "url": "https://nationalbenefitalliance.com/alabama/",
-        "description": "Free county-by-county resource guide for Alabama residents seeking government and community assistance programs.",
-        "areaServed": {
-          "@type": "State",
-          "name": "Alabama",
-          "sameAs": "https://www.wikidata.org/wiki/Q173"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/alabama/#page",
-        "url": "https://nationalbenefitalliance.com/alabama/",
-        "name": "Alabama County Resource Center",
-        "description": "Browse all 67 Alabama counties for community benefit resources.",
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem","position": 1,"name": "Home","item": "https://nationalbenefitalliance.com/"},
-            {"@type": "ListItem","position": 2,"name": "Alabama","item": "https://nationalbenefitalliance.com/alabama/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "ItemList",
-        "name": "Alabama County Resource Guides",
-        "numberOfItems": 67,
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Jefferson County Resources","url":"https://nationalbenefitalliance.com/alabama/jefferson/"},
-          {"@type":"ListItem","position":2,"name":"Mobile County Resources","url":"https://nationalbenefitalliance.com/alabama/mobile/"},
-          {"@type":"ListItem","position":3,"name":"Madison County Resources","url":"https://nationalbenefitalliance.com/alabama/madison/"},
-          {"@type":"ListItem","position":4,"name":"Baldwin County Resources","url":"https://nationalbenefitalliance.com/alabama/baldwin/"},
-          {"@type":"ListItem","position":5,"name":"Montgomery County Resources","url":"https://nationalbenefitalliance.com/alabama/montgomery/"}
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://nationalbenefitalliance.com/alabama/#page",
+      "url": "https://nationalbenefitalliance.com/alabama/",
+      "name": "Assistance programs by county in Alabama",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
+      },
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US",
+      "about": {
+        "@type": "AdministrativeArea",
+        "name": "Alabama"
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Alabama",
+          "item": "https://nationalbenefitalliance.com/alabama/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Alabama counties",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 67,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Autauga County",
+          "url": "https://nationalbenefitalliance.com/alabama/autauga/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Baldwin County",
+          "url": "https://nationalbenefitalliance.com/alabama/baldwin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Barbour County",
+          "url": "https://nationalbenefitalliance.com/alabama/barbour/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Bibb County",
+          "url": "https://nationalbenefitalliance.com/alabama/bibb/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Blount County",
+          "url": "https://nationalbenefitalliance.com/alabama/blount/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Bullock County",
+          "url": "https://nationalbenefitalliance.com/alabama/bullock/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Butler County",
+          "url": "https://nationalbenefitalliance.com/alabama/butler/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Calhoun County",
+          "url": "https://nationalbenefitalliance.com/alabama/calhoun/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Chambers County",
+          "url": "https://nationalbenefitalliance.com/alabama/chambers/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Cherokee County",
+          "url": "https://nationalbenefitalliance.com/alabama/cherokee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Chilton County",
+          "url": "https://nationalbenefitalliance.com/alabama/chilton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "Choctaw County",
+          "url": "https://nationalbenefitalliance.com/alabama/choctaw/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Clarke County",
+          "url": "https://nationalbenefitalliance.com/alabama/clarke/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Clay County",
+          "url": "https://nationalbenefitalliance.com/alabama/clay/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Cleburne County",
+          "url": "https://nationalbenefitalliance.com/alabama/cleburne/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "Coffee County",
+          "url": "https://nationalbenefitalliance.com/alabama/coffee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "Colbert County",
+          "url": "https://nationalbenefitalliance.com/alabama/colbert/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "Conecuh County",
+          "url": "https://nationalbenefitalliance.com/alabama/conecuh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "name": "Coosa County",
+          "url": "https://nationalbenefitalliance.com/alabama/coosa/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "name": "Covington County",
+          "url": "https://nationalbenefitalliance.com/alabama/covington/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "name": "Crenshaw County",
+          "url": "https://nationalbenefitalliance.com/alabama/crenshaw/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "name": "Cullman County",
+          "url": "https://nationalbenefitalliance.com/alabama/cullman/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "name": "Dale County",
+          "url": "https://nationalbenefitalliance.com/alabama/dale/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "name": "Dallas County",
+          "url": "https://nationalbenefitalliance.com/alabama/dallas/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "name": "DeKalb County",
+          "url": "https://nationalbenefitalliance.com/alabama/dekalb/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "name": "Elmore County",
+          "url": "https://nationalbenefitalliance.com/alabama/elmore/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "name": "Escambia County",
+          "url": "https://nationalbenefitalliance.com/alabama/escambia/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "name": "Etowah County",
+          "url": "https://nationalbenefitalliance.com/alabama/etowah/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "name": "Fayette County",
+          "url": "https://nationalbenefitalliance.com/alabama/fayette/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "name": "Franklin County",
+          "url": "https://nationalbenefitalliance.com/alabama/franklin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 31,
+          "name": "Geneva County",
+          "url": "https://nationalbenefitalliance.com/alabama/geneva/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 32,
+          "name": "Greene County",
+          "url": "https://nationalbenefitalliance.com/alabama/greene/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 33,
+          "name": "Hale County",
+          "url": "https://nationalbenefitalliance.com/alabama/hale/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 34,
+          "name": "Henry County",
+          "url": "https://nationalbenefitalliance.com/alabama/henry/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 35,
+          "name": "Houston County",
+          "url": "https://nationalbenefitalliance.com/alabama/houston/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 36,
+          "name": "Jackson County",
+          "url": "https://nationalbenefitalliance.com/alabama/jackson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 37,
+          "name": "Jefferson County",
+          "url": "https://nationalbenefitalliance.com/alabama/jefferson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 38,
+          "name": "Lamar County",
+          "url": "https://nationalbenefitalliance.com/alabama/lamar/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 39,
+          "name": "Lauderdale County",
+          "url": "https://nationalbenefitalliance.com/alabama/lauderdale/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 40,
+          "name": "Lawrence County",
+          "url": "https://nationalbenefitalliance.com/alabama/lawrence/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 41,
+          "name": "Lee County",
+          "url": "https://nationalbenefitalliance.com/alabama/lee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 42,
+          "name": "Limestone County",
+          "url": "https://nationalbenefitalliance.com/alabama/limestone/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 43,
+          "name": "Lowndes County",
+          "url": "https://nationalbenefitalliance.com/alabama/lowndes/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 44,
+          "name": "Macon County",
+          "url": "https://nationalbenefitalliance.com/alabama/macon/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 45,
+          "name": "Madison County",
+          "url": "https://nationalbenefitalliance.com/alabama/madison/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 46,
+          "name": "Marengo County",
+          "url": "https://nationalbenefitalliance.com/alabama/marengo/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 47,
+          "name": "Marion County",
+          "url": "https://nationalbenefitalliance.com/alabama/marion/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 48,
+          "name": "Marshall County",
+          "url": "https://nationalbenefitalliance.com/alabama/marshall/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 49,
+          "name": "Mobile County",
+          "url": "https://nationalbenefitalliance.com/alabama/mobile/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 50,
+          "name": "Monroe County",
+          "url": "https://nationalbenefitalliance.com/alabama/monroe/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 51,
+          "name": "Montgomery County",
+          "url": "https://nationalbenefitalliance.com/alabama/montgomery/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 52,
+          "name": "Morgan County",
+          "url": "https://nationalbenefitalliance.com/alabama/morgan/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 53,
+          "name": "Perry County",
+          "url": "https://nationalbenefitalliance.com/alabama/perry/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 54,
+          "name": "Pickens County",
+          "url": "https://nationalbenefitalliance.com/alabama/pickens/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 55,
+          "name": "Pike County",
+          "url": "https://nationalbenefitalliance.com/alabama/pike/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 56,
+          "name": "Randolph County",
+          "url": "https://nationalbenefitalliance.com/alabama/randolph/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 57,
+          "name": "Russell County",
+          "url": "https://nationalbenefitalliance.com/alabama/russell/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 58,
+          "name": "Shelby County",
+          "url": "https://nationalbenefitalliance.com/alabama/shelby/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 59,
+          "name": "St Clair County",
+          "url": "https://nationalbenefitalliance.com/alabama/st-clair/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 60,
+          "name": "Sumter County",
+          "url": "https://nationalbenefitalliance.com/alabama/sumter/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 61,
+          "name": "Talladega County",
+          "url": "https://nationalbenefitalliance.com/alabama/talladega/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 62,
+          "name": "Tallapoosa County",
+          "url": "https://nationalbenefitalliance.com/alabama/tallapoosa/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 63,
+          "name": "Tuscaloosa County",
+          "url": "https://nationalbenefitalliance.com/alabama/tuscaloosa/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 64,
+          "name": "Walker County",
+          "url": "https://nationalbenefitalliance.com/alabama/walker/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 65,
+          "name": "Washington County",
+          "url": "https://nationalbenefitalliance.com/alabama/washington/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 66,
+          "name": "Wilcox County",
+          "url": "https://nationalbenefitalliance.com/alabama/wilcox/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 67,
+          "name": "Winston County",
+          "url": "https://nationalbenefitalliance.com/alabama/winston/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

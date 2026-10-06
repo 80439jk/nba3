@@ -29,47 +29,80 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <!-- JSON-LD Schema -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/resources/utility-assistance/#page",
-        "url": "https://nationalbenefitalliance.com/resources/utility-assistance/",
-        "name": "Utility Assistance Programs | Free Help with Electric, Gas & Water Bills",
-        "description": "Learn how to get free help paying your electric, gas, and water bills. LIHEAP, weatherization, crisis assistance, and more — find programs in your county.",
-        "isPartOf": {"@id": "https://nationalbenefitalliance.com/#website"},
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type":"ListItem","position":1,"name":"Home","item":"https://nationalbenefitalliance.com/"},
-            {"@type":"ListItem","position":2,"name":"Resources","item":"https://nationalbenefitalliance.com/resources/"},
-            {"@type":"ListItem","position":3,"name":"Utility Assistance","item":"https://nationalbenefitalliance.com/resources/utility-assistance/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {"@type":"Question","name":"What is LIHEAP?","acceptedAnswer":{"@type":"Answer","text":"LIHEAP (Low Income Home Energy Assistance Program) is a federally funded program that helps low-income households pay their heating and cooling bills. It is available in all 50 states and administered locally by community action agencies."}},
-          {"@type":"Question","name":"How do I apply for utility assistance?","acceptedAnswer":{"@type":"Answer","text":"Contact your local Community Action Agency or visit your county page on our site to find the nearest office. You will typically need a recent utility bill, proof of income, and a photo ID to apply."}},
-          {"@type":"Question","name":"How much money can I receive?","acceptedAnswer":{"@type":"Answer","text":"The amount varies by state and household size, but LIHEAP payments typically range from $200 to over $1,000 per year. Crisis assistance for shutoff prevention may cover larger past-due amounts."}}
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://nationalbenefitalliance.com/resources/utility-assistance/#page",
+      "url": "https://nationalbenefitalliance.com/resources/utility-assistance/",
+      "name": "Utility Assistance Programs",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
       },
-      {
-        "@type": "HowTo",
-        "name": "How to Apply for Utility Assistance",
-        "description": "Step-by-step guide to accessing utility assistance programs in your county.",
-        "step": [
-          {"@type":"HowToStep","position":1,"name":"Gather your documents","text":"Gather your documents. You\'ll typically need a recent utility bill, proof of income (pay stubs, benefits letter, or tax return), and a photo ID. Some programs also ask for proof of household size."},
-          {"@type":"HowToStep","position":2,"name":"Find your local agency","text":"Find your local agency. Use our county pages to find the Community Action Agency, energy office, or social services office in your area. Each listing includes a direct phone number."},
-          {"@type":"HowToStep","position":3,"name":"Apply in person, by phone, or online","text":"Apply in person, by phone, or online. Most agencies accept walk-in, phone, and online applications. Call ahead to confirm hours and any appointment requirements."},
-          {"@type":"HowToStep","position":4,"name":"Payment goes directly to your utility","text":"Payment goes directly to your utility. Once approved, the assistance is sent straight to your electric, gas, or water company. You don\'t handle the money — it\'s applied to your account."},
-          {"@type":"HowToStep","position":5,"name":"Reapply each year","text":"Reapply each year. Most programs are annual. Set a reminder to reapply at the start of each heating or cooling season so you never miss the window."}
-        ]
-      }
-    ]
-  }
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Resources",
+          "item": "https://nationalbenefitalliance.com/resources/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Utility Assistance",
+          "item": "https://nationalbenefitalliance.com/resources/utility-assistance/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

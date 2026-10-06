@@ -19,49 +19,308 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta property="og:url" content="https://nationalbenefitalliance.com/oregon/" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "GovernmentOrganization",
-        "@id": "https://nationalbenefitalliance.com/oregon/#org",
-        "name": "National Benefit Alliance – Oregon Resource Center",
-        "url": "https://nationalbenefitalliance.com/oregon/",
-        "description": "Free county-by-county resource guide for Oregon residents seeking government and community assistance programs.",
-        "areaServed": {
-          "@type": "State",
-          "name": "Oregon",
-          "sameAs": "https://www.wikidata.org/wiki/Q824"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://nationalbenefitalliance.com/oregon/#page",
-        "url": "https://nationalbenefitalliance.com/oregon/",
-        "name": "Oregon County Resource Center",
-        "description": "Browse all 37 Oregon counties for community benefit resources.",
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem","position": 1,"name": "Home","item": "https://nationalbenefitalliance.com/"},
-            {"@type": "ListItem","position": 2,"name": "Oregon","item": "https://nationalbenefitalliance.com/oregon/"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nationalbenefitalliance.com/#org",
+      "name": "National Benefit Alliance",
+      "legalName": "National Benefit Alliance",
+      "url": "https://nationalbenefitalliance.com/",
+      "description": "A privately held for-profit company that publishes information about assistance programs operated by government agencies and nonprofit organizations.",
+      "disambiguatingDescription": "National Benefit Alliance is a private for-profit company. It is not a government agency, is not affiliated with or endorsed by any government agency or program, and does not provide, apply for, submit forms for, or enroll anyone in government benefits such as SNAP, LIHEAP, Section 8 or rental assistance.",
+      "slogan": "We tell you where to apply. We do not apply for you.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-800-605-8906",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en",
+            "es"
           ]
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nationalbenefitalliance.com/#site",
+      "url": "https://nationalbenefitalliance.com/",
+      "name": "National Benefit Alliance",
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
       },
-      {
-        "@type": "ItemList",
-        "name": "Oregon County Resource Guides",
-        "numberOfItems": 37,
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Multnomah Resources","url":"https://nationalbenefitalliance.com/oregon/multnomah/"},
-          {"@type":"ListItem","position":2,"name":"Washington Resources","url":"https://nationalbenefitalliance.com/oregon/washington/"},
-          {"@type":"ListItem","position":3,"name":"Clackamas Resources","url":"https://nationalbenefitalliance.com/oregon/clackamas/"},
-          {"@type":"ListItem","position":4,"name":"Lane Resources","url":"https://nationalbenefitalliance.com/oregon/lane/"},
-          {"@type":"ListItem","position":5,"name":"Marion Resources","url":"https://nationalbenefitalliance.com/oregon/marion/"}
-        ]
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://nationalbenefitalliance.com/oregon/#page",
+      "url": "https://nationalbenefitalliance.com/oregon/",
+      "name": "Assistance programs by county in Oregon",
+      "isPartOf": {
+        "@id": "https://nationalbenefitalliance.com/#site"
+      },
+      "publisher": {
+        "@id": "https://nationalbenefitalliance.com/#org"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US",
+      "about": {
+        "@type": "AdministrativeArea",
+        "name": "Oregon"
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nationalbenefitalliance.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Oregon",
+          "item": "https://nationalbenefitalliance.com/oregon/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Oregon counties",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 37,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Baker",
+          "url": "https://nationalbenefitalliance.com/oregon/baker/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Benton",
+          "url": "https://nationalbenefitalliance.com/oregon/benton/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Clackamas",
+          "url": "https://nationalbenefitalliance.com/oregon/clackamas/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Clatsop",
+          "url": "https://nationalbenefitalliance.com/oregon/clatsop/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Columbia",
+          "url": "https://nationalbenefitalliance.com/oregon/columbia/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Coos",
+          "url": "https://nationalbenefitalliance.com/oregon/coos/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Crook",
+          "url": "https://nationalbenefitalliance.com/oregon/crook/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Curry",
+          "url": "https://nationalbenefitalliance.com/oregon/curry/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Deschutes",
+          "url": "https://nationalbenefitalliance.com/oregon/deschutes/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Douglas",
+          "url": "https://nationalbenefitalliance.com/oregon/douglas/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Gilliam",
+          "url": "https://nationalbenefitalliance.com/oregon/gilliam/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "Grant",
+          "url": "https://nationalbenefitalliance.com/oregon/grant/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Harney",
+          "url": "https://nationalbenefitalliance.com/oregon/harney/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Hood River",
+          "url": "https://nationalbenefitalliance.com/oregon/hood-river/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Jackson",
+          "url": "https://nationalbenefitalliance.com/oregon/jackson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "Jefferson",
+          "url": "https://nationalbenefitalliance.com/oregon/jefferson/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "Josephine",
+          "url": "https://nationalbenefitalliance.com/oregon/josephine/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "Klamath",
+          "url": "https://nationalbenefitalliance.com/oregon/klamath/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "name": "Lake",
+          "url": "https://nationalbenefitalliance.com/oregon/lake/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "name": "Lane",
+          "url": "https://nationalbenefitalliance.com/oregon/lane/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "name": "Lincoln",
+          "url": "https://nationalbenefitalliance.com/oregon/lincoln/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "name": "Linn",
+          "url": "https://nationalbenefitalliance.com/oregon/linn/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "name": "Malheur",
+          "url": "https://nationalbenefitalliance.com/oregon/malheur/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "name": "Marion",
+          "url": "https://nationalbenefitalliance.com/oregon/marion/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "name": "Modoc",
+          "url": "https://nationalbenefitalliance.com/oregon/modoc/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "name": "Morrow",
+          "url": "https://nationalbenefitalliance.com/oregon/morrow/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "name": "Multnomah",
+          "url": "https://nationalbenefitalliance.com/oregon/multnomah/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "name": "Polk",
+          "url": "https://nationalbenefitalliance.com/oregon/polk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "name": "Sherman",
+          "url": "https://nationalbenefitalliance.com/oregon/sherman/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "name": "Tillamook",
+          "url": "https://nationalbenefitalliance.com/oregon/tillamook/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 31,
+          "name": "Umatilla",
+          "url": "https://nationalbenefitalliance.com/oregon/umatilla/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 32,
+          "name": "Union",
+          "url": "https://nationalbenefitalliance.com/oregon/union/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 33,
+          "name": "Wallowa",
+          "url": "https://nationalbenefitalliance.com/oregon/wallowa/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 34,
+          "name": "Wasco",
+          "url": "https://nationalbenefitalliance.com/oregon/wasco/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 35,
+          "name": "Washington",
+          "url": "https://nationalbenefitalliance.com/oregon/washington/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 36,
+          "name": "Wheeler",
+          "url": "https://nationalbenefitalliance.com/oregon/wheeler/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 37,
+          "name": "Yamhill",
+          "url": "https://nationalbenefitalliance.com/oregon/yamhill/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />

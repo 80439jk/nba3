@@ -53,7 +53,7 @@ nationalbenefitalliance/
 ├── api/                   # Vercel functions
 ├── backend/               # old Express + Postgres server. NOT deployed.
 ├── info/popup.js          # shared 30s inactivity popup
-├── info/{00,01,02,bg1,oa1,yt1}/  # live funnels (neutral URLs)
+├── info/{00,01,02,bg1,oa1,yt1,fb01}/  # live funnels (neutral URLs)
 ├── prototype/             # experiments, not linked
 ├── about/, privacy/, terms/, stories/, resources/
 └── [state]/[county]/index.html   # ~3,200 county pages, one template
@@ -69,17 +69,18 @@ nationalbenefitalliance/
 | `info/bg1` | Bing clone of info/02 (generated) | `bg1` | required |
 | `info/oa1` | OpenAI clone of info/02 (generated) | `oa1` | required |
 | `info/yt1` | YouTube clone of info/02 (generated) | `yt1` | required |
+| `info/fb01` | Meta clone of info/02 (generated). **Placeholder phone lines; no traffic yet.** | `fb01` | required |
 
 - **info/02 flow:** landing (needs tiles + state) → `step-1-dob-citizen` → `step-2-address` → `step-3-income-employ` → `step-4-contact` (submits) → `thank-you`.
 - **info/01 flow:** landing (needs only) → `step-1-dob` → `step-2-zip` → `step-3-phone` → `step-4-name-email` (submits). Dropped fields post as blank strings. `state` comes from the ZIP (`zipToState()`). Before ads go here, confirm the GTM "Completed funnel" trigger matches `/info/01/thank-you/` and send one test lead. See `info/01/README.md`.
 - **Put new funnel variants under `/info/NN/`**, not `/apply/`. Ad URLs must not contain "apply" or "qualify".
 - **The govt-services-policy rewrite (Sep 2026).** No page may imply NBA applies for, matches you to, or enrolls you in a government program. `info/02` is the rewritten Google funnel, `info/00` the rewritten organic one; all old `/apply/*` URLs 308-redirect to their replacements. Every page carries the `.gov-bar` disclosure strip or the combined footer disclosure. **`info/01` was deliberately left out** of the copy rewrite — its ads are paused. Its only change: the popup script path moved to `/info/popup.js` (owner-approved, 2026-10-02).
-- **Generated funnels.** `info/yt1` comes from `_build_yt1_variant.py`; `info/bg1` and `info/oa1` from `_build_source_funnels.py`. All three clone **`info/02`**, so a copy change there must be followed by re-running both scripts. Do not hand-edit the generated directories. `_build_source_funnels.py` asserts **per page** that the source's own line is present and that no other `tel:` appears, so a number that drifts on a single page fails the build instead of shipping silently. Both scripts also refuse to write a page still containing a Google-funnel string.
+- **Generated funnels.** `info/yt1` comes from `_build_yt1_variant.py`; `info/bg1`, `info/oa1` and `info/fb01` from `_build_source_funnels.py`. All four clone **`info/02`**, so a copy change there must be followed by re-running both scripts. Do not hand-edit the generated directories. `_build_source_funnels.py` asserts **per page** that the source's own line is present and that no other `tel:` appears, so a number that drifts on a single page fails the build instead of shipping silently. Both scripts also refuse to write a page still containing a Google-funnel string.
 - **`apply/` retired 2026-10-02.** All ads were moved off `/apply` URLs and `/apply/2` leads dropped to zero before the folder was deleted. Old `apply2`/`apply0` values in `leads.landing_page` are historical.
 - **OpenAI vendor code** (pixel + `oa-track.js`) that `_build_source_funnels.py` injects lives in `_vendor/openai/` at the repo root (not deployed). Do not edit it.
 - **Field parity:** all 7 live funnels post the same field set, plus `landing_page` and `needs[]`. Keep them identical. Drift loses attribution silently. Use `_field_parity.py` for this type of change.
 - **TCPA consent** must be a real checkbox. Never hardcode `true` or use a hidden field. An unchecked box posts `tcpa_consent: false`. Do not SMS those leads. `.tcpa-group` is spacing only: no background, no border (owner decision; UB `.tcpa-box` matches).
-- **Client state:** `sessionStorage` keys `nba_funnel` (step data), `nba_ty` (thank-you data), `nba_popup_shown`. Each page calls `captureUTM()` (UTMs + `gclid`, `wbraid`, `gbraid`, `msclkid`, `fbclid`, `oppref`, `ttclid`, `li_fat_id`, `twclid`, `epik`, and the Google/Bing ad ids `gcid gagid gkid gad mcid magid mkid mad`). It also saves `landing_url` (full URL) and `page_referrer` (`document.referrer`) on the first funnel page of the session or on any page arriving with tracking params. Submit pages post those 10 keys only when present; `submit-lead` sends `landing_url` to Caliber as `attribution.landing_page` (Caliber request, 2026-10-02). `transaction_id` = `crypto.randomUUID()` on first load.
+- **Client state:** `sessionStorage` keys `nba_funnel` (step data), `nba_ty` (thank-you data), `nba_popup_shown`. Each page calls `captureUTM()` (UTMs + `gclid`, `wbraid`, `gbraid`, `msclkid`, `fbclid`, `oppref`, `ttclid`, `li_fat_id`, `twclid`, `epik`, the Google/Bing ad ids `gcid gagid gkid gad mcid magid mkid mad`, and the Meta ad ids `mcpid masid madid mplc`; with an `fbclid` it also stores `fbclid_at`). It also saves `landing_url` (full URL) and `page_referrer` (`document.referrer`) on the first funnel page of the session or on any page arriving with tracking params. Submit pages post those 14 keys only when present, plus Meta match keys `fbp`/`fbc` from the `_fbp`/`_fbc` cookies (`fbc` built as `fb.1.<fbclid_at>.<fbclid>` when the pixel was blocked); `submit-lead` sends `landing_url` to Caliber as `attribution.landing_page` (Caliber request, 2026-10-02). `transaction_id` = `crypto.randomUUID()` on first load.
 - Known minor issue: the thank-you reference number changes on refresh.
 
 ## Phone numbers
@@ -100,6 +101,7 @@ Source clones. Lines are hardcoded. Details are in each README.
 | `info/oa1` | OpenAI `+12394569477` on all call buttons + popup | Inline OpenAI pixel (vendor code, do not edit) + `oa-track.js` passive click listener | `OPENAI-SOURCE-README.md` |
 | `info/bg1` | Funnel `+12394809440`, thank-you `+12394809438`, popup `+16452389372` | Microsoft UET in GTM (no inline pixel) | `BING-SOURCE-README.md` |
 | `info/yt1` | YouTube `+18883121358` on all call buttons + popup | GTM + Google Ads (no page code) | `YOUTUBE-SOURCE-README.md` |
+| `info/fb01` | **Placeholders** `+15555550101` funnel, `+15555550102` thank-you, `+15555550103` popup | Meta pixel in GTM, PageView only. Lead/Purchase go server-side from Caliber; never add them in the browser. | `META-SOURCE-README.md` |
 | `info/00` | Organic `+12394569476` on thank-you only. Shared popup. | — | — |
 
 Retired. Never use again: 1-888-408-5650, 1-855-767-9422.

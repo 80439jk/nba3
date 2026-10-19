@@ -1404,12 +1404,15 @@ function captureUTM() {
   const p = new URLSearchParams(window.location.search);
   const utms = {};
   ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','gclid','wbraid','gbraid','msclkid','fbclid','oppref','ttclid','li_fat_id','twclid','epik',
-   'gcid','gagid','gkid','gad','mcid','magid','mkid','mad'].forEach(k => {
+   'gcid','gagid','gkid','gad','mcid','magid','mkid','mad','mcpid','masid','madid','mplc'].forEach(k => {
     if (p.get(k)) utms[k] = p.get(k);
   });
   // Full landing URL + where the visitor came from (Caliber attribution). Taken on the
   // first funnel page of the session, or on any page that arrives with tracking params
   // (a fresh ad click), so a newer click replaces an older one, like gclid does.
+  // Meta: note when an fbclid click landed, so the submit step can build fbc
+  // (fb.1.<time>.<fbclid>) if an ad blocker stopped the pixel setting _fbc.
+  if (utms.fbclid) utms.fbclid_at = Date.now();
   if (Object.keys(utms).length || !getFunnelData().landing_url) {
     utms.landing_url = window.location.href;
     utms.page_referrer = document.referrer || '';
@@ -1582,8 +1585,17 @@ document.addEventListener('DOMContentLoaded', function() {
         utm_term: data.utm_term || '',
         // Ad ids + landing URL + browser referrer for Caliber. Only keys that were
         // actually captured are sent (no empty strings).
-        ...Object.fromEntries(['gcid','gagid','gkid','gad','mcid','magid','mkid','mad','landing_url','page_referrer']
+        ...Object.fromEntries(['gcid','gagid','gkid','gad','mcid','magid','mkid','mad',
+                               'mcpid','masid','madid','mplc','landing_url','page_referrer']
           .filter(k => data[k]).map(k => [k, data[k]])),
+        // Meta match keys for Caliber's server-side Conversions API: the pixel's _fbp
+        // and _fbc cookies. With no _fbc (pixel blocked), fbc is built from the fbclid.
+        ...(function () {
+          const cookie = n => (document.cookie.match('(?:^|; )' + n + '=([^;]*)') || [])[1] || '';
+          const fbc = cookie('_fbc') ||
+            (data.fbclid ? 'fb.1.' + (data.fbclid_at || Date.now()) + '.' + data.fbclid : '');
+          return Object.fromEntries([['fbp', cookie('_fbp')], ['fbc', fbc]].filter(e => e[1]));
+        })(),
         needs: data.needs || [],
         hp_website: document.getElementById('website').value,
         form_duration_ms: Date.now() - parseInt(sessionStorage.getItem('nba_form_shown') || '0', 10)

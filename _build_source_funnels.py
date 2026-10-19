@@ -43,8 +43,11 @@ re-run. Do not hand-edit them.
 
 RUN
 ---
-    python3 _build_source_funnels.py            # both
+    python3 _build_source_funnels.py            # all (bg1, oa1, fb01)
     python3 _build_source_funnels.py bg1        # just one
+
+fb01 (Meta, added 2026-10-19) is a pure phone/path swap like bg1: the Meta pixel
+lives in GTM, so there is no page code.
 """
 
 import os
@@ -105,7 +108,21 @@ SOURCES = {
         'landing_page': 'oa1',
         'openai': True,
     },
+    'fb01': {
+        'label': 'Meta',
+        # PLACEHOLDER lines (555-01xx is reserved for fiction) until Caliber issues the
+        # Meta numbers. Do not send traffic to /info/fb01/ while these are in place.
+        # The Meta pixel lives in GTM (PageView only), so there is no page code.
+        'funnel_tel': 'tel:+15555550101', 'funnel_num': '1-555-555-0101',
+        'thanks_tel': 'tel:+15555550102', 'thanks_num': '1-555-555-0102',
+        'popup_tel': 'tel:+15555550103',  'popup_num': '1-555-555-0103',
+        'landing_page': 'fb01',
+        'openai': False,
+    },
 }
+
+# Lines that must never reach live traffic. Building with one prints a warning.
+PLACEHOLDER_TELS = {'tel:+15555550101', 'tel:+15555550102', 'tel:+15555550103'}
 
 
 def rules(name, cfg):
@@ -220,6 +237,8 @@ def build(name, cfg):
     print('  info/%s  (%s): %d pages + popup.js%s' % (name, cfg['label'], len(PAGES), extra))
     print('    substitutions: %s'
           % ', '.join('%s=%d' % (k, v) for k, v in counts.items()))
+    if PLACEHOLDER_TELS & {cfg['funnel_tel'], cfg['thanks_tel'], cfg['popup_tel']}:
+        print('    !! info/%s uses PLACEHOLDER phone lines. Not ready for traffic.' % name)
 
 
 def main():
@@ -230,7 +249,7 @@ def main():
     print('Building source funnels from info/02 …\n')
     for name in wanted:
         build(name, SOURCES[name])
-    print('\nDone. Point Bing ads at /info/bg1/ and OpenAI ads at /info/oa1/.')
+    print('\nDone. Point Bing ads at /info/bg1/, OpenAI ads at /info/oa1/ and Meta ads at /info/fb01/.')
 
 
 if __name__ == '__main__':

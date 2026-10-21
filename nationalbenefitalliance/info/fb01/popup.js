@@ -1,8 +1,8 @@
 (function () {
   var DELAY = 30000;
   var SESSION_KEY = 'nba_popup_shown';
-  var PHONE_DISPLAY = '1-555-555-0103';
-  var PHONE_TEL = 'tel:+15555550103';
+  var PHONE_DISPLAY = '1-239-496-2944';
+  var PHONE_TEL = 'tel:+12394962944';
   var REF_FALLBACK = '59952';
 
   if (sessionStorage.getItem(SESSION_KEY)) return;

@@ -110,18 +110,18 @@ SOURCES = {
     },
     'fb01': {
         'label': 'Meta',
-        # PLACEHOLDER lines (555-01xx is reserved for fiction) until Caliber issues the
-        # Meta numbers. Do not send traffic to /info/fb01/ while these are in place.
+        # Meta keeps three distinct lines like Bing (Caliber, 2026-10-21).
         # The Meta pixel lives in GTM (PageView only), so there is no page code.
-        'funnel_tel': 'tel:+15555550101', 'funnel_num': '1-555-555-0101',
-        'thanks_tel': 'tel:+15555550102', 'thanks_num': '1-555-555-0102',
-        'popup_tel': 'tel:+15555550103',  'popup_num': '1-555-555-0103',
+        'funnel_tel': 'tel:+16452286234', 'funnel_num': '1-645-228-6234',
+        'thanks_tel': 'tel:+13212481468', 'thanks_num': '1-321-248-1468',
+        'popup_tel': 'tel:+12394962944',  'popup_num': '1-239-496-2944',
         'landing_page': 'fb01',
         'openai': False,
     },
 }
 
-# Lines that must never reach live traffic. Building with one prints a warning.
+# Lines that must never reach live traffic (the old fb01 placeholders). Building
+# with one prints a warning; keep this as a guard for future source funnels.
 PLACEHOLDER_TELS = {'tel:+15555550101', 'tel:+15555550102', 'tel:+15555550103'}
 
 

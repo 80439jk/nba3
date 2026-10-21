@@ -69,7 +69,7 @@ nationalbenefitalliance/
 | `info/bg1` | Bing clone of info/02 (generated) | `bg1` | required |
 | `info/oa1` | OpenAI clone of info/02 (generated) | `oa1` | required |
 | `info/yt1` | YouTube clone of info/02 (generated) | `yt1` | required |
-| `info/fb01` | Meta clone of info/02 (generated). **Placeholder phone lines; no traffic yet.** | `fb01` | required |
+| `info/fb01` | Meta clone of info/02 (generated). Meta ads land here. | `fb01` | required |
 
 - **info/02 flow:** landing (needs tiles + state) → `step-1-dob-citizen` → `step-2-address` → `step-3-income-employ` → `step-4-contact` (submits) → `thank-you`.
 - **info/01 flow:** landing (needs only) → `step-1-dob` → `step-2-zip` → `step-3-phone` → `step-4-name-email` (submits). Dropped fields post as blank strings. `state` comes from the ZIP (`zipToState()`). Before ads go here, confirm the GTM "Completed funnel" trigger matches `/info/01/thank-you/` and send one test lead. See `info/01/README.md`.
@@ -101,7 +101,7 @@ Source clones. Lines are hardcoded. Details are in each README.
 | `info/oa1` | OpenAI `+12394569477` on all call buttons + popup | Inline OpenAI pixel (vendor code, do not edit) + `oa-track.js` passive click listener | `OPENAI-SOURCE-README.md` |
 | `info/bg1` | Funnel `+12394809440`, thank-you `+12394809438`, popup `+16452389372` | Microsoft UET in GTM (no inline pixel) | `BING-SOURCE-README.md` |
 | `info/yt1` | YouTube `+18883121358` on all call buttons + popup | GTM + Google Ads (no page code) | `YOUTUBE-SOURCE-README.md` |
-| `info/fb01` | **Placeholders** `+15555550101` funnel, `+15555550102` thank-you, `+15555550103` popup | Meta pixel in GTM, PageView only. Lead/Purchase go server-side from Caliber; never add them in the browser. | `META-SOURCE-README.md` |
+| `info/fb01` | Funnel `+16452286234`, thank-you `+13212481468`, popup `+12394962944` | Meta pixel in GTM, PageView only. Lead/Purchase go server-side from Caliber; never add them in the browser. | `META-SOURCE-README.md` |
 | `info/00` | Organic `+12394569476` on thank-you only. Shared popup. | — | — |
 
 Retired. Never use again: 1-888-408-5650, 1-855-767-9422.

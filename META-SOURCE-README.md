@@ -1,7 +1,6 @@
 # Meta (Facebook / Instagram) funnel: `info/fb01`
 
-> **NOT READY FOR TRAFFIC.** The phone lines are placeholders (`1-555-555-0101/0102/0103`) until
-> Caliber issues the Meta numbers. Do not point ads here until they are swapped in (see below).
+> **Live lines since 2026-10-21** (issued by Caliber). Ready for Meta traffic.
 
 Meta advertising moved in-house (Caliber spec, 2026-10-19). `info/fb01` is the Meta copy of the
 Google funnel `info/02`, with its own phone lines so Caliber can credit Meta calls by number.
@@ -35,10 +34,10 @@ still goes to Caliber as `attribution.landing_page`, so every id is recoverable 
 
 | Stage | Pages | Number |
 |---|---|---|
-| Funnel (started) | landing, steps 1–4, `thank-you-2` | **PLACEHOLDER** `1-555-555-0101` |
-| Thank-you (completed) | `thank-you` | **PLACEHOLDER** `1-555-555-0102` |
-| Popup | `info/fb01/popup.js` | **PLACEHOLDER** `1-555-555-0103` |
+| Funnel (started) | landing, steps 1–4, `thank-you-2` | `1-645-228-6234` (`tel:+16452286234`) |
+| Thank-you (completed) | `thank-you` | `1-321-248-1468` (`tel:+13212481468`) |
+| Popup | `info/fb01/popup.js` | `1-239-496-2944` (`tel:+12394962944`) |
 
-**To swap in the real numbers:** edit the `fb01` entry in `_build_source_funnels.py` (one number for
-everything like OpenAI, or three like Bing), remove those values from `PLACEHOLDER_TELS`, and run
-`python3 _build_source_funnels.py fb01`. The build stops printing the placeholder warning once none remain.
+**To change a line:** edit the `fb01` entry in `_build_source_funnels.py` and run
+`python3 _build_source_funnels.py fb01`. A code change alone does not move call tracking: Caliber
+must route the new number too.
